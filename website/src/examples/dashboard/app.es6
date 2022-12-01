@@ -1,71 +1,71 @@
-import Uppy, { debugLogger } from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import GoogleDrive from '@uppy/google-drive'
-import Dropbox from '@uppy/dropbox'
-import Instagram from '@uppy/instagram'
-import Facebook from '@uppy/facebook'
-import OneDrive from '@uppy/onedrive'
-import Zoom from '@uppy/zoom'
-import Unsplash from '@uppy/unsplash'
-import Box from '@uppy/box'
-import ImageEditor from '@uppy/image-editor'
-import Url from '@uppy/url'
-import Webcam from '@uppy/webcam'
-import Audio from '@uppy/audio'
-import ScreenCapture from '@uppy/screen-capture'
-import Tus from '@uppy/tus'
-import DropTarget from '@uppy/drop-target'
-import GoldenRetriever from '@uppy/golden-retriever'
-import Compressor from '@uppy/compressor'
-import localeList from '../locale_list.json'
+import Uppy, { debugLogger } from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import GoogleDrive from "@growthcloud/google-drive";
+import Dropbox from "@growthcloud/dropbox";
+import Instagram from "@growthcloud/instagram";
+import Facebook from "@growthcloud/facebook";
+import OneDrive from "@growthcloud/onedrive";
+import Zoom from "@growthcloud/zoom";
+import Unsplash from "@growthcloud/unsplash";
+import Box from "@growthcloud/box";
+import ImageEditor from "@growthcloud/image-editor";
+import Url from "@growthcloud/url";
+import Webcam from "@growthcloud/webcam";
+import Audio from "@growthcloud/audio";
+import ScreenCapture from "@growthcloud/screen-capture";
+import Tus from "@growthcloud/tus";
+import DropTarget from "@growthcloud/drop-target";
+import GoldenRetriever from "@growthcloud/golden-retriever";
+import Compressor from "@growthcloud/compressor";
+import localeList from "../locale_list.json";
 
-import COMPANION from '../env.js'
+import COMPANION from "../env.js";
 
-const RTL_LOCALES = ['ar_SA', 'fa_IR', 'he_IL']
+const RTL_LOCALES = ["ar_SA", "fa_IR", "he_IL"];
 
-if (typeof window !== 'undefined' && typeof window.Uppy === 'undefined') {
+if (typeof window !== "undefined" && typeof window.Uppy === "undefined") {
   window.Uppy = {
     locales: {},
-  }
+  };
 }
 
-function uppyInit () {
+function uppyInit() {
   if (window.uppy) {
-    window.uppy.close()
+    window.uppy.close();
   }
 
-  const opts = window.uppyOptions
+  const opts = window.uppyOptions;
 
   const uppy = new Uppy({
     logger: debugLogger,
-  })
+  });
 
-  uppy.use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+  uppy.use(Tus, { endpoint: "https://tusd.tusdemo.net/files/" });
 
-  uppy.on('complete', result => {
-    console.log('successful files:')
-    console.log(result.successful)
-    console.log('failed files:')
-    console.log(result.failed)
-  })
+  uppy.on("complete", (result) => {
+    console.log("successful files:");
+    console.log(result.successful);
+    console.log("failed files:");
+    console.log(result.failed);
+  });
 
   uppy.use(Dashboard, {
-    trigger: '.UppyModalOpenerBtn',
-    target: opts.DashboardInline ? '.DashboardContainer' : 'body',
+    trigger: ".UppyModalOpenerBtn",
+    target: opts.DashboardInline ? ".DashboardContainer" : "body",
     inline: opts.DashboardInline,
     height: 470,
     showProgressDetails: true,
     metaFields: [
-      { id: 'name', name: 'Name', placeholder: 'file name' },
-      { id: 'caption', name: 'Caption', placeholder: 'add description' },
+      { id: "name", name: "Name", placeholder: "file name" },
+      { id: "caption", name: "Caption", placeholder: "add description" },
     ],
-  })
+  });
 
-  window.uppy = uppy
+  window.uppy = uppy;
 }
 
-function uppySetOptions () {
-  const opts = window.uppyOptions
+function uppySetOptions() {
+  const opts = window.uppyOptions;
 
   const defaultNullRestrictions = {
     maxFileSize: null,
@@ -73,217 +73,223 @@ function uppySetOptions () {
     maxNumberOfFiles: null,
     minNumberOfFiles: null,
     allowedFileTypes: null,
-  }
+  };
 
   const restrictions = {
     maxFileSize: 1000000,
     maxNumberOfFiles: 3,
     minNumberOfFiles: 2,
-    allowedFileTypes: ['image/*', 'video/*'],
-    requiredMetaFields: ['caption'],
-  }
+    allowedFileTypes: ["image/*", "video/*"],
+    requiredMetaFields: ["caption"],
+  };
 
   window.uppy.setOptions({
     autoProceed: opts.autoProceed,
     restrictions: opts.restrictions ? restrictions : defaultNullRestrictions,
-  })
+  });
 
-  window.uppy.getPlugin('Dashboard').setOptions({
-    note: opts.restrictions ? 'Images and video only, 2–3 files, up to 1 MB' : '',
-    theme: opts.darkMode ? 'dark' : 'light',
+  window.uppy.getPlugin("Dashboard").setOptions({
+    note: opts.restrictions
+      ? "Images and video only, 2–3 files, up to 1 MB"
+      : "",
+    theme: opts.darkMode ? "dark" : "light",
     disabled: opts.disabled,
-  })
+  });
 
-  const googleDriveInstance = window.uppy.getPlugin('GoogleDrive')
+  const googleDriveInstance = window.uppy.getPlugin("GoogleDrive");
   if (opts.GoogleDrive && !googleDriveInstance) {
-    window.uppy.use(GoogleDrive, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(GoogleDrive, {
+      target: Dashboard,
+      companionUrl: COMPANION,
+    });
   }
   if (!opts.GoogleDrive && googleDriveInstance) {
-    window.uppy.removePlugin(googleDriveInstance)
+    window.uppy.removePlugin(googleDriveInstance);
   }
 
-  const dropboxInstance = window.uppy.getPlugin('Dropbox')
+  const dropboxInstance = window.uppy.getPlugin("Dropbox");
   if (opts.Dropbox && !dropboxInstance) {
-    window.uppy.use(Dropbox, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(Dropbox, { target: Dashboard, companionUrl: COMPANION });
   }
   if (!opts.Dropbox && dropboxInstance) {
-    window.uppy.removePlugin(dropboxInstance)
+    window.uppy.removePlugin(dropboxInstance);
   }
 
-  const instagramInstance = window.uppy.getPlugin('Instagram')
+  const instagramInstance = window.uppy.getPlugin("Instagram");
   if (opts.Instagram && !instagramInstance) {
-    window.uppy.use(Instagram, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(Instagram, { target: Dashboard, companionUrl: COMPANION });
   }
   if (!opts.Instagram && instagramInstance) {
-    window.uppy.removePlugin(instagramInstance)
+    window.uppy.removePlugin(instagramInstance);
   }
 
-  const urlInstance = window.uppy.getPlugin('Url')
+  const urlInstance = window.uppy.getPlugin("Url");
   if (opts.Url && !urlInstance) {
-    window.uppy.use(Url, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(Url, { target: Dashboard, companionUrl: COMPANION });
   }
   if (!opts.Url && urlInstance) {
-    window.uppy.removePlugin(urlInstance)
+    window.uppy.removePlugin(urlInstance);
   }
 
-  const facebookInstance = window.uppy.getPlugin('Facebook')
+  const facebookInstance = window.uppy.getPlugin("Facebook");
   if (opts.Facebook && !facebookInstance) {
-    window.uppy.use(Facebook, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(Facebook, { target: Dashboard, companionUrl: COMPANION });
   }
   if (!opts.Facebook && facebookInstance) {
-    window.uppy.removePlugin(facebookInstance)
+    window.uppy.removePlugin(facebookInstance);
   }
 
-  const oneDriveInstance = window.uppy.getPlugin('OneDrive')
+  const oneDriveInstance = window.uppy.getPlugin("OneDrive");
   if (opts.OneDrive && !oneDriveInstance) {
-    window.uppy.use(OneDrive, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(OneDrive, { target: Dashboard, companionUrl: COMPANION });
   }
   if (!opts.OneDrive && oneDriveInstance) {
-    window.uppy.removePlugin(oneDriveInstance)
+    window.uppy.removePlugin(oneDriveInstance);
   }
-  const unsplashInstance = window.uppy.getPlugin('Unsplash')
+  const unsplashInstance = window.uppy.getPlugin("Unsplash");
   if (opts.Unsplash && !unsplashInstance) {
-    window.uppy.use(Unsplash, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(Unsplash, { target: Dashboard, companionUrl: COMPANION });
   }
   if (!opts.Unsplash && unsplashInstance) {
-    window.uppy.removePlugin(unsplashInstance)
+    window.uppy.removePlugin(unsplashInstance);
   }
 
-  const zoomInstance = window.uppy.getPlugin('Zoom')
+  const zoomInstance = window.uppy.getPlugin("Zoom");
   if (opts.Zoom && !zoomInstance) {
-    window.uppy.use(Zoom, { target: Dashboard, companionUrl: 'https://intense-meadow-61813.herokuapp.com/' })
+    window.uppy.use(Zoom, {
+      target: Dashboard,
+      companionUrl: "https://intense-meadow-61813.herokuapp.com/",
+    });
   }
   if (!opts.Zoom && zoomInstance) {
-    window.uppy.removePlugin(zoomInstance)
+    window.uppy.removePlugin(zoomInstance);
   }
 
-  const boxInstance = window.uppy.getPlugin('Box')
+  const boxInstance = window.uppy.getPlugin("Box");
   if (opts.Box && !boxInstance) {
-    window.uppy.use(Box, { target: Dashboard, companionUrl: COMPANION })
+    window.uppy.use(Box, { target: Dashboard, companionUrl: COMPANION });
   }
   if (!opts.Box && boxInstance) {
-    window.uppy.removePlugin(boxInstance)
+    window.uppy.removePlugin(boxInstance);
   }
 
-  const webcamInstance = window.uppy.getPlugin('Webcam')
+  const webcamInstance = window.uppy.getPlugin("Webcam");
   if (opts.Webcam && !webcamInstance) {
     window.uppy.use(Webcam, {
       target: Dashboard,
       showVideoSourceDropdown: true,
-    })
+    });
   }
   if (!opts.Webcam && webcamInstance) {
-    window.uppy.removePlugin(webcamInstance)
+    window.uppy.removePlugin(webcamInstance);
   }
 
-  const audioInstance = window.uppy.getPlugin('Audio')
+  const audioInstance = window.uppy.getPlugin("Audio");
   if (opts.Audio && !audioInstance) {
     window.uppy.use(Audio, {
       target: Dashboard,
       showAudioSourceDropdown: true,
-    })
+    });
   }
   if (!opts.Audio && audioInstance) {
-    window.uppy.removePlugin(audioInstance)
+    window.uppy.removePlugin(audioInstance);
   }
 
-  const screenCaptureInstance = window.uppy.getPlugin('ScreenCapture')
+  const screenCaptureInstance = window.uppy.getPlugin("ScreenCapture");
   if (opts.ScreenCapture && !screenCaptureInstance) {
-    window.uppy.use(ScreenCapture, { target: Dashboard })
+    window.uppy.use(ScreenCapture, { target: Dashboard });
   }
   if (!opts.ScreenCapture && screenCaptureInstance) {
-    window.uppy.removePlugin(screenCaptureInstance)
+    window.uppy.removePlugin(screenCaptureInstance);
   }
 
-  const imageEditorInstance = window.uppy.getPlugin('ImageEditor')
+  const imageEditorInstance = window.uppy.getPlugin("ImageEditor");
   if (opts.imageEditor && !imageEditorInstance) {
-    window.uppy.use(ImageEditor, { target: Dashboard })
+    window.uppy.use(ImageEditor, { target: Dashboard });
   }
   if (!opts.imageEditor && imageEditorInstance) {
-    window.uppy.removePlugin(imageEditorInstance)
+    window.uppy.removePlugin(imageEditorInstance);
   }
 
-  const dropTargetInstance = window.uppy.getPlugin('DropTarget')
+  const dropTargetInstance = window.uppy.getPlugin("DropTarget");
   if (opts.DropTarget && !dropTargetInstance) {
-    window.uppy.use(DropTarget, { target: document.body })
+    window.uppy.use(DropTarget, { target: document.body });
   }
   if (!opts.DropTarget && dropTargetInstance) {
-    window.uppy.removePlugin(dropTargetInstance)
+    window.uppy.removePlugin(dropTargetInstance);
   }
 
-  const goldenRetrieverInstance = window.uppy.getPlugin('GoldenRetriever')
+  const goldenRetrieverInstance = window.uppy.getPlugin("GoldenRetriever");
   if (opts.GoldenRetriever && !goldenRetrieverInstance) {
-    window.uppy.use(GoldenRetriever)
+    window.uppy.use(GoldenRetriever);
   }
   if (!opts.GoldenRetriever && goldenRetrieverInstance) {
-    window.uppy.removePlugin(goldenRetrieverInstance)
+    window.uppy.removePlugin(goldenRetrieverInstance);
   }
 
-  const compressorInstance = window.uppy.getPlugin('Compressor')
+  const compressorInstance = window.uppy.getPlugin("Compressor");
   if (opts.Compressor && !compressorInstance) {
-    window.uppy.use(Compressor)
+    window.uppy.use(Compressor);
   }
   if (!opts.Compressor && compressorInstance) {
-    window.uppy.removePlugin(compressorInstance)
+    window.uppy.removePlugin(compressorInstance);
   }
 }
 
-function whenLocaleAvailable (localeName, callback) {
-  const interval = 100 // ms
+function whenLocaleAvailable(localeName, callback) {
+  const interval = 100; // ms
   const loop = setInterval(() => {
     if (window.Uppy && window.Uppy.locales && window.Uppy.locales[localeName]) {
-      clearInterval(loop)
-      callback(window.Uppy.locales[localeName])
+      clearInterval(loop);
+      callback(window.Uppy.locales[localeName]);
     }
-  }, interval)
+  }, interval);
 }
 
-function loadLocaleFromCDN (localeName) {
-  const head = document.getElementsByTagName('head')[0]
-  const js = document.createElement('script')
-  js.type = 'text/javascript'
-  js.src = `https://releases.transloadit.com/uppy/locales/v3.0.4/${localeName}.min.js`
+function loadLocaleFromCDN(localeName) {
+  const head = document.getElementsByTagName("head")[0];
+  const js = document.createElement("script");
+  js.type = "text/javascript";
+  js.src = `https://releases.transloadit.com/uppy/locales/v3.0.4/${localeName}.min.js`;
 
-  head.appendChild(js)
+  head.appendChild(js);
 }
 
-function setLocale (localeName) {
-  if (typeof window.Uppy.locales[localeName] === 'undefined') {
-    loadLocaleFromCDN(localeName)
+function setLocale(localeName) {
+  if (typeof window.Uppy.locales[localeName] === "undefined") {
+    loadLocaleFromCDN(localeName);
   }
   whenLocaleAvailable(localeName, (localeObj) => {
-    const direction = RTL_LOCALES.indexOf(localeName) !== -1
-      ? 'rtl'
-      : 'ltr'
+    const direction = RTL_LOCALES.indexOf(localeName) !== -1 ? "rtl" : "ltr";
 
     window.uppy.setOptions({
       locale: localeObj,
-    })
+    });
 
-    window.uppy.getPlugin('Dashboard').setOptions({
+    window.uppy.getPlugin("Dashboard").setOptions({
       direction,
-    })
-  })
+    });
+  });
 }
 
-function populateLocaleSelect () {
-  const localeSelect = document.getElementById('localeList')
+function populateLocaleSelect() {
+  const localeSelect = document.getElementById("localeList");
 
-  Object.keys(localeList).forEach(localeName => {
-    if (localeName === 'en_US') return
-    localeSelect.innerHTML += `<option value="${localeName}">${localeList[localeName]} — (${localeName})</option>`
-  })
+  Object.keys(localeList).forEach((localeName) => {
+    if (localeName === "en_US") return;
+    localeSelect.innerHTML += `<option value="${localeName}">${localeList[localeName]} — (${localeName})</option>`;
+  });
 
-  localeSelect.addEventListener('change', (event) => {
-    const localeName = event.target.value
-    setLocale(localeName)
-  })
+  localeSelect.addEventListener("change", (event) => {
+    const localeName = event.target.value;
+    setLocale(localeName);
+  });
 }
 
-window.uppySetOptions = uppySetOptions
-window.uppyInit = uppyInit
-window.uppySetLocale = setLocale
+window.uppySetOptions = uppySetOptions;
+window.uppyInit = uppyInit;
+window.uppySetLocale = setLocale;
 
-populateLocaleSelect()
-uppyInit()
-uppySetOptions()
+populateLocaleSelect();
+uppyInit();
+uppySetOptions();

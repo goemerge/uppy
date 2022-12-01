@@ -2,37 +2,37 @@
 type: docs
 order: 0
 title: "Tus"
-module: "@uppy/tus"
+module: "@growthcloud/tus"
 permalink: docs/tus/
 category: "Destinations"
 tagline: "uploads using the <a href='https://tus.io'>tus</a> resumable upload protocol"
 ---
 
-The `@uppy/tus` plugin brings resumable file uploading by [tus.io](http://tus.io) to Uppy by wrapping the [tus-js-client][].
+The `@growthcloud/tus` plugin brings resumable file uploading by [tus.io](http://tus.io) to Uppy by wrapping the [tus-js-client][].
 
 ```js
-import Tus from '@uppy/tus'
+import Tus from "@growthcloud/tus";
 
 uppy.use(Tus, {
-  endpoint: 'https://tusd.tusdemo.net/files/', // use your tus endpoint here
+  endpoint: "https://tusd.tusdemo.net/files/", // use your tus endpoint here
   retryDelays: [0, 1000, 3000, 5000],
-})
+});
 ```
 
 ## Installation
 
-This plugin is published as the `@uppy/tus` package.
+This plugin is published as the `@growthcloud/tus` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/tus
+npm install @growthcloud/tus
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Tus } = Uppy
+const { Tus } = Uppy;
 ```
 
 ## Options
@@ -59,18 +59,18 @@ Keys are header names, values are header values.
 ```js
 const headers = {
   authorization: `Bearer ${window.getCurrentUserToken()}`,
-}
+};
 ```
 
-Header values can also be derived from file data by providing a function. The function receives a [File Object][File Objects] and must return an object where the keys are header names, and values are header values.
+Header values can also be derived from file data by providing a function. The function receives a [File Object][file objects] and must return an object where the keys are header names, and values are header values.
 
 ```js
 const headers = (file) => {
   return {
     authorization: `Bearer ${window.getCurrentUserToken()}`,
     expires: file.meta.expires,
-  }
-}
+  };
+};
 ```
 
 ### `chunkSize: Infinity`
@@ -97,46 +97,45 @@ Behaves like the [`onBeforeRequest`](https://github.com/tus/tus-js-client/blob/m
 
 ### `onShouldRetry: (err, retryAttempt, options, next) => next(err)`
 
-When an upload fails `onShouldRetry` is called with the error and the default retry logic as the second argument. The default retry logic is an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) algorithm triggered on HTTP 429 (Too Many Requests) errors. Meaning if your server (or proxy) returns HTTP 429 because it’s being overloaded, @uppy/tus will find the ideal sweet spot to keep uploading without overloading.
+When an upload fails `onShouldRetry` is called with the error and the default retry logic as the second argument. The default retry logic is an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) algorithm triggered on HTTP 429 (Too Many Requests) errors. Meaning if your server (or proxy) returns HTTP 429 because it’s being overloaded, @growthcloud/tus will find the ideal sweet spot to keep uploading without overloading.
 
 If you want to extend this functionality, for instance to retry on unauthorized requests (to retrieve a new authentication token):
 
 ```js
-import Uppy from '@uppy/core'
-import Tus from '@uppy/tus'
+import Uppy from "@growthcloud/core";
+import Tus from "@growthcloud/tus";
 
 new Uppy().use(Tus, {
-  endpoint: '',
-  async onBeforeRequest (req) {
-    const token = await getAuthToken()
-    req.setHeader('Authorization', `Bearer ${token}`)
+  endpoint: "",
+  async onBeforeRequest(req) {
+    const token = await getAuthToken();
+    req.setHeader("Authorization", `Bearer ${token}`);
   },
-  onShouldRetry (err, retryAttempt, options, next) {
+  onShouldRetry(err, retryAttempt, options, next) {
     if (err?.originalResponse?.getStatus() === 401) {
-      return true
+      return true;
     }
-    return next(err)
+    return next(err);
   },
-  async onAfterResponse (req, res) {
+  async onAfterResponse(req, res) {
     if (res.getStatus() === 401) {
-      await refreshAuthToken()
+      await refreshAuthToken();
     }
   },
-})
+});
 ```
 
 ### `allowedMetaFields: null`
 
 Pass an array of field names to limit the metadata fields that will be added to uploads as [Tus Metadata](https://tus.io/protocols/resumable-upload.html#upload-metadata).
 
-* Set this to an empty array `[]` to not send any fields.
-* Set this to `['name']` to only send the `name` field.
-* Set this to `null` (the default) to send _all_ metadata fields.
+- Set this to an empty array `[]` to not send any fields.
+- Set this to `['name']` to only send the `name` field.
+- Set this to `null` (the default) to send _all_ metadata fields.
 
 ### `limit: 5`
 
 Limit the amount of uploads going on at the same time. Setting this to `0` means no limit on concurrent uploads.
 
 [tus-js-client]: https://github.com/tus/tus-js-client
-
-[File Objects]: /docs/uppy/#File-Objects
+[file objects]: /docs/uppy/#File-Objects

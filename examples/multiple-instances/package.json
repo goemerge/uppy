@@ -1,11 +1,11 @@
 {
-  "name": "@uppy-example/multiple-instances",
+  "name": "@growthcloud-example/multiple-instances",
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/golden-retriever": "workspace:*"
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/golden-retriever": "workspace:*"
   },
   "devDependencies": {
     "vite": "^3.0.0"

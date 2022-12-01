@@ -13,20 +13,20 @@ Uppy speaks many languages, English being the default. You can use a locale pack
 
 ## Using a locale pack from npm
 
-This is the recommded way. Install `@uppy/locales` package from npm, then [choose the locale](#List-of-locale-packs) you’d like to use: `@uppy/locales/lib/LANGUAGE_CODE`.
+This is the recommded way. Install `@growthcloud/locales` package from npm, then [choose the locale](#List-of-locale-packs) you’d like to use: `@growthcloud/locales/lib/LANGUAGE_CODE`.
 
 ```bash
-npm i @uppy/core @uppy/locales
+npm i @growthcloud/core @growthcloud/locales
 ```
 
 ```js
-import Uppy from '@uppy/core'
-import German from '@uppy/locales/lib/de_DE'
+import Uppy from "@growthcloud/core";
+import German from "@growthcloud/locales/lib/de_DE";
 // see below for the full list of locales
 const uppy = new Uppy({
   debug: true,
   locale: German,
-})
+});
 ```
 
 ## Using a locale pack from CDN
@@ -38,10 +38,10 @@ Add a `<script>` tag with Uppy bundle and the locale pack you’d like to use. Y
 <script src="https://releases.transloadit.com/uppy/locales/v3.0.4/de_DE.min.js"></script>
 
 <script>
-var uppy = new Uppy.Uppy({
-  debug: true,
-  locale: Uppy.locales.de_DE
-})
+  var uppy = new Uppy.Uppy({
+    debug: true,
+    locale: Uppy.locales.de_DE,
+  });
 </script>
 ```
 
@@ -50,25 +50,25 @@ var uppy = new Uppy.Uppy({
 Many plugins come with their own locale strings, and the packs we provide consist of most of those strings. You can, however, override a locale string for a specific plugin, regardless of whether you are using locale pack or not. See the plugin documentation for the list of locale strings it uses (for example, [here’s how to use it with the Dashboard UI](https://uppy.io/docs/dashboard/#locale)).
 
 ```js
-import Uppy from '@uppy/core'
-import DragDrop from '@uppy/drag-drop'
-import Russian from '@uppy/locales/lib/ru_RU'
+import Uppy from "@growthcloud/core";
+import DragDrop from "@growthcloud/drag-drop";
+import Russian from "@growthcloud/locales/lib/ru_RU";
 
 const uppy = new Uppy({
   debug: true,
   autoProceed: true,
   locale: Russian,
-})
+});
 uppy.use(DragDrop, {
-  target: '.UppyDragDrop',
+  target: ".UppyDragDrop",
   // We are using the ru_RU locale pack (set above in Uppy options),
   // but you can also override specific strings like so:
   locale: {
     strings: {
-      browse: 'выберите ;-)',
+      browse: "выберите ;-)",
     },
   },
-})
+});
 ```
 
 ## List of locale packs

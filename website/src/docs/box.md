@@ -3,40 +3,40 @@ type: docs
 order: 11
 title: "Box"
 menu_prefix: "<span title='Requires Companion'>ⓒ </span>"
-module: "@uppy/box"
+module: "@growthcloud/box"
 permalink: docs/box/
 category: "Sources"
 tagline: "import files from Box"
 ---
 
-The `@uppy/box` plugin lets users import files from their Box account.
+The `@growthcloud/box` plugin lets users import files from their Box account.
 
 A Companion instance is required for the Box plugin to work. Companion handles authentication with Box, downloads the files, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
 
 ```js
-import Box from '@uppy/box'
+import Box from "@growthcloud/box";
 
 uppy.use(Box, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
 
 ## Installation
 
-This plugin is published as the `@uppy/box` package.
+This plugin is published as the `@growthcloud/box` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/box
+npm install @growthcloud/box
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Box } = Uppy
+const { Box } = Uppy;
 ```
 
 ## Setting Up
@@ -54,19 +54,19 @@ When using the Companion Node.js API, configure these options:
 companion.app({
   providerOptions: {
     box: {
-      key: 'Box API key',
-      secret: 'Box API secret',
+      key: "Box API key",
+      secret: "Box API secret",
     },
   },
-})
+});
 ```
 
 You can create a Box App on the [Box Developers site](https://app.box.com/developers/console).
 
 Things to note:
 
-* Choose `Custom App` and select the `Standard OAuth 2.0 (User Authentication)` app type.
-* Oddly you must enable full write access, or you will get [403 when downloading files](https://support.box.com/hc/en-us/community/posts/360049195613-403-error-while-file-download-API-Call)
+- Choose `Custom App` and select the `Standard OAuth 2.0 (User Authentication)` app type.
+- Oddly you must enable full write access, or you will get [403 when downloading files](https://support.box.com/hc/en-us/community/posts/360049195613-403-error-while-file-download-API-Call)
 
 You’ll be redirected to the app page. This page lists the client ID (app key) and client secret (app secret), which you should use to configure Companion as shown above.
 
@@ -80,17 +80,17 @@ You can only use the integration with your own account initially—make sure to 
 
 Dashboard plugin is recommended as a container to all Provider plugins, including Box. If you are using Dashboard, it [comes with all the nessesary styles](/docs/dashboard/#CSS) for Box as well.
 
-⚠️ If you are feeling adventurous, and want to use Box plugin separately, without Dashboard, make sure to include `@uppy/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
+⚠️ If you are feeling adventurous, and want to use Box plugin separately, without Dashboard, make sure to include `@growthcloud/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
 
 ## Options
 
-The `@uppy/box` plugin has the following configurable options:
+The `@growthcloud/box` plugin has the following configurable options:
 
 ```js
 uppy.use(Box, {
   target: Dashboard,
-  companionUrl: 'https://companion.uppy.io/',
-})
+  companionUrl: "https://companion.uppy.io/",
+});
 ```
 
 ### `id: 'Box'`
@@ -103,7 +103,7 @@ Title / name shown in the UI, such as Dashboard tabs. It defaults to `'Box'`.
 
 ### `target: null`
 
-DOM element, CSS selector, or plugin to mount the Box provider into. This should normally be the [`@uppy/dashboard`](/docs/dashboard) plugin.
+DOM element, CSS selector, or plugin to mount the Box provider into. This should normally be the [`@growthcloud/dashboard`](/docs/dashboard) plugin.
 
 ### `companionUrl: null`
 
@@ -130,7 +130,7 @@ This option correlates to the [RequestCredentials value](https://developer.mozil
 ```js
 export default {
   strings: {
-    pluginNameBox: 'Box',
+    pluginNameBox: "Box",
   },
-}
+};
 ```

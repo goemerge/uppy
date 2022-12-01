@@ -6,9 +6,11 @@
       <input
         type="checkbox"
         :checked="showInlineDashboard"
-        @change="(event) => {
-          showInlineDashboard = event.target.checked
-        }"
+        @change="
+          (event) => {
+            showInlineDashboard = event.target.checked;
+          }
+        "
       />
       Show Dashboard
     </label>
@@ -16,39 +18,39 @@
       v-if="showInlineDashboard"
       :uppy="uppy"
       :props="{
-        metaFields: [{ id: 'name', name: 'Name', placeholder: 'File name' }]
+        metaFields: [{ id: 'name', name: 'Name', placeholder: 'File name' }],
       }"
     />
     <h2>Modal Dashboard</h2>
     <div>
       <button @click="open = true">Show Dashboard</button>
-    <dashboard-modal
-      :uppy="uppy2" 
-      :open="open" 
-      :props="{
-        onRequestCloseModal: handleClose
-      }"
-    />
+      <dashboard-modal
+        :uppy="uppy2"
+        :open="open"
+        :props="{
+          onRequestCloseModal: handleClose,
+        }"
+      />
     </div>
 
     <h2>Drag Drop Area</h2>
-    <drag-drop 
+    <drag-drop
       :uppy="uppy"
       :props="{
         locale: {
           strings: {
             chooseFile: 'Boop a file',
-            orDragDrop: 'or yoink it here'
-          }
-        }
+            orDragDrop: 'or yoink it here',
+          },
+        },
       }"
     />
 
     <h2>Progress Bar</h2>
-    <progress-bar 
+    <progress-bar
       :uppy="uppy"
       :props="{
-        hideAfterFinish: false
+        hideAfterFinish: false,
       }"
     />
   </div>
@@ -56,42 +58,51 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Vue from 'vue'
-import Uppy from '@uppy/core'
-import Tus from '@uppy/tus'
-import { Dashboard, DashboardModal, DragDrop, ProgressBar } from '@uppy/vue'
+import Vue from "vue";
+import Uppy from "@growthcloud/core";
+import Tus from "@growthcloud/tus";
+import {
+  Dashboard,
+  DashboardModal,
+  DragDrop,
+  ProgressBar,
+} from "@growthcloud/vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Dashboard,
     DashboardModal,
     DragDrop,
-    ProgressBar
+    ProgressBar,
   },
   computed: {
-    uppy: () => new Uppy({ id: 'uppy1', autoProceed: true, debug: true })
-      .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' }),
-    uppy2: () => new Uppy({ id: 'uppy2', autoProceed: false, debug: true })
-      .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' }),
+    uppy: () =>
+      new Uppy({ id: "uppy1", autoProceed: true, debug: true }).use(Tus, {
+        endpoint: "https://tusd.tusdemo.net/files/",
+      }),
+    uppy2: () =>
+      new Uppy({ id: "uppy2", autoProceed: false, debug: true }).use(Tus, {
+        endpoint: "https://tusd.tusdemo.net/files/",
+      }),
   },
-  data () {
+  data() {
     return {
       open: false,
-      showInlineDashboard: false
-    }
+      showInlineDashboard: false,
+    };
   },
   methods: {
-    handleClose() { this.open = false }
+    handleClose() {
+      this.open = false;
+    },
   },
-  
-}
+};
 </script>
-<style src='@uppy/core/dist/style.css'></style> 
-<style src='@uppy/dashboard/dist/style.css'></style> 
-<style src='@uppy/drag-drop/dist/style.css'></style> 
-<style src='@uppy/progress-bar/dist/style.css'></style> 
-
+<style src="@growthcloud/core/dist/style.css"></style>
+<style src="@growthcloud/dashboard/dist/style.css"></style>
+<style src="@growthcloud/drag-drop/dist/style.css"></style>
+<style src="@growthcloud/progress-bar/dist/style.css"></style>
 
 <style>
 #app {

@@ -21,65 +21,72 @@
  * the Set when it has been bundled.
  */
 
-const { glob } = require('multi-glob')
-const chalk = require('chalk')
-const path = require('node:path')
-const notifier = require('node-notifier')
+const { glob } = require("multi-glob");
+const chalk = require("chalk");
+const path = require("node:path");
+const notifier = require("node-notifier");
 
-const esbuild = require('esbuild')
-const alias = require('esbuild-plugin-alias')
+const esbuild = require("esbuild");
+const alias = require("esbuild-plugin-alias");
 
-const babelImport = import('esbuild-plugin-babel')
+const babelImport = import("esbuild-plugin-babel");
 
-const webRoot = __dirname
+const webRoot = __dirname;
 
-let srcPattern = `${webRoot}/src/examples/**/app.es6`
-let dstPattern = `${webRoot}/public/examples/**/app.js`
+let srcPattern = `${webRoot}/src/examples/**/app.es6`;
+let dstPattern = `${webRoot}/public/examples/**/app.js`;
 
-const watchifyEnabled = process.argv[2] === 'watch'
+const watchifyEnabled = process.argv[2] === "watch";
 
 // Instead of 'watch', build-examples.js can also take a path as cli argument.
 // In this case we'll only bundle the specified path/pattern
 if (!watchifyEnabled && process.argv.length > 2) {
-  [, , srcPattern, dstPattern] = process.argv
+  [, , srcPattern, dstPattern] = process.argv;
 }
 
 // Find each app.es6 file with glob.
 glob(srcPattern, (err, files) => {
-  if (err) throw new Error(err)
+  if (err) throw new Error(err);
 
   if (watchifyEnabled) {
-    console.log('--> Watching examples..')
+    console.log("--> Watching examples..");
   }
 
   files.forEach((file) => {
-    const exampleName = path.basename(path.dirname(file))
-    const outfile = dstPattern.replace('**', exampleName)
+    const exampleName = path.basename(path.dirname(file));
+    const outfile = dstPattern.replace("**", exampleName);
 
-    babelImport.then(({ default: babel }) => esbuild.build({
-      bundle: true,
-      sourcemap: true,
-      watch: watchifyEnabled,
-      entryPoints: [file],
-      outfile,
-      banner: {
-        js: '"use strict";',
-      },
-      loader: {
-        '.es6': 'js',
-      },
-      plugins: [
-        alias({
-          '@uppy': path.resolve(__dirname, `../packages/@uppy`),
-        }),
-        babel({
-          filter: /\.(es6|js)$/,
-          config: { root: path.join(__dirname, '..') },
-        }),
-      ],
-    })).catch(onError) // eslint-disable-line no-use-before-define
-  })
-})
+    babelImport
+      .then(({ default: babel }) =>
+        esbuild.build({
+          bundle: true,
+          sourcemap: true,
+          watch: watchifyEnabled,
+          entryPoints: [file],
+          outfile,
+          banner: {
+            js: '"use strict";',
+          },
+          loader: {
+            ".es6": "js",
+          },
+          plugins: [
+            alias({
+              "@growthcloud": path.resolve(
+                __dirname,
+                `../packages/@growthcloud`
+              ),
+            }),
+            babel({
+              filter: /\.(es6|js)$/,
+              config: { root: path.join(__dirname, "..") },
+            }),
+          ],
+        })
+      )
+      .catch(onError); // eslint-disable-line no-use-before-define
+  });
+});
 
 /**
  * Logs to console and shows desktop notification on error.
@@ -87,16 +94,16 @@ glob(srcPattern, (err, files) => {
  *
  * @param  {object} err Error object
  */
-function onError (err) {
-  console.error(chalk.red('✗ error:'), chalk.red(err.message))
+function onError(err) {
+  console.error(chalk.red("✗ error:"), chalk.red(err.message));
   notifier.notify({
-    title: 'Build failed:',
+    title: "Build failed:",
     message: err.message,
-  })
-  this?.emit?.('end')
+  });
+  this?.emit?.("end");
 
   // When running without watch, process.exit(1) on error
   if (!watchifyEnabled) {
-    process.exit(1)
+    process.exit(1);
   }
 }

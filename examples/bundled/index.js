@@ -1,43 +1,46 @@
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import Instagram from '@uppy/instagram'
-import GoogleDrive from '@uppy/google-drive'
-import Url from '@uppy/url'
-import Webcam from '@uppy/webcam'
-import Tus from '@uppy/tus'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import Instagram from "@growthcloud/instagram";
+import GoogleDrive from "@growthcloud/google-drive";
+import Url from "@growthcloud/url";
+import Webcam from "@growthcloud/webcam";
+import Tus from "@growthcloud/tus";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
-import '@uppy/url/dist/style.css'
-import '@uppy/webcam/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
+import "@growthcloud/url/dist/style.css";
+import "@growthcloud/webcam/dist/style.css";
 
-const TUS_ENDPOINT = 'https://tusd.tusdemo.net/files/'
+const TUS_ENDPOINT = "https://tusd.tusdemo.net/files/";
 
 const uppy = new Uppy({
   debug: true,
   meta: {
-    username: 'John',
-    license: 'Creative Commons',
+    username: "John",
+    license: "Creative Commons",
   },
 })
   .use(Dashboard, {
-    trigger: '#pick-files',
-    target: '#upload-form',
+    trigger: "#pick-files",
+    target: "#upload-form",
     inline: true,
     metaFields: [
-      { id: 'license', name: 'License', placeholder: 'specify license' },
-      { id: 'caption', name: 'Caption', placeholder: 'add caption' },
+      { id: "license", name: "License", placeholder: "specify license" },
+      { id: "caption", name: "Caption", placeholder: "add caption" },
     ],
     showProgressDetails: true,
     proudlyDisplayPoweredByUppy: true,
-    note: '2 files, images and video only',
-    restrictions: { requiredMetaFields: ['caption'] },
+    note: "2 files, images and video only",
+    restrictions: { requiredMetaFields: ["caption"] },
   })
-  .use(GoogleDrive, { target: Dashboard, companionUrl: 'http://localhost:3020' })
-  .use(Instagram, { target: Dashboard, companionUrl: 'http://localhost:3020' })
-  .use(Url, { target: Dashboard, companionUrl: 'http://localhost:3020' })
+  .use(GoogleDrive, {
+    target: Dashboard,
+    companionUrl: "http://localhost:3020",
+  })
+  .use(Instagram, { target: Dashboard, companionUrl: "http://localhost:3020" })
+  .use(Url, { target: Dashboard, companionUrl: "http://localhost:3020" })
   .use(Webcam, { target: Dashboard })
-  .use(Tus, { endpoint: TUS_ENDPOINT })
+  .use(Tus, { endpoint: TUS_ENDPOINT });
 
 // You can optinally enable the Golden Retriever plugin — it will
 // restore files after a browser crash / accidental closed window
@@ -45,15 +48,15 @@ const uppy = new Uppy({
 //
 //   .use(GoldenRetriever, { serviceWorker: true })
 
-uppy.on('complete', (result) => {
+uppy.on("complete", (result) => {
   if (result.failed.length === 0) {
-    console.log('Upload successful 😀')
+    console.log("Upload successful 😀");
   } else {
-    console.warn('Upload failed 😞')
+    console.warn("Upload failed 😞");
   }
-  console.log('successful files:', result.successful)
-  console.log('failed files:', result.failed)
-})
+  console.log("successful files:", result.successful);
+  console.log("failed files:", result.failed);
+});
 
 // uncomment if you enable Golden Retriever
 //

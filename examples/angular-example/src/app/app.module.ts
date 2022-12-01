@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import {
   UppyAngularDashboardModule,
   UppyAngularStatusBarModule,
   UppyAngularDragDropModule,
   UppyAngularProgressBarModule,
-  UppyAngularDashboardModalModule
-} from '@uppy/angular'
-import { AppComponent } from './app.component'
+  UppyAngularDashboardModalModule,
+} from '@growthcloud/angular';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,4 +23,4 @@ import { AppComponent } from './app.component'
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -14,28 +14,38 @@ Uppy consists of a core module and [various plugins](/docs/plugins/) for selecti
 Here’s the simplest example html page with Uppy (it uses a CDN bundle, while we recommend to use a bundler, see [Installation](#Installation)):
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Uppy</title>
-    <link href="https://releases.transloadit.com/uppy/v3.3.1/uppy.min.css" rel="stylesheet">
+    <link
+      href="https://releases.transloadit.com/uppy/v3.3.1/uppy.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="drag-drop-area"></div>
 
     <script type="module">
-      import {Uppy, Dashboard, Tus} from "https://releases.transloadit.com/uppy/v3.3.1/uppy.min.mjs"
+      import {
+        Uppy,
+        Dashboard,
+        Tus,
+      } from "https://releases.transloadit.com/uppy/v3.3.1/uppy.min.mjs";
       var uppy = new Uppy()
         .use(Dashboard, {
           inline: true,
-          target: '#drag-drop-area'
+          target: "#drag-drop-area",
         })
-        .use(Tus, {endpoint: 'https://tusd.tusdemo.net/files/'})
+        .use(Tus, { endpoint: "https://tusd.tusdemo.net/files/" });
 
-      uppy.on('complete', (result) => {
-        console.log('Upload complete! We’ve uploaded these files:', result.successful)
-      })
+      uppy.on("complete", (result) => {
+        console.log(
+          "Upload complete! We’ve uploaded these files:",
+          result.successful
+        );
+      });
     </script>
   </body>
 </html>
@@ -55,38 +65,41 @@ Uppy can be used with a module bundler such as [Vite](https://vitejs.dev/), [Par
 
 ### With a module bundler
 
-Install the `@uppy/core` package from npm:
+Install the `@growthcloud/core` package from npm:
 
 ```bash
-$ npm install @uppy/core
+$ npm install @growthcloud/core
 ```
 
 And install the plugins you need separately. The documentation pages for plugins in the sidebar show the necessary `npm install` commands. You can then import Uppy like so:
 
 ```bash
-npm install @uppy/core @uppy/xhr-upload @uppy/dashboard
+npm install @growthcloud/core @growthcloud/xhr-upload @growthcloud/dashboard
 ```
 
 ```js
 // Import the plugins
-import Uppy from '@uppy/core'
-import XHRUpload from '@uppy/xhr-upload'
-import Dashboard from '@uppy/dashboard'
+import Uppy from "@growthcloud/core";
+import XHRUpload from "@growthcloud/xhr-upload";
+import Dashboard from "@growthcloud/dashboard";
 
 // And their styles (for UI plugins)
 // With webpack and `style-loader`, you can import them like this:
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
 const uppy = new Uppy()
   .use(Dashboard, {
-    trigger: '#select-files',
+    trigger: "#select-files",
   })
-  .use(XHRUpload, { endpoint: 'https://api2.transloadit.com' })
+  .use(XHRUpload, { endpoint: "https://api2.transloadit.com" });
 
-uppy.on('complete', (result) => {
-  console.log('Upload complete! We’ve uploaded these files:', result.successful)
-})
+uppy.on("complete", (result) => {
+  console.log(
+    "Upload complete! We’ve uploaded these files:",
+    result.successful
+  );
+});
 ```
 
 Many plugins include a CSS file for the necessary styles in their `dist/` folder. The plugin documentation pages will tell you which to use and when. When using several plugin CSS files, some code is duplicated. A CSS minifier like [clean-css](https://www.npmjs.com/package/clean-css) is recommended to remove the duplicate selectors.
@@ -100,7 +113,7 @@ $ npm install uppy
 Then you can import Uppy and plugins like so:
 
 ```js
-import Uppy, { XHRUpload, DragDrop } from 'uppy'
+import Uppy, { XHRUpload, DragDrop } from "uppy";
 ```
 
 And add the `uppy/dist/uppy.min.css` file to your page.
@@ -124,26 +137,29 @@ You can also use a pre-built bundle from Transloadit’s CDN: Edgly. `Uppy` will
 2\. Add CSS to `<head>`:
 
 ```html
-<link href="https://releases.transloadit.com/uppy/v3.3.1/uppy.min.css" rel="stylesheet">
+<link
+  href="https://releases.transloadit.com/uppy/v3.3.1/uppy.min.css"
+  rel="stylesheet"
+/>
 ```
 
 3\. Initialize at the bottom of the closing `</body>` tag:
 
 ```html
 <script>
-  var uppy = new Uppy.Uppy()
-  uppy.use(Uppy.DragDrop, { target: '#drag-drop-area' })
-  uppy.use(Uppy.Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+  var uppy = new Uppy.Uppy();
+  uppy.use(Uppy.DragDrop, { target: "#drag-drop-area" });
+  uppy.use(Uppy.Tus, { endpoint: "https://tusd.tusdemo.net/files/" });
 </script>
 ```
 
 ## Documentation
 
-* [Uppy](/docs/uppy/) — full list of options, methods and events.
-* [Plugins](/docs/plugins/) — list of Uppy plugins and their options.
-* [Server](/docs/companion/) — setting up and running a Companion instance, which adds support for Instagram, Dropbox, Google Drive, direct links, and other remote sources.
-* [React](/docs/react/) — components to integrate Uppy UI plugins with React apps.
-* [Writing Plugins](/docs/writing-plugins) — how to write a plugin for Uppy (documentation in progress).
+- [Uppy](/docs/uppy/) — full list of options, methods and events.
+- [Plugins](/docs/plugins/) — list of Uppy plugins and their options.
+- [Server](/docs/companion/) — setting up and running a Companion instance, which adds support for Instagram, Dropbox, Google Drive, direct links, and other remote sources.
+- [React](/docs/react/) — components to integrate Uppy UI plugins with React apps.
+- [Writing Plugins](/docs/writing-plugins) — how to write a plugin for Uppy (documentation in progress).
 
 ## Browser Support
 
@@ -164,18 +180,18 @@ npm install core-js whatwg-fetch abortcontroller-polyfill md-gum-polyfill resize
 ```
 
 ```js
-import 'core-js'
-import 'whatwg-fetch'
-import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
+import "core-js";
+import "whatwg-fetch";
+import "abortcontroller-polyfill/dist/polyfill-patch-fetch";
 // Order matters: AbortController needs fetch which needs Promise (provided by core-js).
 
-import 'md-gum-polyfill'
-import ResizeObserver from 'resize-observer-polyfill'
+import "md-gum-polyfill";
+import ResizeObserver from "resize-observer-polyfill";
 
-window.ResizeObserver ??= ResizeObserver
+window.ResizeObserver ??= ResizeObserver;
 
-export { default } from '@uppy/core'
-export * from '@uppy/core'
+export { default } from "@growthcloud/core";
+export * from "@growthcloud/core";
 ```
 
 If you’re using Uppy from CDN, those polyfills are already included in the bundle, no need to include anything additionally:

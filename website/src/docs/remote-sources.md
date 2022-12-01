@@ -2,40 +2,40 @@
 type: docs
 order: 10
 title: "Remote Sources"
-module: "@uppy/remote-sources"
+module: "@growthcloud/remote-sources"
 permalink: docs/remote-sources/
 category: "Miscellaneous"
 tagline: "Uppy plugin that includes all remote sources that Uppy+Companion offer, like Instagram, Google Drive, Dropox, Box, Unsplash, Url etc"
 ---
 
-`@uppy/remote-sources` is a preset plugin to add all the available remote sources, such Instagram, Google Drive, Dropbox, and others to Uppy Dashboard in one package.
+`@growthcloud/remote-sources` is a preset plugin to add all the available remote sources, such Instagram, Google Drive, Dropbox, and others to Uppy Dashboard in one package.
 
 > Note: Remote Sources requires Dashboard and automatically installs all its plugins to it.
 
 ```js
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import RemoteSources from '@uppy/remote-sources'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import RemoteSources from "@growthcloud/remote-sources";
 
-const uppy = new Uppy()
-uppy.use(Dashboard)
+const uppy = new Uppy();
+uppy.use(Dashboard);
 uppy.use(RemoteSources, {
-  companionUrl: 'https://your-companion-url',
-})
+  companionUrl: "https://your-companion-url",
+});
 ```
 
 ## Installation
 
-This plugin is published as the `@uppy/remote-sources` package.
+This plugin is published as the `@growthcloud/remote-sources` package.
 
 ```shell
-npm install @uppy/remote-sources
+npm install @growthcloud/remote-sources
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { RemoteSources } = Uppy
+const { RemoteSources } = Uppy;
 ```
 
 ## Options
@@ -52,9 +52,9 @@ You don’t need to specify them manually or change them, but if you want to alt
 
 ```js
 uppy.use(RemoteSources, {
-  companionUrl: 'https://your-companion-url',
-  sources: ['Instagram', 'GoogleDrive', 'Unsplash', 'Url'],
-})
+  companionUrl: "https://your-companion-url",
+  sources: ["Instagram", "GoogleDrive", "Unsplash", "Url"],
+});
 ```
 
 ### `companionUrl`

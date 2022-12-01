@@ -1,21 +1,21 @@
 {
-  "name": "@uppy-example/custom-provider",
+  "name": "@growthcloud-example/custom-provider",
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@uppy/companion-client": "workspace:*",
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/google-drive": "workspace:*",
-    "@uppy/provider-views": "workspace:*",
-    "@uppy/tus": "workspace:*",
+    "@growthcloud/companion-client": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/google-drive": "workspace:*",
+    "@growthcloud/provider-views": "workspace:*",
+    "@growthcloud/tus": "workspace:*",
     "preact": "^10.5.13"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@uppy/companion": "workspace:*",
+    "@growthcloud/companion": "workspace:*",
     "body-parser": "^1.18.2",
     "dotenv": "^16.0.1",
     "express": "^4.16.2",

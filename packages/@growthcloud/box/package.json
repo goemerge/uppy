@@ -1,0 +1,35 @@
+{
+  "name": "@growthcloud/box",
+  "description": "Import files from Box, into Uppy.",
+  "version": "2.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "type": "module",
+  "types": "types/index.d.ts",
+  "keywords": [
+    "file uploader",
+    "uppy",
+    "uppy-plugin",
+    "box"
+  ],
+  "homepage": "https://uppy.io",
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "dependencies": {
+    "@growthcloud/companion-client": "workspace:^",
+    "@growthcloud/provider-views": "workspace:^",
+    "@growthcloud/utils": "workspace:^",
+    "preact": "^10.5.13"
+  },
+  "peerDependencies": {
+    "@growthcloud/core": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

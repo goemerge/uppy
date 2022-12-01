@@ -1,12 +1,12 @@
-import { Uppy } from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import AwsS3Multipart from '@uppy/aws-s3-multipart'
+import { Uppy } from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import AwsS3Multipart from "@growthcloud/aws-s3-multipart";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
 const uppy = new Uppy()
-  .use(Dashboard, { target: '#app', inline: true })
+  .use(Dashboard, { target: "#app", inline: true })
   .use(AwsS3Multipart, {
     limit: 2,
     companionUrl: process.env.VITE_COMPANION_URL,
@@ -14,13 +14,19 @@ const uppy = new Uppy()
     // as expected in the flow. We call the default internal function for this,
     // otherwise we would have to run another server to pre-sign requests
     // and we don't care about that, just that the flow works.
-    async prepareUploadParts (file, { uploadId, key, parts, signal }) {
-      const { number: partNumber, chunk: body } = parts[0]
-      const plugin = uppy.getPlugin('AwsS3Multipart')
-      const { url } = await plugin.signPart(file, { uploadId, key, partNumber, body, signal })
-      return { presignedUrls: { [partNumber]: url } }
+    async prepareUploadParts(file, { uploadId, key, parts, signal }) {
+      const { number: partNumber, chunk: body } = parts[0];
+      const plugin = uppy.getPlugin("AwsS3Multipart");
+      const { url } = await plugin.signPart(file, {
+        uploadId,
+        key,
+        partNumber,
+        body,
+        signal,
+      });
+      return { presignedUrls: { [partNumber]: url } };
     },
-  })
+  });
 
 // Keep this here to access uppy in tests
-window.uppy = uppy
+window.uppy = uppy;

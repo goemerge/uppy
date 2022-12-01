@@ -1,12 +1,12 @@
 {
-  "name": "@uppy-example/node-xhr",
+  "name": "@growthcloud-example/node-xhr",
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/webcam": "workspace:*",
-    "@uppy/xhr-upload": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/webcam": "workspace:*",
+    "@growthcloud/xhr-upload": "workspace:*",
     "formidable": "^3.2.4"
   },
   "devDependencies": {

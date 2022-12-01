@@ -2,64 +2,64 @@
 type: docs
 order: 1
 title: "Drag & Drop"
-module: "@uppy/drag-drop"
+module: "@growthcloud/drag-drop"
 permalink: docs/drag-drop/
 alias: docs/dragdrop/
 category: "Sources"
 tagline: "plain and simple drag-and-drop area"
 ---
 
-The `@uppy/drag-drop` plugin renders a drag and drop area for file selection. it can be useful when you only want the local device as a file source, don’t need file previews and a UI for metadata editing, and the [Dashboard](/docs/dashboard/) feels like overkill.
+The `@growthcloud/drag-drop` plugin renders a drag and drop area for file selection. it can be useful when you only want the local device as a file source, don’t need file previews and a UI for metadata editing, and the [Dashboard](/docs/dashboard/) feels like overkill.
 
 ```js
-import DragDrop from '@uppy/drag-drop'
+import DragDrop from "@growthcloud/drag-drop";
 
 uppy.use(DragDrop, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dragdrop/">Try it live</a>
 
 ## Installation
 
-This plugin is published as the `@uppy/drag-drop` package.
+This plugin is published as the `@growthcloud/drag-drop` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/drag-drop
+npm install @growthcloud/drag-drop
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { DragDrop } = Uppy
+const { DragDrop } = Uppy;
 ```
 
 ## CSS
 
-The `@uppy/drag-drop` plugin includes some basic styles, like shown in the [example](/examples/dragdrop). You can also choose not to use it and provide your own styles instead.
+The `@growthcloud/drag-drop` plugin includes some basic styles, like shown in the [example](/examples/dragdrop). You can also choose not to use it and provide your own styles instead.
 
 ```js
-import '@uppy/core/dist/style.css'
-import '@uppy/drag-drop/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/drag-drop/dist/style.css";
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Drag & Drop styles from `@uppy/drag-drop/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Drag & Drop styles from `@growthcloud/drag-drop/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
 ## Options
 
-The `@uppy/drag-drop` plugin has the following configurable options:
+The `@growthcloud/drag-drop` plugin has the following configurable options:
 
 ```js
 uppy.use(DragDrop, {
   target: null,
-  width: '100%',
-  height: '100%',
+  width: "100%",
+  height: "100%",
   note: null,
   locale: {},
-})
+});
 ```
 
 > Note that certain [restrictions set in Uppy’s main options](/docs/uppy#restrictions), namely `maxNumberOfFiles` and `allowedFileTypes`, affect the system file picker dialog. If `maxNumberOfFiles: 1`, users will only be able to select one file, and `allowedFileTypes: ['video/*', '.gif']` means only videos or gifs (files with `.gif` extension) will be selectable.
@@ -91,11 +91,11 @@ export default {
   strings: {
     // Text to show on the droppable area.
     // `%{browse}` is replaced with a link that opens the system file selection dialog.
-    dropHereOr: 'Drop here or %{browse}',
+    dropHereOr: "Drop here or %{browse}",
     // Used as the label for the link that opens the system file selection dialog.
-    browse: 'browse',
+    browse: "browse",
   },
-}
+};
 ```
 
 ### `onDragOver(event)`
@@ -116,16 +116,14 @@ The default English strings are:
 const strings = {
   // Text to show on the droppable area.
   // `%{browse}` is replaced with a link that opens the system file selection dialog.
-  dropHereOr: 'Drop here or %{browse}',
+  dropHereOr: "Drop here or %{browse}",
   // Used as the label for the link that opens the system file selection dialog.
-  browse: 'browse',
-}
+  browse: "browse",
+};
 ```
 
 <!-- definitions -->
 
 [ondragover]: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover
-
 [ondragleave]: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
-
 [ondrop]: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrop

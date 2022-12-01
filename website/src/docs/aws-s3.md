@@ -2,49 +2,49 @@
 type: docs
 order: 2
 title: "AWS S3"
-module: "@uppy/aws-s3"
+module: "@growthcloud/aws-s3"
 permalink: docs/aws-s3/
 category: "Destinations"
 tagline: "uploader for AWS S3"
 ---
 
-The `@uppy/aws-s3` plugin can be used to upload files directly to an S3 bucket.
+The `@growthcloud/aws-s3` plugin can be used to upload files directly to an S3 bucket.
 Uploads can be signed using either [Companion][companion docs] or a custom signing function.
 
 ```js
-import AwsS3 from '@uppy/aws-s3'
-import ms from 'ms'
+import AwsS3 from "@growthcloud/aws-s3";
+import ms from "ms";
 
 uppy.use(AwsS3, {
   limit: 2,
-  timeout: ms('1 minute'),
-  companionUrl: 'https://uppy-companion.myapp.com/',
-})
+  timeout: ms("1 minute"),
+  companionUrl: "https://uppy-companion.myapp.com/",
+});
 ```
 
 Uploading to S3 from a browser can be done in broadly two ways. A server can generate a presigned URL for a [PUT upload](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUT.html), or a server can generate form data for a [POST upload](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPOST.html). Companion uses a POST upload. See [POST Uploads](#POST-uploads) for some caveats if you would like to use POST uploads without Companion. See [Generating a presigned upload URL server-side](#example-presigned-url) for an example of a PUT upload.
 
-You can also use a separate plugin for S3 Multipart uploads. Multipart in this sense refers to Amazon’s proprietary chunked, resumable upload mechanism for large files. See the [`@uppy/aws-s3-multipart`](/docs/aws-s3-multipart) documentation.
+You can also use a separate plugin for S3 Multipart uploads. Multipart in this sense refers to Amazon’s proprietary chunked, resumable upload mechanism for large files. See the [`@growthcloud/aws-s3-multipart`](/docs/aws-s3-multipart) documentation.
 
 ## Installation
 
-This plugin is published as the `@uppy/aws-s3` package.
+This plugin is published as the `@growthcloud/aws-s3` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/aws-s3
+npm install @growthcloud/aws-s3
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { AwsS3 } = Uppy
+const { AwsS3 } = Uppy;
 ```
 
 ## Options
 
-The `@uppy/aws-s3` plugin has the following configurable options:
+The `@growthcloud/aws-s3` plugin has the following configurable options:
 
 ### `id: 'AwsS3'`
 
@@ -56,8 +56,8 @@ When using [Companion][companion docs] to sign S3 uploads, set this option to th
 
 ```js
 uppy.use(AwsS3, {
-  companionUrl: 'https://uppy-companion.my-app.com/',
-})
+  companionUrl: "https://uppy-companion.my-app.com/",
+});
 ```
 
 ### `companionHeaders: {}`
@@ -70,9 +70,9 @@ Custom headers that should be sent along to [Companion][companion docs] on every
 
 Pass an array of field names to limit the metadata fields that will be added to upload as query parameters.
 
-* Set this to an empty array `[]` to not send any fields (this is the default).
-* Set this to `['name']` to only send the `name` field.
-* Set this to `null` to send _all_ metadata fields.
+- Set this to an empty array `[]` to not send any fields (this is the default).
+- Set this to `['name']` to only send the `name` field.
+- Set this to `null` to send _all_ metadata fields.
 
 ### `getUploadParameters(file)`
 
@@ -110,18 +110,18 @@ Set to `0` to disable limiting.
 
 > This is an advanced option intended for use with _almost_ S3-compatible storage solutions.
 
-Customize response handling once an upload is completed. This passes the function through to @uppy/xhr-upload, see its [documentation](https://uppy.io/docs/xhr-upload/#getResponseData-responseText-response) for API details.
+Customize response handling once an upload is completed. This passes the function through to @growthcloud/xhr-upload, see its [documentation](https://uppy.io/docs/xhr-upload/#getResponseData-responseText-response) for API details.
 
 This option is useful when uploading to an S3-like service that doesn’t reply with an XML document, but with something else such as JSON.
 
 ### `locale: {}`
 
 ```js
-export default  {
+export default {
   strings: {
-    timedOut: 'Upload stalled for %{seconds} seconds, aborting.',
+    timedOut: "Upload stalled for %{seconds} seconds, aborting.",
   },
-}
+};
 ```
 
 ## S3 Bucket configuration
@@ -178,7 +178,7 @@ When using a presigned upload URL, the following permissions must be granted:
 
 ```json
 {
-  "AllowedMethods": ["PUT"],
+  "AllowedMethods": ["PUT"]
 }
 ```
 
@@ -213,21 +213,21 @@ In-depth documentation about CORS rules is available on the [AWS documentation s
 
 Companion uses POST uploads by default, but you can also use them with your own endpoints. A few things to be aware of when doing so:
 
-* The `@uppy/aws-s3` plugin attempts to read the `<Location>` XML tag from POST upload responses. S3 does not respond with an XML document by default. When generating the form data for POST uploads, you must set the `success_action_status` field to `201`.
+- The `@growthcloud/aws-s3` plugin attempts to read the `<Location>` XML tag from POST upload responses. S3 does not respond with an XML document by default. When generating the form data for POST uploads, you must set the `success_action_status` field to `201`.
   ```js
   // `s3` is an instance of the AWS JavaScript SDK's S3 client
   s3.createPresignedPost({
     // ...
     Fields: {
       // ...
-      success_action_status: '201',
+      success_action_status: "201",
     },
-  })
+  });
   ```
 
 ## S3 alternatives
 
-Many other object storage providers have a same API to S3, so you can use the `@uppy/aws-s3` plugin with them as well. To use them with Companion, you can set the `COMPANION_AWS_ENDPOINT` variable to the endpoint of your preferred service.
+Many other object storage providers have a same API to S3, so you can use the `@growthcloud/aws-s3` plugin with them as well. To use them with Companion, you can set the `COMPANION_AWS_ENDPOINT` variable to the endpoint of your preferred service.
 
 ### DigitalOcean Spaces
 
@@ -244,7 +244,7 @@ For a working example that you can run and play around with, see the [digitaloce
 
 ### Google Cloud Storage
 
-For Google Cloud Storage, you need to take a few more steps. For the `@uppy/aws-s3` plugin to be able to upload to a GCS bucket, it needs the Interoperability setting enabled. You can enable the Interoperability setting and [generate interoperable storage access keys](https://cloud.google.com/storage/docs/migrating#keys) by going to [Google Cloud Storage](https://console.cloud.google.com/storage) » Settings » Interoperability. Then set the environment variables for Companion like this:
+For Google Cloud Storage, you need to take a few more steps. For the `@growthcloud/aws-s3` plugin to be able to upload to a GCS bucket, it needs the Interoperability setting enabled. You can enable the Interoperability setting and [generate interoperable storage access keys](https://cloud.google.com/storage/docs/migrating#keys) by going to [Google Cloud Storage](https://console.cloud.google.com/storage) » Settings » Interoperability. Then set the environment variables for Companion like this:
 
 ```bash
 export COMPANION_AWS_ENDPOINT="https://storage.googleapis.com"
@@ -296,10 +296,10 @@ Otherwise, you can manually apply it through the OAuth playground:
 4. Click `Step 3 - Configure request to API`
 5. Configure it as follows:
 
-* HTTP Method: PATCH
-* Request URI: `https://www.googleapis.com/storage/v1/b/YOUR_BUCKET_NAME`
-* Content-Type: application/json (should be the default)
-* Press `Enter request body` and input your CORS configuration
+- HTTP Method: PATCH
+- Request URI: `https://www.googleapis.com/storage/v1/b/YOUR_BUCKET_NAME`
+- Content-Type: application/json (should be the default)
+- Press `Enter request body` and input your CORS configuration
 
 1. Then, finally, press `Send the request`.
 
@@ -315,36 +315,38 @@ For example, there could be a PHP server endpoint that prepares a presigned URL 
 
 ```js
 uppy.use(AwsS3, {
-  getUploadParameters (file) {
+  getUploadParameters(file) {
     // Send a request to our PHP signing endpoint.
-    return fetch('/s3-sign.php', {
-      method: 'post',
+    return fetch("/s3-sign.php", {
+      method: "post",
       // Send and receive JSON.
       headers: {
-        accept: 'application/json',
-        'content-type': 'application/json',
+        accept: "application/json",
+        "content-type": "application/json",
       },
       body: JSON.stringify({
         filename: file.name,
         contentType: file.type,
       }),
-    }).then((response) => {
-      // Parse the JSON response.
-      return response.json()
-    }).then((data) => {
-      // Return an object in the correct shape.
-      return {
-        method: data.method,
-        url: data.url,
-        fields: data.fields,
-        // Provide content type header required by S3
-        headers: {
-          'Content-Type': file.type,
-        },
-      }
     })
+      .then((response) => {
+        // Parse the JSON response.
+        return response.json();
+      })
+      .then((data) => {
+        // Return an object in the correct shape.
+        return {
+          method: data.method,
+          url: data.url,
+          fields: data.fields,
+          // Provide content type header required by S3
+          headers: {
+            "Content-Type": file.type,
+          },
+        };
+      });
   },
-})
+});
 ```
 
 See the [aws-php example in the uppy repository](https://github.com/transloadit/uppy/tree/main/examples/aws-php) for a small example that implements both the server-side and the client-side.
@@ -355,9 +357,9 @@ Once the file is uploaded, it’s possible to retrieve the parameters that were
 generated in `getUploadParameters(file)` via the `file.meta` field:
 
 ```js
-uppy.on('upload-success', (file, data) => {
-  const s3Key = file.meta['key'] // the S3 object key of the uploaded file
-})
+uppy.on("upload-success", (file, data) => {
+  const s3Key = file.meta["key"]; // the S3 object key of the uploaded file
+});
 ```
 
 [companion docs]: /docs/companion

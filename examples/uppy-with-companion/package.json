@@ -1,8 +1,8 @@
 {
-  "name": "@uppy-example/uppy-with-companion",
+  "name": "@growthcloud-example/uppy-with-companion",
   "version": "0.0.0",
   "dependencies": {
-    "@uppy/companion": "workspace:*",
+    "@growthcloud/companion": "workspace:*",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-session": "^1.15.6",

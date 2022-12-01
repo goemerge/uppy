@@ -1,0 +1,51 @@
+{
+  "name": "@growthcloud/remote-sources",
+  "description": "Uppy plugin that includes all remote sources that Uppy+Companion offer, like Instagram, Google Drive, Dropox, Box, Unsplash, Url etc",
+  "version": "1.0.2",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "file uploader",
+    "instagram",
+    "google-drive",
+    "facebook",
+    "dropbox",
+    "onedrive",
+    "zoom",
+    "unsplash",
+    "box",
+    "url"
+  ],
+  "homepage": "https://uppy.io",
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "dependencies": {
+    "@growthcloud/box": "workspace:^",
+    "@growthcloud/dashboard": "workspace:^",
+    "@growthcloud/dropbox": "workspace:^",
+    "@growthcloud/facebook": "workspace:^",
+    "@growthcloud/google-drive": "workspace:^",
+    "@growthcloud/instagram": "workspace:^",
+    "@growthcloud/onedrive": "workspace:^",
+    "@growthcloud/unsplash": "workspace:^",
+    "@growthcloud/url": "workspace:^",
+    "@growthcloud/zoom": "workspace:^"
+  },
+  "peerDependencies": {
+    "@growthcloud/core": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.0.0",
+    "resize-observer-polyfill": "^1.5.1"
+  }
+}

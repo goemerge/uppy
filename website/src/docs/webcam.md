@@ -2,80 +2,75 @@
 type: docs
 order: 3
 title: "Webcam"
-module: "@uppy/webcam"
+module: "@growthcloud/webcam"
 permalink: docs/webcam/
 category: "Sources"
 tagline: "upload selfies or audio / video recordings"
 ---
 
-The `@uppy/webcam` plugin lets you take photos and record videos with a built-in camera on desktop and mobile devices.
+The `@growthcloud/webcam` plugin lets you take photos and record videos with a built-in camera on desktop and mobile devices.
 
 > To use the Webcam plugin in Chrome, [your site must be served over https](https://developers.google.com/web/updates/2015/10/chrome-47-webrtc#public_service_announcements). This restriction does not apply on `localhost`, so you don’t have to jump through many hoops during development.
 
 ```js
-import Webcam from '@uppy/webcam'
+import Webcam from "@growthcloud/webcam";
 
 uppy.use(Webcam, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
 
 ## Installation
 
-This plugin is published as the `@uppy/webcam` package.
+This plugin is published as the `@growthcloud/webcam` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/webcam
+npm install @growthcloud/webcam
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Webcam } = Uppy
+const { Webcam } = Uppy;
 ```
 
 ## CSS
 
-The `@uppy/webcam` plugin requires the following CSS for styling:
+The `@growthcloud/webcam` plugin requires the following CSS for styling:
 
 ```js
-import '@uppy/core/dist/style.css'
-import '@uppy/webcam/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/webcam/dist/style.css";
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Webcam styles from `@uppy/webcam/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Webcam styles from `@growthcloud/webcam/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
 ## Options
 
-The `@uppy/webcam` plugin has the following configurable options:
+The `@growthcloud/webcam` plugin has the following configurable options:
 
 ```js
 uppy.use(Webcam, {
   onBeforeSnapshot: () => Promise.resolve(),
   countdown: false,
-  modes: [
-    'video-audio',
-    'video-only',
-    'audio-only',
-    'picture',
-  ],
+  modes: ["video-audio", "video-only", "audio-only", "picture"],
   mirror: true,
   showVideoSourceDropdown: false,
   /** @deprecated Use `videoConstraints.facingMode` instead. */
-  facingMode: 'user',
+  facingMode: "user",
   videoConstraints: {
-    facingMode: 'user',
+    facingMode: "user",
   },
   preferredImageMimeType: null,
   preferredVideoMimeType: null,
   showRecordingLength: false,
   mobileNativeCamera: isMobile({ tablet: true }),
   locale: {},
-})
+});
 ```
 
 ### `id: 'Webcam'`
@@ -102,10 +97,10 @@ A hook function to call before a snapshot is taken. The Webcam plugin will wait 
 
 The types of recording modes to allow.
 
-* `video-audio` - Record a video file, capturing both audio and video.
-* `video-only` - Record a video file with the webcam, but don’t record audio.
-* `audio-only` - Record an audio file with the user’s microphone.
-* `picture` - Take a picture with the webcam.
+- `video-audio` - Record a video file, capturing both audio and video.
+- `video-only` - Record a video file with the webcam, but don’t record audio.
+- `audio-only` - Record an audio file with the user’s microphone.
+- `picture` - Take a picture with the webcam.
 
 By default, all modes are allowed, and the Webcam plugin will show controls for recording video as well as taking pictures.
 
@@ -121,22 +116,18 @@ You can specify acceptable ranges for the resolution of the video stream using t
 
 Devices sometimes have several cameras, front and back, for example. [`facingMode`][] lets you specify which should be used:
 
-* `user`: The video source is facing toward the user; this includes, for example, the front-facing camera on a smartphone.
-* `environment`:  The video source is facing away from the user, thereby viewing their environment. This is the back camera on a smartphone.
-* `left`: The video source is facing toward the user but to their left, such as a camera aimed toward the user but over their left shoulder.
-* `right`: The video source is facing toward the user but to their right, such as a camera aimed toward the user but over their right shoulder.
+- `user`: The video source is facing toward the user; this includes, for example, the front-facing camera on a smartphone.
+- `environment`: The video source is facing away from the user, thereby viewing their environment. This is the back camera on a smartphone.
+- `left`: The video source is facing toward the user but to their left, such as a camera aimed toward the user but over their left shoulder.
+- `right`: The video source is facing toward the user but to their right, such as a camera aimed toward the user but over their right shoulder.
 
 For a full list of available properties, check out MDN documentation for [MediaTrackConstraints][].
 
-[MediaTrackConstraints]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints#Properties_of_video_tracks
-
-[`aspectRatio`]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/aspectRatio
-
+[mediatrackconstraints]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints#Properties_of_video_tracks
+[`aspectratio`]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/aspectRatio
 [`width`]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/width
-
 [`height`]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/height
-
-[`facingMode`]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode
+[`facingmode`]: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode
 
 ### `showVideoSourceDropdown: false`
 
@@ -171,30 +162,33 @@ You can set a boolean to forcefully enable / disable this feature, or a function
 ```js
 export default {
   strings: {
-    pluginNameCamera: 'Camera',
-    noCameraTitle: 'Camera Not Available',
-    noCameraDescription: 'In order to take pictures or record video, please connect a camera device',
-    recordingStoppedMaxSize: 'Recording stopped because the file size is about to exceed the limit',
-    submitRecordedFile: 'Submit recorded file',
-    discardRecordedFile: 'Discard recorded file',
+    pluginNameCamera: "Camera",
+    noCameraTitle: "Camera Not Available",
+    noCameraDescription:
+      "In order to take pictures or record video, please connect a camera device",
+    recordingStoppedMaxSize:
+      "Recording stopped because the file size is about to exceed the limit",
+    submitRecordedFile: "Submit recorded file",
+    discardRecordedFile: "Discard recorded file",
     // Shown before a picture is taken when the `countdown` option is set.
-    smile: 'Smile!',
+    smile: "Smile!",
     // Used as the label for the button that takes a picture.
     // This is not visibly rendered but is picked up by screen readers.
-    takePicture: 'Take a picture',
+    takePicture: "Take a picture",
     // Used as the label for the button that starts a video recording.
     // This is not visibly rendered but is picked up by screen readers.
-    startRecording: 'Begin video recording',
+    startRecording: "Begin video recording",
     // Used as the label for the button that stops a video recording.
     // This is not visibly rendered but is picked up by screen readers.
-    stopRecording: 'Stop video recording',
+    stopRecording: "Stop video recording",
     // Used as the label for the recording length counter. See the showRecordingLength option.
     // This is not visibly rendered but is picked up by screen readers.
-    recordingLength: 'Recording length %{recording_length}',
+    recordingLength: "Recording length %{recording_length}",
     // Title on the “allow access” screen
-    allowAccessTitle: 'Please allow access to your camera',
+    allowAccessTitle: "Please allow access to your camera",
     // Description on the “allow access” screen
-    allowAccessDescription: 'In order to take pictures or record video with your camera, please allow camera access for this site.',
+    allowAccessDescription:
+      "In order to take pictures or record video with your camera, please allow camera access for this site.",
   },
-}
+};
 ```

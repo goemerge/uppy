@@ -1,28 +1,28 @@
 ---
 title: "&lt;StatusBar />"
 type: docs
-module: "@uppy/react"
+module: "@growthcloud/react"
 permalink: docs/react/status-bar/
 alias: docs/react/statusbar/
 order: 2
 category: "React"
 ---
 
-The `<StatusBar />` component wraps the [`@uppy/status-bar`][] plugin.
+The `<StatusBar />` component wraps the [`@growthcloud/status-bar`][] plugin.
 
 ## Installation
 
 Install from NPM:
 
 ```shell
-npm install @uppy/react @uppy/status-bar @uppy/core
+npm install @growthcloud/react @growthcloud/status-bar @growthcloud/core
 ```
 
 ```js
-import { StatusBar } from '@uppy/react'
+import { StatusBar } from "@growthcloud/react";
 
 // Alternatively, you can also use a default import:
-// import StatusBar from '@uppy/react/lib/StatusBar'
+// import StatusBar from '@growthcloud/react/lib/StatusBar'
 ```
 
 ## CSS
@@ -30,22 +30,22 @@ import { StatusBar } from '@uppy/react'
 The `StatusBar` component requires the following CSS for styling:
 
 ```js
-import '@uppy/core/dist/style.css'
-import '@uppy/status-bar/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/status-bar/dist/style.css";
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Status Bar styles from `@uppy/status-bar/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Status Bar styles from `@growthcloud/status-bar/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
 ## Props
 
-The `<StatusBar />` component supports all [`@uppy/status-bar`][] options as props. Additionally, an Uppy instance must be provided in the `uppy={}` prop: see [Initializing Uppy](/docs/react/initializing) for details.
+The `<StatusBar />` component supports all [`@growthcloud/status-bar`][] options as props. Additionally, an Uppy instance must be provided in the `uppy={}` prop: see [Initializing Uppy](/docs/react/initializing) for details.
 
 ```js
-import React from 'react'
-import { StatusBar } from '@uppy/react'
+import React from "react";
+import { StatusBar } from "@growthcloud/react";
 
-export default function MyComponent (props) {
-  const { uppy } = props
+export default function MyComponent(props) {
+  const { uppy } = props;
   return (
     <StatusBar
       // assuming `props.uppy` contains an Uppy instance:
@@ -54,8 +54,8 @@ export default function MyComponent (props) {
       hideAfterFinish={false}
       showProgressDetails
     />
-  )
+  );
 }
 ```
 
-[`@uppy/status-bar`]: /docs/status-bar/
+[`@growthcloud/status-bar`]: /docs/status-bar/

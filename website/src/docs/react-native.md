@@ -1,7 +1,7 @@
 ---
 title: "React Native"
 type: docs
-module: "@uppy/react-native"
+module: "@growthcloud/react-native"
 permalink: docs/react/native/
 order: 8
 category: "React"
@@ -9,7 +9,7 @@ category: "React"
 
 ⚠️ In Beta
 
-`@uppy/react-native` is a basic Uppy component for React Native with Expo. This plugin is still in development, and is not fully featured. You can select local images or videos, take pictures with a camera or add any files from [remote urls](/docs/url) with the help of a server-side component, [Uppy Companion](/docs/companion).
+`@growthcloud/react-native` is a basic Uppy component for React Native with Expo. This plugin is still in development, and is not fully featured. You can select local images or videos, take pictures with a camera or add any files from [remote urls](/docs/url) with the help of a server-side component, [Uppy Companion](/docs/companion).
 
 Make sure to check out the example in [examples/react-native-expo](https://github.com/transloadit/uppy/tree/main/examples/react-native-expo).
 
@@ -20,14 +20,14 @@ Make sure to check out the example in [examples/react-native-expo](https://githu
 Install from NPM:
 
 ```shell
-npm install @uppy/react-native
+npm install @growthcloud/react-native
 ```
 
 ```js
-import React from 'react'
-import UppyFilePicker from '@uppy/react-native'
+import React from "react";
+import UppyFilePicker from "@growthcloud/react-native";
 
-export default function MyComponent (props) {
+export default function MyComponent(props) {
   return (
     <UppyFilePicker
       uppy={props.uppy}
@@ -35,7 +35,7 @@ export default function MyComponent (props) {
       onRequestClose={props.hideFilePicker}
       companionUrl="https://server.uppy.io"
     />
-  )
+  );
 }
 ```
 

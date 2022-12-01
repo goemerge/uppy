@@ -8,14 +8,14 @@ To spawn the demo, use the following commands:
 ```sh
 corepack yarn install
 corepack yarn build
-corepack yarn workspace @uppy-example/react dev
+corepack yarn workspace @growthcloud-example/react dev
 ```
 
-If you'd like to use a different package manager than Yarn  (e.g. npm) to work
+If you'd like to use a different package manager than Yarn (e.g. npm) to work
 with this example, you can extract it from the workspace like this:
 
 ```sh
-corepack yarn workspace @uppy-example/react pack
+corepack yarn workspace @growthcloud-example/react pack
 
 # The above command should have create a .tgz file, we're going to extract it to
 # a new directory outside of the Uppy workspace.

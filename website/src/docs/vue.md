@@ -1,7 +1,7 @@
 ---
 title: "Vue"
 type: docs
-module: "@uppy/vue"
+module: "@growthcloud/vue"
 permalink: docs/vue/
 order: 0
 category: "Other Integrations"
@@ -13,16 +13,16 @@ Note: _All plugin names are in kebab-case for the HTML element, and in CamelCase
 
 ## Installation
 
-All Vue components are provided through the `@uppy/vue` package, note that the
+All Vue components are provided through the `@growthcloud/vue` package, note that the
 underling Uppy plugin is no longer provided and you would need to install it
 explicitly. See [Usage](#usage) for more info.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/vue
+npm install @growthcloud/vue
 # Or with yarn
-yarn add @uppy/vue
+yarn add @growthcloud/vue
 ```
 
 ## CSS
@@ -43,62 +43,63 @@ Instead of adding a UI plugin to an Uppy instance with `.use()`, the Uppy instan
 </template>
 
 <script>
-import { Dashboard } from '@uppy/vue'
+  import { Dashboard } from "@growthcloud/vue";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+  import "@growthcloud/core/dist/style.css";
+  import "@growthcloud/dashboard/dist/style.css";
 
-import Uppy from '@uppy/core'
-import Webcam from '@uppy/webcam'
+  import Uppy from "@growthcloud/core";
+  import Webcam from "@growthcloud/webcam";
 
-export default {
-  name: 'App',
-  components: {
-    Dashboard
-  },
-  computed: {
-    uppy: () => new Uppy().use(Webcam)
-  },
-  beforeDestroy () {
-    this.uppy.close({ reason: 'unmount' })
-  }
-}
+  export default {
+    name: "App",
+    components: {
+      Dashboard,
+    },
+    computed: {
+      uppy: () => new Uppy().use(Webcam),
+    },
+    beforeDestroy() {
+      this.uppy.close({ reason: "unmount" });
+    },
+  };
 </script>
 ```
 
 The following plugins are available as Vue component wrappers (you need to
 install each package separately):
 
-* `<dashboard />` - renders an inline [`@uppy/dashboard`][].
-* `<dashboard-modal />` - renders a [`@uppy/dashboard`][] modal.
-* `<drag-drop />` - renders a [`@uppy/drag-drop`][] area.
-* `<file-input />` - renders a [`@uppy/file-input`][] area.
-* `<progress-bar />` - renders a [`@uppy/progress-bar`][].
-* `<status-bar />` - renders a [`@uppy/status-bar`][].
+- `<dashboard />` - renders an inline [`@growthcloud/dashboard`][].
+- `<dashboard-modal />` - renders a [`@growthcloud/dashboard`][] modal.
+- `<drag-drop />` - renders a [`@growthcloud/drag-drop`][] area.
+- `<file-input />` - renders a [`@growthcloud/file-input`][] area.
+- `<progress-bar />` - renders a [`@growthcloud/progress-bar`][].
+- `<status-bar />` - renders a [`@growthcloud/status-bar`][].
 
-Each component takes a `props` prop that will be passed to the UI Plugin. Both `@uppy/dashboard` based plugins also take a `plugins` array as a props, making it easier to add your plugins.
+Each component takes a `props` prop that will be passed to the UI Plugin. Both `@growthcloud/dashboard` based plugins also take a `plugins` array as a props, making it easier to add your plugins.
 
 ### Initializing Uppy
 
 The easiest way to initialize Uppy is creating a new instance in your `data` or `computed` and to run `uppy.close()` in the `beforeDestroy` method. You can do extra configuration with plugins where-ever you are initializing Uppy
 
 ```js
-import Uppy from '@uppy/core'
-import Webcam from '@uppy/webcam'
+import Uppy from "@growthcloud/core";
+import Webcam from "@growthcloud/webcam";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
 export default {
   computed: {
-    uppy: () => new Uppy().use(Webcam, {
-    // Config
-    }),
+    uppy: () =>
+      new Uppy().use(Webcam, {
+        // Config
+      }),
   },
-  beforeDestroy () {
-    this.uppy.close({ reason: 'unmount' })
+  beforeDestroy() {
+    this.uppy.close({ reason: "unmount" });
   },
-}
+};
 ```
 
 ## Components
@@ -110,21 +111,21 @@ export default {
 The `Dashboard` component requires the following CSS for styling:
 
 ```html
-<style src='@uppy/core/dist/style.css'></style> 
-<style src='@uppy/dashboard/dist/style.css'></style> 
+<style src="@growthcloud/core/dist/style.css"></style>
+<style src="@growthcloud/dashboard/dist/style.css"></style>
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Dashboard styles from `@uppy/dashboard/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system. With default Vue, you can add a `style` tag and make the `src` attribute the file you need.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Dashboard styles from `@growthcloud/dashboard/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system. With default Vue, you can add a `style` tag and make the `src` attribute the file you need.
 
-⚠️ The `@uppy/dashboard` plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as ([`@uppy/status-bar`](/docs/status-bar) and [`@uppy/informer`](/docs/informer)). If you also use the `@uppy/status-bar` or `@uppy/informer` plugin directly, you should not include their CSS files, but instead only use the one from the `@uppy/dashboard` plugin.
+⚠️ The `@growthcloud/dashboard` plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as ([`@growthcloud/status-bar`](/docs/status-bar) and [`@growthcloud/informer`](/docs/informer)). If you also use the `@growthcloud/status-bar` or `@growthcloud/informer` plugin directly, you should not include their CSS files, but instead only use the one from the `@growthcloud/dashboard` plugin.
 
-Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as `@uppy/url` and `@uppy/webcam`, are not included. If you are using those, please see their docs and make sure to include styles for them as well.
+Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as `@growthcloud/url` and `@growthcloud/webcam`, are not included. If you are using those, please see their docs and make sure to include styles for them as well.
 
 #### Props
 
-The `<dashboard />` component supports all `@uppy/dashboard` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
+The `<dashboard />` component supports all `@growthcloud/dashboard` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
 
-The `<dashboard />` cannot be passed to a `target:` option of a remote provider or plugins such as [`@uppy/webcam`][]. To use other plugins like [`@uppy/webcam`][] with the `<dashboard />` component, first add them to the Uppy instance, and then specify their `id` in the [`plugins`](/docs/dashboard/#plugins) prop:
+The `<dashboard />` cannot be passed to a `target:` option of a remote provider or plugins such as [`@growthcloud/webcam`][]. To use other plugins like [`@growthcloud/webcam`][] with the `<dashboard />` component, first add them to the Uppy instance, and then specify their `id` in the [`plugins`](/docs/dashboard/#plugins) prop:
 
 ### `<dashboard-modal />`
 
@@ -133,21 +134,21 @@ The `<dashboard />` cannot be passed to a `target:` option of a remote provider 
 The `DashboardModal` component requires the following CSS for styling:
 
 ```html
-<style src='@uppy/core/dist/style.css'></style> 
-<style src='@uppy/dashboard/dist/style.css'></style> 
+<style src="@growthcloud/core/dist/style.css"></style>
+<style src="@growthcloud/dashboard/dist/style.css"></style>
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Dashboard styles from `@uppy/dashboard/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system. With default Vue, you can add a `style` tag and make the `src` attribute the file you need.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Dashboard styles from `@growthcloud/dashboard/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system. With default Vue, you can add a `style` tag and make the `src` attribute the file you need.
 
-⚠️ The `@uppy/dashboard` plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as ([`@uppy/status-bar`](/docs/status-bar) and [`@uppy/informer`](/docs/informer)). If you also use the `@uppy/status-bar` or `@uppy/informer` plugin directly, you should not include their CSS files, but instead only use the one from the `@uppy/dashboard` plugin.
+⚠️ The `@growthcloud/dashboard` plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as ([`@growthcloud/status-bar`](/docs/status-bar) and [`@growthcloud/informer`](/docs/informer)). If you also use the `@growthcloud/status-bar` or `@growthcloud/informer` plugin directly, you should not include their CSS files, but instead only use the one from the `@growthcloud/dashboard` plugin.
 
-Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as `@uppy/url` and `@uppy/webcam`, are not included. If you are using those, please see their docs and make sure to include styles for them as well.
+Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as `@growthcloud/url` and `@growthcloud/webcam`, are not included. If you are using those, please see their docs and make sure to include styles for them as well.
 
 #### Props
 
-The `<dashboard-modal />` component supports all `@uppy/dashboard` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
+The `<dashboard-modal />` component supports all `@growthcloud/dashboard` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
 
-The `<dashboard-modal />` cannot be passed to a `target:` option of a remote provider or plugins such as [`@uppy/webcam`][]. To use other plugins like [`@uppy/webcam`][] with the `<dashboard-modal />` component, first add them to the Uppy instance, and then specify their `id` in the [`plugins`](/docs/dashboard/#plugins) prop:
+The `<dashboard-modal />` cannot be passed to a `target:` option of a remote provider or plugins such as [`@growthcloud/webcam`][]. To use other plugins like [`@growthcloud/webcam`][] with the `<dashboard-modal />` component, first add them to the Uppy instance, and then specify their `id` in the [`plugins`](/docs/dashboard/#plugins) prop:
 
 ### `<drag-drop />`
 
@@ -156,15 +157,15 @@ The `<dashboard-modal />` cannot be passed to a `target:` option of a remote pro
 The `DragDrop` component includes some basic styles, like shown in the [example](/examples/dragdrop). You can also choose not to include those and use your own styles instead:
 
 ```html
-<style src='@uppy/core/dist/style.css'></style> 
-<style src='@uppy/drag-drop/dist/style.css'></style> 
+<style src="@growthcloud/core/dist/style.css"></style>
+<style src="@growthcloud/drag-drop/dist/style.css"></style>
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Drag & Drop styles from `@uppy/drag-drop/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Drag & Drop styles from `@growthcloud/drag-drop/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
 #### Props
 
-The `<drag-drop />` component supports all `@uppy/drag-drop` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
+The `<drag-drop />` component supports all `@growthcloud/drag-drop` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
 
 ### `<progress-bar />`
 
@@ -173,15 +174,15 @@ The `<drag-drop />` component supports all `@uppy/drag-drop` options to be passe
 The `ProgressBar` plugin requires the following CSS for styling:
 
 ```html
-<style src='@uppy/core/dist/style.css'></style> 
-<style src='@uppy/progress-bar/dist/style.css'></style> 
+<style src="@growthcloud/core/dist/style.css"></style>
+<style src="@growthcloud/progress-bar/dist/style.css"></style>
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Progress Bar styles from `@uppy/progress-bar/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Progress Bar styles from `@growthcloud/progress-bar/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
 #### Props
 
-The `<progress-bar />` component supports all `@uppy/progress-bar` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
+The `<progress-bar />` component supports all `@growthcloud/progress-bar` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
 
 ### `<status-bar />`
 
@@ -190,28 +191,21 @@ The `<progress-bar />` component supports all `@uppy/progress-bar` options to be
 The `StatusBar` plugin requires the following CSS for styling:
 
 ```html
-<style src='@uppy/core/dist/style.css'></style> 
-<style src='@uppy/status-bar/dist/style.css'></style> 
+<style src="@growthcloud/core/dist/style.css"></style>
+<style src="@growthcloud/status-bar/dist/style.css"></style>
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Status Bar styles from `@uppy/status-bar/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Status Bar styles from `@growthcloud/status-bar/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
 #### Props
 
-The `<status-bar />` component supports all `@uppy/status-bar` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
+The `<status-bar />` component supports all `@growthcloud/status-bar` options to be passed as an object on the `props` prop. An Uppy instance must be provided in the `:uppy=''` prop.
 
-[`@uppy/dashboard`]: /docs/dashboard
-
-[`@uppy/drag-drop`]: /docs/drag-drop
-
-[`@uppy/file-input`]: /docs/file-input
-
-[`@uppy/progress-bar`]: /docs/progress-bar
-
-[`@uppy/status-bar`]: /docs/status-bar
-
-[`@uppy/webcam`]: /docs/webcam/
-
-[Nuxt]: https://nuxtjs.org
-
-[Vue]: https://vuejs.org
+[`@growthcloud/dashboard`]: /docs/dashboard
+[`@growthcloud/drag-drop`]: /docs/drag-drop
+[`@growthcloud/file-input`]: /docs/file-input
+[`@growthcloud/progress-bar`]: /docs/progress-bar
+[`@growthcloud/status-bar`]: /docs/status-bar
+[`@growthcloud/webcam`]: /docs/webcam/
+[nuxt]: https://nuxtjs.org
+[vue]: https://vuejs.org

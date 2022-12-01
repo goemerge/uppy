@@ -17,5 +17,5 @@ That will also install the dependencies for this example.
 Then, again in the **repository root**, start this example by doing:
 
 ```sh
-corepack yarn workspace @uppy-example/transloadit start
+corepack yarn workspace @growthcloud-example/transloadit start
 ```

@@ -1,23 +1,18 @@
 // import * as Expo from 'expo'
-import React from 'react'
-import {
-  Text,
-  View,
-  AsyncStorage,
-  Image,
-} from 'react-native'
-import Uppy from '@uppy/core'
-import Tus from '@uppy/tus'
-import UppyFilePicker from '@uppy/react-native'
-import FileList from './FileList'
-import PauseResumeButton from './PauseResumeButton'
-import ProgressBar from './ProgressBar'
-import SelectFiles from './SelectFilesButton'
-import getTusFileReader from './tusFileReader'
+import React from "react";
+import { Text, View, AsyncStorage, Image } from "react-native";
+import Uppy from "@growthcloud/core";
+import Tus from "@growthcloud/tus";
+import UppyFilePicker from "@growthcloud/react-native";
+import FileList from "./FileList";
+import PauseResumeButton from "./PauseResumeButton";
+import ProgressBar from "./ProgressBar";
+import SelectFiles from "./SelectFilesButton";
+import getTusFileReader from "./tusFileReader";
 
 export default class App extends React.Component {
-  constructor () {
-    super()
+  constructor() {
+    super();
 
     this.state = {
       progress: 0,
@@ -30,109 +25,112 @@ export default class App extends React.Component {
       uploadComplete: false,
       info: null,
       totalProgress: 0,
-    }
+    };
 
-    this.isReactNative = (typeof navigator !== 'undefined'
-      && typeof navigator.product === 'string'
-      && navigator.product.toLowerCase() === 'reactnative')
+    this.isReactNative =
+      typeof navigator !== "undefined" &&
+      typeof navigator.product === "string" &&
+      navigator.product.toLowerCase() === "reactnative";
 
-    this.showFilePicker = this.showFilePicker.bind(this)
-    this.hideFilePicker = this.hideFilePicker.bind(this)
-    this.togglePauseResume = this.togglePauseResume.bind(this)
+    this.showFilePicker = this.showFilePicker.bind(this);
+    this.hideFilePicker = this.hideFilePicker.bind(this);
+    this.togglePauseResume = this.togglePauseResume.bind(this);
 
-    console.log('Is this React Native?', this.isReactNative)
-    this.uppy = new Uppy({ autoProceed: true, debug: true })
+    console.log("Is this React Native?", this.isReactNative);
+    this.uppy = new Uppy({ autoProceed: true, debug: true });
     this.uppy.use(Tus, {
-      endpoint: 'https://tusd.tusdemo.net/files/',
+      endpoint: "https://tusd.tusdemo.net/files/",
       urlStorage: AsyncStorage,
       fileReader: getTusFileReader,
       chunkSize: 10 * 1024 * 1024, // keep the chunk size small to avoid memory exhaustion
-    })
-    this.uppy.on('upload-progress', (file, progress) => {
+    });
+    this.uppy.on("upload-progress", (file, progress) => {
       this.setState({
         progress: progress.bytesUploaded,
         total: progress.bytesTotal,
         totalProgress: this.uppy.state.totalProgress,
         uploadStarted: true,
-      })
-    })
-    this.uppy.on('upload-success', () => {
+      });
+    });
+    this.uppy.on("upload-success", () => {
       // console.log(file.name, response)
-    })
-    this.uppy.on('complete', (result) => {
+    });
+    this.uppy.on("complete", (result) => {
       this.setState({
-        status: 'Upload complete ✅',
+        status: "Upload complete ✅",
         uploadURL: result.successful[0] ? result.successful[0].uploadURL : null,
         uploadComplete: true,
         uploadStarted: false,
-      })
-      console.log('Upload complete:', result)
-    })
+      });
+      console.log("Upload complete:", result);
+    });
 
-    this.uppy.on('info-visible', () => {
-      const { info } = this.uppy.getState()
+    this.uppy.on("info-visible", () => {
+      const { info } = this.uppy.getState();
       this.setState({
         info,
-      })
-      console.log('uppy-info:', info)
-    })
+      });
+      console.log("uppy-info:", info);
+    });
 
-    this.uppy.on('info-hidden', () => {
+    this.uppy.on("info-hidden", () => {
       this.setState({
         info: null,
-      })
-    })
+      });
+    });
   }
 
-  showFilePicker () {
+  showFilePicker() {
     this.setState({
       isFilePickerVisible: true,
       uploadStarted: false,
       uploadComplete: false,
-    })
+    });
   }
 
-  hideFilePicker () {
+  hideFilePicker() {
     this.setState({
       isFilePickerVisible: false,
-    })
+    });
   }
 
-  togglePauseResume () {
+  togglePauseResume() {
     if (this.state.isPaused) {
-      this.uppy.resumeAll()
+      this.uppy.resumeAll();
       this.setState({
         isPaused: false,
-      })
+      });
     } else {
-      this.uppy.pauseAll()
+      this.uppy.pauseAll();
       this.setState({
         isPaused: true,
-      })
+      });
     }
   }
 
-  render () {
+  render() {
     return (
-      <View style={{
-        paddingTop: 100,
-        paddingLeft: 50,
-        paddingRight: 50,
-        flex: 1,
-      }}
-      >
-        <Text style={{
-          fontSize: 25,
-          marginBottom: 20,
-          textAlign: 'center',
+      <View
+        style={{
+          paddingTop: 100,
+          paddingLeft: 50,
+          paddingRight: 50,
+          flex: 1,
         }}
+      >
+        <Text
+          style={{
+            fontSize: 25,
+            marginBottom: 20,
+            textAlign: "center",
+          }}
         >
           Uppy in React Native
         </Text>
-        <View style={{ alignItems: 'center' }}>
+        <View style={{ alignItems: "center" }}>
           <Image
             style={{ width: 80, height: 78, marginBottom: 50 }}
-            source={require('./assets/uppy-logo.png')}
+            source={require("./assets/uppy-logo.png")}
           />
         </View>
         <SelectFiles showFilePicker={this.showFilePicker} />
@@ -142,7 +140,7 @@ export default class App extends React.Component {
             style={{
               marginBottom: 10,
               marginTop: 10,
-              color: '#b8006b',
+              color: "#b8006b",
             }}
           >
             {this.state.info.message}
@@ -170,6 +168,6 @@ export default class App extends React.Component {
         {/* <Text>{this.state.status ? 'Status: ' + this.state.status : null}</Text>
         <Text>{this.state.progress} of {this.state.total}</Text> */}
       </View>
-    )
+    );
   }
 }

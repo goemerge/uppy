@@ -1,10 +1,10 @@
-import { fileURLToPath } from 'node:url'
-import autoprefixer from 'autoprefixer'
-import postcssLogical from 'postcss-logical'
-import postcssDirPseudoClass from 'postcss-dir-pseudo-class'
+import { fileURLToPath } from "node:url";
+import autoprefixer from "autoprefixer";
+import postcssLogical from "postcss-logical";
+import postcssDirPseudoClass from "postcss-dir-pseudo-class";
 
-const ROOT = new URL('../../', import.meta.url)
-const PACKAGES_ROOT = fileURLToPath(new URL('./packages/', ROOT))
+const ROOT = new URL("../../", import.meta.url);
+const PACKAGES_ROOT = fileURLToPath(new URL("./packages/", ROOT));
 
 /**
  * @type {import('vite').UserConfig}
@@ -13,16 +13,12 @@ const config = {
   envDir: fileURLToPath(ROOT),
   css: {
     postcss: {
-      plugins: [
-        autoprefixer,
-        postcssLogical(),
-        postcssDirPseudoClass(),
-      ],
+      plugins: [autoprefixer, postcssLogical(), postcssDirPseudoClass()],
     },
   },
   esbuild: {
-    jsxFactory: 'h',
-    jsxFragment: 'Fragment',
+    jsxFactory: "h",
+    jsxFragment: "Fragment",
   },
   resolve: {
     alias: [
@@ -31,19 +27,19 @@ const config = {
         replacement: `${PACKAGES_ROOT}uppy/$1`,
       },
       {
-        find: /^@uppy\/([^/]+)$/,
-        replacement: `${PACKAGES_ROOT}@uppy/$1/src/index.js`,
+        find: /^@growthcloud\/([^/]+)$/,
+        replacement: `${PACKAGES_ROOT}@growthcloud/$1/src/index.js`,
       },
       {
-        find: /^@uppy\/([^/]+)\/lib\/(.+)$/,
-        replacement: `${PACKAGES_ROOT}@uppy/$1/src/$2`,
+        find: /^@growthcloud\/([^/]+)\/lib\/(.+)$/,
+        replacement: `${PACKAGES_ROOT}@growthcloud/$1/src/$2`,
       },
       //   {
-      //     find: /^@uppy\/([^/]+)\/(.+)$/,
-      //     replacement: PACKAGES_ROOT + "@uppy/$1/src/$2",
+      //     find: /^@growthcloud\/([^/]+)\/(.+)$/,
+      //     replacement: PACKAGES_ROOT + "@growthcloud/$1/src/$2",
       //   },
     ],
   },
-}
+};
 
-export default config
+export default config;

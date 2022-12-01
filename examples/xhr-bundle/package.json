@@ -1,10 +1,10 @@
 {
-  "name": "@uppy-example/xhr-bundle",
+  "name": "@growthcloud-example/xhr-bundle",
   "version": "0.0.0",
   "dependencies": {
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/xhr-upload": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/xhr-upload": "workspace:*",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "multer": "^1.4.1"

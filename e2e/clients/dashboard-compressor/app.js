@@ -1,9 +1,9 @@
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import Compressor from '@uppy/compressor'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import Compressor from "@growthcloud/compressor";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
 const uppy = new Uppy()
   .use(Dashboard, {
@@ -11,8 +11,8 @@ const uppy = new Uppy()
     inline: true,
   })
   .use(Compressor, {
-    mimeType: 'image/webp',
-  })
+    mimeType: "image/webp",
+  });
 
 // Keep this here to access uppy in tests
-window.uppy = uppy
+window.uppy = uppy;

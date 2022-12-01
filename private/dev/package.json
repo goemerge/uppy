@@ -1,13 +1,13 @@
 {
-  "name": "@uppy-dev/dev",
+  "name": "@growthcloud-dev/dev",
   "version": "0.0.0",
   "aliasify": {
     "aliases": {
-      "@uppy": "../../packages/@uppy"
+      "@growthcloud": "../../packages/@growthcloud"
     }
   },
   "dependencies": {
-    "@uppy/companion": "workspace:^"
+    "@growthcloud/companion": "workspace:^"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",

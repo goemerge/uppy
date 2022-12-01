@@ -3,7 +3,7 @@ type: docs
 order: 0
 title: "Robodog"
 menu: "Robodog Introduction"
-module: "@uppy/robodog"
+module: "@growthcloud/robodog"
 permalink: docs/robodog/
 category: "File Processing"
 tagline: "user friendly abstraction to do file processing with Transloadit"
@@ -21,20 +21,23 @@ Robodog is an Uppy-based library that helps you talk to the Transloadit API. It 
 Robodog can be downloaded from npm:
 
 ```shell
-npm install @uppy/robodog
+npm install @growthcloud/robodog
 ```
 
 Then, with a bundler such as [Vite](https://vitejs.dev/), [Parcel](https://parceljs.org/), or [Rollup](https://rollupjs.org), do:
 
 ```js
-import robodog from '@uppy/robodog'
-import '@uppy/robodog/dist/robodog.css'
+import robodog from "@growthcloud/robodog";
+import "@growthcloud/robodog/dist/robodog.css";
 ```
 
 If you are not using a bundler, you can also import Robodog using an HTML script tag.
 
 ```html
-<link rel="stylesheet" href="https://releases.transloadit.com/uppy/robodog/v2.9.2/robodog.min.css">
+<link
+  rel="stylesheet"
+  href="https://releases.transloadit.com/uppy/robodog/v2.9.2/robodog.min.css"
+/>
 <script src="https://releases.transloadit.com/uppy/robodog/v2.9.2/robodog.min.js"></script>
 <!-- you can now use: window.Robodog.pick() -->
 ```
@@ -57,16 +60,16 @@ Show a modal UI that allows users to pick files from their device and from the w
 
 ```js
 const resultPromise = Robodog.pick({
-  target: 'body',
+  target: "body",
   params: {
-    auth: { key: '' },
-    template_id: '',
+    auth: { key: "" },
+    template_id: "",
   },
-})
+});
 resultPromise.then((bundle) => {
-  const statuses = bundle.transloadit // Array of Assembly statuses
-  const assemblyResults = bundle.results // Array of all Assembly results
-})
+  const statuses = bundle.transloadit; // Array of Assembly statuses
+  const assemblyResults = bundle.results; // Array of all Assembly results
+});
 ```
 
 <img src="/images/temp-robodog-demo.gif" alt="Robodog File Picker Demo GIF">
@@ -79,18 +82,18 @@ Add resumable uploads and Transloadit’s processing to your existing HTML uploa
 
 ```html
 <form id="upload-form" method="POST" action="/upload">
-  <input type="file" multiple>
+  <input type="file" multiple />
   <!-- Will be inserted by `Robodog.form()`: -->
   <!-- <input type="hidden" name="transloadit" value="{...json...}"> -->
   <button type="submit">Upload</button>
 </form>
 <script>
-Robodog.form('form#upload-form', {
-  params: {
-    auth: { key: '' },
-    template_id: ''
-  }
-})
+  Robodog.form("form#upload-form", {
+    params: {
+      auth: { key: "" },
+      template_id: "",
+    },
+  });
 </script>
 ```
 
@@ -103,14 +106,14 @@ Upload files straight to Transloadit from your own custom UI. Give us an array o
 ```js
 const resultPromise = Robodog.upload(files, {
   params: {
-    auth: { key: '' },
-    template_id: '',
+    auth: { key: "" },
+    template_id: "",
   },
-})
+});
 resultPromise.then((bundle) => {
-  const statuses = bundle.transloadit // Array of Assembly statuses
-  const assemblyResults = bundle.results // Array of all Assembly results
-})
+  const statuses = bundle.transloadit; // Array of Assembly statuses
+  const assemblyResults = bundle.results; // Array of all Assembly results
+});
 ```
 
 <a class="MoreButton" href="/docs/robodog/upload">View Documentation</a>

@@ -3002,6 +3002,1192 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@growthcloud-dev/build@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-dev/build@workspace:."
+  dependencies:
+    "@babel/cli": ^7.14.5
+    "@babel/core": ^7.14.6
+    "@babel/eslint-parser": ^7.11.3
+    "@babel/eslint-plugin": ^7.11.3
+    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.14.5
+    "@babel/plugin-proposal-optional-chaining": ^7.16.0
+    "@babel/plugin-transform-modules-commonjs": ^7.16.8
+    "@babel/plugin-transform-react-jsx": ^7.10.4
+    "@babel/preset-env": ^7.14.7
+    "@babel/register": ^7.10.5
+    "@babel/types": ^7.17.0
+    "@growthcloud-dev/remark-lint-uppy": "workspace:*"
+    "@parcel/transformer-vue": 2.7.0
+    "@types/jasmine": "file:./private/@types/jasmine"
+    "@types/jasminewd2": "file:./private/@types/jasmine"
+    "@typescript-eslint/eslint-plugin": ^5.0.0
+    "@typescript-eslint/parser": ^5.0.0
+    adm-zip: ^0.5.5
+    autoprefixer: ^10.2.6
+    aws-sdk: ^2.1038.0
+    babel-jest: ^29.0.0
+    babel-plugin-inline-package-json: ^2.0.0
+    chalk: ^5.0.0
+    concat-stream: ^2.0.0
+    core-js: ~3.24.0
+    cssnano: ^5.0.6
+    dotenv: ^16.0.0
+    esbuild: ^0.15.1
+    esbuild-plugin-babel: ^0.2.3
+    eslint: ^8.0.0
+    eslint-config-transloadit: ^2.0.0
+    eslint-plugin-compat: ^4.0.0
+    eslint-plugin-cypress: ^2.12.1
+    eslint-plugin-import: ^2.25.2
+    eslint-plugin-jest: ^26.0.0
+    eslint-plugin-jsdoc: ^39.0.0
+    eslint-plugin-jsx-a11y: ^6.4.1
+    eslint-plugin-markdown: ^3.0.0
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-prefer-import: ^0.0.1
+    eslint-plugin-promise: ^6.0.0
+    eslint-plugin-react: ^7.22.0
+    eslint-plugin-react-hooks: ^4.2.0
+    eslint-plugin-unicorn: ^43.0.0
+    github-contributors-list: ^1.2.4
+    glob: ^8.0.0
+    jest: ^29.0.0
+    jest-environment-jsdom: ^29.0.0
+    lint-staged: ^13.0.0
+    mime-types: ^2.1.26
+    nodemon: ^2.0.8
+    npm-packlist: ^5.0.0
+    npm-run-all: ^4.1.5
+    onchange: ^7.1.0
+    pacote: ^13.0.0
+    postcss: ^8.2.10
+    postcss-dir-pseudo-class: ^6.0.0
+    postcss-logical: ^5.0.0
+    pre-commit: ^1.2.2
+    remark-cli: ^11.0.0
+    resolve: ^1.17.0
+    sass: ^1.29.0
+    start-server-and-test: ^1.14.0
+    stylelint: ^14.0.0
+    stylelint-config-rational-order: ^0.1.2
+    stylelint-config-standard: ^27.0.0
+    stylelint-scss: ^4.0.0
+    tar: ^6.1.0
+    tsd: ^0.22.0
+    typescript: ~4.8
+    vue-template-compiler: "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-dev/dev@workspace:private/dev":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-dev/dev@workspace:private/dev"
+  dependencies:
+    "@growthcloud/companion": "workspace:^"
+    autoprefixer: ^10.2.6
+    postcss-dir-pseudo-class: ^6.0.0
+    postcss-logical: ^5.0.0
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-dev/locale-pack@workspace:private/locale-pack":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-dev/locale-pack@workspace:private/locale-pack"
+  dependencies:
+    chalk: ^5.0.0
+    dedent: ^0.7.0
+    glob: ^8.0.0
+    mdast-util-heading-range: ^3.1.0
+    remark: ^14.0.1
+    remark-frontmatter: ^4.0.1
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-dev/release@workspace:private/release":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-dev/release@workspace:private/release"
+  dependencies:
+    globby: ^13.0.0
+    node-fetch: ^3.1.0
+    prompts: ^2.4.2
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-dev/remark-lint-uppy@workspace:*, @growthcloud-dev/remark-lint-uppy@workspace:private/remark-lint-uppy":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-dev/remark-lint-uppy@workspace:private/remark-lint-uppy"
+  dependencies:
+    mdast-comment-marker: ^2.1.0
+    remark-frontmatter: ^4.0.0
+    remark-lint: ^9.0.0
+    remark-lint-emphasis-marker: ^3.0.0
+    remark-lint-final-newline: ^2.0.0
+    remark-lint-hard-break-spaces: ^3.0.0
+    remark-lint-no-auto-link-without-protocol: ^3.1.0
+    remark-lint-no-blockquote-without-marker: ^5.0.0
+    remark-lint-no-duplicate-definitions: ^3.0.0
+    remark-lint-no-heading-content-indent: ^4.0.0
+    remark-lint-no-inline-padding: ^4.0.0
+    remark-lint-no-literal-urls: ^3.0.0
+    remark-lint-no-shortcut-reference-image: ^3.1.0
+    remark-lint-no-shortcut-reference-link: ^3.1.0
+    remark-lint-no-undefined-references: ^4.0.0
+    remark-lint-no-unused-definitions: ^3.1.0
+    remark-lint-ordered-list-marker-style: ^3.1.0
+    remark-lint-strong-marker: ^3.1.0
+    remark-retext: ^5.0.0
+    retext-english: ^4.0.0
+    retext-equality: ^6.2.0
+    retext-profanities: ^7.1.0
+    retext-quotes: ^5.0.0
+    retext-simplify: ^7.0.0
+    retext-syntax-mentions: ^3.1.0
+    unified: ^10.0.0
+    unified-message-control: ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/angular@workspace:examples/angular-example":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/angular@workspace:examples/angular-example"
+  dependencies:
+    "@angular-devkit/build-angular": ^14.1.2
+    "@angular-eslint/builder": ^14.0.2
+    "@angular-eslint/eslint-plugin": ^14.0.2
+    "@angular-eslint/eslint-plugin-template": ^14.0.2
+    "@angular-eslint/schematics": ^14.0.2
+    "@angular-eslint/template-parser": ^14.0.2
+    "@angular/animations": ^14.1.0
+    "@angular/cli": ~14.2.0
+    "@angular/common": ^14.1.0
+    "@angular/compiler": ^14.1.0
+    "@angular/compiler-cli": ^14.1.0
+    "@angular/core": ^14.1.0
+    "@angular/forms": ^14.1.0
+    "@angular/platform-browser": ^14.1.0
+    "@angular/platform-browser-dynamic": ^14.1.0
+    "@angular/router": ^14.1.0
+    "@growthcloud/angular": "workspace:*"
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/drag-drop": "workspace:*"
+    "@growthcloud/google-drive": "workspace:*"
+    "@growthcloud/progress-bar": "workspace:*"
+    "@growthcloud/tus": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    "@types/jasmine": ~4.0.0
+    eslint: ^8.0.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-jsdoc: ^39.0.0
+    eslint-plugin-prefer-arrow: ^1.2.3
+    jasmine-core: ~4.2.0
+    karma: ~6.4.0
+    karma-chrome-launcher: ~3.1.0
+    karma-coverage: ~2.2.0
+    karma-jasmine: ~5.1.0
+    karma-jasmine-html-reporter: ~2.0.0
+    rxjs: ~7.5.0
+    tslib: ^2.3.0
+    typescript: ~4.8
+    zone.js: ~0.11.4
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/aws-companion@workspace:examples/aws-companion":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/aws-companion@workspace:examples/aws-companion"
+  dependencies:
+    "@growthcloud/aws-s3": "workspace:*"
+    "@growthcloud/companion": "workspace:*"
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/google-drive": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    body-parser: ^1.20.0
+    cookie-parser: ^1.4.6
+    cors: ^2.8.5
+    dotenv: ^16.0.1
+    express: ^4.18.1
+    express-session: ^1.17.3
+    npm-run-all: ^4.1.5
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/aws-nodejs@workspace:examples/aws-nodejs":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/aws-nodejs@workspace:examples/aws-nodejs"
+  dependencies:
+    aws-sdk: ^2.1038.0
+    body-parser: ^1.20.0
+    dotenv: ^16.0.0
+    express: ^4.18.1
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/aws-php@workspace:examples/aws-php":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/aws-php@workspace:examples/aws-php"
+  dependencies:
+    "@growthcloud/aws-s3": "workspace:*"
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    esbuild: ^0.15.1
+    uppy: "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/bundled@workspace:examples/bundled":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/bundled@workspace:examples/bundled"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/google-drive": "workspace:*"
+    "@growthcloud/instagram": "workspace:*"
+    "@growthcloud/tus": "workspace:*"
+    "@growthcloud/url": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    parcel: ^2.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/cdn@workspace:examples/cdn-example":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/cdn@workspace:examples/cdn-example"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/custom-provider@workspace:examples/custom-provider":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/custom-provider@workspace:examples/custom-provider"
+  dependencies:
+    "@growthcloud/companion": "workspace:*"
+    "@growthcloud/companion-client": "workspace:*"
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/google-drive": "workspace:*"
+    "@growthcloud/provider-views": "workspace:*"
+    "@growthcloud/tus": "workspace:*"
+    body-parser: ^1.18.2
+    dotenv: ^16.0.1
+    express: ^4.16.2
+    express-session: ^1.15.6
+    npm-run-all: ^4.1.2
+    preact: ^10.5.13
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/digitalocean-spaces@workspace:examples/digitalocean-spaces":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/digitalocean-spaces@workspace:examples/digitalocean-spaces"
+  dependencies:
+    "@growthcloud/aws-s3": "workspace:*"
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    body-parser: ^1.18.3
+    cors: ^2.8.5
+    dotenv: ^16.0.1
+    express: ^4.16.2
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/multiple-instances@workspace:examples/multiple-instances":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/multiple-instances@workspace:examples/multiple-instances"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/golden-retriever": "workspace:*"
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/node-xhr@workspace:examples/node-xhr":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/node-xhr@workspace:examples/node-xhr"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    "@growthcloud/xhr-upload": "workspace:*"
+    formidable: ^3.2.4
+    npm-run-all: ^4.1.3
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/php-xhr@workspace:examples/php-xhr":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/php-xhr@workspace:examples/php-xhr"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    "@growthcloud/xhr-upload": "workspace:*"
+    npm-run-all: ^4.1.3
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/python-xhr@workspace:examples/python-xhr":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/python-xhr@workspace:examples/python-xhr"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    "@growthcloud/xhr-upload": "workspace:*"
+    npm-run-all: ^4.1.3
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/react-native-expo@workspace:examples/react-native-expo":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/react-native-expo@workspace:examples/react-native-expo"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/instagram": "workspace:*"
+    "@growthcloud/react-native": "workspace:*"
+    "@growthcloud/tus": "workspace:*"
+    "@growthcloud/url": "workspace:*"
+    "@growthcloud/xhr-upload": "workspace:*"
+    babel-preset-expo: ^5.0.0
+    base64-js: ^1.3.0
+    expo: ^42.0.0
+    preact-render-to-string: ^5.1.0
+    react: ^16.8.6
+    react-native: ~0.63.4
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/react@workspace:examples/react-example":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/react@workspace:examples/react-example"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/drag-drop": "workspace:*"
+    "@growthcloud/file-input": "workspace:*"
+    "@growthcloud/google-drive": "workspace:*"
+    "@growthcloud/progress-bar": "workspace:*"
+    "@growthcloud/react": "workspace:*"
+    "@growthcloud/tus": "workspace:*"
+    "@vitejs/plugin-react": ^2.0.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/redux@workspace:examples/redux":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/redux@workspace:examples/redux"
+  dependencies:
+    "@babel/core": ^7.4.4
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/store-redux": "workspace:*"
+    "@growthcloud/tus": "workspace:*"
+    babelify: ^10.0.0
+    budo: ^11.6.1
+    redux: ^4.1.2
+    redux-logger: ^3.0.6
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/svelte-app@workspace:examples/svelte-example":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/svelte-app@workspace:examples/svelte-example"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/svelte": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    "@growthcloud/xhr-upload": "workspace:*"
+    "@rollup/plugin-commonjs": ^22.0.0
+    "@rollup/plugin-json": ^4.1.0
+    "@rollup/plugin-node-resolve": ^13.0.0
+    "@rollup/plugin-typescript": ^8.0.0
+    "@tsconfig/svelte": ^1.0.0
+    formidable: ^2.0.1
+    npm-run-all: ^4.1.5
+    postcss: ^8.2.1
+    postcss-import: ^13.0.0
+    postcss-load-config: ^3.0.0
+    rollup: ^2.60.2
+    rollup-plugin-css-only: ^3.0.0
+    rollup-plugin-livereload: ^2.0.0
+    rollup-plugin-svelte: ^7.0.0
+    rollup-plugin-terser: ^7.0.0
+    sirv-cli: ^1.0.0
+    svelte: ">=3.24.0"
+    svelte-check: ^1.6.0
+    svelte-preprocess: ^4.6.1
+    tslib: ^2.0.0
+    typescript: ~4.8
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/transloadit-markdown-bin@workspace:examples/transloadit-markdown-bin":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/transloadit-markdown-bin@workspace:examples/transloadit-markdown-bin"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/drop-target": "workspace:*"
+    "@growthcloud/image-editor": "workspace:*"
+    "@growthcloud/remote-sources": "workspace:*"
+    "@growthcloud/transloadit": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    marked: ^4.0.18
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/transloadit@workspace:examples/transloadit":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/transloadit@workspace:examples/transloadit"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/drop-target": "workspace:*"
+    "@growthcloud/form": "workspace:*"
+    "@growthcloud/image-editor": "workspace:*"
+    "@growthcloud/progress-bar": "workspace:*"
+    "@growthcloud/remote-sources": "workspace:*"
+    "@growthcloud/transloadit": "workspace:*"
+    "@growthcloud/webcam": "workspace:*"
+    express: ^4.16.4
+    he: ^1.2.0
+    npm-run-all: ^4.1.5
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/uppy-with-companion@workspace:examples/uppy-with-companion":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/uppy-with-companion@workspace:examples/uppy-with-companion"
+  dependencies:
+    "@growthcloud/companion": "workspace:*"
+    body-parser: ^1.18.2
+    express: ^4.16.2
+    express-session: ^1.15.6
+    light-server: ^2.4.0
+    upload-server: ^1.1.6
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/vue2@workspace:examples/vue":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/vue2@workspace:examples/vue"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/drag-drop": "workspace:*"
+    "@growthcloud/progress-bar": "workspace:*"
+    "@growthcloud/transloadit": "workspace:*"
+    "@growthcloud/vue": "workspace:*"
+    vite: ^3.0.0
+    vite-plugin-vue2: ^2.0.1
+    vue: ^2.6.14
+    vue-template-compiler: ^2.6.14
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/vue3@workspace:examples/vue3":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/vue3@workspace:examples/vue3"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/drag-drop": "workspace:*"
+    "@growthcloud/progress-bar": "workspace:*"
+    "@growthcloud/tus": "workspace:*"
+    "@growthcloud/vue": "workspace:*"
+    "@vitejs/plugin-vue": ^3.0.0
+    vite: ^3.0.0
+    vue: ^3.2.33
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud-example/xhr-bundle@workspace:examples/xhr-bundle":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud-example/xhr-bundle@workspace:examples/xhr-bundle"
+  dependencies:
+    "@growthcloud/core": "workspace:*"
+    "@growthcloud/dashboard": "workspace:*"
+    "@growthcloud/xhr-upload": "workspace:*"
+    cors: ^2.8.5
+    express: ^4.16.4
+    multer: ^1.4.1
+    npm-run-all: ^4.1.5
+    vite: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/angular@workspace:*, @growthcloud/angular@workspace:packages/@growthcloud/angular/projects/uppy/angular":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/angular@workspace:packages/@growthcloud/angular/projects/uppy/angular"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/common": ">= 14"
+    "@angular/core": ">= 14"
+    "@growthcloud/core": "workspace:^"
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/drag-drop": "workspace:^"
+    "@growthcloud/progress-bar": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/audio@workspace:^, @growthcloud/audio@workspace:packages/@growthcloud/audio":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/audio@workspace:packages/@growthcloud/audio"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/aws-s3-multipart@workspace:^, @growthcloud/aws-s3-multipart@workspace:packages/@growthcloud/aws-s3-multipart":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/aws-s3-multipart@workspace:packages/@growthcloud/aws-s3-multipart"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    nock: ^13.1.0
+    whatwg-fetch: 3.6.2
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/aws-s3@workspace:*, @growthcloud/aws-s3@workspace:^, @growthcloud/aws-s3@workspace:packages/@growthcloud/aws-s3":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/aws-s3@workspace:packages/@growthcloud/aws-s3"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    "@growthcloud/xhr-upload": "workspace:^"
+    "@jest/globals": ^29.0.0
+    nanoid: ^4.0.0
+    whatwg-fetch: 3.6.2
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/box@workspace:^, @growthcloud/box@workspace:packages/@growthcloud/box":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/box@workspace:packages/@growthcloud/box"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/companion-client@workspace:*, @growthcloud/companion-client@workspace:^, @growthcloud/companion-client@workspace:packages/@growthcloud/companion-client":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/companion-client@workspace:packages/@growthcloud/companion-client"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    namespace-emitter: ^2.0.1
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/companion@workspace:*, @growthcloud/companion@workspace:^, @growthcloud/companion@workspace:packages/@growthcloud/companion":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/companion@workspace:packages/@growthcloud/companion"
+  dependencies:
+    "@types/compression": 1.7.0
+    "@types/connect-redis": 0.0.18
+    "@types/cookie-parser": 1.4.2
+    "@types/cors": 2.8.6
+    "@types/eslint": ^8.2.0
+    "@types/express-session": 1.17.3
+    "@types/jsonwebtoken": 8.3.7
+    "@types/lodash.merge": 4.6.6
+    "@types/morgan": 1.7.37
+    "@types/ms": 0.7.31
+    "@types/node": ^18.0.3
+    "@types/react": ^18.0.0
+    "@types/request": 2.48.8
+    "@types/webpack": ^5.28.0
+    "@types/ws": 8.5.3
+    atob: 2.1.2
+    aws-sdk: ^2.1038.0
+    body-parser: 1.20.0
+    chalk: 4.1.2
+    common-tags: 1.8.2
+    connect-redis: 6.1.3
+    cookie-parser: 1.4.6
+    cors: ^2.8.5
+    escape-goat: 3.0.0
+    escape-string-regexp: 4.0.0
+    express: 4.18.1
+    express-interceptor: 1.2.0
+    express-prom-bundle: 6.5.0
+    express-request-id: 1.4.1
+    express-session: 1.17.3
+    form-data: ^3.0.0
+    got: 11
+    grant: 4.7.0
+    helmet: ^4.6.0
+    into-stream: ^6.0.0
+    ipaddr.js: ^2.0.1
+    jest: ^29.0.0
+    jsonwebtoken: 8.5.1
+    lodash.merge: ^4.6.2
+    lodash.throttle: ^4.1.1
+    mime-types: 2.1.35
+    moment: ^2.29.2
+    moment-timezone: ^0.5.31
+    morgan: 1.10.0
+    ms: 2.1.3
+    nock: ^13.1.3
+    node-schedule: 2.1.0
+    prom-client: 14.0.1
+    redis: 4.2.0
+    semver: 7.3.7
+    serialize-error: ^2.1.0
+    serialize-javascript: ^6.0.0
+    supertest: 6.2.4
+    tus-js-client: ^3.0.0
+    typescript: ~4.8
+    validator: ^13.0.0
+    ws: 8.8.1
+  bin:
+    companion: ./bin/companion
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/compressor@workspace:^, @growthcloud/compressor@workspace:packages/@growthcloud/compressor":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/compressor@workspace:packages/@growthcloud/compressor"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@transloadit/prettier-bytes": ^0.0.9
+    compressorjs: ^1.1.1
+    preact: ^10.5.13
+    promise-queue: ^2.2.5
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/core@workspace:*, @growthcloud/core@workspace:^, @growthcloud/core@workspace:packages/@growthcloud/core":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/core@workspace:packages/@growthcloud/core"
+  dependencies:
+    "@growthcloud/store-default": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    "@transloadit/prettier-bytes": 0.0.9
+    lodash.throttle: ^4.1.1
+    mime-match: ^1.0.2
+    namespace-emitter: ^2.0.1
+    nanoid: ^4.0.0
+    preact: ^10.5.13
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/dashboard@workspace:*, @growthcloud/dashboard@workspace:^, @growthcloud/dashboard@workspace:packages/@growthcloud/dashboard":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/dashboard@workspace:packages/@growthcloud/dashboard"
+  dependencies:
+    "@growthcloud/google-drive": "workspace:^"
+    "@growthcloud/informer": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
+    "@growthcloud/thumbnail-generator": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    "@transloadit/prettier-bytes": 0.0.7
+    classnames: ^2.2.6
+    is-shallow-equal: ^1.0.1
+    lodash.debounce: ^4.0.8
+    memoize-one: ^6.0.0
+    nanoid: ^4.0.0
+    preact: ^10.5.13
+    resize-observer-polyfill: ^1.5.0
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/drag-drop@workspace:*, @growthcloud/drag-drop@workspace:^, @growthcloud/drag-drop@workspace:packages/@growthcloud/drag-drop":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/drag-drop@workspace:packages/@growthcloud/drag-drop"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/drop-target@workspace:*, @growthcloud/drop-target@workspace:^, @growthcloud/drop-target@workspace:packages/@growthcloud/drop-target":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/drop-target@workspace:packages/@growthcloud/drop-target"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/dropbox@workspace:^, @growthcloud/dropbox@workspace:packages/@growthcloud/dropbox":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/dropbox@workspace:packages/@growthcloud/dropbox"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/facebook@workspace:^, @growthcloud/facebook@workspace:packages/@growthcloud/facebook":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/facebook@workspace:packages/@growthcloud/facebook"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/file-input@workspace:*, @growthcloud/file-input@workspace:^, @growthcloud/file-input@workspace:packages/@growthcloud/file-input":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/file-input@workspace:packages/@growthcloud/file-input"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/form@workspace:*, @growthcloud/form@workspace:^, @growthcloud/form@workspace:packages/@growthcloud/form":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/form@workspace:packages/@growthcloud/form"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    get-form-data: ^3.0.0
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/golden-retriever@workspace:*, @growthcloud/golden-retriever@workspace:^, @growthcloud/golden-retriever@workspace:packages/@growthcloud/golden-retriever":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/golden-retriever@workspace:packages/@growthcloud/golden-retriever"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@transloadit/prettier-bytes": 0.0.9
+    lodash.throttle: ^4.1.1
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/google-drive@workspace:*, @growthcloud/google-drive@workspace:^, @growthcloud/google-drive@workspace:packages/@growthcloud/google-drive":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/google-drive@workspace:packages/@growthcloud/google-drive"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/image-editor@workspace:*, @growthcloud/image-editor@workspace:^, @growthcloud/image-editor@workspace:packages/@growthcloud/image-editor":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/image-editor@workspace:packages/@growthcloud/image-editor"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    cropperjs: 1.5.7
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/informer@workspace:^, @growthcloud/informer@workspace:packages/@growthcloud/informer":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/informer@workspace:packages/@growthcloud/informer"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/instagram@workspace:*, @growthcloud/instagram@workspace:^, @growthcloud/instagram@workspace:packages/@growthcloud/instagram":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/instagram@workspace:packages/@growthcloud/instagram"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/locales@workspace:packages/@growthcloud/locales":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/locales@workspace:packages/@growthcloud/locales"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/onedrive@workspace:^, @growthcloud/onedrive@workspace:packages/@growthcloud/onedrive":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/onedrive@workspace:packages/@growthcloud/onedrive"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/progress-bar@workspace:*, @growthcloud/progress-bar@workspace:^, @growthcloud/progress-bar@workspace:packages/@growthcloud/progress-bar":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/progress-bar@workspace:packages/@growthcloud/progress-bar"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/provider-views@workspace:*, @growthcloud/provider-views@workspace:^, @growthcloud/provider-views@workspace:packages/@growthcloud/provider-views":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/provider-views@workspace:packages/@growthcloud/provider-views"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    classnames: ^2.2.6
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/react-native@workspace:*, @growthcloud/react-native@workspace:packages/@growthcloud/react-native":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/react-native@workspace:packages/@growthcloud/react-native"
+  dependencies:
+    "@growthcloud/instagram": "workspace:^"
+    "@growthcloud/url": "workspace:^"
+  peerDependencies:
+    expo: ">=33.0.0"
+    expo-document-picker: ">=6.0.0"
+    expo-image-picker: ">=6.0.0"
+    expo-permissions: ">=6.0.0"
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+    react-native-super-grid: "*"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/react@workspace:*, @growthcloud/react@workspace:packages/@growthcloud/react":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/react@workspace:packages/@growthcloud/react"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@types/react": ^18.0.8
+    prop-types: ^15.6.1
+    react: ^18.1.0
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/drag-drop": "workspace:^"
+    "@growthcloud/file-input": "workspace:^"
+    "@growthcloud/progress-bar": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@growthcloud/dashboard":
+      optional: true
+    "@growthcloud/drag-drop":
+      optional: true
+    "@growthcloud/file-input":
+      optional: true
+    "@growthcloud/progress-bar":
+      optional: true
+    "@growthcloud/status-bar":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/redux-dev-tools@workspace:^, @growthcloud/redux-dev-tools@workspace:packages/@growthcloud/redux-dev-tools":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/redux-dev-tools@workspace:packages/@growthcloud/redux-dev-tools"
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/remote-sources@workspace:*, @growthcloud/remote-sources@workspace:^, @growthcloud/remote-sources@workspace:packages/@growthcloud/remote-sources":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/remote-sources@workspace:packages/@growthcloud/remote-sources"
+  dependencies:
+    "@growthcloud/box": "workspace:^"
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/dropbox": "workspace:^"
+    "@growthcloud/facebook": "workspace:^"
+    "@growthcloud/google-drive": "workspace:^"
+    "@growthcloud/instagram": "workspace:^"
+    "@growthcloud/onedrive": "workspace:^"
+    "@growthcloud/unsplash": "workspace:^"
+    "@growthcloud/url": "workspace:^"
+    "@growthcloud/zoom": "workspace:^"
+    "@jest/globals": ^29.0.0
+    resize-observer-polyfill: ^1.5.1
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/screen-capture@workspace:^, @growthcloud/screen-capture@workspace:packages/@growthcloud/screen-capture":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/screen-capture@workspace:packages/@growthcloud/screen-capture"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/status-bar@workspace:^, @growthcloud/status-bar@workspace:packages/@growthcloud/status-bar":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/status-bar@workspace:packages/@growthcloud/status-bar"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@transloadit/prettier-bytes": 0.0.9
+    classnames: ^2.2.6
+    lodash.throttle: ^4.1.1
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/store-default@workspace:^, @growthcloud/store-default@workspace:packages/@growthcloud/store-default":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/store-default@workspace:packages/@growthcloud/store-default"
+  dependencies:
+    "@jest/globals": ^29.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/store-redux@workspace:*, @growthcloud/store-redux@workspace:^, @growthcloud/store-redux@workspace:packages/@growthcloud/store-redux":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/store-redux@workspace:packages/@growthcloud/store-redux"
+  dependencies:
+    "@jest/globals": ^29.0.0
+    nanoid: ^4.0.0
+    redux: ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/svelte@workspace:*, @growthcloud/svelte@workspace:packages/@growthcloud/svelte":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/svelte@workspace:packages/@growthcloud/svelte"
+  dependencies:
+    "@rollup/plugin-node-resolve": ^13.0.0
+    "@tsconfig/svelte": ^3.0.0
+    rollup: ^2.60.2
+    rollup-plugin-svelte: ^7.0.0
+    svelte: ^3.31.0
+    svelte-check: ^2.0.0
+    svelte-preprocess: ^4.6.1
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/drag-drop": "workspace:^"
+    "@growthcloud/progress-bar": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
+    svelte: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/thumbnail-generator@workspace:^, @growthcloud/thumbnail-generator@workspace:packages/@growthcloud/thumbnail-generator":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/thumbnail-generator@workspace:packages/@growthcloud/thumbnail-generator"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    exifr: ^7.0.0
+    namespace-emitter: 2.0.1
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/transloadit@workspace:*, @growthcloud/transloadit@workspace:^, @growthcloud/transloadit@workspace:packages/@growthcloud/transloadit":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/transloadit@workspace:packages/@growthcloud/transloadit"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/tus": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    component-emitter: ^1.2.1
+    socket.io-client: ^4.1.3
+    whatwg-fetch: ^3.6.2
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/tus@workspace:*, @growthcloud/tus@workspace:^, @growthcloud/tus@workspace:packages/@growthcloud/tus":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/tus@workspace:packages/@growthcloud/tus"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    tus-js-client: ^3.0.0
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/unsplash@workspace:^, @growthcloud/unsplash@workspace:packages/@growthcloud/unsplash":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/unsplash@workspace:packages/@growthcloud/unsplash"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/url@workspace:*, @growthcloud/url@workspace:^, @growthcloud/url@workspace:packages/@growthcloud/url":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/url@workspace:packages/@growthcloud/url"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/utils@workspace:^, @growthcloud/utils@workspace:packages/@growthcloud/utils":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/utils@workspace:packages/@growthcloud/utils"
+  dependencies:
+    "@jest/globals": ^29.0.0
+    lodash.throttle: ^4.1.1
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/vue@workspace:*, @growthcloud/vue@workspace:packages/@growthcloud/vue":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/vue@workspace:packages/@growthcloud/vue"
+  dependencies:
+    shallow-equal: ^1.2.1
+    vue: ^2.6.14
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/drag-drop": "workspace:^"
+    "@growthcloud/file-input": "workspace:^"
+    "@growthcloud/progress-bar": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
+    vue: ">=2.6.11"
+  peerDependenciesMeta:
+    "@growthcloud/dashboard":
+      optional: true
+    "@growthcloud/drag-drop":
+      optional: true
+    "@growthcloud/file-input":
+      optional: true
+    "@growthcloud/progress-bar":
+      optional: true
+    "@growthcloud/status-bar":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/webcam@workspace:*, @growthcloud/webcam@workspace:^, @growthcloud/webcam@workspace:packages/@growthcloud/webcam":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/webcam@workspace:packages/@growthcloud/webcam"
+  dependencies:
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    is-mobile: ^3.1.1
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/xhr-upload@workspace:*, @growthcloud/xhr-upload@workspace:^, @growthcloud/xhr-upload@workspace:packages/@growthcloud/xhr-upload":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/xhr-upload@workspace:packages/@growthcloud/xhr-upload"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    "@jest/globals": ^29.0.0
+    nanoid: ^4.0.0
+    nock: ^13.1.0
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@growthcloud/zoom@workspace:^, @growthcloud/zoom@workspace:packages/@growthcloud/zoom":
+  version: 0.0.0-use.local
+  resolution: "@growthcloud/zoom@workspace:packages/@growthcloud/zoom"
+  dependencies:
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/utils": "workspace:^"
+    preact: ^10.5.13
+  peerDependencies:
+    "@growthcloud/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "@hapi/address@npm:2.x.x":
   version: 2.1.4
   resolution: "@hapi/address@npm:2.1.4"
@@ -6722,9 +7908,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/connect-redis@patch:@types/connect-redis@npm:0.0.18#.yarn/patches/@types-connect-redis-npm-0.0.18-4fd2b614d3::locator=%40uppy-dev%2Fbuild%40workspace%3A.":
+"@types/connect-redis@patch:@types/connect-redis@npm:0.0.18#.yarn/patches/@types-connect-redis-npm-0.0.18-4fd2b614d3::locator=%40growthcloud-dev%2Fbuild%40workspace%3A.":
   version: 0.0.18
-  resolution: "@types/connect-redis@patch:@types/connect-redis@npm%3A0.0.18#.yarn/patches/@types-connect-redis-npm-0.0.18-4fd2b614d3::version=0.0.18&hash=df5a6e&locator=%40uppy-dev%2Fbuild%40workspace%3A."
+  resolution: "@types/connect-redis@patch:@types/connect-redis@npm%3A0.0.18#.yarn/patches/@types-connect-redis-npm-0.0.18-4fd2b614d3::version=0.0.18&hash=df5a6e&locator=%40growthcloud-dev%2Fbuild%40workspace%3A."
   dependencies:
     "@types/express": "*"
     "@types/express-session": "*"
@@ -6991,9 +8177,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jasmine@file:./private/@types/jasmine::locator=%40uppy-dev%2Fbuild%40workspace%3A.":
+"@types/jasmine@file:./private/@types/jasmine::locator=%40growthcloud-dev%2Fbuild%40workspace%3A.":
   version: 0.0.0
-  resolution: "@types/jasmine@file:./private/@types/jasmine#./private/@types/jasmine::hash=917119&locator=%40uppy-dev%2Fbuild%40workspace%3A."
+  resolution: "@types/jasmine@file:./private/@types/jasmine#./private/@types/jasmine::hash=917119&locator=%40growthcloud-dev%2Fbuild%40workspace%3A."
   checksum: cc86c9a338a6943da64fb636e13bdc8f2e41922ae62c3cfd95525b0a0965a28ecd7545173773f2b61a3c30ae70c8eeb9a725eb71fd9006a07a8733ecbac849b9
   languageName: node
   linkType: hard
@@ -7005,9 +8191,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jasminewd2@file:./private/@types/jasmine::locator=%40uppy-dev%2Fbuild%40workspace%3A.":
+"@types/jasminewd2@file:./private/@types/jasmine::locator=%40growthcloud-dev%2Fbuild%40workspace%3A.":
   version: 0.0.0
-  resolution: "@types/jasminewd2@file:./private/@types/jasmine#./private/@types/jasmine::hash=fe65e0&locator=%40uppy-dev%2Fbuild%40workspace%3A."
+  resolution: "@types/jasminewd2@file:./private/@types/jasmine#./private/@types/jasmine::hash=fe65e0&locator=%40growthcloud-dev%2Fbuild%40workspace%3A."
   checksum: 028a3a54e144661b64d14b439c585db2ade1a22ba4b21de85cb469afd2f1bf5e78079ab3f3e5c058ed4146e7cef5300e27c8d176d9f168222d88576671608135
   languageName: node
   linkType: hard
@@ -7745,1192 +8931,6 @@ __metadata:
   checksum: a7c18b56d9cfdeadc13f0863864392e916c63b8d4a56f441e950f63bfc5435bf24453d7a0caa1c38895e36b54ff73c869d9b29e86efd582cf5c2ffbb01317c9a
   languageName: node
   linkType: hard
-
-"@uppy-dev/build@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@uppy-dev/build@workspace:."
-  dependencies:
-    "@babel/cli": ^7.14.5
-    "@babel/core": ^7.14.6
-    "@babel/eslint-parser": ^7.11.3
-    "@babel/eslint-plugin": ^7.11.3
-    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.14.5
-    "@babel/plugin-proposal-optional-chaining": ^7.16.0
-    "@babel/plugin-transform-modules-commonjs": ^7.16.8
-    "@babel/plugin-transform-react-jsx": ^7.10.4
-    "@babel/preset-env": ^7.14.7
-    "@babel/register": ^7.10.5
-    "@babel/types": ^7.17.0
-    "@parcel/transformer-vue": 2.7.0
-    "@types/jasmine": "file:./private/@types/jasmine"
-    "@types/jasminewd2": "file:./private/@types/jasmine"
-    "@typescript-eslint/eslint-plugin": ^5.0.0
-    "@typescript-eslint/parser": ^5.0.0
-    "@uppy-dev/remark-lint-uppy": "workspace:*"
-    adm-zip: ^0.5.5
-    autoprefixer: ^10.2.6
-    aws-sdk: ^2.1038.0
-    babel-jest: ^29.0.0
-    babel-plugin-inline-package-json: ^2.0.0
-    chalk: ^5.0.0
-    concat-stream: ^2.0.0
-    core-js: ~3.24.0
-    cssnano: ^5.0.6
-    dotenv: ^16.0.0
-    esbuild: ^0.15.1
-    esbuild-plugin-babel: ^0.2.3
-    eslint: ^8.0.0
-    eslint-config-transloadit: ^2.0.0
-    eslint-plugin-compat: ^4.0.0
-    eslint-plugin-cypress: ^2.12.1
-    eslint-plugin-import: ^2.25.2
-    eslint-plugin-jest: ^26.0.0
-    eslint-plugin-jsdoc: ^39.0.0
-    eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-markdown: ^3.0.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prefer-import: ^0.0.1
-    eslint-plugin-promise: ^6.0.0
-    eslint-plugin-react: ^7.22.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-unicorn: ^43.0.0
-    github-contributors-list: ^1.2.4
-    glob: ^8.0.0
-    jest: ^29.0.0
-    jest-environment-jsdom: ^29.0.0
-    lint-staged: ^13.0.0
-    mime-types: ^2.1.26
-    nodemon: ^2.0.8
-    npm-packlist: ^5.0.0
-    npm-run-all: ^4.1.5
-    onchange: ^7.1.0
-    pacote: ^13.0.0
-    postcss: ^8.2.10
-    postcss-dir-pseudo-class: ^6.0.0
-    postcss-logical: ^5.0.0
-    pre-commit: ^1.2.2
-    remark-cli: ^11.0.0
-    resolve: ^1.17.0
-    sass: ^1.29.0
-    start-server-and-test: ^1.14.0
-    stylelint: ^14.0.0
-    stylelint-config-rational-order: ^0.1.2
-    stylelint-config-standard: ^27.0.0
-    stylelint-scss: ^4.0.0
-    tar: ^6.1.0
-    tsd: ^0.22.0
-    typescript: ~4.8
-    vue-template-compiler: "workspace:*"
-  languageName: unknown
-  linkType: soft
-
-"@uppy-dev/dev@workspace:private/dev":
-  version: 0.0.0-use.local
-  resolution: "@uppy-dev/dev@workspace:private/dev"
-  dependencies:
-    "@uppy/companion": "workspace:^"
-    autoprefixer: ^10.2.6
-    postcss-dir-pseudo-class: ^6.0.0
-    postcss-logical: ^5.0.0
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-dev/locale-pack@workspace:private/locale-pack":
-  version: 0.0.0-use.local
-  resolution: "@uppy-dev/locale-pack@workspace:private/locale-pack"
-  dependencies:
-    chalk: ^5.0.0
-    dedent: ^0.7.0
-    glob: ^8.0.0
-    mdast-util-heading-range: ^3.1.0
-    remark: ^14.0.1
-    remark-frontmatter: ^4.0.1
-  languageName: unknown
-  linkType: soft
-
-"@uppy-dev/release@workspace:private/release":
-  version: 0.0.0-use.local
-  resolution: "@uppy-dev/release@workspace:private/release"
-  dependencies:
-    globby: ^13.0.0
-    node-fetch: ^3.1.0
-    prompts: ^2.4.2
-  languageName: unknown
-  linkType: soft
-
-"@uppy-dev/remark-lint-uppy@workspace:*, @uppy-dev/remark-lint-uppy@workspace:private/remark-lint-uppy":
-  version: 0.0.0-use.local
-  resolution: "@uppy-dev/remark-lint-uppy@workspace:private/remark-lint-uppy"
-  dependencies:
-    mdast-comment-marker: ^2.1.0
-    remark-frontmatter: ^4.0.0
-    remark-lint: ^9.0.0
-    remark-lint-emphasis-marker: ^3.0.0
-    remark-lint-final-newline: ^2.0.0
-    remark-lint-hard-break-spaces: ^3.0.0
-    remark-lint-no-auto-link-without-protocol: ^3.1.0
-    remark-lint-no-blockquote-without-marker: ^5.0.0
-    remark-lint-no-duplicate-definitions: ^3.0.0
-    remark-lint-no-heading-content-indent: ^4.0.0
-    remark-lint-no-inline-padding: ^4.0.0
-    remark-lint-no-literal-urls: ^3.0.0
-    remark-lint-no-shortcut-reference-image: ^3.1.0
-    remark-lint-no-shortcut-reference-link: ^3.1.0
-    remark-lint-no-undefined-references: ^4.0.0
-    remark-lint-no-unused-definitions: ^3.1.0
-    remark-lint-ordered-list-marker-style: ^3.1.0
-    remark-lint-strong-marker: ^3.1.0
-    remark-retext: ^5.0.0
-    retext-english: ^4.0.0
-    retext-equality: ^6.2.0
-    retext-profanities: ^7.1.0
-    retext-quotes: ^5.0.0
-    retext-simplify: ^7.0.0
-    retext-syntax-mentions: ^3.1.0
-    unified: ^10.0.0
-    unified-message-control: ^4.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/angular@workspace:examples/angular-example":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/angular@workspace:examples/angular-example"
-  dependencies:
-    "@angular-devkit/build-angular": ^14.1.2
-    "@angular-eslint/builder": ^14.0.2
-    "@angular-eslint/eslint-plugin": ^14.0.2
-    "@angular-eslint/eslint-plugin-template": ^14.0.2
-    "@angular-eslint/schematics": ^14.0.2
-    "@angular-eslint/template-parser": ^14.0.2
-    "@angular/animations": ^14.1.0
-    "@angular/cli": ~14.2.0
-    "@angular/common": ^14.1.0
-    "@angular/compiler": ^14.1.0
-    "@angular/compiler-cli": ^14.1.0
-    "@angular/core": ^14.1.0
-    "@angular/forms": ^14.1.0
-    "@angular/platform-browser": ^14.1.0
-    "@angular/platform-browser-dynamic": ^14.1.0
-    "@angular/router": ^14.1.0
-    "@types/jasmine": ~4.0.0
-    "@uppy/angular": "workspace:*"
-    "@uppy/core": "workspace:*"
-    "@uppy/drag-drop": "workspace:*"
-    "@uppy/google-drive": "workspace:*"
-    "@uppy/progress-bar": "workspace:*"
-    "@uppy/tus": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    eslint: ^8.0.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-jsdoc: ^39.0.0
-    eslint-plugin-prefer-arrow: ^1.2.3
-    jasmine-core: ~4.2.0
-    karma: ~6.4.0
-    karma-chrome-launcher: ~3.1.0
-    karma-coverage: ~2.2.0
-    karma-jasmine: ~5.1.0
-    karma-jasmine-html-reporter: ~2.0.0
-    rxjs: ~7.5.0
-    tslib: ^2.3.0
-    typescript: ~4.8
-    zone.js: ~0.11.4
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/aws-companion@workspace:examples/aws-companion":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/aws-companion@workspace:examples/aws-companion"
-  dependencies:
-    "@uppy/aws-s3": "workspace:*"
-    "@uppy/companion": "workspace:*"
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/google-drive": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    body-parser: ^1.20.0
-    cookie-parser: ^1.4.6
-    cors: ^2.8.5
-    dotenv: ^16.0.1
-    express: ^4.18.1
-    express-session: ^1.17.3
-    npm-run-all: ^4.1.5
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/aws-nodejs@workspace:examples/aws-nodejs":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/aws-nodejs@workspace:examples/aws-nodejs"
-  dependencies:
-    aws-sdk: ^2.1038.0
-    body-parser: ^1.20.0
-    dotenv: ^16.0.0
-    express: ^4.18.1
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/aws-php@workspace:examples/aws-php":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/aws-php@workspace:examples/aws-php"
-  dependencies:
-    "@uppy/aws-s3": "workspace:*"
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    esbuild: ^0.15.1
-    uppy: "workspace:*"
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/bundled@workspace:examples/bundled":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/bundled@workspace:examples/bundled"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/google-drive": "workspace:*"
-    "@uppy/instagram": "workspace:*"
-    "@uppy/tus": "workspace:*"
-    "@uppy/url": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    parcel: ^2.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/cdn@workspace:examples/cdn-example":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/cdn@workspace:examples/cdn-example"
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/custom-provider@workspace:examples/custom-provider":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/custom-provider@workspace:examples/custom-provider"
-  dependencies:
-    "@uppy/companion": "workspace:*"
-    "@uppy/companion-client": "workspace:*"
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/google-drive": "workspace:*"
-    "@uppy/provider-views": "workspace:*"
-    "@uppy/tus": "workspace:*"
-    body-parser: ^1.18.2
-    dotenv: ^16.0.1
-    express: ^4.16.2
-    express-session: ^1.15.6
-    npm-run-all: ^4.1.2
-    preact: ^10.5.13
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/digitalocean-spaces@workspace:examples/digitalocean-spaces":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/digitalocean-spaces@workspace:examples/digitalocean-spaces"
-  dependencies:
-    "@uppy/aws-s3": "workspace:*"
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    body-parser: ^1.18.3
-    cors: ^2.8.5
-    dotenv: ^16.0.1
-    express: ^4.16.2
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/multiple-instances@workspace:examples/multiple-instances":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/multiple-instances@workspace:examples/multiple-instances"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/golden-retriever": "workspace:*"
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/node-xhr@workspace:examples/node-xhr":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/node-xhr@workspace:examples/node-xhr"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    "@uppy/xhr-upload": "workspace:*"
-    formidable: ^3.2.4
-    npm-run-all: ^4.1.3
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/php-xhr@workspace:examples/php-xhr":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/php-xhr@workspace:examples/php-xhr"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    "@uppy/xhr-upload": "workspace:*"
-    npm-run-all: ^4.1.3
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/python-xhr@workspace:examples/python-xhr":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/python-xhr@workspace:examples/python-xhr"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    "@uppy/xhr-upload": "workspace:*"
-    npm-run-all: ^4.1.3
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/react-native-expo@workspace:examples/react-native-expo":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/react-native-expo@workspace:examples/react-native-expo"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/instagram": "workspace:*"
-    "@uppy/react-native": "workspace:*"
-    "@uppy/tus": "workspace:*"
-    "@uppy/url": "workspace:*"
-    "@uppy/xhr-upload": "workspace:*"
-    babel-preset-expo: ^5.0.0
-    base64-js: ^1.3.0
-    expo: ^42.0.0
-    preact-render-to-string: ^5.1.0
-    react: ^16.8.6
-    react-native: ~0.63.4
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/react@workspace:examples/react-example":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/react@workspace:examples/react-example"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/drag-drop": "workspace:*"
-    "@uppy/file-input": "workspace:*"
-    "@uppy/google-drive": "workspace:*"
-    "@uppy/progress-bar": "workspace:*"
-    "@uppy/react": "workspace:*"
-    "@uppy/tus": "workspace:*"
-    "@vitejs/plugin-react": ^2.0.0
-    react: ^18.0.0
-    react-dom: ^18.0.0
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/redux@workspace:examples/redux":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/redux@workspace:examples/redux"
-  dependencies:
-    "@babel/core": ^7.4.4
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/store-redux": "workspace:*"
-    "@uppy/tus": "workspace:*"
-    babelify: ^10.0.0
-    budo: ^11.6.1
-    redux: ^4.1.2
-    redux-logger: ^3.0.6
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/svelte-app@workspace:examples/svelte-example":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/svelte-app@workspace:examples/svelte-example"
-  dependencies:
-    "@rollup/plugin-commonjs": ^22.0.0
-    "@rollup/plugin-json": ^4.1.0
-    "@rollup/plugin-node-resolve": ^13.0.0
-    "@rollup/plugin-typescript": ^8.0.0
-    "@tsconfig/svelte": ^1.0.0
-    "@uppy/core": "workspace:*"
-    "@uppy/svelte": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    "@uppy/xhr-upload": "workspace:*"
-    formidable: ^2.0.1
-    npm-run-all: ^4.1.5
-    postcss: ^8.2.1
-    postcss-import: ^13.0.0
-    postcss-load-config: ^3.0.0
-    rollup: ^2.60.2
-    rollup-plugin-css-only: ^3.0.0
-    rollup-plugin-livereload: ^2.0.0
-    rollup-plugin-svelte: ^7.0.0
-    rollup-plugin-terser: ^7.0.0
-    sirv-cli: ^1.0.0
-    svelte: ">=3.24.0"
-    svelte-check: ^1.6.0
-    svelte-preprocess: ^4.6.1
-    tslib: ^2.0.0
-    typescript: ~4.8
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/transloadit-markdown-bin@workspace:examples/transloadit-markdown-bin":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/transloadit-markdown-bin@workspace:examples/transloadit-markdown-bin"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/drop-target": "workspace:*"
-    "@uppy/image-editor": "workspace:*"
-    "@uppy/remote-sources": "workspace:*"
-    "@uppy/transloadit": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    marked: ^4.0.18
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/transloadit@workspace:examples/transloadit":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/transloadit@workspace:examples/transloadit"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/drop-target": "workspace:*"
-    "@uppy/form": "workspace:*"
-    "@uppy/image-editor": "workspace:*"
-    "@uppy/progress-bar": "workspace:*"
-    "@uppy/remote-sources": "workspace:*"
-    "@uppy/transloadit": "workspace:*"
-    "@uppy/webcam": "workspace:*"
-    express: ^4.16.4
-    he: ^1.2.0
-    npm-run-all: ^4.1.5
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/uppy-with-companion@workspace:examples/uppy-with-companion":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/uppy-with-companion@workspace:examples/uppy-with-companion"
-  dependencies:
-    "@uppy/companion": "workspace:*"
-    body-parser: ^1.18.2
-    express: ^4.16.2
-    express-session: ^1.15.6
-    light-server: ^2.4.0
-    upload-server: ^1.1.6
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/vue2@workspace:examples/vue":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/vue2@workspace:examples/vue"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/drag-drop": "workspace:*"
-    "@uppy/progress-bar": "workspace:*"
-    "@uppy/transloadit": "workspace:*"
-    "@uppy/vue": "workspace:*"
-    vite: ^3.0.0
-    vite-plugin-vue2: ^2.0.1
-    vue: ^2.6.14
-    vue-template-compiler: ^2.6.14
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/vue3@workspace:examples/vue3":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/vue3@workspace:examples/vue3"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/drag-drop": "workspace:*"
-    "@uppy/progress-bar": "workspace:*"
-    "@uppy/tus": "workspace:*"
-    "@uppy/vue": "workspace:*"
-    "@vitejs/plugin-vue": ^3.0.0
-    vite: ^3.0.0
-    vue: ^3.2.33
-  languageName: unknown
-  linkType: soft
-
-"@uppy-example/xhr-bundle@workspace:examples/xhr-bundle":
-  version: 0.0.0-use.local
-  resolution: "@uppy-example/xhr-bundle@workspace:examples/xhr-bundle"
-  dependencies:
-    "@uppy/core": "workspace:*"
-    "@uppy/dashboard": "workspace:*"
-    "@uppy/xhr-upload": "workspace:*"
-    cors: ^2.8.5
-    express: ^4.16.4
-    multer: ^1.4.1
-    npm-run-all: ^4.1.5
-    vite: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy/angular@workspace:*, @uppy/angular@workspace:packages/@uppy/angular/projects/uppy/angular":
-  version: 0.0.0-use.local
-  resolution: "@uppy/angular@workspace:packages/@uppy/angular/projects/uppy/angular"
-  dependencies:
-    tslib: ^2.0.0
-  peerDependencies:
-    "@angular/common": ">= 14"
-    "@angular/core": ">= 14"
-    "@uppy/core": "workspace:^"
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/drag-drop": "workspace:^"
-    "@uppy/progress-bar": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
-    "@uppy/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/audio@workspace:^, @uppy/audio@workspace:packages/@uppy/audio":
-  version: 0.0.0-use.local
-  resolution: "@uppy/audio@workspace:packages/@uppy/audio"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/aws-s3-multipart@workspace:^, @uppy/aws-s3-multipart@workspace:packages/@uppy/aws-s3-multipart":
-  version: 0.0.0-use.local
-  resolution: "@uppy/aws-s3-multipart@workspace:packages/@uppy/aws-s3-multipart"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    nock: ^13.1.0
-    whatwg-fetch: 3.6.2
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/aws-s3@workspace:*, @uppy/aws-s3@workspace:^, @uppy/aws-s3@workspace:packages/@uppy/aws-s3":
-  version: 0.0.0-use.local
-  resolution: "@uppy/aws-s3@workspace:packages/@uppy/aws-s3"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    "@uppy/xhr-upload": "workspace:^"
-    nanoid: ^4.0.0
-    whatwg-fetch: 3.6.2
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/box@workspace:^, @uppy/box@workspace:packages/@uppy/box":
-  version: 0.0.0-use.local
-  resolution: "@uppy/box@workspace:packages/@uppy/box"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/companion-client@workspace:*, @uppy/companion-client@workspace:^, @uppy/companion-client@workspace:packages/@uppy/companion-client":
-  version: 0.0.0-use.local
-  resolution: "@uppy/companion-client@workspace:packages/@uppy/companion-client"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/utils": "workspace:^"
-    namespace-emitter: ^2.0.1
-  languageName: unknown
-  linkType: soft
-
-"@uppy/companion@workspace:*, @uppy/companion@workspace:^, @uppy/companion@workspace:packages/@uppy/companion":
-  version: 0.0.0-use.local
-  resolution: "@uppy/companion@workspace:packages/@uppy/companion"
-  dependencies:
-    "@types/compression": 1.7.0
-    "@types/connect-redis": 0.0.18
-    "@types/cookie-parser": 1.4.2
-    "@types/cors": 2.8.6
-    "@types/eslint": ^8.2.0
-    "@types/express-session": 1.17.3
-    "@types/jsonwebtoken": 8.3.7
-    "@types/lodash.merge": 4.6.6
-    "@types/morgan": 1.7.37
-    "@types/ms": 0.7.31
-    "@types/node": ^18.0.3
-    "@types/react": ^18.0.0
-    "@types/request": 2.48.8
-    "@types/webpack": ^5.28.0
-    "@types/ws": 8.5.3
-    atob: 2.1.2
-    aws-sdk: ^2.1038.0
-    body-parser: 1.20.0
-    chalk: 4.1.2
-    common-tags: 1.8.2
-    connect-redis: 6.1.3
-    cookie-parser: 1.4.6
-    cors: ^2.8.5
-    escape-goat: 3.0.0
-    escape-string-regexp: 4.0.0
-    express: 4.18.1
-    express-interceptor: 1.2.0
-    express-prom-bundle: 6.5.0
-    express-request-id: 1.4.1
-    express-session: 1.17.3
-    form-data: ^3.0.0
-    got: 11
-    grant: 4.7.0
-    helmet: ^4.6.0
-    into-stream: ^6.0.0
-    ipaddr.js: ^2.0.1
-    jest: ^29.0.0
-    jsonwebtoken: 8.5.1
-    lodash.merge: ^4.6.2
-    lodash.throttle: ^4.1.1
-    mime-types: 2.1.35
-    moment: ^2.29.2
-    moment-timezone: ^0.5.31
-    morgan: 1.10.0
-    ms: 2.1.3
-    nock: ^13.1.3
-    node-schedule: 2.1.0
-    prom-client: 14.0.1
-    redis: 4.2.0
-    semver: 7.3.7
-    serialize-error: ^2.1.0
-    serialize-javascript: ^6.0.0
-    supertest: 6.2.4
-    tus-js-client: ^3.0.0
-    typescript: ~4.8
-    validator: ^13.0.0
-    ws: 8.8.1
-  bin:
-    companion: ./bin/companion
-  languageName: unknown
-  linkType: soft
-
-"@uppy/compressor@workspace:^, @uppy/compressor@workspace:packages/@uppy/compressor":
-  version: 0.0.0-use.local
-  resolution: "@uppy/compressor@workspace:packages/@uppy/compressor"
-  dependencies:
-    "@transloadit/prettier-bytes": ^0.0.9
-    "@uppy/utils": "workspace:^"
-    compressorjs: ^1.1.1
-    preact: ^10.5.13
-    promise-queue: ^2.2.5
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/core@workspace:*, @uppy/core@workspace:^, @uppy/core@workspace:packages/@uppy/core":
-  version: 0.0.0-use.local
-  resolution: "@uppy/core@workspace:packages/@uppy/core"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@transloadit/prettier-bytes": 0.0.9
-    "@uppy/store-default": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    lodash.throttle: ^4.1.1
-    mime-match: ^1.0.2
-    namespace-emitter: ^2.0.1
-    nanoid: ^4.0.0
-    preact: ^10.5.13
-  languageName: unknown
-  linkType: soft
-
-"@uppy/dashboard@workspace:*, @uppy/dashboard@workspace:^, @uppy/dashboard@workspace:packages/@uppy/dashboard":
-  version: 0.0.0-use.local
-  resolution: "@uppy/dashboard@workspace:packages/@uppy/dashboard"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@transloadit/prettier-bytes": 0.0.7
-    "@uppy/google-drive": "workspace:^"
-    "@uppy/informer": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
-    "@uppy/thumbnail-generator": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    classnames: ^2.2.6
-    is-shallow-equal: ^1.0.1
-    lodash.debounce: ^4.0.8
-    memoize-one: ^6.0.0
-    nanoid: ^4.0.0
-    preact: ^10.5.13
-    resize-observer-polyfill: ^1.5.0
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/drag-drop@workspace:*, @uppy/drag-drop@workspace:^, @uppy/drag-drop@workspace:packages/@uppy/drag-drop":
-  version: 0.0.0-use.local
-  resolution: "@uppy/drag-drop@workspace:packages/@uppy/drag-drop"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/drop-target@workspace:*, @uppy/drop-target@workspace:^, @uppy/drop-target@workspace:packages/@uppy/drop-target":
-  version: 0.0.0-use.local
-  resolution: "@uppy/drop-target@workspace:packages/@uppy/drop-target"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/dropbox@workspace:^, @uppy/dropbox@workspace:packages/@uppy/dropbox":
-  version: 0.0.0-use.local
-  resolution: "@uppy/dropbox@workspace:packages/@uppy/dropbox"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/facebook@workspace:^, @uppy/facebook@workspace:packages/@uppy/facebook":
-  version: 0.0.0-use.local
-  resolution: "@uppy/facebook@workspace:packages/@uppy/facebook"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/file-input@workspace:*, @uppy/file-input@workspace:^, @uppy/file-input@workspace:packages/@uppy/file-input":
-  version: 0.0.0-use.local
-  resolution: "@uppy/file-input@workspace:packages/@uppy/file-input"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/form@workspace:*, @uppy/form@workspace:^, @uppy/form@workspace:packages/@uppy/form":
-  version: 0.0.0-use.local
-  resolution: "@uppy/form@workspace:packages/@uppy/form"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    get-form-data: ^3.0.0
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/golden-retriever@workspace:*, @uppy/golden-retriever@workspace:^, @uppy/golden-retriever@workspace:packages/@uppy/golden-retriever":
-  version: 0.0.0-use.local
-  resolution: "@uppy/golden-retriever@workspace:packages/@uppy/golden-retriever"
-  dependencies:
-    "@transloadit/prettier-bytes": 0.0.9
-    "@uppy/utils": "workspace:^"
-    lodash.throttle: ^4.1.1
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/google-drive@workspace:*, @uppy/google-drive@workspace:^, @uppy/google-drive@workspace:packages/@uppy/google-drive":
-  version: 0.0.0-use.local
-  resolution: "@uppy/google-drive@workspace:packages/@uppy/google-drive"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/image-editor@workspace:*, @uppy/image-editor@workspace:^, @uppy/image-editor@workspace:packages/@uppy/image-editor":
-  version: 0.0.0-use.local
-  resolution: "@uppy/image-editor@workspace:packages/@uppy/image-editor"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    cropperjs: 1.5.7
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/informer@workspace:^, @uppy/informer@workspace:packages/@uppy/informer":
-  version: 0.0.0-use.local
-  resolution: "@uppy/informer@workspace:packages/@uppy/informer"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/instagram@workspace:*, @uppy/instagram@workspace:^, @uppy/instagram@workspace:packages/@uppy/instagram":
-  version: 0.0.0-use.local
-  resolution: "@uppy/instagram@workspace:packages/@uppy/instagram"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/locales@workspace:packages/@uppy/locales":
-  version: 0.0.0-use.local
-  resolution: "@uppy/locales@workspace:packages/@uppy/locales"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/onedrive@workspace:^, @uppy/onedrive@workspace:packages/@uppy/onedrive":
-  version: 0.0.0-use.local
-  resolution: "@uppy/onedrive@workspace:packages/@uppy/onedrive"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/progress-bar@workspace:*, @uppy/progress-bar@workspace:^, @uppy/progress-bar@workspace:packages/@uppy/progress-bar":
-  version: 0.0.0-use.local
-  resolution: "@uppy/progress-bar@workspace:packages/@uppy/progress-bar"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/provider-views@workspace:*, @uppy/provider-views@workspace:^, @uppy/provider-views@workspace:packages/@uppy/provider-views":
-  version: 0.0.0-use.local
-  resolution: "@uppy/provider-views@workspace:packages/@uppy/provider-views"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    classnames: ^2.2.6
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/react-native@workspace:*, @uppy/react-native@workspace:packages/@uppy/react-native":
-  version: 0.0.0-use.local
-  resolution: "@uppy/react-native@workspace:packages/@uppy/react-native"
-  dependencies:
-    "@uppy/instagram": "workspace:^"
-    "@uppy/url": "workspace:^"
-  peerDependencies:
-    expo: ">=33.0.0"
-    expo-document-picker: ">=6.0.0"
-    expo-image-picker: ">=6.0.0"
-    expo-permissions: ">=6.0.0"
-    react: ^16.0.0 || ^17.0.0 || ^18.0.0
-    react-native: "*"
-    react-native-super-grid: "*"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/react@workspace:*, @uppy/react@workspace:packages/@uppy/react":
-  version: 0.0.0-use.local
-  resolution: "@uppy/react@workspace:packages/@uppy/react"
-  dependencies:
-    "@types/react": ^18.0.8
-    "@uppy/utils": "workspace:^"
-    prop-types: ^15.6.1
-    react: ^18.1.0
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/drag-drop": "workspace:^"
-    "@uppy/file-input": "workspace:^"
-    "@uppy/progress-bar": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
-    react: ^16.0.0 || ^17.0.0 || ^18.0.0
-  peerDependenciesMeta:
-    "@uppy/dashboard":
-      optional: true
-    "@uppy/drag-drop":
-      optional: true
-    "@uppy/file-input":
-      optional: true
-    "@uppy/progress-bar":
-      optional: true
-    "@uppy/status-bar":
-      optional: true
-  languageName: unknown
-  linkType: soft
-
-"@uppy/redux-dev-tools@workspace:^, @uppy/redux-dev-tools@workspace:packages/@uppy/redux-dev-tools":
-  version: 0.0.0-use.local
-  resolution: "@uppy/redux-dev-tools@workspace:packages/@uppy/redux-dev-tools"
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/remote-sources@workspace:*, @uppy/remote-sources@workspace:^, @uppy/remote-sources@workspace:packages/@uppy/remote-sources":
-  version: 0.0.0-use.local
-  resolution: "@uppy/remote-sources@workspace:packages/@uppy/remote-sources"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/box": "workspace:^"
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/dropbox": "workspace:^"
-    "@uppy/facebook": "workspace:^"
-    "@uppy/google-drive": "workspace:^"
-    "@uppy/instagram": "workspace:^"
-    "@uppy/onedrive": "workspace:^"
-    "@uppy/unsplash": "workspace:^"
-    "@uppy/url": "workspace:^"
-    "@uppy/zoom": "workspace:^"
-    resize-observer-polyfill: ^1.5.1
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/screen-capture@workspace:^, @uppy/screen-capture@workspace:packages/@uppy/screen-capture":
-  version: 0.0.0-use.local
-  resolution: "@uppy/screen-capture@workspace:packages/@uppy/screen-capture"
-  dependencies:
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/status-bar@workspace:^, @uppy/status-bar@workspace:packages/@uppy/status-bar":
-  version: 0.0.0-use.local
-  resolution: "@uppy/status-bar@workspace:packages/@uppy/status-bar"
-  dependencies:
-    "@transloadit/prettier-bytes": 0.0.9
-    "@uppy/utils": "workspace:^"
-    classnames: ^2.2.6
-    lodash.throttle: ^4.1.1
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/store-default@workspace:^, @uppy/store-default@workspace:packages/@uppy/store-default":
-  version: 0.0.0-use.local
-  resolution: "@uppy/store-default@workspace:packages/@uppy/store-default"
-  dependencies:
-    "@jest/globals": ^29.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy/store-redux@workspace:*, @uppy/store-redux@workspace:^, @uppy/store-redux@workspace:packages/@uppy/store-redux":
-  version: 0.0.0-use.local
-  resolution: "@uppy/store-redux@workspace:packages/@uppy/store-redux"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    nanoid: ^4.0.0
-    redux: ^4.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy/svelte@workspace:*, @uppy/svelte@workspace:packages/@uppy/svelte":
-  version: 0.0.0-use.local
-  resolution: "@uppy/svelte@workspace:packages/@uppy/svelte"
-  dependencies:
-    "@rollup/plugin-node-resolve": ^13.0.0
-    "@tsconfig/svelte": ^3.0.0
-    rollup: ^2.60.2
-    rollup-plugin-svelte: ^7.0.0
-    svelte: ^3.31.0
-    svelte-check: ^2.0.0
-    svelte-preprocess: ^4.6.1
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/drag-drop": "workspace:^"
-    "@uppy/progress-bar": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
-    svelte: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
-"@uppy/thumbnail-generator@workspace:^, @uppy/thumbnail-generator@workspace:packages/@uppy/thumbnail-generator":
-  version: 0.0.0-use.local
-  resolution: "@uppy/thumbnail-generator@workspace:packages/@uppy/thumbnail-generator"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/utils": "workspace:^"
-    exifr: ^7.0.0
-    namespace-emitter: 2.0.1
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/transloadit@workspace:*, @uppy/transloadit@workspace:^, @uppy/transloadit@workspace:packages/@uppy/transloadit":
-  version: 0.0.0-use.local
-  resolution: "@uppy/transloadit@workspace:packages/@uppy/transloadit"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/tus": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    component-emitter: ^1.2.1
-    socket.io-client: ^4.1.3
-    whatwg-fetch: ^3.6.2
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/tus@workspace:*, @uppy/tus@workspace:^, @uppy/tus@workspace:packages/@uppy/tus":
-  version: 0.0.0-use.local
-  resolution: "@uppy/tus@workspace:packages/@uppy/tus"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    tus-js-client: ^3.0.0
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/unsplash@workspace:^, @uppy/unsplash@workspace:packages/@uppy/unsplash":
-  version: 0.0.0-use.local
-  resolution: "@uppy/unsplash@workspace:packages/@uppy/unsplash"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/url@workspace:*, @uppy/url@workspace:^, @uppy/url@workspace:packages/@uppy/url":
-  version: 0.0.0-use.local
-  resolution: "@uppy/url@workspace:packages/@uppy/url"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/utils@workspace:^, @uppy/utils@workspace:packages/@uppy/utils":
-  version: 0.0.0-use.local
-  resolution: "@uppy/utils@workspace:packages/@uppy/utils"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    lodash.throttle: ^4.1.1
-  languageName: unknown
-  linkType: soft
-
-"@uppy/vue@workspace:*, @uppy/vue@workspace:packages/@uppy/vue":
-  version: 0.0.0-use.local
-  resolution: "@uppy/vue@workspace:packages/@uppy/vue"
-  dependencies:
-    shallow-equal: ^1.2.1
-    vue: ^2.6.14
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/drag-drop": "workspace:^"
-    "@uppy/file-input": "workspace:^"
-    "@uppy/progress-bar": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
-    vue: ">=2.6.11"
-  peerDependenciesMeta:
-    "@uppy/dashboard":
-      optional: true
-    "@uppy/drag-drop":
-      optional: true
-    "@uppy/file-input":
-      optional: true
-    "@uppy/progress-bar":
-      optional: true
-    "@uppy/status-bar":
-      optional: true
-  languageName: unknown
-  linkType: soft
-
-"@uppy/webcam@workspace:*, @uppy/webcam@workspace:^, @uppy/webcam@workspace:packages/@uppy/webcam":
-  version: 0.0.0-use.local
-  resolution: "@uppy/webcam@workspace:packages/@uppy/webcam"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/utils": "workspace:^"
-    is-mobile: ^3.1.1
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/xhr-upload@workspace:*, @uppy/xhr-upload@workspace:^, @uppy/xhr-upload@workspace:packages/@uppy/xhr-upload":
-  version: 0.0.0-use.local
-  resolution: "@uppy/xhr-upload@workspace:packages/@uppy/xhr-upload"
-  dependencies:
-    "@jest/globals": ^29.0.0
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    nanoid: ^4.0.0
-    nock: ^13.1.0
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@uppy/zoom@workspace:^, @uppy/zoom@workspace:packages/@uppy/zoom":
-  version: 0.0.0-use.local
-  resolution: "@uppy/zoom@workspace:packages/@uppy/zoom"
-  dependencies:
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/utils": "workspace:^"
-    preact: ^10.5.13
-  peerDependencies:
-    "@uppy/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
 
 "@vitejs/plugin-react@npm:^2.0.0":
   version: 2.0.1
@@ -9922,9 +9922,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"angular@workspace:packages/@uppy/angular":
+"angular@workspace:packages/@growthcloud/angular":
   version: 0.0.0-use.local
-  resolution: "angular@workspace:packages/@uppy/angular"
+  resolution: "angular@workspace:packages/@growthcloud/angular"
   dependencies:
     "@angular-devkit/build-angular": ">= 14"
     "@angular/animations": ">= 14"
@@ -9939,6 +9939,10 @@ __metadata:
     "@angular/router": ">= 14"
     "@babel/core": ^7.17.5
     "@compodoc/compodoc": ^1.1.19
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/drag-drop": "workspace:^"
+    "@growthcloud/progress-bar": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
     "@storybook/addon-actions": ^6.5.0-alpha.42
     "@storybook/addon-essentials": ^6.5.0-alpha.42
     "@storybook/addon-interactions": ^6.5.0-alpha.42
@@ -9948,10 +9952,6 @@ __metadata:
     "@storybook/manager-webpack5": ^6.5.0-alpha.42
     "@storybook/testing-library": ^0.0.9
     "@types/jasmine": ~4.0.0
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/drag-drop": "workspace:^"
-    "@uppy/progress-bar": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
     babel-loader: ^8.2.3
     jasmine-core: ~4.2.0
     karma: ~6.4.0
@@ -9965,7 +9965,7 @@ __metadata:
     typescript: ~4.8
     zone.js: ~0.11.4
   peerDependencies:
-    "@uppy/core": "workspace:^"
+    "@growthcloud/core": "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -15108,39 +15108,39 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "e2e@workspace:e2e"
   dependencies:
-    "@uppy/audio": "workspace:^"
-    "@uppy/aws-s3": "workspace:^"
-    "@uppy/aws-s3-multipart": "workspace:^"
-    "@uppy/box": "workspace:^"
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/core": "workspace:^"
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/drag-drop": "workspace:^"
-    "@uppy/drop-target": "workspace:^"
-    "@uppy/dropbox": "workspace:^"
-    "@uppy/facebook": "workspace:^"
-    "@uppy/file-input": "workspace:^"
-    "@uppy/form": "workspace:^"
-    "@uppy/golden-retriever": "workspace:^"
-    "@uppy/google-drive": "workspace:^"
-    "@uppy/image-editor": "workspace:^"
-    "@uppy/informer": "workspace:^"
-    "@uppy/instagram": "workspace:^"
-    "@uppy/onedrive": "workspace:^"
-    "@uppy/progress-bar": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/screen-capture": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
-    "@uppy/store-default": "workspace:^"
-    "@uppy/store-redux": "workspace:^"
-    "@uppy/thumbnail-generator": "workspace:^"
-    "@uppy/transloadit": "workspace:^"
-    "@uppy/tus": "workspace:^"
-    "@uppy/unsplash": "workspace:^"
-    "@uppy/url": "workspace:^"
-    "@uppy/webcam": "workspace:^"
-    "@uppy/xhr-upload": "workspace:^"
-    "@uppy/zoom": "workspace:^"
+    "@growthcloud/audio": "workspace:^"
+    "@growthcloud/aws-s3": "workspace:^"
+    "@growthcloud/aws-s3-multipart": "workspace:^"
+    "@growthcloud/box": "workspace:^"
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/core": "workspace:^"
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/drag-drop": "workspace:^"
+    "@growthcloud/drop-target": "workspace:^"
+    "@growthcloud/dropbox": "workspace:^"
+    "@growthcloud/facebook": "workspace:^"
+    "@growthcloud/file-input": "workspace:^"
+    "@growthcloud/form": "workspace:^"
+    "@growthcloud/golden-retriever": "workspace:^"
+    "@growthcloud/google-drive": "workspace:^"
+    "@growthcloud/image-editor": "workspace:^"
+    "@growthcloud/informer": "workspace:^"
+    "@growthcloud/instagram": "workspace:^"
+    "@growthcloud/onedrive": "workspace:^"
+    "@growthcloud/progress-bar": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/screen-capture": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
+    "@growthcloud/store-default": "workspace:^"
+    "@growthcloud/store-redux": "workspace:^"
+    "@growthcloud/thumbnail-generator": "workspace:^"
+    "@growthcloud/transloadit": "workspace:^"
+    "@growthcloud/tus": "workspace:^"
+    "@growthcloud/unsplash": "workspace:^"
+    "@growthcloud/url": "workspace:^"
+    "@growthcloud/webcam": "workspace:^"
+    "@growthcloud/xhr-upload": "workspace:^"
+    "@growthcloud/zoom": "workspace:^"
     cypress: ^10.0.0
     cypress-terminal-report: ^4.1.2
     deep-freeze: ^0.0.1
@@ -29139,9 +29139,9 @@ hexo-filter-github-emojis@arturi/hexo-filter-github-emojis:
   languageName: node
   linkType: hard
 
-"preact@patch:preact@npm:10.10.0#.yarn/patches/preact-npm-10.10.0-dd04de05e8.patch::locator=%40uppy-dev%2Fbuild%40workspace%3A.":
+"preact@patch:preact@npm:10.10.0#.yarn/patches/preact-npm-10.10.0-dd04de05e8.patch::locator=%40growthcloud-dev%2Fbuild%40workspace%3A.":
   version: 10.10.0
-  resolution: "preact@patch:preact@npm%3A10.10.0#.yarn/patches/preact-npm-10.10.0-dd04de05e8.patch::version=10.10.0&hash=a66388&locator=%40uppy-dev%2Fbuild%40workspace%3A."
+  resolution: "preact@patch:preact@npm%3A10.10.0#.yarn/patches/preact-npm-10.10.0-dd04de05e8.patch::version=10.10.0&hash=a66388&locator=%40growthcloud-dev%2Fbuild%40workspace%3A."
   checksum: f610d7f206e8cd71739023c3dbeae13fcaf9f9e6488295e2ae28f71c615d216c9b1d8b2fa2d616a629276948ee58a8d16fe77b8b7bc2e8d4aee1101e3336fe2b
   languageName: node
   linkType: hard
@@ -35779,46 +35779,46 @@ hexo-filter-github-emojis@arturi/hexo-filter-github-emojis:
   languageName: unknown
   linkType: soft
 
-"uppy@workspace:*, uppy@workspace:packages/uppy":
+"uppy@workspace:*, uppy@workspace:packages/growthcloud":
   version: 0.0.0-use.local
-  resolution: "uppy@workspace:packages/uppy"
+  resolution: "uppy@workspace:packages/growthcloud"
   dependencies:
-    "@uppy/audio": "workspace:^"
-    "@uppy/aws-s3": "workspace:^"
-    "@uppy/aws-s3-multipart": "workspace:^"
-    "@uppy/box": "workspace:^"
-    "@uppy/companion-client": "workspace:^"
-    "@uppy/compressor": "workspace:^"
-    "@uppy/core": "workspace:^"
-    "@uppy/dashboard": "workspace:^"
-    "@uppy/drag-drop": "workspace:^"
-    "@uppy/drop-target": "workspace:^"
-    "@uppy/dropbox": "workspace:^"
-    "@uppy/facebook": "workspace:^"
-    "@uppy/file-input": "workspace:^"
-    "@uppy/form": "workspace:^"
-    "@uppy/golden-retriever": "workspace:^"
-    "@uppy/google-drive": "workspace:^"
-    "@uppy/image-editor": "workspace:^"
-    "@uppy/informer": "workspace:^"
-    "@uppy/instagram": "workspace:^"
-    "@uppy/onedrive": "workspace:^"
-    "@uppy/progress-bar": "workspace:^"
-    "@uppy/provider-views": "workspace:^"
-    "@uppy/redux-dev-tools": "workspace:^"
-    "@uppy/remote-sources": "workspace:^"
-    "@uppy/screen-capture": "workspace:^"
-    "@uppy/status-bar": "workspace:^"
-    "@uppy/store-default": "workspace:^"
-    "@uppy/store-redux": "workspace:^"
-    "@uppy/thumbnail-generator": "workspace:^"
-    "@uppy/transloadit": "workspace:^"
-    "@uppy/tus": "workspace:^"
-    "@uppy/unsplash": "workspace:^"
-    "@uppy/url": "workspace:^"
-    "@uppy/webcam": "workspace:^"
-    "@uppy/xhr-upload": "workspace:^"
-    "@uppy/zoom": "workspace:^"
+    "@growthcloud/audio": "workspace:^"
+    "@growthcloud/aws-s3": "workspace:^"
+    "@growthcloud/aws-s3-multipart": "workspace:^"
+    "@growthcloud/box": "workspace:^"
+    "@growthcloud/companion-client": "workspace:^"
+    "@growthcloud/compressor": "workspace:^"
+    "@growthcloud/core": "workspace:^"
+    "@growthcloud/dashboard": "workspace:^"
+    "@growthcloud/drag-drop": "workspace:^"
+    "@growthcloud/drop-target": "workspace:^"
+    "@growthcloud/dropbox": "workspace:^"
+    "@growthcloud/facebook": "workspace:^"
+    "@growthcloud/file-input": "workspace:^"
+    "@growthcloud/form": "workspace:^"
+    "@growthcloud/golden-retriever": "workspace:^"
+    "@growthcloud/google-drive": "workspace:^"
+    "@growthcloud/image-editor": "workspace:^"
+    "@growthcloud/informer": "workspace:^"
+    "@growthcloud/instagram": "workspace:^"
+    "@growthcloud/onedrive": "workspace:^"
+    "@growthcloud/progress-bar": "workspace:^"
+    "@growthcloud/provider-views": "workspace:^"
+    "@growthcloud/redux-dev-tools": "workspace:^"
+    "@growthcloud/remote-sources": "workspace:^"
+    "@growthcloud/screen-capture": "workspace:^"
+    "@growthcloud/status-bar": "workspace:^"
+    "@growthcloud/store-default": "workspace:^"
+    "@growthcloud/store-redux": "workspace:^"
+    "@growthcloud/thumbnail-generator": "workspace:^"
+    "@growthcloud/transloadit": "workspace:^"
+    "@growthcloud/tus": "workspace:^"
+    "@growthcloud/unsplash": "workspace:^"
+    "@growthcloud/url": "workspace:^"
+    "@growthcloud/webcam": "workspace:^"
+    "@growthcloud/xhr-upload": "workspace:^"
+    "@growthcloud/zoom": "workspace:^"
     abortcontroller-polyfill: ^1.7.3
     core-js: ~3.24.0
     md-gum-polyfill: ^1.0.0

@@ -1,34 +1,38 @@
-const { mkdtempSync } = require('node:fs')
-const os = require('node:os')
-const path = require('node:path')
+const { mkdtempSync } = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
 
-require('dotenv').config({ path: path.join(__dirname, '..', '..', '..', '.env') })
-const express = require('express')
+require("dotenv").config({
+  path: path.join(__dirname, "..", "..", "..", ".env"),
+});
+const express = require("express");
 // the ../../../packages is just to use the local version
-// instead of the npm version—in a real app use `require('@uppy/companion')`
-const bodyParser = require('body-parser')
-const session = require('express-session')
-const uppy = require('@uppy/companion')
-const MyCustomProvider = require('./CustomProvider.cjs')
+// instead of the npm version—in a real app use `require('@growthcloud/companion')`
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const uppy = require("@growthcloud/companion");
+const MyCustomProvider = require("./CustomProvider.cjs");
 
-const app = express()
+const app = express();
 
-app.use(bodyParser.json())
-app.use(session({
-  secret: 'some-secret',
-  resave: true,
-  saveUninitialized: true,
-}))
+app.use(bodyParser.json());
+app.use(
+  session({
+    secret: "some-secret",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 
 // Routes
-app.get('/', (req, res) => {
-  res.setHeader('Content-Type', 'text/plain')
-  res.send('Welcome to my uppy companion service')
-})
+app.get("/", (req, res) => {
+  res.setHeader("Content-Type", "text/plain");
+  res.send("Welcome to my uppy companion service");
+});
 
 // source https://unsplash.com/documentation#user-authentication
-const AUTHORIZE_URL = 'https://unsplash.com/oauth/authorize'
-const ACCESS_URL = 'https://unsplash.com/oauth/token'
+const AUTHORIZE_URL = "https://unsplash.com/oauth/authorize";
+const ACCESS_URL = "https://unsplash.com/oauth/token";
 
 // initialize uppy
 const uppyOptions = {
@@ -53,28 +57,28 @@ const uppyOptions = {
     },
   },
   server: {
-    host: 'localhost:3020',
-    protocol: 'http',
+    host: "localhost:3020",
+    protocol: "http",
   },
-  filePath: mkdtempSync(path.join(os.tmpdir(), 'companion-')),
-  secret: 'some-secret',
+  filePath: mkdtempSync(path.join(os.tmpdir(), "companion-")),
+  secret: "some-secret",
   debug: true,
-}
+};
 
-app.use(uppy.app(uppyOptions).app)
+app.use(uppy.app(uppyOptions).app);
 
 // handle 404
 app.use((req, res) => {
-  return res.status(404).json({ message: 'Not Found' })
-})
+  return res.status(404).json({ message: "Not Found" });
+});
 
 // handle server errors
 app.use((err, req, res) => {
-  console.error('\x1b[31m', err.stack, '\x1b[0m')
-  res.status(err.status || 500).json({ message: err.message, error: err })
-})
+  console.error("\x1b[31m", err.stack, "\x1b[0m");
+  res.status(err.status || 500).json({ message: err.message, error: err });
+});
 
-uppy.socket(app.listen(3020), uppyOptions)
+uppy.socket(app.listen(3020), uppyOptions);
 
-console.log('Welcome to Companion!')
-console.log(`Listening on http://0.0.0.0:${3020}`)
+console.log("Welcome to Companion!");
+console.log(`Listening on http://0.0.0.0:${3020}`);

@@ -1,12 +1,12 @@
 {
-  "name": "@uppy-example/php-xhr",
+  "name": "@growthcloud-example/php-xhr",
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/webcam": "workspace:*",
-    "@uppy/xhr-upload": "workspace:*"
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/webcam": "workspace:*",
+    "@growthcloud/xhr-upload": "workspace:*"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.3",

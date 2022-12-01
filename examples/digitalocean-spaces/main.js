@@ -1,18 +1,18 @@
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import AwsS3 from '@uppy/aws-s3'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import AwsS3 from "@growthcloud/aws-s3";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
 const uppy = new Uppy({
   debug: true,
-})
+});
 
 uppy.use(Dashboard, {
   inline: true,
-  target: 'body',
-})
+  target: "body",
+});
 
 // No client side changes needed!
-uppy.use(AwsS3, { companionUrl: '/companion' })
+uppy.use(AwsS3, { companionUrl: "/companion" });

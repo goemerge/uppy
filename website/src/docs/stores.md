@@ -14,23 +14,23 @@ If your app uses a state management library such as [Redux](https://redux.js.org
 
 Uppy comes with two state management solutions (stores):
 
-* `@uppy/store-default`, a basic object-based store.
-* `@uppy/store-redux`, a store that uses a key in a Redux store.
+- `@growthcloud/store-default`, a basic object-based store.
+- `@growthcloud/store-redux`, a store that uses a key in a Redux store.
 
 You can also use a third-party store:
 
-* [uppy-store-ngrx](https://github.com/rimlin/uppy-store-ngrx/), keeping Uppy state in a key in an [Ngrx](https://github.com/ngrx/platform) store for use with Angular.
+- [uppy-store-ngrx](https://github.com/rimlin/uppy-store-ngrx/), keeping Uppy state in a key in an [Ngrx](https://github.com/ngrx/platform) store for use with Angular.
 
 ## Using stores
 
 To use a store, pass an instance to the [`store` option](/docs/uppy#store-defaultstore) in the Uppy constructor:
 
 ```js
-import DefaultStore from '@uppy/store-default'
+import DefaultStore from "@growthcloud/store-default";
 
 const uppy = new Uppy({
   store: new DefaultStore(),
-})
+});
 ```
 
 ### `DefaultStore`
@@ -48,17 +48,20 @@ This way, you get most of the benefits of Redux, including support for the Redux
 Here is how you can integrate Uppy’s `ReduxStore`:
 
 ```js
-import Uppy from '@uppy/core'
-import * as ReduxStore from '@uppy/store-redux'
-import * as Redux from 'redux'
+import Uppy from "@growthcloud/core";
+import * as ReduxStore from "@growthcloud/store-redux";
+import * as Redux from "redux";
 
-function createStore (reducers = {}) {
-  const reducer = Redux.combineReducers({ ...reducers, uppy: ReduxStore.reducer })
-  return Redux.createStore(reducer)
+function createStore(reducers = {}) {
+  const reducer = Redux.combineReducers({
+    ...reducers,
+    uppy: ReduxStore.reducer,
+  });
+  return Redux.createStore(reducer);
 }
 
-const store = new ReduxStore.ReduxStore({ store: createStore() })
-const uppy = new Uppy({ store })
+const store = new ReduxStore.ReduxStore({ store: createStore() });
+const uppy = new Uppy({ store });
 ```
 
 #### `opts.store`
@@ -74,8 +77,8 @@ By default, the `ReduxStore` assumes Uppy state is stored on a `state.uppy[id]` 
 ```js
 ReduxStore({
   store,
-  id: 'avatarUpload',
-})
+  id: "avatarUpload",
+});
 ```
 
 #### `opts.selector`
@@ -86,10 +89,10 @@ If you’d rather not store the Uppy state under the `state.uppy` key at all, us
 const uppy = new Uppy({
   store: ReduxStore({
     store,
-    id: 'avatarUpload',
-    selector: state => state.pages.profile.uppy.avatarUpload,
+    id: "avatarUpload",
+    selector: (state) => state.pages.profile.uppy.avatarUpload,
   }),
-})
+});
 ```
 
 Note that when specifying a custom selector, you **must** also specify a custom store ID. The store `id` tells the reducer in which property it should put Uppy’s state. The selector must then take the state from that property. In the example, we set the ID to `avatarUpload` and take the state from the `[reducer mount path].avatarUpload`.
@@ -100,9 +103,9 @@ If your app uses [`reselect`](https://npmjs.com/package/reselect), its selectors
 
 An Uppy store is an object with three methods.
 
-* `getState()` - Return the current state object.
-* `setState(patch)` - Merge the object `patch` into the current state.
-* `subscribe(listener)` - Call `listener` whenever the state changes.
+- `getState()` - Return the current state object.
+- `setState(patch)` - Merge the object `patch` into the current state.
+- `subscribe(listener)` - Call `listener` whenever the state changes.
   `listener` is a function that should receive three parameters:
   `(prevState, nextState, patch)`
 
@@ -111,30 +114,30 @@ An Uppy store is an object with three methods.
 The default store implementation, for example, looks a bit like this:
 
 ```js
-function createDefaultStore () {
-  let state = {}
-  const listeners = new Set()
+function createDefaultStore() {
+  let state = {};
+  const listeners = new Set();
 
   return {
     getState: () => state,
     setState: (patch) => {
-      const prevState = state
-      const nextState = { ...prevState, ...patch }
+      const prevState = state;
+      const nextState = { ...prevState, ...patch };
 
-      state = nextState
+      state = nextState;
 
       listeners.forEach((listener) => {
-        listener(prevState, nextState, patch)
-      })
+        listener(prevState, nextState, patch);
+      });
     },
     subscribe: (listener) => {
-      listeners.add(listener)
-      return () => listeners.remove(listener)
+      listeners.add(listener);
+      return () => listeners.remove(listener);
     },
-  }
+  };
 }
 ```
 
 A pattern like this, where users can pass options via a function call if necessary, is recommended.
 
-See the [@uppy/store-default](https://github.com/transloadit/uppy/tree/main/packages/%40uppy/store-default) package for more inspiration.
+See the [@growthcloud/store-default](https://github.com/transloadit/uppy/tree/main/packages/%40uppy/store-default) package for more inspiration.

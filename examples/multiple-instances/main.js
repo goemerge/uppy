@@ -1,33 +1,33 @@
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import GoldenRetriever from '@uppy/golden-retriever'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import GoldenRetriever from "@growthcloud/golden-retriever";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
 // Initialise two Uppy instances with the GoldenRetriever plugin,
 // but with different `id`s.
 const a = new Uppy({
-  id: 'a',
+  id: "a",
   debug: true,
 })
   .use(Dashboard, {
-    target: '#a',
+    target: "#a",
     inline: true,
     width: 400,
   })
-  .use(GoldenRetriever, { serviceWorker: false })
+  .use(GoldenRetriever, { serviceWorker: false });
 
 const b = new Uppy({
-  id: 'b',
+  id: "b",
   debug: true,
 })
   .use(Dashboard, {
-    target: '#b',
+    target: "#b",
     inline: true,
     width: 400,
   })
-  .use(GoldenRetriever, { serviceWorker: false })
+  .use(GoldenRetriever, { serviceWorker: false });
 
-window.a = a
-window.b = b
+window.a = a;
+window.b = b;

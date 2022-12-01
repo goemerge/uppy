@@ -3,57 +3,57 @@ type: docs
 order: 13
 title: "Zoom"
 menu_prefix: "<span title='Requires Companion'>ⓒ </span>"
-module: "@uppy/zoom"
+module: "@growthcloud/zoom"
 permalink: docs/zoom/
 category: "Sources"
 tagline: "import files from Zoom"
 ---
 
-The `@uppy/zoom` plugin lets users import files from their Zoom account.
+The `@growthcloud/zoom` plugin lets users import files from their Zoom account.
 
-A Companion instance is required for the `@uppy/zoom` plugin to work. Companion handles authentication with Zoom, downloads the pictures and videos, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
+A Companion instance is required for the `@growthcloud/zoom` plugin to work. Companion handles authentication with Zoom, downloads the pictures and videos, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
 
 ```js
-import Zoom from '@uppy/zoom'
+import Zoom from "@growthcloud/zoom";
 
 uppy.use(Zoom, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
 
 ## Installation
 
-This plugin is published as the `@uppy/zoom` package.
+This plugin is published as the `@growthcloud/zoom` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/zoom
+npm install @growthcloud/zoom
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Zoom } = Uppy
+const { Zoom } = Uppy;
 ```
 
 ## CSS
 
 Dashboard plugin is recommended as a container to all Provider plugins, including Zoom. If you are using Dashboard, it [comes with all the necessary styles](/docs/dashboard/#CSS) for Zoom as well.
 
-⚠️ If you are feeling adventurous, and want to use Zoom plugin separately, without Dashboard, make sure to include `@uppy/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
+⚠️ If you are feeling adventurous, and want to use Zoom plugin separately, without Dashboard, make sure to include `@growthcloud/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
 
 ## Options
 
-The `@uppy/zoom` plugin has the following configurable options:
+The `@growthcloud/zoom` plugin has the following configurable options:
 
 ```js
 uppy.use(Zoom, {
   target: Dashboard,
-  companionUrl: 'https://companion.uppy.io/',
-})
+  companionUrl: "https://companion.uppy.io/",
+});
 ```
 
 ### `id: 'Zoom'`
@@ -66,7 +66,7 @@ Configures the title / name shown in the UI, for instance, on Dashboard tabs. It
 
 ### `target: null`
 
-DOM element, CSS selector, or plugin to mount the Zoom provider into. This should normally be the [`@uppy/dashboard`](/docs/dashboard) plugin.
+DOM element, CSS selector, or plugin to mount the Zoom provider into. This should normally be the [`@growthcloud/dashboard`](/docs/dashboard) plugin.
 
 ### `companionUrl: null`
 
@@ -93,9 +93,9 @@ This option correlates to the [RequestCredentials value](https://developer.mozil
 ```js
 export default {
   strings: {
-    pluginNameZoom: 'Zoom',
+    pluginNameZoom: "Zoom",
   },
-}
+};
 ```
 
 ## Zoom Marketplace

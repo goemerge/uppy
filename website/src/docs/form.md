@@ -2,54 +2,54 @@
 type: docs
 order: 0
 title: "Form"
-module: "@uppy/form"
+module: "@growthcloud/form"
 permalink: docs/form/
 category: "Miscellaneous"
 tagline: "collect metadata from <code>&lt;form&gt;</code> right before the Uppy upload, then optionally append results back to the form"
 ---
 
-The `@uppy/form` plugin has several features to integrate with HTML `<form>` elements.
+The `@growthcloud/form` plugin has several features to integrate with HTML `<form>` elements.
 
-* It collects user-specified metadata from form fields, right before Uppy begins uploading/processing files.
-* It can append upload results back to the form as a hidden field. The appended result is a stringified version of a [`result`](/docs/uppy/#uppy-upload) returned from `uppy.upload()` or `complete` event.
+- It collects user-specified metadata from form fields, right before Uppy begins uploading/processing files.
+- It can append upload results back to the form as a hidden field. The appended result is a stringified version of a [`result`](/docs/uppy/#uppy-upload) returned from `uppy.upload()` or `complete` event.
 
 ```js
-import Form from '@uppy/form'
+import Form from "@growthcloud/form";
 
 uppy.use(Form, {
   // Options
-})
+});
 ```
 
 ## Installation
 
-This plugin is published as the `@uppy/form` package.
+This plugin is published as the `@growthcloud/form` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/form
+npm install @growthcloud/form
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Form } = Uppy
+const { Form } = Uppy;
 ```
 
 ## Options
 
-The `@uppy/form` plugin has the following configurable options:
+The `@growthcloud/form` plugin has the following configurable options:
 
 ```js
 uppy.use(Form, {
   target: null,
-  resultName: 'uppyResult',
+  resultName: "uppyResult",
   getMetaFromForm: true,
   addResultToForm: true,
   submitOnSuccess: false,
   triggerUploadOnSubmit: false,
-})
+});
 ```
 
 ### `id: 'Form'`
@@ -76,8 +76,8 @@ Configures whether to add upload/encoding results back to the form in an `<input
 
 Configures whether to start the upload when the form is submitted. When the user presses a submit button, this will prevent form submission, and instead upload files. You can then:
 
-* use `submitOnSuccess: true` if you need the form to _actually_ be submitted once all files have been uploaded.
-* listen for `uppy.on('complete')` to do something else if the file uploads are all you need. For example, if the form is used for file metadata only.
+- use `submitOnSuccess: true` if you need the form to _actually_ be submitted once all files have been uploaded.
+- listen for `uppy.on('complete')` to do something else if the file uploads are all you need. For example, if the form is used for file metadata only.
 
 ### `submitOnSuccess: false`
 

@@ -1,0 +1,42 @@
+{
+  "name": "@growthcloud/vue",
+  "version": "1.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "dependencies": {
+    "shallow-equal": "^1.2.1"
+  },
+  "devDependencies": {
+    "vue": "^2.6.14"
+  },
+  "peerDependencies": {
+    "@growthcloud/core": "workspace:^",
+    "@growthcloud/dashboard": "workspace:^",
+    "@growthcloud/drag-drop": "workspace:^",
+    "@growthcloud/file-input": "workspace:^",
+    "@growthcloud/progress-bar": "workspace:^",
+    "@growthcloud/status-bar": "workspace:^",
+    "vue": ">=2.6.11"
+  },
+  "peerDependenciesMeta": {
+    "@growthcloud/dashboard": {
+      "optional": true
+    },
+    "@growthcloud/drag-drop": {
+      "optional": true
+    },
+    "@growthcloud/file-input": {
+      "optional": true
+    },
+    "@growthcloud/progress-bar": {
+      "optional": true
+    },
+    "@growthcloud/status-bar": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

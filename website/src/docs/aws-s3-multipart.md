@@ -2,49 +2,48 @@
 type: docs
 order: 3
 title: "AWS S3 Multipart"
-module: "@uppy/aws-s3-multipart"
+module: "@growthcloud/aws-s3-multipart"
 permalink: docs/aws-s3-multipart/
 category: "Destinations"
 tagline: "uploader for AWS S3 using its resumable Multipart protocol"
 ---
 
-The `@uppy/aws-s3-multipart` plugin can be used to upload files directly to an S3 bucket using S3’s Multipart upload strategy. With this strategy, files are chopped up in parts of 5MB+ each, so they can be uploaded concurrently. It’s also quite reliable: if a single part fails to upload, only that 5MB chunk has to be retried.
+The `@growthcloud/aws-s3-multipart` plugin can be used to upload files directly to an S3 bucket using S3’s Multipart upload strategy. With this strategy, files are chopped up in parts of 5MB+ each, so they can be uploaded concurrently. It’s also quite reliable: if a single part fails to upload, only that 5MB chunk has to be retried.
 
 ```js
-import AwsS3Multipart from '@uppy/aws-s3-multipart'
+import AwsS3Multipart from "@growthcloud/aws-s3-multipart";
 
 uppy.use(AwsS3Multipart, {
   limit: 4,
-  companionUrl: 'https://uppy-companion.myapp.net/',
-})
+  companionUrl: "https://uppy-companion.myapp.net/",
+});
 ```
 
 ## Installation
 
-This plugin is published as the `@uppy/aws-s3-multipart` package.
+This plugin is published as the `@growthcloud/aws-s3-multipart` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/aws-s3-multipart
+npm install @growthcloud/aws-s3-multipart
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { AwsS3Multipart } = Uppy
+const { AwsS3Multipart } = Uppy;
 ```
 
 ## Options
 
-The `@uppy/aws-s3-multipart` plugin has the following configurable options:
+The `@growthcloud/aws-s3-multipart` plugin has the following configurable options:
 
 ### `limit: 6`
 
 The maximum amount of chunks to upload simultaneously. You should set the limit carefully. Setting it to a value too high could cause issues where the presigned URLs begin to expire before the chunks they are for start uploading. Too low and you will end up with a lot of extra round trips to your server (or Companion) than necessary to presign URLs. If the default chunk size of 5MB is used, a `limit` between 5 and 6 is recommended.
 
 Because HTTP/1.1 limits the number of concurrent requests to one origin to 6, it’s recommended to always set a limit of 6 or smaller for all your uploads, or to not override the default.
-
 
 ### `retryDelays: [0, 1000, 3000, 5000]`
 
@@ -84,8 +83,8 @@ A function that calls the S3 Multipart API to create a new upload. `file` is the
 
 Return a Promise for an object with keys:
 
-* `uploadId` - The UploadID returned by S3.
-* `key` - The object key for the file. This needs to be returned to allow it to be different from the `file.name`.
+- `uploadId` - The UploadID returned by S3.
+- `key` - The object key for the file. This needs to be returned to allow it to be different from the `file.name`.
 
 The default implementation calls out to Companion’s S3 signing endpoints.
 
@@ -93,14 +92,14 @@ The default implementation calls out to Companion’s S3 signing endpoints.
 
 A function that calls the S3 Multipart API to list the parts of a file that have already been uploaded. Receives the `file` object from Uppy’s state, and an object with keys:
 
-* `uploadId` - The UploadID of this Multipart upload.
-* `key` - The object key of this Multipart upload.
+- `uploadId` - The UploadID of this Multipart upload.
+- `key` - The object key of this Multipart upload.
 
 Return a Promise for an array of S3 Part objects, as returned by the S3 Multipart API. Each object has keys:
 
-* `PartNumber` - The index in the file of the uploaded part.
-* `Size` - The size of the part in bytes.
-* `ETag` - The ETag of the part, used to identify it when completing the multipart upload and combining all parts into a single file.
+- `PartNumber` - The index in the file of the uploaded part.
+- `Size` - The size of the part in bytes.
+- `ETag` - The ETag of the part, used to identify it when completing the multipart upload and combining all parts into a single file.
 
 The default implementation calls out to Companion’s S3 signing endpoints.
 
@@ -110,25 +109,25 @@ The default implementation calls out to Companion’s S3 signing endpoints.
 
 A function that generates a batch of signed URLs for the specified part numbers. Receives the `file` object from Uppy’s state. The `partData` argument is an object with keys:
 
-* `uploadId` - The UploadID of this Multipart upload.
-* `key` - The object key in the S3 bucket.
-* `parts` - An array containing a single object with the part number and chunk (`Array<{ number: number, chunk: blob }>`). `number` can’t be zero.
-* `signal` – An `AbortSignal` that may be used to abort an ongoing request.
+- `uploadId` - The UploadID of this Multipart upload.
+- `key` - The object key in the S3 bucket.
+- `parts` - An array containing a single object with the part number and chunk (`Array<{ number: number, chunk: blob }>`). `number` can’t be zero.
+- `signal` – An `AbortSignal` that may be used to abort an ongoing request.
 
 `prepareUploadParts` should return a `Promise` with an `Object` with keys:
 
-* `presignedUrls` - A JavaScript object with the part numbers as keys and the presigned URL for each part as the value.
-* `headers` - **(Optional)** Custom headers to send along with every request per part (`{ 1: { 'Content-MD5': 'hash' }}`). These are (1-based) indexed by part number too so you can for instance send the MD5 hash validation for each part to S3.
+- `presignedUrls` - A JavaScript object with the part numbers as keys and the presigned URL for each part as the value.
+- `headers` - **(Optional)** Custom headers to send along with every request per part (`{ 1: { 'Content-MD5': 'hash' }}`). These are (1-based) indexed by part number too so you can for instance send the MD5 hash validation for each part to S3.
 
 An example of what the return value should look like:
 
 ```json
 {
   "presignedUrls": {
-    "1": "https://bucket.region.amazonaws.com/path/to/file.jpg?partNumber=1&...",
+    "1": "https://bucket.region.amazonaws.com/path/to/file.jpg?partNumber=1&..."
   },
-  "headers": { 
-    "1": { "Content-MD5": "foo" },
+  "headers": {
+    "1": { "Content-MD5": "foo" }
   }
 }
 ```
@@ -137,16 +136,16 @@ An example of what the return value should look like:
 
 A function that generates a signed URL for the specified part number. The `partData` argument is an object with the keys:
 
-* `uploadId` - The UploadID of this Multipart upload.
-* `key` - The object key in the S3 bucket.
-* `partNumber` - can’t be zero.
-* `body` – The data that will be signed.
-* `signal` – An `AbortSignal` that may be used to abort an ongoing request.
+- `uploadId` - The UploadID of this Multipart upload.
+- `key` - The object key in the S3 bucket.
+- `partNumber` - can’t be zero.
+- `body` – The data that will be signed.
+- `signal` – An `AbortSignal` that may be used to abort an ongoing request.
 
 This function should return a object, or a promise that resolves to an object, with the following keys:
 
-* `url` – the presigned URL, as a `string`.
-* `headers` – **(Optional)** Custom headers to send along with the request to S3 endpoint.
+- `url` – the presigned URL, as a `string`.
+- `headers` – **(Optional)** Custom headers to send along with the request to S3 endpoint.
 
 An example of what the return value should look like:
 
@@ -161,8 +160,8 @@ An example of what the return value should look like:
 
 A function that calls the S3 Multipart API to abort a Multipart upload, and removes all parts that have been uploaded so far. Receives the `file` object from Uppy’s state, and an object with keys:
 
-* `uploadId` - The UploadID of this Multipart upload.
-* `key` - The object key of this Multipart upload.
+- `uploadId` - The UploadID of this Multipart upload.
+- `key` - The object key of this Multipart upload.
 
 This is typically called when the user cancels an upload. Cancellation cannot fail in Uppy, so the result of this function is ignored.
 
@@ -172,13 +171,13 @@ The default implementation calls out to Companion’s S3 signing endpoints.
 
 A function that calls the S3 Multipart API to complete a Multipart upload, combining all parts into a single object in the S3 bucket. Receives the `file` object from Uppy’s state, and an object with keys:
 
-* `uploadId` - The UploadID of this Multipart upload.
-* `key` - The object key of this Multipart upload.
-* `parts` - S3-style list of parts, an array of objects with `ETag` and `PartNumber` properties. This can be passed straight to S3’s Multipart API.
+- `uploadId` - The UploadID of this Multipart upload.
+- `key` - The object key of this Multipart upload.
+- `parts` - S3-style list of parts, an array of objects with `ETag` and `PartNumber` properties. This can be passed straight to S3’s Multipart API.
 
 Return a Promise for an object with properties:
 
-* `location` - **(Optional)** A publically accessible URL to the object in the S3 bucket.
+- `location` - **(Optional)** A publically accessible URL to the object in the S3 bucket.
 
 The default implementation calls out to Companion’s S3 signing endpoints.
 
@@ -210,4 +209,4 @@ While the AWS S3 plugin uses `POST` requests when uploading files to an S3 bucke
 ]
 ```
 
-[`signPart()`]: #signPart-file-partData
+[`signpart()`]: #signPart-file-partData

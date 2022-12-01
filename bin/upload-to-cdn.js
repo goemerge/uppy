@@ -21,92 +21,97 @@
 //
 //  - Kevin van Zonneveld <kevin@transloadit.com>
 
-const path = require('node:path')
-const { pipeline, finished } = require('node:stream/promises')
-const { readFile } = require('node:fs/promises')
-const AWS = require('aws-sdk')
-const packlist = require('npm-packlist')
-const tar = require('tar')
-const pacote = require('pacote')
-const concat = require('concat-stream')
-const mime = require('mime-types')
-const AdmZip = require('adm-zip')
+const path = require("node:path");
+const { pipeline, finished } = require("node:stream/promises");
+const { readFile } = require("node:fs/promises");
+const AWS = require("aws-sdk");
+const packlist = require("npm-packlist");
+const tar = require("tar");
+const pacote = require("pacote");
+const concat = require("concat-stream");
+const mime = require("mime-types");
+const AdmZip = require("adm-zip");
 
-function delay (ms) {
-  return new Promise(resolve => setTimeout(resolve, ms))
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const AWS_REGION = 'us-east-1'
-const AWS_BUCKET = 'releases.transloadit.com'
+const AWS_REGION = "us-east-1";
+const AWS_BUCKET = "releases.transloadit.com";
 
 /**
  * Get remote dist/ files by fetching the tarball for the given version
 from npm and filtering it down to package/dist/ files.
  *
- * @param {string} packageName eg. @uppy/robodog
+ * @param {string} packageName eg. @growthcloud/robodog
  * @param {string} version eg. 1.8.0
  * @returns a Map<string, Buffer>, filename → content
  */
-async function getRemoteDistFiles (packageName, version) {
-  const files = new Map()
-  const tarball = await pacote.tarball.stream(`${packageName}@${version}`, stream => pipeline(stream, new tar.Parse()))
+async function getRemoteDistFiles(packageName, version) {
+  const files = new Map();
+  const tarball = await pacote.tarball.stream(
+    `${packageName}@${version}`,
+    (stream) => pipeline(stream, new tar.Parse())
+  );
 
-  tarball.on('entry', (readEntry) => {
-    if (readEntry.path.startsWith('package/dist/')) {
+  tarball.on("entry", (readEntry) => {
+    if (readEntry.path.startsWith("package/dist/")) {
       readEntry
-        .pipe(concat((buf) => {
-          files.set(readEntry.path.replace(/^package\/dist\//, ''), buf)
-        }))
-        .on('error', (err) => {
-          tarball.emit('error', err)
-        })
+        .pipe(
+          concat((buf) => {
+            files.set(readEntry.path.replace(/^package\/dist\//, ""), buf);
+          })
+        )
+        .on("error", (err) => {
+          tarball.emit("error", err);
+        });
     } else {
-      readEntry.resume()
+      readEntry.resume();
     }
-  })
+  });
 
-  await finished(tarball)
-  return files
+  await finished(tarball);
+  return files;
 }
 
 /**
  * Get local dist/ files by asking npm-packlist what files would be added
  * to an npm package during publish, and filtering those down to just dist/ files.
  *
- * @param {string} packagePath Base file path of the package, eg. ./packages/@uppy/locales
+ * @param {string} packagePath Base file path of the package, eg. ./packages/@growthcloud/locales
  * @returns a Map<string, Buffer>, filename → content
  */
-async function getLocalDistFiles (packagePath) {
+async function getLocalDistFiles(packagePath) {
   const files = (await packlist({ path: packagePath }))
-    .filter(f => f.startsWith('dist/'))
-    .map(f => f.replace(/^dist\//, ''))
+    .filter((f) => f.startsWith("dist/"))
+    .map((f) => f.replace(/^dist\//, ""));
 
   const entries = await Promise.all(
     files.map(async (f) => [
       f,
-      await readFile(path.join(packagePath, 'dist', f)),
-    ]),
-  )
+      await readFile(path.join(packagePath, "dist", f)),
+    ])
+  );
 
-  return new Map(entries)
+  return new Map(entries);
 }
 
-async function main (packageName, version) {
+async function main(packageName, version) {
   if (!packageName) {
-    console.error('usage: upload-to-cdn <packagename> [version]')
-    console.error('Must provide a package name')
-    process.exit(1)
+    console.error("usage: upload-to-cdn <packagename> [version]");
+    console.error("Must provide a package name");
+    process.exit(1);
   }
 
   if (!process.env.EDGLY_KEY || !process.env.EDGLY_SECRET) {
-    console.error('Missing EDGLY_KEY or EDGLY_SECRET env variables, bailing')
-    process.exit(1)
+    console.error("Missing EDGLY_KEY or EDGLY_SECRET env variables, bailing");
+    process.exit(1);
   }
 
   // version should only be a positional arg and semver string
   // this deals with usage like `npm run uploadcdn uppy -- --force`
   // where we force push a local build
-  if (version?.startsWith('-')) version = undefined // eslint-disable-line no-param-reassign
+  if (version?.startsWith("-")) version = undefined; // eslint-disable-line no-param-reassign
 
   const s3 = new AWS.S3({
     credentials: new AWS.Credentials({
@@ -114,75 +119,85 @@ async function main (packageName, version) {
       secretAccessKey: process.env.EDGLY_SECRET,
     }),
     region: AWS_REGION,
-  })
+  });
 
-  const remote = !!version
+  const remote = !!version;
   if (!remote) {
     // eslint-disable-next-line import/no-dynamic-require, global-require, no-param-reassign
-    version = require(`../packages/${packageName}/package.json`).version
+    version = require(`../packages/${packageName}/package.json`).version;
   }
 
   // Warn if uploading a local build not from CI:
   // - If we're on CI, this should be a release commit.
   // - If we're local, normally we should upload a released version, not a local build.
   if (!remote && !process.env.CI) {
-    console.log('Warning, writing a local build to the CDN, this is usually not what you want. Sleeping 3s. Press CTRL+C!')
-    await delay(3000)
+    console.log(
+      "Warning, writing a local build to the CDN, this is usually not what you want. Sleeping 3s. Press CTRL+C!"
+    );
+    await delay(3000);
   }
 
   const packagePath = remote
     ? `${packageName}@${version}`
-    : path.join(__dirname, '..', 'packages', packageName)
+    : path.join(__dirname, "..", "packages", packageName);
 
   // uppy → releases/uppy/
-  // @uppy/robodog → releases/uppy/robodog/
-  // @uppy/locales → releases/uppy/locales/
-  const dirName = packageName.startsWith('@uppy/')
-    ? packageName.replace(/^@/, '')
-    : 'uppy'
+  // @growthcloud/robodog → releases/uppy/robodog/
+  // @growthcloud/locales → releases/uppy/locales/
+  const dirName = packageName.startsWith("@growthcloud/")
+    ? packageName.replace(/^@/, "")
+    : "uppy";
 
-  const outputPath = path.posix.join(dirName, `v${version}`)
+  const outputPath = path.posix.join(dirName, `v${version}`);
 
-  const { Contents: existing } = await s3.listObjects({
-    Bucket: AWS_BUCKET,
-    Prefix: outputPath,
-  }).promise()
+  const { Contents: existing } = await s3
+    .listObjects({
+      Bucket: AWS_BUCKET,
+      Prefix: outputPath,
+    })
+    .promise();
   if (existing.length > 0) {
-    if (process.argv.includes('--force')) {
-      console.warn(`WARN Release files for ${dirName} v${version} already exist, overwriting...`)
+    if (process.argv.includes("--force")) {
+      console.warn(
+        `WARN Release files for ${dirName} v${version} already exist, overwriting...`
+      );
     } else {
-      console.error(`Release files for ${dirName} v${version} already exist, exiting...`)
-      process.exit(1)
+      console.error(
+        `Release files for ${dirName} v${version} already exist, exiting...`
+      );
+      process.exit(1);
     }
   }
 
   const files = remote
     ? await getRemoteDistFiles(packageName, version)
-    : await getLocalDistFiles(packagePath)
+    : await getLocalDistFiles(packagePath);
 
-  if (packageName === 'uppy') {
+  if (packageName === "uppy") {
     // Create downloadable zip archive
-    const zip = new AdmZip()
+    const zip = new AdmZip();
     for (const [filename, buffer] of files.entries()) {
-      zip.addFile(filename, buffer)
+      zip.addFile(filename, buffer);
     }
 
-    files.set(`uppy-v${version}.zip`, zip.toBuffer())
+    files.set(`uppy-v${version}.zip`, zip.toBuffer());
   }
 
   for (const [filename, buffer] of files.entries()) {
-    const key = path.posix.join(outputPath, filename)
-    console.log(`pushing s3://${AWS_BUCKET}/${key}`)
-    await s3.putObject({
-      Bucket: AWS_BUCKET,
-      Key: key,
-      ContentType: mime.lookup(filename),
-      Body: buffer,
-    }).promise()
+    const key = path.posix.join(outputPath, filename);
+    console.log(`pushing s3://${AWS_BUCKET}/${key}`);
+    await s3
+      .putObject({
+        Bucket: AWS_BUCKET,
+        Key: key,
+        ContentType: mime.lookup(filename),
+        Body: buffer,
+      })
+      .promise();
   }
 }
 
 main(...process.argv.slice(2)).catch((err) => {
-  console.error(err.stack)
-  process.exit(1)
-})
+  console.error(err.stack);
+  process.exit(1);
+});

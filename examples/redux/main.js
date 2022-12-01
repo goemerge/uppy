@@ -1,18 +1,23 @@
-const { createStore, compose, combineReducers, applyMiddleware } = require('redux')
-const logger = require('redux-logger').default
-const Uppy = require('@uppy/core')
-const uppyReduxStore = require('@uppy/store-redux')
-const Dashboard = require('@uppy/dashboard')
-const Tus = require('@uppy/tus')
+const {
+  createStore,
+  compose,
+  combineReducers,
+  applyMiddleware,
+} = require("redux");
+const logger = require("redux-logger").default;
+const Uppy = require("@growthcloud/core");
+const uppyReduxStore = require("@growthcloud/store-redux");
+const Dashboard = require("@growthcloud/dashboard");
+const Tus = require("@growthcloud/tus");
 
-function counter (state = 0, action) {
+function counter(state = 0, action) {
   switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
+    case "INCREMENT":
+      return state + 1;
+    case "DECREMENT":
+      return state - 1;
     default:
-      return state
+      return state;
   }
 }
 
@@ -21,47 +26,46 @@ const reducer = combineReducers({
   // You don't have to use the `uppy` key. But if you don't,
   // you need to provide a custom `selector` to the `uppyReduxStore` call below.
   uppy: uppyReduxStore.reducer,
-})
+});
 
-let enhancer = applyMiddleware(
-  uppyReduxStore.middleware(),
-  logger,
-)
-if (typeof __REDUX_DEVTOOLS_EXTENSION__ !== 'undefined') {
+let enhancer = applyMiddleware(uppyReduxStore.middleware(), logger);
+if (typeof __REDUX_DEVTOOLS_EXTENSION__ !== "undefined") {
   // eslint-disable-next-line no-undef
-  enhancer = compose(enhancer, __REDUX_DEVTOOLS_EXTENSION__())
+  enhancer = compose(enhancer, __REDUX_DEVTOOLS_EXTENSION__());
 }
 
-const store = createStore(reducer, enhancer)
+const store = createStore(reducer, enhancer);
 
 // Counter example from https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html
-const valueEl = document.querySelector('#value')
+const valueEl = document.querySelector("#value");
 
-function getCounter () { return store.getState().counter }
-function render () {
-  valueEl.innerHTML = getCounter().toString()
+function getCounter() {
+  return store.getState().counter;
 }
-render()
-store.subscribe(render)
+function render() {
+  valueEl.innerHTML = getCounter().toString();
+}
+render();
+store.subscribe(render);
 
-document.querySelector('#increment').onclick = () => {
-  store.dispatch({ type: 'INCREMENT' })
-}
-document.querySelector('#decrement').onclick = () => {
-  store.dispatch({ type: 'DECREMENT' })
-}
-document.querySelector('#incrementIfOdd').onclick = () => {
+document.querySelector("#increment").onclick = () => {
+  store.dispatch({ type: "INCREMENT" });
+};
+document.querySelector("#decrement").onclick = () => {
+  store.dispatch({ type: "DECREMENT" });
+};
+document.querySelector("#incrementIfOdd").onclick = () => {
   if (getCounter() % 2 !== 0) {
-    store.dispatch({ type: 'INCREMENT' })
+    store.dispatch({ type: "INCREMENT" });
   }
-}
-document.querySelector('#incrementAsync').onclick = () => {
-  setTimeout(() => store.dispatch({ type: 'INCREMENT' }), 1000)
-}
+};
+document.querySelector("#incrementAsync").onclick = () => {
+  setTimeout(() => store.dispatch({ type: "INCREMENT" }), 1000);
+};
 
 // Uppy using the same store
 const uppy = new Uppy({
-  id: 'redux',
+  id: "redux",
   store: uppyReduxStore({ store }),
   // If we had placed our `reducer` elsewhere in Redux, eg. under an `uppy` key in the state for a profile page,
   // we'd do something like:
@@ -72,12 +76,12 @@ const uppy = new Uppy({
   //   selector: state => state.pages.profile.uppy
   // }),
   debug: true,
-})
+});
 uppy.use(Dashboard, {
-  target: '#app',
+  target: "#app",
   inline: true,
   width: 400,
-})
-uppy.use(Tus, { endpoint: 'https://tusd.tusdemo.net/' })
+});
+uppy.use(Tus, { endpoint: "https://tusd.tusdemo.net/" });
 
-window.uppy = uppy
+window.uppy = uppy;

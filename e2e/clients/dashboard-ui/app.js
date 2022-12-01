@@ -1,21 +1,21 @@
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import RemoteSources from '@uppy/remote-sources'
-import Webcam from '@uppy/webcam'
-import ScreenCapture from '@uppy/screen-capture'
-import GoldenRetriever from '@uppy/golden-retriever'
-import ImageEditor from '@uppy/image-editor'
-import DropTarget from '@uppy/drop-target'
-import Audio from '@uppy/audio'
-import Compressor from '@uppy/compressor'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import RemoteSources from "@growthcloud/remote-sources";
+import Webcam from "@growthcloud/webcam";
+import ScreenCapture from "@growthcloud/screen-capture";
+import GoldenRetriever from "@growthcloud/golden-retriever";
+import ImageEditor from "@growthcloud/image-editor";
+import DropTarget from "@growthcloud/drop-target";
+import Audio from "@growthcloud/audio";
+import Compressor from "@growthcloud/compressor";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
-const COMPANION_URL = 'http://companion.uppy.io'
+const COMPANION_URL = "http://companion.uppy.io";
 
 const uppy = new Uppy()
-  .use(Dashboard, { target: '#app', inline: true })
+  .use(Dashboard, { target: "#app", inline: true })
   .use(RemoteSources, { companionUrl: COMPANION_URL })
   .use(Webcam, {
     target: Dashboard,
@@ -30,7 +30,7 @@ const uppy = new Uppy()
   .use(ImageEditor, { target: Dashboard })
   .use(DropTarget, { target: document.body })
   .use(Compressor)
-  .use(GoldenRetriever, { serviceWorker: true })
+  .use(GoldenRetriever, { serviceWorker: true });
 
 // Keep this here to access uppy in tests
-window.uppy = uppy
+window.uppy = uppy;

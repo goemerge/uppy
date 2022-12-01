@@ -5,8 +5,8 @@ on:
     branches: main
     paths:
       - yarn.lock
-      - 'website/**'
-      - '.github/workflows/website.yml'
+      - "website/**"
+      - ".github/workflows/website.yml"
   workflow_dispatch:
 
 jobs:
@@ -49,8 +49,8 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: _deploy # relative to `github.workspace`
-          committer: 'Uppy Bot <uppybot@uppy.io>'
-          author: 'Uppy Bot <uppybot@uppy.io>'
+          committer: "Uppy Bot <uppybot@growthcloud.io>"
+          author: "Uppy Bot <uppybot@growthcloud.io>"
           commit_message: Update transloadit/uppy website
           fqdn: uppy.io
           jekyll: false

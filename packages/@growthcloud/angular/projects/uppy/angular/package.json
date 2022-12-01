@@ -1,0 +1,37 @@
+{
+  "name": "@growthcloud/angular",
+  "description": "Angular component wrappers around Uppy's official UI plugins.",
+  "version": "0.5.1",
+  "license": "MIT",
+  "homepage": "https://uppy.io",
+  "keywords": [
+    "file uploader",
+    "uppy",
+    "uppy-plugin",
+    "angular",
+    "angular-components"
+  ],
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "scripts": {
+    "prepublishOnly": "rm -fr * && cp -r ../../dist/angular .."
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">= 14",
+    "@angular/core": ">= 14",
+    "@growthcloud/core": "workspace:^",
+    "@growthcloud/dashboard": "workspace:^",
+    "@growthcloud/drag-drop": "workspace:^",
+    "@growthcloud/progress-bar": "workspace:^",
+    "@growthcloud/status-bar": "workspace:^",
+    "@growthcloud/utils": "workspace:^"
+  }
+}

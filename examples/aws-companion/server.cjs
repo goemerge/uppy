@@ -1,25 +1,29 @@
-const fs = require('node:fs')
-const path = require('node:path')
-const crypto = require('node:crypto')
-const companion = require('@uppy/companion')
+const fs = require("node:fs");
+const path = require("node:path");
+const crypto = require("node:crypto");
+const companion = require("@growthcloud/companion");
 
-require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') })
-const app = require('express')()
+require("dotenv").config({ path: path.join(__dirname, "..", "..", ".env") });
+const app = require("express")();
 
-const DATA_DIR = path.join(__dirname, 'tmp')
+const DATA_DIR = path.join(__dirname, "tmp");
 
-app.use(require('cors')({
-  origin: 'http://localhost:3000',
-  methods: ['GET', 'POST', 'OPTIONS'],
-  credentials: true,
-}))
-app.use(require('cookie-parser')())
-app.use(require('body-parser').json())
-app.use(require('express-session')({
-  secret: 'hello planet',
-  saveUninitialized: false,
-  resave: false,
-}))
+app.use(
+  require("cors")({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "OPTIONS"],
+    credentials: true,
+  })
+);
+app.use(require("cookie-parser")());
+app.use(require("body-parser").json());
+app.use(
+  require("express-session")({
+    secret: "hello planet",
+    saveUninitialized: false,
+    resave: false,
+  })
+);
 
 const options = {
   providerOptions: {
@@ -36,28 +40,28 @@ const options = {
     region: process.env.COMPANION_AWS_REGION,
     endpoint: process.env.COMPANION_AWS_ENDPOINT,
   },
-  server: { host: 'localhost:3020' },
+  server: { host: "localhost:3020" },
   filePath: DATA_DIR,
-  secret: 'blah blah',
+  secret: "blah blah",
   debug: true,
-}
+};
 
 // Create the data directory here for the sake of the example.
 try {
-  fs.accessSync(DATA_DIR)
+  fs.accessSync(DATA_DIR);
 } catch (err) {
-  fs.mkdirSync(DATA_DIR)
+  fs.mkdirSync(DATA_DIR);
 }
-process.on('exit', () => {
-  fs.rmSync(DATA_DIR, { recursive: true, force: true })
-})
+process.on("exit", () => {
+  fs.rmSync(DATA_DIR, { recursive: true, force: true });
+});
 
-const { app: companionApp } = companion.app(options)
+const { app: companionApp } = companion.app(options);
 
-app.use(companionApp)
+app.use(companionApp);
 
 const server = app.listen(3020, () => {
-  console.log('listening on port 3020')
-})
+  console.log("listening on port 3020");
+});
 
-companion.socket(server)
+companion.socket(server);

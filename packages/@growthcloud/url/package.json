@@ -1,0 +1,33 @@
+{
+  "name": "@growthcloud/url",
+  "description": "The Url plugin lets users import files from the Internet. Paste any URL and it’ll be added!",
+  "version": "3.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "style": "dist/style.min.css",
+  "types": "types/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "file uploader",
+    "url",
+    "import from url",
+    "uppy",
+    "uppy-plugin"
+  ],
+  "homepage": "https://uppy.io",
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "dependencies": {
+    "@growthcloud/companion-client": "workspace:^",
+    "@growthcloud/utils": "workspace:^",
+    "preact": "^10.5.13"
+  },
+  "peerDependencies": {
+    "@growthcloud/core": "workspace:^"
+  }
+}

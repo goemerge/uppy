@@ -1,12 +1,12 @@
 {
-  "name": "@uppy-example/redux",
+  "name": "@growthcloud-example/redux",
   "version": "0.0.0",
   "dependencies": {
     "@babel/core": "^7.4.4",
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/store-redux": "workspace:*",
-    "@uppy/tus": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/store-redux": "workspace:*",
+    "@growthcloud/tus": "workspace:*",
     "babelify": "^10.0.0",
     "budo": "^11.6.1",
     "redux": "^4.1.2",

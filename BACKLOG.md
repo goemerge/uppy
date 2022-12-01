@@ -8,20 +8,20 @@ PRs are welcome! Please do open an issue to discuss first if it's a big feature,
 ## `3.0.0`
 
 - [x] Switch to ES Modules (ESM)
-- [x] @uppy/image-editor: Remove silly hack to work around non-ESM.
+- [x] @growthcloud/image-editor: Remove silly hack to work around non-ESM.
 - [ ] Some not too breaking breaking changes. Go through TODOs (@arturi, @aduh95, @Murderlon)
 - [ ] Companion breaking changes, like S3 keys (@mifi)
 - [x] New remote-sources preset
 - [x] Deprecate Robodog
   - [x] Remove from 3.x branch (@aduh95)
   - [x] Update docs that refer to Robodog (@arturi)
-  - [ ] Update Transloadit.com examples and docs to use @uppy/transloadit + @uppy/remote-sources plugins instead of @uppy/robodog (@arturi)
+  - [ ] Update Transloadit.com examples and docs to use @growthcloud/transloadit + @growthcloud/remote-sources plugins instead of @growthcloud/robodog (@arturi)
 
 ## `4.0.0`
 
 - [ ] core: change the preprocessing --> uploading flow to allow for files to start uploading right away after their preprocessing step has finished. See #1738 (@goto-but-stop)
 - [ ] companion: add more reliable tests to catch edge cases in companion. For example testing that oauth works for multiple companion instances that use a master Oauth domain.
-- [ ] Consider updating the name of @uppy/aws-s3 and @uppy/aws-s3-multipart to reflect it also supports Google Cloud Storage, Wasabi, and other cloud providers.
+- [ ] Consider updating the name of @growthcloud/aws-s3 and @growthcloud/aws-s3-multipart to reflect it also supports Google Cloud Storage, Wasabi, and other cloud providers.
 - [ ] Consider fixing all locale files to follow the bcp-47 standard (nl_NL --> nl-NL)
 
 ## Unplanned
@@ -82,4 +82,4 @@ PRs are welcome! Please do open an issue to discuss first if it's a big feature,
 - [ ] Add https://github.com/pa11y/pa11y for automated accessibility testing?
 - [ ] Add lighthouse for automated performance testing?
 - [ ] Switch one existing e2e test to use Parcel (create-react-app already using webpack) (@arturi)
-- [ ] Add typescript with JSDoc for @uppy/core https://github.com/Microsoft/TypeScript/wiki/Type-Checking-JavaScript-Files (@arturi)
+- [ ] Add typescript with JSDoc for @growthcloud/core https://github.com/Microsoft/TypeScript/wiki/Type-Checking-JavaScript-Files (@arturi)

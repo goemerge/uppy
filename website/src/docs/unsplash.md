@@ -3,43 +3,43 @@ type: docs
 order: 14
 title: "Unsplash"
 menu_prefix: "<span title='Requires Companion'>ⓒ </span>"
-module: "@uppy/unsplash"
+module: "@growthcloud/unsplash"
 permalink: docs/unsplash/
 category: "Sources"
 tagline: "import images from Unsplash"
 ---
 
-The `@uppy/unsplash` plugin lets users search and select photos from Unsplash.
+The `@growthcloud/unsplash` plugin lets users search and select photos from Unsplash.
 
 A Companion instance is required for the Unsplash plugin to work. Companion handles authentication with Unsplash, downloads the files, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
 
 ```js
-import Uppy from '@uppy/core'
-import Unsplash from '@uppy/unsplash'
+import Uppy from "@growthcloud/core";
+import Unsplash from "@growthcloud/unsplash";
 
-const uppy = new Uppy()
+const uppy = new Uppy();
 
 uppy.use(Unsplash, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
 
 ## Installation
 
-This plugin is published as the `@uppy/unsplash` package.
+This plugin is published as the `@growthcloud/unsplash` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/unsplash
+npm install @growthcloud/unsplash
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Unsplash } = Uppy
+const { Unsplash } = Uppy;
 ```
 
 ## Setting Up
@@ -57,11 +57,11 @@ When using the Companion Node.js API, configure these options:
 companion.app({
   providerOptions: {
     unsplash: {
-      key: 'Unsplash API key',
-      secret: 'Unsplash API secret',
+      key: "Unsplash API key",
+      secret: "Unsplash API secret",
     },
   },
-})
+});
 ```
 
 You can create a Unsplash App on the [Unsplash Developers site](https://unsplash.com/developers).
@@ -72,17 +72,17 @@ You’ll be redirected to the app page. This page lists the app key and app secr
 
 Dashboard plugin is recommended as a container to all Provider plugins, including Unsplash. If you are using Dashboard, it [comes with all the nessesary styles](/docs/dashboard/#CSS) for Unsplash as well.
 
-⚠️ If you are feeling adventurous, and want to use Unsplash plugin separately, without Dashboard, make sure to include `@uppy/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
+⚠️ If you are feeling adventurous, and want to use Unsplash plugin separately, without Dashboard, make sure to include `@growthcloud/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
 
 ## Options
 
-The `@uppy/dropbox` plugin has the following configurable options:
+The `@growthcloud/dropbox` plugin has the following configurable options:
 
 ```js
 uppy.use(Unsplash, {
   target: Dashboard,
-  companionUrl: 'https://companion.uppy.io/',
-})
+  companionUrl: "https://companion.uppy.io/",
+});
 ```
 
 ### `id: 'Unsplash'`
@@ -95,7 +95,7 @@ Title / name shown in the UI, such as Dashboard tabs. It defaults to `'Unsplash'
 
 ### `target: null`
 
-DOM element, CSS selector, or plugin to mount the Unsplash provider into. This should normally be the [`@uppy/dashboard`](/docs/dashboard) plugin.
+DOM element, CSS selector, or plugin to mount the Unsplash provider into. This should normally be the [`@growthcloud/dashboard`](/docs/dashboard) plugin.
 
 ### `companionUrl: null`
 

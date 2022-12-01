@@ -17,30 +17,36 @@ Here’s a quick example:
 <!-- eslint-disable import/first, import/newline-after-import -->
 
 ```js
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-const uppy = new Uppy()
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+const uppy = new Uppy();
 uppy.use(Dashboard, {
-  trigger: '#pick-files',
-})
+  trigger: "#pick-files",
+});
 
 // for Google Drive
-import GoogleDrive from '@uppy/google-drive'
-uppy.use(GoogleDrive, { target: Dashboard, companionUrl: 'http://localhost:3020' })
+import GoogleDrive from "@growthcloud/google-drive";
+uppy.use(GoogleDrive, {
+  target: Dashboard,
+  companionUrl: "http://localhost:3020",
+});
 
 // for Dropbox
-import Dropbox from '@uppy/dropbox'
-uppy.use(Dropbox, { target: Dashboard, companionUrl: 'http://localhost:3020' })
+import Dropbox from "@growthcloud/dropbox";
+uppy.use(Dropbox, { target: Dashboard, companionUrl: "http://localhost:3020" });
 
 // for Instagram
-import Instagram from '@uppy/instagram'
-uppy.use(Instagram, { target: Dashboard, companionUrl: 'http://localhost:3020' })
+import Instagram from "@growthcloud/instagram";
+uppy.use(Instagram, {
+  target: Dashboard,
+  companionUrl: "http://localhost:3020",
+});
 
 // for URL
-import Url from '@uppy/url'
-uppy.use(Url, { target: Dashboard, companionUrl: 'http://localhost:3020' })
+import Url from "@growthcloud/url";
+uppy.use(Url, { target: Dashboard, companionUrl: "http://localhost:3020" });
 ```
 
 ⚠️ The [Dashboard](/docs/dashboard) plugin is recommended as a universal container to all Provider plugins. It also comes with file previews, progress reporting and more. If you are using the Dashboard, it already [comes with all the nessesary styles](/docs/dashboard/#CSS) and functionality for Providers to work well.
 
-If you are feeling adventurous, you can technically use a Provider plugin separately, without the Dashboard. Make sure to then include `@uppy/provider-views/dist/style.css` (or `style.min.css`) CSS file. But this is experimental, not officialy supported and not recommended.
+If you are feeling adventurous, you can technically use a Provider plugin separately, without the Dashboard. Make sure to then include `@growthcloud/provider-views/dist/style.css` (or `style.min.css`) CSS file. But this is experimental, not officialy supported and not recommended.

@@ -14,24 +14,28 @@ Add resumable uploads and Transloadit’s processing to your existing HTML uploa
 
 ```html
 <form id="upload-form" method="POST" action="/upload">
-  <input type="file" multiple>
+  <input type="file" multiple />
   ...
 </form>
 
 <script>
-window.Robodog.form('form#upload-form', {
-  params: {
-    auth: { key: '' },
-    template_id: ''
-  }
-})
+  window.Robodog.form("form#upload-form", {
+    params: {
+      auth: { key: "" },
+      template_id: "",
+    },
+  });
 </script>
 ```
 
 When the user submits the form, we intercept it and send the files to Transloadit instead. This creates one or more Assemblies depending on configuration. Then, we put the status JSON object(s) in a hidden input field named `transloadit`.
 
 ```html
-<input type="hidden" name="transloadit" value='[{"ok": "ASSEMBLY_EXECUTING",...}]'>
+<input
+  type="hidden"
+  name="transloadit"
+  value='[{"ok": "ASSEMBLY_EXECUTING",...}]'
+/>
 ```
 
 Finally, we _really_ submit the form—without files, but with those Assembly status objects. You can then handle that in your backend.
@@ -47,9 +51,9 @@ You can localize the “Choose files” button that is injected into the form, b
 ```js
 const locale = {
   strings: {
-    chooseFiles: 'Choose files',
+    chooseFiles: "Choose files",
   },
-}
+};
 ```
 
 ## Restrictions
@@ -84,7 +88,7 @@ If provided, the [`<input accept>`](https://developer.mozilla.org/en-US/docs/Web
 
 ## Progress Reporting
 
-Uploads using HTML forms have no builtin progress reporting. With Robodog, you can use the `statusBar` option to show an [@uppy/status-bar](/docs/status-bar): an element styled like a progress bar, reporting both upload and Assembly execution progress.
+Uploads using HTML forms have no builtin progress reporting. With Robodog, you can use the `statusBar` option to show an [@growthcloud/status-bar](/docs/status-bar): an element styled like a progress bar, reporting both upload and Assembly execution progress.
 
 Point it to an element or a CSS selector:
 
@@ -93,10 +97,10 @@ Point it to an element or a CSS selector:
   <div class="progress"></div>
 </form>
 <script>
-window.Robodog.form('form#upload-form', {
-  statusBar: '#upload-form .progress'
-  // ...
-})
+  window.Robodog.form("form#upload-form", {
+    statusBar: "#upload-form .progress",
+    // ...
+  });
 </script>
 ```
 
@@ -113,11 +117,11 @@ The `triggerUploadOnSubmit: false` option is available for this purpose. We reco
 // after the user clicks the "Upload" button inside the modal and all
 // files have been successfully uploaded, the modal closes and the user
 // can submit the form.
-window.Robodog.form('form#upload-form', {
+window.Robodog.form("form#upload-form", {
   modal: true,
   closeAfterFinish: true,
   triggerUploadOnSubmit: false,
-})
+});
 ```
 
 ## Migrating From the jQuery SDK
@@ -132,9 +136,9 @@ First, change your import URLs and initialization code:
 <!-- The old jQuery way… -->
 <script src="//assets.transloadit.com/js/jquery.transloadit-assembly-options-v3-latest.js"></script>
 <script>
-$(selector).transloadit({
-  ...options
-})
+  $(selector).transloadit({
+    ...options,
+  });
 </script>
 ```
 
@@ -143,9 +147,9 @@ $(selector).transloadit({
 <script src="//releases.transloadit.com/uppy/robodog/v2.1.3/robodog.min.js"></script>
 
 <script>
-window.Robodog.form(selector, {
-  ...options
-})
+  window.Robodog.form(selector, {
+    ...options,
+  });
 </script>
 ```
 
@@ -153,7 +157,10 @@ Make sure to also include the Uppy css file in your `<head>` tag in case you wan
 
 ```html
 <head>
-  <link rel="stylesheet" href="https://releases.transloadit.com/uppy/robodog/v3.0.0-beta.4/robodog.min.css">
+  <link
+    rel="stylesheet"
+    href="https://releases.transloadit.com/uppy/robodog/v3.0.0-beta.4/robodog.min.css"
+  />
 </head>
 ```
 
@@ -165,66 +172,87 @@ Notice how the form is submitted to the inexistant `/uploads` route once all tra
 <html>
   <head>
     <title>Testing Robodog</title>
-    <link rel="stylesheet" href="https://releases.transloadit.com/uppy/robodog/v3.0.0-beta.4/robodog.min.css">
+    <link
+      rel="stylesheet"
+      href="https://releases.transloadit.com/uppy/robodog/v3.0.0-beta.4/robodog.min.css"
+    />
   </head>
   <body>
-    <form id="upload-form" action="/uploads" enctype="multipart/form-data" method="POST">
+    <form
+      id="upload-form"
+      action="/uploads"
+      enctype="multipart/form-data"
+      method="POST"
+    >
       <input type="file" name="my_file" multiple="multiple" />
-      <input type="text" name="album_id" value="my_album_id" placeholder="Album ID" />
-      <input type="text" name="song_id" value="my_song_id" placeholder="Song ID" />
+      <input
+        type="text"
+        name="album_id"
+        value="my_album_id"
+        placeholder="Album ID"
+      />
+      <input
+        type="text"
+        name="song_id"
+        value="my_song_id"
+        placeholder="Song ID"
+      />
       <button type="submit">Upload</button>
     </form>
 
     <script src="https://releases.transloadit.com/uppy/robodog/v3.0.0-beta.4/robodog.min.js"></script>
     <script type="text/javascript">
-    window.Robodog.form('#upload-form', {
-      waitForEncoding: true,
-      waitForMetadata: true,
+      window.Robodog.form("#upload-form", {
+        waitForEncoding: true,
+        waitForMetadata: true,
 
-      modal: true,
+        modal: true,
 
-      alwaysRunAssembly: true,
-      submitOnSuccess: true,
-      autoProceed: true,
+        alwaysRunAssembly: true,
+        submitOnSuccess: true,
+        autoProceed: true,
 
-      fields: ['album_id'],
-      params: {
-        auth: { key: window.YOUR_TRANSLOADIT_AUTH_KEY },
-        steps: {
-          resize_to_75: {
-            robot: "/image/resize",
-            use: ":original",
-            width: 75,
-            height: 75
+        fields: ["album_id"],
+        params: {
+          auth: { key: window.YOUR_TRANSLOADIT_AUTH_KEY },
+          steps: {
+            resize_to_75: {
+              robot: "/image/resize",
+              use: ":original",
+              width: 75,
+              height: 75,
+            },
+          },
+        },
+      })
+        .on("transloadit:assembly-created", (assembly) => {
+          console.log(">>> onStart", assembly);
+        })
+        .on("upload-progress", (bytesIn, totalBytes) => {
+          console.log(">>> onProgress", bytesIn, totalBytes);
+        })
+        .on("transloadit:complete", (assembly) => {
+          console.log(
+            ">> onSuccess: Assembly finished successfully with",
+            assembly.ok
+          );
+        })
+        .on("transloadit:assembly-executing", () => {
+          console.log(">> Uploading finished!");
+        })
+        .on("transloadit:upload", (uploadedFile) => {
+          console.log(">> Upload added", uploadedFile);
+        })
+        .on("transloadit:result", (stepName, result) => {
+          console.log(">> Result added", stepName, result);
+        })
+        .on("error", (error) => {
+          console.log(">> Assembly got an error:", error);
+          if (error.assembly) {
+            console.log(`>> Assembly ID ${error.assembly.assembly_id} failed!`);
+            console.log(error.assembly);
           }
-        }
-      }
-    })
-    .on('transloadit:assembly-created', (assembly) => {
-      console.log(">>> onStart", assembly);
-    })
-    .on('upload-progress', (bytesIn, totalBytes) => {
-      console.log(">>> onProgress", bytesIn, totalBytes);
-    })
-    .on('transloadit:complete', (assembly) => {
-      console.log('>> onSuccess: Assembly finished successfully with', assembly.ok);
-    })
-    .on('transloadit:assembly-executing', () => {
-      console.log('>> Uploading finished!');
-    })
-    .on('transloadit:upload', (uploadedFile) => {
-      console.log('>> Upload added', uploadedFile);
-    })
-    .on('transloadit:result', (stepName, result) => {
-      console.log('>> Result added', stepName, result);
-    })
-    .on('error', (error) => {
-      console.log('>> Assembly got an error:', error);
-      if (error.assembly) {
-        console.log(`>> Assembly ID ${error.assembly.assembly_id} failed!`);
-        console.log(error.assembly);
-      }
-    });
+        });
     </script>
   </body>
 </html>
@@ -232,44 +260,44 @@ Notice how the form is submitted to the inexistant `/uploads` route once all tra
 
 ### Options
 
-| jQuery SDK option | Robodog option |
-|---------------|---------------------------|
-| `service` | `service` |
-| `region` | Not supported, instead set the `service` option to `https://api2-regionname.transloadit.com` |
-| `wait: true` | `waitForEncoding: true` |
-| `requireUploadMetadata: true` | `waitForMetadata: true` |
-| `params` | `params` |
-| `signature` | `signature` |
-| `modal` | `modal` |
-| `autoSubmit` | `submitOnSuccess` |
-| `triggerUploadOnFileSelection` | `autoProceed: true` |
-| `processZeroFiles` | `alwaysRunAssembly` |
-| `maxNumberOfUploadedFiles` | Use [restrictions](#Restrictions) instead. `restrictions.maxNumberOfFiles`. |
-| `locale` | No longer supported, this will be addressed by the `translations` option instead. |
-| `translations` | Not available |
-| `exclude` | Not available |
-| `fields` | `fields`. The CSS selector format is no longer supported. Instead, specify an array of form field names. `['field1']` instead of `'input[name=field1]`. |
-| `debug` | Obsolete, as Transloadit’s backend has improved error reporting. |
+| jQuery SDK option              | Robodog option                                                                                                                                          |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `service`                      | `service`                                                                                                                                               |
+| `region`                       | Not supported, instead set the `service` option to `https://api2-regionname.transloadit.com`                                                            |
+| `wait: true`                   | `waitForEncoding: true`                                                                                                                                 |
+| `requireUploadMetadata: true`  | `waitForMetadata: true`                                                                                                                                 |
+| `params`                       | `params`                                                                                                                                                |
+| `signature`                    | `signature`                                                                                                                                             |
+| `modal`                        | `modal`                                                                                                                                                 |
+| `autoSubmit`                   | `submitOnSuccess`                                                                                                                                       |
+| `triggerUploadOnFileSelection` | `autoProceed: true`                                                                                                                                     |
+| `processZeroFiles`             | `alwaysRunAssembly`                                                                                                                                     |
+| `maxNumberOfUploadedFiles`     | Use [restrictions](#Restrictions) instead. `restrictions.maxNumberOfFiles`.                                                                             |
+| `locale`                       | No longer supported, this will be addressed by the `translations` option instead.                                                                       |
+| `translations`                 | Not available                                                                                                                                           |
+| `exclude`                      | Not available                                                                                                                                           |
+| `fields`                       | `fields`. The CSS selector format is no longer supported. Instead, specify an array of form field names. `['field1']` instead of `'input[name=field1]`. |
+| `debug`                        | Obsolete, as Transloadit’s backend has improved error reporting.                                                                                        |
 
 As for the options that are unavailable:
 
-* `exclude` is intended to exclude certain `<input type="file">` inputs from Transloadit processing. It will likely not be added, but we’ll perhaps have a `include` CSS selector option instead.
-* `debug` will not be added.
+- `exclude` is intended to exclude certain `<input type="file">` inputs from Transloadit processing. It will likely not be added, but we’ll perhaps have a `include` CSS selector option instead.
+- `debug` will not be added.
 
 ### Events
 
-| jQuery SDK option | Robodog Event |
-|---------------|--------------------------|
-| `onStart` | `.on('transloadit:assembly-created', (assembly) => {})` |
-| `onExecuting` | `.on('transloadit:assembly-executing', (assembly) => {})` |
-| `onFileSelect` | `.on('file-added', (file) => {})` |
-| `onProgress` | `.on('progress`, (percentage) => {})) for total upload progress taking all files into account.<br />`.on('upload-progress', (file, progress) => {})` for file-specific upload progress. |
-| `onUpload` | `.on('transloadit:upload', (file) => {}))` |
-| `onResult` | `.on('transloadit:result', (stepName, resultFile) => {}))` |
-| `onCancel` | `.on('transloadit:cancel', (assembly) => {}))`<br />or `.on('file-removed', (file) => {})` for individual files |
-| `onError` | `.on('error', (error) => {})` <br /><br />The error object might contain an `.assembly` property with an Assembly status for errors that happened during the execution of the Assembly. |
-| `onSuccess` | `.on('transloadit:complete', (assembly) => {})` |
-| `onDisconnect` | Not available, use something like [`is-offline`](https://www.npmjs.com/package/is-offline) |
-| `onReconnect` | Not available, use something like [`is-offline`](https://www.npmjs.com/package/is-offline) |
+| jQuery SDK option | Robodog Event                                                                                                                                                                           |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onStart`         | `.on('transloadit:assembly-created', (assembly) => {})`                                                                                                                                 |
+| `onExecuting`     | `.on('transloadit:assembly-executing', (assembly) => {})`                                                                                                                               |
+| `onFileSelect`    | `.on('file-added', (file) => {})`                                                                                                                                                       |
+| `onProgress`      | `.on('progress`, (percentage) => {})) for total upload progress taking all files into account.<br />`.on('upload-progress', (file, progress) => {})` for file-specific upload progress. |
+| `onUpload`        | `.on('transloadit:upload', (file) => {}))`                                                                                                                                              |
+| `onResult`        | `.on('transloadit:result', (stepName, resultFile) => {}))`                                                                                                                              |
+| `onCancel`        | `.on('transloadit:cancel', (assembly) => {}))`<br />or `.on('file-removed', (file) => {})` for individual files                                                                         |
+| `onError`         | `.on('error', (error) => {})` <br /><br />The error object might contain an `.assembly` property with an Assembly status for errors that happened during the execution of the Assembly. |
+| `onSuccess`       | `.on('transloadit:complete', (assembly) => {})`                                                                                                                                         |
+| `onDisconnect`    | Not available, use something like [`is-offline`](https://www.npmjs.com/package/is-offline)                                                                                              |
+| `onReconnect`     | Not available, use something like [`is-offline`](https://www.npmjs.com/package/is-offline)                                                                                              |
 
 [transloadit plugin]: https://uppy.io/docs/transloadit/

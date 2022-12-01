@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 type: docs
-module: "@uppy/react"
+module: "@growthcloud/react"
 permalink: docs/react/
 order: 0
 category: "React"
@@ -11,12 +11,12 @@ Uppy provides [React][] components for the included UI plugins.
 
 ## Installation
 
-All React components are provided through the `@uppy/react` package.
+All React components are provided through the `@growthcloud/react` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/react
+npm install @growthcloud/react
 ```
 
 ## CSS
@@ -31,26 +31,26 @@ Instead of adding a UI plugin to an Uppy instance with `.use()`, the Uppy instan
 All other props are passed as options to the plugin.
 
 ```js
-import React from 'react'
-import Uppy from '@uppy/core'
-import Tus from '@uppy/tus'
-import { DragDrop } from '@uppy/react'
+import React from "react";
+import Uppy from "@growthcloud/core";
+import Tus from "@growthcloud/tus";
+import { DragDrop } from "@growthcloud/react";
 
 const uppy = new Uppy({
-  meta: { type: 'avatar' },
+  meta: { type: "avatar" },
   restrictions: { maxNumberOfFiles: 1 },
   autoProceed: true,
-})
+});
 
-uppy.use(Tus, { endpoint: '/upload' })
+uppy.use(Tus, { endpoint: "/upload" });
 
-uppy.on('complete', (result) => {
-  const url = result.successful[0].uploadURL
+uppy.on("complete", (result) => {
+  const url = result.successful[0].uploadURL;
   store.dispatch({
-    type: 'SET_USER_AVATAR_URL',
+    type: "SET_USER_AVATAR_URL",
     payload: { url },
-  })
-})
+  });
+});
 
 const AvatarPicker = ({ currentAvatar }) => {
   return (
@@ -62,44 +62,34 @@ const AvatarPicker = ({ currentAvatar }) => {
           strings: {
             // Text to show on the droppable area.
             // `%{browse}` is replaced with a link that opens the system file selection dialog.
-            dropHereOr: 'Drop here or %{browse}',
+            dropHereOr: "Drop here or %{browse}",
             // Used as the label for the link that opens the system file selection dialog.
-            browse: 'browse',
+            browse: "browse",
           },
         }}
       />
     </div>
-  )
-}
+  );
+};
 ```
 
 The following plugins are available as React component wrappers (you need to
 install each package separately):
 
-* [\<Dashboard />][<Dashboard />] - renders an inline [`@uppy/dashboard`][].
-* [\<DashboardModal />][<DashboardModal />] - renders a [`@uppy/dashboard`][] modal.
-* [\<DragDrop />][<DragDrop />] - renders a [`@uppy/drag-drop`][] area.
-* [\<ProgressBar />][<ProgressBar />] - renders a [`@uppy/progress-bar`][].
-* [\<StatusBar />][<StatusBar />] - renders a [`@uppy/status-bar`][].
+- [\<Dashboard />][<dashboard />] - renders an inline [`@growthcloud/dashboard`][].
+- [\<DashboardModal />][<dashboardmodal />] - renders a [`@growthcloud/dashboard`][] modal.
+- [\<DragDrop />][<dragdrop />] - renders a [`@growthcloud/drag-drop`][] area.
+- [\<ProgressBar />][<progressbar />] - renders a [`@growthcloud/progress-bar`][].
+- [\<StatusBar />][<statusbar />] - renders a [`@growthcloud/status-bar`][].
 
-[React]: https://facebook.github.io/react
-
-[Preact]: https://preactjs.com/
-
-[<Dashboard />]: /docs/react/dashboard
-
-[<DragDrop />]: /docs/react/dragdrop
-
-[<ProgressBar />]: /docs/react/progress-bar
-
-[<StatusBar />]: /docs/react/status-bar
-
-[<DashboardModal />]: /docs/react/dashboard-modal
-
-[`@uppy/dashboard`]: /docs/dashboard
-
-[`@uppy/drag-drop`]: /docs/drag-drop
-
-[`@uppy/progress-bar`]: /docs/progress-bar
-
-[`@uppy/status-bar`]: /docs/status-bar
+[react]: https://facebook.github.io/react
+[preact]: https://preactjs.com/
+[<dashboard />]: /docs/react/dashboard
+[<dragdrop />]: /docs/react/dragdrop
+[<progressbar />]: /docs/react/progress-bar
+[<statusbar />]: /docs/react/status-bar
+[<dashboardmodal />]: /docs/react/dashboard-modal
+[`@growthcloud/dashboard`]: /docs/dashboard
+[`@growthcloud/drag-drop`]: /docs/drag-drop
+[`@growthcloud/progress-bar`]: /docs/progress-bar
+[`@growthcloud/status-bar`]: /docs/status-bar

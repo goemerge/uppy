@@ -1,6 +1,6 @@
 # Uppy + Companion + Custom Provider Example
 
-This example uses @uppy/companion with a dummy custom provider.
+This example uses @growthcloud/companion with a dummy custom provider.
 This serves as an illustration on how integrating custom providers would work
 
 ## Run it
@@ -21,5 +21,5 @@ To run the example, from the root directory of this repo, run the following comm
 ```sh
 corepack yarn install
 corepack yarn build
-corepack yarn workspace @uppy-example/custom-provider start
+corepack yarn workspace @growthcloud-example/custom-provider start
 ```

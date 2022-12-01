@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@uppy-dev/build",
+  "name": "@growthcloud-dev/build",
   "version": "0.0.0",
   "description": "Extensible JavaScript file upload widget with support for drag&drop, resumable uploads, previews, restrictions, file processing/encoding, remote providers like Instagram, Dropbox, Google Drive, S3 and more :dog:",
   "lint-staged": {
@@ -14,7 +14,7 @@
   },
   "remarkConfig": {
     "plugins": [
-      "@uppy-dev/remark-lint-uppy"
+      "@growthcloud-dev/remark-lint-uppy"
     ]
   },
   "pre-commit": "lint:staged",
@@ -26,9 +26,9 @@
   "packageManager": "yarn@3.2.2+sha224.634d0331703700cabfa9d9389835bd8f7426b0207ed6b74d8d34c81e",
   "workspaces": [
     "examples/*",
-    "packages/@uppy/*",
-    "packages/@uppy/angular/projects/uppy/*",
-    "packages/uppy",
+    "packages/@growthcloud/*",
+    "packages/@growthcloud/angular/projects/uppy/*",
+    "packages/growthcloud",
     "private/*",
     "test/endtoend",
     "website",
@@ -46,12 +46,12 @@
     "@babel/preset-env": "^7.14.7",
     "@babel/register": "^7.10.5",
     "@babel/types": "^7.17.0",
+    "@growthcloud-dev/remark-lint-uppy": "workspace:*",
     "@parcel/transformer-vue": "2.7.0",
     "@types/jasmine": "file:./private/@types/jasmine",
     "@types/jasminewd2": "file:./private/@types/jasmine",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
-    "@uppy-dev/remark-lint-uppy": "workspace:*",
     "adm-zip": "^0.5.5",
     "autoprefixer": "^10.2.6",
     "aws-sdk": "^2.1038.0",
@@ -109,25 +109,25 @@
   },
   "scripts": {
     "build:bundle": "yarn node ./bin/build-bundle.mjs",
-    "build:clean": "rm -rf packages/*/lib packages/@uppy/*/lib packages/*/dist packages/@uppy/*/dist",
-    "build:companion": "yarn workspace @uppy/companion build",
+    "build:clean": "rm -rf packages/*/lib packages/@growthcloud/*/lib packages/*/dist packages/@growthcloud/*/dist",
+    "build:companion": "yarn workspace @growthcloud/companion build",
     "build:css": "yarn node ./bin/build-css.js",
-    "build:svelte": "yarn workspace @uppy/svelte build",
+    "build:svelte": "yarn workspace @growthcloud/svelte build",
     "build:angular": "yarn workspace angular build:release",
     "build:js": "npm-run-all build:lib build:companion build:locale-pack build:svelte build:angular build:bundle",
     "build:lib": "yarn node ./bin/build-lib.js",
-    "build:locale-pack": "yarn workspace @uppy-dev/locale-pack build && eslint packages/@uppy/locales/src/en_US.js --fix && yarn workspace @uppy-dev/locale-pack test unused",
+    "build:locale-pack": "yarn workspace @growthcloud-dev/locale-pack build && eslint packages/@growthcloud/locales/src/en_US.js --fix && yarn workspace @growthcloud-dev/locale-pack test unused",
     "build": "npm-run-all --parallel build:js build:css --serial size",
     "contributors:save": "yarn node ./bin/update-contributors.mjs",
     "dev:with-companion": "npm-run-all --parallel start:companion dev",
-    "dev": "yarn workspace @uppy-dev/dev dev",
+    "dev": "yarn workspace @growthcloud-dev/dev dev",
     "lint:fix": "yarn run lint -- --fix",
     "lint:markdown": "remark -f -q . -i .remarkignore",
     "lint:staged": "lint-staged",
     "lint:css": "stylelint ./packages/**/*.scss",
     "lint:css:fix": "stylelint ./packages/**/*.scss --fix",
     "lint": "eslint . --cache",
-    "release": "PACKAGES=$(yarn workspaces list --json) yarn workspace @uppy-dev/release interactive",
+    "release": "PACKAGES=$(yarn workspaces list --json) yarn workspace @growthcloud-dev/release interactive",
     "size": "echo 'JS Bundle mingz:' && cat ./packages/uppy/dist/uppy.min.js | gzip | wc -c && echo 'CSS Bundle mingz:' && cat ./packages/uppy/dist/uppy.min.css | gzip | wc -c",
     "start:companion": "bash bin/companion.sh",
     "start": "npm-run-all --parallel watch start:companion web:start",
@@ -138,20 +138,20 @@
     "e2e:cypress": "yarn workspace e2e cypress:open",
     "e2e:headless": "yarn workspace e2e cypress:headless",
     "e2e:generate": "yarn workspace e2e generate-test",
-    "test:companion": "yarn workspace @uppy/companion test",
-    "test:companion:watch": "yarn workspace @uppy/companion test --watch",
+    "test:companion": "yarn workspace @growthcloud/companion test",
+    "test:companion:watch": "yarn workspace @growthcloud/companion test --watch",
     "test:locale-packs": "yarn locale-packs:unused && yarn locale-packs:warnings",
-    "test:locale-packs:unused": "yarn workspace @uppy-dev/locale-pack test unused",
-    "test:locale-packs:warnings": "yarn workspace @uppy-dev/locale-pack test warnings",
-    "test:type": "yarn workspaces foreach -piv --include '@uppy/*' --exclude '@uppy/{angular,react-native,locales,companion,provider-views,robodog,svelte}' exec tsd",
+    "test:locale-packs:unused": "yarn workspace @growthcloud-dev/locale-pack test unused",
+    "test:locale-packs:warnings": "yarn workspace @growthcloud-dev/locale-pack test warnings",
+    "test:type": "yarn workspaces foreach -piv --include '@growthcloud/*' --exclude '@growthcloud/{angular,react-native,locales,companion,provider-views,robodog,svelte}' exec tsd",
     "test:unit": "yarn run build:lib && NODE_OPTIONS=--experimental-vm-modules jest --env jsdom",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --env jsdom --watch --no-coverage",
     "test": "npm-run-all lint test:locale-packs:unused test:unit test:type test:companion",
     "uploadcdn": "yarn node ./bin/upload-to-cdn.js",
     "version": "yarn node ./bin/after-version-bump.js",
-    "watch:css": "onchange 'packages/{@uppy/,}*/src/*.scss' --initial --verbose -- yarn run build:css",
-    "watch:js:bundle": "onchange 'packages/{@uppy/,}*/src/**/*.js' --initial --verbose -- yarn run build:bundle",
-    "watch:js:lib": "onchange 'packages/{@uppy/,}*/src/**/*.js' --initial --verbose -- yarn run build:lib",
+    "watch:css": "onchange 'packages/{@growthcloud/,}*/src/*.scss' --initial --verbose -- yarn run build:css",
+    "watch:js:bundle": "onchange 'packages/{@growthcloud/,}*/src/**/*.js' --initial --verbose -- yarn run build:bundle",
+    "watch:js:lib": "onchange 'packages/{@growthcloud/,}*/src/**/*.js' --initial --verbose -- yarn run build:lib",
     "watch:js": "npm-run-all --parallel watch:js:bundle watch:js:lib",
     "watch": "npm-run-all --parallel watch:css watch:js",
     "web:build-examples": "cd website && node build-examples.js",
@@ -177,7 +177,7 @@
       "**/packages/**/*.test.js"
     ],
     "testPathIgnorePatterns": [
-      "/packages/@uppy/companion/"
+      "/packages/@growthcloud/companion/"
     ]
   },
   "resolutions": {

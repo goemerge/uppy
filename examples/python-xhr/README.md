@@ -1,6 +1,6 @@
 # Uppy + Python Example
 
-This example uses a Python Flask server and `@uppy/xhr-upload` to upload files to the local file system.
+This example uses a Python Flask server and `@growthcloud/xhr-upload` to upload files to the local file system.
 
 ## Run it
 
@@ -16,11 +16,11 @@ That will also install the npm dependencies for this example.
 Additionally, this example uses python dependencies. Move into this directory, and install them using pip:
 
 ```sh
-corepack yarn workspace @uppy-example/python-xhr installPythonDeps
+corepack yarn workspace @growthcloud-example/python-xhr installPythonDeps
 ```
 
 Then, again in the **repository root**, start this example by doing:
 
 ```sh
-corepack yarn workspace @uppy-example/python-xhr start
+corepack yarn workspace @growthcloud-example/python-xhr start
 ```

@@ -1,18 +1,18 @@
-import Transloadit, { COMPANION_URL } from '@uppy/transloadit'
-import Uppy from '@uppy/core'
-import Form from '@uppy/form'
-import Dashboard from '@uppy/dashboard'
-import RemoteSources from '@uppy/remote-sources'
-import ImageEditor from '@uppy/image-editor'
-import Webcam from '@uppy/webcam'
-import ProgressBar from '@uppy/progress-bar'
+import Transloadit, { COMPANION_URL } from "@growthcloud/transloadit";
+import Uppy from "@growthcloud/core";
+import Form from "@growthcloud/form";
+import Dashboard from "@growthcloud/dashboard";
+import RemoteSources from "@growthcloud/remote-sources";
+import ImageEditor from "@growthcloud/image-editor";
+import Webcam from "@growthcloud/webcam";
+import ProgressBar from "@growthcloud/progress-bar";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
-import '@uppy/image-editor/dist/style.css'
-import '@uppy/progress-bar/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
+import "@growthcloud/image-editor/dist/style.css";
+import "@growthcloud/progress-bar/dist/style.css";
 
-const TRANSLOADIT_KEY = '35c1aed03f5011e982b6afe82599b6a0'
+const TRANSLOADIT_KEY = "35c1aed03f5011e982b6afe82599b6a0";
 // A trivial template that resizes images, just for example purposes.
 //
 // "steps": {
@@ -25,7 +25,7 @@ const TRANSLOADIT_KEY = '35c1aed03f5011e982b6afe82599b6a0'
 //     "imagemagick_stack": "v1.0.0"
 //   }
 // }
-const TEMPLATE_ID = 'bbc273f69e0c4694a5a9d1b587abc1bc'
+const TEMPLATE_ID = "bbc273f69e0c4694a5a9d1b587abc1bc";
 
 /**
  * Form
@@ -35,18 +35,18 @@ const formUppy = new Uppy({
   debug: true,
   autoProceed: true,
   restrictions: {
-    allowedFileTypes: ['.png'],
+    allowedFileTypes: [".png"],
   },
 })
   .use(Dashboard, {
-    trigger: '#uppy-select-files',
+    trigger: "#uppy-select-files",
     closeAfterFinish: true,
-    note: 'Only PNG files please!',
+    note: "Only PNG files please!",
   })
   .use(RemoteSources, { companionUrl: COMPANION_URL })
   .use(Form, {
-    target: '#test-form',
-    fields: ['message'],
+    target: "#test-form",
+    fields: ["message"],
     // submitOnSuccess: true,
     addResultToForm: true,
   })
@@ -56,26 +56,26 @@ const formUppy = new Uppy({
       auth: { key: TRANSLOADIT_KEY },
       template_id: TEMPLATE_ID,
     },
-  })
+  });
 
-formUppy.on('error', (err) => {
-  document.querySelector('#test-form .error')
-    .textContent = err.message
-})
+formUppy.on("error", (err) => {
+  document.querySelector("#test-form .error").textContent = err.message;
+});
 
-formUppy.on('upload-error', (file, err) => {
-  document.querySelector('#test-form .error')
-    .textContent = err.message
-})
+formUppy.on("upload-error", (file, err) => {
+  document.querySelector("#test-form .error").textContent = err.message;
+});
 
-formUppy.on('complete', ({ transloadit }) => {
-  const btn = document.getElementById('uppy-select-files')
-  btn.hidden = true
-  const selectedFiles = document.getElementById('uppy-form-selected-files')
-  selectedFiles.textContent = `selected files: ${Object.keys(transloadit[0].results).length}`
-})
+formUppy.on("complete", ({ transloadit }) => {
+  const btn = document.getElementById("uppy-select-files");
+  btn.hidden = true;
+  const selectedFiles = document.getElementById("uppy-form-selected-files");
+  selectedFiles.textContent = `selected files: ${
+    Object.keys(transloadit[0].results).length
+  }`;
+});
 
-window.formUppy = formUppy
+window.formUppy = formUppy;
 
 /**
  * Form with Dashboard
@@ -85,19 +85,19 @@ const formUppyWithDashboard = new Uppy({
   debug: true,
   autoProceed: false,
   restrictions: {
-    allowedFileTypes: ['.png'],
+    allowedFileTypes: [".png"],
   },
 })
   .use(Dashboard, {
     inline: true,
-    target: '#dashboard-form .dashboard',
-    note: 'Only PNG files please!',
+    target: "#dashboard-form .dashboard",
+    note: "Only PNG files please!",
     hideUploadButton: true,
   })
   .use(RemoteSources, { companionUrl: COMPANION_URL })
   .use(Form, {
-    target: '#dashboard-form',
-    fields: ['message'],
+    target: "#dashboard-form",
+    fields: ["message"],
     triggerUploadOnSubmit: true,
     submitOnSuccess: true,
     addResultToForm: true,
@@ -108,9 +108,9 @@ const formUppyWithDashboard = new Uppy({
       auth: { key: TRANSLOADIT_KEY },
       template_id: TEMPLATE_ID,
     },
-  })
+  });
 
-window.formUppyWithDashboard = formUppyWithDashboard
+window.formUppyWithDashboard = formUppyWithDashboard;
 
 /**
  * Dashboard
@@ -120,13 +120,13 @@ const dashboard = new Uppy({
   debug: true,
   autoProceed: false,
   restrictions: {
-    allowedFileTypes: ['.png'],
+    allowedFileTypes: [".png"],
   },
 })
   .use(Dashboard, {
     inline: true,
-    target: '#dashboard',
-    note: 'Only PNG files please!',
+    target: "#dashboard",
+    note: "Only PNG files please!",
   })
   .use(RemoteSources, { companionUrl: COMPANION_URL })
   .use(Webcam, { target: Dashboard })
@@ -137,9 +137,9 @@ const dashboard = new Uppy({
       auth: { key: TRANSLOADIT_KEY },
       template_id: TEMPLATE_ID,
     },
-  })
+  });
 
-window.dashboard = dashboard
+window.dashboard = dashboard;
 
 // /**
 //  * Dashboard Modal
@@ -159,23 +159,23 @@ const dashboardModal = new Uppy({
       auth: { key: TRANSLOADIT_KEY },
       template_id: TEMPLATE_ID,
     },
-  })
+  });
 
-dashboardModal.on('complete', ({ transloadit, successful, failed }) => {
+dashboardModal.on("complete", ({ transloadit, successful, failed }) => {
   if (failed?.length !== 0) {
     // eslint-disable-next-line no-console
-    console.error('it failed', failed)
+    console.error("it failed", failed);
   } else {
     // eslint-disable-next-line no-console
-    console.log('success', { transloadit, successful })
+    console.log("success", { transloadit, successful });
   }
-})
+});
 
-function openModal () {
-  dashboardModal.getPlugin('Dashboard').openModal()
+function openModal() {
+  dashboardModal.getPlugin("Dashboard").openModal();
 }
 
-window.openModal = openModal
+window.openModal = openModal;
 
 // /**
 //  * uppy.upload (files come from input[type=file])
@@ -184,7 +184,7 @@ window.openModal = openModal
 const uppyWithoutUI = new Uppy({
   debug: true,
   restrictions: {
-    allowedFileTypes: ['.png'],
+    allowedFileTypes: [".png"],
   },
 })
   .use(Transloadit, {
@@ -194,29 +194,29 @@ const uppyWithoutUI = new Uppy({
       template_id: TEMPLATE_ID,
     },
   })
-  .use(ProgressBar, { target: '#upload-progress' })
+  .use(ProgressBar, { target: "#upload-progress" });
 
 window.doUpload = (event) => {
-  const resultEl = document.querySelector('#upload-result')
-  const errorEl = document.querySelector('#upload-error')
+  const resultEl = document.querySelector("#upload-result");
+  const errorEl = document.querySelector("#upload-error");
 
-  uppyWithoutUI.addFiles(event.target.files)
-  uppyWithoutUI.upload()
+  uppyWithoutUI.addFiles(event.target.files);
+  uppyWithoutUI.upload();
 
-  uppyWithoutUI.on('complete', ({ transloadit }) => {
-    resultEl.classList.remove('hidden')
-    errorEl.classList.add('hidden')
-    resultEl.textContent = JSON.stringify(transloadit[0].results, null, 2)
+  uppyWithoutUI.on("complete", ({ transloadit }) => {
+    resultEl.classList.remove("hidden");
+    errorEl.classList.add("hidden");
+    resultEl.textContent = JSON.stringify(transloadit[0].results, null, 2);
 
-    const resizedUrl = transloadit[0].results['resize'][0]['ssl_url']
-    const img = document.createElement('img')
-    img.src = resizedUrl
-    document.getElementById('upload-result-image').appendChild(img)
-  })
+    const resizedUrl = transloadit[0].results["resize"][0]["ssl_url"];
+    const img = document.createElement("img");
+    img.src = resizedUrl;
+    document.getElementById("upload-result-image").appendChild(img);
+  });
 
-  uppyWithoutUI.on('error', (err) => {
-    resultEl.classList.add('hidden')
-    errorEl.classList.remove('hidden')
-    errorEl.textContent = err.message
-  })
-}
+  uppyWithoutUI.on("error", (err) => {
+    resultEl.classList.add("hidden");
+    errorEl.classList.remove("hidden");
+    errorEl.textContent = err.message;
+  });
+};

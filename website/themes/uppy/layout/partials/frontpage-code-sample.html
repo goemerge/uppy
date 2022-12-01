@@ -1,12 +1,31 @@
 <!--
 You can `yarn run web:inject-frontpagecodesample` to render this code snippet and
 save it as a layout partial
---><html><head></head><body><figure class="highlight bash"><table><tbody><tr><td class="code"><pre>$ <span class="token function">npm</span> <span class="token function">install</span> @uppy/core @uppy/dashboard @uppy/instagram @uppy/tus</pre></td></tr></tbody></table></figure>
+-->
+<html>
+  <head></head>
+  <body>
+    <figure class="highlight bash">
+      <table>
+        <tbody>
+          <tr>
+            <td class="code">
+              <pre>$ <span class="token function">npm</span> <span class="token function">install</span> @growthcloud/core @growthcloud/dashboard @growthcloud/instagram @growthcloud/tus</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
 
-<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Uppy</span></span> <span class="token keyword module">from</span> <span class="token string">'@uppy/core'</span>
-<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Dashboard</span></span> <span class="token keyword module">from</span> <span class="token string">'@uppy/dashboard'</span>
-<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Instagram</span></span> <span class="token keyword module">from</span> <span class="token string">'@uppy/instagram'</span>
-<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Tus</span></span> <span class="token keyword module">from</span> <span class="token string">'@uppy/tus'</span>
+    <figure class="highlight js">
+      <table>
+        <tbody>
+          <tr>
+            <td class="code">
+              <pre><span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Uppy</span></span> <span class="token keyword module">from</span> <span class="token string">'@growthcloud/core'</span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Dashboard</span></span> <span class="token keyword module">from</span> <span class="token string">'@growthcloud/dashboard'</span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Instagram</span></span> <span class="token keyword module">from</span> <span class="token string">'@growthcloud/instagram'</span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Tus</span></span> <span class="token keyword module">from</span> <span class="token string">'@growthcloud/tus'</span>
 
 <span class="token function"><span class="token maybe-class-name">Uppy</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token method function property-access">use</span><span class="token punctuation">(</span><span class="token maybe-class-name">Dashboard</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -20,23 +39,31 @@ save it as a layout partial
   <span class="token punctuation">.</span><span class="token method function property-access">use</span><span class="token punctuation">(</span><span class="token maybe-class-name">Tus</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> endpoint<span class="token operator">:</span> <span class="token string">'https://tusd.tusdemo.net/files/'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token method function property-access">on</span><span class="token punctuation">(</span><span class="token string">'complete'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'Upload result:'</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></td></tr></tbody></table></figure>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></body></html>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+    <script>
+      document.querySelectorAll(".github-emoji").forEach((el) => {
+        if (!el.dataset.src) {
+          return;
+        }
+        const img = document.createElement("img");
+        img.style = "display:none !important;";
+        img.src = el.dataset.src;
+        img.addEventListener("error", () => {
+          img.remove();
+          el.style.color = "inherit";
+          el.style.backgroundImage = "none";
+          el.style.background = "none";
+        });
+        img.addEventListener("load", () => {
+          img.remove();
+        });
+        document.body.appendChild(img);
+      });
+    </script>
+  </body>
+</html>

@@ -2,60 +2,60 @@
 type: docs
 order: 2
 title: "Image Editor"
-module: "@uppy/image-editor"
+module: "@growthcloud/image-editor"
 permalink: docs/image-editor/
 category: "Miscellaneous"
 tagline: "allows users to crop, rotate, zoom and flip images that are added to Uppy"
 ---
 
-`@uppy/image-editor` allows users to crop, rotate, zoom and flip images that are added to Uppy.
+`@growthcloud/image-editor` allows users to crop, rotate, zoom and flip images that are added to Uppy.
 
 Designed to be used with the Dashboard UI (can in theory work without it).
 
 ![Screenshor of the Image Editor plugin UI in Dashboard](https://user-images.githubusercontent.com/1199054/87208710-654db400-c307-11ea-9471-6e3c6582d2a5.png)
 
 ```js
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import ImageEditor from '@uppy/image-editor'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import ImageEditor from "@growthcloud/image-editor";
 
-const uppy = new Uppy()
-uppy.use(Dashboard)
+const uppy = new Uppy();
+uppy.use(Dashboard);
 uppy.use(ImageEditor, {
   target: Dashboard,
   quality: 0.8,
-})
+});
 ```
 
 ## Installation
 
-This plugin is published as the `@uppy/image-editor` package.
+This plugin is published as the `@growthcloud/image-editor` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/image-editor
+npm install @growthcloud/image-editor
 ```
 
-The `@uppy/image-editor` plugin is in beta and is not yet available in the [CDN package](/docs/#With-a-script-tag).
+The `@growthcloud/image-editor` plugin is in beta and is not yet available in the [CDN package](/docs/#With-a-script-tag).
 
 ## CSS
 
-The `@Uppy/image-editor` plugin requires the following CSS for styling:
+The `@growthcloud/image-editor` plugin requires the following CSS for styling:
 
 ```js
-import '@uppy/image-editor/dist/style.css'
+import "@growthcloud/image-editor/dist/style.css";
 ```
 
-A minified version is also available as `style.min.css` at the same path.  Include this import after your import of the core stylesheet and the dashboard stylesheet.
+A minified version is also available as `style.min.css` at the same path. Include this import after your import of the core stylesheet and the dashboard stylesheet.
 
 ## Options
 
-The `@uppy/image-editor` plugin has the following configurable options:
+The `@growthcloud/image-editor` plugin has the following configurable options:
 
 ```js
 uppy.use(ImageEditor, {
-  id: 'ImageEditor',
+  id: "ImageEditor",
   quality: 0.8,
   cropperOptions: {
     viewMode: 1,
@@ -75,7 +75,7 @@ uppy.use(ImageEditor, {
     cropWidescreen: true,
     cropWidescreenVertical: true,
   },
-})
+});
 ```
 
 ### `id: 'ImageEditor'`
@@ -104,9 +104,9 @@ Image Editor actions buttons, which will be shown. If you you’d like to hide a
 Emitted when `selectFile(file)` is called.
 
 ```js
-uppy.on('file-editor:start', (file) => {
-  console.log(file)
-})
+uppy.on("file-editor:start", (file) => {
+  console.log(file);
+});
 ```
 
 ### file-editor:complete
@@ -114,9 +114,9 @@ uppy.on('file-editor:start', (file) => {
 Emitted after `save(blob)` is called.
 
 ```js
-uppy.on('file-editor:complete', (updatedFile) => {
-  console.log(updatedFile)
-})
+uppy.on("file-editor:complete", (updatedFile) => {
+  console.log(updatedFile);
+});
 ```
 
 ### file-editor:cancel
@@ -124,9 +124,9 @@ uppy.on('file-editor:complete', (updatedFile) => {
 Emitted when `uninstall` is called or when the current image editing changes are discarded.
 
 ```js
-uppy.on('file-editor:cancel', (file) => {
-  console.log(file)
-})
+uppy.on("file-editor:cancel", (file) => {
+  console.log(file);
+});
 ```
 
 ### `locale: {}`
@@ -134,14 +134,14 @@ uppy.on('file-editor:cancel', (file) => {
 ```js
 export default {
   strings: {
-    revert: 'Revert',
-    rotate: 'Rotate',
-    zoomIn: 'Zoom in',
-    zoomOut: 'Zoom out',
-    flipHorizontal: 'Flip horizontal',
-    aspectRatioSquare: 'Crop square',
-    aspectRatioLandscape: 'Crop landscape (16:9)',
-    aspectRatioPortrait: 'Crop portrait (9:16)',
+    revert: "Revert",
+    rotate: "Rotate",
+    zoomIn: "Zoom in",
+    zoomOut: "Zoom out",
+    flipHorizontal: "Flip horizontal",
+    aspectRatioSquare: "Crop square",
+    aspectRatioLandscape: "Crop landscape (16:9)",
+    aspectRatioPortrait: "Crop portrait (9:16)",
   },
-}
+};
 ```

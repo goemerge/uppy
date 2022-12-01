@@ -3,40 +3,40 @@ type: docs
 order: 11
 title: "Dropbox"
 menu_prefix: "<span title='Requires Companion'>ⓒ </span>"
-module: "@uppy/dropbox"
+module: "@growthcloud/dropbox"
 permalink: docs/dropbox/
 category: "Sources"
 tagline: "import files from Dropbox"
 ---
 
-The `@uppy/dropbox` plugin lets users import files from their Dropbox account.
+The `@growthcloud/dropbox` plugin lets users import files from their Dropbox account.
 
 A Companion instance is required for the Dropbox plugin to work. Companion handles authentication with Dropbox, downloads the files, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
 
 ```js
-import Dropbox from '@uppy/dropbox'
+import Dropbox from "@growthcloud/dropbox";
 
 uppy.use(Dropbox, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
 
 ## Installation
 
-This plugin is published as the `@uppy/dropbox` package.
+This plugin is published as the `@growthcloud/dropbox` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/dropbox
+npm install @growthcloud/dropbox
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Dropbox } = Uppy
+const { Dropbox } = Uppy;
 ```
 
 ## Setting Up
@@ -54,19 +54,19 @@ When using the Companion Node.js API, configure these options:
 companion.app({
   providerOptions: {
     dropbox: {
-      key: 'Dropbox API key',
-      secret: 'Dropbox API secret',
+      key: "Dropbox API key",
+      secret: "Dropbox API secret",
     },
   },
-})
+});
 ```
 
 You can create a Dropbox App on the [Dropbox Developers site](https://www.dropbox.com/developers/apps/create).
 
 Things to note:
 
-* Choose the “Dropbox API”, not the business variant.
-* Typically you’ll want “Full Dropbox” access, unless you are absolutely certain that you need the other one.
+- Choose the “Dropbox API”, not the business variant.
+- Typically you’ll want “Full Dropbox” access, unless you are absolutely certain that you need the other one.
 
 You’ll be redirected to the app page. This page lists the app key and app secret, which you should use to configure Companion as shown above.
 
@@ -80,17 +80,17 @@ You can only use the integration with your own account initially—make sure to 
 
 Dashboard plugin is recommended as a container to all Provider plugins, including Dropbox. If you are using Dashboard, it [comes with all the nessesary styles](/docs/dashboard/#CSS) for Dropbox as well.
 
-⚠️ If you are feeling adventurous, and want to use Dropbox plugin separately, without Dashboard, make sure to include `@uppy/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
+⚠️ If you are feeling adventurous, and want to use Dropbox plugin separately, without Dashboard, make sure to include `@growthcloud/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
 
 ## Options
 
-The `@uppy/dropbox` plugin has the following configurable options:
+The `@growthcloud/dropbox` plugin has the following configurable options:
 
 ```js
 uppy.use(Dropbox, {
   target: Dashboard,
-  companionUrl: 'https://companion.uppy.io/',
-})
+  companionUrl: "https://companion.uppy.io/",
+});
 ```
 
 ### `id: 'Dropbox'`
@@ -103,7 +103,7 @@ Title / name shown in the UI, such as Dashboard tabs. It defaults to `'Dropbox'`
 
 ### `target: null`
 
-DOM element, CSS selector, or plugin to mount the Dropbox provider into. This should normally be the [`@uppy/dashboard`](/docs/dashboard) plugin.
+DOM element, CSS selector, or plugin to mount the Dropbox provider into. This should normally be the [`@growthcloud/dashboard`](/docs/dashboard) plugin.
 
 ### `companionUrl: null`
 
@@ -130,7 +130,7 @@ This option correlates to the [RequestCredentials value](https://developer.mozil
 ```js
 export default {
   strings: {
-    pluginNameDropbox: 'Dropbox',
+    pluginNameDropbox: "Dropbox",
   },
-}
+};
 ```

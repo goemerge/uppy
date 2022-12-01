@@ -14,6 +14,7 @@ These instructions are not fit for production but tightening the security is out
 
 - Create new S3 bucket in AWS (e.g. `aws-nodejs`).
 - Add a bucket policy.
+
 ```{
     "Version": "2012-10-17",
     "Statement": [
@@ -30,6 +31,7 @@ These instructions are not fit for production but tightening the security is out
 
 - Make the S3 bucket public.
 - Add CORS configuration.
+
 ```[
     {
         "AllowedHeaders": [
@@ -57,6 +59,7 @@ You may use existing AWS credentials or create a new user in the IAM page.
 - Make sure you setup the AWS credentials properly and write down the Access Key ID and Secret Access Key.
 - You may configure AWS S3 credentials using [environment variables](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/loading-node-credentials-environment.html) or a [credentials file in `~/.aws/credentials`](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html).
 - You will need at least `PutObject` and `PutObjectAcl` permissions.
+
 ```{
     "Version": "2012-10-17",
     "Statement": [
@@ -72,6 +75,7 @@ You may use existing AWS credentials or create a new user in the IAM page.
     ]
 }
 ```
+
 # Install
 
 Download this code or clone repository into a folder and install dependencies:
@@ -92,11 +96,11 @@ PORT=8080
 Start the application:
 
 ```bash
-corepack yarn workspace @uppy-example/aws-nodejs start
+corepack yarn workspace @growthcloud-example/aws-nodejs start
 ```
 
 Dashboard demo should now be available at http://localhost:8080.
 
 You have also a Drag & Drop demo on http://localhost:8080/drag.
 
-*Feel free to check how the demo works and feel free to open an issue.*
+_Feel free to check how the demo works and feel free to open an issue._

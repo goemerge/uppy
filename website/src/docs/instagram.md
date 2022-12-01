@@ -3,22 +3,22 @@ type: docs
 order: 13
 title: "Instagram"
 menu_prefix: "<span title='Requires Companion'>ⓒ </span>"
-module: "@uppy/instagram"
+module: "@growthcloud/instagram"
 permalink: docs/instagram/
 category: "Sources"
 tagline: "import files from Instagram"
 ---
 
-The `@uppy/instagram` plugin lets users import files from their Instagram account.
+The `@growthcloud/instagram` plugin lets users import files from their Instagram account.
 
-A Companion instance is required for the `@uppy/instagram` plugin to work. Companion handles authentication with Instagram, downloads the pictures and videos, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
+A Companion instance is required for the `@growthcloud/instagram` plugin to work. Companion handles authentication with Instagram, downloads the pictures and videos, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
 
 ```js
-import Instagram from '@uppy/instagram'
+import Instagram from "@growthcloud/instagram";
 
 uppy.use(Instagram, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
@@ -27,35 +27,35 @@ uppy.use(Instagram, {
 
 > If you are using the `uppy` package, you do not need to install this plugin manually.
 
-This plugin is published as the `@uppy/instagram` package.
+This plugin is published as the `@growthcloud/instagram` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/instagram
+npm install @growthcloud/instagram
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Instagram } = Uppy
+const { Instagram } = Uppy;
 ```
 
 ## CSS
 
 Dashboard plugin is recommended as a container to all Provider plugins, including Instagram. If you are using Dashboard, it [comes with all the necessary styles](/docs/dashboard/#CSS) for Instagram as well.
 
-⚠️ If you are feeling adventurous, and want to use Instagram plugin separately, without Dashboard, make sure to include `@uppy/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
+⚠️ If you are feeling adventurous, and want to use Instagram plugin separately, without Dashboard, make sure to include `@growthcloud/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
 
 ## Options
 
-The `@uppy/instagram` plugin has the following configurable options:
+The `@growthcloud/instagram` plugin has the following configurable options:
 
 ```js
 uppy.use(Instagram, {
   target: Dashboard,
-  companionUrl: 'https://companion.uppy.io/',
-})
+  companionUrl: "https://companion.uppy.io/",
+});
 ```
 
 ### `id: 'Instagram'`
@@ -68,7 +68,7 @@ Configures the title / name shown in the UI, for instance, on Dashboard tabs. It
 
 ### `target: null`
 
-DOM element, CSS selector, or plugin to mount the Instagram provider into. This should normally be the [`@uppy/dashboard`](/docs/dashboard) plugin.
+DOM element, CSS selector, or plugin to mount the Instagram provider into. This should normally be the [`@growthcloud/dashboard`](/docs/dashboard) plugin.
 
 ### `companionUrl: null`
 
@@ -95,7 +95,7 @@ This option correlates to the [RequestCredentials value](https://developer.mozil
 ```js
 export default {
   strings: {
-    pluginNameInstagram: 'Instagram',
+    pluginNameInstagram: "Instagram",
   },
-}
+};
 ```

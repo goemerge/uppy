@@ -1,6 +1,6 @@
 # Uppy + PHP Example
 
-This example uses PHP server and `@uppy/xhr-upload` to upload files to the local file system.
+This example uses PHP server and `@growthcloud/xhr-upload` to upload files to the local file system.
 
 ## Run it
 
@@ -16,5 +16,5 @@ That will also install the dependencies for this example.
 Then, again in the **repository root**, start this example by doing:
 
 ```sh
-corepack yarn workspace @uppy-example/php-xhr start
+corepack yarn workspace @growthcloud-example/php-xhr start
 ```

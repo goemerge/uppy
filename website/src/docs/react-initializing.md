@@ -1,7 +1,7 @@
 ---
 title: "Initializing Uppy"
 type: docs
-module: "@uppy/react"
+module: "@growthcloud/react"
 permalink: docs/react/initializing/
 alias: docs/react/initializing/
 order: 1
@@ -14,21 +14,20 @@ When using Uppy’s React components, an Uppy instance must be passed in to the 
 
 Functional components are re-run on every render. This could lead to accidentally recreate a fresh Uppy instance every time, causing state to be reset and resources to be wasted.
 
-The `@uppy/react` package provides a hook `useUppy()` that can manage an Uppy instance’s lifetime for you. It will be created when your component is first rendered, and destroyed when your component unmounts.
+The `@growthcloud/react` package provides a hook `useUppy()` that can manage an Uppy instance’s lifetime for you. It will be created when your component is first rendered, and destroyed when your component unmounts.
 
 ```js
-import Uppy from '@uppy/core'
-import React from 'react'
-import Tus from '@uppy/tus'
-import { DashboardModal, useUppy } from '@uppy/react'
+import Uppy from "@growthcloud/core";
+import React from "react";
+import Tus from "@growthcloud/tus";
+import { DashboardModal, useUppy } from "@growthcloud/react";
 
-function MyComponent () {
+function MyComponent() {
   const uppy = useUppy(() => {
-    return new Uppy()
-      .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files' })
-  })
+    return new Uppy().use(Tus, { endpoint: "https://tusd.tusdemo.net/files" });
+  });
 
-  return <DashboardModal uppy={uppy} />
+  return <DashboardModal uppy={uppy} />;
 }
 ```
 
@@ -42,22 +41,21 @@ A common approach is to create an Uppy instance in your React component’s `con
 > Do **NOT** initialize Uppy in a `render()` method!
 
 ```js
-import React from 'react'
-import { DashboardModal } from '@uppy/react'
+import React from "react";
+import { DashboardModal } from "@growthcloud/react";
 
 class MyComponent extends React.Component {
-  constructor (props) {
-    super(props)
-    this.uppy = new Uppy()
-      .use(Transloadit, {})
+  constructor(props) {
+    super(props);
+    this.uppy = new Uppy().use(Transloadit, {});
   }
 
-  componentWillUnmount () {
-    this.uppy.close({ reason: 'unmount' })
+  componentWillUnmount() {
+    this.uppy.close({ reason: "unmount" });
   }
 
-  render () {
-    return <DashboardModal uppy={this.uppy} />
+  render() {
+    return <DashboardModal uppy={this.uppy} />;
   }
 }
 ```

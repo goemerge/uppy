@@ -1,0 +1,58 @@
+{
+  "name": "@growthcloud/react",
+  "description": "React component wrappers around Uppy's official UI plugins.",
+  "version": "3.0.2",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "file uploader",
+    "uppy",
+    "uppy-plugin",
+    "react",
+    "react-components"
+  ],
+  "homepage": "https://uppy.io",
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "dependencies": {
+    "@growthcloud/utils": "workspace:^",
+    "prop-types": "^15.6.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.8",
+    "react": "^18.1.0"
+  },
+  "peerDependencies": {
+    "@growthcloud/core": "workspace:^",
+    "@growthcloud/dashboard": "workspace:^",
+    "@growthcloud/drag-drop": "workspace:^",
+    "@growthcloud/file-input": "workspace:^",
+    "@growthcloud/progress-bar": "workspace:^",
+    "@growthcloud/status-bar": "workspace:^",
+    "react": "^16.0.0 || ^17.0.0 || ^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@growthcloud/dashboard": {
+      "optional": true
+    },
+    "@growthcloud/drag-drop": {
+      "optional": true
+    },
+    "@growthcloud/file-input": {
+      "optional": true
+    },
+    "@growthcloud/progress-bar": {
+      "optional": true
+    },
+    "@growthcloud/status-bar": {
+      "optional": true
+    }
+  }
+}

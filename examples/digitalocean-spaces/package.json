@@ -1,11 +1,11 @@
 {
-  "name": "@uppy-example/digitalocean-spaces",
+  "name": "@growthcloud-example/digitalocean-spaces",
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@uppy/aws-s3": "workspace:*",
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
+    "@growthcloud/aws-s3": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5"
   },

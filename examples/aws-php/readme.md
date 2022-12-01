@@ -17,7 +17,7 @@ This example also uses the AWS PHP SDK.
 To install it, [get composer](https://getcomposer.org) and run `composer update` in this folder.
 
 ```bash
-corepack yarn workspace @uppy-example/aws-php exec "composer update"
+corepack yarn workspace @growthcloud-example/aws-php exec "composer update"
 ```
 
 Configure AWS S3 credentials using [environment variables](https://docs.aws.amazon.com/aws-sdk-php/v3/guide/guide/credentials.html#environment-credentials) or a [credentials file in `~/.aws/credentials`](https://docs.aws.amazon.com/aws-sdk-php/v3/guide/guide/credentials.html#credential-profiles).
@@ -26,7 +26,7 @@ Configure a bucket name and region in the `s3-sign.php` file.
 Then, again in the **repository root**, start this example by doing:
 
 ```bash
-corepack yarn workspace @uppy-example/aws-php start
+corepack yarn workspace @growthcloud-example/aws-php start
 ```
 
 The demo should now be available at http://localhost:8080.

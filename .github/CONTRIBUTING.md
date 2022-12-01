@@ -17,16 +17,15 @@ yarn -v || corepack enable
 yarn install || corepack yarn install
 ```
 
-[Corepack]: https://nodejs.org/api/corepack.html
-
-[Yarn]: https://yarnpkg.com/
+[corepack]: https://nodejs.org/api/corepack.html
+[yarn]: https://yarnpkg.com/
 
 Our website’s examples section is also our playground, please read the [Local Previews](#Local-previews) section to get up and running.
 
 ### Requiring files
 
-* If we are `require()`ing a file from the same subpackage, we can freely use relative imports as long as the required file is under the `src` directory (for example to import `@uppy/dashboard/src/utils/hi.js` from `@uppy/dashboard/src/index.js`, use `require('./utils/hi.js')`).
-* But if we want to `require()` some file from another subpackage - we should use global @uppy requires, and they should always be in the form of `@uppy/:packageName/(lib instead of src)/(same path).js`
+- If we are `require()`ing a file from the same subpackage, we can freely use relative imports as long as the required file is under the `src` directory (for example to import `@growthcloud/dashboard/src/utils/hi.js` from `@growthcloud/dashboard/src/index.js`, use `require('./utils/hi.js')`).
+- But if we want to `require()` some file from another subpackage - we should use global @growthcloud requires, and they should always be in the form of `@growthcloud/:packageName/(lib instead of src)/(same path).js`
 
 ## Tests
 
@@ -86,17 +85,17 @@ This section describes how Authentication works between Companion and Providers.
 
 The following steps describe the actions that take place when a user Authenticates and Uploads from Dropbox through Companion:
 
-* The visitor to a website with Uppy clicks `Connect to Dropbox`.
-* Uppy sends a request to Companion, which in turn sends an OAuth request to Dropbox (Requires that OAuth credentials from Dropbox have been added to Companion).
-* Dropbox asks the visitor to log in, and whether the Website should be allowed to access your files
-* If the visitor agrees, Companion will receive a token from Dropbox, with which we can temporarily download files.
-* Companion encrypts the token with a secret key and sends the encrypted token to Uppy (client)
-* Every time the visitor clicks on a folder in Uppy, it asks Companion for the new list of files, with this question, the token (still encrypted by Companion) is sent along.
-* Companion decrypts the token, requests the list of files from Dropbox and sends it to Uppy.
-* When a file is selected for upload, Companion receives the token again according to this procedure, decrypts it again, and thereby downloads the file from Dropbox.
-* As the bytes arrive, Companion uploads the bytes to the final destination (depending on the configuration: Apache, a Tus server, S3 bucket, etc).
-* Companion reports progress to Uppy, as if it were a local upload.
-* Completed!
+- The visitor to a website with Uppy clicks `Connect to Dropbox`.
+- Uppy sends a request to Companion, which in turn sends an OAuth request to Dropbox (Requires that OAuth credentials from Dropbox have been added to Companion).
+- Dropbox asks the visitor to log in, and whether the Website should be allowed to access your files
+- If the visitor agrees, Companion will receive a token from Dropbox, with which we can temporarily download files.
+- Companion encrypts the token with a secret key and sends the encrypted token to Uppy (client)
+- Every time the visitor clicks on a folder in Uppy, it asks Companion for the new list of files, with this question, the token (still encrypted by Companion) is sent along.
+- Companion decrypts the token, requests the list of files from Dropbox and sends it to Uppy.
+- When a file is selected for upload, Companion receives the token again according to this procedure, decrypts it again, and thereby downloads the file from Dropbox.
+- As the bytes arrive, Companion uploads the bytes to the final destination (depending on the configuration: Apache, a Tus server, S3 bucket, etc).
+- Companion reports progress to Uppy, as if it were a local upload.
+- Completed!
 
 ### Instagram integration
 
@@ -163,16 +162,16 @@ yarn workspace <example-name> start
 
 Releases are managed by GitHub Actions, here’s an overview of the process to release a new Uppy version:
 
-* Run `yarn release` on your local machine.
-* Follow the instructions and select what packages to release. **Warning:** skipping packages results in those changes being “lost”, meaning they won’t be picked up in the changelog automatically next release. Always try to release all.
-* Before committing, check if the generated files look good.
-* When asked to edit the next CHANGELOG, only include changes related to the package(s) you selected for release.
-* Push to the Transloadit repository using the command given by the tool. Do not open a PR yourself, the GitHub Actions will create one and assign you to it.
-* Wait for all the GitHub Actions checks to pass. If one fails, try to figure out why. Do not go ahead without consulting the rest of the team.
-* Review the PR thoroughly, and if everything looks good to you, approve the PR. Do not merge it manually!
-* After the PR is automatically merged, the demos on transloadit.com should also be updated. Check that some things work locally:
-  * the demos in the demo section work (try one that uses an import robot, and one that you need to upload to)
-  * the demos on the homepage work and can import from Google Drive, Instagram, Dropbox, etc.
+- Run `yarn release` on your local machine.
+- Follow the instructions and select what packages to release. **Warning:** skipping packages results in those changes being “lost”, meaning they won’t be picked up in the changelog automatically next release. Always try to release all.
+- Before committing, check if the generated files look good.
+- When asked to edit the next CHANGELOG, only include changes related to the package(s) you selected for release.
+- Push to the Transloadit repository using the command given by the tool. Do not open a PR yourself, the GitHub Actions will create one and assign you to it.
+- Wait for all the GitHub Actions checks to pass. If one fails, try to figure out why. Do not go ahead without consulting the rest of the team.
+- Review the PR thoroughly, and if everything looks good to you, approve the PR. Do not merge it manually!
+- After the PR is automatically merged, the demos on transloadit.com should also be updated. Check that some things work locally:
+  - the demos in the demo section work (try one that uses an import robot, and one that you need to upload to)
+  - the demos on the homepage work and can import from Google Drive, Instagram, Dropbox, etc.
 
 If you don’t have access to the transloadit.com source code ping @arturi or @goto-bus-stop and we’ll pick it up. :sparkles:
 
@@ -188,14 +187,14 @@ Even though bundled in this repo, the website is regarded as a separate project.
 
 1. `yarn install`
 2. `yarn start`
-3. Go to http://localhost:4000. Your changes in `/website` and `/packages/@uppy` will be watched, your browser will refresh as files change.
+3. Go to http://localhost:4000. Your changes in `/website` and `/packages/@growthcloud` will be watched, your browser will refresh as files change.
 
 Then, to work on, for instance, the XHRUpload example, you would edit the following files:
 
 ```bash
-${EDITOR} packages/@uppy/core/src/index.js \
-  packages/@uppy/core/src/Plugin.js \
-  packages/@uppy/xhr-upload/src/index.js \
+${EDITOR} packages/@growthcloud/core/src/index.js \
+  packages/@growthcloud/core/src/Plugin.js \
+  packages/@growthcloud/xhr-upload/src/index.js \
   website/src/examples/xhrupload/app.es6
 ```
 
@@ -217,9 +216,7 @@ To quickly summarize:
 Syntax: `u-[sm-|md-|lg-]<utilityName>`
 
 ```css
-.u-utilityName
-.u-floatLeft
-.u-lg-col6
+.u-utilityName .u-floatLeft .u-lg-col6;
 ```
 
 #### Components
@@ -228,6 +225,7 @@ Syntax: `[<namespace>-]<ComponentName>[-descendentName][--modifierName]`
 
 ```css
 .twt-Button /* Namespaced component */
+/* Namespaced component */
 .MyComponent /* Components pascal cased */
 .Button--default /* Modified button style */
 .Button--large
@@ -237,7 +235,7 @@ Syntax: `[<namespace>-]<ComponentName>[-descendentName][--modifierName]`
 .Tweet-bodyText
 
 .Accordion.is-collapsed /* State of component */
-.Accordion.is-expanded
+.Accordion.is-expanded;
 ```
 
 ### SASS
@@ -268,9 +266,9 @@ Style to the mobile breakpoint with your selectors, then use `min-width` media q
 
 ### Selector, rule ordering
 
-* All selectors are sorted alphabetically and by type.
-* HTML elements go above classes and IDs in a file.
-* Rules are sorted alphabetically.
+- All selectors are sorted alphabetically and by type.
+- HTML elements go above classes and IDs in a file.
+- Rules are sorted alphabetically.
 
 ```scss
 /* BAD */
@@ -308,20 +306,20 @@ h1 {
 
 Before opening a pull request for the new integration, open an issue to discuss said integration with the Uppy team. After discussing the integration, you can get started on it. First off, you need to construct the basic components for your integration. The following components are the current standard:
 
-* `Dashboard`: Inline Dashboard (`inline: true`)
-* `DashboardModal`: Dashboard as a modal
-* `DragDrop`
-* `ProgressBar`
-* `StatusBar`
+- `Dashboard`: Inline Dashboard (`inline: true`)
+- `DashboardModal`: Dashboard as a modal
+- `DragDrop`
+- `ProgressBar`
+- `StatusBar`
 
 All these components should function as references to the normal component. Depending on how the framework you’re using handles references to the DOM, your approach to creating these may be different. For example, in React, you can assign a property of the component to the reference of a component ([see here](https://github.com/transloadit/uppy/blob/425f9ecfbc8bc48ce6b734e4fc14fa60d25daa97/packages/%40uppy/react/src/Dashboard.js#L47-L54)). This may differ in your framework, but from what we’ve found, the concepts are generally pretty similar.
 
 If you’re familiar with React, Vue or soon Svelte, it might be useful to read through the code of those integrations, as they lay out a pretty good structure. After the basic components have been built, here are a few more important tasks to get done:
 
-* Add TypeScript support in some capacity (if possible)
-* Write documentation
-* Add an example
-* Configuring the build system
+- Add TypeScript support in some capacity (if possible)
+- Write documentation
+- Add an example
+- Configuring the build system
 
 ### Common issues
 
@@ -333,17 +331,17 @@ Your `package.json` should resemble something like this:
 
 ```json
 {
-  "name": "@uppy/framework",
+  "name": "@growthcloud/framework",
   "dependencies": {
-    "@uppy/dashboard": "workspace:^",
-    "@uppy/drag-drop": "workspace:^",
-    "@uppy/progress-bar": "workspace:^",
-    "@uppy/status-bar": "workspace:^",
-    "@uppy/utils": "workspace:^",
+    "@growthcloud/dashboard": "workspace:^",
+    "@growthcloud/drag-drop": "workspace:^",
+    "@growthcloud/progress-bar": "workspace:^",
+    "@growthcloud/status-bar": "workspace:^",
+    "@growthcloud/utils": "workspace:^",
     "prop-types": "^15.6.1"
   },
   "peerDependencies": {
-    "@uppy/core": "workspace:^"
+    "@growthcloud/core": "workspace:^"
   },
   "publishConfig": {
     "access": "public"
@@ -351,7 +349,7 @@ Your `package.json` should resemble something like this:
 }
 ```
 
-The most important part about this is that `@uppy/core` is a peer dependency. If your framework complains about `@uppy/core` not being resolved, you can also add it as a dev dependency
+The most important part about this is that `@growthcloud/core` is a peer dependency. If your framework complains about `@growthcloud/core` not being resolved, you can also add it as a dev dependency
 
 ### Adding TypeScript Support
 
@@ -361,19 +359,19 @@ This section won’t be too in-depth, because TypeScript depends on your framewo
 
 Generally, documentation for integrations can be broken down into a few pieces that apply to every component, and then documentation for each component. The structure should look something like this:
 
-* Installation
-* Initializing Uppy (may vary depending on how the framework handles reactivity)
-* Usage
-* _For each component_
-  * Loading CSS
-  * Props
+- Installation
+- Initializing Uppy (may vary depending on how the framework handles reactivity)
+- Usage
+- _For each component_
+  - Loading CSS
+  - Props
 
 It may be easier to copy the documentation of earlier integrations and change the parts that need to be changed rather than writing this from scratch. Preferably, keep the documentation to one page. For the front-matter, write something like:
 
 ```markdown
 title: Framework Name
 type: docs
-module: "@uppy/framework"
+module: "@growthcloud/framework"
 order: 0
 category: "Other Integrations"
 ```
@@ -384,7 +382,7 @@ Any change of the documentation that involves a security best practice must subs
 
 ### Adding an example
 
-You can likely use whatever code generation tool for your framework (ex. `create-react-app`) to create this example. Make sure you add the same version of `@uppy/core` to this as your peer dependency required, or you may run into strange issues. Try to include all the components are some of their functionality. [The React example](https://github.com/transloadit/uppy/blob/main/examples/react-example/App.js) is a great... well example of how to do this well.
+You can likely use whatever code generation tool for your framework (ex. `create-react-app`) to create this example. Make sure you add the same version of `@growthcloud/core` to this as your peer dependency required, or you may run into strange issues. Try to include all the components are some of their functionality. [The React example](https://github.com/transloadit/uppy/blob/main/examples/react-example/App.js) is a great... well example of how to do this well.
 
 ### Integrating the build system
 

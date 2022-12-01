@@ -1,48 +1,56 @@
 /* eslint-disable */
-import React from'react'
-import Uppy from'@uppy/core'
-import Tus from'@uppy/tus'
-import GoogleDrive from'@uppy/google-drive'
-import { Dashboard, DashboardModal, DragDrop, ProgressBar, FileInput } from'@uppy/react'
+import React from "react";
+import Uppy from "@growthcloud/core";
+import Tus from "@growthcloud/tus";
+import GoogleDrive from "@growthcloud/google-drive";
+import {
+  Dashboard,
+  DashboardModal,
+  DragDrop,
+  ProgressBar,
+  FileInput,
+} from "@growthcloud/react";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
-import '@uppy/drag-drop/dist/style.css'
-import '@uppy/file-input/dist/style.css'
-import '@uppy/progress-bar/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
+import "@growthcloud/drag-drop/dist/style.css";
+import "@growthcloud/file-input/dist/style.css";
+import "@growthcloud/progress-bar/dist/style.css";
 
 export default class App extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       showInlineDashboard: false,
-      open: false
-    }
+      open: false,
+    };
 
-    this.uppy = new Uppy({ id: 'uppy1', autoProceed: true, debug: true })
-      .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
-      .use(GoogleDrive, { companionUrl: 'https://companion.uppy.io' })
+    this.uppy = new Uppy({ id: "uppy1", autoProceed: true, debug: true })
+      .use(Tus, { endpoint: "https://tusd.tusdemo.net/files/" })
+      .use(GoogleDrive, { companionUrl: "https://companion.uppy.io" });
 
-    this.uppy2 = new Uppy({ id: 'uppy2', autoProceed: false, debug: true })
-      .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+    this.uppy2 = new Uppy({ id: "uppy2", autoProceed: false, debug: true }).use(
+      Tus,
+      { endpoint: "https://tusd.tusdemo.net/files/" }
+    );
 
-    this.handleModalClick = this.handleModalClick.bind(this)
+    this.handleModalClick = this.handleModalClick.bind(this);
   }
 
-  componentWillUnmount () {
-    this.uppy.close({ reason: 'unmount' })
-    this.uppy2.close({ reason: 'unmount' })
+  componentWillUnmount() {
+    this.uppy.close({ reason: "unmount" });
+    this.uppy2.close({ reason: "unmount" });
   }
 
-  handleModalClick () {
+  handleModalClick() {
     this.setState({
-      open: !this.state.open
-    })
+      open: !this.state.open,
+    });
   }
 
-  render () {
-    const { showInlineDashboard } = this.state
+  render() {
+    const { showInlineDashboard } = this.state;
     return (
       <div>
         <h1>React Examples</h1>
@@ -54,8 +62,8 @@ export default class App extends React.Component {
             checked={showInlineDashboard}
             onChange={(event) => {
               this.setState({
-                showInlineDashboard: event.target.checked
-              })
+                showInlineDashboard: event.target.checked,
+              });
             }}
           />
           Show Dashboard
@@ -63,9 +71,9 @@ export default class App extends React.Component {
         {showInlineDashboard && (
           <Dashboard
             uppy={this.uppy}
-            plugins={['GoogleDrive']}
+            plugins={["GoogleDrive"]}
             metaFields={[
-              { id: 'name', name: 'Name', placeholder: 'File name' }
+              { id: "name", name: "Name", placeholder: "File name" },
             ]}
           />
         )}
@@ -73,7 +81,7 @@ export default class App extends React.Component {
         <h2>Modal Dashboard</h2>
         <div>
           <button onClick={this.handleModalClick}>
-            {this.state.open ? 'Close dashboard' : 'Open dashboard'}
+            {this.state.open ? "Close dashboard" : "Open dashboard"}
           </button>
           <DashboardModal
             uppy={this.uppy2}
@@ -88,23 +96,18 @@ export default class App extends React.Component {
           uppy={this.uppy}
           locale={{
             strings: {
-              chooseFile: 'Boop a file',
-              orDragDrop: 'or yoink it here'
-            }
+              chooseFile: "Boop a file",
+              orDragDrop: "or yoink it here",
+            },
           }}
         />
 
         <h2>Progress Bar</h2>
-        <ProgressBar
-          uppy={this.uppy}
-          hideAfterFinish={false}
-        />
+        <ProgressBar uppy={this.uppy} hideAfterFinish={false} />
 
         <h2>File Input</h2>
-        <FileInput
-          uppy={this.uppy}
-        />
+        <FileInput uppy={this.uppy} />
       </div>
-    )
+    );
   }
 }

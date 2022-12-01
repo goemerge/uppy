@@ -20,9 +20,9 @@
   },
   "include": [
     "packages/*/types/index.d.ts",
-    "packages/@uppy/*/types/index.d.ts"
+    "packages/@growthcloud/*/types/index.d.ts"
   ],
   "exclude": [
-    "packages/@uppy/companion"
+    "packages/@growthcloud/companion"
   ]
 }

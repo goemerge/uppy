@@ -2,28 +2,28 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths-ignore:
-      - '**.md'
-      - 'assets/**'
-      - 'e2e/**'
-      - 'examples/**'
-      - 'private/**'
-      - 'website/**'
-      - '.github/**'
-      - '!.github/workflows/ci.yml'
+      - "**.md"
+      - "assets/**"
+      - "e2e/**"
+      - "examples/**"
+      - "private/**"
+      - "website/**"
+      - ".github/**"
+      - "!.github/workflows/ci.yml"
   pull_request:
     # We want all branches so we configure types to be the GH default again
-    types: [ opened, synchronize, reopened ]
+    types: [opened, synchronize, reopened]
     paths-ignore:
-      - '**.md'
-      - 'assets/**'
-      - 'e2e/**'
-      - 'examples/**'
-      - 'private/**'
-      - 'website/**'
-      - '.github/**'
-      - '!.github/workflows/ci.yml'
+      - "**.md"
+      - "assets/**"
+      - "e2e/**"
+      - "examples/**"
+      - "private/**"
+      - "website/**"
+      - ".github/**"
+      - "!.github/workflows/ci.yml"
 
 jobs:
   unit_tests:
@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - name: Install dependencies
-        run: corepack yarn workspaces focus $(corepack yarn workspaces list --json | jq -r .name | awk '/^@uppy-example/{ next } { if ($0!="uppy.io") print $0 }')
+        run: corepack yarn workspaces focus $(corepack yarn workspaces list --json | jq -r .name | awk '/^@growthcloud-example/{ next } { if ($0!="uppy.io") print $0 }')
         env:
           # https://docs.cypress.io/guides/references/advanced-installation#Skipping-installation
           CYPRESS_INSTALL_BINARY: 0
@@ -80,7 +80,7 @@ jobs:
         with:
           node-version: lts/*
       - name: Install dependencies
-        run: corepack yarn workspaces focus $(corepack yarn workspaces list --json | jq -r .name | awk '/^@uppy-example/{ next } { if ($0!="uppy.io") print $0 }')
+        run: corepack yarn workspaces focus $(corepack yarn workspaces list --json | jq -r .name | awk '/^@growthcloud-example/{ next } { if ($0!="uppy.io") print $0 }')
         env:
           # https://docs.cypress.io/guides/references/advanced-installation#Skipping-installation
           CYPRESS_INSTALL_BINARY: 0

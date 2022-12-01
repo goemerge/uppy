@@ -14,38 +14,41 @@ Uppy is flexible and extensible through plugins. But the integration code could 
 
 But, it didn’t come with its own set of new problems:
 
-* It tries to do the exact same, but it looks like a different product.
-* It’s confusing for users whether they want to use Robodog or Uppy directly.
-* Robodog is more ergonomic because it’s limited. When you hit such a limit, you
+- It tries to do the exact same, but it looks like a different product.
+- It’s confusing for users whether they want to use Robodog or Uppy directly.
+- Robodog is more ergonomic because it’s limited. When you hit such a limit, you
   need to refactor everything to Uppy with plugins.
 
-This has now led us to deprecating Robodog and embrace Uppy for its strong suits; modularity and flexibility. At the same time, we also introduced something to take away some repetitive integration code: [`@uppy/remote-sources`](/docs/remote-sources).
+This has now led us to deprecating Robodog and embrace Uppy for its strong suits; modularity and flexibility. At the same time, we also introduced something to take away some repetitive integration code: [`@growthcloud/remote-sources`](/docs/remote-sources).
 
 To mimic the Robodog implementation with all its features, you can use the code snippet below. But chances are Robodog did more than you need so feel free to remove things or go through the [list of plugins](/docs/plugins/) and install and use the ones you need.
 
 You can also checkout how we migrated the Robodog example ourselves in this [commit](https://github.com/transloadit/uppy/commit/089aaed615c77bafaf905e291b6b4e82aaeb2f6f).
 
 ```js
-import Uppy from '@uppy/core'
-import Dashboard from '@uppy/dashboard'
-import RemoteSources from '@uppy/remote-sources'
-import Webcam from '@uppy/webcam'
-import ScreenCapture from '@uppy/screen-capture'
-import GoldenRetriever from '@uppy/golden-retriever'
-import ImageEditor from '@uppy/image-editor'
-import Audio from '@uppy/audio'
-import Transloadit, { COMPANION_URL, COMPANION_ALLOWED_HOSTS } from '@uppy/transloadit'
+import Uppy from "@growthcloud/core";
+import Dashboard from "@growthcloud/dashboard";
+import RemoteSources from "@growthcloud/remote-sources";
+import Webcam from "@growthcloud/webcam";
+import ScreenCapture from "@growthcloud/screen-capture";
+import GoldenRetriever from "@growthcloud/golden-retriever";
+import ImageEditor from "@growthcloud/image-editor";
+import Audio from "@growthcloud/audio";
+import Transloadit, {
+  COMPANION_URL,
+  COMPANION_ALLOWED_HOSTS,
+} from "@growthcloud/transloadit";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
-import '@uppy/audio/dist/style.css'
-import '@uppy/screen-capture/dist/style.css'
-import '@uppy/image-editor/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
+import "@growthcloud/audio/dist/style.css";
+import "@growthcloud/screen-capture/dist/style.css";
+import "@growthcloud/image-editor/dist/style.css";
 
 new Uppy()
   .use(Dashboard, {
     inline: true,
-    target: '#app',
+    target: "#app",
     showProgressDetails: true,
     proudlyDisplayPoweredByUppy: true,
   })
@@ -65,17 +68,17 @@ new Uppy()
   .use(ScreenCapture, { target: Dashboard })
   .use(ImageEditor, { target: Dashboard })
   .use(Transloadit, {
-    service: 'https://api2.transloadit.com',
-    async getAssemblyOptions (file) {
+    service: "https://api2.transloadit.com",
+    async getAssemblyOptions(file) {
       // This is where you configure your auth key, auth secret, and template ID
       // https://uppy.io/docs/transloadit/#getAssemblyOptions-file
       //
       // It is important to set the secret in production:
       // https://transloadit.com/docs/topics/signature-authentication/
-      const response = await fetch('/some-endpoint')
-      return response.json()
+      const response = await fetch("/some-endpoint");
+      return response.json();
     },
-  })
+  });
 ```
 
 ## Migrate from Uppy 2.x to 3.x
@@ -92,7 +95,7 @@ If you are using CommonJS, you might need to add some tooling for everything to 
 
 See the [Robodog migration guide](#Migrate-from-Robodog-to-Uppy-plugins).
 
-### `@uppy/core`
+### `@growthcloud/core`
 
 #### Remove `AggregateError` polyfill.
 
@@ -118,23 +121,26 @@ This method used to return `{ result: false, reason: err.message }`, but that fe
 
 To migrate: check the return value, if it’s defined you have an error, otherwise all went well. Note that the error is `return`’ed, it’s not `throw`’n, so you don’t have to `catch` it.
 
-### `@uppy/transloadit`
+### `@growthcloud/transloadit`
 
 Remove export of `ALLOWED_COMPANION_PATTERN`, `COMPANION`, and `COMPANION_PATTERN` in favor of `COMPANION_URL` and `COMPANION_ALLOWED_HOSTS`. This is to have more intention revealing names, `COMPANION` sounds like the Companion instance, `COMPANION_URL` makes it more clear that it’s a URL.
 
 These are properties can now be imported and used for remote sources plugins when using Transloadit:
 
 ```js
-import { COMPANION_URL, COMPANION_ALLOWED_HOSTS } from '@uppy/transloadit'
+import {
+  COMPANION_URL,
+  COMPANION_ALLOWED_HOSTS,
+} from "@growthcloud/transloadit";
 
 // ...
 uppy.use(Dropbox, {
   companionUrl: COMPANION_URL,
   companionAllowedHosts: COMPANION_ALLOWED_HOSTS,
-})
+});
 ```
 
-### `@uppy/aws-s3-multipart`
+### `@growthcloud/aws-s3-multipart`
 
 #### Make `headers` inside the return value of [`prepareUploadParts`](/docs/aws-s3-multipart/#prepareUploadParts-file-partData) part-indexed too.
 
@@ -148,19 +154,19 @@ It’s internal usage only.
 
 To migrate: use exposed options only.
 
-### `@uppy/tus/`, `@uppy/aws-s3`, `@uppy/xhr-upload`
+### `@growthcloud/tus/`, `@growthcloud/aws-s3`, `@growthcloud/xhr-upload`
 
 Rename `metaFields` option to `allowedMetaFields`. Counter intuitively, `metaFields` is for _filtering_ which `metaFields` to send along with the request, not for adding extra meta fields to a request. As a lot of people were confused by this, and the name overlaps with the [`metaFields` option from Dashboard](/docs/dashboard/#metaFields), we renamed it.
 
 To migrate: use `allowedMetaFields`.
 
-### `@uppy/react`
+### `@growthcloud/react`
 
 #### Uppy dependencies have become peer dependencies
 
-`@uppy/dashboard`, `@uppy/drag-drop`, `@uppy/file-input`, `@uppy/progress-bar`, and `@uppy/status-bar` are now peer dependencies. This means you don’t install all these packages if you only need one.
+`@growthcloud/dashboard`, `@growthcloud/drag-drop`, `@growthcloud/file-input`, `@growthcloud/progress-bar`, and `@growthcloud/status-bar` are now peer dependencies. This means you don’t install all these packages if you only need one.
 
-To migrate: install only the packages you need. If you use the Dashboard component, you need `@uppy/dashboard`, and so onwards.
+To migrate: install only the packages you need. If you use the Dashboard component, you need `@growthcloud/dashboard`, and so onwards.
 
 #### Don’t expose `validProps` on the exported components.
 
@@ -168,25 +174,25 @@ It’s internal usage only.
 
 To migrate: use exposed options only.
 
-### `@uppy/svelte`
+### `@growthcloud/svelte`
 
-`@uppy/dashboard`, `@uppy/drag-drop`, `@uppy/progress-bar`, and `@uppy/status-bar` are now peer dependencies. This means you don’t install all these packages if you only need one.
+`@growthcloud/dashboard`, `@growthcloud/drag-drop`, `@growthcloud/progress-bar`, and `@growthcloud/status-bar` are now peer dependencies. This means you don’t install all these packages if you only need one.
 
-To migrate: install only the packages you need. If you use the Dashboard component, you need `@uppy/dashboard`, and so onwards.
+To migrate: install only the packages you need. If you use the Dashboard component, you need `@growthcloud/dashboard`, and so onwards.
 
-### `@uppy/vue`
+### `@growthcloud/vue`
 
-`@uppy/dashboard`, `@uppy/drag-drop`, `@uppy/file-input`, `@uppy/progress-bar`, and `@uppy/status-bar` are now peer dependencies. This means you don’t install all these packages if you only need one.
+`@growthcloud/dashboard`, `@growthcloud/drag-drop`, `@growthcloud/file-input`, `@growthcloud/progress-bar`, and `@growthcloud/status-bar` are now peer dependencies. This means you don’t install all these packages if you only need one.
 
-To migrate: install only the packages you need. If you use the Dashboard component, you need `@uppy/dashboard`, and so onwards.
+To migrate: install only the packages you need. If you use the Dashboard component, you need `@growthcloud/dashboard`, and so onwards.
 
-### `@uppy/store-redux`
+### `@growthcloud/store-redux`
 
 Remove backwards compatible exports (static properties on `ReduxStore`). Exports, such as `reducer`, used to also be accessible on the `ReduxStore` export. This has now been removed due to the transition to ESM.
 
 To migrate: use named imports.
 
-### `@uppy/thumbnail-generator`
+### `@growthcloud/thumbnail-generator`
 
 Remove `rotateImage`, `protect`, and `canvasToBlob` from the plugin prototype. They are internal usage only.
 
@@ -194,8 +200,8 @@ To migrate: use exposed options only.
 
 ### Known issues
 
-* [`ERESOLVE could not resolve` on npm install](https://github.com/transloadit/uppy/issues/4057).
-* [@uppy/svelte reports a broken dependency with the Vite bundler](https://github.com/transloadit/uppy/issues/4069).
+- [`ERESOLVE could not resolve` on npm install](https://github.com/transloadit/uppy/issues/4057).
+- [@growthcloud/svelte reports a broken dependency with the Vite bundler](https://github.com/transloadit/uppy/issues/4069).
 
 ## Migrate from Companion 3.x to 4.x
 
@@ -211,7 +217,7 @@ provides more flexibility in the future and follows best practices.
 
 ### Removed `searchProviders` wrapper object inside `providerOptions`
 
-To use [`@uppy/unsplash`](/docs/unsplash), you had to configure Unsplash in Companion inside `providerOptions.searchProviders`. This is redundant, Unsplash is a provider as well so we removed the wrapper object.
+To use [`@growthcloud/unsplash`](/docs/unsplash), you had to configure Unsplash in Companion inside `providerOptions.searchProviders`. This is redundant, Unsplash is a provider as well so we removed the wrapper object.
 
 ### Moved the `s3` options out of `providerOptions`
 
@@ -251,27 +257,27 @@ For example: if `{ options: { metrics: true, server: { path: '/companion' }}}`, 
 
 With 2.0, following in the footsteps of Microsoft, we are dropping support for IE11. As a result, we are able to remove all built-in polyfills, and the new bundle size is **25% smaller**! If you want your app to still support older browsers (such as IE11), you may need to add the following polyfills to your bundle:
 
-* [abortcontroller-polyfill](https://github.com/mo/abortcontroller-polyfill)
-* [core-js](https://github.com/zloirock/core-js)
-* [md-gum-polyfill](https://github.com/mozdevs/mediaDevices-getUserMedia-polyfill)
-* [resize-observer-polyfill](https://github.com/que-etc/resize-observer-polyfill)
-* [whatwg-fetch](https://github.com/github/fetch)
+- [abortcontroller-polyfill](https://github.com/mo/abortcontroller-polyfill)
+- [core-js](https://github.com/zloirock/core-js)
+- [md-gum-polyfill](https://github.com/mozdevs/mediaDevices-getUserMedia-polyfill)
+- [resize-observer-polyfill](https://github.com/que-etc/resize-observer-polyfill)
+- [whatwg-fetch](https://github.com/github/fetch)
 
 If you’re using a bundler, you need import these before Uppy:
 
 ```js
-import 'core-js'
-import 'whatwg-fetch'
-import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
+import "core-js";
+import "whatwg-fetch";
+import "abortcontroller-polyfill/dist/polyfill-patch-fetch";
 // Order matters here: AbortController needs fetch, which needs Promise (provided by core-js).
 
-import 'md-gum-polyfill'
-import ResizeObserver from 'resize-observer-polyfill'
+import "md-gum-polyfill";
+import ResizeObserver from "resize-observer-polyfill";
 
-window.ResizeObserver ??= ResizeObserver
+window.ResizeObserver ??= ResizeObserver;
 
-export { default } from '@uppy/core'
-export * from '@uppy/core'
+export { default } from "@growthcloud/core";
+export * from "@growthcloud/core";
 ```
 
 If you’re using Uppy from a CDN, we now provide two bundles: one for up-to-date browsers that do not include polyfills and use modern syntax, and one for legacy browsers. When migrating, be mindful about the types of browsers you want to support:
@@ -281,29 +287,34 @@ If you’re using Uppy from a CDN, we now provide two bundles: one for up-to-dat
 <script src="https://releases.transloadit.com/uppy/v3.3.1/uppy.min.js"></script>
 
 <!-- Legacy browsers (IE11+) -->
-<script nomodule src="https://releases.transloadit.com/uppy/v3.3.1/uppy.legacy.min.js"></script>
-<script type="module">import "https://releases.transloadit.com/uppy/v3.3.1/uppy.min.js";</script>
+<script
+  nomodule
+  src="https://releases.transloadit.com/uppy/v3.3.1/uppy.legacy.min.js"
+></script>
+<script type="module">
+  import "https://releases.transloadit.com/uppy/v3.3.1/uppy.min.js";
+</script>
 ```
 
 Please note that while you may be able to get 2.0 to work in IE11 this way, we do not officially support it anymore.
 
 ### Use `BasePlugin` or `UIPlugin` instead of `Plugin`
 
-[`@uppy/core`][core] used to provide a `Plugin` class for creating plugins. This was used for any official plugin, but also for users who want to create their own custom plugin. But, `Plugin` always came bundled with Preact, even if the plugin itself didn’t add any UI elements.
+[`@growthcloud/core`][core] used to provide a `Plugin` class for creating plugins. This was used for any official plugin, but also for users who want to create their own custom plugin. But, `Plugin` always came bundled with Preact, even if the plugin itself didn’t add any UI elements.
 
 `Plugin` has been replaced with `BasePlugin` and `UIPlugin`. `BasePlugin` is the minimum you need to create a plugin and `UIPlugin` adds Preact for rendering user interfaces.
 
-You can import them from [`@uppy/core`][core]:
+You can import them from [`@growthcloud/core`][core]:
 
 ```js
-import { BasePlugin, UIPlugin } from '@uppy/core'
+import { BasePlugin, UIPlugin } from "@growthcloud/core";
 ```
 
-**Note:** some bundlers will include `UIPlugin` (and thus Preact) if you import from `@uppy/core`. To make sure this does not happen, you can import `Uppy` and `BasePlugin` directly:
+**Note:** some bundlers will include `UIPlugin` (and thus Preact) if you import from `@growthcloud/core`. To make sure this does not happen, you can import `Uppy` and `BasePlugin` directly:
 
 ```js
-import Uppy from '@uppy/core/lib/Uppy.js'
-import BasePlugin from '@uppy/core/lib/BasePlugin.js'
+import Uppy from "@growthcloud/core/lib/Uppy.js";
+import BasePlugin from "@growthcloud/core/lib/BasePlugin.js";
 ```
 
 ### Use the latest Preact for your Uppy plugins
@@ -317,25 +328,25 @@ Titles for plugins used to be set with the `title` property in the plugin option
 Before
 
 ```js
-import Webcam from '@uppy/webcam'
+import Webcam from "@growthcloud/webcam";
 
 uppy.use(Webcam, {
-  title: 'Some title',
-})
+  title: "Some title",
+});
 ```
 
 After
 
 ```js
-import Webcam from '@uppy/webcam'
+import Webcam from "@growthcloud/webcam";
 
 uppy.use(Webcam, {
   locale: {
     strings: {
-      title: 'Some title',
+      title: "Some title",
     },
   },
-})
+});
 ```
 
 ### Initialize Uppy with the `new` keyword
@@ -343,11 +354,11 @@ uppy.use(Webcam, {
 The default export `Uppy` is no longer callable as a function. This means you construct the `Uppy` instance using the `new` keyword.
 
 ```js
-import Uppy from '@uppy/core'
+import Uppy from "@growthcloud/core";
 
-const uppy = new Uppy() // correct.
+const uppy = new Uppy(); // correct.
 
-const otherUppy = Uppy() // incorrect, will throw.
+const otherUppy = Uppy(); // incorrect, will throw.
 ```
 
 ### Rename `allowMultipleUploads` to `allowMultipleUploadBatches`
@@ -361,10 +372,10 @@ We have renamed this to be more intention revealing that this is about uploads, 
 ```js
 const uppy = new Uppy({
   allowMultipleUploadBatches: true,
-})
+});
 ```
 
-### New default limits for [`@uppy/xhr-upload`][xhr] and [`@uppy/tus`][tus]
+### New default limits for [`@growthcloud/xhr-upload`][xhr] and [`@growthcloud/tus`][tus]
 
 The default limit has been changed from `0` to `5`. Setting this to `0` means no limit on concurrent uploads.
 
@@ -374,14 +385,14 @@ You can change the limit on the Tus and XHR plugin options.
 uppy.use(Tus, {
   // ...
   limit: 10,
-})
+});
 ```
 
 ```js
 uppy.use(XHRUpload, {
   // ...
   limit: 10,
-})
+});
 ```
 
 ### TypeScript changes
@@ -389,14 +400,14 @@ uppy.use(XHRUpload, {
 Uppy used to have loose types by default and strict types as an opt-in. The default export was a function that returned the `Uppy` class, and the types came bundled with the default export (`Uppy.SomeType`).
 
 ```ts
-import Uppy from '@uppy/core'
-import Tus from '@uppy/tus'
+import Uppy from "@growthcloud/core";
+import Tus from "@growthcloud/tus";
 
-const uppy = Uppy<Uppy.StrictTypes>()
+const uppy = Uppy<Uppy.StrictTypes>();
 
 uppy.use(Tus, {
   invalidOption: null, // this will make the compilation fail!
-})
+});
 ```
 
 Uppy is now strictly typed by default and loose types have been removed.
@@ -404,11 +415,11 @@ Uppy is now strictly typed by default and loose types have been removed.
 ```ts
 // ...
 
-const uppy = new Uppy()
+const uppy = new Uppy();
 
 uppy.use(Tus, {
   invalidOption: null, // this will make the compilation fail!
-})
+});
 ```
 
 Uppy types are now individual exports and should be imported separately.
@@ -416,63 +427,63 @@ Uppy types are now individual exports and should be imported separately.
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 
 ```ts
-import type { PluginOptions, UIPlugin, PluginTarget } from '@uppy/core'
+import type { PluginOptions, UIPlugin, PluginTarget } from "@growthcloud/core";
 ```
 
 #### Event types
 
-[`@uppy/core`][core] provides an [`.on`](/docs/uppy/#uppy-on-39-event-39-action) method to listen to [events](/docs/uppy/#Events). The types for these events were loose and allowed for invalid events to be passed, such as `uppy.on('upload-errrOOOoooOOOOOrrrr')`.
+[`@growthcloud/core`][core] provides an [`.on`](/docs/uppy/#uppy-on-39-event-39-action) method to listen to [events](/docs/uppy/#Events). The types for these events were loose and allowed for invalid events to be passed, such as `uppy.on('upload-errrOOOoooOOOOOrrrr')`.
 
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 
 ```ts
 // Before:
 
-type Meta = { myCustomMetadata: string }
+type Meta = { myCustomMetadata: string };
 
 // Invalid event
-uppy.on<Meta>('upload-errrOOOoooOOOOOrrrr', () => {
+uppy.on<Meta>("upload-errrOOOoooOOOOOrrrr", () => {
   // ...
-})
+});
 
 // After:
 
 // Normal event signature
-uppy.on('complete', (result) => {
-  const successResults = result.successful
-})
+uppy.on("complete", (result) => {
+  const successResults = result.successful;
+});
 
 // Custom signature
-type Meta = { myCustomMetadata: string }
+type Meta = { myCustomMetadata: string };
 
 // Notice how the custom type has now become the second argument
-uppy.on<'complete', Meta>('complete', (result) => {
+uppy.on<"complete", Meta>("complete", (result) => {
   // The passed type is now merged into the `meta` types.
-  const meta = result.successful[0].meta.myCustomMetadata
-})
+  const meta = result.successful[0].meta.myCustomMetadata;
+});
 ```
 
-Plugins that add their own events can merge with existing ones in `@uppy/core` with `declare module '@uppy/core' { ... }`. This is a TypeScript pattern called [module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation). For instance, when using [`@uppy/dashboard`][dashboard]:
+Plugins that add their own events can merge with existing ones in `@growthcloud/core` with `declare module '@growthcloud/core' { ... }`. This is a TypeScript pattern called [module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation). For instance, when using [`@growthcloud/dashboard`][dashboard]:
 
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 
 ```ts
-uppy.on('dashboard:file-edit-start', (file) => {
-  const fileName = file.name
-})
+uppy.on("dashboard:file-edit-start", (file) => {
+  const fileName = file.name;
+});
 ```
 
-### Changes to pre-signing URLs for [`@uppy/aws-s3-multipart`][aws-s3-multipart]
+### Changes to pre-signing URLs for [`@growthcloud/aws-s3-multipart`][aws-s3-multipart]
 
 See the Uppy 2.0.0 announcement post about the batch [pre-signing URLs change](https://uppy.io/blog/2021/08/2.0/#Batch-pre-signing-URLs-for-AWS-S3-Multipart).
 
 `prepareUploadPart` has been renamed to [`prepareUploadParts`](https://uppy.io/docs/aws-s3-multipart/#prepareUploadParts-file-partData) (plural). See the documentation link on how to use this function.
 
-### Removed the `.run` method from [`@uppy/core`][core]
+### Removed the `.run` method from [`@growthcloud/core`][core]
 
 The `.run` method on the `Uppy` instance has been removed. This method was already obsolete and only logged a warning. As of this major version, it no longer exists.
 
-### Removed `resume` and `removeFingerprintOnSuccess` options from [`@uppy/tus`][tus]
+### Removed `resume` and `removeFingerprintOnSuccess` options from [`@growthcloud/tus`][tus]
 
 Tus will now by default try to resume uploads if the upload has been started in the past.
 
@@ -508,25 +519,21 @@ to:
 
 <div class="table-responsive">
 
-| Provider | New Redirect URI
-|-|-|
-| Dropbox | `https://$COMPANION_HOST_NAME/dropbox/redirect` |
-| Google Drive | `https://$COMPANION_HOST_NAME/drive/redirect` |
-| OneDrive | `https://$COMPANION_HOST_NAME/onedrive/redirect` |
-| Box | `https://$YOUR_COMPANION_HOST_NAME/box/redirect` |
-| Facebook | `https://$COMPANION_HOST_NAME/facebook/redirect` |
-| Instagram | `https://$COMPANION_HOST_NAME/instagram/redirect` |
+| Provider     | New Redirect URI                                  |
+| ------------ | ------------------------------------------------- |
+| Dropbox      | `https://$COMPANION_HOST_NAME/dropbox/redirect`   |
+| Google Drive | `https://$COMPANION_HOST_NAME/drive/redirect`     |
+| OneDrive     | `https://$COMPANION_HOST_NAME/onedrive/redirect`  |
+| Box          | `https://$YOUR_COMPANION_HOST_NAME/box/redirect`  |
+| Facebook     | `https://$COMPANION_HOST_NAME/facebook/redirect`  |
+| Instagram    | `https://$COMPANION_HOST_NAME/instagram/redirect` |
 
 </div>
 
 <!-- definitions -->
 
 [core]: /docs/uppy/
-
 [xhr]: /docs/xhr-upload/
-
 [dashboard]: /docs/dashboard/
-
 [aws-s3-multipart]: /docs/aws-s3-multipart/
-
 [tus]: /docs/tus/

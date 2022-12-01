@@ -3,63 +3,63 @@ type: docs
 order: 15
 title: "Import From URL"
 menu_prefix: "<span title='Requires Companion'>ⓒ </span>"
-module: "@uppy/url"
+module: "@growthcloud/url"
 permalink: docs/url/
 category: "Sources"
 tagline: "import files from any public URL"
 ---
 
-The `@uppy/url` plugin allows users to import files from the internet. Paste any URL and it will be added!
+The `@growthcloud/url` plugin allows users to import files from the internet. Paste any URL and it will be added!
 
-A Companion instance is required for the `@uppy/url` plugin to work. Companion will download the files and upload them to their destination. This saves bandwidth for the user (especially on mobile connections) and helps to avoid CORS restrictions.
+A Companion instance is required for the `@growthcloud/url` plugin to work. Companion will download the files and upload them to their destination. This saves bandwidth for the user (especially on mobile connections) and helps to avoid CORS restrictions.
 
 ```js
-import Url from '@uppy/url'
+import Url from "@growthcloud/url";
 
 uppy.use(Url, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
 
 ## Installation
 
-This plugin is published as the `@uppy/url` package.
+This plugin is published as the `@growthcloud/url` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/url
+npm install @growthcloud/url
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { Url } = Uppy
+const { Url } = Uppy;
 ```
 
 ## CSS
 
-The `@uppy/url` plugin requires the following CSS for styling:
+The `@growthcloud/url` plugin requires the following CSS for styling:
 
 ```js
-import '@uppy/core/dist/style.css'
-import '@uppy/url/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/url/dist/style.css";
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Url styles from `@uppy/url/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Url styles from `@growthcloud/url/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
 ## Options
 
-The `@uppy/url` plugin has the following configurable options:
+The `@growthcloud/url` plugin has the following configurable options:
 
 ```js
 uppy.use(Url, {
   target: Dashboard,
-  companionUrl: 'https://companion.uppy.io/',
+  companionUrl: "https://companion.uppy.io/",
   locale: {},
-})
+});
 ```
 
 ### `id: 'Url'`
@@ -72,7 +72,7 @@ Configures the title / name shown in the UI, for instance, on Dashboard tabs. It
 
 ### `target: null`
 
-DOM element, CSS selector, or plugin to mount the URL provider into. This should normally be the [`@uppy/dashboard`](/docs/dashboard) plugin.
+DOM element, CSS selector, or plugin to mount the URL provider into. This should normally be the [`@growthcloud/dashboard`](/docs/dashboard) plugin.
 
 ### `companionUrl: null`
 
@@ -88,15 +88,17 @@ This option correlates to the [RequestCredentials value](https://developer.mozil
 export default {
   strings: {
     // Label for the "Import" button.
-    import: 'Import',
+    import: "Import",
     // Placeholder text for the URL input.
-    enterUrlToImport: 'Enter URL to import a file',
+    enterUrlToImport: "Enter URL to import a file",
     // Error message shown if Companion could not load a URL.
-    failedToFetch: 'Companion failed to fetch this URL, please make sure it’s correct',
+    failedToFetch:
+      "Companion failed to fetch this URL, please make sure it’s correct",
     // Error message shown if the input does not look like a URL.
-    enterCorrectUrl: 'Incorrect URL: Please make sure you are entering a direct link to a file',
+    enterCorrectUrl:
+      "Incorrect URL: Please make sure you are entering a direct link to a file",
   },
-}
+};
 ```
 
 ## Methods
@@ -106,5 +108,8 @@ export default {
 You can add a file to the Url plugin directly via the API, like this:
 
 ```js
-uppy.getPlugin('Url').addFile('https://example.com/myfile.pdf').then(uppy.upload)
+uppy
+  .getPlugin("Url")
+  .addFile("https://example.com/myfile.pdf")
+  .then(uppy.upload);
 ```

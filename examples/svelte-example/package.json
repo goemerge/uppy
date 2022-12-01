@@ -1,5 +1,5 @@
 {
-  "name": "@uppy-example/svelte-app",
+  "name": "@growthcloud-example/svelte-app",
   "version": "0.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -31,10 +31,10 @@
     "typescript": "~4.8"
   },
   "dependencies": {
-    "@uppy/core": "workspace:*",
-    "@uppy/svelte": "workspace:*",
-    "@uppy/webcam": "workspace:*",
-    "@uppy/xhr-upload": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/svelte": "workspace:*",
+    "@growthcloud/webcam": "workspace:*",
+    "@growthcloud/xhr-upload": "workspace:*",
     "formidable": "^2.0.1",
     "sirv-cli": "^1.0.0"
   },

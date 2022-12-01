@@ -1,28 +1,28 @@
-import Uppy from '@uppy/core'
-import GoogleDrive from '@uppy/google-drive'
-import Tus from '@uppy/tus'
-import Dashboard from '@uppy/dashboard'
-import MyCustomProvider from './MyCustomProvider.jsx'
+import Uppy from "@growthcloud/core";
+import GoogleDrive from "@growthcloud/google-drive";
+import Tus from "@growthcloud/tus";
+import Dashboard from "@growthcloud/dashboard";
+import MyCustomProvider from "./MyCustomProvider.jsx";
 
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 
 const uppy = new Uppy({
   debug: true,
-})
+});
 
 uppy.use(GoogleDrive, {
-  companionUrl: 'http://localhost:3020',
-})
+  companionUrl: "http://localhost:3020",
+});
 
 uppy.use(MyCustomProvider, {
-  companionUrl: 'http://localhost:3020',
-})
+  companionUrl: "http://localhost:3020",
+});
 
 uppy.use(Dashboard, {
   inline: true,
-  target: 'body',
-  plugins: ['GoogleDrive', 'MyCustomProvider'],
-})
+  target: "body",
+  plugins: ["GoogleDrive", "MyCustomProvider"],
+});
 
-uppy.use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+uppy.use(Tus, { endpoint: "https://tusd.tusdemo.net/files/" });

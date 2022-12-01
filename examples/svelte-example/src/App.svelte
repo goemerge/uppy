@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Dashboard, DashboardModal, DragDrop, ProgressBar } from '@uppy/svelte'
-	import Uppy from '@uppy/core'
-	import Webcam from '@uppy/webcam'
-	import XHRUpload from '@uppy/xhr-upload'
+	import { Dashboard, DashboardModal, DragDrop, ProgressBar } from '@growthcloud/svelte'
+	import Uppy from '@growthcloud/core'
+	import Webcam from '@growthcloud/webcam'
+	import XHRUpload from '@growthcloud/xhr-upload'
 
 	const createUppy = () => {
 		return new Uppy().use(Webcam).use(XHRUpload, {
@@ -21,7 +21,7 @@
 </script>
 
 <main>
-	<h1>Welcome to the <code>@uppy/svelte</code> demo!</h1>
+	<h1>Welcome to the <code>@growthcloud/svelte</code> demo!</h1>
 	<h2>Inline Dashboard</h2>
 	<label>
       <input
@@ -63,10 +63,10 @@
 	/>
 </main>
 <style global>
-	@import "@uppy/core/dist/style.min.css";
-	@import "@uppy/dashboard/dist/style.min.css";
-	@import "@uppy/drag-drop/dist/style.min.css";
-	@import "@uppy/progress-bar/dist/style.min.css";
+	@import "@growthcloud/core/dist/style.min.css";
+	@import "@growthcloud/dashboard/dist/style.min.css";
+	@import "@growthcloud/drag-drop/dist/style.min.css";
+	@import "@growthcloud/progress-bar/dist/style.min.css";
 	input[type="checkbox"] {
 		user-select: none;
 	}

@@ -3,22 +3,22 @@ type: docs
 order: 13
 title: "Facebook"
 menu_prefix: "<span title='Requires Companion'>ⓒ </span>"
-module: "@uppy/facebook"
+module: "@growthcloud/facebook"
 permalink: docs/facebook/
 category: "Sources"
 tagline: "import files from Facebook"
 ---
 
-The `@uppy/facebook` plugin lets users import files from their Facebook account.
+The `@growthcloud/facebook` plugin lets users import files from their Facebook account.
 
-A Companion instance is required for the `@uppy/facebook` plugin to work. Companion handles authentication with Facebook, downloads the pictures and videos, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
+A Companion instance is required for the `@growthcloud/facebook` plugin to work. Companion handles authentication with Facebook, downloads the pictures and videos, and uploads them to the destination. This saves the user bandwidth, especially helpful if they are on a mobile connection.
 
 ```js
-import Facebook from '@uppy/facebook'
+import Facebook from "@growthcloud/facebook";
 
 uppy.use(Facebook, {
   // Options
-})
+});
 ```
 
 <a class="TryButton" href="/examples/dashboard/">Try it live</a>
@@ -27,12 +27,12 @@ uppy.use(Facebook, {
 
 > If you are using the `uppy` package, you do not need to install this plugin manually.
 
-This plugin is published as the `@uppy/facebook` package.
+This plugin is published as the `@growthcloud/facebook` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/facebook
+npm install @growthcloud/facebook
 ```
 
 ## OAuth
@@ -43,17 +43,17 @@ You need to set up OAuth in your Facebook app for Companion to be able to connec
 
 Dashboard plugin is recommended as a container to all Provider plugins, including Facebook. If you are using Dashboard, it [comes with all the necessary styles](/docs/dashboard/#CSS) for Facebook as well.
 
-⚠️ If you are feeling adventurous, and want to use Facebook plugin separately, without Dashboard, make sure to include `@uppy/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
+⚠️ If you are feeling adventurous, and want to use Facebook plugin separately, without Dashboard, make sure to include `@growthcloud/provider-views/dist/style.css` (or `style.min.css`) CSS file. This is experimental, not officially supported and not recommended.
 
 ## Options
 
-The `@uppy/facebook` plugin has the following configurable options:
+The `@growthcloud/facebook` plugin has the following configurable options:
 
 ```js
 uppy.use(Facebook, {
   target: Dashboard,
-  companionUrl: 'https://companion.uppy.io/',
-})
+  companionUrl: "https://companion.uppy.io/",
+});
 ```
 
 ### `id: 'Facebook'`
@@ -66,7 +66,7 @@ Configures the title / name shown in the UI, for instance, on Dashboard tabs. It
 
 ### `target: null`
 
-DOM element, CSS selector, or plugin to mount the Facebook provider into. This should normally be the [`@uppy/dashboard`](/docs/dashboard) plugin.
+DOM element, CSS selector, or plugin to mount the Facebook provider into. This should normally be the [`@growthcloud/dashboard`](/docs/dashboard) plugin.
 
 ### `companionUrl: null`
 
@@ -93,7 +93,7 @@ This option correlates to the [RequestCredentials value](https://developer.mozil
 ```js
 export default {
   strings: {
-    pluginNameFacebook: 'Facebook',
+    pluginNameFacebook: "Facebook",
   },
-}
+};
 ```

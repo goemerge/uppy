@@ -1,7 +1,7 @@
 ---
 title: "Redux"
 type: docs
-module: "@uppy/store-redux"
+module: "@growthcloud/store-redux"
 permalink: docs/redux/
 order: 9
 category: "Miscellaneous"
@@ -15,40 +15,43 @@ Uppy supports the popular [Redux](https://redux.js.org/) state management librar
 You can tell Uppy to use your app’s Redux store for its files and UI state. Please check out [Custom Stores](/docs/stores/) for more information on that. Here’s an example to give you a sense of how this works:
 
 ```js
-import Uppy from '@uppy/core'
-import * as ReduxStore from '@uppy/store-redux'
-import * as Redux from 'redux'
+import Uppy from "@growthcloud/core";
+import * as ReduxStore from "@growthcloud/store-redux";
+import * as Redux from "redux";
 
-function createStore (reducers = {}) {
-  const reducer = Redux.combineReducers({ ...reducers, uppy: ReduxStore.reducer })
-  return Redux.createStore(reducer)
+function createStore(reducers = {}) {
+  const reducer = Redux.combineReducers({
+    ...reducers,
+    uppy: ReduxStore.reducer,
+  });
+  return Redux.createStore(reducer);
 }
 
-const store = new ReduxStore.ReduxStore({ store: createStore() })
-const uppy = new Uppy({ store })
+const store = new ReduxStore.ReduxStore({ store: createStore() });
+const uppy = new Uppy({ store });
 ```
 
 Keep in mind that Uppy state is not serializable (because we have to keep track of files with data blobs). So, if you persist your Redux state, you should exclude Uppy state from persistence.
 
-If you’d like to persist your Uppy state — please look into [@uppy/golden-retriever](https://uppy.io/docs/golden-retriever/). It’s a plugin created specifically for saving and restoring Uppy state, including selected files and upload progress.
+If you’d like to persist your Uppy state — please look into [@growthcloud/golden-retriever](https://uppy.io/docs/golden-retriever/). It’s a plugin created specifically for saving and restoring Uppy state, including selected files and upload progress.
 
 ## Redux Dev Tools
 
 This is a `ReduxDevTools` plugin that syncs with the [redux-devtools](https://github.com/gaearon/redux-devtools) browser or JS extensions, and allows for basic time travel:
 
 ```js
-import Uppy from '@uppy/core'
-import ReduxDevTools from '@uppy/redux-dev-tools'
+import Uppy from "@growthcloud/core";
+import ReduxDevTools from "@growthcloud/redux-dev-tools";
 
 const uppy = new Uppy({
   debug: true,
   meta: {
-    username: 'John',
-    license: 'Creative Commons',
+    username: "John",
+    license: "Creative Commons",
   },
 })
-  .use(XHRUpload, { endpoint: 'https://example.com' })
-  .use(ReduxDevTools)
+  .use(XHRUpload, { endpoint: "https://example.com" })
+  .use(ReduxDevTools);
 ```
 
 After you `.use(ReduxDevTools)`, you should be able to see Uppy’s state in Redux Dev Tools.

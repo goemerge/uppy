@@ -13,12 +13,12 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-import './commands.ts'
+import "./commands.ts";
 
-import type { Uppy } from '@uppy/core'
+import type { Uppy } from "@growthcloud/core";
 
 declare global {
   interface Window {
-    uppy: Uppy
+    uppy: Uppy;
   }
 }

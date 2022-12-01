@@ -8,10 +8,10 @@ category: "Contributing"
 
 You can find already a few useful Uppy plugins out there, but there might come a time when you will want to build your own. Plugins can hook into the upload process or render a custom UI, typically to:
 
-* Render some custom UI element, e.g., [StatusBar](/docs/statusbar) or [Dashboard](/docs/dashboard).
-* Do the actual uploading, e.g., [XHRUpload](/docs/xhrupload) or [Tus](/docs/tus).
-* Do work before the upload, like compressing an image or calling external API.
-* Interact with a third-party service to process uploads correctly, e.g., [Transloadit](/docs/transloadit) or [AwsS3](/docs/aws-s3).
+- Render some custom UI element, e.g., [StatusBar](/docs/statusbar) or [Dashboard](/docs/dashboard).
+- Do the actual uploading, e.g., [XHRUpload](/docs/xhrupload) or [Tus](/docs/tus).
+- Do work before the upload, like compressing an image or calling external API.
+- Interact with a third-party service to process uploads correctly, e.g., [Transloadit](/docs/transloadit) or [AwsS3](/docs/aws-s3).
 
 See a [full example of a plugin](#Example-of-a-custom-plugin) below.
 
@@ -26,13 +26,13 @@ For example, when targeting plugins at the built-in `Dashboard` plugin, the Dash
 The plugin constructor receives the Uppy instance in the first parameter, and any options passed to `uppy.use()` in the second parameter.
 
 ```js
-import BasePlugin from '@uppy/core/lib/BasePlugin.js'
+import BasePlugin from "@growthcloud/core/lib/BasePlugin.js";
 
 export default class MyPlugin extends BasePlugin {
-  constructor (uppy, opts) {
-    super(uppy, opts)
-    this.id = opts.id || 'MyPlugin'
-    this.type = 'example'
+  constructor(uppy, opts) {
+    super(uppy, opts);
+    this.id = opts.id || "MyPlugin";
+    this.type = "example";
   }
 }
 ```
@@ -52,9 +52,9 @@ Called when the plugin is `.use`d. Do any setup work here, like attaching events
 ```js
 export default class MyPlugin extends UIPlugin {
   // ...
-  install () {
-    this.uppy.on('upload-progress', this.onProgress)
-    this.uppy.addPostProcessor(this.afterUpload)
+  install() {
+    this.uppy.on("upload-progress", this.onProgress);
+    this.uppy.addPostProcessor(this.afterUpload);
   }
 }
 ```
@@ -66,9 +66,9 @@ Called when the plugin is removed, or the Uppy instance is closed. This should u
 ```js
 export default class MyPlugin extends UIPlugin {
   // ...
-  uninstall () {
-    this.uppy.off('upload-progress', this.onProgress)
-    this.uppy.removePostProcessor(this.afterUpload)
+  uninstall() {
+    this.uppy.off("upload-progress", this.onProgress);
+    this.uppy.removePostProcessor(this.afterUpload);
   }
 }
 ```
@@ -79,7 +79,7 @@ Called after every state update with a debounce, after everything has mounted.
 
 #### `addTarget()`
 
-Use this to add your plugin to another plugin’s target. This is what `@uppy/dashboard` uses to add other plugins to its UI.
+Use this to add your plugin to another plugin’s target. This is what `@growthcloud/dashboard` uses to add other plugins to its UI.
 
 ### `UIPlugin`
 
@@ -120,24 +120,24 @@ When adding hooks, make sure to bind the hook `fn` beforehand! Otherwise, it wil
 
 ```js
 class MyPlugin extends BasePlugin {
-  constructor (uppy, opts) {
-    super(uppy, opts)
-    this.id = opts.id || 'MyPlugin'
-    this.type = 'example'
-    this.prepareUpload = this.prepareUpload.bind(this) // ← this!
+  constructor(uppy, opts) {
+    super(uppy, opts);
+    this.id = opts.id || "MyPlugin";
+    this.type = "example";
+    this.prepareUpload = this.prepareUpload.bind(this); // ← this!
   }
 
-  prepareUpload (fileIDs) {
-    console.log(this) // `this` refers to the `MyPlugin` instance.
-    return Promise.resolve()
+  prepareUpload(fileIDs) {
+    console.log(this); // `this` refers to the `MyPlugin` instance.
+    return Promise.resolve();
   }
 
-  install () {
-    this.uppy.addPreProcessor(this.prepareUpload)
+  install() {
+    this.uppy.addPreProcessor(this.prepareUpload);
   }
 
-  uninstall () {
-    this.uppy.removePreProcessor(this.prepareUpload)
+  uninstall() {
+    this.uppy.removePreProcessor(this.prepareUpload);
   }
 }
 ```
@@ -146,23 +146,24 @@ Or you can define the method as a class field:
 
 ```js
 class MyPlugin extends UIPlugin {
-  constructor (uppy, opts) {
-    super(uppy, opts)
-    this.id = opts.id || 'MyPlugin'
-    this.type = 'example'
+  constructor(uppy, opts) {
+    super(uppy, opts);
+    this.id = opts.id || "MyPlugin";
+    this.type = "example";
   }
 
-  prepareUpload = (fileIDs) => { // ← this!
-    console.log(this) // `this` refers to the `MyPlugin` instance.
-    return Promise.resolve()
+  prepareUpload = (fileIDs) => {
+    // ← this!
+    console.log(this); // `this` refers to the `MyPlugin` instance.
+    return Promise.resolve();
+  };
+
+  install() {
+    this.uppy.addPreProcessor(this.prepareUpload);
   }
 
-  install () {
-    this.uppy.addPreProcessor(this.prepareUpload)
-  }
-
-  uninstall () {
-    this.uppy.removePreProcessor(this.prepareUpload)
+  uninstall() {
+    this.uppy.removePreProcessor(this.prepareUpload);
   }
 }
 ```
@@ -195,32 +196,32 @@ Preprocessing and postprocessing progress events are plugin-dependent and can re
 
 `progress` is an object with properties:
 
-* `mode` - Either `'determinate'` or `'indeterminate'`.
-* `message` - A message to show to the user. Something like `'Preparing upload...'`, but be more specific if possible.
+- `mode` - Either `'determinate'` or `'indeterminate'`.
+- `message` - A message to show to the user. Something like `'Preparing upload...'`, but be more specific if possible.
 
 When `mode` is `'determinate'`, also add the `value` property:
 
-* `value` - A progress value between 0 and 1.
+- `value` - A progress value between 0 and 1.
 
 ### `upload-progress(progress)`
 
 `progress` is an object with properties:
 
-* `uploader` - The uploader plugin that fired the event (`this`).
-* `id` - The file ID.
-* `bytesTotal` - The full amount of bytes to be uploaded.
-* `bytesUploaded` - The amount of bytes that have been uploaded so far.
+- `uploader` - The uploader plugin that fired the event (`this`).
+- `id` - The file ID.
+- `bytesTotal` - The full amount of bytes to be uploaded.
+- `bytesUploaded` - The amount of bytes that have been uploaded so far.
 
 ### `postprocess-progress(fileID, progress)`
 
 `progress` is an object with properties:
 
-* `mode` - Either `'determinate'` or `'indeterminate'`.
-* `message` - A message to show to the user. Something like `'Preparing upload...'`, but be more specific if possible.
+- `mode` - Either `'determinate'` or `'indeterminate'`.
+- `message` - A message to show to the user. Something like `'Preparing upload...'`, but be more specific if possible.
 
 When `mode` is `'determinate'`, also add the `value` property:
 
-* `value` - A progress value between 0 and 1.
+- `value` - A progress value between 0 and 1.
 
 ### `error(err[, fileID])`
 
@@ -237,20 +238,14 @@ See the Preact [Getting Started Guide](https://preactjs.com/guide/getting-starte
 
 ```js
 /** @jsx h */
-import { UIPlugin } from '@uppy/core'
-import { h } from 'preact'
+import { UIPlugin } from "@growthcloud/core";
+import { h } from "preact";
 
 class NumFiles extends UIPlugin {
-  render () {
-    const numFiles = Object.keys(this.uppy.state.files).length
+  render() {
+    const numFiles = Object.keys(this.uppy.state.files).length;
 
-    return (
-      <div>
-        Number of files:
-        {' '}
-        {numFiles}
-      </div>
-    )
+    return <div>Number of files: {numFiles}</div>;
   }
 }
 ```
@@ -262,14 +257,14 @@ For any user facing language that you use while writing your Plugin, please prov
 ```js
 this.defaultLocale = {
   strings: {
-    youCanOnlyUploadFileTypes: 'You can only upload: %{types}',
+    youCanOnlyUploadFileTypes: "You can only upload: %{types}",
     youCanOnlyUploadX: {
-      0: 'You can only upload %{smart_count} file',
-      1: 'You can only upload %{smart_count} files',
-      2: 'You can only upload %{smart_count} files',
+      0: "You can only upload %{smart_count} file",
+      1: "You can only upload %{smart_count} files",
+      2: "You can only upload %{smart_count} files",
     },
   },
-}
+};
 ```
 
 This allows them to be overridden by Locale Packs, or directly when users pass `locale: { strings: youCanOnlyUploadFileTypes: 'Something else completely about %{types}'} }`. For this to work, it’s also required that you call `this.i18nInit()` in the plugin constructor.
@@ -281,92 +276,101 @@ Below is a full example of a [small plugin](https://github.com/arturi/uppy-plugi
 <!-- eslint-disable consistent-return -->
 
 ```js
-import { UIPlugin } from '@uppy/core'
-import Translator from '@uppy/utils/lib/Translator'
-import Compressor from 'compressorjs/dist/compressor.esm.js'
+import { UIPlugin } from "@growthcloud/core";
+import Translator from "@growthcloud/utils/lib/Translator";
+import Compressor from "compressorjs/dist/compressor.esm.js";
 
 class UppyImageCompressor extends UIPlugin {
-  constructor (uppy, opts) {
+  constructor(uppy, opts) {
     const defaultOptions = {
       quality: 0.6,
-    }
-    super(uppy, { ...defaultOptions, ...opts })
+    };
+    super(uppy, { ...defaultOptions, ...opts });
 
-    this.id = this.opts.id || 'ImageCompressor'
-    this.type = 'modifier'
+    this.id = this.opts.id || "ImageCompressor";
+    this.type = "modifier";
 
     this.defaultLocale = {
       strings: {
-        compressingImages: 'Compressing images...',
+        compressingImages: "Compressing images...",
       },
-    }
+    };
 
     // we use those internally in `this.compress`, so they
     // should not be overriden
-    delete this.opts.success
-    delete this.opts.error
+    delete this.opts.success;
+    delete this.opts.error;
 
-    this.i18nInit()
+    this.i18nInit();
   }
 
-  compress (blob) {
-    return new Promise((resolve, reject) => new Compressor(blob, ({
-      ...this.opts,
-      success (result) {
-        return resolve(result)
-      },
-      error (err) {
-        return reject(err)
-      },
-    })))
+  compress(blob) {
+    return new Promise(
+      (resolve, reject) =>
+        new Compressor(blob, {
+          ...this.opts,
+          success(result) {
+            return resolve(result);
+          },
+          error(err) {
+            return reject(err);
+          },
+        })
+    );
   }
 
   prepareUpload = (fileIDs) => {
     const promises = fileIDs.map((fileID) => {
-      const file = this.uppy.getFile(fileID)
-      this.uppy.emit('preprocess-progress', file, {
-        mode: 'indeterminate',
-        message: this.i18n('compressingImages'),
-      })
+      const file = this.uppy.getFile(fileID);
+      this.uppy.emit("preprocess-progress", file, {
+        mode: "indeterminate",
+        message: this.i18n("compressingImages"),
+      });
 
-      if (!file.type.startsWith('image/')) {
-        return
+      if (!file.type.startsWith("image/")) {
+        return;
       }
 
-      return this.compress(file.data).then((compressedBlob) => {
-        this.uppy.log(`[Image Compressor] Image ${file.id} size before/after compression: ${file.data.size} / ${compressedBlob.size}`)
-        this.uppy.setFileState(fileID, { data: compressedBlob })
-      }).catch((err) => {
-        this.uppy.log(`[Image Compressor] Failed to compress ${file.id}:`, 'warning')
-        this.uppy.log(err, 'warning')
-      })
-    })
+      return this.compress(file.data)
+        .then((compressedBlob) => {
+          this.uppy.log(
+            `[Image Compressor] Image ${file.id} size before/after compression: ${file.data.size} / ${compressedBlob.size}`
+          );
+          this.uppy.setFileState(fileID, { data: compressedBlob });
+        })
+        .catch((err) => {
+          this.uppy.log(
+            `[Image Compressor] Failed to compress ${file.id}:`,
+            "warning"
+          );
+          this.uppy.log(err, "warning");
+        });
+    });
 
     const emitPreprocessCompleteForAll = () => {
       fileIDs.forEach((fileID) => {
-        const file = this.uppy.getFile(fileID)
-        this.uppy.emit('preprocess-complete', file)
-      })
-    }
+        const file = this.uppy.getFile(fileID);
+        this.uppy.emit("preprocess-complete", file);
+      });
+    };
 
     // Why emit `preprocess-complete` for all files at once, instead of
     // above when each is processed?
     // Because it leads to StatusBar showing a weird “upload 6 files” button,
     // while waiting for all the files to complete pre-processing.
-    return Promise.all(promises)
-      .then(emitPreprocessCompleteForAll)
+    return Promise.all(promises).then(emitPreprocessCompleteForAll);
+  };
+
+  install() {
+    this.uppy.addPreProcessor(this.prepareUpload);
   }
 
-  install () {
-    this.uppy.addPreProcessor(this.prepareUpload)
-  }
-
-  uninstall () {
-    this.uppy.removePreProcessor(this.prepareUpload)
+  uninstall() {
+    this.uppy.removePreProcessor(this.prepareUpload);
   }
 }
 
-export default UppyImageCompressor
+export default UppyImageCompressor;
 ```
 
 [core.setfilestate]: /docs/uppy#uppy-setFileState-fileID-state

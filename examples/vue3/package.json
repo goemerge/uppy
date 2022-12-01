@@ -1,5 +1,5 @@
 {
-  "name": "@uppy-example/vue3",
+  "name": "@growthcloud-example/vue3",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,12 +8,12 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/drag-drop": "workspace:*",
-    "@uppy/progress-bar": "workspace:*",
-    "@uppy/tus": "workspace:*",
-    "@uppy/vue": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/drag-drop": "workspace:*",
+    "@growthcloud/progress-bar": "workspace:*",
+    "@growthcloud/tus": "workspace:*",
+    "@growthcloud/vue": "workspace:*",
     "vue": "^3.2.33"
   },
   "devDependencies": {

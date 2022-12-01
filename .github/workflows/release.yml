@@ -42,7 +42,7 @@ jobs:
       - name: Build before publishing
         run: corepack yarn run build
       - name: Hack to allow the publish of the Angular package
-        run: corepack yarn workspace @uppy/angular prepublishOnly
+        run: corepack yarn workspace @growthcloud/angular prepublishOnly
       - name: Login to NPM
         run: corepack yarn config set npmAuthToken ${{ toJSON(secrets.NPM_TOKEN) }}
       - name: Publish to NPM
@@ -75,14 +75,14 @@ jobs:
         env:
           EDGLY_KEY: ${{secrets.EDGLY_KEY}}
           EDGLY_SECRET: ${{secrets.EDGLY_SECRET}}
-      - name: Upload `@uppy/locales` to CDN if it was released
-        run: git diff --exit-code --quiet HEAD^ -- packages/@uppy/locales/package.json ||corepack yarn run uploadcdn @uppy/locales
+      - name: Upload `@growthcloud/locales` to CDN if it was released
+        run: git diff --exit-code --quiet HEAD^ -- packages/@growthcloud/locales/package.json ||corepack yarn run uploadcdn @growthcloud/locales
         env:
           EDGLY_KEY: ${{secrets.EDGLY_KEY}}
           EDGLY_SECRET: ${{secrets.EDGLY_SECRET}}
       - name: Check if Companion was released
         id: checkIfCompanionWasReleased
-        run: git diff --exit-code --quiet HEAD^ -- packages/@uppy/companion/package.json || echo "version=$(jq -r .version < packages/@uppy/companion/package.json)" >> $GITHUB_OUTPUT
+        run: git diff --exit-code --quiet HEAD^ -- packages/@growthcloud/companion/package.json || echo "version=$(jq -r .version < packages/@growthcloud/companion/package.json)" >> $GITHUB_OUTPUT
       - name: Remove release-candidate branch
         run: gh api -X DELETE repos/${{ github.repository }}/git/refs/heads/release-candidate || echo "Already deleted"
         env:

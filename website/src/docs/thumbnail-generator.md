@@ -2,56 +2,56 @@
 type: docs
 order: 2
 title: "Thumbnail Generator"
-module: "@uppy/thumbnail-generator"
+module: "@growthcloud/thumbnail-generator"
 permalink: docs/thumbnail-generator/
 category: "Miscellaneous"
 tagline: "generate preview thumbnails for images to be uploaded"
 ---
 
-`@uppy/thumbnail-generator` generates proportional thumbnails (file previews) for images that are added to Uppy.
+`@growthcloud/thumbnail-generator` generates proportional thumbnails (file previews) for images that are added to Uppy.
 
 This plugin is included by default with the [Dashboard](/docs/dashboard) plugin, and can also be useful to display image previews in a custom UI.
 
 ```js
-import ThumbnailGenerator from '@uppy/thumbnail-generator'
+import ThumbnailGenerator from "@growthcloud/thumbnail-generator";
 
 uppy.use(ThumbnailGenerator, {
   thumbnailWidth: 200,
   // thumbnailHeight: 200 // optional, use either width or height,
   waitForThumbnailsBeforeUpload: false,
-})
+});
 ```
 
 > Now, the `file.preview` property will contain a URL to the thumbnail and `thumbnail:generated` event will be emitted, see below for details.
 
 ## Installation
 
-This plugin is published as the `@uppy/thumbnail-generator` package.
+This plugin is published as the `@growthcloud/thumbnail-generator` package.
 
 Install from NPM:
 
 ```shell
-npm install @uppy/thumbnail-generator
+npm install @growthcloud/thumbnail-generator
 ```
 
 In the [CDN package](/docs/#With-a-script-tag), the plugin class is available on the `Uppy` global object:
 
 ```js
-const { ThumbnailGenerator } = Uppy
+const { ThumbnailGenerator } = Uppy;
 ```
 
 ## Options
 
-The `@uppy/thumbnail-generator` plugin has the following configurable options:
+The `@growthcloud/thumbnail-generator` plugin has the following configurable options:
 
 ```js
 uppy.use(ThumbnailGenerator, {
-  id: 'ThumbnailGenerator',
+  id: "ThumbnailGenerator",
   thumbnailWidth: 200,
   thumbnailHeight: 200,
-  thumbnailType: 'image/jpeg',
+  thumbnailType: "image/jpeg",
   waitForThumbnailsBeforeUpload: false,
-})
+});
 ```
 
 ### `id: 'ThumbnailGenerator'`
@@ -63,9 +63,9 @@ A unique identifier for this plugin. It defaults to `'ThumbnailGenerator'`.
 ```js
 export default {
   strings: {
-    generatingThumbnails: 'Generating thumbnails...',
+    generatingThumbnails: "Generating thumbnails...",
   },
-}
+};
 ```
 
 ### `thumbnailWidth: 200`
@@ -103,10 +103,10 @@ This is useful because Thumbnail Generator also adds EXIF data to images, and if
 `thumbnail:generated` event is emitted with `file` and `preview` local url as arguments:
 
 ```js
-uppy.on('thumbnail:generated', (file, preview) => {
-  const img = document.createElement('img')
-  img.src = preview
-  img.width = 100
-  document.body.appendChild(img)
-})
+uppy.on("thumbnail:generated", (file, preview) => {
+  const img = document.createElement("img");
+  img.src = preview;
+  img.width = 100;
+  document.body.appendChild(img);
+});
 ```

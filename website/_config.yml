@@ -22,7 +22,7 @@ descriptionWho: >
   for adding their uploading and encoding backend, but this is opt-in,
   and you can just as easily roll your own.
 author: Transloadit
-email: uppybot@uppy.io
+email: uppybot@growthcloud.io
 language: English
 
 # URL
@@ -133,21 +133,21 @@ node_sass:
   sourceComments: false
 
 browsersync:
-  files: 'public/examples/**/*.js'
+  files: "public/examples/**/*.js"
   watchOptions:
     awaitWriteFinish:
       - stabilityThreshold: 3000
       - pollInterval: 100
 
 skip_render:
-  - '*.js'
-  - '**/*.js'
-  - '*.es6'
-  - '**/*.es6'
+  - "*.js"
+  - "**/*.js"
+  - "*.es6"
+  - "**/*.es6"
 
 alias:
   examples/: examples/dashboard/
 
 include_markdown:
-  dir: "src/_template"   # Base directory of template markdown
-  verbose : true
+  dir: "src/_template" # Base directory of template markdown
+  verbose: true

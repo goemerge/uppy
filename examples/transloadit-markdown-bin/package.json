@@ -1,15 +1,15 @@
 {
-  "name": "@uppy-example/transloadit-markdown-bin",
+  "name": "@growthcloud-example/transloadit-markdown-bin",
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@uppy/core": "workspace:*",
-    "@uppy/dashboard": "workspace:*",
-    "@uppy/drop-target": "workspace:*",
-    "@uppy/image-editor": "workspace:*",
-    "@uppy/remote-sources": "workspace:*",
-    "@uppy/transloadit": "workspace:*",
-    "@uppy/webcam": "workspace:*",
+    "@growthcloud/core": "workspace:*",
+    "@growthcloud/dashboard": "workspace:*",
+    "@growthcloud/drop-target": "workspace:*",
+    "@growthcloud/image-editor": "workspace:*",
+    "@growthcloud/remote-sources": "workspace:*",
+    "@growthcloud/transloadit": "workspace:*",
+    "@growthcloud/webcam": "workspace:*",
     "marked": "^4.0.18"
   },
   "devDependencies": {

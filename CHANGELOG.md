@@ -16,172 +16,166 @@ In the current stage we aim to release a new version at least every month.
 
 Released: 2022-11-16
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/angular          |   0.5.1 | @uppy/companion-client |   3.1.1 |
-| @uppy/aws-s3-multipart |   3.1.1 | @uppy/utils            |   5.1.1 |
-| @uppy/companion        |   4.1.1 | uppy                   |   3.3.1 |
+| Package                       | Version | Package                       | Version |
+| ----------------------------- | ------- | ----------------------------- | ------- |
+| @growthcloud/angular          | 0.5.1   | @growthcloud/companion-client | 3.1.1   |
+| @growthcloud/aws-s3-multipart | 3.1.1   | @growthcloud/utils            | 5.1.1   |
+| @growthcloud/companion        | 4.1.1   | uppy                          | 3.3.1   |
 
-- @uppy/aws-s3-multipart: handle slow connections better (Antoine du Hamel / #4213)
-- @uppy/companion-client: treat `*` the same as missing header (Antoine du Hamel / #4221)
-- @uppy/utils: fix types (Antoine du Hamel / #4212)
-- @uppy/companion: send expire info for non-multipart uploads (Antoine du Hamel / #4214)
+- @growthcloud/aws-s3-multipart: handle slow connections better (Antoine du Hamel / #4213)
+- @growthcloud/companion-client: treat `*` the same as missing header (Antoine du Hamel / #4221)
+- @growthcloud/utils: fix types (Antoine du Hamel / #4212)
+- @growthcloud/companion: send expire info for non-multipart uploads (Antoine du Hamel / #4214)
 - docs: fix `allowedMetaFields` documentation (Antoine du Hamel / #4216)
 - meta: add more bundlers for automated testing (Antoine du Hamel / #4100)
-- @uppy/aws-s3-multipart: Fix typo in url check (Christian Franke / #4211)
+- @growthcloud/aws-s3-multipart: Fix typo in url check (Christian Franke / #4211)
 - meta: use current version of packages when testing bundlers (Antoine du Hamel / #4208)
 - meta: do not use the set-output command in workflows (Antoine du Hamel / #4175)
-
 
 ## 3.3.0
 
 Released: 2022-11-10
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/angular          |   0.5.0 | @uppy/image-editor     |   2.1.0 |
-| @uppy/aws-s3-multipart |   3.1.0 | @uppy/locales          |   3.0.4 |
-| @uppy/companion        |   4.1.0 | @uppy/tus              |   3.0.5 |
-| @uppy/companion-client |   3.1.0 | @uppy/utils            |   5.1.0 |
-| @uppy/dashboard        |   3.2.0 | uppy                   |   3.3.0 |
+| Package                       | Version | Package                   | Version |
+| ----------------------------- | ------- | ------------------------- | ------- |
+| @growthcloud/angular          | 0.5.0   | @growthcloud/image-editor | 2.1.0   |
+| @growthcloud/aws-s3-multipart | 3.1.0   | @growthcloud/locales      | 3.0.4   |
+| @growthcloud/companion        | 4.1.0   | @growthcloud/tus          | 3.0.5   |
+| @growthcloud/companion-client | 3.1.0   | @growthcloud/utils        | 5.1.0   |
+| @growthcloud/dashboard        | 3.2.0   | uppy                      | 3.3.0   |
 
-- @uppy/companion: change default S3 expiry from 300 to 800 seconds (Merlijn Vos / #4206)
-- @uppy/dashboard: Single file mode (Artur Paikin / #4188)
-- @uppy/locales: Fix UZ locale (Merlijn Vos / #4178)
-- @uppy/utils: update typings for `RateLimitedQueue` (Antoine du Hamel / #4204)
-- @uppy/aws-s3-multipart: empty the queue when pausing (Antoine du Hamel / #4203)
-- @uppy/image-editor: add checkered background (Livia Medeiros / #4194)
-- @uppy/aws-s3-multipart: refactor rate limiting approach (Antoine du Hamel / #4187)
-- @uppy/companion: send expiry time along side S3 signed requests (Antoine du Hamel / #4202)
-- @uppy/companion-client: add support for `AbortSignal` (Antoine du Hamel / #4201)
-- @uppy/companion-client: prevent preflight race condition (Mikael Finstad / #4182)
-- @uppy/aws-s3-multipart: change limit to 6 (Antoine du Hamel / #4199)
-- @uppy/utils: add `cause` support for `AbortError`s (Antoine du Hamel / #4198)
+- @growthcloud/companion: change default S3 expiry from 300 to 800 seconds (Merlijn Vos / #4206)
+- @growthcloud/dashboard: Single file mode (Artur Paikin / #4188)
+- @growthcloud/locales: Fix UZ locale (Merlijn Vos / #4178)
+- @growthcloud/utils: update typings for `RateLimitedQueue` (Antoine du Hamel / #4204)
+- @growthcloud/aws-s3-multipart: empty the queue when pausing (Antoine du Hamel / #4203)
+- @growthcloud/image-editor: add checkered background (Livia Medeiros / #4194)
+- @growthcloud/aws-s3-multipart: refactor rate limiting approach (Antoine du Hamel / #4187)
+- @growthcloud/companion: send expiry time along side S3 signed requests (Antoine du Hamel / #4202)
+- @growthcloud/companion-client: add support for `AbortSignal` (Antoine du Hamel / #4201)
+- @growthcloud/companion-client: prevent preflight race condition (Mikael Finstad / #4182)
+- @growthcloud/aws-s3-multipart: change limit to 6 (Antoine du Hamel / #4199)
+- @growthcloud/utils: add `cause` support for `AbortError`s (Antoine du Hamel / #4198)
 - meta: Fix bad example for setFileState (Tim Whitney / #4191)
 - meta: Update code example for getFiles (Tim Whitney / #4189)
 - meta: Fix issue with outdated comment. (Tim Whitney / #4192)
-- @uppy/aws-s3-multipart: remove unused `timeout` option (Antoine du Hamel / #4186)
+- @growthcloud/aws-s3-multipart: remove unused `timeout` option (Antoine du Hamel / #4186)
 - meta: Remove dollar sign from command for easier copy/pasting (Youssef Victor / #4180)
-- @uppy/aws-s3-multipart,@uppy/tus: fix `Timed out waiting for socket` (Antoine du Hamel / #4177)
+- @growthcloud/aws-s3-multipart,@growthcloud/tus: fix `Timed out waiting for socket` (Antoine du Hamel / #4177)
 - meta: Add note about facebook approval (Mikael Finstad / #4172)
 - meta: add a manual deploy for website (Antoine du Hamel / #4171)
-
 
 ## 3.2.2
 
 Released: 2022-10-24
 
-| Package              | Version | Package              | Version |
-| -------------------- | ------- | -------------------- | ------- |
-| @uppy/aws-s3         |   3.0.4 | @uppy/tus            |   3.0.4 |
-| @uppy/core           |   3.0.4 | @uppy/xhr-upload     |   3.0.4 |
-| @uppy/provider-views |   3.0.2 | uppy                 |   3.2.2 |
+| Package                     | Version | Package                 | Version |
+| --------------------------- | ------- | ----------------------- | ------- |
+| @growthcloud/aws-s3         | 3.0.4   | @growthcloud/tus        | 3.0.4   |
+| @growthcloud/core           | 3.0.4   | @growthcloud/xhr-upload | 3.0.4   |
+| @growthcloud/provider-views | 3.0.2   | uppy                    | 3.2.2   |
 
-- @uppy/aws-s3,@uppy/tus,@uppy/xhr-upload: replace `this.getState().files` with `this.uppy.getState().files` (Artur Paikin / #4167)
-- @uppy/core: make cancel() and close() arguments optional in types (Merlijn Vos / #4161)
-- @uppy/provider-views: Fix button and input inconsistent font and style (Artur Paikin / #4162)
-
+- @growthcloud/aws-s3,@growthcloud/tus,@growthcloud/xhr-upload: replace `this.getState().files` with `this.uppy.getState().files` (Artur Paikin / #4167)
+- @growthcloud/core: make cancel() and close() arguments optional in types (Merlijn Vos / #4161)
+- @growthcloud/provider-views: Fix button and input inconsistent font and style (Artur Paikin / #4162)
 
 ## 3.2.1
 
 Released: 2022-10-19
 
-| Package         | Version | Package         | Version |
-| --------------- | ------- | --------------- | ------- |
-| @uppy/companion |   4.0.5 | uppy            |   3.2.1 |
-| @uppy/locales   |   3.0.3 |                 |         |
+| Package                | Version | Package | Version |
+| ---------------------- | ------- | ------- | ------- |
+| @growthcloud/companion | 4.0.5   | uppy    | 3.2.1   |
+| @growthcloud/locales   | 3.0.3   |         |         |
 
 - meta: fix CDN deploy (Antoine du Hamel)
-
 
 ## 3.2.0
 
 Released: 2022-10-19
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/angular          |   0.4.3 | @uppy/tus              |   3.0.3 |
-| @uppy/aws-s3           |   3.0.3 | @uppy/url              |   3.1.0 |
-| @uppy/companion        |   4.0.4 | @uppy/webcam           |   3.2.1 |
-| @uppy/core             |   3.0.3 | @uppy/xhr-upload       |   3.0.3 |
-| @uppy/golden-retriever |   3.0.2 | uppy                   |   3.2.0 |
-| @uppy/locales          |   3.0.2 |                        |         |
+| Package                       | Version | Package                 | Version |
+| ----------------------------- | ------- | ----------------------- | ------- |
+| @growthcloud/angular          | 0.4.3   | @growthcloud/tus        | 3.0.3   |
+| @growthcloud/aws-s3           | 3.0.3   | @growthcloud/url        | 3.1.0   |
+| @growthcloud/companion        | 4.0.4   | @growthcloud/webcam     | 3.2.1   |
+| @growthcloud/core             | 3.0.3   | @growthcloud/xhr-upload | 3.0.3   |
+| @growthcloud/golden-retriever | 3.0.2   | uppy                    | 3.2.0   |
+| @growthcloud/locales          | 3.0.2   |                         |         |
 
-- @uppy/webcam: fix bug when Dashboard is using a custom id (Antoine du Hamel / #4099)
-- @uppy/url: refactor `UrlUI` (Antoine du Hamel / #4143)
-- @uppy/url: trim whitespace around user input (Andrew McIntee / #4143)
-- @uppy/core: do not crash if a file is removed before the upload starts (Antoine du Hamel / #4148)
-- @uppy/xhr-upload: fix `Timed out waiting for socket` (Antoine du Hamel / #4150)
-- @uppy/golden-retriever: Fix retry upload with Golden Retriever (Merlijn Vos / #4155)
-- @uppy/aws-s3,@uppy/xhr-upload: fix `Cannot mark a queued request as done` in `MiniXHRUpload` (Antoine du Hamel / #4151)
+- @growthcloud/webcam: fix bug when Dashboard is using a custom id (Antoine du Hamel / #4099)
+- @growthcloud/url: refactor `UrlUI` (Antoine du Hamel / #4143)
+- @growthcloud/url: trim whitespace around user input (Andrew McIntee / #4143)
+- @growthcloud/core: do not crash if a file is removed before the upload starts (Antoine du Hamel / #4148)
+- @growthcloud/xhr-upload: fix `Timed out waiting for socket` (Antoine du Hamel / #4150)
+- @growthcloud/golden-retriever: Fix retry upload with Golden Retriever (Merlijn Vos / #4155)
+- @growthcloud/aws-s3,@growthcloud/xhr-upload: fix `Cannot mark a queued request as done` in `MiniXHRUpload` (Antoine du Hamel / #4151)
 - meta: add a CI check to validate `yarn.lock` (Antoine du Hamel / #4154)
 - meta: fix outdated `yarn.lock` (Antoine du Hamel / #4153)
 - meta: fix `transloadit-xhr` dev example (Antoine du Hamel / #4149)
 - meta: Add example for Uppy with S3 and a Node.js server (Raúl Ibáñez / #4129)
-- @uppy/locales: Fix duplicate keys in UK_UA.js (Murderlon)
-- @uppy/companion: add workaround for S3 accelerated endpoints (Mikael Finstad / #4140)
-- @uppy/locales: Add missing Ukrainian locale entries (Andrii Bodnar / #4145)
-- @uppy/angular: remove unnecessary `console.log` call (Antoine du Hamel / #4139)
+- @growthcloud/locales: Fix duplicate keys in UK_UA.js (Murderlon)
+- @growthcloud/companion: add workaround for S3 accelerated endpoints (Mikael Finstad / #4140)
+- @growthcloud/locales: Add missing Ukrainian locale entries (Andrii Bodnar / #4145)
+- @growthcloud/angular: remove unnecessary `console.log` call (Antoine du Hamel / #4139)
 - meta: fix bundlers workflow (Antoine du Hamel / #4144)
 - meta: fix default sources (Mikael Finstad / #4134)
-- @uppy/locales: Update pl_PL.js (Daniel Kamiński / #4136)
-- @uppy/core: Fix Uppy.cancelAll and Uppy.close types (Sven Grunewaldt / #4128)
-- @uppy/companion: fix error message (Mikael Finstad / #4125)
-- @uppy/xhr-upload: queue requests for socket token for remote files (Daniel Jones / #4123)
-
+- @growthcloud/locales: Update pl_PL.js (Daniel Kamiński / #4136)
+- @growthcloud/core: Fix Uppy.cancelAll and Uppy.close types (Sven Grunewaldt / #4128)
+- @growthcloud/companion: fix error message (Mikael Finstad / #4125)
+- @growthcloud/xhr-upload: queue requests for socket token for remote files (Daniel Jones / #4123)
 
 ## 3.1.1
 
 Released: 2022-09-25
 
-| Package         | Version | Package         | Version |
-| --------------- | ------- | --------------- | ------- |
-| @uppy/companion |   4.0.3 | uppy            |   3.1.1 |
+| Package                | Version | Package | Version |
+| ---------------------- | ------- | ------- | ------- |
+| @growthcloud/companion | 4.0.3   | uppy    | 3.1.1   |
 
 - meta: Fix Companion release deploy (Antoine du Hamel)
-
 
 ## 3.1.0
 
 Released: 2022-09-25
 
-| Package                   | Version | Package                   | Version |
-| ------------------------- | ------- | ------------------------- | ------- |
-| @uppy/angular             |   0.4.2 | @uppy/onedrive            |   3.0.1 |
-| @uppy/audio               |   1.0.2 | @uppy/progress-bar        |   3.0.1 |
-| @uppy/aws-s3              |   3.0.2 | @uppy/provider-views      |   3.0.1 |
-| @uppy/aws-s3-multipart    |   3.0.2 | @uppy/react               |   3.0.2 |
-| @uppy/box                 |   2.0.1 | @uppy/redux-dev-tools     |   3.0.1 |
-| @uppy/companion           |   4.0.2 | @uppy/remote-sources      |   1.0.2 |
-| @uppy/companion-client    |   3.0.2 | @uppy/screen-capture      |   3.0.1 |
-| @uppy/compressor          |   1.0.1 | @uppy/status-bar          |   3.0.1 |
-| @uppy/core                |   3.0.2 | @uppy/store-default       |   3.0.2 |
-| @uppy/dashboard           |   3.1.0 | @uppy/store-redux         |   3.0.2 |
-| @uppy/drag-drop           |   3.0.1 | @uppy/svelte              |   3.0.1 |
-| @uppy/drop-target         |   2.0.1 | @uppy/thumbnail-generator |   3.0.2 |
-| @uppy/dropbox             |   3.0.1 | @uppy/transloadit         |   3.0.2 |
-| @uppy/facebook            |   3.0.1 | @uppy/tus                 |   3.0.2 |
-| @uppy/file-input          |   3.0.1 | @uppy/unsplash            |   3.0.1 |
-| @uppy/form                |   3.0.1 | @uppy/url                 |   3.0.1 |
-| @uppy/golden-retriever    |   3.0.1 | @uppy/utils               |   5.0.2 |
-| @uppy/google-drive        |   3.0.1 | @uppy/vue                 |   1.0.1 |
-| @uppy/image-editor        |   2.0.1 | @uppy/webcam              |   3.2.0 |
-| @uppy/informer            |   3.0.1 | @uppy/xhr-upload          |   3.0.2 |
-| @uppy/instagram           |   3.0.1 | @uppy/zoom                |   2.0.1 |
-| @uppy/locales             |   3.0.1 | uppy                      |   3.1.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.4.2   | @growthcloud/onedrive            | 3.0.1   |
+| @growthcloud/audio            | 1.0.2   | @growthcloud/progress-bar        | 3.0.1   |
+| @growthcloud/aws-s3           | 3.0.2   | @growthcloud/provider-views      | 3.0.1   |
+| @growthcloud/aws-s3-multipart | 3.0.2   | @growthcloud/react               | 3.0.2   |
+| @growthcloud/box              | 2.0.1   | @growthcloud/redux-dev-tools     | 3.0.1   |
+| @growthcloud/companion        | 4.0.2   | @growthcloud/remote-sources      | 1.0.2   |
+| @growthcloud/companion-client | 3.0.2   | @growthcloud/screen-capture      | 3.0.1   |
+| @growthcloud/compressor       | 1.0.1   | @growthcloud/status-bar          | 3.0.1   |
+| @growthcloud/core             | 3.0.2   | @growthcloud/store-default       | 3.0.2   |
+| @growthcloud/dashboard        | 3.1.0   | @growthcloud/store-redux         | 3.0.2   |
+| @growthcloud/drag-drop        | 3.0.1   | @growthcloud/svelte              | 3.0.1   |
+| @growthcloud/drop-target      | 2.0.1   | @growthcloud/thumbnail-generator | 3.0.2   |
+| @growthcloud/dropbox          | 3.0.1   | @growthcloud/transloadit         | 3.0.2   |
+| @growthcloud/facebook         | 3.0.1   | @growthcloud/tus                 | 3.0.2   |
+| @growthcloud/file-input       | 3.0.1   | @growthcloud/unsplash            | 3.0.1   |
+| @growthcloud/form             | 3.0.1   | @growthcloud/url                 | 3.0.1   |
+| @growthcloud/golden-retriever | 3.0.1   | @growthcloud/utils               | 5.0.2   |
+| @growthcloud/google-drive     | 3.0.1   | @growthcloud/vue                 | 1.0.1   |
+| @growthcloud/image-editor     | 2.0.1   | @growthcloud/webcam              | 3.2.0   |
+| @growthcloud/informer         | 3.0.1   | @growthcloud/xhr-upload          | 3.0.2   |
+| @growthcloud/instagram        | 3.0.1   | @growthcloud/zoom                | 2.0.1   |
+| @growthcloud/locales          | 3.0.1   | uppy                             | 3.1.0   |
 
 - meta: Fix companion-deploy-yml (Mikael Finstad)
 - website: fix tag for Activity Feed (Livia Medeiros / #4118)
-- @uppy/golden-retriever: fix condition to load files from service worker (Merlijn Vos / #4115)
+- @growthcloud/golden-retriever: fix condition to load files from service worker (Merlijn Vos / #4115)
 - website: remove references to the deleted `disc.html` page (Antoine du Hamel / #4119)
-- @uppy/locales: Create uz_UZ (Ozodbek1405 / #4114)
-- @uppy/golden-retriever: Fix endless webcam re-render with Golden Retriever (Merlijn Vos / #4111)
-- @uppy/image-editor: image-editor: fix controls in small Dashboard (Livia Medeiros / #4113)
+- @growthcloud/locales: Create uz_UZ (Ozodbek1405 / #4114)
+- @growthcloud/golden-retriever: Fix endless webcam re-render with Golden Retriever (Merlijn Vos / #4111)
+- @growthcloud/image-editor: image-editor: fix controls in small Dashboard (Livia Medeiros / #4113)
 - website: add “what is Uppy” to the blog post (Artur Paikin)
 - meta: fix Companion deploy (Antoine du Hamel / #4095)
-- @uppy/dashboard: add dashboard:show-panel event (Jon-Pierre Sanchez / #4108)
+- @growthcloud/dashboard: add dashboard:show-panel event (Jon-Pierre Sanchez / #4108)
 - website: Small post fixes (Artur Paikin)
-- @uppy/companion: Companion throttle progress by time (Mikael Finstad / #4101)
+- @growthcloud/companion: Companion throttle progress by time (Mikael Finstad / #4101)
 - meta: skip a few more unnecessary CI runs (Antoine du Hamel / #4106)
 - meta: resolve e2e flakiness (Merlijn Vos / #4077)
 - meta: run linters on almost every PRs (Antoine du Hamel / #4105)
@@ -190,9 +184,9 @@ Released: 2022-09-25
 - website: Add 3.0 blog post (Artur Paikin / #4046)
 - website: fix ESM import in example (Livia Medeiros / #4103)
 - doc: Update "Dashboard typo" (Laban / #4096)
-- @uppy/audio,@uppy/aws-s3-multipart,@uppy/aws-s3,@uppy/box,@uppy/companion-client,@uppy/companion,@uppy/compressor,@uppy/core,@uppy/dashboard,@uppy/drag-drop,@uppy/drop-target,@uppy/dropbox,@uppy/facebook,@uppy/file-input,@uppy/form,@uppy/golden-retriever,@uppy/google-drive,@uppy/image-editor,@uppy/informer,@uppy/instagram,@uppy/locales,@uppy/onedrive,@uppy/progress-bar,@uppy/provider-views,@uppy/react,@uppy/redux-dev-tools,@uppy/remote-sources,@uppy/screen-capture,@uppy/status-bar,@uppy/store-default,@uppy/store-redux,@uppy/svelte,@uppy/thumbnail-generator,@uppy/transloadit,@uppy/tus,@uppy/unsplash,@uppy/url,@uppy/utils,@uppy/vue,@uppy/webcam,@uppy/xhr-upload,@uppy/zoom: add missing entries to changelog for individual packages (Antoine du Hamel / #4092)
+- @growthcloud/audio,@growthcloud/aws-s3-multipart,@growthcloud/aws-s3,@growthcloud/box,@growthcloud/companion-client,@growthcloud/companion,@growthcloud/compressor,@growthcloud/core,@growthcloud/dashboard,@growthcloud/drag-drop,@growthcloud/drop-target,@growthcloud/dropbox,@growthcloud/facebook,@growthcloud/file-input,@growthcloud/form,@growthcloud/golden-retriever,@growthcloud/google-drive,@growthcloud/image-editor,@growthcloud/informer,@growthcloud/instagram,@growthcloud/locales,@growthcloud/onedrive,@growthcloud/progress-bar,@growthcloud/provider-views,@growthcloud/react,@growthcloud/redux-dev-tools,@growthcloud/remote-sources,@growthcloud/screen-capture,@growthcloud/status-bar,@growthcloud/store-default,@growthcloud/store-redux,@growthcloud/svelte,@growthcloud/thumbnail-generator,@growthcloud/transloadit,@growthcloud/tus,@growthcloud/unsplash,@growthcloud/url,@growthcloud/utils,@growthcloud/vue,@growthcloud/webcam,@growthcloud/xhr-upload,@growthcloud/zoom: add missing entries to changelog for individual packages (Antoine du Hamel / #4092)
 - meta: ci: add GHA to tryout bundling Uppy with popular bundlers (Antoine du Hamel / #4084)
-- @uppy/core: Fix `Restrictor` counts ghost files against `maxNumberOfFiles` (Andrew McIntee / #4078)
+- @growthcloud/core: Fix `Restrictor` counts ghost files against `maxNumberOfFiles` (Andrew McIntee / #4078)
 - uppy: add a decoy `Core` export to warn users about the renaming (Antoine du Hamel / #4085)
 - meta: run CI when modifying workflow files (Antoine du Hamel / #4091)
 - meta: limit the number of unnecessary CI runs (Antoine du Hamel / #4086)
@@ -200,52 +194,50 @@ Released: 2022-09-25
 - uppy: remove all remaining occurrences of `Uppy.Core` (Antoine du Hamel / #4082)
 - meta: fix typo in `e2e.yml` (Antoine du Hamel)
 - meta: Restrict e2e CI runs (Merlijn Vos / #4075)
-- @uppy/webcam: Set default videoConstraints (Artur Paikin / #4070)
-- @uppy/angular: Fix angular build error (Murderlon)
+- @growthcloud/webcam: Set default videoConstraints (Artur Paikin / #4070)
+- @growthcloud/angular: Fix angular build error (Murderlon)
 - website: add `Known issues` section on Migration Guide (Antoine du Hamel / #4066)
-- @uppy/core: fix types (Antoine du Hamel / #4072)
+- @growthcloud/core: fix types (Antoine du Hamel / #4072)
 - doc: remove use of deprecated `metaFields` option (Antoine du Hamel / #4073)
-
 
 ## 3.0.1
 
 Released: 2022-08-30
 
-| Package                   | Version | Package                   | Version |
-| ------------------------- | ------- | ------------------------- | ------- |
-| @uppy/angular             |   0.4.1 | @uppy/store-default       |   3.0.1 |
-| @uppy/audio               |   1.0.1 | @uppy/store-redux         |   3.0.1 |
-| @uppy/aws-s3              |   3.0.1 | @uppy/svelte              |   3.0.0 |
-| @uppy/aws-s3-multipart    |   3.0.1 | @uppy/thumbnail-generator |   3.0.1 |
-| @uppy/companion           |   4.0.1 | @uppy/transloadit         |   3.0.1 |
-| @uppy/companion-client    |   3.0.1 | @uppy/tus                 |   3.0.1 |
-| @uppy/core                |   3.0.1 | @uppy/utils               |   5.0.1 |
-| @uppy/dashboard           |   3.0.1 | @uppy/webcam              |   3.1.0 |
-| @uppy/react               |   3.0.1 | @uppy/xhr-upload          |   3.0.1 |
-| @uppy/remote-sources      |   1.0.1 | uppy                      |   3.0.1 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.4.1   | @growthcloud/store-default       | 3.0.1   |
+| @growthcloud/audio            | 1.0.1   | @growthcloud/store-redux         | 3.0.1   |
+| @growthcloud/aws-s3           | 3.0.1   | @growthcloud/svelte              | 3.0.0   |
+| @growthcloud/aws-s3-multipart | 3.0.1   | @growthcloud/thumbnail-generator | 3.0.1   |
+| @growthcloud/companion        | 4.0.1   | @growthcloud/transloadit         | 3.0.1   |
+| @growthcloud/companion-client | 3.0.1   | @growthcloud/tus                 | 3.0.1   |
+| @growthcloud/core             | 3.0.1   | @growthcloud/utils               | 5.0.1   |
+| @growthcloud/dashboard        | 3.0.1   | @growthcloud/webcam              | 3.1.0   |
+| @growthcloud/react            | 3.0.1   | @growthcloud/xhr-upload          | 3.0.1   |
+| @growthcloud/remote-sources   | 1.0.1   | uppy                             | 3.0.1   |
 
-- @uppy/dashboard,@uppy/webcam: add nativeCameraFacingMode to Webcam and Dashboard (Artur Paikin / #4047)
+- @growthcloud/dashboard,@growthcloud/webcam: add nativeCameraFacingMode to Webcam and Dashboard (Artur Paikin / #4047)
 - meta: upgrade to Jest 29 (Antoine du Hamel / #4049)
-- @uppy/svelte: update peer dependencies (Antoine du Hamel / #4065)
-- @uppy/react: useUppy: fix unmount on NextJS dev mode (Matt Jesuele / #4062)
-- @uppy/vue: fix missing component in docs (Antoine du Hamel / #4063)
-- @uppy/angular: fix compiler warning (Antoine du Hamel / #4064)
+- @growthcloud/svelte: update peer dependencies (Antoine du Hamel / #4065)
+- @growthcloud/react: useUppy: fix unmount on NextJS dev mode (Matt Jesuele / #4062)
+- @growthcloud/vue: fix missing component in docs (Antoine du Hamel / #4063)
+- @growthcloud/angular: fix compiler warning (Antoine du Hamel / #4064)
 - meta: improve CI npm install time (Antoine du Hamel / #4058)
 - meta: example: fix Angular example package name (Antoine du Hamel / #4060)
 - meta: upgrade to TypeScript 4.8 (Antoine du Hamel / #4048)
-- @uppy/core,@uppy/dashboard,@uppy/thumbnail-generator: update definition type files for TS 4.8 compatibility (Antoine du Hamel / #4055)
-- @uppy/transloadit: improve deprecation notice (Antoine du Hamel / #4056)
-- @uppy/thumbnail-generator: fix `exifr` import (Antoine du Hamel / #4054)
-- @uppy/utils: fix `relativePath` when drag&dropping a folder (Antoine du Hamel / #4043)
-- @uppy/companion: Fix Companion license (Merlijn Vos / #4044)
+- @growthcloud/core,@growthcloud/dashboard,@growthcloud/thumbnail-generator: update definition type files for TS 4.8 compatibility (Antoine du Hamel / #4055)
+- @growthcloud/transloadit: improve deprecation notice (Antoine du Hamel / #4056)
+- @growthcloud/thumbnail-generator: fix `exifr` import (Antoine du Hamel / #4054)
+- @growthcloud/utils: fix `relativePath` when drag&dropping a folder (Antoine du Hamel / #4043)
+- @growthcloud/companion: Fix Companion license (Merlijn Vos / #4044)
 - e2e: add tests for AWS (Antoine du Hamel / #3665)
 - meta: Only publish Companion to Dockerhub on release (Merlijn Vos / #4037)
 - meta: fix linter warnings (Antoine du Hamel / #4039)
-- @uppy/utils: Post-release website fixes (Merlijn Vos / #4038)
-- @uppy/angular: fix peer dependencies (Antoine du Hamel / #4035)
+- @growthcloud/utils: Post-release website fixes (Merlijn Vos / #4038)
+- @growthcloud/angular: fix peer dependencies (Antoine du Hamel / #4035)
 - meta: uppy.io homepage: Add Tus (Artur Paikin)
 - meta: Fix uppy.io homepage example (Artur Paikin)
-
 
 ## 3.0.0
 
@@ -254,48 +246,48 @@ Released: 2022-08-22
 **Migration guides:**
 https://uppy.io/docs/migration-guides.html
 
-| Package                   | Version | Package                   | Version |
-| ------------------------- | ------- | ------------------------- | ------- |
-| @uppy/angular             |   0.4.0 | @uppy/progress-bar        |   3.0.0 |
-| @uppy/audio               |   1.0.0 | @uppy/provider-views      |   3.0.0 |
-| @uppy/aws-s3              |   3.0.0 | @uppy/react               |   3.0.0 |
-| @uppy/aws-s3-multipart    |   3.0.0 | @uppy/react-native        |   0.4.0 |
-| @uppy/box                 |   2.0.0 | @uppy/redux-dev-tools     |   3.0.0 |
-| @uppy/companion           |   4.0.0 | @uppy/remote-sources      |   1.0.0 |
-| @uppy/companion-client    |   3.0.0 | @uppy/screen-capture      |   3.0.0 |
-| @uppy/compressor          |   1.0.0 | @uppy/status-bar          |   3.0.0 |
-| @uppy/core                |   3.0.0 | @uppy/store-default       |   3.0.0 |
-| @uppy/dashboard           |   3.0.0 | @uppy/store-redux         |   3.0.0 |
-| @uppy/drag-drop           |   3.0.0 | @uppy/svelte              |   2.0.0 |
-| @uppy/drop-target         |   2.0.0 | @uppy/thumbnail-generator |   3.0.0 |
-| @uppy/dropbox             |   3.0.0 | @uppy/transloadit         |   3.0.0 |
-| @uppy/facebook            |   3.0.0 | @uppy/tus                 |   3.0.0 |
-| @uppy/file-input          |   3.0.0 | @uppy/unsplash            |   3.0.0 |
-| @uppy/form                |   3.0.0 | @uppy/url                 |   3.0.0 |
-| @uppy/golden-retriever    |   3.0.0 | @uppy/utils               |   5.0.0 |
-| @uppy/google-drive        |   3.0.0 | @uppy/vue                 |   1.0.0 |
-| @uppy/image-editor        |   2.0.0 | @uppy/webcam              |   3.0.0 |
-| @uppy/informer            |   3.0.0 | @uppy/xhr-upload          |   3.0.0 |
-| @uppy/instagram           |   3.0.0 | @uppy/zoom                |   2.0.0 |
-| @uppy/locales             |   3.0.0 | uppy                      |   3.0.0 |
-| @uppy/onedrive            |   3.0.0 |                           |         |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.4.0   | @growthcloud/progress-bar        | 3.0.0   |
+| @growthcloud/audio            | 1.0.0   | @growthcloud/provider-views      | 3.0.0   |
+| @growthcloud/aws-s3           | 3.0.0   | @growthcloud/react               | 3.0.0   |
+| @growthcloud/aws-s3-multipart | 3.0.0   | @growthcloud/react-native        | 0.4.0   |
+| @growthcloud/box              | 2.0.0   | @growthcloud/redux-dev-tools     | 3.0.0   |
+| @growthcloud/companion        | 4.0.0   | @growthcloud/remote-sources      | 1.0.0   |
+| @growthcloud/companion-client | 3.0.0   | @growthcloud/screen-capture      | 3.0.0   |
+| @growthcloud/compressor       | 1.0.0   | @growthcloud/status-bar          | 3.0.0   |
+| @growthcloud/core             | 3.0.0   | @growthcloud/store-default       | 3.0.0   |
+| @growthcloud/dashboard        | 3.0.0   | @growthcloud/store-redux         | 3.0.0   |
+| @growthcloud/drag-drop        | 3.0.0   | @growthcloud/svelte              | 2.0.0   |
+| @growthcloud/drop-target      | 2.0.0   | @growthcloud/thumbnail-generator | 3.0.0   |
+| @growthcloud/dropbox          | 3.0.0   | @growthcloud/transloadit         | 3.0.0   |
+| @growthcloud/facebook         | 3.0.0   | @growthcloud/tus                 | 3.0.0   |
+| @growthcloud/file-input       | 3.0.0   | @growthcloud/unsplash            | 3.0.0   |
+| @growthcloud/form             | 3.0.0   | @growthcloud/url                 | 3.0.0   |
+| @growthcloud/golden-retriever | 3.0.0   | @growthcloud/utils               | 5.0.0   |
+| @growthcloud/google-drive     | 3.0.0   | @growthcloud/vue                 | 1.0.0   |
+| @growthcloud/image-editor     | 2.0.0   | @growthcloud/webcam              | 3.0.0   |
+| @growthcloud/informer         | 3.0.0   | @growthcloud/xhr-upload          | 3.0.0   |
+| @growthcloud/instagram        | 3.0.0   | @growthcloud/zoom                | 2.0.0   |
+| @growthcloud/locales          | 3.0.0   | uppy                             | 3.0.0   |
+| @growthcloud/onedrive         | 3.0.0   |                                  |         |
 
 - docs: Use RemoteSources in readme example (Artur Paikin / #4030)
 - docs: Add migration guide for Uppy 3.x, Companion 4.x, and Robodog (Merlijn Vos / #3913)
 - example: upgrade React example to use React 18 (Antoine du Hamel / #4002)
 - meta: fix linter failures (Antoine du Hamel / #4029)
-- @uppy/vue: move `@uppy/` packages to peer dependencies (Antoine du Hamel / #4024)
-- @uppy/robodog: remove package (Antoine du Hamel / #3946)
+- @growthcloud/vue: move `@growthcloud/` packages to peer dependencies (Antoine du Hamel / #4024)
+- @growthcloud/robodog: remove package (Antoine du Hamel / #3946)
 - example: migrate `digitalocean-spaces` to ESM (Antoine du Hamel / #4015)
 - example: replace Robodog example with Transloadit + RemoteSources + Form (Antoine du Hamel / #4027)
 - website: replace Robodog example with Uppy plugins (Artur Paikin / #4026)
-- @uppy/aws-s3,@uppy/tus,@uppy/xhr-upload: @uppy/tus, @uppy/xhr-upload, @uppy/aws-s3: `metaFields` -> `allowedMetaFields` (Merlijn Vos / #4023)
+- @growthcloud/aws-s3,@growthcloud/tus,@growthcloud/xhr-upload: @growthcloud/tus, @growthcloud/xhr-upload, @growthcloud/aws-s3: `metaFields` -> `allowedMetaFields` (Merlijn Vos / #4023)
 - example: showcase migration out of Robodog (Antoine du Hamel / #4021)
 - example: fix Svelte dev mode (Antoine du Hamel / #4025)
 - example: fix docs and env for Vite examples (Antoine du Hamel / #4018)
-- @uppy/tus: avoid crashing when Tus client reports an error (Antoine du Hamel / #4019)
-- @uppy/react: move `@uppy/` packages to peer dependencies (Antoine du Hamel / #4004)
-- @uppy/core: core: uppy.addFile should accept browser File objects (Artur Paikin / #4020)
+- @growthcloud/tus: avoid crashing when Tus client reports an error (Antoine du Hamel / #4019)
+- @growthcloud/react: move `@growthcloud/` packages to peer dependencies (Antoine du Hamel / #4004)
+- @growthcloud/core: core: uppy.addFile should accept browser File objects (Artur Paikin / #4020)
 - example: fix svelte example (Antoine du Hamel / #4017)
 - example: migrate `python-xhr` to ESM (Antoine du Hamel / #4010)
 - example: migrate `php-xhr` to ESM (Antoine du Hamel / #4009)
@@ -305,16 +297,16 @@ https://uppy.io/docs/migration-guides.html
 - example: replace `transloadit-textarea` with `transloadit-markdown-bin` (Antoine du Hamel / #4013)
 - example: add README to Svelte example (Antoine du Hamel / #4011)
 - build: Remove size-limit for now (Artur Paikin / #4003)
-- @uppy/core,@uppy/dashboard,@uppy/status-bar: Style tweaks: use all: initial + other resets (Artur Paikin / #3983)
-- @uppy/aws-s3: aws-s3: fix incorrect comparison for `file-removed` (Merlijn Vos / #3962)
+- @growthcloud/core,@growthcloud/dashboard,@growthcloud/status-bar: Style tweaks: use all: initial + other resets (Artur Paikin / #3983)
+- @growthcloud/aws-s3: aws-s3: fix incorrect comparison for `file-removed` (Merlijn Vos / #3962)
 - example: update to new CDN export names (Antoine du Hamel / #4006)
 - example: fix dependencies of `bundled` example (Antoine du Hamel / #4005)
-- @uppy/tus: fix dependencies (Antoine du Hamel / #3923)
-- @uppy/tus: add file argument to `onBeforeRequest` (Merlijn Vos / #3984)
-- @uppy/utils: fix drop of multiple files on Chromium browsers (Antoine du Hamel / #3998)
-- @uppy/angular: upgrade to Angular 14 (Antoine du Hamel / #3997)
+- @growthcloud/tus: fix dependencies (Antoine du Hamel / #3923)
+- @growthcloud/tus: add file argument to `onBeforeRequest` (Merlijn Vos / #3984)
+- @growthcloud/utils: fix drop of multiple files on Chromium browsers (Antoine du Hamel / #3998)
+- @growthcloud/angular: upgrade to Angular 14 (Antoine du Hamel / #3997)
 - example: update Angular example to v14 (Antoine du Hamel / #3996)
-- @uppy/utils: Fix @uppy/utils microtip.scss export (Merlijn Vos / #3995)
+- @growthcloud/utils: Fix @growthcloud/utils microtip.scss export (Merlijn Vos / #3995)
 - docs: Companion: make streaming upload recommended & other docs tweaks (Mikael Finstad / #3994)
 
 ### 3.0.0-beta.5
@@ -322,63 +314,63 @@ https://uppy.io/docs/migration-guides.html
 Released: 2022-08-16
 
 - meta: prepare release workflow for beta versions (Antoine du Hamel)
-- @uppy/provider-views: Reset filter input correctly in provider views (Merlijn Vos / #3978)
-- @uppy/aws-s3-multipart: Fix when using Companion (Merlijn Vos / #3969)
-- @uppy/companion: Companion: bring back default upload protocol (Mikael Finstad / #3967)
+- @growthcloud/provider-views: Reset filter input correctly in provider views (Merlijn Vos / #3978)
+- @growthcloud/aws-s3-multipart: Fix when using Companion (Merlijn Vos / #3969)
+- @growthcloud/companion: Companion: bring back default upload protocol (Mikael Finstad / #3967)
 - meta: Update CONTRIBUTING.md (Mikael Finstad / #3966)
 - meta: fix contributing link (Mikael Finstad / #3968)
-- @uppy/companion: enforce usage of uploadUrls (Mikael Finstad / #3965)
-- @uppy/utils: Fix webp mimetype (Merlijn Vos / #3961)
-- @uppy/locales: Add compressor string translation to Japanese locale (kenken / #3963)
+- @growthcloud/companion: enforce usage of uploadUrls (Mikael Finstad / #3965)
+- @growthcloud/utils: Fix webp mimetype (Merlijn Vos / #3961)
+- @growthcloud/locales: Add compressor string translation to Japanese locale (kenken / #3963)
 - meta: Fix statement about cropping images in README.md (Mikael Finstad / #3964)
-- @uppy/aws-s3-multipart: Fix race condition in `#uploadParts` (Morgan Zolob / #3955)
-- @uppy/provider-views: core validateRestrictions: return error directly vs the result/reason obj (Artur Paikin / #3951)
-- @uppy/aws-s3: Export AwsS3UploadParameters & AwsS3Options interfaces (Antonina Vertsinskaya / #3956)
+- @growthcloud/aws-s3-multipart: Fix race condition in `#uploadParts` (Morgan Zolob / #3955)
+- @growthcloud/provider-views: core validateRestrictions: return error directly vs the result/reason obj (Artur Paikin / #3951)
+- @growthcloud/aws-s3: Export AwsS3UploadParameters & AwsS3Options interfaces (Antonina Vertsinskaya / #3956)
 - website: convert all website examples to ESM (Antoine du Hamel / #3957)
-- @uppy/companion: fix crash if redis disconnects (Mikael Finstad / #3954)
-- @uppy/companion: upgrade `ws` version (Antoine du Hamel / #3949)
-- @uppy/companion: sort Dropbox response & refactor to async/await (Mikael Finstad / #3897)
-- @uppy/utils: modernize `getDroppedFiles` (Antoine du Hamel / #3534)
-- @uppy/companion: fix default getKey for non-standalone too (Mikael Finstad / #3945)
-- @uppy/aws-s3-multipart: ignore exception inside `abortMultipartUpload` (Antoine du Hamel / #3950)
-- @uppy/companion: remove `isobject` from dependencies (Antoine du Hamel / #3948)
-- @uppy/compressor: Fix Compressor being broken when no name is in the compressed blob (Artur Paikin / #3947)
-- @uppy/core,@uppy/react: Fix all breaking todo comments for 3.0 (Merlijn Vos / #3907)
-- @uppy/companion: show deprecation message when using legacy s3 options (Antoine du Hamel / #3944)
+- @growthcloud/companion: fix crash if redis disconnects (Mikael Finstad / #3954)
+- @growthcloud/companion: upgrade `ws` version (Antoine du Hamel / #3949)
+- @growthcloud/companion: sort Dropbox response & refactor to async/await (Mikael Finstad / #3897)
+- @growthcloud/utils: modernize `getDroppedFiles` (Antoine du Hamel / #3534)
+- @growthcloud/companion: fix default getKey for non-standalone too (Mikael Finstad / #3945)
+- @growthcloud/aws-s3-multipart: ignore exception inside `abortMultipartUpload` (Antoine du Hamel / #3950)
+- @growthcloud/companion: remove `isobject` from dependencies (Antoine du Hamel / #3948)
+- @growthcloud/compressor: Fix Compressor being broken when no name is in the compressed blob (Artur Paikin / #3947)
+- @growthcloud/core,@growthcloud/react: Fix all breaking todo comments for 3.0 (Merlijn Vos / #3907)
+- @growthcloud/companion: show deprecation message when using legacy s3 options (Antoine du Hamel / #3944)
 - example: fix aws-companion example (Antoine du Hamel / #3850)
 
 ### 3.0.0-beta.4
 
 Released: 2022-08-03
 
-- @uppy/companion,@uppy/tus: Upgrade tus-js-client to 3.0.0 (Merlijn Vos / #3942)
+- @growthcloud/companion,@growthcloud/tus: Upgrade tus-js-client to 3.0.0 (Merlijn Vos / #3942)
 - meta: fix release script (Antoine du Hamel)
-- @uppy/aws-s3-multipart: Correctly handle errors for `prepareUploadParts` (Merlijn Vos / #3912)
-- @uppy/store-default: export the class, don't expose `.callbacks` (Antoine du Hamel / #3928)
-- @uppy/remote-sources: do not rely on `.name` property (Antoine du Hamel / #3941)
-- @uppy/screen-capture: fix TODOs (Antoine du Hamel / #3930)
-- @uppy/status-bar: rename internal modules (Antoine du Hamel / #3929)
-- @uppy/transloadit: remove static properties in favor of exports (Antoine du Hamel / #3927)
-- @uppy/informer: simplify `render` method (Antoine du Hamel / #3931)
-- @uppy/url: remove private methods from public API (Antoine du Hamel / #3934)
-- @uppy/dashboard: change `copyToClipboard` signature (Antoine du Hamel / #3933)
-- @uppy/drop-target: remove `isFileTransfer` from the public API (Antoine du Hamel / #3932)
+- @growthcloud/aws-s3-multipart: Correctly handle errors for `prepareUploadParts` (Merlijn Vos / #3912)
+- @growthcloud/store-default: export the class, don't expose `.callbacks` (Antoine du Hamel / #3928)
+- @growthcloud/remote-sources: do not rely on `.name` property (Antoine du Hamel / #3941)
+- @growthcloud/screen-capture: fix TODOs (Antoine du Hamel / #3930)
+- @growthcloud/status-bar: rename internal modules (Antoine du Hamel / #3929)
+- @growthcloud/transloadit: remove static properties in favor of exports (Antoine du Hamel / #3927)
+- @growthcloud/informer: simplify `render` method (Antoine du Hamel / #3931)
+- @growthcloud/url: remove private methods from public API (Antoine du Hamel / #3934)
+- @growthcloud/dashboard: change `copyToClipboard` signature (Antoine du Hamel / #3933)
+- @growthcloud/drop-target: remove `isFileTransfer` from the public API (Antoine du Hamel / #3932)
 - meta: improve beta release script (Antoine du Hamel)
 
 ### 3.0.0-beta.3
 
 Released: 2022-07-27
 
-- @uppy/react: Fix exports in propTypes.js to fix website build (Murderlon)
-- @uppy/dashboard,@uppy/webcam: Add support for `mobileNativeCamera` option to Webcam and Dashboard (Artur Paikin / #3844)
-- @uppy/aws-s3-multipart: make `headers` part indexed too in `prepareUploadParts` (Merlijn Vos / #3895)
-- @uppy/aws-s3,@uppy/core,@uppy/dashboard,@uppy/store-redux,@uppy/xhr-upload: upgrade `nanoid` to v4 (Antoine du Hamel / #3904)
-- @uppy/companion: update minimal supported Node.js version in the docs (Antoine du Hamel / #3902)
-- @uppy/companion: upgrade `redis` to version 4.x (Antoine du Hamel / #3589)
-- @uppy/companion: remove unnecessary ts-ignores (Mikael Finstad / #3900)
+- @growthcloud/react: Fix exports in propTypes.js to fix website build (Murderlon)
+- @growthcloud/dashboard,@growthcloud/webcam: Add support for `mobileNativeCamera` option to Webcam and Dashboard (Artur Paikin / #3844)
+- @growthcloud/aws-s3-multipart: make `headers` part indexed too in `prepareUploadParts` (Merlijn Vos / #3895)
+- @growthcloud/aws-s3,@growthcloud/core,@growthcloud/dashboard,@growthcloud/store-redux,@growthcloud/xhr-upload: upgrade `nanoid` to v4 (Antoine du Hamel / #3904)
+- @growthcloud/companion: update minimal supported Node.js version in the docs (Antoine du Hamel / #3902)
+- @growthcloud/companion: upgrade `redis` to version 4.x (Antoine du Hamel / #3589)
+- @growthcloud/companion: remove unnecessary ts-ignores (Mikael Finstad / #3900)
 - meta: use `node:` protocol when using Node.js built-in core modules (Antoine du Hamel / #3871)
 - meta: upgrade to Vite v3 (Antoine du Hamel / #3882)
-- @uppy/companion: remove `COMPANION_S3_GETKEY_SAFE_BEHAVIOR` env variable (Antoine du Hamel / #3869)
+- @growthcloud/companion: remove `COMPANION_S3_GETKEY_SAFE_BEHAVIOR` env variable (Antoine du Hamel / #3869)
 - meta: fix release script for major beta versions (Antoine du Hamel)
 
 ### 3.0.0-beta.2
@@ -387,15 +379,15 @@ Released: 2022-07-06
 
 - example: fix `custom-provider` example (Antoine du Hamel / #3854)
 - example: fix Vue3 example (Antoine du Hamel / #3774)
-- @uppy/companion: remove deprecated duplicated metrics (Mikael Finstad / #3833)
+- @growthcloud/companion: remove deprecated duplicated metrics (Mikael Finstad / #3833)
 - example: update CDN example (Antoine du Hamel / #3803)
-- @uppy/companion: Companion 3 default to no s3 acl (Mikael Finstad / #3826)
-- @uppy/companion: rewrite companion.app() to return an object (Mikael Finstad / #3827)
-- @uppy/companion: remove companion provider compat api (Mikael Finstad / #3828)
-- @uppy/companion: rewrite code for node >=14 (Mikael Finstad / #3829)
-- @uppy/companion: remove chunkSize backwards compatibility (Mikael Finstad / #3830)
-- @uppy/companion: Companion: make `emitSuccess` and `emitError` private (Mikael Finstad / #3832)
-- @uppy/companion: do not use a default upload protocol (Mikael Finstad / #3834)
+- @growthcloud/companion: Companion 3 default to no s3 acl (Mikael Finstad / #3826)
+- @growthcloud/companion: rewrite companion.app() to return an object (Mikael Finstad / #3827)
+- @growthcloud/companion: remove companion provider compat api (Mikael Finstad / #3828)
+- @growthcloud/companion: rewrite code for node >=14 (Mikael Finstad / #3829)
+- @growthcloud/companion: remove chunkSize backwards compatibility (Mikael Finstad / #3830)
+- @growthcloud/companion: Companion: make `emitSuccess` and `emitError` private (Mikael Finstad / #3832)
+- @growthcloud/companion: do not use a default upload protocol (Mikael Finstad / #3834)
 
 ### 3.0.0-beta.1
 
@@ -403,7 +395,7 @@ Released: 2022-06-09
 
 - meta: improve release process for beta branch (Antoine du Hamel / #3809)
 - uppy: refactor to ESM (Antoine du Hamel / #3807)
-- @uppy/core,@uppy/dashboard: fix types for some events (Antoine du Hamel / #3812)
+- @growthcloud/core,@growthcloud/dashboard: fix types for some events (Antoine du Hamel / #3812)
 - example: update Vue2 example (Antoine du Hamel / #3802)
 
 ### 3.0.0-beta
@@ -412,206 +404,199 @@ Released: 2022-05-30
 
 - meta: temporary adjust release script for the beta (Antoine du Hamel)
 - meta: disable ESM to CJS transform in dist files (Antoine du Hamel / #3773)
-- @uppy/companion: remove `searchProviders` wrapper & move `s3` options (Merlijn Vos / #3781)
+- @growthcloud/companion: remove `searchProviders` wrapper & move `s3` options (Merlijn Vos / #3781)
 - meta: do not test on EOL versions of Node.js (Antoine du Hamel / #3786)
-- @uppy/companion: remove support for EOL versions of Node.js (Antoine du Hamel / #3784)
-- @uppy/react: refactor to ESM (Antoine du Hamel / #3780)
-- @uppy/transloadit: remove IE 10 hack (Antoine du Hamel / #3777)
+- @growthcloud/companion: remove support for EOL versions of Node.js (Antoine du Hamel / #3784)
+- @growthcloud/react: refactor to ESM (Antoine du Hamel / #3780)
+- @growthcloud/transloadit: remove IE 10 hack (Antoine du Hamel / #3777)
 
 ## 2.13.2
 
 Released: 2022-08-02
 
-| Package           | Version | Package           | Version |
-| ----------------- | ------- | ----------------- | ------- |
-| @uppy/transloadit |   2.3.6 | @uppy/robodog     |   2.9.2 |
-| @uppy/tus         |   2.4.2 | uppy              |  2.13.2 |
+| Package                  | Version | Package              | Version |
+| ------------------------ | ------- | -------------------- | ------- |
+| @growthcloud/transloadit | 2.3.6   | @growthcloud/robodog | 2.9.2   |
+| @growthcloud/tus         | 2.4.2   | uppy                 | 2.13.2  |
 
-- @uppy/transloadit: send `assembly-cancelled` only once (Antoine du Hamel / #3937)
+- @growthcloud/transloadit: send `assembly-cancelled` only once (Antoine du Hamel / #3937)
 - meta: `keepNames` in bundle (Antoine du Hamel / #3926)
 - meta: e2e: fix Transloadit test suite with Cypress 10 (Antoine du Hamel / #3936)
 - meta: Bump guzzlehttp/guzzle from 7.4.1 to 7.4.5 in /examples/aws-php (dependabot[bot] / #3842)
-- @uppy/tus: fix dependencies (Antoine du Hamel / #3923)
+- @growthcloud/tus: fix dependencies (Antoine du Hamel / #3923)
 - meta: doc: fix linter failure in `image-editor.md` (Antoine du Hamel / #3924)
 - meta: doc: Fix typo in image-editor.md (Ikko Ashimine / #3921)
 - website: Docs and header fix (Artur Paikin / #3920)
-
 
 ## 2.13.1
 
 Released: 2022-07-27
 
-| Package              | Version | Package              | Version |
-| -------------------- | ------- | -------------------- | ------- |
-| @uppy/companion      |   3.7.1 | @uppy/remote-sources |   0.1.1 |
-| @uppy/compressor     |   0.3.1 | @uppy/transloadit    |   2.3.5 |
-| @uppy/core           |   2.3.2 | @uppy/robodog        |   2.9.1 |
-| @uppy/dashboard      |   2.4.1 | uppy                 |  2.13.1 |
-| @uppy/image-editor   |   1.4.1 |                      |         |
+| Package                   | Version | Package                     | Version |
+| ------------------------- | ------- | --------------------------- | ------- |
+| @growthcloud/companion    | 3.7.1   | @growthcloud/remote-sources | 0.1.1   |
+| @growthcloud/compressor   | 0.3.1   | @growthcloud/transloadit    | 2.3.5   |
+| @growthcloud/core         | 2.3.2   | @growthcloud/robodog        | 2.9.1   |
+| @growthcloud/dashboard    | 2.4.1   | uppy                        | 2.13.1  |
+| @growthcloud/image-editor | 1.4.1   |                             |         |
 
-- @uppy/compressor: fix upload causing meta name to reset (Justin / #3890)
-- @uppy/transloadit: cancel assemblies when all its files have been removed (Antoine du Hamel / #3893)
+- @growthcloud/compressor: fix upload causing meta name to reset (Justin / #3890)
+- @growthcloud/transloadit: cancel assemblies when all its files have been removed (Antoine du Hamel / #3893)
 - e2e: Add retries for flaky e2e test (Merlijn Vos / #3915)
-- @uppy/dashboard,@uppy/image-editor,@uppy/remote-sources: Fix `uppy.close()` crashes when remote-sources or image-editor is installed (Merlijn Vos / #3914)
-- @uppy/core: Add missing type for retry-all event (Luc Boissaye / #3901)
-- @uppy/companion: Companion app type (Mikael Finstad / #3899)
+- @growthcloud/dashboard,@growthcloud/image-editor,@growthcloud/remote-sources: Fix `uppy.close()` crashes when remote-sources or image-editor is installed (Merlijn Vos / #3914)
+- @growthcloud/core: Add missing type for retry-all event (Luc Boissaye / #3901)
+- @growthcloud/companion: Companion app type (Mikael Finstad / #3899)
 - e2e: upgrade to Cypress 10 (Antoine du Hamel / #3896)
 - meta: Fix website build (Murderlon)
 - meta: Create new issue templates (Merlijn Vos / #3879)
-
 
 ## 2.13.0
 
 Released: 2022-07-18
 
-| Package            | Version | Package            | Version |
-| ------------------ | ------- | ------------------ | ------- |
-| @uppy/dashboard    |   2.4.0 | @uppy/robodog      |   2.9.0 |
-| @uppy/image-editor |   1.4.0 | uppy               |  2.13.0 |
-| @uppy/transloadit  |   2.3.4 |                    |         |
+| Package                   | Version | Package              | Version |
+| ------------------------- | ------- | -------------------- | ------- |
+| @growthcloud/dashboard    | 2.4.0   | @growthcloud/robodog | 2.9.0   |
+| @growthcloud/image-editor | 1.4.0   | uppy                 | 2.13.0  |
+| @growthcloud/transloadit  | 2.3.4   |                      |         |
 
-- @uppy/transloadit: fix outdated file ids and incorrect usage of files (Merlijn Vos / #3886)
-- @uppy/image-editor: remove beta notice (Merlijn Vos / #3877)
-- meta: Fix broken links in _posts/2019-08-1.3.md (YukeshShr / #3884)
-- meta: Fix broken link in _posts/2017-03-0.15.md (YukeshShr / #3883)
-- @uppy/image-editor: Add image editor cancel event (James R T / #3875)
-
+- @growthcloud/transloadit: fix outdated file ids and incorrect usage of files (Merlijn Vos / #3886)
+- @growthcloud/image-editor: remove beta notice (Merlijn Vos / #3877)
+- meta: Fix broken links in \_posts/2019-08-1.3.md (YukeshShr / #3884)
+- meta: Fix broken link in \_posts/2017-03-0.15.md (YukeshShr / #3883)
+- @growthcloud/image-editor: Add image editor cancel event (James R T / #3875)
 
 ## 2.12.3
 
 Released: 2022-07-11
 
-| Package           | Version | Package           | Version |
-| ----------------- | ------- | ----------------- | ------- |
-| @uppy/transloadit |   2.3.3 | uppy              |  2.12.3 |
-| @uppy/robodog     |   2.8.3 |                   |         |
+| Package                  | Version | Package | Version |
+| ------------------------ | ------- | ------- | ------- |
+| @growthcloud/transloadit | 2.3.3   | uppy    | 2.12.3  |
+| @growthcloud/robodog     | 2.8.3   |         |         |
 
-- @uppy/transloadit: fix TypeError when file is cancelled asynchronously (Antoine du Hamel / #3872)
-- @uppy/robodog,@uppy/transloadit: use modern syntax to simplify code (Antoine du Hamel / #3873)
+- @growthcloud/transloadit: fix TypeError when file is cancelled asynchronously (Antoine du Hamel / #3872)
+- @growthcloud/robodog,@growthcloud/transloadit: use modern syntax to simplify code (Antoine du Hamel / #3873)
 - meta: fix `release-beta` automation (Antoine du Hamel)
-
 
 ## 2.12.2
 
 Released: 2022-07-06
 
-| Package              | Version | Package              | Version |
-| -------------------- | ------- | -------------------- | ------- |
-| @uppy/companion      |   3.7.0 | @uppy/transloadit    |   2.3.2 |
-| @uppy/locales        |   2.1.1 | @uppy/robodog        |   2.8.2 |
-| @uppy/provider-views |   2.1.2 | uppy                 |  2.12.2 |
+| Package                     | Version | Package                  | Version |
+| --------------------------- | ------- | ------------------------ | ------- |
+| @growthcloud/companion      | 3.7.0   | @growthcloud/transloadit | 2.3.2   |
+| @growthcloud/locales        | 2.1.1   | @growthcloud/robodog     | 2.8.2   |
+| @growthcloud/provider-views | 2.1.2   | uppy                     | 2.12.2  |
 
-- @uppy/provider-views: improve logging (Mikael Finstad / #3638)
+- @growthcloud/provider-views: improve logging (Mikael Finstad / #3638)
 - docs: de-dupe companion dev docs (Mikael Finstad / #3852)
-- @uppy/companion: Getkey safe behavior (Mikael Finstad / #3592)
+- @growthcloud/companion: Getkey safe behavior (Mikael Finstad / #3592)
 - website: fix broken links (YukeshShr / #3861)
-- @uppy/companion: doc: fix Google Drive example (Antoine du Hamel / #3855)
-- @uppy/locales,@uppy/transloadit: Fix undefined error in in onTusError (Merlijn Vos / #3848)
-- @uppy/companion: build an ARM64 container (Stuart Auld / #3841)
-- @uppy/locales: Add missing translations and reorder nl_NL locale (Kasper Meinema / #3839)
+- @growthcloud/companion: doc: fix Google Drive example (Antoine du Hamel / #3855)
+- @growthcloud/locales,@growthcloud/transloadit: Fix undefined error in in onTusError (Merlijn Vos / #3848)
+- @growthcloud/companion: build an ARM64 container (Stuart Auld / #3841)
+- @growthcloud/locales: Add missing translations and reorder nl_NL locale (Kasper Meinema / #3839)
 - docs: Fix typo in aws-s3-multipart.md (Ikko Ashimine / #3838)
 - meta: do not rebase when preparing beta candidates (Antoine du Hamel)
 - meta: fix hard-coded branch name in release script (Antoine du Hamel)
-
 
 ## 2.12.1
 
 Released: 2022-06-09
 
-| Package           | Version | Package           | Version |
-| ----------------- | ------- | ----------------- | ------- |
-| @uppy/transloadit |   2.3.1 | uppy              |  2.12.1 |
-| @uppy/robodog     |   2.8.1 |                   |         |
+| Package                  | Version | Package | Version |
+| ------------------------ | ------- | ------- | ------- |
+| @growthcloud/transloadit | 2.3.1   | uppy    | 2.12.1  |
+| @growthcloud/robodog     | 2.8.1   |         |         |
 
-- @uppy/transloadit: fix `COMPANION_PATTERN` export (Antoine du Hamel / #3820)
+- @growthcloud/transloadit: fix `COMPANION_PATTERN` export (Antoine du Hamel / #3820)
 - meta: fix URL generation in the release script (Antoine du Hamel)
-
 
 ## 2.12.0
 
 Released: 2022-06-07
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/aws-s3           |   2.2.1 | @uppy/tus              |   2.4.1 |
-| @uppy/aws-s3-multipart |   2.4.1 | @uppy/url              |   2.2.0 |
-| @uppy/companion-client |   2.2.1 | @uppy/xhr-upload       |   2.1.2 |
-| @uppy/core             |   2.3.1 | @uppy/robodog          |   2.8.0 |
-| @uppy/react            |   2.2.2 | uppy                   |  2.12.0 |
-| @uppy/remote-sources   |   0.1.0 |                        |         |
+| Package                       | Version | Package                 | Version |
+| ----------------------------- | ------- | ----------------------- | ------- |
+| @growthcloud/aws-s3           | 2.2.1   | @growthcloud/tus        | 2.4.1   |
+| @growthcloud/aws-s3-multipart | 2.4.1   | @growthcloud/url        | 2.2.0   |
+| @growthcloud/companion-client | 2.2.1   | @growthcloud/xhr-upload | 2.1.2   |
+| @growthcloud/core             | 2.3.1   | @growthcloud/robodog    | 2.8.0   |
+| @growthcloud/react            | 2.2.2   | uppy                    | 2.12.0  |
+| @growthcloud/remote-sources   | 0.1.0   |                         |         |
 
-- @uppy/remote-sources: Add @uppy/remote-sources preset/plugin (Artur Paikin / #3676)
-- @uppy/react: Reset uppy instance when React component is unmounted (Tomasz Pęksa / #3814)
-- @uppy/aws-s3-multipart,@uppy/aws-s3,@uppy/tus: queue socket token requests for remote files (Merlijn Vos / #3797)
-- @uppy/xhr-upload: replace `ev.target.status` with `xhr.status` (Wes Sankey / #3782)
-- @uppy/core: fix `TypeError` when file was deleted (Antoine du Hamel / #3811)
-- @uppy/robodog: fix linter warnings (Antoine du Hamel / #3808)
+- @growthcloud/remote-sources: Add @growthcloud/remote-sources preset/plugin (Artur Paikin / #3676)
+- @growthcloud/react: Reset uppy instance when React component is unmounted (Tomasz Pęksa / #3814)
+- @growthcloud/aws-s3-multipart,@growthcloud/aws-s3,@growthcloud/tus: queue socket token requests for remote files (Merlijn Vos / #3797)
+- @growthcloud/xhr-upload: replace `ev.target.status` with `xhr.status` (Wes Sankey / #3782)
+- @growthcloud/core: fix `TypeError` when file was deleted (Antoine du Hamel / #3811)
+- @growthcloud/robodog: fix linter warnings (Antoine du Hamel / #3808)
 - meta: fix GHA workflow for prereleases (Antoine du Hamel)
-- @uppy/aws-s3-multipart: allow `companionHeaders` to be modified with `setOptions` (Paulo Lemos Neto / #3770)
-- @uppy/url: enable passing optional meta data to `addFile` (Brad Edelman / #3788)
-- @uppy/url: fix `getFileNameFromUrl` (Brad Edelman / #3804)
-- @uppy/tus: make onShouldRetry type optional (Merlijn Vos / #3800)
+- @growthcloud/aws-s3-multipart: allow `companionHeaders` to be modified with `setOptions` (Paulo Lemos Neto / #3770)
+- @growthcloud/url: enable passing optional meta data to `addFile` (Brad Edelman / #3788)
+- @growthcloud/url: fix `getFileNameFromUrl` (Brad Edelman / #3804)
+- @growthcloud/tus: make onShouldRetry type optional (Merlijn Vos / #3800)
 - doc: fix React examples (Antoine du Hamel / #3799)
 - meta: add GHA workflow for prereleases (Antoine du Hamel)
-
 
 ## 2.11.0
 
 Released: 2022-05-30
 
-| Package                   | Version | Package                   | Version |
-| ------------------------- | ------- | ------------------------- | ------- |
-| @uppy/angular             |   0.3.1 | @uppy/progress-bar        |   2.1.1 |
-| @uppy/audio               |   0.3.2 | @uppy/provider-views      |   2.1.1 |
-| @uppy/aws-s3              |   2.2.0 | @uppy/react               |   2.2.1 |
-| @uppy/aws-s3-multipart    |   2.4.0 | @uppy/react-native        |   0.3.1 |
-| @uppy/box                 |   1.0.7 | @uppy/redux-dev-tools     |   2.1.0 |
-| @uppy/companion           |   3.6.0 | @uppy/screen-capture      |   2.1.1 |
-| @uppy/companion-client    |   2.2.0 | @uppy/status-bar          |   2.2.1 |
-| @uppy/compressor          |   0.3.0 | @uppy/store-default       |   2.1.0 |
-| @uppy/core                |   2.3.0 | @uppy/store-redux         |   2.1.0 |
-| @uppy/dashboard           |   2.3.0 | @uppy/thumbnail-generator |   2.2.0 |
-| @uppy/drag-drop           |   2.1.1 | @uppy/transloadit         |   2.3.0 |
-| @uppy/dropbox             |   2.0.7 | @uppy/tus                 |   2.4.0 |
-| @uppy/facebook            |   2.0.7 | @uppy/unsplash            |   2.1.0 |
-| @uppy/file-input          |   2.1.1 | @uppy/url                 |   2.1.1 |
-| @uppy/form                |   2.0.6 | @uppy/utils               |   4.1.0 |
-| @uppy/golden-retriever    |   2.1.0 | @uppy/vue                 |   0.4.8 |
-| @uppy/google-drive        |   2.1.1 | @uppy/webcam              |   2.2.1 |
-| @uppy/image-editor        |   1.3.0 | @uppy/xhr-upload          |   2.1.1 |
-| @uppy/informer            |   2.1.0 | @uppy/zoom                |   1.1.1 |
-| @uppy/instagram           |   2.1.1 | @uppy/robodog             |   2.7.0 |
-| @uppy/onedrive            |   2.1.1 | uppy                      |  2.11.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.3.1   | @growthcloud/progress-bar        | 2.1.1   |
+| @growthcloud/audio            | 0.3.2   | @growthcloud/provider-views      | 2.1.1   |
+| @growthcloud/aws-s3           | 2.2.0   | @growthcloud/react               | 2.2.1   |
+| @growthcloud/aws-s3-multipart | 2.4.0   | @growthcloud/react-native        | 0.3.1   |
+| @growthcloud/box              | 1.0.7   | @growthcloud/redux-dev-tools     | 2.1.0   |
+| @growthcloud/companion        | 3.6.0   | @growthcloud/screen-capture      | 2.1.1   |
+| @growthcloud/companion-client | 2.2.0   | @growthcloud/status-bar          | 2.2.1   |
+| @growthcloud/compressor       | 0.3.0   | @growthcloud/store-default       | 2.1.0   |
+| @growthcloud/core             | 2.3.0   | @growthcloud/store-redux         | 2.1.0   |
+| @growthcloud/dashboard        | 2.3.0   | @growthcloud/thumbnail-generator | 2.2.0   |
+| @growthcloud/drag-drop        | 2.1.1   | @growthcloud/transloadit         | 2.3.0   |
+| @growthcloud/dropbox          | 2.0.7   | @growthcloud/tus                 | 2.4.0   |
+| @growthcloud/facebook         | 2.0.7   | @growthcloud/unsplash            | 2.1.0   |
+| @growthcloud/file-input       | 2.1.1   | @growthcloud/url                 | 2.1.1   |
+| @growthcloud/form             | 2.0.6   | @growthcloud/utils               | 4.1.0   |
+| @growthcloud/golden-retriever | 2.1.0   | @growthcloud/vue                 | 0.4.8   |
+| @growthcloud/google-drive     | 2.1.1   | @growthcloud/webcam              | 2.2.1   |
+| @growthcloud/image-editor     | 1.3.0   | @growthcloud/xhr-upload          | 2.1.1   |
+| @growthcloud/informer         | 2.1.0   | @growthcloud/zoom                | 1.1.1   |
+| @growthcloud/instagram        | 2.1.1   | @growthcloud/robodog             | 2.7.0   |
+| @growthcloud/onedrive         | 2.1.1   | uppy                             | 2.11.0  |
 
 - doc: update bundler recommendation (Antoine du Hamel / #3763)
-- @uppy/aws-s3-multipart: refactor to ESM (Antoine du Hamel / #3672)
-- @uppy/aws-s3: fix JSDoc type error (Antoine du Hamel / #3785)
-- @uppy/aws-s3: refactor to ESM (Antoine du Hamel / #3673)
-- @uppy/companion-client: Revert "Revert "@uppy/companion-client: refactor to ESM"" (Antoine du Hamel / #3730)
-- @uppy/companion: expire redis keys after 1 day (Mikael Finstad / #3771)
-- @uppy/companion: fix some linter warnings (Antoine du Hamel / #3752)
-- @uppy/compressor: Fix Compressor docs, pass files array to compressor:complete event (Artur Paikin / #3682)
-- @uppy/core: refactor to ESM (Antoine du Hamel / #3744)
-- @uppy/dashboard: refactor to ESM (Antoine du Hamel / #3701)
-- @uppy/dashboard: use webkitRelativePath when querying a file's relative path (Eduard Müller / taktik / #3766)
-- @uppy/golden-retriever: refactor to ESM (Antoine du Hamel / #3731)
-- @uppy/image-editor: remove CJS-interop hack in the source code (Antoine du Hamel / #3778)
-- @uppy/informer: @uppy/Informer: refactor to ESM (Antoine du Hamel / #3732)
-- @uppy/informer: remove remaining `require` call (Antoine du Hamel / #3737)
-- @uppy/provider-views: Add onKeyPress event handler to capture e.shiftKey, unavailable in onChange (Artur Paikin / #3768)
-- @uppy/redux-dev-tools: refactor to ESM (Antoine du Hamel / #3733)
-- @uppy/screen-capture: don't install when unsupported (Artur Paikin / #3795)
-- @uppy/store-default: refactor to ESM (Antoine du Hamel / #3746)
-- @uppy/store-redux: refactor to ESM (Antoine du Hamel / #3745)
-- @uppy/thumbnail-generator: refactor to ESM (Antoine du Hamel / #3734)
-- @uppy/transloadit: refactor to ESM (Antoine du Hamel / #3725)
-- @uppy/transloadit: transloadit: propagate error details when creating Assembly fails (Renée Kooi / #3794)
-- @uppy/tus: Add `onShouldRetry` as option to @uppy/tus (Merlijn Vos / #3720)
-- @uppy/tus: fix broken import (Antoine du Hamel / #3729)
-- @uppy/tus: fixup! @uppy/tus: wait for user promise on beforeRequest (Antoine du Hamel / #3712)
-- @uppy/tus: wait for user promise on beforeRequest (Antoine du Hamel / #3712)
-- @uppy/unsplash: refactor to ESM (Antoine du Hamel / #3728)
-- @uppy/utils: refactor to ESM (Antoine du Hamel / #3721)
+- @growthcloud/aws-s3-multipart: refactor to ESM (Antoine du Hamel / #3672)
+- @growthcloud/aws-s3: fix JSDoc type error (Antoine du Hamel / #3785)
+- @growthcloud/aws-s3: refactor to ESM (Antoine du Hamel / #3673)
+- @growthcloud/companion-client: Revert "Revert "@growthcloud/companion-client: refactor to ESM"" (Antoine du Hamel / #3730)
+- @growthcloud/companion: expire redis keys after 1 day (Mikael Finstad / #3771)
+- @growthcloud/companion: fix some linter warnings (Antoine du Hamel / #3752)
+- @growthcloud/compressor: Fix Compressor docs, pass files array to compressor:complete event (Artur Paikin / #3682)
+- @growthcloud/core: refactor to ESM (Antoine du Hamel / #3744)
+- @growthcloud/dashboard: refactor to ESM (Antoine du Hamel / #3701)
+- @growthcloud/dashboard: use webkitRelativePath when querying a file's relative path (Eduard Müller / taktik / #3766)
+- @growthcloud/golden-retriever: refactor to ESM (Antoine du Hamel / #3731)
+- @growthcloud/image-editor: remove CJS-interop hack in the source code (Antoine du Hamel / #3778)
+- @growthcloud/informer: @growthcloud/Informer: refactor to ESM (Antoine du Hamel / #3732)
+- @growthcloud/informer: remove remaining `require` call (Antoine du Hamel / #3737)
+- @growthcloud/provider-views: Add onKeyPress event handler to capture e.shiftKey, unavailable in onChange (Artur Paikin / #3768)
+- @growthcloud/redux-dev-tools: refactor to ESM (Antoine du Hamel / #3733)
+- @growthcloud/screen-capture: don't install when unsupported (Artur Paikin / #3795)
+- @growthcloud/store-default: refactor to ESM (Antoine du Hamel / #3746)
+- @growthcloud/store-redux: refactor to ESM (Antoine du Hamel / #3745)
+- @growthcloud/thumbnail-generator: refactor to ESM (Antoine du Hamel / #3734)
+- @growthcloud/transloadit: refactor to ESM (Antoine du Hamel / #3725)
+- @growthcloud/transloadit: transloadit: propagate error details when creating Assembly fails (Renée Kooi / #3794)
+- @growthcloud/tus: Add `onShouldRetry` as option to @growthcloud/tus (Merlijn Vos / #3720)
+- @growthcloud/tus: fix broken import (Antoine du Hamel / #3729)
+- @growthcloud/tus: fixup! @growthcloud/tus: wait for user promise on beforeRequest (Antoine du Hamel / #3712)
+- @growthcloud/tus: wait for user promise on beforeRequest (Antoine du Hamel / #3712)
+- @growthcloud/unsplash: refactor to ESM (Antoine du Hamel / #3728)
+- @growthcloud/utils: refactor to ESM (Antoine du Hamel / #3721)
 - dev: fix dev env Vite's config (Antoine du Hamel)
 - dev: fix return type of generateSignatureIfSecret (Renée Kooi / #3793)
 - dev: remove `vite-plugin-jsx-commonjs` plugin on dev env (Antoine du Hamel / #3749)
@@ -630,52 +615,51 @@ Released: 2022-05-30
 - test: split Companion CI between Node.js legacy and supported versions (Antoine du Hamel / #3776)
 - website: disable linter warnings (Antoine du Hamel / #3759)
 
-
 ## 2.10.0
 
 Released: 2022-05-14
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/audio            |   0.3.1 | @uppy/provider-views   |   2.1.0 |
-| @uppy/aws-s3           |   2.1.0 | @uppy/react            |   2.2.0 |
-| @uppy/aws-s3-multipart |   2.3.0 | @uppy/react-native     |   0.3.0 |
-| @uppy/companion-client |   2.1.0 | @uppy/screen-capture   |   2.1.0 |
-| @uppy/core             |   2.2.0 | @uppy/status-bar       |   2.2.0 |
-| @uppy/dashboard        |   2.2.0 | @uppy/svelte           |   1.0.8 |
-| @uppy/drag-drop        |   2.1.0 | @uppy/transloadit      |   2.2.0 |
-| @uppy/file-input       |   2.1.0 | @uppy/tus              |   2.3.0 |
-| @uppy/google-drive     |   2.1.0 | @uppy/url              |   2.1.0 |
-| @uppy/image-editor     |   1.2.0 | @uppy/webcam           |   2.2.0 |
-| @uppy/instagram        |   2.1.0 | @uppy/xhr-upload       |   2.1.0 |
-| @uppy/locales          |   2.1.0 | @uppy/zoom             |   1.1.0 |
-| @uppy/onedrive         |   2.1.0 | @uppy/robodog          |   2.6.0 |
-| @uppy/progress-bar     |   2.1.0 | uppy                   |  2.10.0 |
+| Package                       | Version | Package                     | Version |
+| ----------------------------- | ------- | --------------------------- | ------- |
+| @growthcloud/audio            | 0.3.1   | @growthcloud/provider-views | 2.1.0   |
+| @growthcloud/aws-s3           | 2.1.0   | @growthcloud/react          | 2.2.0   |
+| @growthcloud/aws-s3-multipart | 2.3.0   | @growthcloud/react-native   | 0.3.0   |
+| @growthcloud/companion-client | 2.1.0   | @growthcloud/screen-capture | 2.1.0   |
+| @growthcloud/core             | 2.2.0   | @growthcloud/status-bar     | 2.2.0   |
+| @growthcloud/dashboard        | 2.2.0   | @growthcloud/svelte         | 1.0.8   |
+| @growthcloud/drag-drop        | 2.1.0   | @growthcloud/transloadit    | 2.2.0   |
+| @growthcloud/file-input       | 2.1.0   | @growthcloud/tus            | 2.3.0   |
+| @growthcloud/google-drive     | 2.1.0   | @growthcloud/url            | 2.1.0   |
+| @growthcloud/image-editor     | 1.2.0   | @growthcloud/webcam         | 2.2.0   |
+| @growthcloud/instagram        | 2.1.0   | @growthcloud/xhr-upload     | 2.1.0   |
+| @growthcloud/locales          | 2.1.0   | @growthcloud/zoom           | 1.1.0   |
+| @growthcloud/onedrive         | 2.1.0   | @growthcloud/robodog        | 2.6.0   |
+| @growthcloud/progress-bar     | 2.1.0   | uppy                        | 2.10.0  |
 
-- @uppy/audio: fix types (Merlijn Vos / #3689)
-- @uppy/aws-s3-multipart,@uppy/aws-s3,@uppy/core,@uppy/react,@uppy/transloadit,@uppy/tus,@uppy/xhr-upload: proposal: Cancel assemblies optional (Mikael Finstad / #3575)
-- @uppy/aws-s3-multipart: export interface AwsS3MultipartOptions (Matteo Padovano / #3709)
-- @uppy/companion-client: refactor to ESM (Antoine du Hamel / #3693)
-- @uppy/companion: Only deploy on companion changes (kiloreux / #3677)
-- @uppy/core: add definition for addFiles method (Matteo Padovano / #3556)
-- @uppy/core: wrap plugins in div.uppy-Root and set dir attrubute in UIPlugin (Artur Paikin / #3692)
-- @uppy/google-drive: refactor to ESM (Antoine du Hamel / #3683)
-- @uppy/image-editor: refactor to ESM (Antoine du Hamel / #3685)
-- @uppy/instagram: refactor to ESM (Antoine du Hamel / #3696)
-- @uppy/locales: Add `save` translation to Spanish locale (Juan Carlos Alonso / #3678)
-- @uppy/locales: refactor to ESM (Antoine du Hamel / #3707)
-- @uppy/onedrive: refactor to ESM (Antoine du Hamel / #3694)
-- @uppy/progress-bar: refactor to ESM (Antoine du Hamel / #3706)
-- @uppy/provider-views: refactor to ESM (Antoine du Hamel / #3715)
-- @uppy/react: Support React 18 in @uppy/react (Merlijn Vos / #3680)
-- @uppy/screen-capture: refactor to ESM (Antoine du Hamel / #3698)
-- @uppy/status-bar: refactor to ESM (Antoine du Hamel / #3697)
-- @uppy/transloadit: add rate limiting for assembly creation and status polling (Antoine du Hamel / #3718)
-- @uppy/tus: refactor to ESM (Antoine du Hamel / #3724)
-- @uppy/url: refactor to ESM (Antoine du Hamel / #3713)
-- @uppy/webcam: refactor to ESM (Antoine du Hamel / #3686)
-- @uppy/xhr-upload: refactor to ESM (Antoine du Hamel / #3695)
-- @uppy/zoom: refactor to ESM (Antoine du Hamel / #3699)
+- @growthcloud/audio: fix types (Merlijn Vos / #3689)
+- @growthcloud/aws-s3-multipart,@growthcloud/aws-s3,@growthcloud/core,@growthcloud/react,@growthcloud/transloadit,@growthcloud/tus,@growthcloud/xhr-upload: proposal: Cancel assemblies optional (Mikael Finstad / #3575)
+- @growthcloud/aws-s3-multipart: export interface AwsS3MultipartOptions (Matteo Padovano / #3709)
+- @growthcloud/companion-client: refactor to ESM (Antoine du Hamel / #3693)
+- @growthcloud/companion: Only deploy on companion changes (kiloreux / #3677)
+- @growthcloud/core: add definition for addFiles method (Matteo Padovano / #3556)
+- @growthcloud/core: wrap plugins in div.uppy-Root and set dir attrubute in UIPlugin (Artur Paikin / #3692)
+- @growthcloud/google-drive: refactor to ESM (Antoine du Hamel / #3683)
+- @growthcloud/image-editor: refactor to ESM (Antoine du Hamel / #3685)
+- @growthcloud/instagram: refactor to ESM (Antoine du Hamel / #3696)
+- @growthcloud/locales: Add `save` translation to Spanish locale (Juan Carlos Alonso / #3678)
+- @growthcloud/locales: refactor to ESM (Antoine du Hamel / #3707)
+- @growthcloud/onedrive: refactor to ESM (Antoine du Hamel / #3694)
+- @growthcloud/progress-bar: refactor to ESM (Antoine du Hamel / #3706)
+- @growthcloud/provider-views: refactor to ESM (Antoine du Hamel / #3715)
+- @growthcloud/react: Support React 18 in @growthcloud/react (Merlijn Vos / #3680)
+- @growthcloud/screen-capture: refactor to ESM (Antoine du Hamel / #3698)
+- @growthcloud/status-bar: refactor to ESM (Antoine du Hamel / #3697)
+- @growthcloud/transloadit: add rate limiting for assembly creation and status polling (Antoine du Hamel / #3718)
+- @growthcloud/tus: refactor to ESM (Antoine du Hamel / #3724)
+- @growthcloud/url: refactor to ESM (Antoine du Hamel / #3713)
+- @growthcloud/webcam: refactor to ESM (Antoine du Hamel / #3686)
+- @growthcloud/xhr-upload: refactor to ESM (Antoine du Hamel / #3695)
+- @growthcloud/zoom: refactor to ESM (Antoine du Hamel / #3699)
 - meta: e2e: fix failing test (Antoine du Hamel / #3722)
 - test: harden linter rule for JSX/ESM validation (Antoine du Hamel / #3681)
 - test: harden linter rules for ESM/CJS validation (Antoine du Hamel / #3674)
@@ -683,286 +667,284 @@ Released: 2022-05-14
 - test: Remove `it.only` from e2e test (Merlijn Vos / #3690)
 - tests: Make Cypress more stable & add e2e test for error events when upload fails (Merlijn Vos / #3662)
 
-
 ## 2.9.5
 
 Released: 2022-04-27
 
-| Package         | Version | Package         | Version |
-| --------------- | ------- | --------------- | ------- |
-| @uppy/companion |   3.5.2 | @uppy/robodog   |   2.5.5 |
-| @uppy/core      |  2.1.10 | uppy            |   2.9.5 |
+| Package                | Version | Package              | Version |
+| ---------------------- | ------- | -------------------- | ------- |
+| @growthcloud/companion | 3.5.2   | @growthcloud/robodog | 2.5.5   |
+| @growthcloud/core      | 2.1.10  | uppy                 | 2.9.5   |
 
-- @uppy/companion: Bump moment from 2.29.1 to 2.29.2 (dependabot[bot] / #3635)
-- @uppy/core: fix `TypeError` when file was removed (Antoine du Hamel / #3670)
-
+- @growthcloud/companion: Bump moment from 2.29.1 to 2.29.2 (dependabot[bot] / #3635)
+- @growthcloud/core: fix `TypeError` when file was removed (Antoine du Hamel / #3670)
 
 ## 2.9.4
 
 Released: 2022-04-27
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/aws-s3-multipart |   2.2.2 | @uppy/file-input       |   2.0.6 |
-| @uppy/box              |   1.0.6 | @uppy/form             |   2.0.5 |
-| @uppy/companion        |   3.5.1 | @uppy/locales          |   2.0.9 |
-| @uppy/compressor       |   0.2.5 | @uppy/transloadit      |   2.1.5 |
-| @uppy/core             |   2.1.9 | @uppy/utils            |   4.0.7 |
-| @uppy/drag-drop        |   2.0.7 | @uppy/vue              |   0.4.7 |
-| @uppy/drop-target      |   1.1.3 | @uppy/robodog          |   2.5.4 |
-| @uppy/dropbox          |   2.0.6 | uppy                   |   2.9.4 |
-| @uppy/facebook         |   2.0.6 |                        |         |
+| Package                       | Version | Package                  | Version |
+| ----------------------------- | ------- | ------------------------ | ------- |
+| @growthcloud/aws-s3-multipart | 2.2.2   | @growthcloud/file-input  | 2.0.6   |
+| @growthcloud/box              | 1.0.6   | @growthcloud/form        | 2.0.5   |
+| @growthcloud/companion        | 3.5.1   | @growthcloud/locales     | 2.0.9   |
+| @growthcloud/compressor       | 0.2.5   | @growthcloud/transloadit | 2.1.5   |
+| @growthcloud/core             | 2.1.9   | @growthcloud/utils       | 4.0.7   |
+| @growthcloud/drag-drop        | 2.0.7   | @growthcloud/vue         | 0.4.7   |
+| @growthcloud/drop-target      | 1.1.3   | @growthcloud/robodog     | 2.5.4   |
+| @growthcloud/dropbox          | 2.0.6   | uppy                     | 2.9.4   |
+| @growthcloud/facebook         | 2.0.6   |                          |         |
 
-- @uppy/locales: Plural translation in cs_CZ local (JakubHaladej / #3666)
-- @uppy/vue: Add license field to package.json in @uppy/vue (Tobias Trumm / #3664)
+- @growthcloud/locales: Plural translation in cs_CZ local (JakubHaladej / #3666)
+- @growthcloud/vue: Add license field to package.json in @growthcloud/vue (Tobias Trumm / #3664)
 - meta: Add todo comments (Murderlon)
-- @uppy/facebook: refactor to ESM (Antoine du Hamel / #3653)
+- @growthcloud/facebook: refactor to ESM (Antoine du Hamel / #3653)
 - meta: locale-pack: refactor to use more parallel processing (Antoine du Hamel / #3630)
-- @uppy/file-input: refactor to ESM (Antoine du Hamel / #3652)
+- @growthcloud/file-input: refactor to ESM (Antoine du Hamel / #3652)
 - meta: sign requests sent to Transloadit in e2e suite (Antoine du Hamel / #3656)
 - meta: add `VITE_TRANSLOADIT_SECRET` for e2e (Antoine du Hamel)
 - meta: Update BACKLOG.md (Artur Paikin)
-- @uppy/form: refactor to ESM (Antoine du Hamel / #3654)
-- @uppy/dropbox: refactor to ESM (Antoine du Hamel / #3651)
+- @growthcloud/form: refactor to ESM (Antoine du Hamel / #3654)
+- @growthcloud/dropbox: refactor to ESM (Antoine du Hamel / #3651)
 - meta: sign requests sent to Transloadit in dev env (Antoine du Hamel / #3517)
-- @uppy/drop-target: refactor to ESM (Antoine du Hamel / #3648)
-- @uppy/core: fix `TypeError` when file was removed (Antoine du Hamel / #3650)
-- @uppy/drag-drop: refactor to ESM (Antoine du Hamel / #3647)
+- @growthcloud/drop-target: refactor to ESM (Antoine du Hamel / #3648)
+- @growthcloud/core: fix `TypeError` when file was removed (Antoine du Hamel / #3650)
+- @growthcloud/drag-drop: refactor to ESM (Antoine du Hamel / #3647)
 - meta: update outdated files (Antoine du Hamel / #3646)
-- @uppy/compressor: Set meta on file compression (Camilo Forero / #3644)
-- @uppy/transloadit: improve fetch error handling (Antoine du Hamel / #3637)
-- @uppy/box: refactor to ESM (Antoine du Hamel / #3643)
-- @uppy/utils: Fix getFileType for dicom images (Merlijn Vos / #3610)
-- @uppy/aws-s3-multipart: Add `companionCookiesRule` type to @uppy/aws-s3-multipart (Mauricio Ribeiro / #3623)
-
+- @growthcloud/compressor: Set meta on file compression (Camilo Forero / #3644)
+- @growthcloud/transloadit: improve fetch error handling (Antoine du Hamel / #3637)
+- @growthcloud/box: refactor to ESM (Antoine du Hamel / #3643)
+- @growthcloud/utils: Fix getFileType for dicom images (Merlijn Vos / #3610)
+- @growthcloud/aws-s3-multipart: Add `companionCookiesRule` type to @growthcloud/aws-s3-multipart (Mauricio Ribeiro / #3623)
 
 ## 2.9.3
 
 Released: 2022-04-07
 
-| Package       | Version | Package       | Version |
-| ------------- | ------- | ------------- | ------- |
-| @uppy/core    |   2.1.8 | uppy          |   2.9.3 |
-| @uppy/robodog |   2.5.3 |               |         |
+| Package              | Version | Package | Version |
+| -------------------- | ------- | ------- | ------- |
+| @growthcloud/core    | 2.1.8   | uppy    | 2.9.3   |
+| @growthcloud/robodog | 2.5.3   |         |         |
 
-- @uppy/core: fix TypeError in event handler when file was removed (Antoine du Hamel / #3629)
-
+- @growthcloud/core: fix TypeError in event handler when file was removed (Antoine du Hamel / #3629)
 
 ## 2.9.2
 
 Released: 2022-04-07
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/aws-s3           |   2.0.9 | @uppy/utils            |   4.0.6 |
-| @uppy/companion-client |   2.0.6 | @uppy/robodog          |   2.5.2 |
-| @uppy/compressor       |   0.2.4 | uppy                   |   2.9.2 |
-| @uppy/transloadit      |   2.1.4 |                        |         |
+| Package                       | Version | Package              | Version |
+| ----------------------------- | ------- | -------------------- | ------- |
+| @growthcloud/aws-s3           | 2.0.9   | @growthcloud/utils   | 4.0.6   |
+| @growthcloud/companion-client | 2.0.6   | @growthcloud/robodog | 2.5.2   |
+| @growthcloud/compressor       | 0.2.4   | uppy                 | 2.9.2   |
+| @growthcloud/transloadit      | 2.1.4   |                      |         |
 
-- @uppy/aws-s3,@uppy/companion-client,@uppy/transloadit,@uppy/utils: Propagate `isNetworkError` through error wrappers (Renée Kooi / #3620)
-- @uppy/compressor: Merge new name and type into compressed file (Camilo Forero / #3606)
-
+- @growthcloud/aws-s3,@growthcloud/companion-client,@growthcloud/transloadit,@growthcloud/utils: Propagate `isNetworkError` through error wrappers (Renée Kooi / #3620)
+- @growthcloud/compressor: Merge new name and type into compressed file (Camilo Forero / #3606)
 
 ## 2.9.1
 
 Released: 2022-03-29
 
-| Package       | Version | Package       | Version |
-| ------------- | ------- | ------------- | ------- |
-| @uppy/core    |   2.1.7 | @uppy/robodog |   2.5.1 |
-| @uppy/tus     |   2.2.2 | uppy          |   2.9.1 |
+| Package           | Version | Package              | Version |
+| ----------------- | ------- | -------------------- | ------- |
+| @growthcloud/core | 2.1.7   | @growthcloud/robodog | 2.5.1   |
+| @growthcloud/tus  | 2.2.2   | uppy                 | 2.9.1   |
 
-- @uppy/tus: fix hasOwn (Mikael Finstad / #3604)
+- @growthcloud/tus: fix hasOwn (Mikael Finstad / #3604)
 - meta: Increase test timeout for flaky e2e tests (Merlijn Vos / #3603)
 - meta: upgrade GHA actions (Antoine du Hamel / #3602)
-- @uppy/core: refactor: replace deprecated String.prototype.substr() (CommanderRoot / #3600)
-
+- @growthcloud/core: refactor: replace deprecated String.prototype.substr() (CommanderRoot / #3600)
 
 ## 2.9.0
 
 Released: 2022-03-24
 
-| Package           | Version | Package           | Version |
-| ----------------- | ------- | ----------------- | ------- |
-| @uppy/companion   |   3.5.0 | @uppy/webcam      |   2.1.0 |
-| @uppy/status-bar  |   2.1.3 | @uppy/robodog     |   2.5.0 |
-| @uppy/transloadit |   2.1.2 | uppy              |   2.9.0 |
-| @uppy/tus         |   2.2.1 |                   |         |
+| Package                  | Version | Package              | Version |
+| ------------------------ | ------- | -------------------- | ------- |
+| @growthcloud/companion   | 3.5.0   | @growthcloud/webcam  | 2.1.0   |
+| @growthcloud/status-bar  | 2.1.3   | @growthcloud/robodog | 2.5.0   |
+| @growthcloud/transloadit | 2.1.2   | uppy                 | 2.9.0   |
+| @growthcloud/tus         | 2.2.1   |                      |         |
 
-- @uppy/transloadit: close assembly if upload is cancelled (Antoine du Hamel / #3591)
-- @uppy/companion: Companion server upload events (Mikael Finstad / #3544)
-- @uppy/tus: fix double requests sent when rate limiting (Antoine du Hamel / #3595)
+- @growthcloud/transloadit: close assembly if upload is cancelled (Antoine du Hamel / #3591)
+- @growthcloud/companion: Companion server upload events (Mikael Finstad / #3544)
+- @growthcloud/tus: fix double requests sent when rate limiting (Antoine du Hamel / #3595)
 - website: fix linter error on blog post (Antoine du Hamel / #3596)
-- @uppy/companion: fix `yarn test` command (Antoine du Hamel / #3590)
-- @uppy/webcam: Mime types in webcam options type (Sobakin Sviatoslav / #3593)
+- @growthcloud/companion: fix `yarn test` command (Antoine du Hamel / #3590)
+- @growthcloud/webcam: Mime types in webcam options type (Sobakin Sviatoslav / #3593)
 - website: Some polish and a better (?) intro for the recent update post (AJvanLoon / #3588)
-- @uppy/companion: Allow setting no ACL (Mikael Finstad / #3577)
-- @uppy/companion: Small companion code and doc changes (Mikael Finstad / #3586)
-- @uppy/robodog: fix CDN bundle (Antoine du Hamel / #3587)
+- @growthcloud/companion: Allow setting no ACL (Mikael Finstad / #3577)
+- @growthcloud/companion: Small companion code and doc changes (Mikael Finstad / #3586)
+- @growthcloud/robodog: fix CDN bundle (Antoine du Hamel / #3587)
 - website: Fix broken link (YukeshShr / #3581)
 
 ## 2.8.0
 
 Released: 2022-03-16
 
-| Package              | Version | Package              | Version |
-| -------------------- | ------- | -------------------- | ------- |
-| @uppy/audio          |   0.3.0 | @uppy/locales        |   2.0.8 |
-| @uppy/aws-s3         |   2.0.8 | @uppy/provider-views |   2.0.8 |
-| @uppy/companion      |   3.4.0 | @uppy/vue            |   0.4.6 |
-| @uppy/compressor     |   0.2.3 | @uppy/robodog        |   2.4.0 |
-| @uppy/core           |   2.1.6 | uppy                 |   2.8.0 |
-| @uppy/drop-target    |   1.1.2 |                      |         |
+| Package                  | Version | Package                     | Version |
+| ------------------------ | ------- | --------------------------- | ------- |
+| @growthcloud/audio       | 0.3.0   | @growthcloud/locales        | 2.0.8   |
+| @growthcloud/aws-s3      | 2.0.8   | @growthcloud/provider-views | 2.0.8   |
+| @growthcloud/companion   | 3.4.0   | @growthcloud/vue            | 0.4.6   |
+| @growthcloud/compressor  | 0.2.3   | @growthcloud/robodog        | 2.4.0   |
+| @growthcloud/core        | 2.1.6   | uppy                        | 2.8.0   |
+| @growthcloud/drop-target | 1.1.2   |                             |         |
 
-- @uppy/aws-s3: fix wrong events being sent to companion (Mikael Finstad / #3576)
-- @uppy/compressor: ignore remote files, calculate savings correctly (Artur Paikin / #3578)
-- @uppy/companion: always log errors with stack trace (Mikael Finstad / #3573)
+- @growthcloud/aws-s3: fix wrong events being sent to companion (Mikael Finstad / #3576)
+- @growthcloud/compressor: ignore remote files, calculate savings correctly (Artur Paikin / #3578)
+- @growthcloud/companion: always log errors with stack trace (Mikael Finstad / #3573)
 - meta: remove incorrect s3 documentation (Mikael Finstad / #3571)
-- @uppy/companion: Companion refactor (Mikael Finstad / #3542)
+- @growthcloud/companion: Companion refactor (Mikael Finstad / #3542)
 - website: partial ooops (Artur Paikin)
 - meta: run e2e workflow on the head branch instead of the base one (Antoine du Hamel / #3561)
 - website: Use Plausible instead of Google Analytics (Artur Paikin / #3567)
-- @uppy/vue: enforce use of file extension within the import path (Antoine du Hamel / #3560)
-- @uppy/drop-target: ignore if dropped elements aren't files (Penar Musaraj / #3563)
-- @uppy/core: Abstract restriction logic in a new Restricter class (Merlijn Vos / #3532)
-- @uppy/companion: Fetch all Google Drive shared drives (Robert DiMartino / #3553)
+- @growthcloud/vue: enforce use of file extension within the import path (Antoine du Hamel / #3560)
+- @growthcloud/drop-target: ignore if dropped elements aren't files (Penar Musaraj / #3563)
+- @growthcloud/core: Abstract restriction logic in a new Restricter class (Merlijn Vos / #3532)
+- @growthcloud/companion: Fetch all Google Drive shared drives (Robert DiMartino / #3553)
 - website: add blog post 2.4-2.7 (Artur Paikin / #3557)
 - meta: fix e2e (Antoine du Hamel / #3562)
 - meta: fix broken link (YukeshShr / #3559)
 - meta: fix support of export declaration in source files (Antoine du Hamel / #3558)
-- @uppy/companion: Order Google Drive results by folder to show all folders first (Robert DiMartino / #3546)
+- @growthcloud/companion: Order Google Drive results by folder to show all folders first (Robert DiMartino / #3546)
 - meta: add corsOrigins to docs (Mikael Finstad / #3554)
-- @uppy/audio: refactor to ESM (Antoine du Hamel / #3470)
-- @uppy/locales: compressor cleanup (Antoine du Hamel / #3531)
+- @growthcloud/audio: refactor to ESM (Antoine du Hamel / #3470)
+- @growthcloud/locales: compressor cleanup (Antoine du Hamel / #3531)
 - meta: fix CJS interop in Vite config (Antoine du Hamel / #3543)
-- @uppy/companion: upgrade node-redis-pubsub (Mikael Finstad / #3541)
-- @uppy/provider-views: provider-view: fix breadcrumbs (Artur Paikin / #3535)
+- @growthcloud/companion: upgrade node-redis-pubsub (Mikael Finstad / #3541)
+- @growthcloud/provider-views: provider-view: fix breadcrumbs (Artur Paikin / #3535)
 - meta: Update BACKLOG.md (Artur Paikin)
-- @uppy/locales: Update ru_RU.js (Sobakin Sviatoslav / #3529)
-- @uppy/companion: reorder reqToOptions (Antoine du Hamel / #3530)
+- @growthcloud/locales: Update ru_RU.js (Sobakin Sviatoslav / #3529)
+- @growthcloud/companion: reorder reqToOptions (Antoine du Hamel / #3530)
 - meta: Fix yarn caching in github actions (Mikael Finstad / #3526)
-
 
 ## 2.7.0
 
 Released: 2022-03-02
 
-| Package                | Version | Package                | Version |
-| ---------------------- | ------- | ---------------------- | ------- |
-| @uppy/angular          |   0.3.0 | @uppy/locales          |   2.0.7 |
-| @uppy/aws-s3-multipart |   2.2.1 | uppy                   |   2.7.0 |
-| @uppy/companion        |   3.3.1 |                        |         |
+| Package                       | Version | Package              | Version |
+| ----------------------------- | ------- | -------------------- | ------- |
+| @growthcloud/angular          | 0.3.0   | @growthcloud/locales | 2.0.7   |
+| @growthcloud/aws-s3-multipart | 2.2.1   | uppy                 | 2.7.0   |
+| @growthcloud/companion        | 3.3.1   |                      |         |
 
-- @uppy/companion: fix unstable test (Mikael Finstad)
-- @uppy/companion: replace debug (Mikael Finstad)
-- @uppy/companion: Fix COMPANION_PATH (Mikael Finstad / #3515)
-- @uppy/angular: update ng version (Antoine du Hamel / #3503)
-- @uppy/companion: Upload protocol "s3-multipart" does not use the chunkSize option (Gabi Ganam / #3511)
-- @uppy/aws-s3-multipart: Add chunks back to prepareUploadParts, indexed by partNumber (Kevin West / #3520)
-- @uppy/locales: Update zh_CN.js (linxunzyf / #3513)
+- @growthcloud/companion: fix unstable test (Mikael Finstad)
+- @growthcloud/companion: replace debug (Mikael Finstad)
+- @growthcloud/companion: Fix COMPANION_PATH (Mikael Finstad / #3515)
+- @growthcloud/angular: update ng version (Antoine du Hamel / #3503)
+- @growthcloud/companion: Upload protocol "s3-multipart" does not use the chunkSize option (Gabi Ganam / #3511)
+- @growthcloud/aws-s3-multipart: Add chunks back to prepareUploadParts, indexed by partNumber (Kevin West / #3520)
+- @growthcloud/locales: Update zh_CN.js (linxunzyf / #3513)
 - meta: update remark dependencies (Antoine du Hamel / #3502)
+
 ## 2.6.0
 
 Released: 2022-02-17
 
-| Package         | Version | Package         | Version |
-| --------------- | ------- | --------------- | ------- |
-| @uppy/companion |   3.3.0 | uppy            |   2.6.0 |
-| @uppy/robodog   |   2.3.2 |                 |         |
+| Package                | Version | Package | Version |
+| ---------------------- | ------- | ------- | ------- |
+| @growthcloud/companion | 3.3.0   | uppy    | 2.6.0   |
+| @growthcloud/robodog   | 2.3.2   |         |         |
 
 - meta: warn about not merging PR manually (Artur Paikin / #3492)
-- @uppy/companion: fix unpslash author meta, sanitize metadata to strings and improve companion tests (Mikael Finstad / #3478)
+- @growthcloud/companion: fix unpslash author meta, sanitize metadata to strings and improve companion tests (Mikael Finstad / #3478)
 - meta: ensure README is correctly formatted when doing releases (Antoine du Hamel / #3499)
 - meta: fix CDN bundle (Antoine du Hamel / #3494)
 - meta: fix missing EOL and end of e2e test templates (Antoine du Hamel / #3484)
 - meta: use a single `.env` file for config (Antoine du Hamel / #3498)
+
 ## 2.5.1
 
 Released: 2022-02-16
 
-| Package                   | Version | Package                   | Version |
-| ------------------------- | ------- | ------------------------- | ------- |
-| @uppy/companion           |   3.2.1 | @uppy/thumbnail-generator |   2.1.1 |
-| @uppy/compressor          |   0.2.2 | @uppy/robodog             |   2.3.1 |
-| @uppy/onedrive            |   2.0.6 | uppy                      |   2.5.1 |
+| Package                 | Version | Package                          | Version |
+| ----------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/companion  | 3.2.1   | @growthcloud/thumbnail-generator | 2.1.1   |
+| @growthcloud/compressor | 0.2.2   | @growthcloud/robodog             | 2.3.1   |
+| @growthcloud/onedrive   | 2.0.6   | uppy                             | 2.5.1   |
 
 - meta: Missing comma and wrong attribute name on cors example config (Edgar Santiago / #3465)
-- @uppy/onedrive: Update README.md (Márton László Attila / #3489)
-- @uppy/compressor: Add image compressor plugin (Artur Paikin / #3471)
-- @uppy/companion: fix periodicPingUrls oops (Mikael Finstad / #3490)
+- @growthcloud/onedrive: Update README.md (Márton László Attila / #3489)
+- @growthcloud/compressor: Add image compressor plugin (Artur Paikin / #3471)
+- @growthcloud/companion: fix periodicPingUrls oops (Mikael Finstad / #3490)
 - meta: add support for ESM sources in build script (Antoine du Hamel / #3468)
+
 ## 2.5.0
 
 Released: 2022-02-14
 
-| Package                   | Version | Package                   | Version |
-| ------------------------- | ------- | ------------------------- | ------- |
-| @uppy/companion           |   3.2.0 | @uppy/provider-views      |   2.0.7 |
-| @uppy/companion-client    |   2.0.5 | @uppy/thumbnail-generator |   2.1.0 |
-| @uppy/core                |   2.1.5 | @uppy/robodog             |   2.3.0 |
-| @uppy/dashboard           |   2.1.4 | uppy                      |   2.5.0 |
-| @uppy/locales             |   2.0.6 |                           |         |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/companion        | 3.2.0   | @growthcloud/provider-views      | 2.0.7   |
+| @growthcloud/companion-client | 2.0.5   | @growthcloud/thumbnail-generator | 2.1.0   |
+| @growthcloud/core             | 2.1.5   | @growthcloud/robodog             | 2.3.0   |
+| @growthcloud/dashboard        | 2.1.4   | uppy                             | 2.5.0   |
+| @growthcloud/locales          | 2.0.6   |                                  |         |
 
-- @uppy/companion: add support for COMPANION_UNSPLASH_SECRET (Mikael Finstad / #3463)
-- @uppy/unsplash: fix nested meta (Artur Paikin / #3485)
+- @growthcloud/companion: add support for COMPANION_UNSPLASH_SECRET (Mikael Finstad / #3463)
+- @growthcloud/unsplash: fix nested meta (Artur Paikin / #3485)
 - meta: fix(docs): typo in property `thumbnailType` (Dan Schalow / #3472)
-- @uppy/robodog: add audio, box, unsplash, screen-capture to Robodog (Artur Paikin / #3483)
+- @growthcloud/robodog: add audio, box, unsplash, screen-capture to Robodog (Artur Paikin / #3483)
 - meta: consolidate ENV files and fix contributing guidelines (Antoine du Hamel / #3475)
-- @uppy/companion-client,@uppy/companion,@uppy/provider-views,@uppy/robodog: Finishing touches on Companion dynamic Oauth (Renée Kooi / #2802)
+- @growthcloud/companion-client,@growthcloud/companion,@growthcloud/provider-views,@growthcloud/robodog: Finishing touches on Companion dynamic Oauth (Renée Kooi / #2802)
 - meta: Improve companion docs (Mikael Finstad / #3479)
 - meta: Make E2E Great Again (Merlijn Vos / #3444)
 - meta: Add PostCSS handling to Vite (Artur Paikin / #3467)
 - meta: Update CONTRIBUTING.md (Mikael Finstad / #3411)
-- @uppy/companion: fix broken thumbnails for box and dropbox (Mikael Finstad / #3460)
+- @growthcloud/companion: fix broken thumbnails for box and dropbox (Mikael Finstad / #3460)
 - website: fix `Uppy is not defined` error (Antoine du Hamel / #3461)
-- @uppy/companion: Implement periodic ping functionality (Mikael Finstad / #3246)
-- @uppy/companion: fix callback urls (Mikael Finstad / #3458)
-- @uppy/core,@uppy/dashboard,@uppy/thumbnail-generator: Add dashboard and UIPlugin types (Merlijn Vos / #3426)
-- @uppy/locales: Add "save" to fr_FR.js (Charly Billaud / #3395)
-- @uppy/companion: Fix TypeError when invalid initialization vector (Julian Gruber / #3416)
+- @growthcloud/companion: Implement periodic ping functionality (Mikael Finstad / #3246)
+- @growthcloud/companion: fix callback urls (Mikael Finstad / #3458)
+- @growthcloud/core,@growthcloud/dashboard,@growthcloud/thumbnail-generator: Add dashboard and UIPlugin types (Merlijn Vos / #3426)
+- @growthcloud/locales: Add "save" to fr_FR.js (Charly Billaud / #3395)
+- @growthcloud/companion: Fix TypeError when invalid initialization vector (Julian Gruber / #3416)
 - meta: Upgrade size-limit to 7.0.5 (Artur Paikin / #3445)
-- @uppy/provider-views: Unsplash: UI improvements (Artur Paikin / #3438)
-- @uppy/thumbnail-generator: exifr: remove legacy IE support (Artur Paikin / #3382)
-- @uppy/companion: Default to HEAD requests when the Companion looks to get meta information about a URL (Zack Bloom / #3417)
-- @uppy/dashboard: check if info array is empty (Artur Paikin / #3442)
+- @growthcloud/provider-views: Unsplash: UI improvements (Artur Paikin / #3438)
+- @growthcloud/thumbnail-generator: exifr: remove legacy IE support (Artur Paikin / #3382)
+- @growthcloud/companion: Default to HEAD requests when the Companion looks to get meta information about a URL (Zack Bloom / #3417)
+- @growthcloud/dashboard: check if info array is empty (Artur Paikin / #3442)
 - meta: dev: fix Vite custom plugin (Antoine du Hamel / #3437)
 - website: add legacy bundle to CDN example (Antoine du Hamel / #3433)
 - meta: remove unused lerna and npm files (Antoine du Hamel / #3436)
 - meta: replace browserify with esbuild (Antoine du Hamel / #3363)
+
 ## 2.4.1
 
 Released: 2022-01-12
 
-| Package           | Version | Package           | Version |
-| ----------------- | ------- | ----------------- | ------- |
-| @uppy/transloadit |   2.1.1 | uppy              |   2.4.1 |
-| @uppy/robodog     |   2.2.1 |                   |         |
+| Package                  | Version | Package | Version |
+| ------------------------ | ------- | ------- | ------- |
+| @growthcloud/transloadit | 2.1.1   | uppy    | 2.4.1   |
+| @growthcloud/robodog     | 2.2.1   |         |         |
 
-- @uppy/transloadit: fix handling of Tus errors and rate limiting (Antoine du Hamel / #3429)
+- @growthcloud/transloadit: fix handling of Tus errors and rate limiting (Antoine du Hamel / #3429)
 - meta: Add Unsplash to website dashboard example (Merlijn Vos / #3431)
 - meta: dev: move configuration to a `.env` file (Antoine du Hamel / #3430)
 - meta: Update ci.yml (Kevin van Zonneveld / #3428)
-- @uppy/transloadit: simplify `#onTusError` (Antoine du Hamel / #3419)
+- @growthcloud/transloadit: simplify `#onTusError` (Antoine du Hamel / #3419)
 - meta: Force include babel numeric separator (Merlijn Vos / #3422)
+
 ## 2.4.0
 
 Released: 2022-01-10
 
-| Package              | Version | Package              | Version |
-| -------------------- | ------- | -------------------- | ------- |
-| @uppy/drag-drop      |   2.0.6 | @uppy/tus            |   2.2.0 |
-| @uppy/image-editor   |   1.1.1 | @uppy/utils          |   4.0.5 |
-| @uppy/screen-capture |   2.0.6 | @uppy/robodog        |   2.2.0 |
-| @uppy/transloadit    |   2.1.0 | uppy                 |   2.4.0 |
+| Package                     | Version | Package              | Version |
+| --------------------------- | ------- | -------------------- | ------- |
+| @growthcloud/drag-drop      | 2.0.6   | @growthcloud/tus     | 2.2.0   |
+| @growthcloud/image-editor   | 1.1.1   | @growthcloud/utils   | 4.0.5   |
+| @growthcloud/screen-capture | 2.0.6   | @growthcloud/robodog | 2.2.0   |
+| @growthcloud/transloadit    | 2.1.0   | uppy                 | 2.4.0   |
 
-- @uppy/transloadit: ignore rate limiting errors when polling (Antoine du Hamel / #3418)
-- @uppy/tus: pause all requests in response to server rate limiting (Antoine du Hamel / #3394)
-- @uppy/transloadit: better defaults for rate limiting (Antoine du Hamel / #3414)
-- @uppy/companion: Fix Companion deploys (kiloreux / #3388)
+- @growthcloud/transloadit: ignore rate limiting errors when polling (Antoine du Hamel / #3418)
+- @growthcloud/tus: pause all requests in response to server rate limiting (Antoine du Hamel / #3394)
+- @growthcloud/transloadit: better defaults for rate limiting (Antoine du Hamel / #3414)
+- @growthcloud/companion: Fix Companion deploys (kiloreux / #3388)
 - meta: update aws-php example to use esm (Antoine du Hamel / #3413)
-- @uppy/image-editor: namespace input range css (Merlijn Vos / #3406)
-- @uppy/screen-capture: Add missing option to the screen capture types (Mustafa Navruz / #3400)
-- @uppy/drag-drop: fix `undefined is not a function` TypeError (Antoine du Hamel / #3397)
+- @growthcloud/image-editor: namespace input range css (Merlijn Vos / #3406)
+- @growthcloud/screen-capture: Add missing option to the screen capture types (Mustafa Navruz / #3400)
+- @growthcloud/drag-drop: fix `undefined is not a function` TypeError (Antoine du Hamel / #3397)
 - website: update december 2021 blog post (Antoine du Hamel / #3396)
 - website: Polished the latest update blog (AJvanLoon / #3390)
 - website: docs: fix typo in audio.md (heocoi / #3389)
@@ -972,143 +954,139 @@ Released: 2022-01-10
 
 Released: 2022-01-04
 
-| Package         | Version | Package         | Version |
-| --------------- | ------- | --------------- | ------- |
-| @uppy/companion |   3.1.5 | uppy            |   2.3.3 |
+| Package                | Version | Package | Version |
+| ---------------------- | ------- | ------- | ------- |
+| @growthcloud/companion | 3.1.5   | uppy    | 2.3.3   |
 
-- @uppy/companion: improve private ip check (Mikael Finstad / #3403)
-
+- @growthcloud/companion: improve private ip check (Mikael Finstad / #3403)
 
 ## 2.3.2
 
 Released: 2021-12-21
 
-| Package         | Version | Package         | Version |
-| --------------- | ------- | --------------- | ------- |
-| @uppy/angular   |   0.2.8 | @uppy/vue       |   0.4.5 |
-| @uppy/companion |   3.1.4 | uppy            |   2.3.2 |
-| @uppy/svelte    |   1.0.7 |                 |         |
+| Package                | Version | Package          | Version |
+| ---------------------- | ------- | ---------------- | ------- |
+| @growthcloud/angular   | 0.2.8   | @growthcloud/vue | 0.4.5   |
+| @growthcloud/companion | 3.1.4   | uppy             | 2.3.2   |
+| @growthcloud/svelte    | 1.0.7   |                  |         |
 
 - meta: fix release script (Antoine du Hamel)
-- @uppy/core: document file.name (Merlijn Vos / #3381)
-- @uppy/angular,@uppy/companion,@uppy/svelte,@uppy/vue: add `.npmignore` files to ignore `.gitignore` when packing (Antoine du Hamel / #3380)
+- @growthcloud/core: document file.name (Merlijn Vos / #3381)
+- @growthcloud/angular,@growthcloud/companion,@growthcloud/svelte,@growthcloud/vue: add `.npmignore` files to ignore `.gitignore` when packing (Antoine du Hamel / #3380)
 - meta: add VSCode workspace settings to `.gitignore` (Antoine du Hamel)
-- @uppy/companion: Upgrade ws in companion (Merlijn Vos / #3377)
+- @growthcloud/companion: Upgrade ws in companion (Merlijn Vos / #3377)
 - meta: use ESBuild to bundle in E2E test suite (Antoine du Hamel / #3375)
 - meta: update linter config to parse ESM files (Antoine du Hamel / #3371)
 - meta: move dev workspace to `private/` (Antoine du Hamel / #3368)
 - meta: use Vite for examples/dev (Antoine du Hamel / #3361)
-- website: remove dependency on `crypto` in @uppy/transloadit example (Antoine du Hamel / #3367)
+- website: remove dependency on `crypto` in @growthcloud/transloadit example (Antoine du Hamel / #3367)
 - meta: enable linter on website examples (Antoine du Hamel / #3366)
 - meta: enable linter on mjs scripts (Antoine du Hamel / #3364)
-- @uppy/angular: Fix module field in `package.json` (Merlijn Vos / #3365)
+- @growthcloud/angular: Fix module field in `package.json` (Merlijn Vos / #3365)
 - meta: improve release script wording and formatting (Artur Paikin)
-
 
 ## 2.3.1
 
 Released: 2021-12-09
 
-| Package           | Version | Package           | Version |
-| ----------------- | ------- | ----------------- | ------- |
-| @uppy/angular     |   0.2.7 | @uppy/store-redux |   2.0.3 |
-| @uppy/audio       |   0.2.1 | @uppy/svelte      |   1.0.6 |
-| @uppy/aws-s3      |   2.0.7 | @uppy/vue         |   0.4.4 |
-| @uppy/companion   |   3.1.3 | @uppy/xhr-upload  |   2.0.7 |
-| @uppy/core        |   2.1.4 | @uppy/robodog     |   2.1.5 |
-| @uppy/dashboard   |   2.1.3 | uppy              |   2.3.1 |
-| @uppy/locales     |   2.0.5 |                   |         |
+| Package                | Version | Package                  | Version |
+| ---------------------- | ------- | ------------------------ | ------- |
+| @growthcloud/angular   | 0.2.7   | @growthcloud/store-redux | 2.0.3   |
+| @growthcloud/audio     | 0.2.1   | @growthcloud/svelte      | 1.0.6   |
+| @growthcloud/aws-s3    | 2.0.7   | @growthcloud/vue         | 0.4.4   |
+| @growthcloud/companion | 3.1.3   | @growthcloud/xhr-upload  | 2.0.7   |
+| @growthcloud/core      | 2.1.4   | @growthcloud/robodog     | 2.1.5   |
+| @growthcloud/dashboard | 2.1.3   | uppy                     | 2.3.1   |
+| @growthcloud/locales   | 2.0.5   |                          |         |
 
 - meta: update npm deps (Antoine du Hamel / #3352)
-- @uppy/companion: fix Dockerfile and deploy automation (Mikael Finstad / #3355)
-- @uppy/companion: don’t pin Yarn version in `package.json` (Antoine du Hamel / #3347)
-- @uppy/aws-s3,@uppy/core,@uppy/dashboard,@uppy/store-redux,@uppy/xhr-upload: deps: use `nanoid/non-secure` to workaround react-native limitation (Antoine du Hamel / #3350)
-- @uppy/audio: showRecordingLength option was removed, always clearInterval (Artur Paikin / #3351)
+- @growthcloud/companion: fix Dockerfile and deploy automation (Mikael Finstad / #3355)
+- @growthcloud/companion: don’t pin Yarn version in `package.json` (Antoine du Hamel / #3347)
+- @growthcloud/aws-s3,@growthcloud/core,@growthcloud/dashboard,@growthcloud/store-redux,@growthcloud/xhr-upload: deps: use `nanoid/non-secure` to workaround react-native limitation (Antoine du Hamel / #3350)
+- @growthcloud/audio: showRecordingLength option was removed, always clearInterval (Artur Paikin / #3351)
 - meta: drop `stringify-object` dependency to generate locales (Antoine du Hamel / #3344)
 - meta: add release automations (Antoine du Hamel / #3304)
-
 
 ## 2.3.0
 
 Released: 2021-12-07
 
-| Package                   | Version | Package                   | Version |
-| ------------------------- | ------- | ------------------------- | ------- |
-| @uppy/angular             |   0.2.6 | @uppy/locales             |   2.0.4 |
-| @uppy/audio               |   0.2.0 | @uppy/onedrive            |   2.0.5 |
-| @uppy/aws-s3              |   2.0.6 | @uppy/provider-views      |   2.0.6 |
-| @uppy/aws-s3-multipart    |   2.2.0 | @uppy/react               |   2.1.2 |
-| @uppy/box                 |   1.0.5 | @uppy/screen-capture      |   2.0.5 |
-| @uppy/companion           |   3.1.2 | @uppy/status-bar          |   2.1.2 |
-| @uppy/companion-client    |   2.0.4 | @uppy/store-default       |   2.0.3 |
-| @uppy/core                |   2.1.3 | @uppy/thumbnail-generator |   2.0.6 |
-| @uppy/dashboard           |   2.1.2 | @uppy/transloadit         |   2.0.5 |
-| @uppy/drag-drop           |   2.0.5 | @uppy/tus                 |   2.1.2 |
-| @uppy/dropbox             |   2.0.5 | @uppy/url                 |   2.0.5 |
-| @uppy/facebook            |   2.0.5 | @uppy/utils               |   4.0.4 |
-| @uppy/file-input          |   2.0.5 | @uppy/webcam              |   2.0.5 |
-| @uppy/golden-retriever    |   2.0.6 | @uppy/xhr-upload          |   2.0.6 |
-| @uppy/google-drive        |   2.0.5 | @uppy/zoom                |   1.0.5 |
-| @uppy/image-editor        |   1.1.0 | @uppy/robodog             |   2.1.4 |
-| @uppy/informer            |   2.0.5 | uppy                      |   2.3.0 |
-| @uppy/instagram           |   2.0.5 |                           |         |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.2.6   | @growthcloud/locales             | 2.0.4   |
+| @growthcloud/audio            | 0.2.0   | @growthcloud/onedrive            | 2.0.5   |
+| @growthcloud/aws-s3           | 2.0.6   | @growthcloud/provider-views      | 2.0.6   |
+| @growthcloud/aws-s3-multipart | 2.2.0   | @growthcloud/react               | 2.1.2   |
+| @growthcloud/box              | 1.0.5   | @growthcloud/screen-capture      | 2.0.5   |
+| @growthcloud/companion        | 3.1.2   | @growthcloud/status-bar          | 2.1.2   |
+| @growthcloud/companion-client | 2.0.4   | @growthcloud/store-default       | 2.0.3   |
+| @growthcloud/core             | 2.1.3   | @growthcloud/thumbnail-generator | 2.0.6   |
+| @growthcloud/dashboard        | 2.1.2   | @growthcloud/transloadit         | 2.0.5   |
+| @growthcloud/drag-drop        | 2.0.5   | @growthcloud/tus                 | 2.1.2   |
+| @growthcloud/dropbox          | 2.0.5   | @growthcloud/url                 | 2.0.5   |
+| @growthcloud/facebook         | 2.0.5   | @growthcloud/utils               | 4.0.4   |
+| @growthcloud/file-input       | 2.0.5   | @growthcloud/webcam              | 2.0.5   |
+| @growthcloud/golden-retriever | 2.0.6   | @growthcloud/xhr-upload          | 2.0.6   |
+| @growthcloud/google-drive     | 2.0.5   | @growthcloud/zoom                | 1.0.5   |
+| @growthcloud/image-editor     | 1.1.0   | @growthcloud/robodog             | 2.1.4   |
+| @growthcloud/informer         | 2.0.5   | uppy                             | 2.3.0   |
+| @growthcloud/instagram        | 2.0.5   |                                  |         |
 
 - meta: add release automations (Antoine du Hamel / #3304)
-- @uppy/dashboard: Save meta fields when opening the image editor (Merlijn Vos / #3339)
-- @uppy/aws-s3-multipart: Drop `lockedCandidatesForBatch` and mark chunks as busy when preparing (Yegor Yarko / #3342)
-- @uppy/webcam: fix broken links in `webcam.md` (Antoine du Hamel / #3346)
-- @uppy/audio: new @uppy/audio plugin for recording with microphone (Artur Paikin / #2976)
+- @growthcloud/dashboard: Save meta fields when opening the image editor (Merlijn Vos / #3339)
+- @growthcloud/aws-s3-multipart: Drop `lockedCandidatesForBatch` and mark chunks as busy when preparing (Yegor Yarko / #3342)
+- @growthcloud/webcam: fix broken links in `webcam.md` (Antoine du Hamel / #3346)
+- @growthcloud/audio: new @growthcloud/audio plugin for recording with microphone (Artur Paikin / #2976)
 - build: force use of `@babel/plugin-proposal-optional-chaining` (Antoine du Hamel / #3335)
-- @uppy/companion: fix deploy Yarn version (Antoine du Hamel / #3327)
-- @uppy/companion: upgrade aws-sdk (Mikael Finstad / #3334)
-- @uppy/core: disable loose transpilation for legacy bundle (Antoine du Hamel / #3329)
-- @uppy/angular: examples: update `angular-example` to Angular v13 (Antoine du Hamel / #3325)
+- @growthcloud/companion: fix deploy Yarn version (Antoine du Hamel / #3327)
+- @growthcloud/companion: upgrade aws-sdk (Mikael Finstad / #3334)
+- @growthcloud/core: disable loose transpilation for legacy bundle (Antoine du Hamel / #3329)
+- @growthcloud/angular: examples: update `angular-example` to Angular v13 (Antoine du Hamel / #3325)
 - meta: Update BACKLOG.md (Artur Paikin, Merlijn Vos)
 - meta: Add disableLocalFiles to options summary (Steve Barker / #3323)
 - meta: Create SECURITY.md (Ziding Zhang / #3052)
-- @uppy/image-editor: Pass croppedCanvasOptions to getCroppedCanvas (Mohamed Boudra / #3320)
+- @growthcloud/image-editor: Pass croppedCanvasOptions to getCroppedCanvas (Mohamed Boudra / #3320)
 - meta: finish `master`->`main` job (Mikael Finstad / #3315)
 - website: update documents that were out of date (Antoine du Hamel / #3317)
-- @uppy/status-bar: Status bar error state improvements (Merlijn Vos / #3299)
+- @growthcloud/status-bar: Status bar error state improvements (Merlijn Vos / #3299)
 - doc: Fix typo in `docs/drag-drop.md` (Ash Allen / #3319)
 - website: Update /support and docs about Transloadit-hosted Companion (Artur Paikin / #3243)
-- @uppy/aws-s3,@uppy/box,@uppy/core,@uppy/dashboard,@uppy/drag-drop,@uppy/dropbox,@uppy/facebook,@uppy/file-input,@uppy/google-drive,@uppy/image-editor,@uppy/instagram,@uppy/locales,@uppy/onedrive,@uppy/screen-capture,@uppy/status-bar,@uppy/thumbnail-generator,@uppy/transloadit,@uppy/url,@uppy/webcam,@uppy/xhr-upload,@uppy/zoom: Refactor locale scripts & generate types and docs (Merlijn Vos / #3276)
-- @uppy/companion: Remove references of incorrect `options` argument for `companion.socket` (Mikael Finstad / #3307)
-- @uppy/companion: Upgrade linting to 2.0.0-0 (Kevin van Zonneveld / #3280)
-
+- @growthcloud/aws-s3,@growthcloud/box,@growthcloud/core,@growthcloud/dashboard,@growthcloud/drag-drop,@growthcloud/dropbox,@growthcloud/facebook,@growthcloud/file-input,@growthcloud/google-drive,@growthcloud/image-editor,@growthcloud/instagram,@growthcloud/locales,@growthcloud/onedrive,@growthcloud/screen-capture,@growthcloud/status-bar,@growthcloud/thumbnail-generator,@growthcloud/transloadit,@growthcloud/url,@growthcloud/webcam,@growthcloud/xhr-upload,@growthcloud/zoom: Refactor locale scripts & generate types and docs (Merlijn Vos / #3276)
+- @growthcloud/companion: Remove references of incorrect `options` argument for `companion.socket` (Mikael Finstad / #3307)
+- @growthcloud/companion: Upgrade linting to 2.0.0-0 (Kevin van Zonneveld / #3280)
 
 ## 2.2.1
 
 Released: 2021-10-14
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.2.5 | @uppy/provider-views | 2.0.4 |
-| @uppy/aws-s3-multipart | 2.1.1 | @uppy/react-native | 0.2.4 |
-| @uppy/aws-s3 | 2.0.5 | @uppy/react | 2.1.1 |
-| @uppy/box | 1.0.4 | @uppy/redux-dev-tools | 2.0.3 |
-| @uppy/companion-client | 2.0.3 | @uppy/robodog | 2.1.1 |
-| @uppy/companion | 3.1.1 | @uppy/screen-capture | 2.0.4 |
-| @uppy/core | 2.1.1 | @uppy/status-bar | 2.1.1 |
-| @uppy/dashboard | 2.1.1 | @uppy/store-default | 2.0.2 |
-| @uppy/drag-drop | 2.0.4 | @uppy/store-redux | 2.0.2 |
-| @uppy/drop-target | 1.1.1 | @uppy/svelte | 1.0.5 |
-| @uppy/dropbox | 2.0.4 | @uppy/thumbnail-generator | 2.0.5 |
-| @uppy/facebook | 2.0.4 | @uppy/transloadit | 2.0.4 |
-| @uppy/file-input | 2.0.4 | @uppy/tus | 2.1.1 |
-| @uppy/form | 2.0.4 | @uppy/unsplash | 2.0.1 |
-| @uppy/golden-retriever | 2.0.5 | @uppy/url | 2.0.4 |
-| @uppy/google-drive | 2.0.4 | @uppy/utils | 4.0.3 |
-| @uppy/image-editor | 1.0.4 | @uppy/vue | 0.4.3 |
-| @uppy/informer | 2.0.4 | @uppy/webcam | 2.0.4 |
-| @uppy/instagram | 2.0.4 | @uppy/xhr-upload | 2.0.5 |
-| @uppy/locales | 2.0.3 | @uppy/zoom | 1.0.4 |
-| @uppy/onedrive | 2.0.4 | uppy | 2.2.1 |
-| @uppy/progress-bar | 2.0.4 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.2.5   | @growthcloud/provider-views      | 2.0.4   |
+| @growthcloud/aws-s3-multipart | 2.1.1   | @growthcloud/react-native        | 0.2.4   |
+| @growthcloud/aws-s3           | 2.0.5   | @growthcloud/react               | 2.1.1   |
+| @growthcloud/box              | 1.0.4   | @growthcloud/redux-dev-tools     | 2.0.3   |
+| @growthcloud/companion-client | 2.0.3   | @growthcloud/robodog             | 2.1.1   |
+| @growthcloud/companion        | 3.1.1   | @growthcloud/screen-capture      | 2.0.4   |
+| @growthcloud/core             | 2.1.1   | @growthcloud/status-bar          | 2.1.1   |
+| @growthcloud/dashboard        | 2.1.1   | @growthcloud/store-default       | 2.0.2   |
+| @growthcloud/drag-drop        | 2.0.4   | @growthcloud/store-redux         | 2.0.2   |
+| @growthcloud/drop-target      | 1.1.1   | @growthcloud/svelte              | 1.0.5   |
+| @growthcloud/dropbox          | 2.0.4   | @growthcloud/thumbnail-generator | 2.0.5   |
+| @growthcloud/facebook         | 2.0.4   | @growthcloud/transloadit         | 2.0.4   |
+| @growthcloud/file-input       | 2.0.4   | @growthcloud/tus                 | 2.1.1   |
+| @growthcloud/form             | 2.0.4   | @growthcloud/unsplash            | 2.0.1   |
+| @growthcloud/golden-retriever | 2.0.5   | @growthcloud/url                 | 2.0.4   |
+| @growthcloud/google-drive     | 2.0.4   | @growthcloud/utils               | 4.0.3   |
+| @growthcloud/image-editor     | 1.0.4   | @growthcloud/vue                 | 0.4.3   |
+| @growthcloud/informer         | 2.0.4   | @growthcloud/webcam              | 2.0.4   |
+| @growthcloud/instagram        | 2.0.4   | @growthcloud/xhr-upload          | 2.0.5   |
+| @growthcloud/locales          | 2.0.3   | @growthcloud/zoom                | 1.0.4   |
+| @growthcloud/onedrive         | 2.0.4   | uppy                             | 2.2.1   |
+| @growthcloud/progress-bar     | 2.0.4   | -                                | -       |
 
-- @uppy/locale: Update ar_SA.js (issa.ahmd@gmail.com  / #3192)
-- @uppy/status-bar: fix `calculateProcessingProgress` is not a function (@aduh95 / #3261)
-- @uppy/status-bar: Progress object is nested (@arturi / #3262)
+- @growthcloud/locale: Update ar_SA.js (issa.ahmd@gmail.com / #3192)
+- @growthcloud/status-bar: fix `calculateProcessingProgress` is not a function (@aduh95 / #3261)
+- @growthcloud/status-bar: Progress object is nested (@arturi / #3262)
 - build: Add retext to markdown linter (@aduh95 / #3024)
 - build: Bump tar from 6.1.2 to 6.1.9 (dependabot / #3152)
 - website: Revert "Remove broken link in `plugin_list.ejs` (@aduh95 / #3166)
@@ -1117,59 +1095,59 @@ Released: 2021-10-14
 
 Released: 2021-10-06
 
-This release marks a major version for `@uppy/unsplash` plugin which is now production-ready. It also includes various fixes and improvements such as fix to `@uppy/transloadit` plugin and adds `onDrop` event to `@uppy/drop-target`.
+This release marks a major version for `@growthcloud/unsplash` plugin which is now production-ready. It also includes various fixes and improvements such as fix to `@growthcloud/transloadit` plugin and adds `onDrop` event to `@growthcloud/drop-target`.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.2.4 | @uppy/provider-views | 2.0.3 |
-| @uppy/aws-s3-multipart | 2.1.0 | @uppy/react-native | 0.2.3 |
-| @uppy/aws-s3 | 2.0.4 | @uppy/react | 2.1.0 |
-| @uppy/box | 1.0.3 | @uppy/redux-dev-tools | 2.0.2 |
-| @uppy/companion-client | 2.0.2 | @uppy/robodog | 2.1.0 |
-| @uppy/companion | 3.1.0 | @uppy/screen-capture | 2.0.3 |
-| @uppy/core | 2.1.0 | @uppy/status-bar | 2.1.0 |
-| @uppy/dashboard | 2.1.0 | @uppy/store-default | 2.0.1 |
-| @uppy/drag-drop | 2.0.3 | @uppy/store-redux | 2.0.1 |
-| @uppy/drop-target | 1.1.0 | @uppy/svelte | 1.0.4 |
-| @uppy/dropbox | 2.0.3 | @uppy/thumbnail-generator | 2.0.4 |
-| @uppy/facebook | 2.0.3 | @uppy/transloadit | 2.0.3 |
-| @uppy/file-input | 2.0.3 | @uppy/tus | 2.1.0 |
-| @uppy/form | 2.0.3 | @uppy/unsplash | 2.0.0 |
-| @uppy/golden-retriever | 2.0.4 | @uppy/url | 2.0.3 |
-| @uppy/google-drive | 2.0.3 | @uppy/utils | 4.0.2 |
-| @uppy/image-editor | 1.0.3 | @uppy/vue | 0.4.2 |
-| @uppy/informer | 2.0.3 | @uppy/webcam | 2.0.3 |
-| @uppy/instagram | 2.0.3 | @uppy/xhr-upload | 2.0.4 |
-| @uppy/locales | 2.0.2 | @uppy/zoom | 1.0.3 |
-| @uppy/onedrive | 2.0.3 | remark-lint-uppy | 0.0.3 |
-| @uppy/progress-bar | 2.0.3 | uppy | 2.2.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.2.4   | @growthcloud/provider-views      | 2.0.3   |
+| @growthcloud/aws-s3-multipart | 2.1.0   | @growthcloud/react-native        | 0.2.3   |
+| @growthcloud/aws-s3           | 2.0.4   | @growthcloud/react               | 2.1.0   |
+| @growthcloud/box              | 1.0.3   | @growthcloud/redux-dev-tools     | 2.0.2   |
+| @growthcloud/companion-client | 2.0.2   | @growthcloud/robodog             | 2.1.0   |
+| @growthcloud/companion        | 3.1.0   | @growthcloud/screen-capture      | 2.0.3   |
+| @growthcloud/core             | 2.1.0   | @growthcloud/status-bar          | 2.1.0   |
+| @growthcloud/dashboard        | 2.1.0   | @growthcloud/store-default       | 2.0.1   |
+| @growthcloud/drag-drop        | 2.0.3   | @growthcloud/store-redux         | 2.0.1   |
+| @growthcloud/drop-target      | 1.1.0   | @growthcloud/svelte              | 1.0.4   |
+| @growthcloud/dropbox          | 2.0.3   | @growthcloud/thumbnail-generator | 2.0.4   |
+| @growthcloud/facebook         | 2.0.3   | @growthcloud/transloadit         | 2.0.3   |
+| @growthcloud/file-input       | 2.0.3   | @growthcloud/tus                 | 2.1.0   |
+| @growthcloud/form             | 2.0.3   | @growthcloud/unsplash            | 2.0.0   |
+| @growthcloud/golden-retriever | 2.0.4   | @growthcloud/url                 | 2.0.3   |
+| @growthcloud/google-drive     | 2.0.3   | @growthcloud/utils               | 4.0.2   |
+| @growthcloud/image-editor     | 1.0.3   | @growthcloud/vue                 | 0.4.2   |
+| @growthcloud/informer         | 2.0.3   | @growthcloud/webcam              | 2.0.3   |
+| @growthcloud/instagram        | 2.0.3   | @growthcloud/xhr-upload          | 2.0.4   |
+| @growthcloud/locales          | 2.0.2   | @growthcloud/zoom                | 1.0.3   |
+| @growthcloud/onedrive         | 2.0.3   | remark-lint-uppy                 | 0.0.3   |
+| @growthcloud/progress-bar     | 2.0.3   | uppy                             | 2.2.0   |
 
-- @uppy/angular: fix component crash by loosening `package.json` version constraints (#3210 / @ajkachnic)
-- @uppy/aws-s3-multipart: Retry `prepareUploadParts` on fail for `@uppy/aws-s3-multipart` (#3224 / @Murderlon)
-- @uppy/aws-s3: Fix AWS S3 upload on React Native (#3064 / @Cretezy)
-- @uppy/companion: `Object.fromEntries` is not available on Node.js v10.x (#3209 / @aduh95)
-- @uppy/companion: Close window on auth callback error and show error to user (#3143 / @mifi)
-- @uppy/companion: Default allow headers (#3167 / @mifi)
-- @uppy/companion: docs: fix typo in companion.md (#3240 / @eltociear)
-- @uppy/companion: Include status code in HTTP error message (#3212 / @mifi)
-- @uppy/companion: Make uploadUrls recommended (#3182 / @mifi)
-- @uppy/companion: Use GET instead of HEAD for getURLMeta + Cut off length of file names (#3048 / @mifi)
-- @uppy/core: Fix typo in `@uppy/core` types (#3230 / @lucax88x)
-- @uppy/core: move `Uppy` class to its own module (#3225 / @aduh95)
-- @uppy/dashboard: Add info about include in the Dashboard (#3236 / @epexa)
-- @uppy/dashboard: Fix i18n error in `CopyLinkButton` (#3235 / @Murderlon)
-- @uppy/dashboard: fix linter (#3206 / @aduh95)
-- @uppy/drop-target: expose `onDrop` events (#3238 / @Murderlon)
-- @uppy/image-editor: add workaround for when `Cropper` is loaded as ESM (#3218 / @aduh95)
-- @uppy/locales: added translate for missingRequiredMetafield es_ES (#3242 / @sebasegovia01)
-- @uppy/react: propagate prop mutation (#3208 / @aduh95)
-- @uppy/react: update HTMLAttributes filter (#3215 / @aduh95)
-- @uppy/status-bar: Show all details on mobile when `showProgressDetails` is `true` (#3174 / @Murderlon)
-- @uppy/store-redux: Improve docs on redux store integration (#3227 / @Murderlon)
-- @uppy/transloadit: pass fields to transloadit (#3228 / @aduh95)
-- @uppy/tus: Add support for `opts.headers` as a function in `@uppy/tus` (#3221 / @danilat)
-- @uppy/unsplash: Make `@uppy/unsplash` production ready (#3196 / @Murderlon)
-- @uppy/xhr-upload: fix `this.uppy is undefined` error (#3207 / @aduh95)
+- @growthcloud/angular: fix component crash by loosening `package.json` version constraints (#3210 / @ajkachnic)
+- @growthcloud/aws-s3-multipart: Retry `prepareUploadParts` on fail for `@growthcloud/aws-s3-multipart` (#3224 / @Murderlon)
+- @growthcloud/aws-s3: Fix AWS S3 upload on React Native (#3064 / @Cretezy)
+- @growthcloud/companion: `Object.fromEntries` is not available on Node.js v10.x (#3209 / @aduh95)
+- @growthcloud/companion: Close window on auth callback error and show error to user (#3143 / @mifi)
+- @growthcloud/companion: Default allow headers (#3167 / @mifi)
+- @growthcloud/companion: docs: fix typo in companion.md (#3240 / @eltociear)
+- @growthcloud/companion: Include status code in HTTP error message (#3212 / @mifi)
+- @growthcloud/companion: Make uploadUrls recommended (#3182 / @mifi)
+- @growthcloud/companion: Use GET instead of HEAD for getURLMeta + Cut off length of file names (#3048 / @mifi)
+- @growthcloud/core: Fix typo in `@growthcloud/core` types (#3230 / @lucax88x)
+- @growthcloud/core: move `Uppy` class to its own module (#3225 / @aduh95)
+- @growthcloud/dashboard: Add info about include in the Dashboard (#3236 / @epexa)
+- @growthcloud/dashboard: Fix i18n error in `CopyLinkButton` (#3235 / @Murderlon)
+- @growthcloud/dashboard: fix linter (#3206 / @aduh95)
+- @growthcloud/drop-target: expose `onDrop` events (#3238 / @Murderlon)
+- @growthcloud/image-editor: add workaround for when `Cropper` is loaded as ESM (#3218 / @aduh95)
+- @growthcloud/locales: added translate for missingRequiredMetafield es_ES (#3242 / @sebasegovia01)
+- @growthcloud/react: propagate prop mutation (#3208 / @aduh95)
+- @growthcloud/react: update HTMLAttributes filter (#3215 / @aduh95)
+- @growthcloud/status-bar: Show all details on mobile when `showProgressDetails` is `true` (#3174 / @Murderlon)
+- @growthcloud/store-redux: Improve docs on redux store integration (#3227 / @Murderlon)
+- @growthcloud/transloadit: pass fields to transloadit (#3228 / @aduh95)
+- @growthcloud/tus: Add support for `opts.headers` as a function in `@growthcloud/tus` (#3221 / @danilat)
+- @growthcloud/unsplash: Make `@growthcloud/unsplash` production ready (#3196 / @Murderlon)
+- @growthcloud/xhr-upload: fix `this.uppy is undefined` error (#3207 / @aduh95)
 - ci: test on Node.js v16.x (#3205 / @aduh95)
 - website: Remove broken link in `plugin_list.ejs` (#3166 / @YukeshShr)
 
@@ -1177,100 +1155,100 @@ This release marks a major version for `@uppy/unsplash` plugin which is now prod
 
 Released: 2021-09-20
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.2.3 | @uppy/progress-bar | 2.0.2 |
-| @uppy/aws-s3-multipart | 2.0.3 | @uppy/provider-views | 2.0.2 |
-| @uppy/aws-s3 | 2.0.3 | @uppy/react-native | 0.2.2 |
-| @uppy/box | 1.0.2 | @uppy/react | 2.0.3 |
-| @uppy/companion-client | 2.0.1 | @uppy/robodog | 2.0.4 |
-| @uppy/core | 2.0.3 | @uppy/screen-capture | 2.0.2 |
-| @uppy/dashboard | 2.0.3 | @uppy/status-bar | 2.0.2 |
-| @uppy/drag-drop | 2.0.2 | @uppy/svelte | 1.0.3 |
-| @uppy/drop-target | 1.0.2 | @uppy/thumbnail-generator | 2.0.3 |
-| @uppy/dropbox | 2.0.2 | @uppy/transloadit | 2.0.2 |
-| @uppy/facebook | 2.0.2 | @uppy/tus | 2.0.2 |
-| @uppy/file-input | 2.0.2 | @uppy/unsplash | 1.0.2 |
-| @uppy/form | 2.0.2 | @uppy/url | 2.0.2 |
-| @uppy/golden-retriever | 2.0.3 | @uppy/utils | 4.0.1 |
-| @uppy/google-drive | 2.0.2 | @uppy/vue | 0.4.1 |
-| @uppy/image-editor | 1.0.2 | @uppy/webcam | 2.0.2 |
-| @uppy/informer | 2.0.2 | @uppy/xhr-upload | 2.0.3 |
-| @uppy/instagram | 2.0.2 | @uppy/zoom | 1.0.2 |
-| @uppy/locales | 2.0.1 | uppy | 2.1.1 |
-| @uppy/onedrive | 2.0.2 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.2.3   | @growthcloud/progress-bar        | 2.0.2   |
+| @growthcloud/aws-s3-multipart | 2.0.3   | @growthcloud/provider-views      | 2.0.2   |
+| @growthcloud/aws-s3           | 2.0.3   | @growthcloud/react-native        | 0.2.2   |
+| @growthcloud/box              | 1.0.2   | @growthcloud/react               | 2.0.3   |
+| @growthcloud/companion-client | 2.0.1   | @growthcloud/robodog             | 2.0.4   |
+| @growthcloud/core             | 2.0.3   | @growthcloud/screen-capture      | 2.0.2   |
+| @growthcloud/dashboard        | 2.0.3   | @growthcloud/status-bar          | 2.0.2   |
+| @growthcloud/drag-drop        | 2.0.2   | @growthcloud/svelte              | 1.0.3   |
+| @growthcloud/drop-target      | 1.0.2   | @growthcloud/thumbnail-generator | 2.0.3   |
+| @growthcloud/dropbox          | 2.0.2   | @growthcloud/transloadit         | 2.0.2   |
+| @growthcloud/facebook         | 2.0.2   | @growthcloud/tus                 | 2.0.2   |
+| @growthcloud/file-input       | 2.0.2   | @growthcloud/unsplash            | 1.0.2   |
+| @growthcloud/form             | 2.0.2   | @growthcloud/url                 | 2.0.2   |
+| @growthcloud/golden-retriever | 2.0.3   | @growthcloud/utils               | 4.0.1   |
+| @growthcloud/google-drive     | 2.0.2   | @growthcloud/vue                 | 0.4.1   |
+| @growthcloud/image-editor     | 1.0.2   | @growthcloud/webcam              | 2.0.2   |
+| @growthcloud/informer         | 2.0.2   | @growthcloud/xhr-upload          | 2.0.3   |
+| @growthcloud/instagram        | 2.0.2   | @growthcloud/zoom                | 1.0.2   |
+| @growthcloud/locales          | 2.0.1   | uppy                             | 2.1.1   |
+| @growthcloud/onedrive         | 2.0.2   | -                                | -       |
 
-- @uppy/unsplash: Fix "attempted to use private field on non-instance" in `SearchProvider` (#3201)
-- @uppy/locales: Add 'done' to `nb_NO.js` (#3200)
-- @uppy/transloadit: Fix unhandledPromiseRejection failures (#3197)
-- @uppy/aws-s3-multipart: Fix AbortController is not defined on Node.js (Server Side Render) (#3169)
-- @uppy/aws-s3-multipart: Fix `net::ERR_OUT_OF_MEMORY` (#3183)
-- @uppy/dashboard: Fix `autoOpenFileEditor` (#3186)
-- @uppy/dashboard: Update Google Drive for brand compliance (#3178)
+- @growthcloud/unsplash: Fix "attempted to use private field on non-instance" in `SearchProvider` (#3201)
+- @growthcloud/locales: Add 'done' to `nb_NO.js` (#3200)
+- @growthcloud/transloadit: Fix unhandledPromiseRejection failures (#3197)
+- @growthcloud/aws-s3-multipart: Fix AbortController is not defined on Node.js (Server Side Render) (#3169)
+- @growthcloud/aws-s3-multipart: Fix `net::ERR_OUT_OF_MEMORY` (#3183)
+- @growthcloud/dashboard: Fix `autoOpenFileEditor` (#3186)
+- @growthcloud/dashboard: Update Google Drive for brand compliance (#3178)
 
 ## 2.1.0
 
 Released: 2021-09-01
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.2.2 | @uppy/svelte | 1.0.2 |
-| @uppy/aws-s3 | 2.0.2 | @uppy/thumbnail-generator | 2.0.2 |
-| @uppy/core | 2.0.2 | @uppy/vue | 0.4.0 |
-| @uppy/dashboard | 2.0.2 | @uppy/xhr-upload | 2.0.2 |
-| @uppy/react | 2.0.2 | uppy | 2.1.0 |
-| @uppy/robodog | 2.0.3 | - | - |
+| Package                | Version | Package                          | Version |
+| ---------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular   | 0.2.2   | @growthcloud/svelte              | 1.0.2   |
+| @growthcloud/aws-s3    | 2.0.2   | @growthcloud/thumbnail-generator | 2.0.2   |
+| @growthcloud/core      | 2.0.2   | @growthcloud/vue                 | 0.4.0   |
+| @growthcloud/dashboard | 2.0.2   | @growthcloud/xhr-upload          | 2.0.2   |
+| @growthcloud/react     | 2.0.2   | uppy                             | 2.1.0   |
+| @growthcloud/robodog   | 2.0.3   | -                                | -       |
 
-- @uppy/aws-s3: fix 'send' XMLHttpRequest (#3130 / @jhen0409)
-- @uppy/aws-s3, @uppy/thumbnail-generator, @uppy/xhr-upload: fix `i18n` (#3142 / @jhen0409 / @aduh95)
-- @uppy/react: fix `DashboardModal`'s `target` type (#3110 / @Murderlon)
-- @uppy/xhr-upload: add types for methods (#3154 / @BePo65)
-- @uppy/core: improve accuracy/compatibility of success/error callback types (#3141 / @Hawxy)
-- @uppy/vue: add Vue FileInput component (#3125 / @valentinoli)
+- @growthcloud/aws-s3: fix 'send' XMLHttpRequest (#3130 / @jhen0409)
+- @growthcloud/aws-s3, @growthcloud/thumbnail-generator, @growthcloud/xhr-upload: fix `i18n` (#3142 / @jhen0409 / @aduh95)
+- @growthcloud/react: fix `DashboardModal`'s `target` type (#3110 / @Murderlon)
+- @growthcloud/xhr-upload: add types for methods (#3154 / @BePo65)
+- @growthcloud/core: improve accuracy/compatibility of success/error callback types (#3141 / @Hawxy)
+- @growthcloud/vue: add Vue FileInput component (#3125 / @valentinoli)
 
 ## 2.0.2
 
 Released: 2021-08-26
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.2.2 | @uppy/robodog | 2.0.2 |
-| @uppy/aws-s3-multipart | 2.0.2 | @uppy/robodog | 2.0.3 |
-| @uppy/aws-s3 | 2.0.2 | @uppy/svelte | 1.0.2 |
-| @uppy/companion | 3.0.1 | @uppy/thumbnail-generator | 2.0.2 |
-| @uppy/vue | 0.4.0 | @uppy/core | 2.0.2 |
-| @uppy/dashboard | 2.0.2 | uppy | 2.0.2 |
-| @uppy/golden-retriever | 2.0.2 | @uppy/xhr-upload | 2.0.2 |
-| @uppy/react | 2.0.2 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.2.2   | @growthcloud/robodog             | 2.0.2   |
+| @growthcloud/aws-s3-multipart | 2.0.2   | @growthcloud/robodog             | 2.0.3   |
+| @growthcloud/aws-s3           | 2.0.2   | @growthcloud/svelte              | 1.0.2   |
+| @growthcloud/companion        | 3.0.1   | @growthcloud/thumbnail-generator | 2.0.2   |
+| @growthcloud/vue              | 0.4.0   | @growthcloud/core                | 2.0.2   |
+| @growthcloud/dashboard        | 2.0.2   | uppy                             | 2.0.2   |
+| @growthcloud/golden-retriever | 2.0.2   | @growthcloud/xhr-upload          | 2.0.2   |
+| @growthcloud/react            | 2.0.2   | -                                | -       |
 
-- @uppy/aws-s3-multipart: fix route ordering and query parameters (#3132 / @rossng)
-- @uppy/core: add types overload for `off` method (#3137 / @Hawxy)
-- @uppy/golden-retriever: handle promise rejections (#3131 / @Murderlon)
+- @growthcloud/aws-s3-multipart: fix route ordering and query parameters (#3132 / @rossng)
+- @growthcloud/core: add types overload for `off` method (#3137 / @Hawxy)
+- @growthcloud/golden-retriever: handle promise rejections (#3131 / @Murderlon)
 
 ## 2.0.1
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.2.1 | @uppy/react-native | 0.2.1 |
-| @uppy/react | 2.0.1 | @uppy/provider-views | 2.0.1 |
-| @uppy/aws-s3-multipart | 2.0.1 | @uppy/redux-dev-tools | 2.0.1 |
-| @uppy/aws-s3 | 2.0.1 | @uppy/robodog | 2.0.1 |
-| @uppy/box | 1.0.1 | @uppy/svelte | 1.0.1 |
-| @uppy/companion | 3.0.1 | @uppy/screen-capture | 2.0.1 |
-| @uppy/core | 2.0.1 | @uppy/status-bar | 2.0.1 |
-| @uppy/dashboard | 2.0.1 | @uppy/svelte | 1.0.2 |
-| @uppy/thumbnail-generator | 2.0.1 | @uppy/drag-drop | 2.0.1 |
-| @uppy/drop-target | 1.0.1 | @uppy/transloadit | 2.0.1 |
-| @uppy/dropbox | 2.0.1 | @uppy/tus | 2.0.1 |
-| @uppy/facebook | 2.0.1 | @uppy/unsplash | 1.0.1 |
-| @uppy/file-input | 2.0.1 | @uppy/url | 2.0.1 |
-| @uppy/form | 2.0.1 | @uppy/vue | 0.3.1 |
-| @uppy/golden-retriever | 2.0.1 | @uppy/vue | 0.4.0 | @uppy/webcam | 2.0.1 |
-| @uppy/google-drive | 2.0.1 | @uppy/xhr-upload | 2.0.1 |
-| @uppy/image-editor | 1.0.1 | @uppy/onedrive | 2.0.1 |
-| @uppy/informer | 2.0.1 | @uppy/zoom | 1.0.1 |
-| @uppy/instagram | 2.0.1 | uppy | 2.0.1 |
-| @uppy/progress-bar | 2.0.1 | - | - |
+| Package                          | Version | Package                      | Version |
+| -------------------------------- | ------- | ---------------------------- | ------- | ------------------- | ----- |
+| @growthcloud/angular             | 0.2.1   | @growthcloud/react-native    | 0.2.1   |
+| @growthcloud/react               | 2.0.1   | @growthcloud/provider-views  | 2.0.1   |
+| @growthcloud/aws-s3-multipart    | 2.0.1   | @growthcloud/redux-dev-tools | 2.0.1   |
+| @growthcloud/aws-s3              | 2.0.1   | @growthcloud/robodog         | 2.0.1   |
+| @growthcloud/box                 | 1.0.1   | @growthcloud/svelte          | 1.0.1   |
+| @growthcloud/companion           | 3.0.1   | @growthcloud/screen-capture  | 2.0.1   |
+| @growthcloud/core                | 2.0.1   | @growthcloud/status-bar      | 2.0.1   |
+| @growthcloud/dashboard           | 2.0.1   | @growthcloud/svelte          | 1.0.2   |
+| @growthcloud/thumbnail-generator | 2.0.1   | @growthcloud/drag-drop       | 2.0.1   |
+| @growthcloud/drop-target         | 1.0.1   | @growthcloud/transloadit     | 2.0.1   |
+| @growthcloud/dropbox             | 2.0.1   | @growthcloud/tus             | 2.0.1   |
+| @growthcloud/facebook            | 2.0.1   | @growthcloud/unsplash        | 1.0.1   |
+| @growthcloud/file-input          | 2.0.1   | @growthcloud/url             | 2.0.1   |
+| @growthcloud/form                | 2.0.1   | @growthcloud/vue             | 0.3.1   |
+| @growthcloud/golden-retriever    | 2.0.1   | @growthcloud/vue             | 0.4.0   | @growthcloud/webcam | 2.0.1 |
+| @growthcloud/google-drive        | 2.0.1   | @growthcloud/xhr-upload      | 2.0.1   |
+| @growthcloud/image-editor        | 1.0.1   | @growthcloud/onedrive        | 2.0.1   |
+| @growthcloud/informer            | 2.0.1   | @growthcloud/zoom            | 1.0.1   |
+| @growthcloud/instagram           | 2.0.1   | uppy                         | 2.0.1   |
+| @growthcloud/progress-bar        | 2.0.1   | -                            | -       |
 
 Released: 2021-08-25
 
@@ -1280,127 +1258,126 @@ Released: 2021-08-25
 
 Released: 2021-08-24
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.2.0 | @uppy/provider-views | 2.0.0 |
-| @uppy/aws-s3-multipart | 2.0.0 | @uppy/react-native | 0.2.0 |
-| @uppy/aws-s3 | 2.0.0 | @uppy/react | 2.0.0 |
-| @uppy/box | 1.0.0 | @uppy/redux-dev-tools | 2.0.0 |
-| @uppy/companion-client | 2.0.0 | @uppy/robodog | 2.0.0 |
-| @uppy/companion | 3.0.0 | @uppy/screen-capture | 2.0.0 |
-| @uppy/core | 2.0.0 | @uppy/status-bar | 2.0.0 |
-| @uppy/dashboard | 2.0.0 | @uppy/store-default | 2.0.0 |
-| @uppy/drag-drop | 2.0.0 | @uppy/store-redux | 2.0.0 |
-| @uppy/drop-target | 1.0.0 | @uppy/svelte | 1.0.0 |
-| @uppy/dropbox | 2.0.0 | @uppy/thumbnail-generator | 2.0.0 |
-| @uppy/facebook | 2.0.0 | @uppy/transloadit | 2.0.0 |
-| @uppy/file-input | 2.0.0 | @uppy/tus | 2.0.0 |
-| @uppy/form | 2.0.0 | @uppy/unsplash | 1.0.0 |
-| @uppy/golden-retriever | 2.0.0 | @uppy/url | 2.0.0 |
-| @uppy/google-drive | 2.0.0 | @uppy/utils | 4.0.0 |
-| @uppy/image-editor | 1.0.0 | @uppy/vue | 0.3.0 |
-| @uppy/informer | 2.0.0 | @uppy/webcam | 2.0.0 |
-| @uppy/instagram | 2.0.0 | @uppy/xhr-upload | 2.0.0 |
-| @uppy/locales | 2.0.0 | @uppy/zoom | 1.0.0 |
-| @uppy/onedrive | 2.0.0 | uppy | 2.0.0 |
-| @uppy/progress-bar | 2.0.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.2.0   | @growthcloud/provider-views      | 2.0.0   |
+| @growthcloud/aws-s3-multipart | 2.0.0   | @growthcloud/react-native        | 0.2.0   |
+| @growthcloud/aws-s3           | 2.0.0   | @growthcloud/react               | 2.0.0   |
+| @growthcloud/box              | 1.0.0   | @growthcloud/redux-dev-tools     | 2.0.0   |
+| @growthcloud/companion-client | 2.0.0   | @growthcloud/robodog             | 2.0.0   |
+| @growthcloud/companion        | 3.0.0   | @growthcloud/screen-capture      | 2.0.0   |
+| @growthcloud/core             | 2.0.0   | @growthcloud/status-bar          | 2.0.0   |
+| @growthcloud/dashboard        | 2.0.0   | @growthcloud/store-default       | 2.0.0   |
+| @growthcloud/drag-drop        | 2.0.0   | @growthcloud/store-redux         | 2.0.0   |
+| @growthcloud/drop-target      | 1.0.0   | @growthcloud/svelte              | 1.0.0   |
+| @growthcloud/dropbox          | 2.0.0   | @growthcloud/thumbnail-generator | 2.0.0   |
+| @growthcloud/facebook         | 2.0.0   | @growthcloud/transloadit         | 2.0.0   |
+| @growthcloud/file-input       | 2.0.0   | @growthcloud/tus                 | 2.0.0   |
+| @growthcloud/form             | 2.0.0   | @growthcloud/unsplash            | 1.0.0   |
+| @growthcloud/golden-retriever | 2.0.0   | @growthcloud/url                 | 2.0.0   |
+| @growthcloud/google-drive     | 2.0.0   | @growthcloud/utils               | 4.0.0   |
+| @growthcloud/image-editor     | 1.0.0   | @growthcloud/vue                 | 0.3.0   |
+| @growthcloud/informer         | 2.0.0   | @growthcloud/webcam              | 2.0.0   |
+| @growthcloud/instagram        | 2.0.0   | @growthcloud/xhr-upload          | 2.0.0   |
+| @growthcloud/locales          | 2.0.0   | @growthcloud/zoom                | 1.0.0   |
+| @growthcloud/onedrive         | 2.0.0   | uppy                             | 2.0.0   |
+| @growthcloud/progress-bar     | 2.0.0   | -                                | -       |
 
 ### ⚠️ Breaking changes
 
 - build: Remove IE polyfills and special casing — Uppy officially drops IE 11 support. You can manually include the polyfills, and we have an `uppy.legacy.js` bundle, but we are not (#2947 / @aduh95)
-- @uppy/core: Upgraded Preact to latest Preact 10 — all custom Uppy plugins should now use new version too (#2926 / @Murderlon)
-- @uppy/core: force `new` keyword — please 1always use `const uppy = new Uppy()` now (#2949 / @arturi)
-- @uppy/core: renamed `allowMultipleUploads` to `allowMultipleUploadBatches` (#3115 / @arturi)
-- @uppy/core: Split `Plugin` into `BasePlugin` and extended `UIPlugin` (#2944 / @Murderlon)
-- @uppy/core: Set plugin titles from locale packs (#3023 / @arturi)
-- @uppy/informer: Support multiple messages in informer (#3017 / @Murderlon)
-- @uppy/xhr-upload, @uppy/tus: Set default concurrent file upload limit to 5 (#2993 / @arturi)
-- @uppy/core: Strictly type uppy events (#3085 / @Hawxy)
-- @uppy/core: always enable strict types and remove `.run` method (#2957 / @Murderlon)
-- @uppy/dashboard: Removed backwards compatibility hacks in locales (#2969 / @goto-bus-stop)
-- @uppy/companion Removed `oldHtmlContent` from Companion’s `send-token` option (#2967 / @Murderlon)
-- @uppy/provider-views: Removed `isTeamDrive` from `@uppy/google-drive` option (#2967 / @Murderlon)
-- @uppy/tus: Removed timeout for `resetUploaderReferences` option (#2967 / @Murderlon)
-- @uppy/tus: Removed `resume` option (#2967 / @Murderlon)
-
+- @growthcloud/core: Upgraded Preact to latest Preact 10 — all custom Uppy plugins should now use new version too (#2926 / @Murderlon)
+- @growthcloud/core: force `new` keyword — please 1always use `const uppy = new Uppy()` now (#2949 / @arturi)
+- @growthcloud/core: renamed `allowMultipleUploads` to `allowMultipleUploadBatches` (#3115 / @arturi)
+- @growthcloud/core: Split `Plugin` into `BasePlugin` and extended `UIPlugin` (#2944 / @Murderlon)
+- @growthcloud/core: Set plugin titles from locale packs (#3023 / @arturi)
+- @growthcloud/informer: Support multiple messages in informer (#3017 / @Murderlon)
+- @growthcloud/xhr-upload, @growthcloud/tus: Set default concurrent file upload limit to 5 (#2993 / @arturi)
+- @growthcloud/core: Strictly type uppy events (#3085 / @Hawxy)
+- @growthcloud/core: always enable strict types and remove `.run` method (#2957 / @Murderlon)
+- @growthcloud/dashboard: Removed backwards compatibility hacks in locales (#2969 / @goto-bus-stop)
+- @growthcloud/companion Removed `oldHtmlContent` from Companion’s `send-token` option (#2967 / @Murderlon)
+- @growthcloud/provider-views: Removed `isTeamDrive` from `@growthcloud/google-drive` option (#2967 / @Murderlon)
+- @growthcloud/tus: Removed timeout for `resetUploaderReferences` option (#2967 / @Murderlon)
+- @growthcloud/tus: Removed `resume` option (#2967 / @Murderlon)
 
 ### Misc
 
-- @uppy/angular: fix uppy dependencies @aduh95
-- @uppy/angular: upgrade to Angular 12.1 (d61113979 / @aduh95 )
-- @uppy/aws-s3-multipart: add support for presigned URL batching (#3056 / @martin-brennan)
-- @uppy/aws-s3: refactor to private fields (#3076 / @aduh95)
-- @uppy/aws-s3: refactor to use private fields (#3094 / @aduh95)
-- @uppy/companion-client: migrate to private properties (#3057 / @aduh95)
-- @uppy/companion: Companion improve logging (#3103 / @mifi)
-- @uppy/companion: fix build (960cfa5ba / @aduh95)
-- @uppy/companion: remove `lodash` dependency (#3036 / @aduh95)
-- @uppy/companion: Remove deprecated `serverHeaders` in favour of `companionHeaders` (#2995 / @arturi)
-- @uppy/core: add types for `logger` (#3090 / @bencergazda)
-- @uppy/core: avoid binding methods to instance in constructor (#3043 / @aduh95)
-- @uppy/core: Create `getObjectOfFilesPerState` in core for plugins (#2961 / @Murderlon)
-- @uppy/core: Create `onUnmount` in `UIPlugin` for plugins that require clean up (#3093 / @Murderlon)
-- @uppy/core: detach event listeners on close (#3035 / @aduh95)
-- @uppy/core: do not expose `plugins` property (#3045 / @aduh95)
-- @uppy/core: fix i18n binding (4ab06907c / @aduh95)
-- @uppy/core: fix types (dcaef3173 / @aduh95)
-- @uppy/core: move event emitter to private properties (#3042 / @aduh95)
-- @uppy/core: move more internals to private properties (#3041 / @aduh95)
-- @uppy/core: `onBeforeFileAdded` — pass full file object with extension, detected type, meta, size, etc (#2941 / @arturi)
-- @uppy/core: reject empty string as valid value for required meta fields (#3119 / @aduh95) (0b801ccba)
-- @uppy/core: Remove `sync` option from `VirtualList` & update `UIPlugin` render @Murderlon
-- @uppy/core: remove more IE hacks (#3015 / @aduh95)
-- @uppy/core: remove use of `Array.prototype.reduce` where possible (#3016 / @aduh95)
-- @uppy/core: Resolve all type `TODO`'s (#2963 / @Murderlon)
-- @uppy/core: UIPlugin fix: prevent Preact replacing contents of body element by using `createDocumentFragment` (#3072 / @arturi)
-- @uppy/core: use private fields (#3013 / @aduh95)
-- @uppy/core: use privater properties in `UIPlugin` (#3073 / @aduh95)
-- @uppy/core: validateRestrictions was failing due to being unbound, fixed with arrow function (1c7ac56d8 / @arturi)
-- @uppy/dashboard, @uppy/status-bar: call core methods directly (#3062 / @arturi)
-- @uppy/dashboard: don’t show informer for individual required meta fields errors (#3060 / @arturi)
-- @uppy/dashboard: fileSource string is unused (2b52d9f9a / @arturi)
-- @uppy/dashboard: Fix `editFile` locale usage (#3108 / @Murderlon)
-- @uppy/dashboard: fix metafield form validation (#3113 / @aduh95)
-- @uppy/dashboard: set default trigger: null (#2942 / @arturi)
-- @uppy/dashboard: `showLinkToFileUploadResult: false` by default (#2994 / @arturi)
-- @uppy/form: deprecate multipleResults option (#2996 / @arturi)
-- @uppy/image-editor: Add `croppedCanvasOptions` to image editor `opts` (#3037 / @Murderlon)
-- @uppy/image-editor: fix SASS deprecation warning (#3009 / @aduh95)
-- @uppy/informer: remove dependency to `preact-transition-group` (#3055 / @aduh95)
-- @uppy/locales: Fix locales — point to CDN v1.31.0 (198f23649 / @arturi)
-- @uppy/locales: remove es_GL that was kept for backwards-compat (#2943 / @arturi)
-- @uppy/locales: remove unused strings (@arturi)
-- @uppy/locales: Sync and enhance locale de_DE (#3071 / @paescuj)
-- @uppy/provider-views: Improve checkbox for screenreaders 2 (#2980 / @Murderlon)
-- @uppy/provider-views: Sort Google Drive list by name (#3069 / @Murderlon)
-- @uppy/provider-views: Tweak breadcrump styling (#3030 / @Murderlon)
-- @uppy/robodog: fix types @aduh95 (d9ff0030a)
-- @uppy/store-redux: force `new` keyword (17f71da67 / @aduh95)
-- @uppy/transloadit: fix tests on v16.x (@aduh95)
-- @uppy/transloadit: fix unhandled promise rejections (#2948 / @aduh95)
-- @uppy/transloadit: refactor to use private properties (#3019 / @aduh95)
-- @uppy/transloadit: upgrade `socket.io-client` version (#3065 / @aduh95)
-- @uppy/tus: remove `autoRetry` option (#2938 / @aduh95)
-- @uppy/utils: avoid creating throw-away `<div>` in `isDragDropSupported` (#3080 / @aduh95)
-- @uppy/utils: improve support of data URI in `dataURItoBlob` (#3080 / @aduh95) (0cccb686f)
-- @uppy/utils: refactor `prettyETA` (#3080 / @aduh95)
-- @uppy/utils: refactor `truncateString` (#3080 / @aduh95)
-- @uppy/utils: remove ponyfill for `Array#findIndex` (#3080 / @aduh95)
-- @uppy/utils: resolve remaining linter errors (#3091 / @aduh95)
-- @uppy/utils: simplify `canvasToBlob` (#3080 / @aduh95)
-- @uppy/utils: simplify `getTimeStamp` (#3080 / @aduh95)
-- @uppy/utils: simplify code using optional chaining (#3080 / @aduh95)
-- @uppy/utils: use `Array.from` insterad of custom utils (#3080 / @aduh95)
-- @uppy/utils: use private fields in `EventTracker` (#3080 / @aduh95)
-- @uppy/utils: use private fields in `ProgressTimeout` (#3080 / @aduh95)
-- @uppy/utils: use private fields in `RateLimitedQueue` (#3080 / @aduh95)
-- @uppy/webcam, @uppy/screen-capture: expect built-in support for `MediaDevices` API (#2945 / @aduh95)
-- @uppy/webcam: Fix webcam mirror option (#3074 / @Murderlon) (b7210b137)
-- @uppy/xhr-upload: Call `upload-started` for every file instead of all at once in `xhr-upload` (#3005 / @Murderlon)
-- @uppy/xhr-upload: change default name depending on whether `bundle` is set (#2933 / @aduh95)
-- @uppy/xhr-upload: fix import path (#3080 / @aduh95)
-- @uppy/xhr-upload: use symbol for internal options (#2934 / @aduh95)
-- @uppy/locales: Add new added phrases and some improvment to fa_IR translation file (#3050 / @ghasrfakhri)
+- @growthcloud/angular: fix uppy dependencies @aduh95
+- @growthcloud/angular: upgrade to Angular 12.1 (d61113979 / @aduh95 )
+- @growthcloud/aws-s3-multipart: add support for presigned URL batching (#3056 / @martin-brennan)
+- @growthcloud/aws-s3: refactor to private fields (#3076 / @aduh95)
+- @growthcloud/aws-s3: refactor to use private fields (#3094 / @aduh95)
+- @growthcloud/companion-client: migrate to private properties (#3057 / @aduh95)
+- @growthcloud/companion: Companion improve logging (#3103 / @mifi)
+- @growthcloud/companion: fix build (960cfa5ba / @aduh95)
+- @growthcloud/companion: remove `lodash` dependency (#3036 / @aduh95)
+- @growthcloud/companion: Remove deprecated `serverHeaders` in favour of `companionHeaders` (#2995 / @arturi)
+- @growthcloud/core: add types for `logger` (#3090 / @bencergazda)
+- @growthcloud/core: avoid binding methods to instance in constructor (#3043 / @aduh95)
+- @growthcloud/core: Create `getObjectOfFilesPerState` in core for plugins (#2961 / @Murderlon)
+- @growthcloud/core: Create `onUnmount` in `UIPlugin` for plugins that require clean up (#3093 / @Murderlon)
+- @growthcloud/core: detach event listeners on close (#3035 / @aduh95)
+- @growthcloud/core: do not expose `plugins` property (#3045 / @aduh95)
+- @growthcloud/core: fix i18n binding (4ab06907c / @aduh95)
+- @growthcloud/core: fix types (dcaef3173 / @aduh95)
+- @growthcloud/core: move event emitter to private properties (#3042 / @aduh95)
+- @growthcloud/core: move more internals to private properties (#3041 / @aduh95)
+- @growthcloud/core: `onBeforeFileAdded` — pass full file object with extension, detected type, meta, size, etc (#2941 / @arturi)
+- @growthcloud/core: reject empty string as valid value for required meta fields (#3119 / @aduh95) (0b801ccba)
+- @growthcloud/core: Remove `sync` option from `VirtualList` & update `UIPlugin` render @Murderlon
+- @growthcloud/core: remove more IE hacks (#3015 / @aduh95)
+- @growthcloud/core: remove use of `Array.prototype.reduce` where possible (#3016 / @aduh95)
+- @growthcloud/core: Resolve all type `TODO`'s (#2963 / @Murderlon)
+- @growthcloud/core: UIPlugin fix: prevent Preact replacing contents of body element by using `createDocumentFragment` (#3072 / @arturi)
+- @growthcloud/core: use private fields (#3013 / @aduh95)
+- @growthcloud/core: use privater properties in `UIPlugin` (#3073 / @aduh95)
+- @growthcloud/core: validateRestrictions was failing due to being unbound, fixed with arrow function (1c7ac56d8 / @arturi)
+- @growthcloud/dashboard, @growthcloud/status-bar: call core methods directly (#3062 / @arturi)
+- @growthcloud/dashboard: don’t show informer for individual required meta fields errors (#3060 / @arturi)
+- @growthcloud/dashboard: fileSource string is unused (2b52d9f9a / @arturi)
+- @growthcloud/dashboard: Fix `editFile` locale usage (#3108 / @Murderlon)
+- @growthcloud/dashboard: fix metafield form validation (#3113 / @aduh95)
+- @growthcloud/dashboard: set default trigger: null (#2942 / @arturi)
+- @growthcloud/dashboard: `showLinkToFileUploadResult: false` by default (#2994 / @arturi)
+- @growthcloud/form: deprecate multipleResults option (#2996 / @arturi)
+- @growthcloud/image-editor: Add `croppedCanvasOptions` to image editor `opts` (#3037 / @Murderlon)
+- @growthcloud/image-editor: fix SASS deprecation warning (#3009 / @aduh95)
+- @growthcloud/informer: remove dependency to `preact-transition-group` (#3055 / @aduh95)
+- @growthcloud/locales: Fix locales — point to CDN v1.31.0 (198f23649 / @arturi)
+- @growthcloud/locales: remove es_GL that was kept for backwards-compat (#2943 / @arturi)
+- @growthcloud/locales: remove unused strings (@arturi)
+- @growthcloud/locales: Sync and enhance locale de_DE (#3071 / @paescuj)
+- @growthcloud/provider-views: Improve checkbox for screenreaders 2 (#2980 / @Murderlon)
+- @growthcloud/provider-views: Sort Google Drive list by name (#3069 / @Murderlon)
+- @growthcloud/provider-views: Tweak breadcrump styling (#3030 / @Murderlon)
+- @growthcloud/robodog: fix types @aduh95 (d9ff0030a)
+- @growthcloud/store-redux: force `new` keyword (17f71da67 / @aduh95)
+- @growthcloud/transloadit: fix tests on v16.x (@aduh95)
+- @growthcloud/transloadit: fix unhandled promise rejections (#2948 / @aduh95)
+- @growthcloud/transloadit: refactor to use private properties (#3019 / @aduh95)
+- @growthcloud/transloadit: upgrade `socket.io-client` version (#3065 / @aduh95)
+- @growthcloud/tus: remove `autoRetry` option (#2938 / @aduh95)
+- @growthcloud/utils: avoid creating throw-away `<div>` in `isDragDropSupported` (#3080 / @aduh95)
+- @growthcloud/utils: improve support of data URI in `dataURItoBlob` (#3080 / @aduh95) (0cccb686f)
+- @growthcloud/utils: refactor `prettyETA` (#3080 / @aduh95)
+- @growthcloud/utils: refactor `truncateString` (#3080 / @aduh95)
+- @growthcloud/utils: remove ponyfill for `Array#findIndex` (#3080 / @aduh95)
+- @growthcloud/utils: resolve remaining linter errors (#3091 / @aduh95)
+- @growthcloud/utils: simplify `canvasToBlob` (#3080 / @aduh95)
+- @growthcloud/utils: simplify `getTimeStamp` (#3080 / @aduh95)
+- @growthcloud/utils: simplify code using optional chaining (#3080 / @aduh95)
+- @growthcloud/utils: use `Array.from` insterad of custom utils (#3080 / @aduh95)
+- @growthcloud/utils: use private fields in `EventTracker` (#3080 / @aduh95)
+- @growthcloud/utils: use private fields in `ProgressTimeout` (#3080 / @aduh95)
+- @growthcloud/utils: use private fields in `RateLimitedQueue` (#3080 / @aduh95)
+- @growthcloud/webcam, @growthcloud/screen-capture: expect built-in support for `MediaDevices` API (#2945 / @aduh95)
+- @growthcloud/webcam: Fix webcam mirror option (#3074 / @Murderlon) (b7210b137)
+- @growthcloud/xhr-upload: Call `upload-started` for every file instead of all at once in `xhr-upload` (#3005 / @Murderlon)
+- @growthcloud/xhr-upload: change default name depending on whether `bundle` is set (#2933 / @aduh95)
+- @growthcloud/xhr-upload: fix import path (#3080 / @aduh95)
+- @growthcloud/xhr-upload: use symbol for internal options (#2934 / @aduh95)
+- @growthcloud/locales: Add new added phrases and some improvment to fa_IR translation file (#3050 / @ghasrfakhri)
 - build: Add `@babel/plugin-proposal-nullish-coalescing-operator` babel plugin (4bbd3b97b / @aduh95)
 - build: add stylelint (#3124 / @arturi) (dbe3ed25b)
 - build: Bootstrap without package-lock files (#3029 / @Murderlon)
@@ -1426,7 +1403,7 @@ Released: 2021-08-24
 - Improve a11y of remove button in dashboard (#3088 / @Murderlon)
 - meta: rename master branch to main (08cac3beb / @arturi)
 - meta: Resolve or remove miscellaneous todos (#2967 / @Murderlon)
-- @uppy/companion: Safely escape `<script>` injected code in companion `send-token.js` (#3101 / @mifi) (3059d733f)
+- @growthcloud/companion: Safely escape `<script>` injected code in companion `send-token.js` (#3101 / @mifi) (3059d733f)
 - test: fix end2end test suite (#3008 / @aduh95)
 - test: remove npm warning on Node.js v14.x (1666f8918 / @aduh95)
 - website: Disable box (#3087 / @mifi)
@@ -1452,7 +1429,7 @@ Released: 2021-08-24
 - deps: upgrade `onchange` to v7 @aduh95 (91f056e9e)
 - deps: upgrade `npm-packlist` to v2 @aduh95 (047261ca8)
 - deps: upgrade `nodemon`to v2 @aduh95 (115fa101f)
-- @uppy/companion: upgrade `helmet` to v4 @aduh95 (7330d21b8)
+- @growthcloud/companion: upgrade `helmet` to v4 @aduh95 (7330d21b8)
 - deps: update `lerna` to v4 @aduh95 (469e2e5df)
 - deps: remove `execa` and refactor `update-contributors` script @aduh95 (95a8d871e)
 - deps: update `cssname` to v5 @aduh95 (51af8668f)
@@ -1482,29 +1459,29 @@ Released: 2021-08-24
 
 Released: 2021-07-29
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.1.3 | @uppy/react | 1.12.1 |
-| @uppy/aws-s3 | 1.8.0 | @uppy/robodog | 1.11.0 |
-| @uppy/companion | 2.12.0 | @uppy/screen-capture | 1.1.0 |
-| @uppy/core | 1.20.0 | @uppy/svelte | 0.1.13 |
-| @uppy/dashboard | 1.21.0 | @uppy/transloadit | 1.7.0 |
-| @uppy/drag-drop | 1.4.31 | @uppy/vue | 0.2.6 |
-| @uppy/image-editor | 0.4.0 | @uppy/webcam | 1.8.13 |
-| @uppy/locales | 1.22.0 | uppy | 1.31.0 |
+| Package                   | Version | Package                     | Version |
+| ------------------------- | ------- | --------------------------- | ------- |
+| @growthcloud/angular      | 0.1.3   | @growthcloud/react          | 1.12.1  |
+| @growthcloud/aws-s3       | 1.8.0   | @growthcloud/robodog        | 1.11.0  |
+| @growthcloud/companion    | 2.12.0  | @growthcloud/screen-capture | 1.1.0   |
+| @growthcloud/core         | 1.20.0  | @growthcloud/svelte         | 0.1.13  |
+| @growthcloud/dashboard    | 1.21.0  | @growthcloud/transloadit    | 1.7.0   |
+| @growthcloud/drag-drop    | 1.4.31  | @growthcloud/vue            | 0.2.6   |
+| @growthcloud/image-editor | 0.4.0   | @growthcloud/webcam         | 1.8.13  |
+| @growthcloud/locales      | 1.22.0  | uppy                        | 1.31.0  |
 
-- @uppy/companion: Fix invalid referrer crashing the process (a785f7deebe5ad75bb2e7ea0874198784c19fea1 / @juliangruber)
-- @uppy/companion: Fix typescript error (6dbaddc09d36308821b842ed13a847f5d655cbf4 / @juliangruber)
-- @uppy/angular: Fix broken packaging (#3007 / @ajkachnic)
-- @uppy/robodog: Add Robodog Types (#2989 / @Hawxy)
-- @uppy/core: Tighten duck type check for file objects (#3006 / @goto-bus-stop)
-- @uppy/core: tighten duck type check for file objects (#3006 / @goto-bus-stop)
-- @uppy/core: Set file size from progress data when null (#2778 / @mejiaej)
-- @uppy/core: Mark state as deprecated (#3044 / @aduh95)
-- @uppy/locales: Update de_DE.js (#3012 / @paescuj)
-- @uppy/dashboard: Rename Done to Cancel, add Save to Image Editor (#3033 / @arturi)
-- @uppy/box: Add Box (#3004 / @mifi)
-- @uppy/dashboard: Add required option to metaFields (#2896 / @aduh95)
+- @growthcloud/companion: Fix invalid referrer crashing the process (a785f7deebe5ad75bb2e7ea0874198784c19fea1 / @juliangruber)
+- @growthcloud/companion: Fix typescript error (6dbaddc09d36308821b842ed13a847f5d655cbf4 / @juliangruber)
+- @growthcloud/angular: Fix broken packaging (#3007 / @ajkachnic)
+- @growthcloud/robodog: Add Robodog Types (#2989 / @Hawxy)
+- @growthcloud/core: Tighten duck type check for file objects (#3006 / @goto-bus-stop)
+- @growthcloud/core: tighten duck type check for file objects (#3006 / @goto-bus-stop)
+- @growthcloud/core: Set file size from progress data when null (#2778 / @mejiaej)
+- @growthcloud/core: Mark state as deprecated (#3044 / @aduh95)
+- @growthcloud/locales: Update de_DE.js (#3012 / @paescuj)
+- @growthcloud/dashboard: Rename Done to Cancel, add Save to Image Editor (#3033 / @arturi)
+- @growthcloud/box: Add Box (#3004 / @mifi)
+- @growthcloud/dashboard: Add required option to metaFields (#2896 / @aduh95)
 - build: Fix package.json imports to be inlined by Babel (#3047 / @aduh95)
 - docs: Add instagram development notes (#2984 / @mifi)
 - docs: Update CONTRIBUTING.md (#3011 / @aduh95)
@@ -1512,17 +1489,17 @@ Released: 2021-07-29
 
 ## Companion Patch 2.12.2
 
-| Package | Version |
-|-|-|
-| @uppy/companion@2.12.2 | 2.12.2 |
+| Package                       | Version |
+| ----------------------------- | ------- |
+| @growthcloud/companion@2.12.2 | 2.12.2  |
 
-- @uppy/companion: Improve logging (#3103 / @mifi)
+- @growthcloud/companion: Improve logging (#3103 / @mifi)
 
 ### Patch release
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.1.2 | @uppy/companion | 2.11.1 |
+| Package              | Version | Package                | Version |
+| -------------------- | ------- | ---------------------- | ------- |
+| @growthcloud/angular | 0.1.2   | @growthcloud/companion | 2.11.1  |
 
 ## June 2021
 
@@ -1530,64 +1507,64 @@ Released: 2021-07-29
 
 Released: 2021-07-01
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/angular | 0.1.1 | @uppy/progress-bar | 1.3.30 |
-| @uppy/aws-s3-multipart | 1.8.17 | @uppy/provider-views | 1.12.2 |
-| @uppy/aws-s3-multipart | 1.8.18 | @uppy/provider-views | 1.12.3 |
-| @uppy/aws-s3 | 1.7.11 | @uppy/react-native | 0.1.8 |
-| @uppy/aws-s3 | 1.7.12 | @uppy/react-native | 0.1.9 |
-| @uppy/box | 0.3.11 | @uppy/react | 1.11.10 |
-| @uppy/box | 0.3.12 | @uppy/react | 1.12.0 |
-| @uppy/companion-client | 1.10.1 | @uppy/redux-dev-tools | 1.3.9 |
-| @uppy/companion-client | 1.10.2 | @uppy/robodog | 1.10.11 |
-| @uppy/companion | 2.10.1 | @uppy/robodog | 1.10.12 |
-| @uppy/companion | 2.11.0 | @uppy/screen-capture | 1.0.20 |
-| @uppy/core | 1.19.1 | @uppy/screen-capture | 1.0.21 |
-| @uppy/core | 1.19.2 | @uppy/status-bar | 1.9.5 |
-| @uppy/dashboard | 1.20.1 | @uppy/status-bar | 1.9.6 |
-| @uppy/dashboard | 1.20.2 | @uppy/store-default | 1.2.7 |
-| @uppy/drag-drop | 1.4.29 | @uppy/store-redux | 1.2.7 |
-| @uppy/drag-drop | 1.4.30 | @uppy/store-redux | 1.2.8 |
-| @uppy/drop-target | 0.2.3 | @uppy/svelte | 0.1.11 |
-| @uppy/drop-target | 0.2.4 | @uppy/svelte | 0.1.12 |
-| @uppy/dropbox | 1.5.1 | @uppy/thumbnail-generator | 1.7.10 |
-| @uppy/dropbox | 1.5.2 | @uppy/thumbnail-generator | 1.7.11 |
-| @uppy/facebook | 1.2.1 | @uppy/transloadit | 1.6.25 |
-| @uppy/facebook | 1.2.2 | @uppy/transloadit | 1.6.26 |
-| @uppy/file-input | 1.5.1 | @uppy/tus | 1.9.1 |
-| @uppy/file-input | 1.5.2 | @uppy/tus | 1.9.2 |
-| @uppy/form | 1.3.30 | @uppy/unsplash | 0.1.12 |
-| @uppy/form | 1.3.31 | @uppy/unsplash | 0.1.13 |
-| @uppy/golden-retriever | 1.4.1 | @uppy/url | 1.5.22 |
-| @uppy/golden-retriever | 1.4.2 | @uppy/url | 1.5.23 |
-| @uppy/google-drive | 1.7.1 | @uppy/utils | 3.6.1 |
-| @uppy/google-drive | 1.7.2 | @uppy/utils | 3.6.2 |
-| @uppy/image-editor | 0.2.6 | @uppy/vue | 0.2.4 |
-| @uppy/image-editor | 0.3.0 | @uppy/vue | 0.2.5 |
-| @uppy/informer | 1.6.5 | @uppy/webcam | 1.8.11 |
-| @uppy/informer | 1.6.6 | @uppy/webcam | 1.8.12 |
-| @uppy/instagram | 1.5.1 | @uppy/xhr-upload | 1.7.4 |
-| @uppy/instagram | 1.5.2 | @uppy/xhr-upload | 1.7.5 |
-| @uppy/locales | 1.20.1 | @uppy/zoom | 0.1.17 |
-| @uppy/locales | 1.21.0 | @uppy/zoom | 0.1.18 |
-| @uppy/onedrive | 1.2.1 | remark-lint-uppy | 0.0.1 |
-| @uppy/onedrive | 1.2.2 | uppy | 1.29.1 |
-| @uppy/progress-bar | 1.3.29 | uppy | 1.30.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/angular          | 0.1.1   | @growthcloud/progress-bar        | 1.3.30  |
+| @growthcloud/aws-s3-multipart | 1.8.17  | @growthcloud/provider-views      | 1.12.2  |
+| @growthcloud/aws-s3-multipart | 1.8.18  | @growthcloud/provider-views      | 1.12.3  |
+| @growthcloud/aws-s3           | 1.7.11  | @growthcloud/react-native        | 0.1.8   |
+| @growthcloud/aws-s3           | 1.7.12  | @growthcloud/react-native        | 0.1.9   |
+| @growthcloud/box              | 0.3.11  | @growthcloud/react               | 1.11.10 |
+| @growthcloud/box              | 0.3.12  | @growthcloud/react               | 1.12.0  |
+| @growthcloud/companion-client | 1.10.1  | @growthcloud/redux-dev-tools     | 1.3.9   |
+| @growthcloud/companion-client | 1.10.2  | @growthcloud/robodog             | 1.10.11 |
+| @growthcloud/companion        | 2.10.1  | @growthcloud/robodog             | 1.10.12 |
+| @growthcloud/companion        | 2.11.0  | @growthcloud/screen-capture      | 1.0.20  |
+| @growthcloud/core             | 1.19.1  | @growthcloud/screen-capture      | 1.0.21  |
+| @growthcloud/core             | 1.19.2  | @growthcloud/status-bar          | 1.9.5   |
+| @growthcloud/dashboard        | 1.20.1  | @growthcloud/status-bar          | 1.9.6   |
+| @growthcloud/dashboard        | 1.20.2  | @growthcloud/store-default       | 1.2.7   |
+| @growthcloud/drag-drop        | 1.4.29  | @growthcloud/store-redux         | 1.2.7   |
+| @growthcloud/drag-drop        | 1.4.30  | @growthcloud/store-redux         | 1.2.8   |
+| @growthcloud/drop-target      | 0.2.3   | @growthcloud/svelte              | 0.1.11  |
+| @growthcloud/drop-target      | 0.2.4   | @growthcloud/svelte              | 0.1.12  |
+| @growthcloud/dropbox          | 1.5.1   | @growthcloud/thumbnail-generator | 1.7.10  |
+| @growthcloud/dropbox          | 1.5.2   | @growthcloud/thumbnail-generator | 1.7.11  |
+| @growthcloud/facebook         | 1.2.1   | @growthcloud/transloadit         | 1.6.25  |
+| @growthcloud/facebook         | 1.2.2   | @growthcloud/transloadit         | 1.6.26  |
+| @growthcloud/file-input       | 1.5.1   | @growthcloud/tus                 | 1.9.1   |
+| @growthcloud/file-input       | 1.5.2   | @growthcloud/tus                 | 1.9.2   |
+| @growthcloud/form             | 1.3.30  | @growthcloud/unsplash            | 0.1.12  |
+| @growthcloud/form             | 1.3.31  | @growthcloud/unsplash            | 0.1.13  |
+| @growthcloud/golden-retriever | 1.4.1   | @growthcloud/url                 | 1.5.22  |
+| @growthcloud/golden-retriever | 1.4.2   | @growthcloud/url                 | 1.5.23  |
+| @growthcloud/google-drive     | 1.7.1   | @growthcloud/utils               | 3.6.1   |
+| @growthcloud/google-drive     | 1.7.2   | @growthcloud/utils               | 3.6.2   |
+| @growthcloud/image-editor     | 0.2.6   | @growthcloud/vue                 | 0.2.4   |
+| @growthcloud/image-editor     | 0.3.0   | @growthcloud/vue                 | 0.2.5   |
+| @growthcloud/informer         | 1.6.5   | @growthcloud/webcam              | 1.8.11  |
+| @growthcloud/informer         | 1.6.6   | @growthcloud/webcam              | 1.8.12  |
+| @growthcloud/instagram        | 1.5.1   | @growthcloud/xhr-upload          | 1.7.4   |
+| @growthcloud/instagram        | 1.5.2   | @growthcloud/xhr-upload          | 1.7.5   |
+| @growthcloud/locales          | 1.20.1  | @growthcloud/zoom                | 0.1.17  |
+| @growthcloud/locales          | 1.21.0  | @growthcloud/zoom                | 0.1.18  |
+| @growthcloud/onedrive         | 1.2.1   | remark-lint-uppy                 | 0.0.1   |
+| @growthcloud/onedrive         | 1.2.2   | uppy                             | 1.29.1  |
+| @growthcloud/progress-bar     | 1.3.29  | uppy                             | 1.30.0  |
 
-- @uppy/companion: add `logClientVersion` option (#2855 / @mifi)
-- @uppy/angular: add Angular integration (#2871 / @ajkachnic)
-- @uppy/core: add types for uppy.once method (#2965 / @a-kriya)
-- @uppy/core: enrich error event for use from postproocessor (#2909 / @aduh95)
-- @uppy/react-native: refactor takePictureWithExpo (#2946 / @aduh95)
-- @uppy/companion: fixed standalone server to initiate itself on explicit function (#2920 / @Cruaier)
-- @uppy/google-drive: Google drive shortcuts (#2917 / @mifi)
-- @uppy/react: allowed HTML Attributes to be passed via props (#2891 / @ajkachnic)
-- @uppy/drag-drop: Expose drag-drop events (#2914 / @Murderlon)
-- @uppy/image-editor: Add more granular image rotation control (#2838 / @aduh95)
-- @uppy/utils: Translator: refactor interpolate (#2903 / @aduh95)
-- @uppy/url: return fileId or error in plugin.addFile (#2919 / @nil1511)
-- @uppy/locales: Mention the file name in exceedsSize error message (#2918 / @Murderlon)
+- @growthcloud/companion: add `logClientVersion` option (#2855 / @mifi)
+- @growthcloud/angular: add Angular integration (#2871 / @ajkachnic)
+- @growthcloud/core: add types for uppy.once method (#2965 / @a-kriya)
+- @growthcloud/core: enrich error event for use from postproocessor (#2909 / @aduh95)
+- @growthcloud/react-native: refactor takePictureWithExpo (#2946 / @aduh95)
+- @growthcloud/companion: fixed standalone server to initiate itself on explicit function (#2920 / @Cruaier)
+- @growthcloud/google-drive: Google drive shortcuts (#2917 / @mifi)
+- @growthcloud/react: allowed HTML Attributes to be passed via props (#2891 / @ajkachnic)
+- @growthcloud/drag-drop: Expose drag-drop events (#2914 / @Murderlon)
+- @growthcloud/image-editor: Add more granular image rotation control (#2838 / @aduh95)
+- @growthcloud/utils: Translator: refactor interpolate (#2903 / @aduh95)
+- @growthcloud/url: return fileId or error in plugin.addFile (#2919 / @nil1511)
+- @growthcloud/locales: Mention the file name in exceedsSize error message (#2918 / @Murderlon)
 - build: Fix eslint uppy package imports (#2915 / @Murderlon)
 - docs: fix typo in docs/progressbar.md (#2962 / @a-kriya)
 - docs: add props example (#2959 / @jmontoyaa)
@@ -1600,39 +1577,39 @@ Released: 2021-05-28
 
 This release features a significant refactor of the Golden Retriever plugin, among with some Companion and Typescript improvements.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.17 | @uppy/react-native | 0.1.8 |
-| @uppy/aws-s3 | 1.7.11 | @uppy/react | 1.11.10 |
-| @uppy/box | 0.3.11 | @uppy/redux-dev-tools | 1.3.9 |
-| @uppy/companion-client | 1.10.1 | @uppy/robodog | 1.10.11 |
-| @uppy/companion | 2.10.1 | @uppy/screen-capture | 1.0.20 |
-| @uppy/core | 1.19.1 | @uppy/status-bar | 1.9.5 |
-| @uppy/dashboard | 1.20.1 | @uppy/store-default | 1.2.7 |
-| @uppy/drag-drop | 1.4.29 | @uppy/store-redux | 1.2.7 |
-| @uppy/drop-target | 0.2.3 | @uppy/svelte | 0.1.11 |
-| @uppy/dropbox | 1.5.1 | @uppy/thumbnail-generator | 1.7.10 |
-| @uppy/facebook | 1.2.1 | @uppy/transloadit | 1.6.25 |
-| @uppy/file-input | 1.5.1 | @uppy/tus | 1.9.1 |
-| @uppy/form | 1.3.30 | @uppy/unsplash | 0.1.12 |
-| @uppy/golden-retriever | 1.4.1 | @uppy/url | 1.5.22 |
-| @uppy/google-drive | 1.7.1 | @uppy/utils | 3.6.1 |
-| @uppy/image-editor | 0.2.6 | @uppy/vue | 0.2.4 |
-| @uppy/informer | 1.6.5 | @uppy/webcam | 1.8.11 |
-| @uppy/instagram | 1.5.1 | @uppy/xhr-upload | 1.7.4 |
-| @uppy/locales | 1.20.1 | @uppy/zoom | 0.1.17 |
-| @uppy/onedrive | 1.2.1 | remark-lint-uppy | 0.0.1 |
-| @uppy/progress-bar | 1.3.29 | uppy | 1.29.1 |
-| @uppy/provider-views | 1.12.2 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.17  | @growthcloud/react-native        | 0.1.8   |
+| @growthcloud/aws-s3           | 1.7.11  | @growthcloud/react               | 1.11.10 |
+| @growthcloud/box              | 0.3.11  | @growthcloud/redux-dev-tools     | 1.3.9   |
+| @growthcloud/companion-client | 1.10.1  | @growthcloud/robodog             | 1.10.11 |
+| @growthcloud/companion        | 2.10.1  | @growthcloud/screen-capture      | 1.0.20  |
+| @growthcloud/core             | 1.19.1  | @growthcloud/status-bar          | 1.9.5   |
+| @growthcloud/dashboard        | 1.20.1  | @growthcloud/store-default       | 1.2.7   |
+| @growthcloud/drag-drop        | 1.4.29  | @growthcloud/store-redux         | 1.2.7   |
+| @growthcloud/drop-target      | 0.2.3   | @growthcloud/svelte              | 0.1.11  |
+| @growthcloud/dropbox          | 1.5.1   | @growthcloud/thumbnail-generator | 1.7.10  |
+| @growthcloud/facebook         | 1.2.1   | @growthcloud/transloadit         | 1.6.25  |
+| @growthcloud/file-input       | 1.5.1   | @growthcloud/tus                 | 1.9.1   |
+| @growthcloud/form             | 1.3.30  | @growthcloud/unsplash            | 0.1.12  |
+| @growthcloud/golden-retriever | 1.4.1   | @growthcloud/url                 | 1.5.22  |
+| @growthcloud/google-drive     | 1.7.1   | @growthcloud/utils               | 3.6.1   |
+| @growthcloud/image-editor     | 0.2.6   | @growthcloud/vue                 | 0.2.4   |
+| @growthcloud/informer         | 1.6.5   | @growthcloud/webcam              | 1.8.11  |
+| @growthcloud/instagram        | 1.5.1   | @growthcloud/xhr-upload          | 1.7.4   |
+| @growthcloud/locales          | 1.20.1  | @growthcloud/zoom                | 0.1.17  |
+| @growthcloud/onedrive         | 1.2.1   | remark-lint-uppy                 | 0.0.1   |
+| @growthcloud/progress-bar     | 1.3.29  | uppy                             | 1.29.1  |
+| @growthcloud/provider-views   | 1.12.2  | -                                | -       |
 
-- @uppy/golden-retriever: Confirmation before restore, add “ghost” files #443 #257 (#2701 / @arturi)
-- @uppy/golden-retriever: Golden retriever 2 fixes (#2895 / @arturi)
-- @uppy/companion-client: rethrow original error objects (#2889 / @goto-bus-stop)
-- @uppy/dashboard: Fix incorrect font in Chrome on the Dashboard (#2887 / @nqst)
-- @uppy/url: Add missing companionCookiesRule option (#2898 / @jhen0409)
-- @uppy/companion: fix NRP typescript errors (#2884 / @mifi)
-- @uppy/companion: support relative redirect URLs in responses (#2901 / @ goto-bus-stop)
-- @uppy/core: Add logout, Translator.translate and Translator.translateArray (#2899 / @arturi)
+- @growthcloud/golden-retriever: Confirmation before restore, add “ghost” files #443 #257 (#2701 / @arturi)
+- @growthcloud/golden-retriever: Golden retriever 2 fixes (#2895 / @arturi)
+- @growthcloud/companion-client: rethrow original error objects (#2889 / @goto-bus-stop)
+- @growthcloud/dashboard: Fix incorrect font in Chrome on the Dashboard (#2887 / @nqst)
+- @growthcloud/url: Add missing companionCookiesRule option (#2898 / @jhen0409)
+- @growthcloud/companion: fix NRP typescript errors (#2884 / @mifi)
+- @growthcloud/companion: support relative redirect URLs in responses (#2901 / @ goto-bus-stop)
+- @growthcloud/core: Add logout, Translator.translate and Translator.translateArray (#2899 / @arturi)
 
 ## 1.29.0
 
@@ -1646,44 +1623,44 @@ Released: 2021-05-11
 
 In this release the individual file progress in Dashboard was fixed.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 2.9.0 | @uppy/robodog | 1.10.9 |
-| @uppy/core | 1.18.1 | @uppy/svelte | 0.1.9 |
-| @uppy/dashboard | 1.19.1 | @uppy/vue | 0.2.2 |
-| @uppy/react | 1.11.8 | uppy | 1.28.1 |
+| Package                | Version | Package              | Version |
+| ---------------------- | ------- | -------------------- | ------- |
+| @growthcloud/companion | 2.9.0   | @growthcloud/robodog | 1.10.9  |
+| @growthcloud/core      | 1.18.1  | @growthcloud/svelte  | 0.1.9   |
+| @growthcloud/dashboard | 1.19.1  | @growthcloud/vue     | 0.2.2   |
+| @growthcloud/react     | 1.11.8  | uppy                 | 1.28.1  |
 
-- @uppy/companion: add chunkSize companion option (#2881 / @mifi)
-- @uppy/dashboard: fix individual progress by renaming camelCased svg properties (#2882 / @arturi)
+- @growthcloud/companion: add chunkSize companion option (#2881 / @mifi)
+- @growthcloud/dashboard: fix individual progress by renaming camelCased svg properties (#2882 / @arturi)
 
 ## 1.28.0
 
 Released: 2021-05-05
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/box | 0.3.9 | @uppy/robodog | 1.10.8 |
-| @uppy/companion | 2.8.0 | @uppy/screen-capture | 1.0.18 |
-| @uppy/core | 1.18.0 | @uppy/svelte | 0.1.8 |
-| @uppy/dashboard | 1.19.0 | @uppy/vue | 0.2.1 |
-| @uppy/drop-target | 0.2.1 | @uppy/webcam | 1.8.9 |
-| @uppy/locales | 1.19.0 | uppy | 1.28.0 |
-| @uppy/react | 1.11.7 | - | - |
+| Package                  | Version | Package                     | Version |
+| ------------------------ | ------- | --------------------------- | ------- |
+| @growthcloud/box         | 0.3.9   | @growthcloud/robodog        | 1.10.8  |
+| @growthcloud/companion   | 2.8.0   | @growthcloud/screen-capture | 1.0.18  |
+| @growthcloud/core        | 1.18.0  | @growthcloud/svelte         | 0.1.8   |
+| @growthcloud/dashboard   | 1.19.0  | @growthcloud/vue            | 0.2.1   |
+| @growthcloud/drop-target | 0.2.1   | @growthcloud/webcam         | 1.8.9   |
+| @growthcloud/locales     | 1.19.0  | uppy                        | 1.28.0  |
+| @growthcloud/react       | 1.11.7  | -                           | -       |
 
 In this release we’ve added `disableLocalFiles` option to Dashboard, `uppy.logout()` API to log out of all providers at once, upgraded TypeScript and Redis.
 
-- @uppy/companion: Smaller heroku deployment (#2845 / @goto-bus-stop)
-- @uppy/companion: Pull out metric middleware logic (#2854 / @mifi)
-- @uppy/companion: Bump redis from 2.8.0 to 3.1.1 (#2865 / @dependabot, @ kiloreux)
-- @uppy/core: Add uppy.logout() that logs user out of all cloud providers (#2850 / @arturi)
-- @uppy/core: Use AggregateError when available (#2869 / @aduh95)
-- @uppy/dashboard: Implement disableLocalFiles option — disables drag & drop, hides “browse” and “My Device” buttons (#2852 / @arturi)
-- @uppy/webcam: improve MIME type detection to solve issue in iOS Safari (#2851 / @dominiceden)
-- @uppy/box: This PR added companion cookies rule to every provider except Box (#2864 / @mazoruss)
-- @uppy/react: Add function as allowed prop type (#2873 / @GreenJimmy)
-- @uppy/webcam: Add preview for videos made with webcam (#2837 / @Murderlon)
-- @uppy/drop-target: Fix npm package name for drop-target (#2857 / @jszobody)
-- @uppy/core: Remove outdated comment (#2868 / @aduh95)
+- @growthcloud/companion: Smaller heroku deployment (#2845 / @goto-bus-stop)
+- @growthcloud/companion: Pull out metric middleware logic (#2854 / @mifi)
+- @growthcloud/companion: Bump redis from 2.8.0 to 3.1.1 (#2865 / @dependabot, @ kiloreux)
+- @growthcloud/core: Add uppy.logout() that logs user out of all cloud providers (#2850 / @arturi)
+- @growthcloud/core: Use AggregateError when available (#2869 / @aduh95)
+- @growthcloud/dashboard: Implement disableLocalFiles option — disables drag & drop, hides “browse” and “My Device” buttons (#2852 / @arturi)
+- @growthcloud/webcam: improve MIME type detection to solve issue in iOS Safari (#2851 / @dominiceden)
+- @growthcloud/box: This PR added companion cookies rule to every provider except Box (#2864 / @mazoruss)
+- @growthcloud/react: Add function as allowed prop type (#2873 / @GreenJimmy)
+- @growthcloud/webcam: Add preview for videos made with webcam (#2837 / @Murderlon)
+- @growthcloud/drop-target: Fix npm package name for drop-target (#2857 / @jszobody)
+- @growthcloud/core: Remove outdated comment (#2868 / @aduh95)
 - build: Upgrade TypeScript (#2856 / @ajkachnic)
 - docs: Update transloadit.md (#2859 / @JimmyLv)
 
@@ -1695,50 +1672,50 @@ Released: 2021-03-31
 
 ⚠️ We’ve switched to npm 7 and Workspaces in this one, you need to upgrade to npm 7 to contribute to Uppy. Thanks!
 
-In this release we’ve improved testing DX and CORS handling in Companion, added “shared with me” documents in Google Drive and a new `@uppy/drop-target` plugin.
+In this release we’ve improved testing DX and CORS handling in Companion, added “shared with me” documents in Google Drive and a new `@growthcloud/drop-target` plugin.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.15 | @uppy/react-native | 0.1.6 |
-| @uppy/aws-s3 | 1.7.9 | @uppy/react | 1.11.6 |
-| @uppy/box | 0.3.8 | @uppy/redux-dev-tools | 1.3.8 |
-| @uppy/companion-client | 1.9.0 | @uppy/robodog | 1.10.7 |
-| @uppy/companion | 2.7.0 | @uppy/screen-capture | 1.0.17 |
-| @uppy/core | 1.17.0 | @uppy/status-bar | 1.9.3 |
-| @uppy/dashboard | 1.18.0 | @uppy/store-default | 1.2.6 |
-| @uppy/drag-drop | 1.4.27 | @uppy/store-redux | 1.2.6 |
-| @uppy/drop-target | 0.2.0 | @uppy/svelte | 0.1.7 |
-| @uppy/dropbox | 1.4.26 | @uppy/thumbnail-generator | 1.7.8 |
-| @uppy/facebook | 1.1.26 | @uppy/transloadit | 1.6.23 |
-| @uppy/file-input | 1.4.25 | @uppy/tus | 1.8.7 |
-| @uppy/form | 1.3.28 | @uppy/unsplash | 0.1.10 |
-| @uppy/golden-retriever | 1.3.27 | @uppy/url | 1.5.20 |
-| @uppy/google-drive | 1.6.0 | @uppy/utils | 3.5.0 |
-| @uppy/image-editor | 0.2.4 | @uppy/vue | 0.2.0 |
-| @uppy/informer | 1.6.3 | @uppy/webcam | 1.8.8 |
-| @uppy/instagram | 1.4.26 | @uppy/xhr-upload | 1.7.2 |
-| @uppy/locales | 1.18.0 | @uppy/zoom | 0.1.15 |
-| @uppy/onedrive | 1.1.26 | remark-lint-uppy | 0.0.0 |
-| @uppy/progress-bar | 1.3.27 | uppy | 1.27.0 |
-| @uppy/provider-views | 1.12.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.15  | @growthcloud/react-native        | 0.1.6   |
+| @growthcloud/aws-s3           | 1.7.9   | @growthcloud/react               | 1.11.6  |
+| @growthcloud/box              | 0.3.8   | @growthcloud/redux-dev-tools     | 1.3.8   |
+| @growthcloud/companion-client | 1.9.0   | @growthcloud/robodog             | 1.10.7  |
+| @growthcloud/companion        | 2.7.0   | @growthcloud/screen-capture      | 1.0.17  |
+| @growthcloud/core             | 1.17.0  | @growthcloud/status-bar          | 1.9.3   |
+| @growthcloud/dashboard        | 1.18.0  | @growthcloud/store-default       | 1.2.6   |
+| @growthcloud/drag-drop        | 1.4.27  | @growthcloud/store-redux         | 1.2.6   |
+| @growthcloud/drop-target      | 0.2.0   | @growthcloud/svelte              | 0.1.7   |
+| @growthcloud/dropbox          | 1.4.26  | @growthcloud/thumbnail-generator | 1.7.8   |
+| @growthcloud/facebook         | 1.1.26  | @growthcloud/transloadit         | 1.6.23  |
+| @growthcloud/file-input       | 1.4.25  | @growthcloud/tus                 | 1.8.7   |
+| @growthcloud/form             | 1.3.28  | @growthcloud/unsplash            | 0.1.10  |
+| @growthcloud/golden-retriever | 1.3.27  | @growthcloud/url                 | 1.5.20  |
+| @growthcloud/google-drive     | 1.6.0   | @growthcloud/utils               | 3.5.0   |
+| @growthcloud/image-editor     | 0.2.4   | @growthcloud/vue                 | 0.2.0   |
+| @growthcloud/informer         | 1.6.3   | @growthcloud/webcam              | 1.8.8   |
+| @growthcloud/instagram        | 1.4.26  | @growthcloud/xhr-upload          | 1.7.2   |
+| @growthcloud/locales          | 1.18.0  | @growthcloud/zoom                | 0.1.15  |
+| @growthcloud/onedrive         | 1.1.26  | remark-lint-uppy                 | 0.0.0   |
+| @growthcloud/progress-bar     | 1.3.27  | uppy                             | 1.27.0  |
+| @growthcloud/provider-views   | 1.12.0  | -                                | -       |
 
-- @uppy/aws-s3-multipart: Aws-s3-multipart sends outdated file info to upload-success event (#2828 / @goto-bus-stop)
-- @uppy/aws-s3: removeUploader triggered on uninstall (#2824 / @slawexxx44)
-- @uppy/companion: Add additional Google Drive Metadata (#2795 / @ajh-sr)
-- @uppy/companion: Feature: add redis pubsub scope setting (#2804 / @coreprocess)
-- @uppy/companion: fix running on a subpath (#2841, #2797 / @coreprocess, @goto-bus-stop) 
-- @uppy/companion: Fix videoMediaMetadata property name (6cb90c613c5d3b256194e039bfce30d6de6a6dac / @goto-bus-stop)
-- @uppy/companion: Improve companion unit testing DX (#2827 / @mifi)
-- @uppy/companion: Use `cors` module instead of custom cors logic (#2823 / @mifi)
-- @uppy/dashboard: Add dynamic metaFields option (#2834 / @aduh95)
-- @uppy/dashboard: add missing doneButtonHandler type to dashboard (#2821 / @Dogfalo)
-- @uppy/drop-target — drag and drop files on any existing DOM element (#2836 / @arturi)
-- @uppy/google-drive: Google drive shared with me (#2758 / @mifi)
-- @uppy/image-editor: Fix flipHorizontal string (#2815 / @suchoproduction)
-- @uppy/locales: Update sk_SK.js (#2814 / @suchoproduction)
-- @uppy/vue: Vue 3 support (#2755 / @ajkachnic, @arturi)
-- @uppy/webcam: Fix issue where the modes: `['audio-only']` option was ignored when getting tracks from the media stream (#2810 / @dominiceden)
-- @uppy/xhr-upload: Set headers just before the upload in case options changed (#2781 / @rart)
+- @growthcloud/aws-s3-multipart: Aws-s3-multipart sends outdated file info to upload-success event (#2828 / @goto-bus-stop)
+- @growthcloud/aws-s3: removeUploader triggered on uninstall (#2824 / @slawexxx44)
+- @growthcloud/companion: Add additional Google Drive Metadata (#2795 / @ajh-sr)
+- @growthcloud/companion: Feature: add redis pubsub scope setting (#2804 / @coreprocess)
+- @growthcloud/companion: fix running on a subpath (#2841, #2797 / @coreprocess, @goto-bus-stop)
+- @growthcloud/companion: Fix videoMediaMetadata property name (6cb90c613c5d3b256194e039bfce30d6de6a6dac / @goto-bus-stop)
+- @growthcloud/companion: Improve companion unit testing DX (#2827 / @mifi)
+- @growthcloud/companion: Use `cors` module instead of custom cors logic (#2823 / @mifi)
+- @growthcloud/dashboard: Add dynamic metaFields option (#2834 / @aduh95)
+- @growthcloud/dashboard: add missing doneButtonHandler type to dashboard (#2821 / @Dogfalo)
+- @growthcloud/drop-target — drag and drop files on any existing DOM element (#2836 / @arturi)
+- @growthcloud/google-drive: Google drive shared with me (#2758 / @mifi)
+- @growthcloud/image-editor: Fix flipHorizontal string (#2815 / @suchoproduction)
+- @growthcloud/locales: Update sk_SK.js (#2814 / @suchoproduction)
+- @growthcloud/vue: Vue 3 support (#2755 / @ajkachnic, @arturi)
+- @growthcloud/webcam: Fix issue where the modes: `['audio-only']` option was ignored when getting tracks from the media stream (#2810 / @dominiceden)
+- @growthcloud/xhr-upload: Set headers just before the upload in case options changed (#2781 / @rart)
 - docs: uploadStarted should say true (#2829 / @timodwhit)
 - docs: Add a README.md specific to bundles (#2816 / @kvz)
 - docs: Corrected hanging sentence in Svelte documentation, added an example (#2842 / @Abourass)
@@ -1752,35 +1729,35 @@ In this release we’ve improved testing DX and CORS handling in Companion, adde
 
 Released: 2021-03-10
 
-⚠️ This release fixes a DOS vulnerability in Companion if you were *not* using S3 uploads.
+⚠️ This release fixes a DOS vulnerability in Companion if you were _not_ using S3 uploads.
 We recommend updating ASAP if you run your own Companion instance.
 
 It also adds typescript typings for Companion.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.14 | @uppy/progress-bar | 1.3.26 |
-| @uppy/aws-s3 | 1.7.8 | @uppy/provider-views | 1.11.2 |
-| @uppy/box | 0.3.7 | @uppy/react | 1.11.5 |
-| @uppy/companion-client | 1.8.3 | @uppy/robodog | 1.10.6 |
-| @uppy/companion | 2.6.0 | @uppy/screen-capture | 1.0.16 |
-| @uppy/core | 1.16.2 | @uppy/status-bar | 1.9.2 |
-| @uppy/dashboard | 1.17.1 | @uppy/svelte | 0.1.6 |
-| @uppy/drag-drop | 1.4.26 | @uppy/thumbnail-generator | 1.7.7 |
-| @uppy/dropbox | 1.4.25 | @uppy/transloadit | 1.6.22 |
-| @uppy/facebook | 1.1.25 | @uppy/tus | 1.8.6 |
-| @uppy/file-input | 1.4.24 | @uppy/unsplash | 0.1.9 |
-| @uppy/form | 1.3.27 | @uppy/url | 1.5.19 |
-| @uppy/golden-retriever | 1.3.26 | @uppy/utils | 3.4.2 |
-| @uppy/google-drive | 1.5.25 | @uppy/vue | 0.1.7 |
-| @uppy/image-editor | 0.2.3 | @uppy/webcam | 1.8.7 |
-| @uppy/informer | 1.6.2 | @uppy/xhr-upload | 1.7.1 |
-| @uppy/instagram | 1.4.25 | @uppy/zoom | 0.1.14 |
-| @uppy/onedrive | 1.1.25 | uppy | 1.26.1 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.14  | @growthcloud/progress-bar        | 1.3.26  |
+| @growthcloud/aws-s3           | 1.7.8   | @growthcloud/provider-views      | 1.11.2  |
+| @growthcloud/box              | 0.3.7   | @growthcloud/react               | 1.11.5  |
+| @growthcloud/companion-client | 1.8.3   | @growthcloud/robodog             | 1.10.6  |
+| @growthcloud/companion        | 2.6.0   | @growthcloud/screen-capture      | 1.0.16  |
+| @growthcloud/core             | 1.16.2  | @growthcloud/status-bar          | 1.9.2   |
+| @growthcloud/dashboard        | 1.17.1  | @growthcloud/svelte              | 0.1.6   |
+| @growthcloud/drag-drop        | 1.4.26  | @growthcloud/thumbnail-generator | 1.7.7   |
+| @growthcloud/dropbox          | 1.4.25  | @growthcloud/transloadit         | 1.6.22  |
+| @growthcloud/facebook         | 1.1.25  | @growthcloud/tus                 | 1.8.6   |
+| @growthcloud/file-input       | 1.4.24  | @growthcloud/unsplash            | 0.1.9   |
+| @growthcloud/form             | 1.3.27  | @growthcloud/url                 | 1.5.19  |
+| @growthcloud/golden-retriever | 1.3.26  | @growthcloud/utils               | 3.4.2   |
+| @growthcloud/google-drive     | 1.5.25  | @growthcloud/vue                 | 0.1.7   |
+| @growthcloud/image-editor     | 0.2.3   | @growthcloud/webcam              | 1.8.7   |
+| @growthcloud/informer         | 1.6.2   | @growthcloud/xhr-upload          | 1.7.1   |
+| @growthcloud/instagram        | 1.4.25  | @growthcloud/zoom                | 0.1.14  |
+| @growthcloud/onedrive         | 1.1.25  | uppy                             | 1.26.1  |
 
-- @uppy/companion: fix crash when S3 is not configured (#2798 / @goto-bus-stop)
-- @uppy/companion: generate type declaration file (#2749 / @goto-bus-stop)
-- @uppy/core: support Vue 3's proxied objects in `removePlugin()` (#2793 / @arturi)
+- @growthcloud/companion: fix crash when S3 is not configured (#2798 / @goto-bus-stop)
+- @growthcloud/companion: generate type declaration file (#2749 / @goto-bus-stop)
+- @growthcloud/core: support Vue 3's proxied objects in `removePlugin()` (#2793 / @arturi)
 
 ## February 2021
 
@@ -1790,68 +1767,68 @@ Released: 2021-02-26
 
 This release adds a new `disabled` option for the Dashboard, some build system improvements and a fix for Transloadit plugin.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/box | 0.3.6 | @uppy/robodog | 1.10.5 |
-| @uppy/dashboard | 1.17.0 | @uppy/screen-capture | 1.0.15 |
-| @uppy/dropbox | 1.4.24 | @uppy/svelte | 0.1.5 |
-| @uppy/facebook | 1.1.24 | @uppy/transloadit | 1.6.21 |
-| @uppy/google-drive | 1.5.24 | @uppy/unsplash | 0.1.8 |
-| @uppy/image-editor | 0.2.2 | @uppy/url | 1.5.18 |
-| @uppy/instagram | 1.4.24 | @uppy/vue | 0.1.6 |
-| @uppy/locales | 1.17.2 | @uppy/webcam | 1.8.6 |
-| @uppy/onedrive | 1.1.24 | @uppy/zoom | 0.1.13 |
-| @uppy/react | 1.11.4 | uppy | 1.26.0 |
+| Package                   | Version | Package                     | Version |
+| ------------------------- | ------- | --------------------------- | ------- |
+| @growthcloud/box          | 0.3.6   | @growthcloud/robodog        | 1.10.5  |
+| @growthcloud/dashboard    | 1.17.0  | @growthcloud/screen-capture | 1.0.15  |
+| @growthcloud/dropbox      | 1.4.24  | @growthcloud/svelte         | 0.1.5   |
+| @growthcloud/facebook     | 1.1.24  | @growthcloud/transloadit    | 1.6.21  |
+| @growthcloud/google-drive | 1.5.24  | @growthcloud/unsplash       | 0.1.8   |
+| @growthcloud/image-editor | 0.2.2   | @growthcloud/url            | 1.5.18  |
+| @growthcloud/instagram    | 1.4.24  | @growthcloud/vue            | 0.1.6   |
+| @growthcloud/locales      | 1.17.2  | @growthcloud/webcam         | 1.8.6   |
+| @growthcloud/onedrive     | 1.1.24  | @growthcloud/zoom           | 0.1.13  |
+| @growthcloud/react        | 1.11.4  | uppy                        | 1.26.0  |
 
 - build: set legacy-peer-deps for npm 7. We have some peerDependency mismatches in our install tree. In npm 6 this was OK (maybe reason for a warning) but in npm 7 they hard fail the install
 - build: added npm version check (33e656cad32b865f960dbd88abf4d3839c8377f0 / @goto-bus-stop)
-- @uppy/locales: fix Dutch spelling mistake (#2775 / @janwilts)
-- @uppy/transloadit: make url concatenation more robust (#2777 /@ethanwillis)
-- @uppy/companion: Docker tag release (#2771 / @kiloreux)
-- @uppy/image-editor: Added missing @uppy/utils dependency in @uppy/image-editor package.json (#2770 / @mrogelja)
-- @uppy/dashboard: Added `opts.disabled` for the Dashboard (#2768, #1530 / @arturi, @nqst)
+- @growthcloud/locales: fix Dutch spelling mistake (#2775 / @janwilts)
+- @growthcloud/transloadit: make url concatenation more robust (#2777 /@ethanwillis)
+- @growthcloud/companion: Docker tag release (#2771 / @kiloreux)
+- @growthcloud/image-editor: Added missing @growthcloud/utils dependency in @growthcloud/image-editor package.json (#2770 / @mrogelja)
+- @growthcloud/dashboard: Added `opts.disabled` for the Dashboard (#2768, #1530 / @arturi, @nqst)
 
 ## 1.25.2
 
 Released: 2021-02-12
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/robodog | 1.10.4 | uppy | 1.25.2 |
-| @uppy/transloadit | 1.6.20 | - | - |
+| Package                  | Version | Package | Version |
+| ------------------------ | ------- | ------- | ------- |
+| @growthcloud/robodog     | 1.10.4  | uppy    | 1.25.2  |
+| @growthcloud/transloadit | 1.6.20  | -       | -       |
 
-- @uppy/transloadit: fix a case where the plugin used stale file data. (@goto-bus-stop)
+- @growthcloud/transloadit: fix a case where the plugin used stale file data. (@goto-bus-stop)
 
 ## 1.25.1
 
 Released: 2021-02-10
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.13 | @uppy/provider-views | 1.11.1 |
-| @uppy/aws-s3 | 1.7.7 | @uppy/react | 1.11.3 |
-| @uppy/box | 0.3.5 | @uppy/robodog | 1.10.3 |
-| @uppy/companion-client | 1.8.2 | @uppy/screen-capture | 1.0.14 |
-| @uppy/companion | 2.5.1 | @uppy/status-bar | 1.9.1 |
-| @uppy/core | 1.16.1 | @uppy/svelte | 0.1.4 |
-| @uppy/dashboard | 1.16.1 | @uppy/thumbnail-generator | 1.7.6 |
-| @uppy/drag-drop | 1.4.25 | @uppy/transloadit | 1.6.19 |
-| @uppy/dropbox | 1.4.23 | @uppy/tus | 1.8.5 |
-| @uppy/facebook | 1.1.23 | @uppy/unsplash | 0.1.7 |
-| @uppy/file-input | 1.4.23 | @uppy/url | 1.5.17 |
-| @uppy/form | 1.3.26 | @uppy/utils | 3.4.1 |
-| @uppy/golden-retriever | 1.3.25 | @uppy/vue | 0.1.5 |
-| @uppy/google-drive | 1.5.23 | @uppy/webcam | 1.8.5 |
-| @uppy/informer | 1.6.1 | @uppy/xhr-upload | 1.7.0 |
-| @uppy/instagram | 1.4.23 | @uppy/zoom | 0.1.12 |
-| @uppy/onedrive | 1.1.23 | uppy | 1.25.1 |
-| @uppy/progress-bar | 1.3.25 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.13  | @growthcloud/provider-views      | 1.11.1  |
+| @growthcloud/aws-s3           | 1.7.7   | @growthcloud/react               | 1.11.3  |
+| @growthcloud/box              | 0.3.5   | @growthcloud/robodog             | 1.10.3  |
+| @growthcloud/companion-client | 1.8.2   | @growthcloud/screen-capture      | 1.0.14  |
+| @growthcloud/companion        | 2.5.1   | @growthcloud/status-bar          | 1.9.1   |
+| @growthcloud/core             | 1.16.1  | @growthcloud/svelte              | 0.1.4   |
+| @growthcloud/dashboard        | 1.16.1  | @growthcloud/thumbnail-generator | 1.7.6   |
+| @growthcloud/drag-drop        | 1.4.25  | @growthcloud/transloadit         | 1.6.19  |
+| @growthcloud/dropbox          | 1.4.23  | @growthcloud/tus                 | 1.8.5   |
+| @growthcloud/facebook         | 1.1.23  | @growthcloud/unsplash            | 0.1.7   |
+| @growthcloud/file-input       | 1.4.23  | @growthcloud/url                 | 1.5.17  |
+| @growthcloud/form             | 1.3.26  | @growthcloud/utils               | 3.4.1   |
+| @growthcloud/golden-retriever | 1.3.25  | @growthcloud/vue                 | 0.1.5   |
+| @growthcloud/google-drive     | 1.5.23  | @growthcloud/webcam              | 1.8.5   |
+| @growthcloud/informer         | 1.6.1   | @growthcloud/xhr-upload          | 1.7.0   |
+| @growthcloud/instagram        | 1.4.23  | @growthcloud/zoom                | 0.1.12  |
+| @growthcloud/onedrive         | 1.1.23  | uppy                             | 1.25.1  |
+| @growthcloud/progress-bar     | 1.3.25  | -                                | -       |
 
-- @uppy/companion: Companion should respect previously set value for Accesss-Control-Allow-Methods (#2726 / @tim-kos, @mifi, @so-steve)
-- @uppy/xhr-upload: accept a `headers: (file) => {}` function (#2747, #2299 / @goto-but-stop)
-- @uppy/transloadit: fix polling fallback bugs (#2759 / @goto-bus-stop)
-- @uppy/dashboard: fix showing showProgressDetails on md and up (#2760 / @goto-bus-stop)
-- @uppy/utils: added mp4 file type support — Safari 14.0 on Mac records audio using audio/mp4 MIME type which isn't currently recognised by Uppy (#2753 / @dominiceden)
+- @growthcloud/companion: Companion should respect previously set value for Accesss-Control-Allow-Methods (#2726 / @tim-kos, @mifi, @so-steve)
+- @growthcloud/xhr-upload: accept a `headers: (file) => {}` function (#2747, #2299 / @goto-but-stop)
+- @growthcloud/transloadit: fix polling fallback bugs (#2759 / @goto-bus-stop)
+- @growthcloud/dashboard: fix showing showProgressDetails on md and up (#2760 / @goto-bus-stop)
+- @growthcloud/utils: added mp4 file type support — Safari 14.0 on Mac records audio using audio/mp4 MIME type which isn't currently recognised by Uppy (#2753 / @dominiceden)
 
 ## January 2021
 
@@ -1861,27 +1838,27 @@ Released: 2021-01-28
 
 This release adds support for right-to-left scripts, and includes Box in the Uppy CDN.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.12 | @uppy/provider-views | 1.11.0 |
-| @uppy/aws-s3 | 1.7.6 | @uppy/react | 1.11.2 |
-| @uppy/box | 0.3.4 | @uppy/robodog | 1.10.2 |
-| @uppy/companion-client | 1.8.1 | @uppy/screen-capture | 1.0.13 |
-| @uppy/core | 1.16.0 | @uppy/status-bar | 1.9.0 |
-| @uppy/dashboard | 1.16.0 | @uppy/svelte | 0.1.3 |
-| @uppy/drag-drop | 1.4.24 | @uppy/thumbnail-generator | 1.7.5 |
-| @uppy/dropbox | 1.4.22 | @uppy/transloadit | 1.6.18 |
-| @uppy/facebook | 1.1.22 | @uppy/tus | 1.8.4 |
-| @uppy/file-input | 1.4.22 | @uppy/unsplash | 0.1.6 |
-| @uppy/form | 1.3.25 | @uppy/url | 1.5.16 |
-| @uppy/golden-retriever | 1.3.24 | @uppy/utils | 3.4.0 |
-| @uppy/google-drive | 1.5.22 | @uppy/vue | 0.1.4 |
-| @uppy/informer | 1.6.0 | @uppy/webcam | 1.8.4 |
-| @uppy/instagram | 1.4.22 | @uppy/xhr-upload | 1.6.10 |
-| @uppy/onedrive | 1.1.22 | @uppy/zoom | 0.1.11 |
-| @uppy/progress-bar | 1.3.24 | uppy | 1.25.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.12  | @growthcloud/provider-views      | 1.11.0  |
+| @growthcloud/aws-s3           | 1.7.6   | @growthcloud/react               | 1.11.2  |
+| @growthcloud/box              | 0.3.4   | @growthcloud/robodog             | 1.10.2  |
+| @growthcloud/companion-client | 1.8.1   | @growthcloud/screen-capture      | 1.0.13  |
+| @growthcloud/core             | 1.16.0  | @growthcloud/status-bar          | 1.9.0   |
+| @growthcloud/dashboard        | 1.16.0  | @growthcloud/svelte              | 0.1.3   |
+| @growthcloud/drag-drop        | 1.4.24  | @growthcloud/thumbnail-generator | 1.7.5   |
+| @growthcloud/dropbox          | 1.4.22  | @growthcloud/transloadit         | 1.6.18  |
+| @growthcloud/facebook         | 1.1.22  | @growthcloud/tus                 | 1.8.4   |
+| @growthcloud/file-input       | 1.4.22  | @growthcloud/unsplash            | 0.1.6   |
+| @growthcloud/form             | 1.3.25  | @growthcloud/url                 | 1.5.16  |
+| @growthcloud/golden-retriever | 1.3.24  | @growthcloud/utils               | 3.4.0   |
+| @growthcloud/google-drive     | 1.5.22  | @growthcloud/vue                 | 0.1.4   |
+| @growthcloud/informer         | 1.6.0   | @growthcloud/webcam              | 1.8.4   |
+| @growthcloud/instagram        | 1.4.22  | @growthcloud/xhr-upload          | 1.6.10  |
+| @growthcloud/onedrive         | 1.1.22  | @growthcloud/zoom                | 0.1.11  |
+| @growthcloud/progress-bar     | 1.3.24  | uppy                             | 1.25.0  |
 
-- @uppy/dashboard, @uppy/core: improve support for right-to-left scripts (Arabic, Hebrew) (#2705 / @goto-bus-stop)
+- @growthcloud/dashboard, @growthcloud/core: improve support for right-to-left scripts (Arabic, Hebrew) (#2705 / @goto-bus-stop)
 - uppy: add Box to Uppy CDN (cfb29dda085c0cf76f7c7f9df42d8fe727c33da3 / @arturi)
 
 ### 1.24.1
@@ -1892,46 +1869,45 @@ In this release Companion gains support for setting 3rd party credentials in run
 
 This releases also fixes an issue with image-editor package being unavailable in the previous `uppy@1.24.0` package.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.11 | @uppy/react-native | 0.1.5 |
-| @uppy/aws-s3 | 1.7.5 | @uppy/react | 1.11.1 |
-| @uppy/box | 0.3.3 | @uppy/redux-dev-tools | 1.3.7 |
-| @uppy/companion-client | 1.8.0 | @uppy/robodog | 1.10.1 |
-| @uppy/companion | 2.5.0 | @uppy/screen-capture | 1.0.12 |
-| @uppy/core | 1.15.1 | @uppy/status-bar | 1.8.2 |
-| @uppy/dashboard | 1.15.0 | @uppy/store-default | 1.2.5 |
-| @uppy/drag-drop | 1.4.23 | @uppy/store-redux | 1.2.5 |
-| @uppy/dropbox | 1.4.21 | @uppy/svelte | 0.1.2 |
-| @uppy/facebook | 1.1.21 | @uppy/thumbnail-generator | 1.7.4 |
-| @uppy/file-input | 1.4.21 | @uppy/transloadit | 1.6.17 |
-| @uppy/form | 1.3.24 | @uppy/tus | 1.8.3 |
-| @uppy/golden-retriever | 1.3.23 | @uppy/unsplash | 0.1.5 |
-| @uppy/google-drive | 1.5.21 | @uppy/url | 1.5.15 |
-| @uppy/image-editor | 0.2.1 | @uppy/utils | 3.3.1 |
-| @uppy/informer | 1.5.15 | @uppy/vue | 0.1.3 |
-| @uppy/instagram | 1.4.21 | @uppy/webcam | 1.8.3 |
-| @uppy/locales | 1.17.1 | @uppy/xhr-upload | 1.6.9 |
-| @uppy/onedrive | 1.1.21 | @uppy/zoom | 0.1.10 |
-| @uppy/progress-bar | 1.3.23 | uppy | 1.24.1 |
-| @uppy/provider-views | 1.10.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.11  | @growthcloud/react-native        | 0.1.5   |
+| @growthcloud/aws-s3           | 1.7.5   | @growthcloud/react               | 1.11.1  |
+| @growthcloud/box              | 0.3.3   | @growthcloud/redux-dev-tools     | 1.3.7   |
+| @growthcloud/companion-client | 1.8.0   | @growthcloud/robodog             | 1.10.1  |
+| @growthcloud/companion        | 2.5.0   | @growthcloud/screen-capture      | 1.0.12  |
+| @growthcloud/core             | 1.15.1  | @growthcloud/status-bar          | 1.8.2   |
+| @growthcloud/dashboard        | 1.15.0  | @growthcloud/store-default       | 1.2.5   |
+| @growthcloud/drag-drop        | 1.4.23  | @growthcloud/store-redux         | 1.2.5   |
+| @growthcloud/dropbox          | 1.4.21  | @growthcloud/svelte              | 0.1.2   |
+| @growthcloud/facebook         | 1.1.21  | @growthcloud/thumbnail-generator | 1.7.4   |
+| @growthcloud/file-input       | 1.4.21  | @growthcloud/transloadit         | 1.6.17  |
+| @growthcloud/form             | 1.3.24  | @growthcloud/tus                 | 1.8.3   |
+| @growthcloud/golden-retriever | 1.3.23  | @growthcloud/unsplash            | 0.1.5   |
+| @growthcloud/google-drive     | 1.5.21  | @growthcloud/url                 | 1.5.15  |
+| @growthcloud/image-editor     | 0.2.1   | @growthcloud/utils               | 3.3.1   |
+| @growthcloud/informer         | 1.5.15  | @growthcloud/vue                 | 0.1.3   |
+| @growthcloud/instagram        | 1.4.21  | @growthcloud/webcam              | 1.8.3   |
+| @growthcloud/locales          | 1.17.1  | @growthcloud/xhr-upload          | 1.6.9   |
+| @growthcloud/onedrive         | 1.1.21  | @growthcloud/zoom                | 0.1.10  |
+| @growthcloud/progress-bar     | 1.3.23  | uppy                             | 1.24.1  |
+| @growthcloud/provider-views   | 1.10.0  | -                                | -       |
 
-- uppy: added @uppy/image-editor to package.json (2f11dcc65307d23a43fdaa669bc92cd6f912b54f/ @arturi, @koenvu)
-- @uppy/companion: configurable oauth 3rd party credentials — provide your own Google Drive, Instagram application key/secret at request time (#2622 / @ife)
-- @uppy/companion: delete tus error's originalRequest field before propagating error (#2733 / @ife)
-- @uppy/companion: pass-through metadata to S3, fixes #2531 (goto-bus-stop / #2742)
-- @uppy/companion: use multi-stage docker build (#2732 / @kiloreux)
-- @uppy/locales: added Ukrainian localization (uk-UA) (#2713 / @DenysNosov)
-- @uppy/locales: fixed Russian grammar (#2714 / @DenysNosov)
-- @uppy/dashboard: emit fileId on both file-edit-start and file-edit-complete events (#2729 / @arturi)
+- uppy: added @growthcloud/image-editor to package.json (2f11dcc65307d23a43fdaa669bc92cd6f912b54f/ @arturi, @koenvu)
+- @growthcloud/companion: configurable oauth 3rd party credentials — provide your own Google Drive, Instagram application key/secret at request time (#2622 / @ife)
+- @growthcloud/companion: delete tus error's originalRequest field before propagating error (#2733 / @ife)
+- @growthcloud/companion: pass-through metadata to S3, fixes #2531 (goto-bus-stop / #2742)
+- @growthcloud/companion: use multi-stage docker build (#2732 / @kiloreux)
+- @growthcloud/locales: added Ukrainian localization (uk-UA) (#2713 / @DenysNosov)
+- @growthcloud/locales: fixed Russian grammar (#2714 / @DenysNosov)
+- @growthcloud/dashboard: emit fileId on both file-edit-start and file-edit-complete events (#2729 / @arturi)
 - build: fixes around Github actions and Companion deploys (#2717 / @kiloreux)
 - docs: Add Integration Guide (#2696 / @ajkachnic)
 - docs: list required permissions to upload S3 files using companion (#1825 / @mkopinsky)
 - docs: remove warning about multiple uploads on S3 which is now fixed (#2720 / @Jbithell)
 - docs: update xhrupload.md (#2731 / @hxgf)
-- @uppy/companion-client: support options cookies send rule (#2618 / @ifedapoolarewaju)
+- @growthcloud/companion-client: support options cookies send rule (#2618 / @ifedapoolarewaju)
 - meta: add all the CI badges (#2725 / @goto-bus-stop, @arturi)
-
 
 ## December 2020
 
@@ -1941,68 +1917,68 @@ Released: 2020-12-23
 
 This release adds new Svelte wrapper components, a React FileInput component, and an `autoOpenFileEditor` option for the Dashboard.
 
-The `uppy@1.24.0` package was deprecated due to @uppy/image-editor missing from package.json, it is fixed in v1.24.1. This only affects the “bundled/CDN” `uppy` package.
+The `uppy@1.24.0` package was deprecated due to @growthcloud/image-editor missing from package.json, it is fixed in v1.24.1. This only affects the “bundled/CDN” `uppy` package.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.10 | @uppy/progress-bar | 1.3.22 |
-| @uppy/aws-s3 | 1.7.4 | @uppy/provider-views | 1.9.2 |
-| @uppy/box | 0.3.2 | @uppy/react | 1.11.0 |
-| @uppy/companion-client | 1.7.0 | @uppy/robodog | 1.10.0 |
-| @uppy/companion | 2.4.0 | @uppy/screen-capture | 1.0.11 |
-| @uppy/core | 1.15.0 | @uppy/status-bar | 1.8.1 |
-| @uppy/dashboard | 1.14.0 | @uppy/svelte | 0.1.1 |
-| @uppy/drag-drop | 1.4.22 | @uppy/thumbnail-generator | 1.7.3 |
-| @uppy/dropbox | 1.4.20 | @uppy/transloadit | 1.6.16 |
-| @uppy/facebook | 1.1.20 | @uppy/tus | 1.8.2 |
-| @uppy/file-input | 1.4.20 | @uppy/unsplash | 0.1.4 |
-| @uppy/form | 1.3.23 | @uppy/url | 1.5.14 |
-| @uppy/golden-retriever | 1.3.22 | @uppy/utils | 3.3.0 |
-| @uppy/google-drive | 1.5.20 | @uppy/vue | 0.1.2 |
-| @uppy/image-editor | 0.2.0 | @uppy/webcam | 1.8.2 |
-| @uppy/informer | 1.5.14 | @uppy/xhr-upload | 1.6.8 |
-| @uppy/instagram | 1.4.20 | @uppy/zoom | 0.1.9 |
-| @uppy/onedrive | 1.1.20 | uppy | 1.24.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.10  | @growthcloud/progress-bar        | 1.3.22  |
+| @growthcloud/aws-s3           | 1.7.4   | @growthcloud/provider-views      | 1.9.2   |
+| @growthcloud/box              | 0.3.2   | @growthcloud/react               | 1.11.0  |
+| @growthcloud/companion-client | 1.7.0   | @growthcloud/robodog             | 1.10.0  |
+| @growthcloud/companion        | 2.4.0   | @growthcloud/screen-capture      | 1.0.11  |
+| @growthcloud/core             | 1.15.0  | @growthcloud/status-bar          | 1.8.1   |
+| @growthcloud/dashboard        | 1.14.0  | @growthcloud/svelte              | 0.1.1   |
+| @growthcloud/drag-drop        | 1.4.22  | @growthcloud/thumbnail-generator | 1.7.3   |
+| @growthcloud/dropbox          | 1.4.20  | @growthcloud/transloadit         | 1.6.16  |
+| @growthcloud/facebook         | 1.1.20  | @growthcloud/tus                 | 1.8.2   |
+| @growthcloud/file-input       | 1.4.20  | @growthcloud/unsplash            | 0.1.4   |
+| @growthcloud/form             | 1.3.23  | @growthcloud/url                 | 1.5.14  |
+| @growthcloud/golden-retriever | 1.3.22  | @growthcloud/utils               | 3.3.0   |
+| @growthcloud/google-drive     | 1.5.20  | @growthcloud/vue                 | 0.1.2   |
+| @growthcloud/image-editor     | 0.2.0   | @growthcloud/webcam              | 1.8.2   |
+| @growthcloud/informer         | 1.5.14  | @growthcloud/xhr-upload          | 1.6.8   |
+| @growthcloud/instagram        | 1.4.20  | @growthcloud/zoom                | 0.1.9   |
+| @growthcloud/onedrive         | 1.1.20  | uppy                             | 1.24.0  |
 
-- @uppy/svelte: add Svelte integration (#2671 / @ajkachnic, @adammedford)
-- @uppy/core: new event `files-added` with all files added in one batch (#2681 / @arturi)
-- @uppy/react: add useUppy() hook (#2666 / @goto-bus-stop)
-- @uppy/react: add FileInput component to React (#2706 / @ajkachnic)
-- @uppy/status-bar: corrected StatusBar types (#2697 / @ajkachnic)
-- @uppy/utils: Add archive mime types (#2703 / @ahmedkandel)
-- @uppy/dashboard: add autoopen for file editors (@uppy/image-editor) (#2681 / @arturi)
+- @growthcloud/svelte: add Svelte integration (#2671 / @ajkachnic, @adammedford)
+- @growthcloud/core: new event `files-added` with all files added in one batch (#2681 / @arturi)
+- @growthcloud/react: add useUppy() hook (#2666 / @goto-bus-stop)
+- @growthcloud/react: add FileInput component to React (#2706 / @ajkachnic)
+- @growthcloud/status-bar: corrected StatusBar types (#2697 / @ajkachnic)
+- @growthcloud/utils: Add archive mime types (#2703 / @ahmedkandel)
+- @growthcloud/dashboard: add autoopen for file editors (@growthcloud/image-editor) (#2681 / @arturi)
 - meta: use `tusd.tusdemo.net` (#2691 / @goto-bus-stop)
 
 ### 1.23.3
 
 Released: 2020-12-11
 
-This release fixes a peerDependency mismatch in `@uppy/companion` and a mistake in the return type for `uppy.addFile()`.
+This release fixes a peerDependency mismatch in `@growthcloud/companion` and a mistake in the return type for `uppy.addFile()`.
 
 And thanks to @elkebab, Norwegian (bokmål) translations are now available!
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.9 | @uppy/provider-views | 1.9.1 |
-| @uppy/box | 0.3.1 | @uppy/react | 1.10.12 |
-| @uppy/companion | 2.3.1 | @uppy/robodog | 1.9.13 |
-| @uppy/core | 1.14.2 | @uppy/thumbnail-generator | 1.7.2 |
-| @uppy/dashboard | 1.13.1 | @uppy/transloadit | 1.6.15 |
-| @uppy/dropbox | 1.4.19 | @uppy/tus | 1.8.1 |
-| @uppy/facebook | 1.1.19 | @uppy/unsplash | 0.1.3 |
-| @uppy/google-drive | 1.5.19 | @uppy/vue | 0.1.1 |
-| @uppy/instagram | 1.4.19 | @uppy/zoom | 0.1.8 |
-| @uppy/locales | 1.17.0 | uppy | 1.23.3 |
-| @uppy/onedrive | 1.1.19 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.9   | @growthcloud/provider-views      | 1.9.1   |
+| @growthcloud/box              | 0.3.1   | @growthcloud/react               | 1.10.12 |
+| @growthcloud/companion        | 2.3.1   | @growthcloud/robodog             | 1.9.13  |
+| @growthcloud/core             | 1.14.2  | @growthcloud/thumbnail-generator | 1.7.2   |
+| @growthcloud/dashboard        | 1.13.1  | @growthcloud/transloadit         | 1.6.15  |
+| @growthcloud/dropbox          | 1.4.19  | @growthcloud/tus                 | 1.8.1   |
+| @growthcloud/facebook         | 1.1.19  | @growthcloud/unsplash            | 0.1.3   |
+| @growthcloud/google-drive     | 1.5.19  | @growthcloud/vue                 | 0.1.1   |
+| @growthcloud/instagram        | 1.4.19  | @growthcloud/zoom                | 0.1.8   |
+| @growthcloud/locales          | 1.17.0  | uppy                             | 1.23.3  |
+| @growthcloud/onedrive         | 1.1.19  | -                                | -       |
 
-- @uppy/aws-s3-multipart: expand result as body on success (#2623 / @abannach)
-- @uppy/companion: fix crash when Dropbox API returns an error (#2687 / @ifedapoolarewaju)
-- @uppy/companion: remove unnecessary `fs.stat()` call (#2683 / @mejiaej)
-- @uppy/companion: upgrade express-prom-bundle to v6 (#2689 / @goto-bus-stop)
-- @uppy/core: `addFile()` returns `string`, not `void` (#2685 / @arturi)
-- @uppy/locales: add Norwegian (bokmål) (#2677 / @elkebab)
-- @uppy/thumbnail-generator: upgrade exifr to v6 (#2667 / @goto-bus-stop)
-- @uppy/unsplash: needs @uppy/core to be `^1.13.3` (#2676 / @ifedapoolarewaju)
+- @growthcloud/aws-s3-multipart: expand result as body on success (#2623 / @abannach)
+- @growthcloud/companion: fix crash when Dropbox API returns an error (#2687 / @ifedapoolarewaju)
+- @growthcloud/companion: remove unnecessary `fs.stat()` call (#2683 / @mejiaej)
+- @growthcloud/companion: upgrade express-prom-bundle to v6 (#2689 / @goto-bus-stop)
+- @growthcloud/core: `addFile()` returns `string`, not `void` (#2685 / @arturi)
+- @growthcloud/locales: add Norwegian (bokmål) (#2677 / @elkebab)
+- @growthcloud/thumbnail-generator: upgrade exifr to v6 (#2667 / @goto-bus-stop)
+- @growthcloud/unsplash: needs @growthcloud/core to be `^1.13.3` (#2676 / @ifedapoolarewaju)
 
 ## November 2020
 
@@ -2010,21 +1986,21 @@ And thanks to @elkebab, Norwegian (bokmål) translations are now available!
 
 Released: 2020-11-27
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3 | 1.7.3 | @uppy/robodog | 1.9.12 |
-| @uppy/companion | 2.3.0 | @uppy/status-bar | 1.8.0 |
-| @uppy/core | 1.14.1 | @uppy/vue | 0.1.0 |
-| @uppy/dashboard | 1.13.0 | @uppy/xhr-upload | 1.6.7 |
-| @uppy/react | 1.10.11 | uppy | 1.23.2 |
+| Package                | Version | Package                 | Version |
+| ---------------------- | ------- | ----------------------- | ------- |
+| @growthcloud/aws-s3    | 1.7.3   | @growthcloud/robodog    | 1.9.12  |
+| @growthcloud/companion | 2.3.0   | @growthcloud/status-bar | 1.8.0   |
+| @growthcloud/core      | 1.14.1  | @growthcloud/vue        | 0.1.0   |
+| @growthcloud/dashboard | 1.13.0  | @growthcloud/xhr-upload | 1.6.7   |
+| @growthcloud/react     | 1.10.11 | uppy                    | 1.23.2  |
 
 This release brings Vue.js support to Uppy! 💥 Plus a “Done” button for Status Bar, to close the Dashboard modal when an upload is finished.
 
-- @uppy/vue: add Vue.js wrapper component for the Dashboard (#2500 / @ajkachnic)
-- @uppy/core: pass files array to _checkRestrictions (#2655 / @arturi)
-- @uppy/status-bar, @uppy/dashboard: Added “Done” button for when upload is successfully finished (#2653 / @arturi, @nqst)
-- @uppy/dashboard: show the edit button only when !uploadInProgressOrComplete (55d38e7b5fd0d1031caa5b3316fc7c85407ffac7 / @arturi)
-- @uppy/xhr-upload: Add missing option types to XHRUploadOptions (#2639 / @wbaaron)
+- @growthcloud/vue: add Vue.js wrapper component for the Dashboard (#2500 / @ajkachnic)
+- @growthcloud/core: pass files array to \_checkRestrictions (#2655 / @arturi)
+- @growthcloud/status-bar, @growthcloud/dashboard: Added “Done” button for when upload is successfully finished (#2653 / @arturi, @nqst)
+- @growthcloud/dashboard: show the edit button only when !uploadInProgressOrComplete (55d38e7b5fd0d1031caa5b3316fc7c85407ffac7 / @arturi)
+- @growthcloud/xhr-upload: Add missing option types to XHRUploadOptions (#2639 / @wbaaron)
 - docs: Updated website docs, added total upload progress event (#2637 / @mkabatek)
 - test: added test DeepFrozenStore with deepFreeze to try and assert that state in not mutated anywhere by accident (#2607 / @arturi)
 - build: switched from Travis to GitHub Actions (@goto-bus-stop)
@@ -2034,56 +2010,56 @@ This release brings Vue.js support to Uppy! 💥 Plus a “Done” button for St
 
 Released: 2020-11-16
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/box | 0.3.0 | @uppy/transloadit | 1.6.14 |
-| @uppy/companion | 2.2.0 | @uppy/tus | 1.8.0 |
-| @uppy/image-editor | 0.1.8 | uppy | 1.23.1 |
-| @uppy/robodog | 1.9.11 | - | - |
+| Package                   | Version | Package                  | Version |
+| ------------------------- | ------- | ------------------------ | ------- |
+| @growthcloud/box          | 0.3.0   | @growthcloud/transloadit | 1.6.14  |
+| @growthcloud/companion    | 2.2.0   | @growthcloud/tus         | 1.8.0   |
+| @growthcloud/image-editor | 0.1.8   | uppy                     | 1.23.1  |
+| @growthcloud/robodog      | 1.9.11  | -                        | -       |
 
 This release introduces a new Box provider plugin.
 
-- @uppy/box: Box provider implementation (#2549 / @cartfisk, @ifedapoolarewaju)
-- @uppy/box: Fix the thumbnail for Box provider (#2630 / @ifedapoolarewaju)
-- @uppy/image-editor: zoom button and types fix (#2632 / @arturi)
-- @uppy/companion: fix box provider tests + remove unused e2e test files (#2628 / @ifedapoolarewaju)
-- @uppy/tus: tus: add `onBeforeRequest` option (#2611 / @bedgerotto, @Acconut)
-- @uppy/companion: catch errors when fetching dropbox user email (#2627 /@ifedapoolarewaju)
+- @growthcloud/box: Box provider implementation (#2549 / @cartfisk, @ifedapoolarewaju)
+- @growthcloud/box: Fix the thumbnail for Box provider (#2630 / @ifedapoolarewaju)
+- @growthcloud/image-editor: zoom button and types fix (#2632 / @arturi)
+- @growthcloud/companion: fix box provider tests + remove unused e2e test files (#2628 / @ifedapoolarewaju)
+- @growthcloud/tus: tus: add `onBeforeRequest` option (#2611 / @bedgerotto, @Acconut)
+- @growthcloud/companion: catch errors when fetching dropbox user email (#2627 /@ifedapoolarewaju)
 
 ### 1.23.0
 
 Released: 2020-11-13
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.8 | @uppy/progress-bar | 1.3.21 |
-| @uppy/aws-s3 | 1.7.2 | @uppy/provider-views | 1.9.0 |
-| @uppy/companion-client | 1.6.1 | @uppy/react | 1.10.10 |
-| @uppy/companion | 2.1.1 | @uppy/redux-dev-tools | 1.3.6 |
-| @uppy/core | 1.14.0 | @uppy/robodog | 1.9.10 |
-| @uppy/dashboard | 1.12.10 | @uppy/screen-capture | 1.0.10 |
-| @uppy/drag-drop | 1.4.21 | @uppy/status-bar | 1.7.8 |
-| @uppy/dropbox | 1.4.18 | @uppy/thumbnail-generator | 1.7.1 |
-| @uppy/facebook | 1.1.18 | @uppy/transloadit | 1.6.13 |
-| @uppy/file-input | 1.4.19 | @uppy/tus | 1.7.9 |
-| @uppy/form | 1.3.22 | @uppy/unsplash | 0.1.2 |
-| @uppy/golden-retriever | 1.3.21 | @uppy/url | 1.5.13 |
-| @uppy/google-drive | 1.5.18 | @uppy/utils | 3.2.5 |
-| @uppy/image-editor | 0.1.7 | @uppy/webcam | 1.8.1 |
-| @uppy/informer | 1.5.13 | @uppy/xhr-upload | 1.6.6 |
-| @uppy/instagram | 1.4.18 | @uppy/zoom | 0.1.7 |
-| @uppy/locales | 1.16.10 | uppy | 1.23.0 |
-| @uppy/onedrive | 1.1.18 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.8   | @growthcloud/progress-bar        | 1.3.21  |
+| @growthcloud/aws-s3           | 1.7.2   | @growthcloud/provider-views      | 1.9.0   |
+| @growthcloud/companion-client | 1.6.1   | @growthcloud/react               | 1.10.10 |
+| @growthcloud/companion        | 2.1.1   | @growthcloud/redux-dev-tools     | 1.3.6   |
+| @growthcloud/core             | 1.14.0  | @growthcloud/robodog             | 1.9.10  |
+| @growthcloud/dashboard        | 1.12.10 | @growthcloud/screen-capture      | 1.0.10  |
+| @growthcloud/drag-drop        | 1.4.21  | @growthcloud/status-bar          | 1.7.8   |
+| @growthcloud/dropbox          | 1.4.18  | @growthcloud/thumbnail-generator | 1.7.1   |
+| @growthcloud/facebook         | 1.1.18  | @growthcloud/transloadit         | 1.6.13  |
+| @growthcloud/file-input       | 1.4.19  | @growthcloud/tus                 | 1.7.9   |
+| @growthcloud/form             | 1.3.22  | @growthcloud/unsplash            | 0.1.2   |
+| @growthcloud/golden-retriever | 1.3.21  | @growthcloud/url                 | 1.5.13  |
+| @growthcloud/google-drive     | 1.5.18  | @growthcloud/utils               | 3.2.5   |
+| @growthcloud/image-editor     | 0.1.7   | @growthcloud/webcam              | 1.8.1   |
+| @growthcloud/informer         | 1.5.13  | @growthcloud/xhr-upload          | 1.6.6   |
+| @growthcloud/instagram        | 1.4.18  | @growthcloud/zoom                | 0.1.7   |
+| @growthcloud/locales          | 1.16.10 | uppy                             | 1.23.0  |
+| @growthcloud/onedrive         | 1.1.18  | -                                | -       |
 
-Optional buttons for the Image Editor, @uppy/core `infoTimeout` option and Robodog fixes.
+Optional buttons for the Image Editor, @growthcloud/core `infoTimeout` option and Robodog fixes.
 
-- @uppy/image-editor: Image Editor optional buttons (#2615 / @lamartire, @arturi)
-- @uppy/image-editor: show “edit” icon even when metaFields are not specified (#2614 / @arturi)
-- @uppy/dashboard: Uppy console logging within hideAllPanels (#2597 / @onassar)
-- @uppy/robodog: Update addTransloaditPlugin.js to include missing configurable Transloadit plugin options (#2612 / @ethanwillis)
-- @uppy/provider-views: add `uppy.validateRestrictions(file, files)` and disallow selecting files that don’t pass restrictions in providers (#2602 / @arturi, @lakesare)
-- @uppy/core: add `uppy.opts.infoTimeout` (#2619 / @arturi)
-- @uppy/onedrive: fix OneDrive for Business (#2536 / @szh)
+- @growthcloud/image-editor: Image Editor optional buttons (#2615 / @lamartire, @arturi)
+- @growthcloud/image-editor: show “edit” icon even when metaFields are not specified (#2614 / @arturi)
+- @growthcloud/dashboard: Uppy console logging within hideAllPanels (#2597 / @onassar)
+- @growthcloud/robodog: Update addTransloaditPlugin.js to include missing configurable Transloadit plugin options (#2612 / @ethanwillis)
+- @growthcloud/provider-views: add `uppy.validateRestrictions(file, files)` and disallow selecting files that don’t pass restrictions in providers (#2602 / @arturi, @lakesare)
+- @growthcloud/core: add `uppy.opts.infoTimeout` (#2619 / @arturi)
+- @growthcloud/onedrive: fix OneDrive for Business (#2536 / @szh)
 - build: use new releases domain (#2608 / @kvz)
 - website: switch to xhr-server.herokuapp.com endpoint (@arturi)
 
@@ -2093,18 +2069,18 @@ Optional buttons for the Image Editor, @uppy/core `infoTimeout` option and Robod
 
 Released: 2020-10-29
 
-- @uppy/companion: add option to hide welcome and metrics (#2521 / @szh)
-- @uppy/companion: add more test cases to companion tests (#2585 / @ifedapoolarewaju)
-- @uppy/companion: upgrade prometheus (fixes memory leak) (#2600 / @ifedapoolarewaju)
-- @uppy/unsplash: add Unsplash provider (#2431 / @ifedapoolarewaju)
-- @uppy/locales: update th_TH.js (#2571 / @dogrocker)
-- @uppy/locales: add missing camera translations to de_DE (#2574 / @ferdiusa)
-- @uppy/locales: update el_GR.js with more proper wording for Drag'n'Drop (#2578 / @aalepis)
-- @uppy/core: core: add maxTotalFileSize restriction #514 (#2594 / @arturi)
-- @uppy/core: add postprocess progress when upload success (#2535 / @mejiaej)
-- @uppy/webcam: add video source selector (#2492 / @goto-bus-stop, @arturi)
-- @uppy/react: Webpack5: Fix react imports (#2589 / @olemoign)
-- @uppy/thumbnail-generator: Add support for png thumbnails (#2603 / @SxDx)
+- @growthcloud/companion: add option to hide welcome and metrics (#2521 / @szh)
+- @growthcloud/companion: add more test cases to companion tests (#2585 / @ifedapoolarewaju)
+- @growthcloud/companion: upgrade prometheus (fixes memory leak) (#2600 / @ifedapoolarewaju)
+- @growthcloud/unsplash: add Unsplash provider (#2431 / @ifedapoolarewaju)
+- @growthcloud/locales: update th_TH.js (#2571 / @dogrocker)
+- @growthcloud/locales: add missing camera translations to de_DE (#2574 / @ferdiusa)
+- @growthcloud/locales: update el_GR.js with more proper wording for Drag'n'Drop (#2578 / @aalepis)
+- @growthcloud/core: core: add maxTotalFileSize restriction #514 (#2594 / @arturi)
+- @growthcloud/core: add postprocess progress when upload success (#2535 / @mejiaej)
+- @growthcloud/webcam: add video source selector (#2492 / @goto-bus-stop, @arturi)
+- @growthcloud/react: Webpack5: Fix react imports (#2589 / @olemoign)
+- @growthcloud/thumbnail-generator: Add support for png thumbnails (#2603 / @SxDx)
 - website: mobile issues fixes + compact Companion migration table (#2593 / @nqst)
 
 ### 1.21.2
@@ -2116,11 +2092,11 @@ Fixed nesting folder uploading from third-party providers, included Zoom meeting
 - website: Fix XHR upload demos, fixes #2517 (#2537 / @goto-bus-stop)
 - docs: Corrected localhost URL to actual URL (#2543 / @adritasharma)
 - docs: Include required CSS import (#2548 / @Gkleinereva)
-- @uppy/provider-views: szh fix username not updating when switching OneDrive accounts (#2538 / @szh)
-- @uppy/provider-views: Add support for uploading nested folders (#2557 / @mokutsu-coursera)
-- @uppy/dashboard: Fix missing `preact.h` import, enable lint for that (25b232eccc04795a869ff60eb6453180e41cdd03 / @goto-bus-stop)
-- @uppy/tus: add withCredentials, fix #2518 (#2544 / @szh)
-- @uppy/zoom: Include meeting name in file name, and include meeting data in response object so it is available in later uppy lifecycle methods when interacting with file object (#2547 / @mokutsu-coursera)
+- @growthcloud/provider-views: szh fix username not updating when switching OneDrive accounts (#2538 / @szh)
+- @growthcloud/provider-views: Add support for uploading nested folders (#2557 / @mokutsu-coursera)
+- @growthcloud/dashboard: Fix missing `preact.h` import, enable lint for that (25b232eccc04795a869ff60eb6453180e41cdd03 / @goto-bus-stop)
+- @growthcloud/tus: add withCredentials, fix #2518 (#2544 / @szh)
+- @growthcloud/zoom: Include meeting name in file name, and include meeting data in response object so it is available in later uppy lifecycle methods when interacting with file object (#2547 / @mokutsu-coursera)
 
 ## September 2020
 
@@ -2128,27 +2104,27 @@ Fixed nesting folder uploading from third-party providers, included Zoom meeting
 
 Released: 2020-09-16
 
-Zoom fixes and  preact-css-transition-group removed.
+Zoom fixes and preact-css-transition-group removed.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 2.0.1 | @uppy/onedrive | 1.1.15 |
-| @uppy/dashboard | 1.12.7 | @uppy/provider-views | 1.7.6 |
-| @uppy/dropbox | 1.4.15 | @uppy/react | 1.10.7 |
-| @uppy/facebook | 1.1.15 | @uppy/robodog | 1.9.7 |
-| @uppy/google-drive | 1.5.15 | @uppy/transloadit | 1.6.10 |
-| @uppy/instagram | 1.4.15 | @uppy/zoom | 0.1.4 |
-| @uppy/locales | 1.16.7 | uppy | 1.21.1 |
+| Package                   | Version | Package                     | Version |
+| ------------------------- | ------- | --------------------------- | ------- |
+| @growthcloud/companion    | 2.0.1   | @growthcloud/onedrive       | 1.1.15  |
+| @growthcloud/dashboard    | 1.12.7  | @growthcloud/provider-views | 1.7.6   |
+| @growthcloud/dropbox      | 1.4.15  | @growthcloud/react          | 1.10.7  |
+| @growthcloud/facebook     | 1.1.15  | @growthcloud/robodog        | 1.9.7   |
+| @growthcloud/google-drive | 1.5.15  | @growthcloud/transloadit    | 1.6.10  |
+| @growthcloud/instagram    | 1.4.15  | @growthcloud/zoom           | 0.1.4   |
+| @growthcloud/locales      | 1.16.7  | uppy                        | 1.21.1  |
 
-- @uppy/locales: added pt_PT and fixed some typos in pt_BR (#2510 / @Jmales)
-- @uppy/locales: fixed translation of uploadingX in french locale (#2523 / @phil714)
-- @uppy/zoom: omit timeline files and fix cc type files for zoom provider (#2508 / @mokutsu-coursera)
-- @uppy/zoom: update the pagination limit / boundary on the zoom provider (#2511 / @mokutsu-coursera)
-- @uppy/zoom: fix cases where a meeting UUID has slashes (#2526 / @mokutsu-coursera)
-- @uppy/zoom: fix meeting timestamp for user timezones and explicitly include moment-timezone dependency (#2525 / @mokutsu-coursera)
-- @uppy/dashboard: fix truncation and ellipses for very long file names (#2533 / @mokutsu-coursera)
-- @uppy/dashboard: remove preact-css-transition-group (#2444 / @goto-bus-stop)
-- @uppy/provider-views: fix mutating state where not intended (#2504 / @johnnyperkins)
+- @growthcloud/locales: added pt_PT and fixed some typos in pt_BR (#2510 / @Jmales)
+- @growthcloud/locales: fixed translation of uploadingX in french locale (#2523 / @phil714)
+- @growthcloud/zoom: omit timeline files and fix cc type files for zoom provider (#2508 / @mokutsu-coursera)
+- @growthcloud/zoom: update the pagination limit / boundary on the zoom provider (#2511 / @mokutsu-coursera)
+- @growthcloud/zoom: fix cases where a meeting UUID has slashes (#2526 / @mokutsu-coursera)
+- @growthcloud/zoom: fix meeting timestamp for user timezones and explicitly include moment-timezone dependency (#2525 / @mokutsu-coursera)
+- @growthcloud/dashboard: fix truncation and ellipses for very long file names (#2533 / @mokutsu-coursera)
+- @growthcloud/dashboard: remove preact-css-transition-group (#2444 / @goto-bus-stop)
+- @growthcloud/provider-views: fix mutating state where not intended (#2504 / @johnnyperkins)
 - docs: Update readme pages for npm (#2527 / @mokutsu-coursera)
 - build: fix overeager regex in website examples build (@goto-bus-stop)
 
@@ -2158,43 +2134,43 @@ Released: 2020-09-07
 
 This is mostly a Companion 2.0 release 🎉
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.6 | @uppy/provider-views | 1.7.5 |
-| @uppy/aws-s3 | 1.7.0 | @uppy/react-native | 0.1.4 |
-| @uppy/companion-client | 1.5.4 | @uppy/react | 1.10.6 |
-| @uppy/companion | 2.0.0 | @uppy/redux-dev-tools | 1.3.5 |
-| @uppy/core | 1.13.2 | @uppy/robodog | 1.9.6 |
-| @uppy/dashboard | 1.12.6 | @uppy/screen-capture | 1.0.8 |
-| @uppy/drag-drop | 1.4.19 | @uppy/status-bar | 1.7.6 |
-| @uppy/dropbox | 1.4.14 | @uppy/store-default | 1.2.4 |
-| @uppy/facebook | 1.1.14 | @uppy/store-redux | 1.2.4 |
-| @uppy/file-input | 1.4.17 | @uppy/thumbnail-generator | 1.6.7 |
-| @uppy/form | 1.3.20 | @uppy/transloadit | 1.6.9 |
-| @uppy/golden-retriever | 1.3.19 | @uppy/tus | 1.7.6 |
-| @uppy/google-drive | 1.5.14 | @uppy/url | 1.5.11 |
-| @uppy/image-editor | 0.1.6 | @uppy/utils | 3.2.3 |
-| @uppy/informer | 1.5.11 | @uppy/webcam | 1.7.0 |
-| @uppy/instagram | 1.4.14 | @uppy/xhr-upload | 1.6.4 |
-| @uppy/locales | 1.16.6 | @uppy/zoom | 0.1.3 |
-| @uppy/onedrive | 1.1.14 | uppy | 1.21.0 |
-| @uppy/progress-bar | 1.3.19 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.6   | @growthcloud/provider-views      | 1.7.5   |
+| @growthcloud/aws-s3           | 1.7.0   | @growthcloud/react-native        | 0.1.4   |
+| @growthcloud/companion-client | 1.5.4   | @growthcloud/react               | 1.10.6  |
+| @growthcloud/companion        | 2.0.0   | @growthcloud/redux-dev-tools     | 1.3.5   |
+| @growthcloud/core             | 1.13.2  | @growthcloud/robodog             | 1.9.6   |
+| @growthcloud/dashboard        | 1.12.6  | @growthcloud/screen-capture      | 1.0.8   |
+| @growthcloud/drag-drop        | 1.4.19  | @growthcloud/status-bar          | 1.7.6   |
+| @growthcloud/dropbox          | 1.4.14  | @growthcloud/store-default       | 1.2.4   |
+| @growthcloud/facebook         | 1.1.14  | @growthcloud/store-redux         | 1.2.4   |
+| @growthcloud/file-input       | 1.4.17  | @growthcloud/thumbnail-generator | 1.6.7   |
+| @growthcloud/form             | 1.3.20  | @growthcloud/transloadit         | 1.6.9   |
+| @growthcloud/golden-retriever | 1.3.19  | @growthcloud/tus                 | 1.7.6   |
+| @growthcloud/google-drive     | 1.5.14  | @growthcloud/url                 | 1.5.11  |
+| @growthcloud/image-editor     | 0.1.6   | @growthcloud/utils               | 3.2.3   |
+| @growthcloud/informer         | 1.5.11  | @growthcloud/webcam              | 1.7.0   |
+| @growthcloud/instagram        | 1.4.14  | @growthcloud/xhr-upload          | 1.6.4   |
+| @growthcloud/locales          | 1.16.6  | @growthcloud/zoom                | 0.1.3   |
+| @growthcloud/onedrive         | 1.1.14  | uppy                             | 1.21.0  |
+| @growthcloud/progress-bar     | 1.3.19  | -                                | -       |
 
-- @uppy/webcam: add `videoConstraints` option (#2362 / @ksouthworth)
-- @uppy/screen-capture: fix translations for capturing (#2482 / @leaanthony)
-- @uppy/companion: add calculated content-length for multipart uploads (#2466 / @ifedapoolarewaju, @mejiaej)
-- @uppy/companion: validate url for truthy value (#2484 / @ifedapoolarewaju)
-- @uppy/companion: Support running standalone with custom options (#2428 / @cyu)
-- @uppy/react-native: Fix react native expo permissions (#2418 / @ajkachnic)
-- @uppy/companion: fix multipart upload (#2490 / @ifedapoolarewaju)
-- @uppy/companion: exclude non downloadable files in fetched list for dropbox (#2493 / @johnnyperkins)
-- @uppy/aws-s3-multipart: fix stuck upload with `limit: 1` (#2475 / @goto-bus-stop)
-- @uppy/aws-s3: add default locale for MiniXHRUpload, fixes #2459 (#2477 / @goto-bus-stop)
-- @uppy/locales: fix missleading strings for zh_CN (#2498 / @sparanoid)
-- @uppy/locales: Improve fa_IR Translations (#2494 / @ghasrfakhri)
-- @uppy/aws-s3: Improved validateParameters() error message (#2480 / @kode-ninja)
-- @uppy/companion: remove support for legacy instagram API (#2499 / @ifedapoolarewaju)
-- @uppy/react-native: fix lint (@goto-bus-stop)
+- @growthcloud/webcam: add `videoConstraints` option (#2362 / @ksouthworth)
+- @growthcloud/screen-capture: fix translations for capturing (#2482 / @leaanthony)
+- @growthcloud/companion: add calculated content-length for multipart uploads (#2466 / @ifedapoolarewaju, @mejiaej)
+- @growthcloud/companion: validate url for truthy value (#2484 / @ifedapoolarewaju)
+- @growthcloud/companion: Support running standalone with custom options (#2428 / @cyu)
+- @growthcloud/react-native: Fix react native expo permissions (#2418 / @ajkachnic)
+- @growthcloud/companion: fix multipart upload (#2490 / @ifedapoolarewaju)
+- @growthcloud/companion: exclude non downloadable files in fetched list for dropbox (#2493 / @johnnyperkins)
+- @growthcloud/aws-s3-multipart: fix stuck upload with `limit: 1` (#2475 / @goto-bus-stop)
+- @growthcloud/aws-s3: add default locale for MiniXHRUpload, fixes #2459 (#2477 / @goto-bus-stop)
+- @growthcloud/locales: fix missleading strings for zh_CN (#2498 / @sparanoid)
+- @growthcloud/locales: Improve fa_IR Translations (#2494 / @ghasrfakhri)
+- @growthcloud/aws-s3: Improved validateParameters() error message (#2480 / @kode-ninja)
+- @growthcloud/companion: remove support for legacy instagram API (#2499 / @ifedapoolarewaju)
+- @growthcloud/react-native: fix lint (@goto-bus-stop)
 - Update Jest to v26, raise Companion requirements to Node.js >= 10.20.1 (#2472 / @goto-bus-stop)
 
 ### 1.20.2
@@ -2203,42 +2179,42 @@ Released: 2020-08-17
 
 This release adds a `deauthorization callback` endpoint to Companion.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.5 | @uppy/provider-views | 1.7.4 |
-| @uppy/companion | 2.0.0-alpha.11 | @uppy/react | 1.10.5 |
-| @uppy/core | 1.13.1 | @uppy/robodog | 1.9.5 |
-| @uppy/dashboard | 1.12.5 | @uppy/screen-capture | 1.0.7 |
-| @uppy/dropbox | 1.4.13 | @uppy/status-bar | 1.7.5 |
-| @uppy/facebook | 1.1.13 | @uppy/thumbnail-generator | 1.6.6 |
-| @uppy/google-drive | 1.5.13 | @uppy/transloadit | 1.6.8 |
-| @uppy/image-editor | 0.1.5 | @uppy/tus | 1.7.5 |
-| @uppy/instagram | 1.4.13 | @uppy/webcam | 1.6.11 |
-| @uppy/locales | 1.16.5 | @uppy/zoom | 0.1.2 |
-| @uppy/onedrive | 1.1.13 | uppy | 1.20.2 |
+| Package                       | Version        | Package                          | Version |
+| ----------------------------- | -------------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.5          | @growthcloud/provider-views      | 1.7.4   |
+| @growthcloud/companion        | 2.0.0-alpha.11 | @growthcloud/react               | 1.10.5  |
+| @growthcloud/core             | 1.13.1         | @growthcloud/robodog             | 1.9.5   |
+| @growthcloud/dashboard        | 1.12.5         | @growthcloud/screen-capture      | 1.0.7   |
+| @growthcloud/dropbox          | 1.4.13         | @growthcloud/status-bar          | 1.7.5   |
+| @growthcloud/facebook         | 1.1.13         | @growthcloud/thumbnail-generator | 1.6.6   |
+| @growthcloud/google-drive     | 1.5.13         | @growthcloud/transloadit         | 1.6.8   |
+| @growthcloud/image-editor     | 0.1.5          | @growthcloud/tus                 | 1.7.5   |
+| @growthcloud/instagram        | 1.4.13         | @growthcloud/webcam              | 1.6.11  |
+| @growthcloud/locales          | 1.16.5         | @growthcloud/zoom                | 0.1.2   |
+| @growthcloud/onedrive         | 1.1.13         | uppy                             | 1.20.2  |
 
-- @uppy/companion: remove ouath scopes for zoom (#2464 / @ifedapoolarewaju)
-- @uppy/companion: add deauthorization callback endpoint (#2470 / @ifedapoolarewaju)
+- @growthcloud/companion: remove ouath scopes for zoom (#2464 / @ifedapoolarewaju)
+- @growthcloud/companion: add deauthorization callback endpoint (#2470 / @ifedapoolarewaju)
 
 ### 1.20.1
 
 Released: 2020-08-13
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.4 | @uppy/provider-views | 1.7.3 |
-| @uppy/dashboard | 1.12.4 | @uppy/react | 1.10.4 |
-| @uppy/dropbox | 1.4.12 | @uppy/robodog | 1.9.4 |
-| @uppy/facebook | 1.1.12 | @uppy/transloadit | 1.6.7 |
-| @uppy/google-drive | 1.5.12 | @uppy/tus | 1.7.4 |
-| @uppy/instagram | 1.4.12 | @uppy/zoom | 0.1.1 |
-| @uppy/onedrive | 1.1.12 | uppy | 1.20.1 |
+| Package                       | Version | Package                     | Version |
+| ----------------------------- | ------- | --------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.4   | @growthcloud/provider-views | 1.7.3   |
+| @growthcloud/dashboard        | 1.12.4  | @growthcloud/react          | 1.10.4  |
+| @growthcloud/dropbox          | 1.4.12  | @growthcloud/robodog        | 1.9.4   |
+| @growthcloud/facebook         | 1.1.12  | @growthcloud/transloadit    | 1.6.7   |
+| @growthcloud/google-drive     | 1.5.12  | @growthcloud/tus            | 1.7.4   |
+| @growthcloud/instagram        | 1.4.12  | @growthcloud/zoom           | 0.1.1   |
+| @growthcloud/onedrive         | 1.1.12  | uppy                        | 1.20.1  |
 
-- @uppy/aws-s3-multipart: enable uploading zero-sized files (#2451 / @vedran555)
-- @uppy/provider-views: fix incorrect files added count when adding folders (#2439 / @ajkachnic)
-- @uppy/transloadit: add auth.expires type (#2457 / @just-mitch, @goto-bus-stop)
-- @uppy/tus: docs-deprecate autoRetry (#2347 / @goto-bus-stop)
-- @uppy/tus: fix fallback to default `fingerprint` implementation (#2456 / @Acconut, @goto-bus-stop)
+- @growthcloud/aws-s3-multipart: enable uploading zero-sized files (#2451 / @vedran555)
+- @growthcloud/provider-views: fix incorrect files added count when adding folders (#2439 / @ajkachnic)
+- @growthcloud/transloadit: add auth.expires type (#2457 / @just-mitch, @goto-bus-stop)
+- @growthcloud/tus: docs-deprecate autoRetry (#2347 / @goto-bus-stop)
+- @growthcloud/tus: fix fallback to default `fingerprint` implementation (#2456 / @Acconut, @goto-bus-stop)
 - docs: add add-on section to Zoom docs (#2452 / @ifedapoolarewaju)
 - docs: add documentation for zoom plugin (#2448 / @ifedapoolarewaju)
 
@@ -2248,21 +2224,21 @@ Released: 2020-08-10
 
 This release fixes the localized text on the Dashboard (again), fixes an issue when repeatedly uploading the same file using the Transloadit plugin, and adds a new restriction, `minFileSize`, thanks to @anthony0030!
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.3 | @uppy/react | 1.10.3 |
-| @uppy/companion | 2.0.0-alpha.10 | @uppy/robodog | 1.9.3 |
-| @uppy/core | 1.13.0 | @uppy/status-bar | 1.7.4 |
-| @uppy/dashboard | 1.12.3 | @uppy/transloadit | 1.6.6 |
-| @uppy/image-editor | 0.1.4 | uppy | 1.20.0 |
-| @uppy/locales | 1.16.4 | - | - |
+| Package                       | Version        | Package                  | Version |
+| ----------------------------- | -------------- | ------------------------ | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.3          | @growthcloud/react       | 1.10.3  |
+| @growthcloud/companion        | 2.0.0-alpha.10 | @growthcloud/robodog     | 1.9.3   |
+| @growthcloud/core             | 1.13.0         | @growthcloud/status-bar  | 1.7.4   |
+| @growthcloud/dashboard        | 1.12.3         | @growthcloud/transloadit | 1.6.6   |
+| @growthcloud/image-editor     | 0.1.4          | uppy                     | 1.20.0  |
+| @growthcloud/locales          | 1.16.4         | -                        | -       |
 
-- @uppy/aws-s3-multipart: handle server returning numbers as strings (@goto-bus-stop)
-- @uppy/companion: make npm run test work on windows (#2399 / @goto-bus-stop)
-- @uppy/core: adds minFileSize option (#2394 / @anthony0030)
-- @uppy/dashboard: use correct strings on AddFiles UI (#2426 / @goto-bus-stop)
-- @uppy/status-bar: specify default string for `retryUpload` (#2442 / @goto-bus-stop)
-- @uppy/transloadit: fully disable Tus fingerprinting (#2425 / @goto-bus-stop)
+- @growthcloud/aws-s3-multipart: handle server returning numbers as strings (@goto-bus-stop)
+- @growthcloud/companion: make npm run test work on windows (#2399 / @goto-bus-stop)
+- @growthcloud/core: adds minFileSize option (#2394 / @anthony0030)
+- @growthcloud/dashboard: use correct strings on AddFiles UI (#2426 / @goto-bus-stop)
+- @growthcloud/status-bar: specify default string for `retryUpload` (#2442 / @goto-bus-stop)
+- @growthcloud/transloadit: fully disable Tus fingerprinting (#2425 / @goto-bus-stop)
 - docs: make global companion install bash line copy-pasteable (#2438 / @goto-bus-stop)
 - test: re-enable Safari on Sauce (#2430 / @goto-bus-stop)
 - website: enable zoom example conditionally + remove conditional instagram graph example (#2422 / @ifedapoolarewaju)
@@ -2272,33 +2248,33 @@ This release fixes the localized text on the Dashboard (again), fixes an issue w
 
 Released: 2020-07-30
 
-This mostly introduces patches to accommodate for the new `@uppy/zoom` plugin! 🎉
+This mostly introduces patches to accommodate for the new `@growthcloud/zoom` plugin! 🎉
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.2 | @uppy/progress-bar | 1.3.18 |
-| @uppy/aws-s3 | 1.6.9 | @uppy/provider-views | 1.7.2 |
-| @uppy/companion-client | 1.5.3 | @uppy/react | 1.10.2 |
-| @uppy/companion | 2.0.0-alpha.9 | @uppy/redux-dev-tools | 1.3.4 |
-| @uppy/core | 1.12.2 | @uppy/robodog | 1.9.2 |
-| @uppy/dashboard | 1.12.2 | @uppy/screen-capture | 1.0.6 |
-| @uppy/drag-drop | 1.4.18 | @uppy/status-bar | 1.7.3 |
-| @uppy/dropbox | 1.4.11 | @uppy/store-default | 1.2.3 |
-| @uppy/facebook | 1.1.11 | @uppy/store-redux | 1.2.3 |
-| @uppy/file-input | 1.4.16 | @uppy/thumbnail-generator | 1.6.5 |
-| @uppy/form | 1.3.19 | @uppy/transloadit | 1.6.5 |
-| @uppy/golden-retriever | 1.3.18 | @uppy/tus | 1.7.3 |
-| @uppy/google-drive | 1.5.11 | @uppy/url | 1.5.10 |
-| @uppy/image-editor | 0.1.3 | @uppy/utils | 3.2.2 |
-| @uppy/informer | 1.5.10 | @uppy/webcam | 1.6.10 |
-| @uppy/instagram | 1.4.11 | @uppy/xhr-upload | 1.6.3 |
-| @uppy/locales | 1.16.3 | @uppy/zoom | 0.1.0 |
-| @uppy/onedrive | 1.1.11 | uppy | 1.19.2 |
+| Package                       | Version       | Package                          | Version |
+| ----------------------------- | ------------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.2         | @growthcloud/progress-bar        | 1.3.18  |
+| @growthcloud/aws-s3           | 1.6.9         | @growthcloud/provider-views      | 1.7.2   |
+| @growthcloud/companion-client | 1.5.3         | @growthcloud/react               | 1.10.2  |
+| @growthcloud/companion        | 2.0.0-alpha.9 | @growthcloud/redux-dev-tools     | 1.3.4   |
+| @growthcloud/core             | 1.12.2        | @growthcloud/robodog             | 1.9.2   |
+| @growthcloud/dashboard        | 1.12.2        | @growthcloud/screen-capture      | 1.0.6   |
+| @growthcloud/drag-drop        | 1.4.18        | @growthcloud/status-bar          | 1.7.3   |
+| @growthcloud/dropbox          | 1.4.11        | @growthcloud/store-default       | 1.2.3   |
+| @growthcloud/facebook         | 1.1.11        | @growthcloud/store-redux         | 1.2.3   |
+| @growthcloud/file-input       | 1.4.16        | @growthcloud/thumbnail-generator | 1.6.5   |
+| @growthcloud/form             | 1.3.19        | @growthcloud/transloadit         | 1.6.5   |
+| @growthcloud/golden-retriever | 1.3.18        | @growthcloud/tus                 | 1.7.3   |
+| @growthcloud/google-drive     | 1.5.11        | @growthcloud/url                 | 1.5.10  |
+| @growthcloud/image-editor     | 0.1.3         | @growthcloud/utils               | 3.2.2   |
+| @growthcloud/informer         | 1.5.10        | @growthcloud/webcam              | 1.6.10  |
+| @growthcloud/instagram        | 1.4.11        | @growthcloud/xhr-upload          | 1.6.3   |
+| @growthcloud/locales          | 1.16.3        | @growthcloud/zoom                | 0.1.0   |
+| @growthcloud/onedrive         | 1.1.11        | uppy                             | 1.19.2  |
 
-- @uppy/utils: Add support for AVIF images in thumbnails (#2406 / @ajkachnic)
-- @uppy/companion,@uppy/zoom: add implementation for Zoom plugin and Zoom Provider (#2342 / @mokutsu-coursera, @goto-bus-stop)
-- @uppy/companion: fix zoom logout endpoint (#2414 / @ifedapoolarewaju)
-- @uppy/companion: add extensions to zoom file names (#2415 / @ifedapoolarewaju)
+- @growthcloud/utils: Add support for AVIF images in thumbnails (#2406 / @ajkachnic)
+- @growthcloud/companion,@growthcloud/zoom: add implementation for Zoom plugin and Zoom Provider (#2342 / @mokutsu-coursera, @goto-bus-stop)
+- @growthcloud/companion: fix zoom logout endpoint (#2414 / @ifedapoolarewaju)
+- @growthcloud/companion: add extensions to zoom file names (#2415 / @ifedapoolarewaju)
 
 ### 1.19.1
 
@@ -2306,32 +2282,32 @@ Released: 2020-07-29
 
 This is a bugfix release. The breaking change mentioned in 1.19.0 was much more severe than anticipated, because it affected the primary user-facing translation string. 1.19.1 hopes to restore backwards compatibility with all previous 1.x versions. Thanks to [@yaegor](https://github.com/yaegor) for pointing this out and to [@jonathanarbely](https://github.com/jonathanarbely) and [@fingul](https://github.com/fingul) for submitting translations for the new strings for German and Korean!
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.1 | @uppy/provider-views | 1.7.1 |
-| @uppy/aws-s3 | 1.6.8 | @uppy/react | 1.10.1 |
-| @uppy/companion-client | 1.5.2 | @uppy/redux-dev-tools | 1.3.3 |
-| @uppy/core | 1.12.1 | @uppy/robodog | 1.9.1 |
-| @uppy/dashboard | 1.12.1 | @uppy/screen-capture | 1.0.5 |
-| @uppy/drag-drop | 1.4.17 | @uppy/status-bar | 1.7.2 |
-| @uppy/dropbox | 1.4.10 | @uppy/store-default | 1.2.2 |
-| @uppy/facebook | 1.1.10 | @uppy/store-redux | 1.2.2 |
-| @uppy/file-input | 1.4.15 | @uppy/thumbnail-generator | 1.6.4 |
-| @uppy/form | 1.3.18 | @uppy/transloadit | 1.6.4 |
-| @uppy/golden-retriever | 1.3.17 | @uppy/tus | 1.7.2 |
-| @uppy/google-drive | 1.5.10 | @uppy/url | 1.5.9 |
-| @uppy/informer | 1.5.9 | @uppy/utils | 3.2.1 |
-| @uppy/instagram | 1.4.10 | @uppy/webcam | 1.6.9 |
-| @uppy/locales | 1.16.2 | @uppy/xhr-upload | 1.6.2 |
-| @uppy/onedrive | 1.1.10 | uppy | 1.19.1 |
-| @uppy/progress-bar | 1.3.17 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.1   | @growthcloud/provider-views      | 1.7.1   |
+| @growthcloud/aws-s3           | 1.6.8   | @growthcloud/react               | 1.10.1  |
+| @growthcloud/companion-client | 1.5.2   | @growthcloud/redux-dev-tools     | 1.3.3   |
+| @growthcloud/core             | 1.12.1  | @growthcloud/robodog             | 1.9.1   |
+| @growthcloud/dashboard        | 1.12.1  | @growthcloud/screen-capture      | 1.0.5   |
+| @growthcloud/drag-drop        | 1.4.17  | @growthcloud/status-bar          | 1.7.2   |
+| @growthcloud/dropbox          | 1.4.10  | @growthcloud/store-default       | 1.2.2   |
+| @growthcloud/facebook         | 1.1.10  | @growthcloud/store-redux         | 1.2.2   |
+| @growthcloud/file-input       | 1.4.15  | @growthcloud/thumbnail-generator | 1.6.4   |
+| @growthcloud/form             | 1.3.18  | @growthcloud/transloadit         | 1.6.4   |
+| @growthcloud/golden-retriever | 1.3.17  | @growthcloud/tus                 | 1.7.2   |
+| @growthcloud/google-drive     | 1.5.10  | @growthcloud/url                 | 1.5.9   |
+| @growthcloud/informer         | 1.5.9   | @growthcloud/utils               | 3.2.1   |
+| @growthcloud/instagram        | 1.4.10  | @growthcloud/webcam              | 1.6.9   |
+| @growthcloud/locales          | 1.16.2  | @growthcloud/xhr-upload          | 1.6.2   |
+| @growthcloud/onedrive         | 1.1.10  | uppy                             | 1.19.1  |
+| @growthcloud/progress-bar     | 1.3.17  | -                                | -       |
 
-- @uppy/aws-s3: tighten type checks in default `getUploadParameters()` implementation (#2388 / @johnnyperkins)
-- @uppy/dashboard: restore backwards compatibility for the locales (#2397 / @goto-bus-stop)
-- @uppy/dashboard: revert Preact X version conflict fix, which was causing new bugs (#2405 / @goto-bus-stop)
-- @uppy/locales: add stub value for `browseFiles` for all remaining translations (#2397 / @goto-bus-stop)
-- @uppy/locales: add stub value for `browseFiles` for the German translation (#2396 / @jonathanarbely)
-- @uppy/locales: tweak Korean wording and add the new `dropPaste*` strings (#2395 / @fingul)
+- @growthcloud/aws-s3: tighten type checks in default `getUploadParameters()` implementation (#2388 / @johnnyperkins)
+- @growthcloud/dashboard: restore backwards compatibility for the locales (#2397 / @goto-bus-stop)
+- @growthcloud/dashboard: revert Preact X version conflict fix, which was causing new bugs (#2405 / @goto-bus-stop)
+- @growthcloud/locales: add stub value for `browseFiles` for all remaining translations (#2397 / @goto-bus-stop)
+- @growthcloud/locales: add stub value for `browseFiles` for the German translation (#2396 / @jonathanarbely)
+- @growthcloud/locales: tweak Korean wording and add the new `dropPaste*` strings (#2395 / @fingul)
 - docs: document shape of file objects (#2371 / @goto-bus-stop)
 - docs: document transloadit `waitForXYZ` options better (#2371 / @goto-bus-stop)
 - docs: prefer constructor syntax `new Uppy()` over plain call syntax `Uppy()` (#2371 / @goto-bus-stop)
@@ -2343,58 +2319,58 @@ Released: 2020-07-21
 
 Note that this release includes a very minor breaking change. If you are using custom translations for the `dropPaste` or `dropPasteImport` locale strings, you need to append the file selection style to the key name. Use `dropPasteFiles`, `dropPasteFolders`, or `dropPasteBoth`, or `dropPasteImportFiles`, `dropPasteImportFolders`, or `dropPasteImportBoth` depending on your dashboard and provider configuration.
 
-- @uppy/image-editor: fix crop/rotate/zoom buttons on mobile (@arturi)
+- @growthcloud/image-editor: fix crop/rotate/zoom buttons on mobile (@arturi)
 - uppy: remove unstable `ImageEditor` export (@goto-bus-stop)
 - docs: document preact required version when writing custom plugins (@jrschumacher)
-- @uppy/dashboard: fix preact version conflicts if outer app uses Preact X (#2379 / @goto-bus-stop)
-- @uppy/dashboard: add `fileManagerSelectionType` option, allowing users to select folders (#2334 / @bdirito)
+- @growthcloud/dashboard: fix preact version conflicts if outer app uses Preact X (#2379 / @goto-bus-stop)
+- @growthcloud/dashboard: add `fileManagerSelectionType` option, allowing users to select folders (#2334 / @bdirito)
 
 ### 1.18.0
 
 Released: 2020-07-19
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 2.0.0-alpha.8 | @uppy/react | 1.9.1 |
-| @uppy/dashboard | 1.11.0 | @uppy/robodog | 1.8.0 |
-| @uppy/image-editor | 0.1.1 | uppy | 1.18.0 |
-| @uppy/locales | 1.16.0 | - | - |
+| Package                   | Version       | Package              | Version |
+| ------------------------- | ------------- | -------------------- | ------- |
+| @growthcloud/companion    | 2.0.0-alpha.8 | @growthcloud/react   | 1.9.1   |
+| @growthcloud/dashboard    | 1.11.0        | @growthcloud/robodog | 1.8.0   |
+| @growthcloud/image-editor | 0.1.1         | uppy                 | 1.18.0  |
+| @growthcloud/locales      | 1.16.0        | -                    | -       |
 
-- @uppy/image-editor: 🎉 add long-awaited image cropping, rotation, flipping and zooming (in beta!) (#2370 / @arturi)
-- @uppy/companion: override grant's default redirect_uri for consistent provider options (#2364 / @ifedapoolarewaju)
+- @growthcloud/image-editor: 🎉 add long-awaited image cropping, rotation, flipping and zooming (in beta!) (#2370 / @arturi)
+- @growthcloud/companion: override grant's default redirect_uri for consistent provider options (#2364 / @ifedapoolarewaju)
 
 ### 1.17.0
 
 Released: 2020-07-15
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.8.0 | @uppy/onedrive | 1.1.9 |
-| @uppy/aws-s3 | 1.6.7 | @uppy/progress-bar | 1.3.16 |
-| @uppy/companion-client | 1.5.1 | @uppy/provider-views | 1.7.0 |
-| @uppy/companion | 2.0.0-alpha.7 | @uppy/react | 1.9.0 |
-| @uppy/core | 1.12.0 | @uppy/robodog | 1.7.2 |
-| @uppy/dashboard | 1.10.2 | @uppy/screen-capture | 1.0.4 |
-| @uppy/drag-drop | 1.4.16 | @uppy/status-bar | 1.7.1 |
-| @uppy/dropbox | 1.4.9 | @uppy/thumbnail-generator | 1.6.3 |
-| @uppy/facebook | 1.1.9 | @uppy/transloadit | 1.6.2 |
-| @uppy/file-input | 1.4.14 | @uppy/tus | 1.7.0 |
-| @uppy/form | 1.3.17 | @uppy/url | 1.5.8 |
-| @uppy/golden-retriever | 1.3.16 | @uppy/utils | 3.2.0 |
-| @uppy/google-drive | 1.5.9 | @uppy/webcam | 1.6.8 |
-| @uppy/informer | 1.5.8 | @uppy/xhr-upload | 1.6.1 |
-| @uppy/instagram | 1.4.9 | uppy | 1.17.0 |
-| @uppy/locales | 1.15.1 | - | - |
+| Package                       | Version       | Package                          | Version |
+| ----------------------------- | ------------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.8.0         | @growthcloud/onedrive            | 1.1.9   |
+| @growthcloud/aws-s3           | 1.6.7         | @growthcloud/progress-bar        | 1.3.16  |
+| @growthcloud/companion-client | 1.5.1         | @growthcloud/provider-views      | 1.7.0   |
+| @growthcloud/companion        | 2.0.0-alpha.7 | @growthcloud/react               | 1.9.0   |
+| @growthcloud/core             | 1.12.0        | @growthcloud/robodog             | 1.7.2   |
+| @growthcloud/dashboard        | 1.10.2        | @growthcloud/screen-capture      | 1.0.4   |
+| @growthcloud/drag-drop        | 1.4.16        | @growthcloud/status-bar          | 1.7.1   |
+| @growthcloud/dropbox          | 1.4.9         | @growthcloud/thumbnail-generator | 1.6.3   |
+| @growthcloud/facebook         | 1.1.9         | @growthcloud/transloadit         | 1.6.2   |
+| @growthcloud/file-input       | 1.4.14        | @growthcloud/tus                 | 1.7.0   |
+| @growthcloud/form             | 1.3.17        | @growthcloud/url                 | 1.5.8   |
+| @growthcloud/golden-retriever | 1.3.16        | @growthcloud/utils               | 3.2.0   |
+| @growthcloud/google-drive     | 1.5.9         | @growthcloud/webcam              | 1.6.8   |
+| @growthcloud/informer         | 1.5.8         | @growthcloud/xhr-upload          | 1.6.1   |
+| @growthcloud/instagram        | 1.4.9         | uppy                             | 1.17.0  |
+| @growthcloud/locales          | 1.15.1        | -                                | -       |
 
-- ⚠️ @uppy/companion: rename `microsoft` and `google` providerOptions to `onedrive` and `drive` respectively (#2346 / @ifedapoolarewaju)
-- @uppy/aws-s3-multipart: do not store completed parts in state, fixes a resuming bug (#2326 / @yaegor)
-- @uppy/aws-s3-multipart: retry uploading failed parts (#2312 / @goto-bus-stop)
-- @uppy/companion: dependency updates (#2333 / @goto-bus-stop)
-- @uppy/companion: send custom headers to tus uploads (#2338 / @ifedapoolarewaju)
-- @uppy/core: add `reason` parameter to the `uppy.removeFile()` method and the `uppy.on('file-removed')` event (#2323 / @arturi)
-- @uppy/core: do not create an empty upload in retryAll() if there were no errors (#2361 / @goto-bus-stop)
-- @uppy/locales: add missing strings for Simplified Chinese (#2335 / @sparanoid)
-- @uppy/tus: update tus-js-client to v2 (#2239 / @Acconut, @goto-bus-stop)
+- ⚠️ @growthcloud/companion: rename `microsoft` and `google` providerOptions to `onedrive` and `drive` respectively (#2346 / @ifedapoolarewaju)
+- @growthcloud/aws-s3-multipart: do not store completed parts in state, fixes a resuming bug (#2326 / @yaegor)
+- @growthcloud/aws-s3-multipart: retry uploading failed parts (#2312 / @goto-bus-stop)
+- @growthcloud/companion: dependency updates (#2333 / @goto-bus-stop)
+- @growthcloud/companion: send custom headers to tus uploads (#2338 / @ifedapoolarewaju)
+- @growthcloud/core: add `reason` parameter to the `uppy.removeFile()` method and the `uppy.on('file-removed')` event (#2323 / @arturi)
+- @growthcloud/core: do not create an empty upload in retryAll() if there were no errors (#2361 / @goto-bus-stop)
+- @growthcloud/locales: add missing strings for Simplified Chinese (#2335 / @sparanoid)
+- @growthcloud/tus: update tus-js-client to v2 (#2239 / @Acconut, @goto-bus-stop)
 - docs: add authentication setup instructions for Dropbox and Google Drive (#2345 / @goto-bus-stop)
 - docs: explain how to use Uppy with React Hooks (#1936 / @pedrofs)
 
@@ -2402,63 +2378,63 @@ Released: 2020-07-15
 
 Released: 2020-06-19
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 2.0.0-alpha.6 | - | - |
+| Package                | Version       | Package | Version |
+| ---------------------- | ------------- | ------- | ------- |
+| @growthcloud/companion | 2.0.0-alpha.6 | -       | -       |
 
-- @uppy/companion: Import url (#2328 / @ifedapoolarewaju)
+- @growthcloud/companion: Import url (#2328 / @ifedapoolarewaju)
 
 Released: 2020-06-18
 
-⚠️ This release patches a Server Side Request Forgery (SSRF) Security vulnerability on `@uppy/companion`
+⚠️ This release patches a Server Side Request Forgery (SSRF) Security vulnerability on `@growthcloud/companion`
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 1.13.2, 2.0.0-alpha.5 | @uppy/onedrive | 1.1.8 |
-| @uppy/dashboard | 1.10.1 | @uppy/provider-views | 1.6.8 |
-| @uppy/drag-drop | 1.4.15 | @uppy/react | 1.8.1 |
-| @uppy/dropbox | 1.4.8 | @uppy/robodog | 1.7.1 |
-| @uppy/facebook | 1.1.8 | @uppy/thumbnail-generator | 1.6.2 |
-| @uppy/google-drive | 1.5.8 | @uppy/transloadit | 1.6.1 |
-| @uppy/instagram | 1.4.8 | uppy | 1.16.1 |
+| Package                   | Version               | Package                          | Version |
+| ------------------------- | --------------------- | -------------------------------- | ------- |
+| @growthcloud/companion    | 1.13.2, 2.0.0-alpha.5 | @growthcloud/onedrive            | 1.1.8   |
+| @growthcloud/dashboard    | 1.10.1                | @growthcloud/provider-views      | 1.6.8   |
+| @growthcloud/drag-drop    | 1.4.15                | @growthcloud/react               | 1.8.1   |
+| @growthcloud/dropbox      | 1.4.8                 | @growthcloud/robodog             | 1.7.1   |
+| @growthcloud/facebook     | 1.1.8                 | @growthcloud/thumbnail-generator | 1.6.2   |
+| @growthcloud/google-drive | 1.5.8                 | @growthcloud/transloadit         | 1.6.1   |
+| @growthcloud/instagram    | 1.4.8                 | uppy                             | 1.16.1  |
 
-- @uppy/thumbnail-generator: upgrade exifr (@goto-bus-stop)
-- @uppy/companion: set grant related options for custom providers (#2317 / @ifedapoolarewaju)
-- @uppy/provider-views: handle all plugin state in provider-views (#2318 / @ifedapoolarewaju)
-- @uppy/drag-drop: Add uppy-DragDrop-input class name back (ab88612dff3ce24b001acb3b626516f0e2f7fd0c / @arturi)
-- @uppy/companion: block redirects to urls with different protocol (#2322 / @ifedapoolarewaju)
+- @growthcloud/thumbnail-generator: upgrade exifr (@goto-bus-stop)
+- @growthcloud/companion: set grant related options for custom providers (#2317 / @ifedapoolarewaju)
+- @growthcloud/provider-views: handle all plugin state in provider-views (#2318 / @ifedapoolarewaju)
+- @growthcloud/drag-drop: Add uppy-DragDrop-input class name back (ab88612dff3ce24b001acb3b626516f0e2f7fd0c / @arturi)
+- @growthcloud/companion: block redirects to urls with different protocol (#2322 / @ifedapoolarewaju)
 
 ### 1.16.0
 
 Released: 2020-06-13
 
-This release fixes Drag Drop plugin bug introduced in the previous release (@uppy/drag-drop@1.4.13) and adds NetworkError reporting and `error.isNetworkError` to the Transloadit plugin.
+This release fixes Drag Drop plugin bug introduced in the previous release (@growthcloud/drag-drop@1.4.13) and adds NetworkError reporting and `error.isNetworkError` to the Transloadit plugin.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.7.1 | @uppy/onedrive | 1.1.7 |
-| @uppy/aws-s3 | 1.6.6 | @uppy/progress-bar | 1.3.15 |
-| @uppy/companion-client | 1.5.0 | @uppy/provider-views | 1.6.7 |
-| @uppy/companion | 2.0.0-alpha.4 | @uppy/react | 1.8.0 |
-| @uppy/core | 1.11.0 | @uppy/robodog | 1.7.0 |
-| @uppy/dashboard | 1.10.0 | @uppy/screen-capture | 1.0.3 |
-| @uppy/drag-drop | 1.4.14 | @uppy/status-bar | 1.7.0 |
-| @uppy/dropbox | 1.4.7 | @uppy/thumbnail-generator | 1.6.1 |
-| @uppy/facebook | 1.1.7 | @uppy/transloadit | 1.6.0 |
-| @uppy/file-input | 1.4.13 | @uppy/tus | 1.6.0 |
-| @uppy/form | 1.3.16 | @uppy/url | 1.5.7 |
-| @uppy/golden-retriever | 1.3.15 | @uppy/utils | 3.1.0 |
-| @uppy/google-drive | 1.5.7 | @uppy/webcam | 1.6.7 |
-| @uppy/informer | 1.5.7 | @uppy/xhr-upload | 1.6.0 |
-| @uppy/instagram | 1.4.7 | uppy | 1.16.0 |
-| @uppy/locales | 1.15.0 | - | - |
+| Package                       | Version       | Package                          | Version |
+| ----------------------------- | ------------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.7.1         | @growthcloud/onedrive            | 1.1.7   |
+| @growthcloud/aws-s3           | 1.6.6         | @growthcloud/progress-bar        | 1.3.15  |
+| @growthcloud/companion-client | 1.5.0         | @growthcloud/provider-views      | 1.6.7   |
+| @growthcloud/companion        | 2.0.0-alpha.4 | @growthcloud/react               | 1.8.0   |
+| @growthcloud/core             | 1.11.0        | @growthcloud/robodog             | 1.7.0   |
+| @growthcloud/dashboard        | 1.10.0        | @growthcloud/screen-capture      | 1.0.3   |
+| @growthcloud/drag-drop        | 1.4.14        | @growthcloud/status-bar          | 1.7.0   |
+| @growthcloud/dropbox          | 1.4.7         | @growthcloud/thumbnail-generator | 1.6.1   |
+| @growthcloud/facebook         | 1.1.7         | @growthcloud/transloadit         | 1.6.0   |
+| @growthcloud/file-input       | 1.4.13        | @growthcloud/tus                 | 1.6.0   |
+| @growthcloud/form             | 1.3.16        | @growthcloud/url                 | 1.5.7   |
+| @growthcloud/golden-retriever | 1.3.15        | @growthcloud/utils               | 3.1.0   |
+| @growthcloud/google-drive     | 1.5.7         | @growthcloud/webcam              | 1.6.7   |
+| @growthcloud/informer         | 1.5.7         | @growthcloud/xhr-upload          | 1.6.0   |
+| @growthcloud/instagram        | 1.4.7         | uppy                             | 1.16.0  |
+| @growthcloud/locales          | 1.15.0        | -                                | -       |
 
-- @uppy/dashboard: Refactor FileProgress component (#2303, #2292 / @arturi, @atsawin)
-- @uppy/dashboard:  Move the FileItem’s new ErrorButton, it was overlapping the edit button (0e78e32e4cf50b276ee4a48f1bf57e6be279b539 / @arturi)
-- @uppy/drag-drop: Fix the issue with click event occuring twice, try hiding the input altogether (#2307 / @arturi)
-- @uppy/transloadit: Add NetworkError handling to Transloadit plugin, refactor things, update docs about `error.isNetworkError` (#2291 / @arturi)
-- @uppy/companion: Companion 2.0 (pre-released as alpha for now) (#2273 / @ifedapoolarewaju)
-- @uppy/locales: Update of Galician i18n strings. (#2308 / @jarey)
+- @growthcloud/dashboard: Refactor FileProgress component (#2303, #2292 / @arturi, @atsawin)
+- @growthcloud/dashboard: Move the FileItem’s new ErrorButton, it was overlapping the edit button (0e78e32e4cf50b276ee4a48f1bf57e6be279b539 / @arturi)
+- @growthcloud/drag-drop: Fix the issue with click event occuring twice, try hiding the input altogether (#2307 / @arturi)
+- @growthcloud/transloadit: Add NetworkError handling to Transloadit plugin, refactor things, update docs about `error.isNetworkError` (#2291 / @arturi)
+- @growthcloud/companion: Companion 2.0 (pre-released as alpha for now) (#2273 / @ifedapoolarewaju)
+- @growthcloud/locales: Update of Galician i18n strings. (#2308 / @jarey)
 - build: chores: catch custom version suffices (alpha, beta etc.) (#2311 / ifedapoolarewaju)
 
 ### 1.15.0
@@ -2467,141 +2443,141 @@ Released: 2020-05-25
 
 This release features Bug Fixes And Performance Improvements™ (actually significant ones), two new languages, and a handful of nifty new Dashboard features.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.7.0 | @uppy/onedrive | 1.1.6 |
-| @uppy/aws-s3 | 1.6.5 | @uppy/progress-bar | 1.3.14 |
-| @uppy/companion-client | 1.4.5 | @uppy/provider-views | 1.6.6 |
-| @uppy/companion | 2.0.0-alpha.3 | @uppy/react | 1.7.0 |
-| @uppy/core | 1.10.5 | @uppy/robodog | 1.6.7 |
-| @uppy/dashboard | 1.9.0 | @uppy/screen-capture | 1.0.2 |
-| @uppy/drag-drop | 1.4.13 | @uppy/status-bar | 1.6.6 |
-| @uppy/dropbox | 1.4.6 | @uppy/thumbnail-generator | 1.6.0 |
-| @uppy/facebook | 1.1.6 | @uppy/transloadit | 1.5.11 |
-| @uppy/file-input | 1.4.12 | @uppy/tus | 1.5.13 |
-| @uppy/form | 1.3.15 | @uppy/url | 1.5.6 |
-| @uppy/golden-retriever | 1.3.14 | @uppy/utils | 3.0.0 |
-| @uppy/google-drive | 1.5.6 | @uppy/webcam | 1.6.6 |
-| @uppy/informer | 1.5.6 | @uppy/xhr-upload | 1.5.11 |
-| @uppy/instagram | 1.4.6 | uppy | 1.15.0 |
-| @uppy/locales | 1.14.0 | - | - |
+| Package                       | Version       | Package                          | Version |
+| ----------------------------- | ------------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.7.0         | @growthcloud/onedrive            | 1.1.6   |
+| @growthcloud/aws-s3           | 1.6.5         | @growthcloud/progress-bar        | 1.3.14  |
+| @growthcloud/companion-client | 1.4.5         | @growthcloud/provider-views      | 1.6.6   |
+| @growthcloud/companion        | 2.0.0-alpha.3 | @growthcloud/react               | 1.7.0   |
+| @growthcloud/core             | 1.10.5        | @growthcloud/robodog             | 1.6.7   |
+| @growthcloud/dashboard        | 1.9.0         | @growthcloud/screen-capture      | 1.0.2   |
+| @growthcloud/drag-drop        | 1.4.13        | @growthcloud/status-bar          | 1.6.6   |
+| @growthcloud/dropbox          | 1.4.6         | @growthcloud/thumbnail-generator | 1.6.0   |
+| @growthcloud/facebook         | 1.1.6         | @growthcloud/transloadit         | 1.5.11  |
+| @growthcloud/file-input       | 1.4.12        | @growthcloud/tus                 | 1.5.13  |
+| @growthcloud/form             | 1.3.15        | @growthcloud/url                 | 1.5.6   |
+| @growthcloud/golden-retriever | 1.3.14        | @growthcloud/utils               | 3.0.0   |
+| @growthcloud/google-drive     | 1.5.6         | @growthcloud/webcam              | 1.6.6   |
+| @growthcloud/informer         | 1.5.6         | @growthcloud/xhr-upload          | 1.5.11  |
+| @growthcloud/instagram        | 1.4.6         | uppy                             | 1.15.0  |
+| @growthcloud/locales          | 1.14.0        | -                                | -       |
 
-- @uppy/aws-s3-multipart: make chunk size configurable (#2253 / @goto-bus-stop)
-- @uppy/aws-s3: add missing `cuid` dependency (#2236 / @tmaier)
-- @uppy/aws-s3: fix accidental overwrite of file metadata (#2276 / @goto-bus-stop)
-- @uppy/companion-client: add missing `@uppy/utils` dependency (#2266 / @goto-bus-stop)
-- @uppy/companion: fix crash if provider returns an empty error response (#2264 / @ifedapoolarewaju)
-- @uppy/companion: ignore environment variables that contain the empty string (#2283 / @ifedapoolarewaju)
-- @uppy/companion: validate options when using the Node.js API (#2275 / @ifedapoolarewaju)
-- @uppy/core: add more suggestions to console warning when incorrect `target` option is provided (#2242 / @goto-bus-stop)
-- @uppy/dashboard: add option to let users remove already uploaded files, UI only (#2284 / @arturi)
-- @uppy/dashboard: display error message for individual files (#2224 / @lafe)
-- @uppy/dashboard: render only visible files to the DOM (VirtualList) to drastically improve performance (#2161 / @goto-bus-stop)
-- @uppy/drag-drop: add a more accessible `<label>` element for the hidden input (#2257 / @arturi)
-- @uppy/locales: add Bulgarian `bg_BG` (#2280 / @intenzive)
-- @uppy/locales: add Slovakian `sk_SK` (#2261 / @suchoproduction)
-- @uppy/progress-bar: hide the progress bar if no upload is in progress (#2252 / @nicojones)
-- @uppy/thumbnail-generator: generate 80% quality JPEGs instead of high-quality PNGs for a 30% perf win (#2246 / @goto-bus-stop)
-- @uppy/thumbnail-generator: support optional lazy thumbnail generation (#2161 / @goto-bus-stop)
-- @uppy/transloadit: add typings for Companion URL constants (#2244 / @goto-bus-stop)
-- @uppy/transloadit: fix typo that caused outdated Assembly data in `'complete'` event (#2287 / @goto-bus-stop)
-- @uppy/transloadit: when cancelling all uploads, only cancel assemblies that belong to an ongoing upload (#2277 / @goto-bus-stop)
-- @uppy/tus: fix tus uploads getting terminated if the file is removed from Uppy after the upload completed (#2262 / @zachconner)
-- @uppy/utils: fix typescript typings for the `Translator` constructor (#2263 / @goto-bus-stop)
-- @uppy/utils: remove `@uppy/utils/lib/prettyBytes`, use `@transloadit/prettier-bytes` instead (#2231 / @kvz)
-- @uppy/webcam: show an "Enable Camera" screen if no camera device is available (#2282 / @arturi)
+- @growthcloud/aws-s3-multipart: make chunk size configurable (#2253 / @goto-bus-stop)
+- @growthcloud/aws-s3: add missing `cuid` dependency (#2236 / @tmaier)
+- @growthcloud/aws-s3: fix accidental overwrite of file metadata (#2276 / @goto-bus-stop)
+- @growthcloud/companion-client: add missing `@growthcloud/utils` dependency (#2266 / @goto-bus-stop)
+- @growthcloud/companion: fix crash if provider returns an empty error response (#2264 / @ifedapoolarewaju)
+- @growthcloud/companion: ignore environment variables that contain the empty string (#2283 / @ifedapoolarewaju)
+- @growthcloud/companion: validate options when using the Node.js API (#2275 / @ifedapoolarewaju)
+- @growthcloud/core: add more suggestions to console warning when incorrect `target` option is provided (#2242 / @goto-bus-stop)
+- @growthcloud/dashboard: add option to let users remove already uploaded files, UI only (#2284 / @arturi)
+- @growthcloud/dashboard: display error message for individual files (#2224 / @lafe)
+- @growthcloud/dashboard: render only visible files to the DOM (VirtualList) to drastically improve performance (#2161 / @goto-bus-stop)
+- @growthcloud/drag-drop: add a more accessible `<label>` element for the hidden input (#2257 / @arturi)
+- @growthcloud/locales: add Bulgarian `bg_BG` (#2280 / @intenzive)
+- @growthcloud/locales: add Slovakian `sk_SK` (#2261 / @suchoproduction)
+- @growthcloud/progress-bar: hide the progress bar if no upload is in progress (#2252 / @nicojones)
+- @growthcloud/thumbnail-generator: generate 80% quality JPEGs instead of high-quality PNGs for a 30% perf win (#2246 / @goto-bus-stop)
+- @growthcloud/thumbnail-generator: support optional lazy thumbnail generation (#2161 / @goto-bus-stop)
+- @growthcloud/transloadit: add typings for Companion URL constants (#2244 / @goto-bus-stop)
+- @growthcloud/transloadit: fix typo that caused outdated Assembly data in `'complete'` event (#2287 / @goto-bus-stop)
+- @growthcloud/transloadit: when cancelling all uploads, only cancel assemblies that belong to an ongoing upload (#2277 / @goto-bus-stop)
+- @growthcloud/tus: fix tus uploads getting terminated if the file is removed from Uppy after the upload completed (#2262 / @zachconner)
+- @growthcloud/utils: fix typescript typings for the `Translator` constructor (#2263 / @goto-bus-stop)
+- @growthcloud/utils: remove `@growthcloud/utils/lib/prettyBytes`, use `@transloadit/prettier-bytes` instead (#2231 / @kvz)
+- @growthcloud/webcam: show an "Enable Camera" screen if no camera device is available (#2282 / @arturi)
 - website: list Robodog size and sort size stats by plugin name (#2259 / @goto-bus-stop)
 
 ### 1.14.1
 
 Released: 2020-05-01
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 2.0.0-alpha.2 | - | - |
+| Package                | Version       | Package | Version |
+| ---------------------- | ------------- | ------- | ------- |
+| @growthcloud/companion | 2.0.0-alpha.2 | -       | -       |
 
-- @uppy/companion: make it node 8 compatible (temporarily) (#2234 / @ifedapoolarewaju)
+- @growthcloud/companion: make it node 8 compatible (temporarily) (#2234 / @ifedapoolarewaju)
 
 Released: 2020-04-30
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.6.4 | @uppy/locales | 1.13.3 |
-| @uppy/aws-s3 | 1.6.4 | @uppy/onedrive | 1.1.5 |
-| @uppy/companion-client | 1.4.4 | @uppy/progress-bar | 1.3.13 |
-| @uppy/companion | 2.0.0-alpha.1 | @uppy/react | 1.6.5 |
-| @uppy/core | 1.10.4 | @uppy/robodog | 1.6.6 |
-| @uppy/dashboard | 1.8.5 | @uppy/screen-capture | 1.0.1 |
-| @uppy/drag-drop | 1.4.12 | @uppy/status-bar | 1.6.5 |
-| @uppy/dropbox | 1.4.5 | @uppy/thumbnail-generator | 1.5.12 |
-| @uppy/facebook | 1.1.5 | @uppy/transloadit | 1.5.10 |
-| @uppy/file-input | 1.4.11 | @uppy/tus | 1.5.12 |
-| @uppy/form | 1.3.14 | @uppy/url | 1.5.5 |
-| @uppy/golden-retriever | 1.3.13 | @uppy/utils | 2.4.4 |
-| @uppy/google-drive | 1.5.5 | @uppy/webcam | 1.6.5 |
-| @uppy/informer | 1.5.5 | @uppy/xhr-upload | 1.5.10 |
-| @uppy/instagram | 1.4.5 | uppy | 1.14.1 |
-| @uppy/provider-views | 1.6.5 | - | - |
+| Package                       | Version       | Package                          | Version |
+| ----------------------------- | ------------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.6.4         | @growthcloud/locales             | 1.13.3  |
+| @growthcloud/aws-s3           | 1.6.4         | @growthcloud/onedrive            | 1.1.5   |
+| @growthcloud/companion-client | 1.4.4         | @growthcloud/progress-bar        | 1.3.13  |
+| @growthcloud/companion        | 2.0.0-alpha.1 | @growthcloud/react               | 1.6.5   |
+| @growthcloud/core             | 1.10.4        | @growthcloud/robodog             | 1.6.6   |
+| @growthcloud/dashboard        | 1.8.5         | @growthcloud/screen-capture      | 1.0.1   |
+| @growthcloud/drag-drop        | 1.4.12        | @growthcloud/status-bar          | 1.6.5   |
+| @growthcloud/dropbox          | 1.4.5         | @growthcloud/thumbnail-generator | 1.5.12  |
+| @growthcloud/facebook         | 1.1.5         | @growthcloud/transloadit         | 1.5.10  |
+| @growthcloud/file-input       | 1.4.11        | @growthcloud/tus                 | 1.5.12  |
+| @growthcloud/form             | 1.3.14        | @growthcloud/url                 | 1.5.5   |
+| @growthcloud/golden-retriever | 1.3.13        | @growthcloud/utils               | 2.4.4   |
+| @growthcloud/google-drive     | 1.5.5         | @growthcloud/webcam              | 1.6.5   |
+| @growthcloud/informer         | 1.5.5         | @growthcloud/xhr-upload          | 1.5.10  |
+| @growthcloud/instagram        | 1.4.5         | uppy                             | 1.14.1  |
+| @growthcloud/provider-views   | 1.6.5         | -                                | -       |
 
-- @uppy/companion: catch download failures via response status codes (#2223 / @ifedapoolarewaju)
-- @uppy/companion: mask secrets present in log messages (#2214 / @ifedapoolarewaju)
+- @growthcloud/companion: catch download failures via response status codes (#2223 / @ifedapoolarewaju)
+- @growthcloud/companion: mask secrets present in log messages (#2214 / @ifedapoolarewaju)
 
 ### 1.14
 
 Released: 2020-04-29
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.6.3 | @uppy/onedrive | 1.1.4 |
-| @uppy/aws-s3 | 1.6.3 | @uppy/progress-bar | 1.3.12 |
-| @uppy/companion-client | 1.4.3 | @uppy/provider-views | 1.6.4 |
-| @uppy/companion | 2.0.0-alpha.0 | @uppy/react | 1.6.4 |
-| @uppy/core | 1.10.3 | @uppy/robodog | 1.6.5 |
-| @uppy/dashboard | 1.8.4 | @uppy/screen-capture | 1.0.0 |
-| @uppy/drag-drop | 1.4.11 | @uppy/status-bar | 1.6.4 |
-| @uppy/dropbox | 1.4.4 | @uppy/thumbnail-generator | 1.5.11 |
-| @uppy/facebook | 1.1.4 | @uppy/transloadit | 1.5.9 |
-| @uppy/file-input | 1.4.10 | @uppy/tus | 1.5.11 |
-| @uppy/form | 1.3.13 | @uppy/url | 1.5.4 |
-| @uppy/golden-retriever | 1.3.12 | @uppy/utils | 2.4.3 |
-| @uppy/google-drive | 1.5.4 | @uppy/webcam | 1.6.4 |
-| @uppy/informer | 1.5.4 | @uppy/xhr-upload | 1.5.9 |
-| @uppy/instagram | 1.4.4 | uppy | 1.14.0 |
-| @uppy/locales | 1.13.2 | - | - |
+| Package                       | Version       | Package                          | Version |
+| ----------------------------- | ------------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.6.3         | @growthcloud/onedrive            | 1.1.4   |
+| @growthcloud/aws-s3           | 1.6.3         | @growthcloud/progress-bar        | 1.3.12  |
+| @growthcloud/companion-client | 1.4.3         | @growthcloud/provider-views      | 1.6.4   |
+| @growthcloud/companion        | 2.0.0-alpha.0 | @growthcloud/react               | 1.6.4   |
+| @growthcloud/core             | 1.10.3        | @growthcloud/robodog             | 1.6.5   |
+| @growthcloud/dashboard        | 1.8.4         | @growthcloud/screen-capture      | 1.0.0   |
+| @growthcloud/drag-drop        | 1.4.11        | @growthcloud/status-bar          | 1.6.4   |
+| @growthcloud/dropbox          | 1.4.4         | @growthcloud/thumbnail-generator | 1.5.11  |
+| @growthcloud/facebook         | 1.1.4         | @growthcloud/transloadit         | 1.5.9   |
+| @growthcloud/file-input       | 1.4.10        | @growthcloud/tus                 | 1.5.11  |
+| @growthcloud/form             | 1.3.13        | @growthcloud/url                 | 1.5.4   |
+| @growthcloud/golden-retriever | 1.3.12        | @growthcloud/utils               | 2.4.3   |
+| @growthcloud/google-drive     | 1.5.4         | @growthcloud/webcam              | 1.6.4   |
+| @growthcloud/informer         | 1.5.4         | @growthcloud/xhr-upload          | 1.5.9   |
+| @growthcloud/instagram        | 1.4.4         | uppy                             | 1.14.0  |
+| @growthcloud/locales          | 1.13.2        | -                                | -       |
 
-- @uppy/aws-s3: fix double encoding of the upload params (#2220 / @romain-preston)
-- @uppy/aws-s3: fixing URL constructor use in Safari (#2207 / @NaxYo)
-- @uppy/companion: improve obscuring sensitive values in standalone server (#2219 / @goto-bus-stop)
-- @uppy/companion: upgrade Companion version used in Heroku setup instructions (#2206 / @zacharylawson)
-- @uppy/dashboard: move from white to off-white in Dark Mode (#2222 / @arturi)
-- @uppy/locales: various updates to French translation (#2203 / @louim, #2216 / dtrucs)
-- @uppy/screen-capture: add a new plugin for recording your device screen (#2132 / @jukakoski & @arturi)
-- @uppy/thumbnail-generator: use new exifr.rotation() API  (#2230 / @goto-bus-stop)
-- @uppy/utils: remove duplicate check of element type (#2210 / @jrschumacher)
+- @growthcloud/aws-s3: fix double encoding of the upload params (#2220 / @romain-preston)
+- @growthcloud/aws-s3: fixing URL constructor use in Safari (#2207 / @NaxYo)
+- @growthcloud/companion: improve obscuring sensitive values in standalone server (#2219 / @goto-bus-stop)
+- @growthcloud/companion: upgrade Companion version used in Heroku setup instructions (#2206 / @zacharylawson)
+- @growthcloud/dashboard: move from white to off-white in Dark Mode (#2222 / @arturi)
+- @growthcloud/locales: various updates to French translation (#2203 / @louim, #2216 / dtrucs)
+- @growthcloud/screen-capture: add a new plugin for recording your device screen (#2132 / @jukakoski & @arturi)
+- @growthcloud/thumbnail-generator: use new exifr.rotation() API (#2230 / @goto-bus-stop)
+- @growthcloud/utils: remove duplicate check of element type (#2210 / @jrschumacher)
 
 ### 1.13.2
 
 Released: 2020-04-15
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.6.2 | @uppy/progress-bar | 1.3.11 |
-| @uppy/aws-s3 | 1.6.2 | @uppy/provider-views | 1.6.3 |
-| @uppy/companion | 1.13.1 | @uppy/react | 1.6.3 |
-| @uppy/core | 1.10.2 | @uppy/robodog | 1.6.4 |
-| @uppy/dashboard | 1.8.3 | @uppy/status-bar | 1.6.3 |
-| @uppy/drag-drop | 1.4.10 | @uppy/thumbnail-generator | 1.5.10 |
-| @uppy/dropbox | 1.4.3 | @uppy/transloadit | 1.5.8 |
-| @uppy/facebook | 1.1.3 | @uppy/tus | 1.5.10 |
-| @uppy/file-input | 1.4.9 | @uppy/url | 1.5.3 |
-| @uppy/form | 1.3.12 | @uppy/utils | 2.4.2 |
-| @uppy/golden-retriever | 1.3.11 | @uppy/webcam | 1.6.3 |
-| @uppy/google-drive | 1.5.3 | @uppy/xhr-upload | 1.5.8 |
-| @uppy/informer | 1.5.3 | remark-lint-uppy | 0.1.1 |
-| @uppy/instagram | 1.4.3 | uppy | 1.13.2 |
-| @uppy/onedrive | 1.1.3 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.6.2   | @growthcloud/progress-bar        | 1.3.11  |
+| @growthcloud/aws-s3           | 1.6.2   | @growthcloud/provider-views      | 1.6.3   |
+| @growthcloud/companion        | 1.13.1  | @growthcloud/react               | 1.6.3   |
+| @growthcloud/core             | 1.10.2  | @growthcloud/robodog             | 1.6.4   |
+| @growthcloud/dashboard        | 1.8.3   | @growthcloud/status-bar          | 1.6.3   |
+| @growthcloud/drag-drop        | 1.4.10  | @growthcloud/thumbnail-generator | 1.5.10  |
+| @growthcloud/dropbox          | 1.4.3   | @growthcloud/transloadit         | 1.5.8   |
+| @growthcloud/facebook         | 1.1.3   | @growthcloud/tus                 | 1.5.10  |
+| @growthcloud/file-input       | 1.4.9   | @growthcloud/url                 | 1.5.3   |
+| @growthcloud/form             | 1.3.12  | @growthcloud/utils               | 2.4.2   |
+| @growthcloud/golden-retriever | 1.3.11  | @growthcloud/webcam              | 1.6.3   |
+| @growthcloud/google-drive     | 1.5.3   | @growthcloud/xhr-upload          | 1.5.8   |
+| @growthcloud/informer         | 1.5.3   | remark-lint-uppy                 | 0.1.1   |
+| @growthcloud/instagram        | 1.4.3   | uppy                             | 1.13.2  |
+| @growthcloud/onedrive         | 1.1.3   | -                                | -       |
 
-- @uppy/companion: mimetype could be undefined (#2201 / @ifedapoolarewaju)
+- @growthcloud/companion: mimetype could be undefined (#2201 / @ifedapoolarewaju)
 
 ### 1.13.1
 
@@ -2609,10 +2585,10 @@ Released 2020-04-14
 
 Mainly fixes for the Dashboard provider/tab list in IE10 and correct Gsuit file extensions in Companion.
 
-- @uppy/dashboard: Dashboard tablist IE10 flex fix and refactor (#2192 / @arturi)
-- @uppy/companion: set debug based on `NODE_ENV` only if the env var is available (#2189 / @ifedapoolarewaju)
-- @uppy/companion: fix uploader protocol validation (#2197 / @ifedapoolarewaju)
-- @uppy/companion: set GSuite file extensions (#2194 / @ifedapoolarewaju)
+- @growthcloud/dashboard: Dashboard tablist IE10 flex fix and refactor (#2192 / @arturi)
+- @growthcloud/companion: set debug based on `NODE_ENV` only if the env var is available (#2189 / @ifedapoolarewaju)
+- @growthcloud/companion: fix uploader protocol validation (#2197 / @ifedapoolarewaju)
+- @growthcloud/companion: set GSuite file extensions (#2194 / @ifedapoolarewaju)
 - docs: fix minor typo in Dashboard docs (#2193 / @mhulet)
 - website: add markdown linting using remark (#2181 / @goto-bus-stop)
 
@@ -2620,70 +2596,70 @@ Mainly fixes for the Dashboard provider/tab list in IE10 and correct Gsuit file 
 
 Released 2020-04-08
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.6.0 | @uppy/onedrive | 1.1.1 |
-| @uppy/aws-s3 | 1.6.0 | @uppy/progress-bar | 1.3.9 |
-| @uppy/companion | 1.12.0 | @uppy/provider-views | 1.6.1 |
-| @uppy/core | 1.10.0 | @uppy/react | 1.6.1 |
-| @uppy/dashboard | 1.8.1 | @uppy/robodog | 1.6.2 |
-| @uppy/drag-drop | 1.4.8 | @uppy/status-bar | 1.6.1 |
-| @uppy/dropbox | 1.4.1 | @uppy/thumbnail-generator | 1.5.8 |
-| @uppy/facebook | 1.1.1 | @uppy/transloadit | 1.5.6 |
-| @uppy/file-input | 1.4.7 | @uppy/tus | 1.5.8 |
-| @uppy/form | 1.3.10 | @uppy/url | 1.5.1 |
-| @uppy/golden-retriever | 1.3.9 | @uppy/utils | 2.4.0 |
-| @uppy/google-drive | 1.5.1 | @uppy/webcam | 1.6.1 |
-| @uppy/informer | 1.5.1 | @uppy/xhr-upload | 1.5.6 |
-| @uppy/instagram | 1.4.1 | uppy | 1.13.0 |
-| @uppy/locales | 1.13.1 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.6.0   | @growthcloud/onedrive            | 1.1.1   |
+| @growthcloud/aws-s3           | 1.6.0   | @growthcloud/progress-bar        | 1.3.9   |
+| @growthcloud/companion        | 1.12.0  | @growthcloud/provider-views      | 1.6.1   |
+| @growthcloud/core             | 1.10.0  | @growthcloud/react               | 1.6.1   |
+| @growthcloud/dashboard        | 1.8.1   | @growthcloud/robodog             | 1.6.2   |
+| @growthcloud/drag-drop        | 1.4.8   | @growthcloud/status-bar          | 1.6.1   |
+| @growthcloud/dropbox          | 1.4.1   | @growthcloud/thumbnail-generator | 1.5.8   |
+| @growthcloud/facebook         | 1.1.1   | @growthcloud/transloadit         | 1.5.6   |
+| @growthcloud/file-input       | 1.4.7   | @growthcloud/tus                 | 1.5.8   |
+| @growthcloud/form             | 1.3.10  | @growthcloud/url                 | 1.5.1   |
+| @growthcloud/golden-retriever | 1.3.9   | @growthcloud/utils               | 2.4.0   |
+| @growthcloud/google-drive     | 1.5.1   | @growthcloud/webcam              | 1.6.1   |
+| @growthcloud/informer         | 1.5.1   | @growthcloud/xhr-upload          | 1.5.6   |
+| @growthcloud/instagram        | 1.4.1   | uppy                             | 1.13.0  |
+| @growthcloud/locales          | 1.13.1  | -                                | -       |
 
 This Release improves Google Drive's GSuite files support to export files to more flexible + popular formats
 
-- @uppy/companion: favor xlsx, docx, ppt formats when export gsuite files (#2182 / @ifedapoolarewaju)
-- @uppy/locales: remove legacy translations that have been re-translated (@goto-bus-stop)
-- @uppy/companion: use full path for provider URL when the root path depends on user input (#2176 / @ifedapoolarewaju)
-- @uppy/aws-s3: handle upload internally instead of deferring to xhr-upload (#2060 / @goto-bus-stop)
-- @uppy/aws-s3: fix missing typescript type for `metaFields` option (#1866 / @goto-bus-stop)
-- @uppy/robodog: Pass hideUploadButton to Dashboard in Robodog too (#2169 / @arturi)
-- @uppy/dashboard: add `theme` option to typescript typings (@goto-bus-stop)
-- @uppy/aws-s3-multipart: emit upload-error when companion returns error during upload instantiation (#2168 / @ifedapoolarewaju)
+- @growthcloud/companion: favor xlsx, docx, ppt formats when export gsuite files (#2182 / @ifedapoolarewaju)
+- @growthcloud/locales: remove legacy translations that have been re-translated (@goto-bus-stop)
+- @growthcloud/companion: use full path for provider URL when the root path depends on user input (#2176 / @ifedapoolarewaju)
+- @growthcloud/aws-s3: handle upload internally instead of deferring to xhr-upload (#2060 / @goto-bus-stop)
+- @growthcloud/aws-s3: fix missing typescript type for `metaFields` option (#1866 / @goto-bus-stop)
+- @growthcloud/robodog: Pass hideUploadButton to Dashboard in Robodog too (#2169 / @arturi)
+- @growthcloud/dashboard: add `theme` option to typescript typings (@goto-bus-stop)
+- @growthcloud/aws-s3-multipart: emit upload-error when companion returns error during upload instantiation (#2168 / @ifedapoolarewaju)
 
 ### 1.12.1
 
 Released 2020-04-01
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3 | 1.5.5 | @uppy/tus | 1.5.7 |
-| @uppy/robodog | 1.6.1 | @uppy/xhr-upload | 1.5.5 |
-| @uppy/transloadit | 1.5.5 | uppy | 1.12.1 |
+| Package                  | Version | Package                 | Version |
+| ------------------------ | ------- | ----------------------- | ------- |
+| @growthcloud/aws-s3      | 1.5.5   | @growthcloud/tus        | 1.5.7   |
+| @growthcloud/robodog     | 1.6.1   | @growthcloud/xhr-upload | 1.5.5   |
+| @growthcloud/transloadit | 1.5.5   | uppy                    | 1.12.1  |
 
 Patch release to add OneDrive and Facebook to Robodog’s package.json 🙈
 
-- @uppy/tus, @uppy/xhr-upload: emit error when companion returns error during upload creation (#2166 / @ifedapoolarewaju)
-- @uppy/robodog: Add facebook and onedrive to package.json (#2167 / @arturi)
+- @growthcloud/tus, @growthcloud/xhr-upload: emit error when companion returns error during upload creation (#2166 / @ifedapoolarewaju)
+- @growthcloud/robodog: Add facebook and onedrive to package.json (#2167 / @arturi)
 
 ### 1.12.0
 
 Released 2020-04-01
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3 | 1.5.4 | @uppy/robodog | 1.6.0 |
-| @uppy/companion | 1.11.1 | @uppy/thumbnail-generator | 1.5.7 |
-| @uppy/dashboard | 1.8.0 | @uppy/transloadit | 1.5.4 |
-| @uppy/locales | 1.13.0 | @uppy/xhr-upload | 1.5.4 |
-| @uppy/react | 1.6.0 | uppy | 1.12.0 |
+| Package                | Version | Package                          | Version |
+| ---------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3    | 1.5.4   | @growthcloud/robodog             | 1.6.0   |
+| @growthcloud/companion | 1.11.1  | @growthcloud/thumbnail-generator | 1.5.7   |
+| @growthcloud/dashboard | 1.8.0   | @growthcloud/transloadit         | 1.5.4   |
+| @growthcloud/locales   | 1.13.0  | @growthcloud/xhr-upload          | 1.5.4   |
+| @growthcloud/react     | 1.6.0   | uppy                             | 1.12.0  |
 
 This release adds the Romanian language, more input validation in Companion, and a way to render custom metadata fields in the Dashboard UI.
 
-- @uppy/companion: validate all client provided upload data. (#2160 / @ifedapoolarewaju)
-- @uppy/dashboard: allow custom metadata fields when editing files (#2147 / @galli-leo)
-- @uppy/locales: Remove obsolete strings from language files. (894c739 / @goto-bus-stop)
-- @uppy/locales: Romanian (ro_RO) language pack added. (#2162 / @akizor)
-- @uppy/robodog: Add Facebook and OneDrive to the bundle. (#2165 / @arturi)
-- @uppy/transloadit: fix progress with very different Assembly runtimes (#2143 / @agreene-coursera)
+- @growthcloud/companion: validate all client provided upload data. (#2160 / @ifedapoolarewaju)
+- @growthcloud/dashboard: allow custom metadata fields when editing files (#2147 / @galli-leo)
+- @growthcloud/locales: Remove obsolete strings from language files. (894c739 / @goto-bus-stop)
+- @growthcloud/locales: Romanian (ro_RO) language pack added. (#2162 / @akizor)
+- @growthcloud/robodog: Add Facebook and OneDrive to the bundle. (#2165 / @arturi)
+- @growthcloud/transloadit: fix progress with very different Assembly runtimes (#2143 / @agreene-coursera)
 - build: Fix locale pack test output (#2153 / @goto-bus-stop)
 - docs: Fix fragment URL (#2156 / @ishendyweb)
 - docs: document `XHRUpload#validateStatus` option. (#2154 / @goto-bus-stop)
@@ -2691,72 +2667,72 @@ This release adds the Romanian language, more input validation in Companion, and
 
 ### 1.11.0
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.5.3 | @uppy/onedrive | 1.1.0 |
-| @uppy/aws-s3 | 1.5.3 | @uppy/progress-bar | 1.3.8 |
-| @uppy/companion | 1.11.0 | @uppy/provider-views | 1.6.0 |
-| @uppy/core | 1.9.0 | @uppy/react | 1.5.0 |
-| @uppy/dashboard | 1.7.0 | @uppy/robodog | 1.5.4 |
-| @uppy/drag-drop | 1.4.7 | @uppy/status-bar | 1.6.0 |
-| @uppy/dropbox | 1.4.0 | @uppy/thumbnail-generator | 1.5.6 |
-| @uppy/facebook | 1.1.0 | @uppy/transloadit | 1.5.3 |
-| @uppy/file-input | 1.4.6 | @uppy/tus | 1.5.6 |
-| @uppy/form | 1.3.9 | @uppy/url | 1.5.0 |
-| @uppy/golden-retriever | 1.3.8 | @uppy/utils | 2.3.0 |
-| @uppy/google-drive | 1.5.0 | @uppy/webcam | 1.6.0 |
-| @uppy/informer | 1.5.0 | @uppy/xhr-upload | 1.5.3 |
-| @uppy/instagram | 1.4.0 | uppy | 1.11.0 |
-| @uppy/locales | 1.12.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.5.3   | @growthcloud/onedrive            | 1.1.0   |
+| @growthcloud/aws-s3           | 1.5.3   | @growthcloud/progress-bar        | 1.3.8   |
+| @growthcloud/companion        | 1.11.0  | @growthcloud/provider-views      | 1.6.0   |
+| @growthcloud/core             | 1.9.0   | @growthcloud/react               | 1.5.0   |
+| @growthcloud/dashboard        | 1.7.0   | @growthcloud/robodog             | 1.5.4   |
+| @growthcloud/drag-drop        | 1.4.7   | @growthcloud/status-bar          | 1.6.0   |
+| @growthcloud/dropbox          | 1.4.0   | @growthcloud/thumbnail-generator | 1.5.6   |
+| @growthcloud/facebook         | 1.1.0   | @growthcloud/transloadit         | 1.5.3   |
+| @growthcloud/file-input       | 1.4.6   | @growthcloud/tus                 | 1.5.6   |
+| @growthcloud/form             | 1.3.9   | @growthcloud/url                 | 1.5.0   |
+| @growthcloud/golden-retriever | 1.3.8   | @growthcloud/utils               | 2.3.0   |
+| @growthcloud/google-drive     | 1.5.0   | @growthcloud/webcam              | 1.6.0   |
+| @growthcloud/informer         | 1.5.0   | @growthcloud/xhr-upload          | 1.5.3   |
+| @growthcloud/instagram        | 1.4.0   | uppy                             | 1.11.0  |
+| @growthcloud/locales          | 1.12.0  | -                                | -       |
 
 This Release offers Dashboard redesign (Dark mode), and support for Google Docs in Companion.
 
-- @uppy/webcam: Try to respect restrictions (#2090 / @goto-bus-stop)
-- @uppy/dashboard: 2020 redesign 🍿 (#2015 / @arturi)
-- @uppy/companion: drop parallel down/upload for S3 multipart (#2114 / @goto-bus-stop)
-- @uppy/core: add typings for `setOptions()`. (#2135 / @goto-bus-stop)
-- @uppy/react: fix typescript proptypes for DashboardModal, fixes #2124 (#2136 / @goto-bus-stop)
-- @uppy/companion: emit error to client if download fails (#2139 / @ifedapoolarewaju)
-- @uppy/dashboard: Log warning instead of an error when trigger is not found (#2144 / @arturi)
-- @uppy/locales: Polish language pack. (#2138 / @alfatv)
-- @uppy/companion: add support to download gsuite (google docs, google spreadsheet) files (#2145 / @ifedapoolarewaju)
-- @uppy/locales: Croatian translations added (#2150 / @dkisic)
-- @uppy/core: Only _startIfAutoProceed if some files were actually added (#2146 / @arturi)
-- @uppy/thumbnail-generator: replace exif-js with exifr in thumbnail-generator (#2140 / @MikeKovarik)
+- @growthcloud/webcam: Try to respect restrictions (#2090 / @goto-bus-stop)
+- @growthcloud/dashboard: 2020 redesign 🍿 (#2015 / @arturi)
+- @growthcloud/companion: drop parallel down/upload for S3 multipart (#2114 / @goto-bus-stop)
+- @growthcloud/core: add typings for `setOptions()`. (#2135 / @goto-bus-stop)
+- @growthcloud/react: fix typescript proptypes for DashboardModal, fixes #2124 (#2136 / @goto-bus-stop)
+- @growthcloud/companion: emit error to client if download fails (#2139 / @ifedapoolarewaju)
+- @growthcloud/dashboard: Log warning instead of an error when trigger is not found (#2144 / @arturi)
+- @growthcloud/locales: Polish language pack. (#2138 / @alfatv)
+- @growthcloud/companion: add support to download gsuite (google docs, google spreadsheet) files (#2145 / @ifedapoolarewaju)
+- @growthcloud/locales: Croatian translations added (#2150 / @dkisic)
+- @growthcloud/core: Only \_startIfAutoProceed if some files were actually added (#2146 / @arturi)
+- @growthcloud/thumbnail-generator: replace exif-js with exifr in thumbnail-generator (#2140 / @MikeKovarik)
 
 ### 1.10.1
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 1.10.0 | uppy | 1.10.1 |
-| @uppy/facebook | 1.0.0
+| Package                | Version | Package | Version |
+| ---------------------- | ------- | ------- | ------- |
+| @growthcloud/companion | 1.10.0  | uppy    | 1.10.1  |
+| @growthcloud/facebook  | 1.0.0   |
 
-This release moves `@uppy/facebook` out of beta to a `1.0.0` and adds `Uppy.Facebook` to the Uppy CDN bundle:
+This release moves `@growthcloud/facebook` out of beta to a `1.0.0` and adds `Uppy.Facebook` to the Uppy CDN bundle:
 
 ```
 https://releases.transloadit.com/uppy/v1.10.1/uppy.min.js
 https://releases.transloadit.com/uppy/v1.10.1/uppy.min.css
 ```
 
-- uppy: add @uppy/facebook to `uppy` NPM and CDN bundles
-- @uppy/facebook: Get Facebook integration on its feet (@ifedapoolarewaju)
+- uppy: add @growthcloud/facebook to `uppy` NPM and CDN bundles
+- @growthcloud/facebook: Get Facebook integration on its feet (@ifedapoolarewaju)
 - website: Add featured customers logos (#2120 / @nqst)
 
 You can optionally download `1.10.1` release bundle: https://releases.transloadit.com/uppy/v1.10.1/uppy-v1.10.1.zip
 
 ### 1.10.0
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 1.10.0 | uppy | 1.10.0 |
+| Package                | Version | Package | Version |
+| ---------------------- | ------- | ------- | ------- |
+| @growthcloud/companion | 1.10.0  | uppy    | 1.10.0  |
 
 This release offers a bunch of Companion improvements and bug fixes.
 
-- @uppy/companion: pass `endpoint` and `region` to AWS SDK constructor (#2113 / @goto-bus-stop)
-- @uppy/companion: Allow S3 ACL to be specified in Companion Standalone (#2111 / @jasonbosco)
-- @uppy/companion: return 401 early if token is not set (#2118 / @ifedapoolarewaju)
-- @uppy/companion: allow providing any S3 option, closes #1388 (#2030 / @goto-bus-stop)
-- @uppy/companion:: don’t log redundant errors in production (#2112 / @ifedapoolarewaju)
+- @growthcloud/companion: pass `endpoint` and `region` to AWS SDK constructor (#2113 / @goto-bus-stop)
+- @growthcloud/companion: Allow S3 ACL to be specified in Companion Standalone (#2111 / @jasonbosco)
+- @growthcloud/companion: return 401 early if token is not set (#2118 / @ifedapoolarewaju)
+- @growthcloud/companion: allow providing any S3 option, closes #1388 (#2030 / @goto-bus-stop)
+- @growthcloud/companion:: don’t log redundant errors in production (#2112 / @ifedapoolarewaju)
 - docs: Add S3 ACL option to companion docs (#2109 / @jasonbosco)
 
 ### 1.9.4
@@ -2765,72 +2741,72 @@ Released 2020-02-28
 
 This release rolls out a fix for companion an issue introduced after [this PR](https://github.com/transloadit/uppy/pull/1668). See [#2096](https://github.com/transloadit/uppy/pull/2096) for more details.
 
-| Package | Version |
-|-|-|
-| @uppy/companion | 1.9.5 |
+| Package                | Version |
+| ---------------------- | ------- |
+| @growthcloud/companion | 1.9.5   |
 
-- @uppy/companion: read state from session in oauth-redirect controller (#2096 / @ifedapoolarewaju)
+- @growthcloud/companion: read state from session in oauth-redirect controller (#2096 / @ifedapoolarewaju)
 
 Released: 2020-02-27
 
 Previous `1.9.3` release has been deprecated due to broken URL Provider (see [#2094](https://github.com/transloadit/uppy/pull/2094)).
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 1.9.4 | @uppy/locales | 1.11.5 |
+| Package                | Version | Package              | Version |
+| ---------------------- | ------- | -------------------- | ------- |
+| @growthcloud/companion | 1.9.4   | @growthcloud/locales | 1.11.5  |
 
-- @uppy/companion: return the right httpAgent when protocol value contains ":" (#2094 / @ifedapoolarewaju)
-- @uppy/locales: fix pluralization in pt_BR (#2093 / @fgallinari)
+- @growthcloud/companion: return the right httpAgent when protocol value contains ":" (#2094 / @ifedapoolarewaju)
+- @growthcloud/locales: fix pluralization in pt_BR (#2093 / @fgallinari)
 
 ### 1.9.3
 
 Released: 2020-02-26
 
-⚠️ This release patches a Server Side Request Forgery (SSRF) Security vulnerability on `@uppy/companion`
+⚠️ This release patches a Server Side Request Forgery (SSRF) Security vulnerability on `@growthcloud/companion`
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 1.9.3 | @uppy/robodog | 1.5.3 |
-| @uppy/drag-drop | 1.4.6 | @uppy/webcam | 1.5.5 |
-| @uppy/locales | 1.11.4 | uppy | 1.9.3 |
-| @uppy/react | 1.4.6 | - | - |
+| Package                | Version | Package              | Version |
+| ---------------------- | ------- | -------------------- | ------- |
+| @growthcloud/companion | 1.9.3   | @growthcloud/robodog | 1.5.3   |
+| @growthcloud/drag-drop | 1.4.6   | @growthcloud/webcam  | 1.5.5   |
+| @growthcloud/locales   | 1.11.4  | uppy                 | 1.9.3   |
+| @growthcloud/react     | 1.4.6   | -                    | -       |
 
-- @uppy/companion: ⚠️ patch SSRF Security vulnerability (#2083 / @ifedapoolarewaju)
-- @uppy/webcam: Check the availability isTypeSupported api before calling (#2072 / @naveed-ahmad)
-- @uppy/locales: Locale DE_de added new keys. (#2084 / @SpazzMarticus)
-- @uppy/locales: Update zh_TW.js (#2075 / @cellvinchung)
-- @uppy/drag-drop: add a type test and document shared props (#2003 / @andychongyz)
-- @uppy/companion: make s3 signed url expiry configurable in companion (#2085 / @adamelmore)
+- @growthcloud/companion: ⚠️ patch SSRF Security vulnerability (#2083 / @ifedapoolarewaju)
+- @growthcloud/webcam: Check the availability isTypeSupported api before calling (#2072 / @naveed-ahmad)
+- @growthcloud/locales: Locale DE_de added new keys. (#2084 / @SpazzMarticus)
+- @growthcloud/locales: Update zh_TW.js (#2075 / @cellvinchung)
+- @growthcloud/drag-drop: add a type test and document shared props (#2003 / @andychongyz)
+- @growthcloud/companion: make s3 signed url expiry configurable in companion (#2085 / @adamelmore)
 - build: contributors:save fix — the node.js version (#2078 / @arturi)
 
 ### 1.9.2
 
 Released: 2020-02-14
 
-This release adds `@uppy/onedrive` to `uppy`’s `package.json`, fixing the bug reported at https://github.com/transloadit/uppy/commit/f291688fb813c55ff905abb334eff61c1c5a9dd0#commitcomment-37278041, and introduces more robust type checking in #1918.
+This release adds `@growthcloud/onedrive` to `uppy`’s `package.json`, fixing the bug reported at https://github.com/transloadit/uppy/commit/f291688fb813c55ff905abb334eff61c1c5a9dd0#commitcomment-37278041, and introduces more robust type checking in #1918.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.5.2 | @uppy/progress-bar | 1.3.7 |
-| @uppy/aws-s3 | 1.5.2 | @uppy/provider-views | 1.5.5 |
-| @uppy/companion-client | 1.4.2 | @uppy/react | 1.4.5 |
-| @uppy/companion | 1.9.2 | @uppy/redux-dev-tools | 1.3.2 |
-| @uppy/core | 1.8.2 | @uppy/robodog | 1.5.2 |
-| @uppy/dashboard | 1.6.2 | @uppy/status-bar | 1.5.2 |
-| @uppy/drag-drop | 1.4.5 | @uppy/store-default | 1.2.1 |
-| @uppy/dropbox | 1.3.8 | @uppy/store-redux | 1.2.1 |
-| @uppy/facebook | 0.2.5 | @uppy/thumbnail-generator | 1.5.5 |
-| @uppy/file-input | 1.4.5 | @uppy/transloadit | 1.5.2 |
-| @uppy/form | 1.3.8 | @uppy/tus | 1.5.5 |
-| @uppy/golden-retriever | 1.3.7 | @uppy/url | 1.4.5 |
-| @uppy/google-drive | 1.4.2 | @uppy/utils | 2.2.2 |
-| @uppy/informer | 1.4.2 | @uppy/webcam | 1.5.4 |
-| @uppy/instagram | 1.3.8 | @uppy/xhr-upload | 1.5.2 |
-| @uppy/locales | 1.11.3 | uppy | 1.9.2 |
-| @uppy/onedrive | 1.0.2 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.5.2   | @growthcloud/progress-bar        | 1.3.7   |
+| @growthcloud/aws-s3           | 1.5.2   | @growthcloud/provider-views      | 1.5.5   |
+| @growthcloud/companion-client | 1.4.2   | @growthcloud/react               | 1.4.5   |
+| @growthcloud/companion        | 1.9.2   | @growthcloud/redux-dev-tools     | 1.3.2   |
+| @growthcloud/core             | 1.8.2   | @growthcloud/robodog             | 1.5.2   |
+| @growthcloud/dashboard        | 1.6.2   | @growthcloud/status-bar          | 1.5.2   |
+| @growthcloud/drag-drop        | 1.4.5   | @growthcloud/store-default       | 1.2.1   |
+| @growthcloud/dropbox          | 1.3.8   | @growthcloud/store-redux         | 1.2.1   |
+| @growthcloud/facebook         | 0.2.5   | @growthcloud/thumbnail-generator | 1.5.5   |
+| @growthcloud/file-input       | 1.4.5   | @growthcloud/transloadit         | 1.5.2   |
+| @growthcloud/form             | 1.3.8   | @growthcloud/tus                 | 1.5.5   |
+| @growthcloud/golden-retriever | 1.3.7   | @growthcloud/url                 | 1.4.5   |
+| @growthcloud/google-drive     | 1.4.2   | @growthcloud/utils               | 2.2.2   |
+| @growthcloud/informer         | 1.4.2   | @growthcloud/webcam              | 1.5.4   |
+| @growthcloud/instagram        | 1.3.8   | @growthcloud/xhr-upload          | 1.5.2   |
+| @growthcloud/locales          | 1.11.3  | uppy                             | 1.9.2   |
+| @growthcloud/onedrive         | 1.0.2   | -                                | -       |
 
 - build: Actually check types. Use tsd so our typings test files can actually assert that types are correct (#1918 / @goto-bus-stop )
-- @uppy/companion: Only set cookies for providers that need it (#2055 / @ifedapoolarewaju)
+- @growthcloud/companion: Only set cookies for providers that need it (#2055 / @ifedapoolarewaju)
 - docs: Add Content-Type header to presigned url example (#2061 / @scherroman)
 - uppy: Add onedrive to uppy package.json ([349247607513bc6b33bf2a90ab0b82f8f2e81d78](https://github.com/transloadit/uppy/commit/349247607513bc6b33bf2a90ab0b82f8f2e81d78) / @arturi)
 
@@ -2840,25 +2816,25 @@ Released: 2020-02-12
 
 Previous `1.9.0` release has been deprecated due to an incorrect Lerna/npm published release. Please update all packages to the next patch version (or @latest), see the table below.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.5.1 | @uppy/onedrive | 1.0.1 |
-| @uppy/aws-s3 | 1.5.1 | @uppy/progress-bar | 1.3.6 |
-| @uppy/companion | 1.9.1 | @uppy/provider-views | 1.5.4 |
-| @uppy/core | 1.8.1 | @uppy/react | 1.4.4 |
-| @uppy/dashboard | 1.6.1 | @uppy/robodog | 1.5.1 |
-| @uppy/drag-drop | 1.4.4 | @uppy/status-bar | 1.5.1 |
-| @uppy/dropbox | 1.3.7 | @uppy/thumbnail-generator | 1.5.4 |
-| @uppy/facebook | 0.2.4 | @uppy/transloadit | 1.5.1 |
-| @uppy/file-input | 1.4.4 | @uppy/tus | 1.5.4 |
-| @uppy/form | 1.3.7 | @uppy/url | 1.4.4 |
-| @uppy/golden-retriever | 1.3.6 | @uppy/utils | 2.2.1 |
-| @uppy/google-drive | 1.4.1 | @uppy/webcam | 1.5.3 |
-| @uppy/informer | 1.4.1 | @uppy/xhr-upload | 1.5.1 |
-| @uppy/instagram | 1.3.7 | uppy | 1.9.1 |
-| @uppy/locales | 1.11.2 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.5.1   | @growthcloud/onedrive            | 1.0.1   |
+| @growthcloud/aws-s3           | 1.5.1   | @growthcloud/progress-bar        | 1.3.6   |
+| @growthcloud/companion        | 1.9.1   | @growthcloud/provider-views      | 1.5.4   |
+| @growthcloud/core             | 1.8.1   | @growthcloud/react               | 1.4.4   |
+| @growthcloud/dashboard        | 1.6.1   | @growthcloud/robodog             | 1.5.1   |
+| @growthcloud/drag-drop        | 1.4.4   | @growthcloud/status-bar          | 1.5.1   |
+| @growthcloud/dropbox          | 1.3.7   | @growthcloud/thumbnail-generator | 1.5.4   |
+| @growthcloud/facebook         | 0.2.4   | @growthcloud/transloadit         | 1.5.1   |
+| @growthcloud/file-input       | 1.4.4   | @growthcloud/tus                 | 1.5.4   |
+| @growthcloud/form             | 1.3.7   | @growthcloud/url                 | 1.4.4   |
+| @growthcloud/golden-retriever | 1.3.6   | @growthcloud/utils               | 2.2.1   |
+| @growthcloud/google-drive     | 1.4.1   | @growthcloud/webcam              | 1.5.3   |
+| @growthcloud/informer         | 1.4.1   | @growthcloud/xhr-upload          | 1.5.1   |
+| @growthcloud/instagram        | 1.3.7   | uppy                             | 1.9.1   |
+| @growthcloud/locales          | 1.11.2  | -                                | -       |
 
-- @uppy/companion: return more accurate error status codes (#2053 /@ifedapoolarewaju)
+- @growthcloud/companion: return more accurate error status codes (#2053 /@ifedapoolarewaju)
 
 ### 1.9.0
 
@@ -2868,39 +2844,39 @@ Released: 2020-02-11
 
 This release adds support for the new Instagram API, image and archive icons to the Dashboard, fixes upload retries and moves OneDrive out of beta.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.5.0 | @uppy/onedrive | 1.0.0 |
-| @uppy/aws-s3 | 1.5.0 | @uppy/progress-bar | 1.3.5 |
-| @uppy/companion | 1.9.0 | @uppy/provider-views | 1.5.3 |
-| @uppy/core | 1.8.0 | @uppy/react | 1.4.3 |
-| @uppy/dashboard | 1.6.0 | @uppy/robodog | 1.5.0 |
-| @uppy/drag-drop | 1.4.3 | @uppy/status-bar | 1.5.0 |
-| @uppy/dropbox | 1.3.6 | @uppy/thumbnail-generator | 1.5.3 |
-| @uppy/facebook | 0.2.3 | @uppy/transloadit | 1.5.0 |
-| @uppy/file-input | 1.4.3 | @uppy/tus | 1.5.3 |
-| @uppy/form | 1.3.6 | @uppy/url | 1.4.3 |
-| @uppy/golden-retriever | 1.3.5 | @uppy/utils | 2.2.0 |
-| @uppy/google-drive | 1.4.0 | @uppy/webcam | 1.5.2 |
-| @uppy/informer | 1.4.0 | @uppy/xhr-upload | 1.5.0 |
-| @uppy/instagram | 1.3.6 | uppy | 1.9.0 |
-| @uppy/locales | 1.11.1 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.5.0   | @growthcloud/onedrive            | 1.0.0   |
+| @growthcloud/aws-s3           | 1.5.0   | @growthcloud/progress-bar        | 1.3.5   |
+| @growthcloud/companion        | 1.9.0   | @growthcloud/provider-views      | 1.5.3   |
+| @growthcloud/core             | 1.8.0   | @growthcloud/react               | 1.4.3   |
+| @growthcloud/dashboard        | 1.6.0   | @growthcloud/robodog             | 1.5.0   |
+| @growthcloud/drag-drop        | 1.4.3   | @growthcloud/status-bar          | 1.5.0   |
+| @growthcloud/dropbox          | 1.3.6   | @growthcloud/thumbnail-generator | 1.5.3   |
+| @growthcloud/facebook         | 0.2.3   | @growthcloud/transloadit         | 1.5.0   |
+| @growthcloud/file-input       | 1.4.3   | @growthcloud/tus                 | 1.5.3   |
+| @growthcloud/form             | 1.3.6   | @growthcloud/url                 | 1.4.3   |
+| @growthcloud/golden-retriever | 1.3.5   | @growthcloud/utils               | 2.2.0   |
+| @growthcloud/google-drive     | 1.4.0   | @growthcloud/webcam              | 1.5.2   |
+| @growthcloud/informer         | 1.4.0   | @growthcloud/xhr-upload          | 1.5.0   |
+| @growthcloud/instagram        | 1.3.6   | uppy                             | 1.9.0   |
+| @growthcloud/locales          | 1.11.1  | -                                | -       |
 
-- @uppy/companion: support new Instagram Graph API (#1966 / @ifedapoolarewaju)
-- @uppy/companion: add option to set http method for remote multipart uploads (#2047 / @ifedapoolarewaju)
-- @uppy/core: core: setState(modifiedFiles) in onBeforeUpload (#2028 / @arturi)
-- @uppy/core: always log errors (#2029 / @arturi)
-- @uppy/core: clear state.error after the last file is removed (#2041 / @arturi)
-- @uppy/core: fix mime type checking bug (#2004 / @shahimclt)
-- @uppy/core: add noNewAlreadyUploading and noDuplicates locale strings (#2057 / @arturi)
-- @uppy/core, @uppy/transloadit: allow new uploads when retrying; improve error handling (#1960 / @arturi)
-- @uppy/core: add .tsv and .tab: text/tab-separated-values (#2056 / @arturi)
-- @uppy/google-drive: remove conditional to replace `google` with `drive` (#2044 / @ifedapoolarewaju)
-- @uppy/dashboard: add image and archive icons (#2027 / @arturi)
-- @uppy/dashboard: change aria-level attribute to correct syntax (#2032 / @efbautista)
-- @uppy/onedrive: make encryption shorter + enable onedrive on website (#2034 / @ifedapoolarewaju)
-- @uppy/aws-s3: remove encodeURIComponent to avoid encoding characters twice (#2033 / @yoann-hellopret)
-- @uppy/informer, @uppy/status-bar: display a browser alert when an error question mark button is clicked (#2031 / @arturi)
+- @growthcloud/companion: support new Instagram Graph API (#1966 / @ifedapoolarewaju)
+- @growthcloud/companion: add option to set http method for remote multipart uploads (#2047 / @ifedapoolarewaju)
+- @growthcloud/core: core: setState(modifiedFiles) in onBeforeUpload (#2028 / @arturi)
+- @growthcloud/core: always log errors (#2029 / @arturi)
+- @growthcloud/core: clear state.error after the last file is removed (#2041 / @arturi)
+- @growthcloud/core: fix mime type checking bug (#2004 / @shahimclt)
+- @growthcloud/core: add noNewAlreadyUploading and noDuplicates locale strings (#2057 / @arturi)
+- @growthcloud/core, @growthcloud/transloadit: allow new uploads when retrying; improve error handling (#1960 / @arturi)
+- @growthcloud/core: add .tsv and .tab: text/tab-separated-values (#2056 / @arturi)
+- @growthcloud/google-drive: remove conditional to replace `google` with `drive` (#2044 / @ifedapoolarewaju)
+- @growthcloud/dashboard: add image and archive icons (#2027 / @arturi)
+- @growthcloud/dashboard: change aria-level attribute to correct syntax (#2032 / @efbautista)
+- @growthcloud/onedrive: make encryption shorter + enable onedrive on website (#2034 / @ifedapoolarewaju)
+- @growthcloud/aws-s3: remove encodeURIComponent to avoid encoding characters twice (#2033 / @yoann-hellopret)
+- @growthcloud/informer, @growthcloud/status-bar: display a browser alert when an error question mark button is clicked (#2031 / @arturi)
 - build: upload downloadable zip archive of releases to CDN (#2052 / @kvz)
 - providers: remove redundant use of options (#2046 / @ifedapoolarewaju)
 - website: switch from Discourse to Disqus for comments ([c4af95d98cdd5c3727ee5c14dfd07af227c59b9e](https://github.com/transloadit/uppy/commit/c4af95d98cdd5c3727ee5c14dfd07af227c59b9e) / @kvz)
@@ -2911,39 +2887,39 @@ Released: 2020-01-15
 
 This release adds Korean and Vietnamese localizations, fixes bugs, and significantly improves the performance of adding and removing lots of files. More performance improvements are on the way in the next few releases, too! Thanks to all contributors listed below.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.4.0 | @uppy/onedrive | 0.1.4 |
-| @uppy/aws-s3 | 1.4.1 | @uppy/progress-bar | 1.3.4 |
-| @uppy/companion | 1.8.0 | @uppy/provider-views | 1.5.2 |
-| @uppy/core | 1.7.1 | @uppy/react | 1.4.2 |
-| @uppy/dashboard | 1.5.2 | @uppy/robodog | 1.4.2 |
-| @uppy/drag-drop | 1.4.2 | @uppy/status-bar | 1.4.2 |
-| @uppy/dropbox | 1.3.5 | @uppy/thumbnail-generator | 1.5.2 |
-| @uppy/facebook | 0.2.2 | @uppy/transloadit | 1.4.2 |
-| @uppy/file-input | 1.4.2 | @uppy/tus | 1.5.2 |
-| @uppy/form | 1.3.5 | @uppy/url | 1.4.2 |
-| @uppy/golden-retriever | 1.3.4 | @uppy/utils | 2.1.2 |
-| @uppy/google-drive | 1.3.5 | @uppy/webcam | 1.5.1 |
-| @uppy/informer | 1.3.4 | @uppy/xhr-upload | 1.4.2 |
-| @uppy/instagram | 1.3.5 | uppy | 1.8.0 |
-| @uppy/locales | 1.11.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.4.0   | @growthcloud/onedrive            | 0.1.4   |
+| @growthcloud/aws-s3           | 1.4.1   | @growthcloud/progress-bar        | 1.3.4   |
+| @growthcloud/companion        | 1.8.0   | @growthcloud/provider-views      | 1.5.2   |
+| @growthcloud/core             | 1.7.1   | @growthcloud/react               | 1.4.2   |
+| @growthcloud/dashboard        | 1.5.2   | @growthcloud/robodog             | 1.4.2   |
+| @growthcloud/drag-drop        | 1.4.2   | @growthcloud/status-bar          | 1.4.2   |
+| @growthcloud/dropbox          | 1.3.5   | @growthcloud/thumbnail-generator | 1.5.2   |
+| @growthcloud/facebook         | 0.2.2   | @growthcloud/transloadit         | 1.4.2   |
+| @growthcloud/file-input       | 1.4.2   | @growthcloud/tus                 | 1.5.2   |
+| @growthcloud/form             | 1.3.5   | @growthcloud/url                 | 1.4.2   |
+| @growthcloud/golden-retriever | 1.3.4   | @growthcloud/utils               | 2.1.2   |
+| @growthcloud/google-drive     | 1.3.5   | @growthcloud/webcam              | 1.5.1   |
+| @growthcloud/informer         | 1.3.4   | @growthcloud/xhr-upload          | 1.4.2   |
+| @growthcloud/instagram        | 1.3.5   | uppy                             | 1.8.0   |
+| @growthcloud/locales          | 1.11.0  | -                                | -       |
 
-- @uppy/aws-s3-multipart: add optional headers for signed url (@ardeois, #1985)
-- @uppy/aws-s3: fix crash when S3 response does not have a Content-Type header (@roenschg, #2012)
-- @uppy/companion: also pass metadata to `getKey` for multipart S3 uploads (@goto-bus-stop, #2022)
-- @uppy/companion: dependency updates (@goto-bus-stop, #1983)
-- @uppy/companion: rename internal S3 upload functions for clarity (@goto-bus-stop, [fec7d7d](https://github.com/transloadit/uppy/commit/fec7d7db3a742b347d6c64ee92fa96be73b3a8b1))
-- @uppy/core: improve performance of adding and removing files (@goto-bus-stop, #1949)
-- @uppy/locales: add Korean (@jdssem, #1986)
-- @uppy/locales: add Vietnamese (@thanhthot, #2010)
-- @uppy/locales: update French translations (@olemoign, #2023)
-- @uppy/provider-views: improve instagram video thumbnail display (@arturi, [1d7a584](https://github.com/transloadit/uppy/commit/1d7a58481d9974e0d98cc1a710c5d8ac6ac038e0))
-- @uppy/react: use `componentDidUpdate` instead of `componentWillReceiveProps` (@cryptic022, #1999)
-- @uppy/thumbnail-generator: fix strict mode compatibility (@rlebosse, #1995)
-- @uppy/tus: update TusOptions typings (@darthf1, #1989)
-- @uppy/xhr-upload: do not emit limit warning if an existing rate limit queue was passed (@goto-bus-stop, [3c1a2af](https://github.com/transloadit/uppy/commit/3c1a2afb09576f75e91a19604aa64235710d9238))
-- @uppy/xhr-upload: free item from rate limit queue when upload times out (@rtaieb, #2018)
+- @growthcloud/aws-s3-multipart: add optional headers for signed url (@ardeois, #1985)
+- @growthcloud/aws-s3: fix crash when S3 response does not have a Content-Type header (@roenschg, #2012)
+- @growthcloud/companion: also pass metadata to `getKey` for multipart S3 uploads (@goto-bus-stop, #2022)
+- @growthcloud/companion: dependency updates (@goto-bus-stop, #1983)
+- @growthcloud/companion: rename internal S3 upload functions for clarity (@goto-bus-stop, [fec7d7d](https://github.com/transloadit/uppy/commit/fec7d7db3a742b347d6c64ee92fa96be73b3a8b1))
+- @growthcloud/core: improve performance of adding and removing files (@goto-bus-stop, #1949)
+- @growthcloud/locales: add Korean (@jdssem, #1986)
+- @growthcloud/locales: add Vietnamese (@thanhthot, #2010)
+- @growthcloud/locales: update French translations (@olemoign, #2023)
+- @growthcloud/provider-views: improve instagram video thumbnail display (@arturi, [1d7a584](https://github.com/transloadit/uppy/commit/1d7a58481d9974e0d98cc1a710c5d8ac6ac038e0))
+- @growthcloud/react: use `componentDidUpdate` instead of `componentWillReceiveProps` (@cryptic022, #1999)
+- @growthcloud/thumbnail-generator: fix strict mode compatibility (@rlebosse, #1995)
+- @growthcloud/tus: update TusOptions typings (@darthf1, #1989)
+- @growthcloud/xhr-upload: do not emit limit warning if an existing rate limit queue was passed (@goto-bus-stop, [3c1a2af](https://github.com/transloadit/uppy/commit/3c1a2afb09576f75e91a19604aa64235710d9238))
+- @growthcloud/xhr-upload: free item from rate limit queue when upload times out (@rtaieb, #2018)
 - examples: add `npm run example $examplename` script (@goto-bus-stop, [7b2283d](https://github.com/transloadit/uppy/commit/7b2283d8ef25a18dcfa5c618caa50222b8c7e243))
 
 ### 1.7.0
@@ -2952,44 +2928,44 @@ Released: 2019-12-16
 
 This release adds Hebrew translations and smoothes out some rough edges in Companion. The Webcam plugin now supports showing the duration of recordings while in progress.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.3.5 | @uppy/onedrive | 0.1.3 |
-| @uppy/aws-s3 | 1.4.0 | @uppy/progress-bar | 1.3.3 |
-| @uppy/companion | 1.7.0 | @uppy/provider-views | 1.5.1 |
-| @uppy/core | 1.7.0 | @uppy/react | 1.4.1 |
-| @uppy/dashboard | 1.5.1 | @uppy/robodog | 1.4.1 |
-| @uppy/drag-drop | 1.4.1 | @uppy/status-bar | 1.4.1 |
-| @uppy/dropbox | 1.3.4 | @uppy/thumbnail-generator | 1.5.1 |
-| @uppy/facebook | 0.2.1 | @uppy/transloadit | 1.4.1 |
-| @uppy/file-input | 1.4.1 | @uppy/tus | 1.5.1 |
-| @uppy/form | 1.3.4 | @uppy/url | 1.4.1 |
-| @uppy/golden-retriever | 1.3.3 | @uppy/utils | 2.1.1 |
-| @uppy/google-drive | 1.3.4 | @uppy/webcam | 1.5.0 |
-| @uppy/informer | 1.3.3 | @uppy/xhr-upload | 1.4.1 |
-| @uppy/instagram | 1.3.4 | uppy | 1.7.0 |
-| @uppy/locales | 1.10.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.3.5   | @growthcloud/onedrive            | 0.1.3   |
+| @growthcloud/aws-s3           | 1.4.0   | @growthcloud/progress-bar        | 1.3.3   |
+| @growthcloud/companion        | 1.7.0   | @growthcloud/provider-views      | 1.5.1   |
+| @growthcloud/core             | 1.7.0   | @growthcloud/react               | 1.4.1   |
+| @growthcloud/dashboard        | 1.5.1   | @growthcloud/robodog             | 1.4.1   |
+| @growthcloud/drag-drop        | 1.4.1   | @growthcloud/status-bar          | 1.4.1   |
+| @growthcloud/dropbox          | 1.3.4   | @growthcloud/thumbnail-generator | 1.5.1   |
+| @growthcloud/facebook         | 0.2.1   | @growthcloud/transloadit         | 1.4.1   |
+| @growthcloud/file-input       | 1.4.1   | @growthcloud/tus                 | 1.5.1   |
+| @growthcloud/form             | 1.3.4   | @growthcloud/url                 | 1.4.1   |
+| @growthcloud/golden-retriever | 1.3.3   | @growthcloud/utils               | 2.1.1   |
+| @growthcloud/google-drive     | 1.3.4   | @growthcloud/webcam              | 1.5.0   |
+| @growthcloud/informer         | 1.3.3   | @growthcloud/xhr-upload          | 1.4.1   |
+| @growthcloud/instagram        | 1.3.4   | uppy                             | 1.7.0   |
+| @growthcloud/locales          | 1.10.0  | -                                | -       |
 
-- @uppy/aws-s3: add some tests (@bambii7, #1934)
-- @uppy/companion: add onedrive domain validation for the demo deployment (@ifedapoolarewaju, #1959)
-- @uppy/companion: change demo deployment type to stable API (@kiloreux, #1938)
-- @uppy/companion: log error if exists during token verification (@ifedapoolarewaju, #1937)
-- @uppy/companion: mask auth tokens from logged referrer URLs (@ifedapoolarewaju, #1951)
-- @uppy/companion: only generate `uppyToken` if `access_token` was received from provider (@ifedapoolarewaju, #1946)
-- @uppy/companion: pass metadata to Companion `getKey()` option for S3 uploads (@goto-bus-stop, #1866)
-- @uppy/companion: rename uppy occurrences to companion (@ifedapoolarewaju, #1926)
-- @uppy/companion: run CI tests on Node 6 to ensure compatibility (@ifedapoolarewaju, #1953)
-- @uppy/companion: upgrade `helmet` (@goto-bus-stop, [6b006ac](https://github.com/transloadit/uppy/commit/6b006ac42c20062c37bdcaf6a77e07b304da7957))
-- @uppy/companion: use original file name in S3 Multipart uploads (@goto-bus-stop, #1965)
-- @uppy/core: make `uppy.on()` work better with IntelliSense (@bambii7, #1923)
-- @uppy/dashboard: hide top bar cancel button when `hideCancelButton: true` (@goto-bus-stop, #1955)
-- @uppy/dashboard: move dropEffect assignment to dragover (@goto-bus-stop, #1982)
-- @uppy/drag-drop: move dropEffect assignment to dragover (@goto-bus-stop, #1982)
-- @uppy/locales: add Hebrew (@YehudaKremer, #1932)
-- @uppy/locales: rename `es_GL` → `gl_ES` (@goto-bus-stop, #1929)
-- @uppy/thumbnail-generator: add webp to the list of supported types (@arturi, #1961)
-- @uppy/thumbnail-generator: vendor exif-js source in Uppy (@mskelton, #1940)
-- @uppy/webcam: add `showRecordingLength: true` option (@dominiceden, #1947)
+- @growthcloud/aws-s3: add some tests (@bambii7, #1934)
+- @growthcloud/companion: add onedrive domain validation for the demo deployment (@ifedapoolarewaju, #1959)
+- @growthcloud/companion: change demo deployment type to stable API (@kiloreux, #1938)
+- @growthcloud/companion: log error if exists during token verification (@ifedapoolarewaju, #1937)
+- @growthcloud/companion: mask auth tokens from logged referrer URLs (@ifedapoolarewaju, #1951)
+- @growthcloud/companion: only generate `uppyToken` if `access_token` was received from provider (@ifedapoolarewaju, #1946)
+- @growthcloud/companion: pass metadata to Companion `getKey()` option for S3 uploads (@goto-bus-stop, #1866)
+- @growthcloud/companion: rename uppy occurrences to companion (@ifedapoolarewaju, #1926)
+- @growthcloud/companion: run CI tests on Node 6 to ensure compatibility (@ifedapoolarewaju, #1953)
+- @growthcloud/companion: upgrade `helmet` (@goto-bus-stop, [6b006ac](https://github.com/transloadit/uppy/commit/6b006ac42c20062c37bdcaf6a77e07b304da7957))
+- @growthcloud/companion: use original file name in S3 Multipart uploads (@goto-bus-stop, #1965)
+- @growthcloud/core: make `uppy.on()` work better with IntelliSense (@bambii7, #1923)
+- @growthcloud/dashboard: hide top bar cancel button when `hideCancelButton: true` (@goto-bus-stop, #1955)
+- @growthcloud/dashboard: move dropEffect assignment to dragover (@goto-bus-stop, #1982)
+- @growthcloud/drag-drop: move dropEffect assignment to dragover (@goto-bus-stop, #1982)
+- @growthcloud/locales: add Hebrew (@YehudaKremer, #1932)
+- @growthcloud/locales: rename `es_GL` → `gl_ES` (@goto-bus-stop, #1929)
+- @growthcloud/thumbnail-generator: add webp to the list of supported types (@arturi, #1961)
+- @growthcloud/thumbnail-generator: vendor exif-js source in Uppy (@mskelton, #1940)
+- @growthcloud/webcam: add `showRecordingLength: true` option (@dominiceden, #1947)
 - docs: FB and OneDrive are not yet in the CDN bundle (@goto-bus-stop, [61b54b9](https://github.com/transloadit/uppy/commit/61b54b914dd437d2e60362c4ece1429943b32555))
 - docs: add `companionHeaders` to s3-multipart docs (@goto-bus-stop, [a6e44a9](https://github.com/transloadit/uppy/commit/a6e44a953114e385466dcce884d37e433f030549))
 - docs: add reset-progress event to docs (@bambii7, #1922)
@@ -3006,39 +2982,39 @@ Released: 2019-11-04
 
 This release adds Icelandic translations and a long-awaited `setOptions` API to change configuration (including language) at runtime.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.3.4 | @uppy/onedrive | 0.1.2 |
-| @uppy/aws-s3 | 1.3.3 | @uppy/progress-bar | 1.3.2 |
-| @uppy/companion | 1.6.0 | @uppy/provider-views | 1.5.0 |
-| @uppy/core | 1.6.0 | @uppy/react | 1.4.0 |
-| @uppy/dashboard | 1.5.0 | @uppy/robodog | 1.4.0 |
-| @uppy/drag-drop | 1.4.0 | @uppy/status-bar | 1.4.0 |
-| @uppy/dropbox | 1.3.3 | @uppy/thumbnail-generator | 1.5.0 |
-| @uppy/facebook | 0.2.0 | @uppy/transloadit | 1.4.0 |
-| @uppy/file-input | 1.4.0 | @uppy/tus | 1.5.0 |
-| @uppy/form | 1.3.3 | @uppy/url | 1.4.0 |
-| @uppy/golden-retriever | 1.3.2 | @uppy/utils | 2.1.0 |
-| @uppy/google-drive | 1.3.3 | @uppy/webcam | 1.4.0 |
-| @uppy/informer | 1.3.2 | @uppy/xhr-upload | 1.4.0 |
-| @uppy/instagram | 1.3.3 | uppy | 1.6.0 |
-| @uppy/locales | 1.9.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.3.4   | @growthcloud/onedrive            | 0.1.2   |
+| @growthcloud/aws-s3           | 1.3.3   | @growthcloud/progress-bar        | 1.3.2   |
+| @growthcloud/companion        | 1.6.0   | @growthcloud/provider-views      | 1.5.0   |
+| @growthcloud/core             | 1.6.0   | @growthcloud/react               | 1.4.0   |
+| @growthcloud/dashboard        | 1.5.0   | @growthcloud/robodog             | 1.4.0   |
+| @growthcloud/drag-drop        | 1.4.0   | @growthcloud/status-bar          | 1.4.0   |
+| @growthcloud/dropbox          | 1.3.3   | @growthcloud/thumbnail-generator | 1.5.0   |
+| @growthcloud/facebook         | 0.2.0   | @growthcloud/transloadit         | 1.4.0   |
+| @growthcloud/file-input       | 1.4.0   | @growthcloud/tus                 | 1.5.0   |
+| @growthcloud/form             | 1.3.3   | @growthcloud/url                 | 1.4.0   |
+| @growthcloud/golden-retriever | 1.3.2   | @growthcloud/utils               | 2.1.0   |
+| @growthcloud/google-drive     | 1.3.3   | @growthcloud/webcam              | 1.4.0   |
+| @growthcloud/informer         | 1.3.2   | @growthcloud/xhr-upload          | 1.4.0   |
+| @growthcloud/instagram        | 1.3.3   | uppy                             | 1.6.0   |
+| @growthcloud/locales          | 1.9.0   | -                                | -       |
 
-- @uppy/companion: Add S3 useAccelerateEndpoint option (@steverob, #1884)
-- @uppy/companion: only set `Access-Control-Allow-Credentials` header when origin is whitelisted (@ifedapoolarewaju, #1901)
-- @uppy/companion: set a more visible thumbnail size for dropbox (@ifedapoolarewaju, #1917)
-- @uppy/companion: upgrade connect-redis (@ifedapoolarewaju, #1911)
-- @uppy/core: Allow passing meta type to upload-success and complete events (@MatthiasKunnen, #1879)
-- @uppy/core: add UppyFile.response typing (@superhawk610, #1882)
-- @uppy/core: add `setOptions` API (@arturi, #1728)
-- @uppy/core: skip upload-success event for a file that has been removed (@julianocomg, #1875)
-- @uppy/facebook: use grid view with big image previews for album folders (@ifedapoolarewaju, #1886)
-- @uppy/locales: Added Icelandic :iceland: (@olitomas, #1916)
-- @uppy/provider-views: Fix sizes for smaller images in grid layout (@arturi, #1897)
-- @uppy/provider-views: provider views breadcrumbs is failed to render (@huydod, #1914)
-- @uppy/transloadit: send Transloadit-Client header with HTTP API requests (@goto-bus-stop, #1919)
-- @uppy/tus: terminate tus upload when cancelling instead of just pausing and letting it expire (@ifedapoolarewaju, #1909)
-- @uppy/utils: accept sync functions in `wrapPromiseFunction()` (@goto-bus-stop, #1910)
+- @growthcloud/companion: Add S3 useAccelerateEndpoint option (@steverob, #1884)
+- @growthcloud/companion: only set `Access-Control-Allow-Credentials` header when origin is whitelisted (@ifedapoolarewaju, #1901)
+- @growthcloud/companion: set a more visible thumbnail size for dropbox (@ifedapoolarewaju, #1917)
+- @growthcloud/companion: upgrade connect-redis (@ifedapoolarewaju, #1911)
+- @growthcloud/core: Allow passing meta type to upload-success and complete events (@MatthiasKunnen, #1879)
+- @growthcloud/core: add UppyFile.response typing (@superhawk610, #1882)
+- @growthcloud/core: add `setOptions` API (@arturi, #1728)
+- @growthcloud/core: skip upload-success event for a file that has been removed (@julianocomg, #1875)
+- @growthcloud/facebook: use grid view with big image previews for album folders (@ifedapoolarewaju, #1886)
+- @growthcloud/locales: Added Icelandic :iceland: (@olitomas, #1916)
+- @growthcloud/provider-views: Fix sizes for smaller images in grid layout (@arturi, #1897)
+- @growthcloud/provider-views: provider views breadcrumbs is failed to render (@huydod, #1914)
+- @growthcloud/transloadit: send Transloadit-Client header with HTTP API requests (@goto-bus-stop, #1919)
+- @growthcloud/tus: terminate tus upload when cancelling instead of just pausing and letting it expire (@ifedapoolarewaju, #1909)
+- @growthcloud/utils: accept sync functions in `wrapPromiseFunction()` (@goto-bus-stop, #1910)
 - docs: README.md wording and formatting changes (@sercraig, #1900)
 - docs: clarify that 'upload-success' and 'upload-error' `response` parameter is specific to some uploaders (@bambii7, #1921)
 - docs: add OneDrive to Companion documentation (@ifedapoolarewaju, #1925)
@@ -3051,23 +3027,23 @@ Released: 2019-10-14
 
 This release contains a new Thai locale, and some critical fixes for the 1.5 release, especially the S3 plugins.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3 | 1.3.2 | @uppy/locales | 1.8.0 |
-| @uppy/aws-s3-multipart | 1.3.3 | @uppy/onedrive | 0.1.1 |
-| @uppy/companion-client | 1.4.1 | @uppy/react | 1.3.2 |
-| @uppy/core | 1.5.1 | @uppy/robodog | 1.3.3 |
-| @uppy/dashboard | 1.4.1 | @uppy/transloadit | 1.3.2 |
-| @uppy/dropbox | 1.3.2 | @uppy/tus | 1.4.2 |
-| @uppy/facebook | 0.1.1 | @uppy/url | 1.3.2 |
-| @uppy/form | 1.3.2 | @uppy/xhr-upload | 1.3.2 |
-| @uppy/google-drive | 1.3.2 | uppy | 1.5.2 |
-| @uppy/instagram | 1.3.2 | - | - |
+| Package                       | Version | Package                  | Version |
+| ----------------------------- | ------- | ------------------------ | ------- |
+| @growthcloud/aws-s3           | 1.3.2   | @growthcloud/locales     | 1.8.0   |
+| @growthcloud/aws-s3-multipart | 1.3.3   | @growthcloud/onedrive    | 0.1.1   |
+| @growthcloud/companion-client | 1.4.1   | @growthcloud/react       | 1.3.2   |
+| @growthcloud/core             | 1.5.1   | @growthcloud/robodog     | 1.3.3   |
+| @growthcloud/dashboard        | 1.4.1   | @growthcloud/transloadit | 1.3.2   |
+| @growthcloud/dropbox          | 1.3.2   | @growthcloud/tus         | 1.4.2   |
+| @growthcloud/facebook         | 0.1.1   | @growthcloud/url         | 1.3.2   |
+| @growthcloud/form             | 1.3.2   | @growthcloud/xhr-upload  | 1.3.2   |
+| @growthcloud/google-drive     | 1.3.2   | uppy                     | 1.5.2   |
+| @growthcloud/instagram        | 1.3.2   | -                        | -       |
 
-- @uppy/aws-s3-multipart: advance queue after local file upload completes (@goto-bus-stop, #1887)
-- @uppy/core: provide default error message (@goto-bus-stop, #1880)
-- @uppy/dashboard: fix retry icons on individual files (@goto-bus-stop, #1888)
-- @uppy/locales: add Thai (@dogrocker, #1873)
+- @growthcloud/aws-s3-multipart: advance queue after local file upload completes (@goto-bus-stop, #1887)
+- @growthcloud/core: provide default error message (@goto-bus-stop, #1880)
+- @growthcloud/dashboard: fix retry icons on individual files (@goto-bus-stop, #1888)
+- @growthcloud/locales: add Thai (@dogrocker, #1873)
 - build: update lerna, eslint, and jest (@goto-bus-stop)
 - docs: add css require to robodog docs (@arturi, fea453b7a99359ef409f57face62c8eeffc16fda)
 
@@ -3077,40 +3053,40 @@ Released: 2019-10-09
 
 This release features new remote providers for Facebook and OneDrive, new languages, and a more robust approach to simultaneous upload limiting and cancellation.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.3.1 | @uppy/onedrive | 0.1.0 |
-| @uppy/aws-s3 | 1.3.1 | @uppy/progress-bar | 1.3.1 |
-| @uppy/companion-client | 1.4.0 | @uppy/provider-views | 1.4.0 |
-| @uppy/companion | 1.5.0 | @uppy/react-native | 0.1.3 |
-| @uppy/core | 1.5.0 | @uppy/react | 1.3.1 |
-| @uppy/dashboard | 1.4.0 | @uppy/redux-dev-tools | 1.3.1 |
-| @uppy/drag-drop | 1.3.1 | @uppy/robodog | 1.3.1 |
-| @uppy/dropbox | 1.3.1 | @uppy/status-bar | 1.3.1 |
-| @uppy/facebook | 0.1.0 | @uppy/thumbnail-generator | 1.4.0 |
-| @uppy/file-input | 1.3.1 | @uppy/transloadit | 1.3.1 |
-| @uppy/form | 1.3.1 | @uppy/tus | 1.4.1 |
-| @uppy/golden-retriever | 1.3.1 | @uppy/url | 1.3.1 |
-| @uppy/google-drive | 1.3.1 | @uppy/utils | 2.0.0 |
-| @uppy/informer | 1.3.1 | @uppy/webcam | 1.3.1 |
-| @uppy/instagram | 1.3.1 | @uppy/xhr-upload | 1.3.1 |
-| @uppy/locales | 1.7.0 | uppy | 1.5.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.3.1   | @growthcloud/onedrive            | 0.1.0   |
+| @growthcloud/aws-s3           | 1.3.1   | @growthcloud/progress-bar        | 1.3.1   |
+| @growthcloud/companion-client | 1.4.0   | @growthcloud/provider-views      | 1.4.0   |
+| @growthcloud/companion        | 1.5.0   | @growthcloud/react-native        | 0.1.3   |
+| @growthcloud/core             | 1.5.0   | @growthcloud/react               | 1.3.1   |
+| @growthcloud/dashboard        | 1.4.0   | @growthcloud/redux-dev-tools     | 1.3.1   |
+| @growthcloud/drag-drop        | 1.3.1   | @growthcloud/robodog             | 1.3.1   |
+| @growthcloud/dropbox          | 1.3.1   | @growthcloud/status-bar          | 1.3.1   |
+| @growthcloud/facebook         | 0.1.0   | @growthcloud/thumbnail-generator | 1.4.0   |
+| @growthcloud/file-input       | 1.3.1   | @growthcloud/transloadit         | 1.3.1   |
+| @growthcloud/form             | 1.3.1   | @growthcloud/tus                 | 1.4.1   |
+| @growthcloud/golden-retriever | 1.3.1   | @growthcloud/url                 | 1.3.1   |
+| @growthcloud/google-drive     | 1.3.1   | @growthcloud/utils               | 2.0.0   |
+| @growthcloud/informer         | 1.3.1   | @growthcloud/webcam              | 1.3.1   |
+| @growthcloud/instagram        | 1.3.1   | @growthcloud/xhr-upload          | 1.3.1   |
+| @growthcloud/locales          | 1.7.0   | uppy                             | 1.5.0   |
 
-- @uppy/companion: revoke companion's provider access on "logout" (@ifedapoolarewaju, #1843)
-- @uppy/companion-client: rename serverHeaders to companionHeaders (@goto-bus-stop, #1861)
-- @uppy/core: avoid overwriting duplicate files by a) throwing a warning instead and b) adding the relative-path of files to a new tus fingerprint function (we might use file.id as a fingerprint instead) (#754, #1606) (@arturi, #1767)
-- @uppy/dashboard: add missing fields to DashboardOptions typescript typings (@MatthiasKunnen, #1830)
-- @uppy/facebook: add facebook remote provider (@ifedapoolarewaju, #1794)
-- @uppy/locales: add Czech (@tvaliasek, #1842)
-- @uppy/locales: add Danish (@Pzoco, #1837)
-- @uppy/onedrive: add OneDrive remote provider (@ifedapoolarewaju, #1831)
-- @uppy/thumbnail-generator: add waitForThumbnailsBeforeUpload option, false by default (@arturi, #1803)
-- @uppy/transloadit: pin socket.io version to ES5 compatible one (@goto-bus-stop, https://github.com/transloadit/uppy/commit/5839b655f093edaa778d49b719f7dda063ef79cb)
-- @uppy/xhr-upload,tus,aws-s3: use more cancellation-friendly strategy for `limit: N` uploads (@goto-bus-stop, #1736)
-- @uppy/aws-s3-multipart: fix queueing behaviors, especially interaction with cancellation (@goto-bus-stop, #1855)
-- @uppy/locales: fix typo in Persian locale (@uxitten, #1865)
-- @uppy/locales: improve Swedish translation (@marcusforberg, #1859)
-- @uppy/aws-s3: replace browser-only resolve-url by isomorphic url-parse (@goto-bus-stop, #1854)
+- @growthcloud/companion: revoke companion's provider access on "logout" (@ifedapoolarewaju, #1843)
+- @growthcloud/companion-client: rename serverHeaders to companionHeaders (@goto-bus-stop, #1861)
+- @growthcloud/core: avoid overwriting duplicate files by a) throwing a warning instead and b) adding the relative-path of files to a new tus fingerprint function (we might use file.id as a fingerprint instead) (#754, #1606) (@arturi, #1767)
+- @growthcloud/dashboard: add missing fields to DashboardOptions typescript typings (@MatthiasKunnen, #1830)
+- @growthcloud/facebook: add facebook remote provider (@ifedapoolarewaju, #1794)
+- @growthcloud/locales: add Czech (@tvaliasek, #1842)
+- @growthcloud/locales: add Danish (@Pzoco, #1837)
+- @growthcloud/onedrive: add OneDrive remote provider (@ifedapoolarewaju, #1831)
+- @growthcloud/thumbnail-generator: add waitForThumbnailsBeforeUpload option, false by default (@arturi, #1803)
+- @growthcloud/transloadit: pin socket.io version to ES5 compatible one (@goto-bus-stop, https://github.com/transloadit/uppy/commit/5839b655f093edaa778d49b719f7dda063ef79cb)
+- @growthcloud/xhr-upload,tus,aws-s3: use more cancellation-friendly strategy for `limit: N` uploads (@goto-bus-stop, #1736)
+- @growthcloud/aws-s3-multipart: fix queueing behaviors, especially interaction with cancellation (@goto-bus-stop, #1855)
+- @growthcloud/locales: fix typo in Persian locale (@uxitten, #1865)
+- @growthcloud/locales: improve Swedish translation (@marcusforberg, #1859)
+- @growthcloud/aws-s3: replace browser-only resolve-url by isomorphic url-parse (@goto-bus-stop, #1854)
 - docs: remove pre 1.0 notice from changelog (@mskelton, #1858)
 - docs: fix typo (@leftdevel, #1852)
 - test: add end-to-end test with retries (@ifedapoolarewaju, #1766)
@@ -3123,47 +3099,47 @@ In this release we’ve focused on issue busting on GitHub, nearly halving them.
 
 ⚠️ With recent Lerna improvements, you no longer need to do `npm run bootstrap` when developing Uppy — `npm install` does all the work now!
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.3.0 | @uppy/provider-views | 1.3.0 |
-| @uppy/aws-s3 | 1.3.0 | @uppy/react | 1.3.0 |
-| @uppy/companion-client | 1.3.0 | @uppy/redux-dev-tools | 1.3.0 |
-| @uppy/companion | 1.4.0 | @uppy/robodog | 1.3.0 |
-| @uppy/core | 1.4.0 | @uppy/status-bar | 1.3.0 |
-| @uppy/dashboard | 1.3.0 | @uppy/store-default | 1.2.0 |
-| @uppy/drag-drop | 1.3.0 | @uppy/store-redux | 1.2.0 |
-| @uppy/dropbox | 1.3.0 | @uppy/thumbnail-generator | 1.3.0 |
-| @uppy/file-input | 1.3.0 | @uppy/transloadit | 1.3.0 |
-| @uppy/form | 1.3.0 | @uppy/tus | 1.4.0 |
-| @uppy/golden-retriever | 1.3.0 | @uppy/url | 1.3.0 |
-| @uppy/google-drive | 1.3.0 | @uppy/utils | 1.3.0 |
-| @uppy/informer | 1.3.0 | @uppy/webcam | 1.3.0 |
-| @uppy/instagram | 1.3.0 | @uppy/xhr-upload | 1.3.0 |
-| @uppy/locales | 1.6.0 | uppy | 1.4.0 |
-| @uppy/progress-bar | 1.3.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.3.0   | @growthcloud/provider-views      | 1.3.0   |
+| @growthcloud/aws-s3           | 1.3.0   | @growthcloud/react               | 1.3.0   |
+| @growthcloud/companion-client | 1.3.0   | @growthcloud/redux-dev-tools     | 1.3.0   |
+| @growthcloud/companion        | 1.4.0   | @growthcloud/robodog             | 1.3.0   |
+| @growthcloud/core             | 1.4.0   | @growthcloud/status-bar          | 1.3.0   |
+| @growthcloud/dashboard        | 1.3.0   | @growthcloud/store-default       | 1.2.0   |
+| @growthcloud/drag-drop        | 1.3.0   | @growthcloud/store-redux         | 1.2.0   |
+| @growthcloud/dropbox          | 1.3.0   | @growthcloud/thumbnail-generator | 1.3.0   |
+| @growthcloud/file-input       | 1.3.0   | @growthcloud/transloadit         | 1.3.0   |
+| @growthcloud/form             | 1.3.0   | @growthcloud/tus                 | 1.4.0   |
+| @growthcloud/golden-retriever | 1.3.0   | @growthcloud/url                 | 1.3.0   |
+| @growthcloud/google-drive     | 1.3.0   | @growthcloud/utils               | 1.3.0   |
+| @growthcloud/informer         | 1.3.0   | @growthcloud/webcam              | 1.3.0   |
+| @growthcloud/instagram        | 1.3.0   | @growthcloud/xhr-upload          | 1.3.0   |
+| @growthcloud/locales          | 1.6.0   | uppy                             | 1.4.0   |
+| @growthcloud/progress-bar     | 1.3.0   | -                                | -       |
 
-- @uppy/companion: bump lodash.merge to 4.6.2 to fix audit warning (#1796 / @rettgerst)
-- @uppy/companion: Fix s3 uploads for URL plugins (#1784 / @@ifedapoolarewaju)
-- @uppy/companion: set allowed http methods internally (#1754 / @ifedapoolarewaju)
-- @uppy/companion: whenever an error is returned from companion: the auth screen will be displayed if the user was never authenticated, if the user is authenticated, the last screen on display before the error will be displayed (#1743 / @ifedapoolarewaju)
-- @uppy/core: fix "Cannot read property 'log' of undefined" (#1785 / @theJoeBiz)
-- @uppy/core: Made sure we can upload new files if we cancel last file (allowMultipleUploads: false) (#1764 / @lakesare)
-- @uppy/core: use setFileState inside retryUpload (#1759 / @goto-bus-stop)
-- @uppy/dashboard, @uppy/drag-drop: getDroppedFiles.js: handle exceptions better (#1797 / @lakesare)
-- @uppy/dashboard: ⚠️ Add `data` attribute with file source, hide the file source icon (where the file was selected from) in the Dashboard with CSS. If you really want this back, please look in the PR and set your custom CSS to `.uppy-DashboardItem-sourceIcon { display: inline-block; }` (#1809 / @arturi)
-- @uppy/dashboard: add dashboard:file-edit-start and dashboard:file-edit-complete events (#1776 / @arturi)
-- @uppy/dashboard: Fix log duplication and excessive ResizeObserver log (#1747 / @lakesare)
-- @uppy/dashboard: fix wrong typescript definition for metaFields property (#1763 / @mrbatista)
-- @uppy/form: try/catch parsing, set updatedResult to an empty array when not an array (#1800 / @arturi)
-- @uppy/locales: Add id_ID (indonesia) locale (#1778 / @achmiral)
-- @uppy/locales: Add translations in Swedish (#1771 / @arggh)
-- @uppy/locales: Adding support for Greek language (#1802 / @Tashows)
-- @uppy/locales: correct some fr_FR localization strings (#1807 / @czj)
-- @uppy/locales: Create sr_RS_Cyrillic.js (#1748 / @nndevstudio)
-- @uppy/locales: Finnish semantics improved and fixed some typos (#1744 / @@jukakoski)
-- @uppy/locales: Update sr_RS_Latin.js (#1749 / @nndevstudio)
-- @uppy/transloadit: add limit option, warn about using limit when it’s set to 0. In Uppy 2.0 we’ll set the limit to something sensible (like 10 files) by default. (#1789 / @arturi)
-- @uppy/xhr-upload: Throw an error when trying to upload a remote file with `bundle: true` (#1769 / @arturi)
+- @growthcloud/companion: bump lodash.merge to 4.6.2 to fix audit warning (#1796 / @rettgerst)
+- @growthcloud/companion: Fix s3 uploads for URL plugins (#1784 / @@ifedapoolarewaju)
+- @growthcloud/companion: set allowed http methods internally (#1754 / @ifedapoolarewaju)
+- @growthcloud/companion: whenever an error is returned from companion: the auth screen will be displayed if the user was never authenticated, if the user is authenticated, the last screen on display before the error will be displayed (#1743 / @ifedapoolarewaju)
+- @growthcloud/core: fix "Cannot read property 'log' of undefined" (#1785 / @theJoeBiz)
+- @growthcloud/core: Made sure we can upload new files if we cancel last file (allowMultipleUploads: false) (#1764 / @lakesare)
+- @growthcloud/core: use setFileState inside retryUpload (#1759 / @goto-bus-stop)
+- @growthcloud/dashboard, @growthcloud/drag-drop: getDroppedFiles.js: handle exceptions better (#1797 / @lakesare)
+- @growthcloud/dashboard: ⚠️ Add `data` attribute with file source, hide the file source icon (where the file was selected from) in the Dashboard with CSS. If you really want this back, please look in the PR and set your custom CSS to `.uppy-DashboardItem-sourceIcon { display: inline-block; }` (#1809 / @arturi)
+- @growthcloud/dashboard: add dashboard:file-edit-start and dashboard:file-edit-complete events (#1776 / @arturi)
+- @growthcloud/dashboard: Fix log duplication and excessive ResizeObserver log (#1747 / @lakesare)
+- @growthcloud/dashboard: fix wrong typescript definition for metaFields property (#1763 / @mrbatista)
+- @growthcloud/form: try/catch parsing, set updatedResult to an empty array when not an array (#1800 / @arturi)
+- @growthcloud/locales: Add id_ID (indonesia) locale (#1778 / @achmiral)
+- @growthcloud/locales: Add translations in Swedish (#1771 / @arggh)
+- @growthcloud/locales: Adding support for Greek language (#1802 / @Tashows)
+- @growthcloud/locales: correct some fr_FR localization strings (#1807 / @czj)
+- @growthcloud/locales: Create sr_RS_Cyrillic.js (#1748 / @nndevstudio)
+- @growthcloud/locales: Finnish semantics improved and fixed some typos (#1744 / @@jukakoski)
+- @growthcloud/locales: Update sr_RS_Latin.js (#1749 / @nndevstudio)
+- @growthcloud/transloadit: add limit option, warn about using limit when it’s set to 0. In Uppy 2.0 we’ll set the limit to something sensible (like 10 files) by default. (#1789 / @arturi)
+- @growthcloud/xhr-upload: Throw an error when trying to upload a remote file with `bundle: true` (#1769 / @arturi)
 - build: ci: tweak job run order (#1740 / @goto-bus-stop)
 - build: Fix statefulset update: statefulsets image only should be updated. (#1821 / @kiloreux)
 - build: Lerna link convert. This installs dependencies of all packages, the website, and all examples into the root node_modules folder. After an npm install, no further lerna bootstrap is required. (#1730 / @goto-bus-stop)
@@ -3187,78 +3163,78 @@ Released: 2019-07-19
 
 This release fixes id generation for non-latin characters, significantly improves accessibility in Dashboard and all around, logs versions of every plugin, changes how debug logs work, and more.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.2.0 | @uppy/progress-bar | 1.2.0 |
-| @uppy/aws-s3 | 1.2.0 | @uppy/provider-views | 1.2.0 |
-| @uppy/companion-client | 1.2.0 | @uppy/react | 1.2.0 |
-| @uppy/companion | 1.3.0 | @uppy/redux-dev-tools | 1.2.0 |
-| @uppy/core | 1.2.0 | @uppy/robodog | 1.2.0 |
-| @uppy/dashboard | 1.2.0 | @uppy/status-bar | 1.2.0 |
-| @uppy/drag-drop | 1.2.0 | @uppy/thumbnail-generator | 1.2.0 |
-| @uppy/dropbox | 1.2.0 | @uppy/transloadit | 1.2.0 |
-| @uppy/file-input | 1.2.0 | @uppy/tus | 1.3.0 |
-| @uppy/form | 1.2.0 | @uppy/url | 1.2.0 |
-| @uppy/golden-retriever | 1.2.0 | @uppy/utils | 1.2.0 |
-| @uppy/google-drive | 1.2.0 | @uppy/webcam | 1.2.0 |
-| @uppy/informer | 1.2.0 | @uppy/xhr-upload | 1.2.0 |
-| @uppy/instagram | 1.2.0 | uppy | 1.3.0 |
-| @uppy/locales | 1.5.0 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.2.0   | @growthcloud/progress-bar        | 1.2.0   |
+| @growthcloud/aws-s3           | 1.2.0   | @growthcloud/provider-views      | 1.2.0   |
+| @growthcloud/companion-client | 1.2.0   | @growthcloud/react               | 1.2.0   |
+| @growthcloud/companion        | 1.3.0   | @growthcloud/redux-dev-tools     | 1.2.0   |
+| @growthcloud/core             | 1.2.0   | @growthcloud/robodog             | 1.2.0   |
+| @growthcloud/dashboard        | 1.2.0   | @growthcloud/status-bar          | 1.2.0   |
+| @growthcloud/drag-drop        | 1.2.0   | @growthcloud/thumbnail-generator | 1.2.0   |
+| @growthcloud/dropbox          | 1.2.0   | @growthcloud/transloadit         | 1.2.0   |
+| @growthcloud/file-input       | 1.2.0   | @growthcloud/tus                 | 1.3.0   |
+| @growthcloud/form             | 1.2.0   | @growthcloud/url                 | 1.2.0   |
+| @growthcloud/golden-retriever | 1.2.0   | @growthcloud/utils               | 1.2.0   |
+| @growthcloud/google-drive     | 1.2.0   | @growthcloud/webcam              | 1.2.0   |
+| @growthcloud/informer         | 1.2.0   | @growthcloud/xhr-upload          | 1.2.0   |
+| @growthcloud/instagram        | 1.2.0   | uppy                             | 1.3.0   |
+| @growthcloud/locales          | 1.5.0   | -                                | -       |
 
-- @uppy/aws-s3-multipart: Add metadata support for S3 MultiPart (#1698 / @davekiss)
-- @uppy/aws-s3: Allow overriding of getResponseData() (#1647 / @eman8519)
-- @uppy/aws-s3: prevent unnecessary delete multiparts request for completed files (#1650 / @twarlop)
-- @uppy/companion-client: send correct versions to companion (#1694 / @ifedapoolarewaju)
-- @uppy/companion, @uppy/companion-client: ⚠️send uppy-versions header to companion: please see [how to avoid errors if you are using Companion but NOT as standalone](https://github.com/transloadit/uppy/pull/1612#issuecomment-515117137) (#1612 / @ifedapoolarewaju)
-- @uppy/companion: add colors to logs (#1648 / @ifedapoolarewaju)
-- @uppy/companion: Change cloud in gcloud-deploy (#1729 / @kiloreux)
-- @uppy/companion: change oauth access token transport method (#1668 / @ifedapoolarewaju)
-- @uppy/companion: display truer error during oauth failure (#1702 /  @ifedapoolarewaju)
-- @uppy/companion: don’t log uppyAuthToken (#1663 / @ifedapoolarewaju)
-- @uppy/companion: don’t send error stack to client (#1649 / @ifedapoolarewaju)
-- @uppy/companion: prevent logging uppyAuthToken (#1663 / @ifedapoolarewaju)
-- @uppy/companion: properly load instagram username (#1651 / @ifedapoolarewaju)
-- @uppy/companion: remove deprecated dropbox field (#1692 / @ifedapoolarewaju)
-- @uppy/companion: return nextPagePath for drive/dropbox (#1652 / @stephentuso)
-- @uppy/core: _calculateTotalProgress results in incorrectly high (1038%) progress with files that don’t have size (like from Instagram) (#1610 / @goto-bus-stop)
-- @uppy/core: ⚠️ Add an option to supply logger with debug, warn and error methods: ⚠️ this switches to `console.debug` from `console.log` by default, you might need to change settings in your dev tools to see Uppy logs! (#1661 / @arturi, @goto-bus-stop, @kvz)
-- @uppy/core: Added heic file type, refactor getFileType (#1734 / @arturi)
-- @uppy/core: adjust ID generation to keep non-latin characters: now, non-latin characters are encoded as their charcode in base 32, so files that only differ by name in a non-latin language will generate different IDs. (#1722 / @goto-bus-stop)
-- @uppy/core: Check for existing upload (#1367 / @superandrew213)
-- @uppy/core: check option types early, like making sure `allowedFileTypes` is an array, in cases where JS would not be able to auto-fix via typecasting (otherwise it's BC-breaking)
-- @uppy/core: Enable partial assignment of restrictions passed as options (#1654 / @janklimo)
-- @uppy/core: Log versions of Uppy plugins for debugging (#1640 / @arturi)
-- @uppy/core: make `meta.name` not required in addFile() (#1629 / @goto-bus-stop)
-- @uppy/core: Restrictions improvements — set file.type to the one detected by Uppy, before calling onBeforeFileAdded callback, emit restriction-failed for minNumberOfFiles, too (so in uppy.upload (#1726 / @arturi)
-- @uppy/dashboard: ⚠️ More design improvements: Add more button, improved focus styles, Replaced "Copy link" & "Edit" links with icons (#1574 / @nqst, @lakesare, @arturi)
-- @uppy/dashboard: ⚠️ Moved all provider-views translation strings from Dashboard to Core, this eliminates a dependency of provider-views upon Dashboard (#1712/ @lakesare)
-- @uppy/dashboard: add modal open and close events (#1664 / @arturi)
-- @uppy/dashboard: Change select button to just say `Select 11` instead of `Select 11 files`, because there can be folders (https://github.com/transloadit/uppy/issues/1422)
-- @uppy/dashboard: connected labels to inputs in FileCard.js (#1715 / @lakesare)
-- @uppy/dashboard: Dashboard performance improvements (#1671 / @goto-bus-stop)
-- @uppy/dashboard: Fix header bar css in ie11 (#1700 / @lakesare)
-- @uppy/dashboard: Ie11 filecard preview fix (#1718 / @lakesare)
-- @uppy/dashboard: Refactor FileCard component to fix loosing metadata state on re-renders (#1656 / @arturi)
-- @uppy/drag-drop: make DragDrop entirely clickable (#1633 / @lakesare)
-- @uppy/form: exclude own metadata, append result instead of overwriting (#1686 / @arturi)
-- @uppy/locales: add Arabic, Saudi Arabia (#1673 / @HussainAlkhalifah)
-- @uppy/locales: add Turkish (#1667 / @ayhankesicioglu)
-- @uppy/locales: added Finnish (#1719 / @jukakoski)
-- @uppy/provider-views: Add translations for aria labels in provider views (#1696 / @lakesare)
-- @uppy/provider-views: Persist selected checkboxes when moving between folders (#1672 / @arturi)
-- @uppy/provider-views: Select 5 files --> Select 5, because there are also folders (#1697 / @arturi)
-- @uppy/robodog: allow customizing `triggerUploadOnSubmit` (#1691 / @goto-bus-stop)
-- @uppy/robodog: fix `form({ modal: true })` not enabling modal options (#1690 / @goto-bus-stop)
-- @uppy/robodog: use chooseFiles string like @uppy/file-input (#1669 / @goto-bus-stop)
-- @uppy/status-bar: Show `total file size / total uploaded of all started` vs `total / total upload of those not complete` (#1685 / @arturi)
-- @uppy/thumbnail-generator: rotate according to EXIF metadata (#1532 / @Botz)
-- @uppy/transloadit: expand on resume: false reasons (afd30a43b8106d0ca79c6f95de0673b69f3edcb5 / @goto-bus-stop)
-- @uppy/transloadit: reduce excessive polling (#1689 / @goto-bus-stop)
-- @uppy/utils: ⚠️ prettyBytes 1000 --> 1024: we’ve decided to move prettier-bytes to @uppy/utils/lib/prettyBytes and divide by 1024 instead of 1000 to justify KB vs kB (#1732 / @arturi)
-- @uppy/webcam: Allow definition of MediaRecorder mimeType (#1708 / @davekiss)
-- @uppy/webcam: Change webcam file name so that it fits on one line in Dashboard (#1660 / @arturi)
-- @uppy/xhr-upload: send global metadata when `bundle: true` (#1677 / @goto-bus-stop)
-- @uppy/xhr-upload: Set type and name from file.meta, re-create blob (#1616 / @arturi)
+- @growthcloud/aws-s3-multipart: Add metadata support for S3 MultiPart (#1698 / @davekiss)
+- @growthcloud/aws-s3: Allow overriding of getResponseData() (#1647 / @eman8519)
+- @growthcloud/aws-s3: prevent unnecessary delete multiparts request for completed files (#1650 / @twarlop)
+- @growthcloud/companion-client: send correct versions to companion (#1694 / @ifedapoolarewaju)
+- @growthcloud/companion, @growthcloud/companion-client: ⚠️send uppy-versions header to companion: please see [how to avoid errors if you are using Companion but NOT as standalone](https://github.com/transloadit/uppy/pull/1612#issuecomment-515117137) (#1612 / @ifedapoolarewaju)
+- @growthcloud/companion: add colors to logs (#1648 / @ifedapoolarewaju)
+- @growthcloud/companion: Change cloud in gcloud-deploy (#1729 / @kiloreux)
+- @growthcloud/companion: change oauth access token transport method (#1668 / @ifedapoolarewaju)
+- @growthcloud/companion: display truer error during oauth failure (#1702 / @ifedapoolarewaju)
+- @growthcloud/companion: don’t log uppyAuthToken (#1663 / @ifedapoolarewaju)
+- @growthcloud/companion: don’t send error stack to client (#1649 / @ifedapoolarewaju)
+- @growthcloud/companion: prevent logging uppyAuthToken (#1663 / @ifedapoolarewaju)
+- @growthcloud/companion: properly load instagram username (#1651 / @ifedapoolarewaju)
+- @growthcloud/companion: remove deprecated dropbox field (#1692 / @ifedapoolarewaju)
+- @growthcloud/companion: return nextPagePath for drive/dropbox (#1652 / @stephentuso)
+- @growthcloud/core: \_calculateTotalProgress results in incorrectly high (1038%) progress with files that don’t have size (like from Instagram) (#1610 / @goto-bus-stop)
+- @growthcloud/core: ⚠️ Add an option to supply logger with debug, warn and error methods: ⚠️ this switches to `console.debug` from `console.log` by default, you might need to change settings in your dev tools to see Uppy logs! (#1661 / @arturi, @goto-bus-stop, @kvz)
+- @growthcloud/core: Added heic file type, refactor getFileType (#1734 / @arturi)
+- @growthcloud/core: adjust ID generation to keep non-latin characters: now, non-latin characters are encoded as their charcode in base 32, so files that only differ by name in a non-latin language will generate different IDs. (#1722 / @goto-bus-stop)
+- @growthcloud/core: Check for existing upload (#1367 / @superandrew213)
+- @growthcloud/core: check option types early, like making sure `allowedFileTypes` is an array, in cases where JS would not be able to auto-fix via typecasting (otherwise it's BC-breaking)
+- @growthcloud/core: Enable partial assignment of restrictions passed as options (#1654 / @janklimo)
+- @growthcloud/core: Log versions of Uppy plugins for debugging (#1640 / @arturi)
+- @growthcloud/core: make `meta.name` not required in addFile() (#1629 / @goto-bus-stop)
+- @growthcloud/core: Restrictions improvements — set file.type to the one detected by Uppy, before calling onBeforeFileAdded callback, emit restriction-failed for minNumberOfFiles, too (so in uppy.upload (#1726 / @arturi)
+- @growthcloud/dashboard: ⚠️ More design improvements: Add more button, improved focus styles, Replaced "Copy link" & "Edit" links with icons (#1574 / @nqst, @lakesare, @arturi)
+- @growthcloud/dashboard: ⚠️ Moved all provider-views translation strings from Dashboard to Core, this eliminates a dependency of provider-views upon Dashboard (#1712/ @lakesare)
+- @growthcloud/dashboard: add modal open and close events (#1664 / @arturi)
+- @growthcloud/dashboard: Change select button to just say `Select 11` instead of `Select 11 files`, because there can be folders (https://github.com/transloadit/uppy/issues/1422)
+- @growthcloud/dashboard: connected labels to inputs in FileCard.js (#1715 / @lakesare)
+- @growthcloud/dashboard: Dashboard performance improvements (#1671 / @goto-bus-stop)
+- @growthcloud/dashboard: Fix header bar css in ie11 (#1700 / @lakesare)
+- @growthcloud/dashboard: Ie11 filecard preview fix (#1718 / @lakesare)
+- @growthcloud/dashboard: Refactor FileCard component to fix loosing metadata state on re-renders (#1656 / @arturi)
+- @growthcloud/drag-drop: make DragDrop entirely clickable (#1633 / @lakesare)
+- @growthcloud/form: exclude own metadata, append result instead of overwriting (#1686 / @arturi)
+- @growthcloud/locales: add Arabic, Saudi Arabia (#1673 / @HussainAlkhalifah)
+- @growthcloud/locales: add Turkish (#1667 / @ayhankesicioglu)
+- @growthcloud/locales: added Finnish (#1719 / @jukakoski)
+- @growthcloud/provider-views: Add translations for aria labels in provider views (#1696 / @lakesare)
+- @growthcloud/provider-views: Persist selected checkboxes when moving between folders (#1672 / @arturi)
+- @growthcloud/provider-views: Select 5 files --> Select 5, because there are also folders (#1697 / @arturi)
+- @growthcloud/robodog: allow customizing `triggerUploadOnSubmit` (#1691 / @goto-bus-stop)
+- @growthcloud/robodog: fix `form({ modal: true })` not enabling modal options (#1690 / @goto-bus-stop)
+- @growthcloud/robodog: use chooseFiles string like @growthcloud/file-input (#1669 / @goto-bus-stop)
+- @growthcloud/status-bar: Show `total file size / total uploaded of all started` vs `total / total upload of those not complete` (#1685 / @arturi)
+- @growthcloud/thumbnail-generator: rotate according to EXIF metadata (#1532 / @Botz)
+- @growthcloud/transloadit: expand on resume: false reasons (afd30a43b8106d0ca79c6f95de0673b69f3edcb5 / @goto-bus-stop)
+- @growthcloud/transloadit: reduce excessive polling (#1689 / @goto-bus-stop)
+- @growthcloud/utils: ⚠️ prettyBytes 1000 --> 1024: we’ve decided to move prettier-bytes to @growthcloud/utils/lib/prettyBytes and divide by 1024 instead of 1000 to justify KB vs kB (#1732 / @arturi)
+- @growthcloud/webcam: Allow definition of MediaRecorder mimeType (#1708 / @davekiss)
+- @growthcloud/webcam: Change webcam file name so that it fits on one line in Dashboard (#1660 / @arturi)
+- @growthcloud/xhr-upload: send global metadata when `bundle: true` (#1677 / @goto-bus-stop)
+- @growthcloud/xhr-upload: Set type and name from file.meta, re-create blob (#1616 / @arturi)
 - \*: Accessibility follow-up PR: make all svgs not focusable in IE11 (#1662 / @lakesare)
 - \*: Added focus styles for all elements (#1701 / @lakesare)
 - \*: Log error in uppy.addFile try/catch (#1680 / @arturi)
@@ -3277,105 +3253,105 @@ This release fixes id generation for non-latin characters, significantly improve
 - website: IE10: note we are stll running tests with it, but not actively supporting it (7c9b55ce2e3b7021ad60bffe94e3587231c2de6a / @arturi)
 - website: Improve website transloadit example (#1659 / @arturi)
 - website: make passing options to partials/docs_menu optional (6ac7f4825b9fd714b5564b7cedb21fb199f5a1e7 / @arturi)
-@uppy/dashboard - made Add More always stick to the right (#1733 / @lakesare)
+  @growthcloud/dashboard - made Add More always stick to the right (#1733 / @lakesare)
 
 ### 1.2.0
 
 Released: 2019-06-07
 
-This release fixes an issue when using Transloadit and the @uppy/form plugin. To do so, a new `metaFields` option was added to the @uppy/tus plugin.
+This release fixes an issue when using Transloadit and the @growthcloud/form plugin. To do so, a new `metaFields` option was added to the @growthcloud/tus plugin.
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/companion | 1.2.0 | @uppy/transloadit | 1.1.1 |
-| @uppy/locales | 1.4.0 | @uppy/tus | 1.2.0 |
-| @uppy/robodog | 1.1.1 | uppy | 1.2.0 |
+| Package                | Version | Package                  | Version |
+| ---------------------- | ------- | ------------------------ | ------- |
+| @growthcloud/companion | 1.2.0   | @growthcloud/transloadit | 1.1.1   |
+| @growthcloud/locales   | 1.4.0   | @growthcloud/tus         | 1.2.0   |
+| @growthcloud/robodog   | 1.1.1   | uppy                     | 1.2.0   |
 
-- @uppy/companion: ability to load secret keys from files (#1632 / @dargmuesli)
-- @uppy/locales: add Japanese (#1643 / @johnmanjiro13, @s-jcs)
-- @uppy/tus: add `metaFields` option (#1644 / @goto-bus-stop)
+- @growthcloud/companion: ability to load secret keys from files (#1632 / @dargmuesli)
+- @growthcloud/locales: add Japanese (#1643 / @johnmanjiro13, @s-jcs)
+- @growthcloud/tus: add `metaFields` option (#1644 / @goto-bus-stop)
 
 ### 1.1.0
 
 Released: 2019-06-05
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.1.0 | @uppy/provider-views | 1.1.0 |
-| @uppy/aws-s3 | 1.1.0 | @uppy/react-native | 0.1.2 |
-| @uppy/companion-client | 1.1.0 | @uppy/react | 1.1.0 |
-| @uppy/companion | 1.1.0 | @uppy/redux-dev-tools | 1.1.0 |
-| @uppy/core | 1.1.0 | @uppy/robodog | 1.1.0 |
-| @uppy/dashboard | 1.1.0 | @uppy/status-bar | 1.1.0 |
-| @uppy/drag-drop | 1.1.0 | @uppy/store-default | 1.1.0 |
-| @uppy/dropbox | 1.1.0 | @uppy/store-redux | 1.1.0 |
-| @uppy/file-input | 1.1.0 | @uppy/thumbnail-generator | 1.1.0 |
-| @uppy/form | 1.1.0 | @uppy/transloadit | 1.1.0 |
-| @uppy/golden-retriever | 1.1.0 | @uppy/tus | 1.1.0 |
-| @uppy/google-drive | 1.1.0 | @uppy/url | 1.1.0 |
-| @uppy/informer | 1.1.0 | @uppy/utils | 1.1.0 |
-| @uppy/instagram | 1.1.0 | @uppy/webcam | 1.1.0 |
-| @uppy/locales | 1.3.0 | @uppy/xhr-upload | 1.1.0 |
-| @uppy/progress-bar | 1.1.0 | uppy | 1.1.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.1.0   | @growthcloud/provider-views      | 1.1.0   |
+| @growthcloud/aws-s3           | 1.1.0   | @growthcloud/react-native        | 0.1.2   |
+| @growthcloud/companion-client | 1.1.0   | @growthcloud/react               | 1.1.0   |
+| @growthcloud/companion        | 1.1.0   | @growthcloud/redux-dev-tools     | 1.1.0   |
+| @growthcloud/core             | 1.1.0   | @growthcloud/robodog             | 1.1.0   |
+| @growthcloud/dashboard        | 1.1.0   | @growthcloud/status-bar          | 1.1.0   |
+| @growthcloud/drag-drop        | 1.1.0   | @growthcloud/store-default       | 1.1.0   |
+| @growthcloud/dropbox          | 1.1.0   | @growthcloud/store-redux         | 1.1.0   |
+| @growthcloud/file-input       | 1.1.0   | @growthcloud/thumbnail-generator | 1.1.0   |
+| @growthcloud/form             | 1.1.0   | @growthcloud/transloadit         | 1.1.0   |
+| @growthcloud/golden-retriever | 1.1.0   | @growthcloud/tus                 | 1.1.0   |
+| @growthcloud/google-drive     | 1.1.0   | @growthcloud/url                 | 1.1.0   |
+| @growthcloud/informer         | 1.1.0   | @growthcloud/utils               | 1.1.0   |
+| @growthcloud/instagram        | 1.1.0   | @growthcloud/webcam              | 1.1.0   |
+| @growthcloud/locales          | 1.3.0   | @growthcloud/xhr-upload          | 1.1.0   |
+| @growthcloud/progress-bar     | 1.1.0   | uppy                             | 1.1.0   |
 
-- @uppy/robodog: actually support specifying Dashboard options (#1504 / @goto-bus-stop)
-- @uppy/aws-s3: Do not extract keys from empty `fields` (#1569 / @alexnj)
+- @growthcloud/robodog: actually support specifying Dashboard options (#1504 / @goto-bus-stop)
+- @growthcloud/aws-s3: Do not extract keys from empty `fields` (#1569 / @alexnj)
 - docs: Thumbnail Generator – Update arguments in "thumbnail:generated" callback docs (#1567 / @janko)
 - docs: polyfills are already included in the CDN bundle (#1576 / @arturi)
 - docs: xhr-upload: Update the `upload-success` event docs (#1573 / @janko)
 - build: Upgrade build dependencies: Babel to v7, Eslint to v5, Jest to v24, Typescript to v3, Postcss to v7 (#1549 / @goto-bus-stop)
 - build: Update iOS version in integration tests (#1548 / @goto-bus-stop)
 - build: New `uploadcdn` script (#1586 / @goto-bus-stop)
-- @uppy/locales: Added Hungarian translations (#1580 / @nagyv)
+- @growthcloud/locales: Added Hungarian translations (#1580 / @nagyv)
 - build: Fix tags for docker build (#1579 / @kiloreux)
 - build: Fix npm and github security warnings (#1601 / @goto-bus-stop)
 - build: New sync version (#1600 / @goto-bus-stop)
-- @uppy/companion: set upload filename from metadata during uploads (#1587 / @ifedapoolarewaju)
-- @uppy/dashboard: fix for file previews being partially invisible sometimes in safari (#1584 / @lakesare)
-@uppy/dashboard: made added-files previews look more proportional (#1588 / @lakesare, @arturi)
-- @uppy/dashboard, @uppy/drag-drop, @uppy/file-input: Fix/on before file added not called (#1597 / @lakesare, @arturi)
-- @uppy/react: dashboard react component prop typings updated (#1598 / @sagar7993)
-- @uppy/informer: Remove color-related code and docs (#1596 / @arturi)
-- @uppy/companion: Add remote-url to emit-success, fix #1607 (#1608 / @Zyclotrop-j)
-- @uppy/golden-retriever: Use this.opts instead of opts (#1618 / @arturi)
-- @uppy/locales: Create sr_Latn_RS.js for Serbian (Latin, Serbia) (#1614 / @arturi)
-- @uppy/locales: Support locale variants, see #1614 (f9f4b5d74b9b3fb2e24aaf935fed4d79ecae42ab / @kvz)
-- @uppy/dashboard: made paste work while we're focused on buttons (#1619 / @lakesare)
-- @uppy/companion: return mimetypes for dropbox files (#1599 / @ifedapoolarewaju)
-- @uppy/locales: Add Portuguese (brazil) language pack (pt_BR) (#1621 / @willycamargo)
+- @growthcloud/companion: set upload filename from metadata during uploads (#1587 / @ifedapoolarewaju)
+- @growthcloud/dashboard: fix for file previews being partially invisible sometimes in safari (#1584 / @lakesare)
+  @growthcloud/dashboard: made added-files previews look more proportional (#1588 / @lakesare, @arturi)
+- @growthcloud/dashboard, @growthcloud/drag-drop, @growthcloud/file-input: Fix/on before file added not called (#1597 / @lakesare, @arturi)
+- @growthcloud/react: dashboard react component prop typings updated (#1598 / @sagar7993)
+- @growthcloud/informer: Remove color-related code and docs (#1596 / @arturi)
+- @growthcloud/companion: Add remote-url to emit-success, fix #1607 (#1608 / @Zyclotrop-j)
+- @growthcloud/golden-retriever: Use this.opts instead of opts (#1618 / @arturi)
+- @growthcloud/locales: Create sr_Latn_RS.js for Serbian (Latin, Serbia) (#1614 / @arturi)
+- @growthcloud/locales: Support locale variants, see #1614 (f9f4b5d74b9b3fb2e24aaf935fed4d79ecae42ab / @kvz)
+- @growthcloud/dashboard: made paste work while we're focused on buttons (#1619 / @lakesare)
+- @growthcloud/companion: return mimetypes for dropbox files (#1599 / @ifedapoolarewaju)
+- @growthcloud/locales: Add Portuguese (brazil) language pack (pt_BR) (#1621 / @willycamargo)
 - website: fix demo not working in IE 11 (es5), add Dropbox too (07397ed88bed140cdca1f3cf19e2eaab2726bbb2 / @arturi)
-- docs: examples: mention that you need to install & bootstrap  (513ba53c378766e2d1e9c2885fd0311184b67c1d / @goto-bus-stop)
+- docs: examples: mention that you need to install & bootstrap (513ba53c378766e2d1e9c2885fd0311184b67c1d / @goto-bus-stop)
 - docs: Fix error in documentation of AWS S3 Multipart::prepareUploadPart(file, partData) (c4e739b90a06499918f737c6cdcdfd9b413c69b2 / @kvz, @mattes3)
 - docs: Explain how to not send any meta fields with xhr-upload (#1617 / @arturi)
-- @uppy/core: use `uploadStarted: null` instead of false (#1628 / @goto-bus-stop)
-- @uppy/utils - made getDroppedFiles.js work for IE11, fixes #1622 (#1630 / @lakesare)
-- @uppy/provider-views: make trailing slash optional when validating auth origin (#1589 / @ifedapoolarewaju)
-- @uppy/drag-drop: Feature/replace dnd in drag drop package (#1565 / @lakesare)
+- @growthcloud/core: use `uploadStarted: null` instead of false (#1628 / @goto-bus-stop)
+- @growthcloud/utils - made getDroppedFiles.js work for IE11, fixes #1622 (#1630 / @lakesare)
+- @growthcloud/provider-views: make trailing slash optional when validating auth origin (#1589 / @ifedapoolarewaju)
+- @growthcloud/drag-drop: Feature/replace dnd in drag drop package (#1565 / @lakesare)
 
 ### 1.0.2
 
 Released: 2019-05-17
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.0.2 | @uppy/progress-bar | 1.0.2 |
-| @uppy/aws-s3 | 1.0.2 | @uppy/provider-views | 1.0.2 |
-| @uppy/companion | 1.0.2 | @uppy/react | 1.0.2 |
-| @uppy/core | 1.0.2 | @uppy/redux-dev-tools | 1.0.2 |
-| @uppy/dashboard | 1.0.2 | @uppy/robodog | 1.0.2 |
-| @uppy/drag-drop | 1.0.2 | @uppy/status-bar | 1.0.2 |
-| @uppy/dropbox | 1.0.2 | @uppy/thumbnail-generator | 1.0.2 |
-| @uppy/file-input | 1.0.2 | @uppy/transloadit | 1.0.2 |
-| @uppy/form | 1.0.2 | @uppy/tus | 1.0.2 |
-| @uppy/golden-retriever | 1.0.2 | @uppy/url | 1.0.2 |
-| @uppy/google-drive | 1.0.2 | @uppy/utils | 1.0.2 |
-| @uppy/informer | 1.0.2 | @uppy/webcam | 1.0.2 |
-| @uppy/instagram | 1.0.2 | @uppy/xhr-upload | 1.0.2 |
-| @uppy/locales | 1.2.0 | uppy | 1.0.2 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.0.2   | @growthcloud/progress-bar        | 1.0.2   |
+| @growthcloud/aws-s3           | 1.0.2   | @growthcloud/provider-views      | 1.0.2   |
+| @growthcloud/companion        | 1.0.2   | @growthcloud/react               | 1.0.2   |
+| @growthcloud/core             | 1.0.2   | @growthcloud/redux-dev-tools     | 1.0.2   |
+| @growthcloud/dashboard        | 1.0.2   | @growthcloud/robodog             | 1.0.2   |
+| @growthcloud/drag-drop        | 1.0.2   | @growthcloud/status-bar          | 1.0.2   |
+| @growthcloud/dropbox          | 1.0.2   | @growthcloud/thumbnail-generator | 1.0.2   |
+| @growthcloud/file-input       | 1.0.2   | @growthcloud/transloadit         | 1.0.2   |
+| @growthcloud/form             | 1.0.2   | @growthcloud/tus                 | 1.0.2   |
+| @growthcloud/golden-retriever | 1.0.2   | @growthcloud/url                 | 1.0.2   |
+| @growthcloud/google-drive     | 1.0.2   | @growthcloud/utils               | 1.0.2   |
+| @growthcloud/informer         | 1.0.2   | @growthcloud/webcam              | 1.0.2   |
+| @growthcloud/instagram        | 1.0.2   | @growthcloud/xhr-upload          | 1.0.2   |
+| @growthcloud/locales          | 1.2.0   | uppy                             | 1.0.2   |
 
-- @uppy/companion, @uppy/provider-views: ⚠️Send version header: This fix restores backwards-compatibility with Uppy Client ^1.0.0, by introducing `uppyVersions` param (in the future also an `uppy-versions` header). If this param is present, the authentication token is sent in a new way, as a string, otherwise it’s sent the old way, as JSON object (incompatible with IE). Please use @uppy/companion@1.0.2 for backwards-compatibility, @uppy/companion@1.0.1 is deprecated (#1564 / @ifedapoolarewaju)
-- @uppy/core: mimeTypes.js - added pdf file type (#1558 / @lakesare)
-- @uppy/locales: Add zh_TW translation (#1562 / @green-mike)
+- @growthcloud/companion, @growthcloud/provider-views: ⚠️Send version header: This fix restores backwards-compatibility with Uppy Client ^1.0.0, by introducing `uppyVersions` param (in the future also an `uppy-versions` header). If this param is present, the authentication token is sent in a new way, as a string, otherwise it’s sent the old way, as JSON object (incompatible with IE). Please use @growthcloud/companion@1.0.2 for backwards-compatibility, @growthcloud/companion@1.0.1 is deprecated (#1564 / @ifedapoolarewaju)
+- @growthcloud/core: mimeTypes.js - added pdf file type (#1558 / @lakesare)
+- @growthcloud/locales: Add zh_TW translation (#1562 / @green-mike)
 - companion: remove deprecated "authorized" endpoint (33add61b613c5fc38c7cbace2f140c97dedc8b73 / @ifedapoolarewaju)
 - companion: remove fallback `UPPYSERVER_*` env options (bf2220ab9f95a0794b8e46fe6ff50af9e4b955d9 / @ifedapoolarewaju)
 - docs: add docs on locales — how to use from NPM and CDN, auto-generated list of languages that are supported already, invitation to add more (#1553 / @arturi, @kvz)
@@ -3388,73 +3364,73 @@ Released: 2019-05-17
 
 Released: 2019-05-08
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.0.1 | @uppy/progress-bar | 1.0.1 |
-| @uppy/aws-s3 | 1.0.1 | @uppy/provider-views | 1.0.1 |
-| @uppy/companion-client | 1.0.1 | @uppy/react-native | 0.1.1 |
-| @uppy/companion | 1.0.1 | @uppy/react | 1.0.1 |
-| @uppy/core | 1.0.1 | @uppy/redux-dev-tools | 1.0.1 |
-| @uppy/dashboard | 1.0.1 | @uppy/robodog | 1.0.1 |
-| @uppy/drag-drop | 1.0.1 | @uppy/status-bar | 1.0.1 |
-| @uppy/dropbox | 1.0.1 | @uppy/thumbnail-generator | 1.0.1 |
-| @uppy/file-input | 1.0.1 | @uppy/transloadit | 1.0.1 |
-| @uppy/form | 1.0.1 | @uppy/tus | 1.0.1 |
-| @uppy/golden-retriever | 1.0.1 | @uppy/url | 1.0.1 |
-| @uppy/google-drive | 1.0.1 | @uppy/utils | 0.30.6 |
-| @uppy/informer | 1.0.1 | @uppy/webcam | 1.0.1 |
-| @uppy/instagram | 1.0.1 | @uppy/xhr-upload | 1.0.1 |
-| @uppy/locales | 1.1.0 | uppy | 1.0.1 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.0.1   | @growthcloud/progress-bar        | 1.0.1   |
+| @growthcloud/aws-s3           | 1.0.1   | @growthcloud/provider-views      | 1.0.1   |
+| @growthcloud/companion-client | 1.0.1   | @growthcloud/react-native        | 0.1.1   |
+| @growthcloud/companion        | 1.0.1   | @growthcloud/react               | 1.0.1   |
+| @growthcloud/core             | 1.0.1   | @growthcloud/redux-dev-tools     | 1.0.1   |
+| @growthcloud/dashboard        | 1.0.1   | @growthcloud/robodog             | 1.0.1   |
+| @growthcloud/drag-drop        | 1.0.1   | @growthcloud/status-bar          | 1.0.1   |
+| @growthcloud/dropbox          | 1.0.1   | @growthcloud/thumbnail-generator | 1.0.1   |
+| @growthcloud/file-input       | 1.0.1   | @growthcloud/transloadit         | 1.0.1   |
+| @growthcloud/form             | 1.0.1   | @growthcloud/tus                 | 1.0.1   |
+| @growthcloud/golden-retriever | 1.0.1   | @growthcloud/url                 | 1.0.1   |
+| @growthcloud/google-drive     | 1.0.1   | @growthcloud/utils               | 0.30.6  |
+| @growthcloud/informer         | 1.0.1   | @growthcloud/webcam              | 1.0.1   |
+| @growthcloud/instagram        | 1.0.1   | @growthcloud/xhr-upload          | 1.0.1   |
+| @growthcloud/locales          | 1.1.0   | uppy                             | 1.0.1   |
 
-⚠️ `@uppy/companion@1.0.1` from this release has been deprecated, because it accidentally broke backwards-compatibility with Uppy Client `^1.0.0`. It is now fixed in `@uppy/companion@1.0.2`, please update. See https://github.com/transloadit/uppy/pull/1564 for details. Sorry about the trouble!
+⚠️ `@growthcloud/companion@1.0.1` from this release has been deprecated, because it accidentally broke backwards-compatibility with Uppy Client `^1.0.0`. It is now fixed in `@growthcloud/companion@1.0.2`, please update. See https://github.com/transloadit/uppy/pull/1564 for details. Sorry about the trouble!
 
 This includes some important fixes for webpack, create-react-app, and Internet Explorer support, as well as a bunch of new languages! :sparkles:
 
 - pin preact to v8.2.9, fixes build problems with webpack and create-react-app (#1513 / @goto-bus-stop)
-- @uppy/companion, @uppy/companion-client: pass token through postMessage as JSON, fixes #1424 (@serverdevil, @goto-bus-stop)
-- @uppy/react: add thumbnailWidth prop type for Dashboard components, fixes #1524 (@goto-bus-stop)
-- @uppy/status-bar: hide seconds if ETA more than 1 hour (#1501 / @Tiarhai)
-- @uppy/locales: Add `es_ES` translation (#1502 / @jorgeepc)
-- @uppy/locales: Add `zh_CN` translation (#1503 / @Quorafind)
-- @uppy/locales: Add `fa_IR` translation (#1514 / @hrsh)
-- @uppy/locales: Add `it_IT` translation (#1516 / @tinny77)
+- @growthcloud/companion, @growthcloud/companion-client: pass token through postMessage as JSON, fixes #1424 (@serverdevil, @goto-bus-stop)
+- @growthcloud/react: add thumbnailWidth prop type for Dashboard components, fixes #1524 (@goto-bus-stop)
+- @growthcloud/status-bar: hide seconds if ETA more than 1 hour (#1501 / @Tiarhai)
+- @growthcloud/locales: Add `es_ES` translation (#1502 / @jorgeepc)
+- @growthcloud/locales: Add `zh_CN` translation (#1503 / @Quorafind)
+- @growthcloud/locales: Add `fa_IR` translation (#1514 / @hrsh)
+- @growthcloud/locales: Add `it_IT` translation (#1516 / @tinny77)
 
 ### 1.0.0
 
 Released: 2019-04-25
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 1.0.0 | @uppy/locales | 1.0.0 |
-| @uppy/aws-s3 | 1.0.0 | @uppy/progress-bar | 1.0.0 |
-| @uppy/companion-client | 1.0.0 | @uppy/provider-views | 1.0.0 |
-| @uppy/companion | 1.0.0 | @uppy/react | 1.0.0 |
-| @uppy/core | 1.0.0 | @uppy/redux-dev-tools | 1.0.0 |
-| @uppy/dashboard | 1.0.0 | @uppy/robodog | 1.0.0 |
-| @uppy/drag-drop | 1.0.0 | @uppy/status-bar | 1.0.0 |
-| @uppy/dropbox | 1.0.0 | @uppy/thumbnail-generator | 1.0.0 |
-| @uppy/file-input | 1.0.0 | @uppy/transloadit | 1.0.0 |
-| @uppy/form | 1.0.0 | @uppy/tus | 1.0.0 |
-| @uppy/golden-retriever | 1.0.0 | @uppy/url | 1.0.0 |
-| @uppy/google-drive | 1.0.0 | @uppy/webcam | 1.0.0 |
-| @uppy/informer | 1.0.0 | @uppy/xhr-upload | 1.0.0 |
-| @uppy/instagram | 1.0.0 | uppy | 1.0.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 1.0.0   | @growthcloud/locales             | 1.0.0   |
+| @growthcloud/aws-s3           | 1.0.0   | @growthcloud/progress-bar        | 1.0.0   |
+| @growthcloud/companion-client | 1.0.0   | @growthcloud/provider-views      | 1.0.0   |
+| @growthcloud/companion        | 1.0.0   | @growthcloud/react               | 1.0.0   |
+| @growthcloud/core             | 1.0.0   | @growthcloud/redux-dev-tools     | 1.0.0   |
+| @growthcloud/dashboard        | 1.0.0   | @growthcloud/robodog             | 1.0.0   |
+| @growthcloud/drag-drop        | 1.0.0   | @growthcloud/status-bar          | 1.0.0   |
+| @growthcloud/dropbox          | 1.0.0   | @growthcloud/thumbnail-generator | 1.0.0   |
+| @growthcloud/file-input       | 1.0.0   | @growthcloud/transloadit         | 1.0.0   |
+| @growthcloud/form             | 1.0.0   | @growthcloud/tus                 | 1.0.0   |
+| @growthcloud/golden-retriever | 1.0.0   | @growthcloud/url                 | 1.0.0   |
+| @growthcloud/google-drive     | 1.0.0   | @growthcloud/webcam              | 1.0.0   |
+| @growthcloud/informer         | 1.0.0   | @growthcloud/xhr-upload          | 1.0.0   |
+| @growthcloud/instagram        | 1.0.0   | uppy                             | 1.0.0   |
 
-- @uppy/companion-client: Don’t show informer for an auth error for now (#1478 / @arturi)
-- @uppy/companion: Disable Tus parallel upload/download to solve pause/resume issues, until we figure out a better solution — (#1497 / @ifedapoolarewaju)
-- @uppy/companion: detect bytes upload mismatch for multipart uploads (#1470 / @ifedapoolarewaju)
-- @uppy/locales: Add Dutch locale (nl_NL) (#1462 / @clerx)
-- @uppy/locales: Add French language pack (#1481 / @kiloreux)
-- @uppy/locales: Add German language pack (#1475 / @tim-kos)
-- @uppy/locales: Add Russian language pack (ru_RU), make more strings translatable (#1467 / @arturi)
-- @uppy/react-native: Add custom file reader example for tus: this example uses expo-file-system, which does in reading file chunks for the case of ios. However, for the case of android, it seems to read the entire file. Publishing this example merely as a PoC so that other users can create their own fileReaders based on this example (#1489 / @ifedapoolarewaju)
-- @uppy/robodog: Add support for submitOnSuccess option (#1491 / @tim-kos)
-- @uppy/transloadit: Add assembly status property to assembly errors (#1488 / @goto-bus-stop)
-- @uppy/transloadit: Add connection error reporting (#1484 / @goto-bus-stop)
-- @uppy/tus: update tus-js-client to 1.8.0-0(057fb6200d9a7c6af452c5a79870fa74e362ec2c / @ifedapoolarewaju)
-- @uppy/xhr-upload: Add filename to FormData with `bundle: true` (#1487 / @goto-bus-stop)
-- @uppy/companion: investigate 423 and 500 issues with React Native + Url plugin when pause/resuming an upload (@ifedapoolarewaju)
-- docs: Add basic @uppy/react-native docs (#1494 / @arturi)
+- @growthcloud/companion-client: Don’t show informer for an auth error for now (#1478 / @arturi)
+- @growthcloud/companion: Disable Tus parallel upload/download to solve pause/resume issues, until we figure out a better solution — (#1497 / @ifedapoolarewaju)
+- @growthcloud/companion: detect bytes upload mismatch for multipart uploads (#1470 / @ifedapoolarewaju)
+- @growthcloud/locales: Add Dutch locale (nl_NL) (#1462 / @clerx)
+- @growthcloud/locales: Add French language pack (#1481 / @kiloreux)
+- @growthcloud/locales: Add German language pack (#1475 / @tim-kos)
+- @growthcloud/locales: Add Russian language pack (ru_RU), make more strings translatable (#1467 / @arturi)
+- @growthcloud/react-native: Add custom file reader example for tus: this example uses expo-file-system, which does in reading file chunks for the case of ios. However, for the case of android, it seems to read the entire file. Publishing this example merely as a PoC so that other users can create their own fileReaders based on this example (#1489 / @ifedapoolarewaju)
+- @growthcloud/robodog: Add support for submitOnSuccess option (#1491 / @tim-kos)
+- @growthcloud/transloadit: Add assembly status property to assembly errors (#1488 / @goto-bus-stop)
+- @growthcloud/transloadit: Add connection error reporting (#1484 / @goto-bus-stop)
+- @growthcloud/tus: update tus-js-client to 1.8.0-0(057fb6200d9a7c6af452c5a79870fa74e362ec2c / @ifedapoolarewaju)
+- @growthcloud/xhr-upload: Add filename to FormData with `bundle: true` (#1487 / @goto-bus-stop)
+- @growthcloud/companion: investigate 423 and 500 issues with React Native + Url plugin when pause/resuming an upload (@ifedapoolarewaju)
+- docs: Add basic @growthcloud/react-native docs (#1494 / @arturi)
 - docs: Add docs for Thumbnail Generator plugin (#1468 / @arturi)
 - website: New website re-design by Alex (#1483 / @nqst, @arturi)
 
@@ -3462,42 +3438,42 @@ Released: 2019-04-25
 
 Released: 2019-04-19
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 0.30.5 | @uppy/progress-bar | 0.30.5 |
-| @uppy/aws-s3 | 0.30.5 | @uppy/provider-views | 0.30.5 |
-| @uppy/companion-client | 0.28.5 | @uppy/react-native | 0.0.3 |
-| @uppy/companion | 0.17.5 | @uppy/react | 0.30.5 |
-| @uppy/core | 0.30.5 | @uppy/redux-dev-tools | 0.30.5 |
-| @uppy/dashboard | 0.30.5 | @uppy/robodog | 0.30.5 |
-| @uppy/drag-drop | 0.30.5 | @uppy/status-bar | 0.30.5 |
-| @uppy/dropbox | 0.30.5 | @uppy/thumbnail-generator | 0.30.5 |
-| @uppy/file-input | 0.30.5 | @uppy/transloadit | 0.30.5 |
-| @uppy/form | 0.30.5 | @uppy/tus | 0.30.5 |
-| @uppy/golden-retriever | 0.30.5 | @uppy/url | 0.30.5 |
-| @uppy/google-drive | 0.30.5 | @uppy/utils | 0.30.5 |
-| @uppy/informer | 0.30.5 | @uppy/webcam | 0.30.5 |
-| @uppy/instagram | 0.30.5 | @uppy/xhr-upload | 0.30.5 |
-| @uppy/locales | 0.30.5 | uppy | 0.30.5 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 0.30.5  | @growthcloud/progress-bar        | 0.30.5  |
+| @growthcloud/aws-s3           | 0.30.5  | @growthcloud/provider-views      | 0.30.5  |
+| @growthcloud/companion-client | 0.28.5  | @growthcloud/react-native        | 0.0.3   |
+| @growthcloud/companion        | 0.17.5  | @growthcloud/react               | 0.30.5  |
+| @growthcloud/core             | 0.30.5  | @growthcloud/redux-dev-tools     | 0.30.5  |
+| @growthcloud/dashboard        | 0.30.5  | @growthcloud/robodog             | 0.30.5  |
+| @growthcloud/drag-drop        | 0.30.5  | @growthcloud/status-bar          | 0.30.5  |
+| @growthcloud/dropbox          | 0.30.5  | @growthcloud/thumbnail-generator | 0.30.5  |
+| @growthcloud/file-input       | 0.30.5  | @growthcloud/transloadit         | 0.30.5  |
+| @growthcloud/form             | 0.30.5  | @growthcloud/tus                 | 0.30.5  |
+| @growthcloud/golden-retriever | 0.30.5  | @growthcloud/url                 | 0.30.5  |
+| @growthcloud/google-drive     | 0.30.5  | @growthcloud/utils               | 0.30.5  |
+| @growthcloud/informer         | 0.30.5  | @growthcloud/webcam              | 0.30.5  |
+| @growthcloud/instagram        | 0.30.5  | @growthcloud/xhr-upload          | 0.30.5  |
+| @growthcloud/locales          | 0.30.5  | uppy                             | 0.30.5  |
 
-- @uppy/companion-client: ⚠️ breaking: rename serverUrl to companionUrl and serverPattern to companionAllowedHosts (#1446 / @ifedapoolarewaju)
-- @uppy/companion-client: Issue a warning if an outdated `serverUrl` or `serverPattern` option is used (#1459 / @arturi)
-- @uppy/companion: ⚠️ breaking: send illusive upload progress when multipart downloads are on (#1454 / @ifedapoolarewaju)
-- @uppy/companion: Fix serverless example (#1408 / @kiloreux)
-- @uppy/core: fire a `restriction-failed` event when restriction-failed (#1436 / @allenfantasy)
-- @uppy/core: fix logging objects (#1451 / @goto-bus-stop)
-- @uppy/core: Remove console.dir (#1411 / @arturi)
-- @uppy/dashboard: ⚠️ breaking: Improve drag to upload state: This uncovered a few drag-drop issues we have, it comes down to us needing something other than the drag-drop library (#1440 / @lakesare, @nqst)
-- @uppy/dashboard: ⚠️ breaking: new `getDroppedFiles` module that is an improvement over `drag-drop` we’ve been using (#1440 / @lakesare)
-- @uppy/dashboard: Design facelift — round 2: various improvements and fixes to the Dashboard UI (#1452 / @nqst)
-- @uppy/dashboard: Design facelift: various improvements and fixes to the Dashboard UI (#1442 / @nqst)
-- @uppy/locales: Default locale for all plugins (#1443 / @arturi, @kvz)
-- @uppy/react-native: Basic React Native support (#988 / @arturi, @ifedapoolarewaju, @kvz)
-- @uppy/robodog: add Dashboard API (#1450 / @goto-bus-stop)
-- @uppy/transloadit: Support assembly cancellation (#1431 / @goto-bus-stop)
-- @uppy/tus: ⚠️ breaking: will depend on ifedapoolarewaju’s fork for now, so it’s in sync with @uppy/companion and Lerna doesn’t have conflicts (11cb6504012655883ccfa202b5add55529152728 / @ifedapoolarewaju)
-- @uppy/tus: fix cannot start more uploads after cancel (#1429 / @ap--)
-- @uppy/website: Remove Plugins subsection, create Contributing subsection (#1435 / @kvz)
+- @growthcloud/companion-client: ⚠️ breaking: rename serverUrl to companionUrl and serverPattern to companionAllowedHosts (#1446 / @ifedapoolarewaju)
+- @growthcloud/companion-client: Issue a warning if an outdated `serverUrl` or `serverPattern` option is used (#1459 / @arturi)
+- @growthcloud/companion: ⚠️ breaking: send illusive upload progress when multipart downloads are on (#1454 / @ifedapoolarewaju)
+- @growthcloud/companion: Fix serverless example (#1408 / @kiloreux)
+- @growthcloud/core: fire a `restriction-failed` event when restriction-failed (#1436 / @allenfantasy)
+- @growthcloud/core: fix logging objects (#1451 / @goto-bus-stop)
+- @growthcloud/core: Remove console.dir (#1411 / @arturi)
+- @growthcloud/dashboard: ⚠️ breaking: Improve drag to upload state: This uncovered a few drag-drop issues we have, it comes down to us needing something other than the drag-drop library (#1440 / @lakesare, @nqst)
+- @growthcloud/dashboard: ⚠️ breaking: new `getDroppedFiles` module that is an improvement over `drag-drop` we’ve been using (#1440 / @lakesare)
+- @growthcloud/dashboard: Design facelift — round 2: various improvements and fixes to the Dashboard UI (#1452 / @nqst)
+- @growthcloud/dashboard: Design facelift: various improvements and fixes to the Dashboard UI (#1442 / @nqst)
+- @growthcloud/locales: Default locale for all plugins (#1443 / @arturi, @kvz)
+- @growthcloud/react-native: Basic React Native support (#988 / @arturi, @ifedapoolarewaju, @kvz)
+- @growthcloud/robodog: add Dashboard API (#1450 / @goto-bus-stop)
+- @growthcloud/transloadit: Support assembly cancellation (#1431 / @goto-bus-stop)
+- @growthcloud/tus: ⚠️ breaking: will depend on ifedapoolarewaju’s fork for now, so it’s in sync with @growthcloud/companion and Lerna doesn’t have conflicts (11cb6504012655883ccfa202b5add55529152728 / @ifedapoolarewaju)
+- @growthcloud/tus: fix cannot start more uploads after cancel (#1429 / @ap--)
+- @growthcloud/website: Remove Plugins subsection, create Contributing subsection (#1435 / @kvz)
 - examples: Added node-xhr, php-xhr, python-xhr (#1389 / @samuelayo, @arturi)
 - website: New doc menu structure (#1405 / @kvz)
 
@@ -3505,237 +3481,237 @@ Released: 2019-04-19
 
 Released: 2019-04-04
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 0.30.4 | @uppy/progress-bar | 0.30.4 |
-| @uppy/aws-s3 | 0.30.4 | @uppy/provider-views | 0.30.4 |
-| @uppy/companion-client | 0.28.4 | @uppy/react | 0.30.4 |
-| @uppy/companion | 0.17.4 | @uppy/redux-dev-tools | 0.30.4 |
-| @uppy/core | 0.30.4 | @uppy/robodog | 0.30.4 |
-| @uppy/dashboard | 0.30.4 | @uppy/status-bar | 0.30.4 |
-| @uppy/drag-drop | 0.30.4 | @uppy/thumbnail-generator | 0.30.4 |
-| @uppy/dropbox | 0.30.4 | @uppy/transloadit | 0.30.4 |
-| @uppy/file-input | 0.30.4 | @uppy/tus | 0.30.4 |
-| @uppy/form | 0.30.4 | @uppy/url | 0.30.4 |
-| @uppy/golden-retriever | 0.30.4 | @uppy/utils | 0.30.4 |
-| @uppy/google-drive | 0.30.4 | @uppy/webcam | 0.30.4 |
-| @uppy/informer | 0.30.4 | @uppy/xhr-upload | 0.30.4 |
-| @uppy/instagram | 0.30.4 | uppy | 0.30.4 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 0.30.4  | @growthcloud/progress-bar        | 0.30.4  |
+| @growthcloud/aws-s3           | 0.30.4  | @growthcloud/provider-views      | 0.30.4  |
+| @growthcloud/companion-client | 0.28.4  | @growthcloud/react               | 0.30.4  |
+| @growthcloud/companion        | 0.17.4  | @growthcloud/redux-dev-tools     | 0.30.4  |
+| @growthcloud/core             | 0.30.4  | @growthcloud/robodog             | 0.30.4  |
+| @growthcloud/dashboard        | 0.30.4  | @growthcloud/status-bar          | 0.30.4  |
+| @growthcloud/drag-drop        | 0.30.4  | @growthcloud/thumbnail-generator | 0.30.4  |
+| @growthcloud/dropbox          | 0.30.4  | @growthcloud/transloadit         | 0.30.4  |
+| @growthcloud/file-input       | 0.30.4  | @growthcloud/tus                 | 0.30.4  |
+| @growthcloud/form             | 0.30.4  | @growthcloud/url                 | 0.30.4  |
+| @growthcloud/golden-retriever | 0.30.4  | @growthcloud/utils               | 0.30.4  |
+| @growthcloud/google-drive     | 0.30.4  | @growthcloud/webcam              | 0.30.4  |
+| @growthcloud/informer         | 0.30.4  | @growthcloud/xhr-upload          | 0.30.4  |
+| @growthcloud/instagram        | 0.30.4  | uppy                             | 0.30.4  |
 
 - build: ⚠️ remove !important (postcss-safe-important) (#1344 / @arturi)
-- @uppy/core: un-hardcode concat in `youCanOnlyUploadFileTypes` locale: In some languages, it probably doesn't make much sense to put the list
-of allowed file types at the end. The list of mime types/extensions may not be desired at all, so now you can omit %{types} to not show it. (#1374 / @goto-bus-stop)
-- @uppy/core: ⚠️ YMPT™: Yet More Progress Tweaks — #1093 accidentally omitted file size reporting for GDrive/Dropbox uploads, this adds it back.
-Unsized files (like instagram photos) now are stored with size: null instead of 0 (#1376 / @goto-bus-stop)
-- @uppy/core: make allowedFileTypes extensions case insensitive (#1341 / @goto-bus-stop)
-- @uppy/companion: ⚠️ fix instagram hanging uploads (#1274 / @ifedapoolarewaju)
-- @uppy/companion-client: remove the use of window.location for React Native support (#1393 / @ifedapoolarewaju)
+- @growthcloud/core: un-hardcode concat in `youCanOnlyUploadFileTypes` locale: In some languages, it probably doesn't make much sense to put the list
+  of allowed file types at the end. The list of mime types/extensions may not be desired at all, so now you can omit %{types} to not show it. (#1374 / @goto-bus-stop)
+- @growthcloud/core: ⚠️ YMPT™: Yet More Progress Tweaks — #1093 accidentally omitted file size reporting for GDrive/Dropbox uploads, this adds it back.
+  Unsized files (like instagram photos) now are stored with size: null instead of 0 (#1376 / @goto-bus-stop)
+- @growthcloud/core: make allowedFileTypes extensions case insensitive (#1341 / @goto-bus-stop)
+- @growthcloud/companion: ⚠️ fix instagram hanging uploads (#1274 / @ifedapoolarewaju)
+- @growthcloud/companion-client: remove the use of window.location for React Native support (#1393 / @ifedapoolarewaju)
 - typescript: ⚠️ fix uppy package use with allowSyntheticImports: false (#1396 / @goto-bus-stop)
-- @uppy/core: ⚠️ remove console.dir, since it’s probably unnessesary now and not supported in React Native (@arturi / a4f94a8d6b475657837f7c51dfb0670cc77fc3de)
-- @uppy/xhr-upload: allow customized option to set upload status (#1360 / @Mactaivsh)
-- @uppy/dashboard: fix icons jiggling on hover in safari (#1410 / @lakesare)
-- @uppy/dashboard: the list items are now even out (#1398 / @lakesare)
-- @uppy/dashboard: remove jumpiness (mobile --> desktop) when uppy loads (#1383 / @lakesare)
-- @uppy/dashboard: Protect some more styles from bleeding (#1362 / @arturi)
+- @growthcloud/core: ⚠️ remove console.dir, since it’s probably unnessesary now and not supported in React Native (@arturi / a4f94a8d6b475657837f7c51dfb0670cc77fc3de)
+- @growthcloud/xhr-upload: allow customized option to set upload status (#1360 / @Mactaivsh)
+- @growthcloud/dashboard: fix icons jiggling on hover in safari (#1410 / @lakesare)
+- @growthcloud/dashboard: the list items are now even out (#1398 / @lakesare)
+- @growthcloud/dashboard: remove jumpiness (mobile --> desktop) when uppy loads (#1383 / @lakesare)
+- @growthcloud/dashboard: Protect some more styles from bleeding (#1362 / @arturi)
 - build: Refactor npm scripts, clean up unused ones (#1392 / @kvz, @arturi)
 - build: Speed up website deploys (73f89f08d9dde9e096285a952528976a69d923cf / @kvz)
-- @uppy/xhr-upload: ⚠️ load CompanionClient appropriately (c1abfea33d0c3e80809814c1048b156028c8fcf9 / @ifedapoolarewaju)
-- @uppy/companion: ⚠️ send null when download is complete (@ifedapoolarewaju / de04c7978c6713995cbf1717f6ca7ffd292cdeb1)
-- @uppy/companion: overwrite bytestotal for only tus uploads (d9ec8d28f4c97da4c0dcb46fbf5804a0ee484eeb / @ifedapoolarewaju)
-- @uppy/companion: install git so we can fetch tus-js-client fork (#1404 / @goto-bus-stop)
-- @uppy/companion-client: ⚠️ return 401 for invalid access token (#1298 / @ifedapoolarewaju)
-- @uppy/companion-client: ⚠️ add asyn wrapper around token storage (#1369 / @ifedapoolarewaju)
-- @uppy/companion: Updated the callback URIs to reflect their correct location (#1366 / @HughbertD)
-- @uppy/companion: do not use Uploader instance if options validation failed #1354
-- @uppy/status-bar: fix StatusBar error tooltip positioning (f83b4b06d958a1f7e78885a61b645c3371feb1ae / @arturi)
-- @uppy/google-drive Show thumbnails instead of a generic icon in Google Drive (#1363 / @arturi)
-- @uppy/dropbox: HTTP-header-safe JSON for dropbox (#1371 / @yonahforst)
-- @uppy/informer: made the tooltip not overflow the uppy container (#1382 / @lakesare)
-- @uppy/aws-s3-multipart: for remote aws-s3 uploads (#1350 / @ifedapoolarewaju)
+- @growthcloud/xhr-upload: ⚠️ load CompanionClient appropriately (c1abfea33d0c3e80809814c1048b156028c8fcf9 / @ifedapoolarewaju)
+- @growthcloud/companion: ⚠️ send null when download is complete (@ifedapoolarewaju / de04c7978c6713995cbf1717f6ca7ffd292cdeb1)
+- @growthcloud/companion: overwrite bytestotal for only tus uploads (d9ec8d28f4c97da4c0dcb46fbf5804a0ee484eeb / @ifedapoolarewaju)
+- @growthcloud/companion: install git so we can fetch tus-js-client fork (#1404 / @goto-bus-stop)
+- @growthcloud/companion-client: ⚠️ return 401 for invalid access token (#1298 / @ifedapoolarewaju)
+- @growthcloud/companion-client: ⚠️ add asyn wrapper around token storage (#1369 / @ifedapoolarewaju)
+- @growthcloud/companion: Updated the callback URIs to reflect their correct location (#1366 / @HughbertD)
+- @growthcloud/companion: do not use Uploader instance if options validation failed #1354
+- @growthcloud/status-bar: fix StatusBar error tooltip positioning (f83b4b06d958a1f7e78885a61b645c3371feb1ae / @arturi)
+- @growthcloud/google-drive Show thumbnails instead of a generic icon in Google Drive (#1363 / @arturi)
+- @growthcloud/dropbox: HTTP-header-safe JSON for dropbox (#1371 / @yonahforst)
+- @growthcloud/informer: made the tooltip not overflow the uppy container (#1382 / @lakesare)
+- @growthcloud/aws-s3-multipart: for remote aws-s3 uploads (#1350 / @ifedapoolarewaju)
 - examples: use template + demo key for transloadit-textarea example (#1375 / @goto-bus-stop)
 - website: add markdown snippets example (#1379 / @arturi)
 - website: provide simple framework for doing blog post series (#1373 / @kvz)
 - locales: Remove outdated locales for now (#1355 / @arturi)
-- @uppy/thumbnail-generator: do not export tainted canvas, fixes #1321 (#1343 / @goto-bus-stop)
-- @uppy/companion: replace text only when text is valid (985fd62ed6017ea3786eefd2c222caeb26d7998e / @ifedapoolarewaju)
+- @growthcloud/thumbnail-generator: do not export tainted canvas, fixes #1321 (#1343 / @goto-bus-stop)
+- @growthcloud/companion: replace text only when text is valid (985fd62ed6017ea3786eefd2c222caeb26d7998e / @ifedapoolarewaju)
 
 ### 0.30.3
 
 Released: 2019-03-08
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 0.30.3 | @uppy/provider-views | 0.30.3 |
-| @uppy/aws-s3 | 0.30.3 | @uppy/react | 0.30.3 |
-| @uppy/companion-client | 0.28.3 | @uppy/redux-dev-tools | 0.30.3 |
-| @uppy/companion | 0.17.3 | @uppy/robodog | 0.30.3 |
-| @uppy/core | 0.30.3 | @uppy/status-bar | 0.30.3 |
-| @uppy/dashboard | 0.30.3 | @uppy/store-default | 0.28.3 |
-| @uppy/drag-drop | 0.30.3 | @uppy/store-redux | 0.28.3 |
-| @uppy/dropbox | 0.30.3 | @uppy/thumbnail-generator | 0.30.3 |
-| @uppy/file-input | 0.30.3 | @uppy/transloadit | 0.30.3 |
-| @uppy/form | 0.30.3 | @uppy/tus | 0.30.3 |
-| @uppy/golden-retriever | 0.30.3 | @uppy/url | 0.30.3 |
-| @uppy/google-drive | 0.30.3 | @uppy/utils | 0.30.3 |
-| @uppy/informer | 0.30.3 | @uppy/webcam | 0.30.3 |
-| @uppy/instagram | 0.30.3 | @uppy/xhr-upload | 0.30.3 |
-| @uppy/progress-bar | 0.30.3 | uppy | 0.30.3 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 0.30.3  | @growthcloud/provider-views      | 0.30.3  |
+| @growthcloud/aws-s3           | 0.30.3  | @growthcloud/react               | 0.30.3  |
+| @growthcloud/companion-client | 0.28.3  | @growthcloud/redux-dev-tools     | 0.30.3  |
+| @growthcloud/companion        | 0.17.3  | @growthcloud/robodog             | 0.30.3  |
+| @growthcloud/core             | 0.30.3  | @growthcloud/status-bar          | 0.30.3  |
+| @growthcloud/dashboard        | 0.30.3  | @growthcloud/store-default       | 0.28.3  |
+| @growthcloud/drag-drop        | 0.30.3  | @growthcloud/store-redux         | 0.28.3  |
+| @growthcloud/dropbox          | 0.30.3  | @growthcloud/thumbnail-generator | 0.30.3  |
+| @growthcloud/file-input       | 0.30.3  | @growthcloud/transloadit         | 0.30.3  |
+| @growthcloud/form             | 0.30.3  | @growthcloud/tus                 | 0.30.3  |
+| @growthcloud/golden-retriever | 0.30.3  | @growthcloud/url                 | 0.30.3  |
+| @growthcloud/google-drive     | 0.30.3  | @growthcloud/utils               | 0.30.3  |
+| @growthcloud/informer         | 0.30.3  | @growthcloud/webcam              | 0.30.3  |
+| @growthcloud/instagram        | 0.30.3  | @growthcloud/xhr-upload          | 0.30.3  |
+| @growthcloud/progress-bar     | 0.30.3  | uppy                             | 0.30.3  |
 
-- @uppy/dashboard: Dashboard a11y improvements: trap focus in the active panel only (#1272 / @arturi)
-- @uppy/companion: Make providers support react native (#1286 / @ifedapoolarewaju)
-- @uppy/xhr-upload: Reject cancelled uploads (#1316 / @arturi)
-- @uppy/aws-s3: Avoid throwing error when file has been removed (#1318 / @craigjennings11)
-- @uppy/companion: Remove resources requirements for companion (#1311 / @kiloreux)
-- @uppy/webcam: Don’t show Smile! if countdown is false (#1324 / @arturi)
+- @growthcloud/dashboard: Dashboard a11y improvements: trap focus in the active panel only (#1272 / @arturi)
+- @growthcloud/companion: Make providers support react native (#1286 / @ifedapoolarewaju)
+- @growthcloud/xhr-upload: Reject cancelled uploads (#1316 / @arturi)
+- @growthcloud/aws-s3: Avoid throwing error when file has been removed (#1318 / @craigjennings11)
+- @growthcloud/companion: Remove resources requirements for companion (#1311 / @kiloreux)
+- @growthcloud/webcam: Don’t show Smile! if countdown is false (#1324 / @arturi)
 - docs: update webpack homepage URLs, update Robodog readme (#1323 / @goto-bus-stop)
 
 ### 0.30.1 - 0.30.2
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 0.30.2 | @uppy/provider-views | 0.30.2 |
-| @uppy/aws-s3 | 0.30.2 | @uppy/react | 0.30.2 |
-| @uppy/companion-client | 0.28.2 | @uppy/redux-dev-tools | 0.30.2 |
-| @uppy/companion | 0.17.2 | @uppy/robodog | 0.30.2 |
-| @uppy/core | 0.30.2 | @uppy/status-bar | 0.30.2 |
-| @uppy/dashboard | 0.30.2 | @uppy/store-default | 0.28.2 |
-| @uppy/drag-drop | 0.30.2 | @uppy/store-redux | 0.28.2 |
-| @uppy/dropbox | 0.30.2 | @uppy/thumbnail-generator | 0.30.2 |
-| @uppy/file-input | 0.30.2 | @uppy/transloadit | 0.30.2 |
-| @uppy/form | 0.30.2 | @uppy/tus | 0.30.2 |
-| @uppy/golden-retriever | 0.30.2 | @uppy/url | 0.30.2 |
-| @uppy/google-drive | 0.30.2 | @uppy/utils | 0.30.2 |
-| @uppy/informer | 0.30.2 | @uppy/webcam | 0.30.2 |
-| @uppy/instagram | 0.30.2 | @uppy/xhr-upload | 0.30.2 |
-| @uppy/progress-bar | 0.30.2 | uppy | 0.30.2 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 0.30.2  | @growthcloud/provider-views      | 0.30.2  |
+| @growthcloud/aws-s3           | 0.30.2  | @growthcloud/react               | 0.30.2  |
+| @growthcloud/companion-client | 0.28.2  | @growthcloud/redux-dev-tools     | 0.30.2  |
+| @growthcloud/companion        | 0.17.2  | @growthcloud/robodog             | 0.30.2  |
+| @growthcloud/core             | 0.30.2  | @growthcloud/status-bar          | 0.30.2  |
+| @growthcloud/dashboard        | 0.30.2  | @growthcloud/store-default       | 0.28.2  |
+| @growthcloud/drag-drop        | 0.30.2  | @growthcloud/store-redux         | 0.28.2  |
+| @growthcloud/dropbox          | 0.30.2  | @growthcloud/thumbnail-generator | 0.30.2  |
+| @growthcloud/file-input       | 0.30.2  | @growthcloud/transloadit         | 0.30.2  |
+| @growthcloud/form             | 0.30.2  | @growthcloud/tus                 | 0.30.2  |
+| @growthcloud/golden-retriever | 0.30.2  | @growthcloud/url                 | 0.30.2  |
+| @growthcloud/google-drive     | 0.30.2  | @growthcloud/utils               | 0.30.2  |
+| @growthcloud/informer         | 0.30.2  | @growthcloud/webcam              | 0.30.2  |
+| @growthcloud/instagram        | 0.30.2  | @growthcloud/xhr-upload          | 0.30.2  |
+| @growthcloud/progress-bar     | 0.30.2  | uppy                             | 0.30.2  |
 
-- @uppy/robodog: Add Robodog to CDN (#1304 / @kvz, @arturi)
+- @growthcloud/robodog: Add Robodog to CDN (#1304 / @kvz, @arturi)
 
 ### 0.30.0
 
-- @uppy/robodog: 📣⚠️Add Robodog — Transloadit browser SDK (#1135 / @goto-bus-stop)
-- @uppy/core: Set response in Core rather than in upload plugins (#1138 / @arturi)
-- @uppy/core: Don’t emit a complete event if an upload has been canceled (#1271 / @arturi)
-- @uppy/companion: Support redis option (auth_pass, etc...) (#1215 / @tranvansang)
-- @uppy/companion: sanitize text before adding to html (f77a102 / @ifedapoolarewaju)
-- @uppy/dashboard: Update pause-resume-cancel icons (#1241 / @arturi, @nqst)
-- @uppy/dashboard: Fix issues with multiple modals (#1258 / @goto-bus-stop, @arturi)
-- @uppy/dashboard: Dashboard ui fixes: fix icon animation jiggling, inherit font, allow overriding outline, fix breadcrumbs, bug with x button being stuck, fix an issue with long note margin on mobile (#1279 / @arturi)
-- @uppy/provider-views: update instagram nextPagePath after every fetch  (25e31e5 / @ifedapoolarewaju)
-- @uppy/react: Allow changing instance in `uppy` prop (#1247 / @goto-bus-stop)
-- @uppy/react: Typescript: Make DashboardModal.target prop optional (#1254 / @mattes3)
-- @uppy/aws-s3: Use user provided filename / type for uploaded object, fixes #1238 (#1257 / @goto-bus-stop)
-- @uppy/tus: Update to tus-js-client@1.6.0 with React Native support (#1250 / @arturi)
+- @growthcloud/robodog: 📣⚠️Add Robodog — Transloadit browser SDK (#1135 / @goto-bus-stop)
+- @growthcloud/core: Set response in Core rather than in upload plugins (#1138 / @arturi)
+- @growthcloud/core: Don’t emit a complete event if an upload has been canceled (#1271 / @arturi)
+- @growthcloud/companion: Support redis option (auth_pass, etc...) (#1215 / @tranvansang)
+- @growthcloud/companion: sanitize text before adding to html (f77a102 / @ifedapoolarewaju)
+- @growthcloud/dashboard: Update pause-resume-cancel icons (#1241 / @arturi, @nqst)
+- @growthcloud/dashboard: Fix issues with multiple modals (#1258 / @goto-bus-stop, @arturi)
+- @growthcloud/dashboard: Dashboard ui fixes: fix icon animation jiggling, inherit font, allow overriding outline, fix breadcrumbs, bug with x button being stuck, fix an issue with long note margin on mobile (#1279 / @arturi)
+- @growthcloud/provider-views: update instagram nextPagePath after every fetch (25e31e5 / @ifedapoolarewaju)
+- @growthcloud/react: Allow changing instance in `uppy` prop (#1247 / @goto-bus-stop)
+- @growthcloud/react: Typescript: Make DashboardModal.target prop optional (#1254 / @mattes3)
+- @growthcloud/aws-s3: Use user provided filename / type for uploaded object, fixes #1238 (#1257 / @goto-bus-stop)
+- @growthcloud/tus: Update to tus-js-client@1.6.0 with React Native support (#1250 / @arturi)
 - build: Improve dev npm script: Use Parcel for bundled example, re-build lib automatically, don’t open browser and no ghosts mode, start companion when developing (but there’s optional npm run dev:no-companion) (#1280 / @arturi)
 
 ### 0.29.1
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 0.29.1 | @uppy/provider-views | 0.29.1 |
-| @uppy/aws-s3 | 0.29.1 | @uppy/react | 0.29.1 |
-| @uppy/companion-client | 0.27.3 | @uppy/redux-dev-tools | 0.29.1 |
-| @uppy/companion | 0.16.1 | @uppy/status-bar | 0.29.1 |
-| @uppy/core | 0.29.1 | @uppy/store-default | 0.27.1 |
-| @uppy/dashboard | 0.29.1 | @uppy/store-redux | 0.27.1 |
-| @uppy/drag-drop | 0.29.1 | @uppy/thumbnail-generator | 0.29.1 |
-| @uppy/dropbox | 0.29.1 | @uppy/transloadit | 0.29.1 |
-| @uppy/file-input | 0.29.1 | @uppy/tus | 0.29.1 |
-| @uppy/form | 0.29.1 | @uppy/url | 0.29.1 |
-| @uppy/golden-retriever | 0.29.1 | @uppy/utils | 0.29.1 |
-| @uppy/google-drive | 0.29.1 | @uppy/webcam | 0.29.1 |
-| @uppy/informer | 0.29.1 | @uppy/xhr-upload | 0.29.1 |
-| @uppy/instagram | 0.29.1 | uppy | 0.29.1 |
-| @uppy/progress-bar | 0.29.1 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 0.29.1  | @growthcloud/provider-views      | 0.29.1  |
+| @growthcloud/aws-s3           | 0.29.1  | @growthcloud/react               | 0.29.1  |
+| @growthcloud/companion-client | 0.27.3  | @growthcloud/redux-dev-tools     | 0.29.1  |
+| @growthcloud/companion        | 0.16.1  | @growthcloud/status-bar          | 0.29.1  |
+| @growthcloud/core             | 0.29.1  | @growthcloud/store-default       | 0.27.1  |
+| @growthcloud/dashboard        | 0.29.1  | @growthcloud/store-redux         | 0.27.1  |
+| @growthcloud/drag-drop        | 0.29.1  | @growthcloud/thumbnail-generator | 0.29.1  |
+| @growthcloud/dropbox          | 0.29.1  | @growthcloud/transloadit         | 0.29.1  |
+| @growthcloud/file-input       | 0.29.1  | @growthcloud/tus                 | 0.29.1  |
+| @growthcloud/form             | 0.29.1  | @growthcloud/url                 | 0.29.1  |
+| @growthcloud/golden-retriever | 0.29.1  | @growthcloud/utils               | 0.29.1  |
+| @growthcloud/google-drive     | 0.29.1  | @growthcloud/webcam              | 0.29.1  |
+| @growthcloud/informer         | 0.29.1  | @growthcloud/xhr-upload          | 0.29.1  |
+| @growthcloud/instagram        | 0.29.1  | uppy                             | 0.29.1  |
+| @growthcloud/progress-bar     | 0.29.1  | -                                | -       |
 
-- @uppy/react: ⚠️ Make Uppy’s React components usable from Typescript (#1131 / @mattes3)
-- build: ⚠️ CJSify @uppy/core typings + add more typings tests (#1194 / @goto-bus-stop)
+- @growthcloud/react: ⚠️ Make Uppy’s React components usable from Typescript (#1131 / @mattes3)
+- build: ⚠️ CJSify @growthcloud/core typings + add more typings tests (#1194 / @goto-bus-stop)
 - build: ⚠️ Added Promise and Fetch polyfills to uppy bundle (#1187 / @arturi)
 - build: ⚠️ Only rebuild changed files with `npm run build:lib` (#1237 / @goto-bus-stop)
 - build: ⚠️ Remove jsnext:main since it’s been deprecated https://github.com/stereobooster/package.json#jsnextmain (#1242 / @arturi)
-- @uppy/companion: ⚠️ Fix: return next page path for ig only when posts exist (e5a2694a2d95e1923dd2ca515e7d37132a5828ba / @ifedapoolarewaju)
-- @uppy/status-bar: Account for MS Edge’s missing progress updates, fixes #945. Previously, upload progress would be stuck at 0% until everything is finished. With this patch, in the affected MS Edge versions, the status bar is transformed into an “indeterminate” progress state (#1184 / @goto-bus-stop)
-- @uppy/dashboard: Log error if `trigger` is not found (#1217 / @goto-bus-stop)
-- @uppy/xhr-upload: Fix `responseType` in IE 11, fixes #1228: The same restriction applies to responseType as to withCredentials. Both must be set after the open() call in Internet Explorer. (#1231 / @goto-bus-stop)
-- @uppy/xhr-upload: Postpone timeout countdown until upload has started (i.e. has left browser concurrency queue (fixes #1190) (#1195 / @davilima6)
+- @growthcloud/companion: ⚠️ Fix: return next page path for ig only when posts exist (e5a2694a2d95e1923dd2ca515e7d37132a5828ba / @ifedapoolarewaju)
+- @growthcloud/status-bar: Account for MS Edge’s missing progress updates, fixes #945. Previously, upload progress would be stuck at 0% until everything is finished. With this patch, in the affected MS Edge versions, the status bar is transformed into an “indeterminate” progress state (#1184 / @goto-bus-stop)
+- @growthcloud/dashboard: Log error if `trigger` is not found (#1217 / @goto-bus-stop)
+- @growthcloud/xhr-upload: Fix `responseType` in IE 11, fixes #1228: The same restriction applies to responseType as to withCredentials. Both must be set after the open() call in Internet Explorer. (#1231 / @goto-bus-stop)
+- @growthcloud/xhr-upload: Postpone timeout countdown until upload has started (i.e. has left browser concurrency queue (fixes #1190) (#1195 / @davilima6)
 - website: Add polyfills to website examples that do not use prebundled uppy.js (#1229 / @goto-bus-stop)
 - docs: Add privacy policy (#1196 / @arturi)
 - docs: Update aws-s3.md wrt S3 public access settings (#1236 / @manuelkiessling)
-- @uppy/companion: deprecate deprecate debugLogger (8f9946346904217e714e256db06b759cc3bb66b0 / @ifedapoolarewaju)
-- @uppy/companion: Update morgan dependency, fixes #1227 (#1232 / @goto-bus-stop)
+- @growthcloud/companion: deprecate deprecate debugLogger (8f9946346904217e714e256db06b759cc3bb66b0 / @ifedapoolarewaju)
+- @growthcloud/companion: Update morgan dependency, fixes #1227 (#1232 / @goto-bus-stop)
 
 ### 0.29.0
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| @uppy/aws-s3-multipart | 0.29.0 | @uppy/progress-bar | 0.29.0 |
-| @uppy/aws-s3 | 0.29.0 | @uppy/provider-views | 0.29.0 |
-| @uppy/companion | 0.16.0 | @uppy/react | 0.29.0 |
-| @uppy/core | 0.29.0 | @uppy/redux-dev-tools | 0.29.0 |
-| @uppy/dashboard | 0.29.0 | @uppy/status-bar | 0.29.0 |
-| @uppy/drag-drop | 0.29.0 | @uppy/thumbnail-generator | 0.29.0 |
-| @uppy/dropbox | 0.29.0 | @uppy/transloadit | 0.29.0 |
-| @uppy/file-input | 0.29.0 | @uppy/tus | 0.29.0 |
-| @uppy/form | 0.29.0 | @uppy/url | 0.29.0 |
-| @uppy/golden-retriever | 0.29.0 | @uppy/utils | 0.29.0 |
-| @uppy/google-drive | 0.29.0 | @uppy/webcam | 0.29.0 |
-| @uppy/informer | 0.29.0 | @uppy/xhr-upload | 0.29.0 |
-| @uppy/instagram | 0.29.0 | uppy | 0.29.0 |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| @growthcloud/aws-s3-multipart | 0.29.0  | @growthcloud/progress-bar        | 0.29.0  |
+| @growthcloud/aws-s3           | 0.29.0  | @growthcloud/provider-views      | 0.29.0  |
+| @growthcloud/companion        | 0.16.0  | @growthcloud/react               | 0.29.0  |
+| @growthcloud/core             | 0.29.0  | @growthcloud/redux-dev-tools     | 0.29.0  |
+| @growthcloud/dashboard        | 0.29.0  | @growthcloud/status-bar          | 0.29.0  |
+| @growthcloud/drag-drop        | 0.29.0  | @growthcloud/thumbnail-generator | 0.29.0  |
+| @growthcloud/dropbox          | 0.29.0  | @growthcloud/transloadit         | 0.29.0  |
+| @growthcloud/file-input       | 0.29.0  | @growthcloud/tus                 | 0.29.0  |
+| @growthcloud/form             | 0.29.0  | @growthcloud/url                 | 0.29.0  |
+| @growthcloud/golden-retriever | 0.29.0  | @growthcloud/utils               | 0.29.0  |
+| @growthcloud/google-drive     | 0.29.0  | @growthcloud/webcam              | 0.29.0  |
+| @growthcloud/informer         | 0.29.0  | @growthcloud/xhr-upload          | 0.29.0  |
+| @growthcloud/instagram        | 0.29.0  | uppy                             | 0.29.0  |
 
-- @uppy/core: ⚠️ **breaking** Separate Core and Plugin styles — @uppy/core styles and plugins (@uppy/webcam, for example) now have to be included separately (#1167 / @arturi)
-- @uppy/core: Don't pass removed file IDs to next upload step, fixes (#1148 / @goto-bus-stop)
-- @uppy/core: Fixed getFileType() when passed a file with an upper case extension (#1169 / @jderrough)
-- @uppy/xhr-upload: Add `responseType` option — allows configuring the XMLHttpRequest `.responseType` value (#1150 / @goto-bus-stop)
-- @uppy/companion: Use `createCipheriv` instead of deprecated `createCipher` (#1149 / @goto-bus-stop)
-- @uppy/companion: Store Provider instances on `this.provider` instead of `this[this.id]` (@goto-bus-stop / #1174)
-- @uppy/companion: Pin grant to known stable version (@ifedapoolarewaju / #1165)
-- @uppy/companion: Fix — socket does not handle server.path option (#1142 / @tranvansang)
-- @uppy/status-bar: Use file sizes for progress calculations (#1153 / @goto-bus-stop)
-- @uppy/webcam: Fix a bug with Webcam video overflowing its container (68730f8a1bf731898d46883e00fed937d3ab54ab / @arturi)
+- @growthcloud/core: ⚠️ **breaking** Separate Core and Plugin styles — @growthcloud/core styles and plugins (@growthcloud/webcam, for example) now have to be included separately (#1167 / @arturi)
+- @growthcloud/core: Don't pass removed file IDs to next upload step, fixes (#1148 / @goto-bus-stop)
+- @growthcloud/core: Fixed getFileType() when passed a file with an upper case extension (#1169 / @jderrough)
+- @growthcloud/xhr-upload: Add `responseType` option — allows configuring the XMLHttpRequest `.responseType` value (#1150 / @goto-bus-stop)
+- @growthcloud/companion: Use `createCipheriv` instead of deprecated `createCipher` (#1149 / @goto-bus-stop)
+- @growthcloud/companion: Store Provider instances on `this.provider` instead of `this[this.id]` (@goto-bus-stop / #1174)
+- @growthcloud/companion: Pin grant to known stable version (@ifedapoolarewaju / #1165)
+- @growthcloud/companion: Fix — socket does not handle server.path option (#1142 / @tranvansang)
+- @growthcloud/status-bar: Use file sizes for progress calculations (#1153 / @goto-bus-stop)
+- @growthcloud/webcam: Fix a bug with Webcam video overflowing its container (68730f8a1bf731898d46883e00fed937d3ab54ab / @arturi)
 - docs: Add `triggerUploadOnSubmit` to Form docs, add docs about options of hiding upload/pause/resume/cancel buttons; talk about bundler-less polyfill use (@goto-bus-stop, @arturi)
-- @uppy/dashboard: Better center pause/resume/cancel icons (@arturi / 5112ecf1f48bec9c67309244120fce5f005241ce)
-- @uppy/react: Allow Dashboard props width and height to accept a string for 100% (#1129 / craigcbrunner)
+- @growthcloud/dashboard: Better center pause/resume/cancel icons (@arturi / 5112ecf1f48bec9c67309244120fce5f005241ce)
+- @growthcloud/react: Allow Dashboard props width and height to accept a string for 100% (#1129 / craigcbrunner)
 - Added note about uppy bundle polyfils in uppy readme.md (@goto-bus-stop)
 
 ### 0.28.0
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| uppy | 0.28.0 | @uppy/xhr-upload | 0.28.0 |
-| @uppy/core | 0.28.0 | @uppy/react | 0.28.0 |
-| @uppy/dashboard | 0.28.0 | @uppy/transloadit | 0.28.0 |
-| @uppy/dropbox | 0.28.0 | @uppy/tus | 0.28.0 |
-| @uppy/form | 0.28.0 | @uppy/url | 0.28.0 |
-| @uppy/informer | 0.28.0 | @uppy/webcam | 0.28.0 |
-| @uppy/utils | 0.28.0 | @uppy/url | 0.28.0 |
-| @uppy/thumbnail-generator | 0.28.0 | @uppy/status-bar | 0.28.0 |
-| @uppy/redux-dev-tools | 0.28.0 | @uppy/react | 0.28.0 |
-| @uppy/provider-views | 0.28.0 | @uppy/progress-bar | 0.28.0 |
-| @uppy/instagram | 0.28.0 | @uppy/informer | 0.28.0 |
-| @uppy/google-drive | 0.28.0 | @uppy/golden-retriever | 0.28.0 |
-| @uppy/form | 0.28.0 | @uppy/file-input | 0.28.0 |
-| @uppy/dropbox | 0.28.0 | @uppy/drag-drop | 0.28.0 |
-| @uppy/dashboard | 0.28.0 | @uppy/companion | 0.15.0 |
-| @uppy/aws-s3 | 0.28.0 | @uppy/aws-s3-multipart | 0.28.0 |
+| Package                          | Version | Package                       | Version |
+| -------------------------------- | ------- | ----------------------------- | ------- |
+| uppy                             | 0.28.0  | @growthcloud/xhr-upload       | 0.28.0  |
+| @growthcloud/core                | 0.28.0  | @growthcloud/react            | 0.28.0  |
+| @growthcloud/dashboard           | 0.28.0  | @growthcloud/transloadit      | 0.28.0  |
+| @growthcloud/dropbox             | 0.28.0  | @growthcloud/tus              | 0.28.0  |
+| @growthcloud/form                | 0.28.0  | @growthcloud/url              | 0.28.0  |
+| @growthcloud/informer            | 0.28.0  | @growthcloud/webcam           | 0.28.0  |
+| @growthcloud/utils               | 0.28.0  | @growthcloud/url              | 0.28.0  |
+| @growthcloud/thumbnail-generator | 0.28.0  | @growthcloud/status-bar       | 0.28.0  |
+| @growthcloud/redux-dev-tools     | 0.28.0  | @growthcloud/react            | 0.28.0  |
+| @growthcloud/provider-views      | 0.28.0  | @growthcloud/progress-bar     | 0.28.0  |
+| @growthcloud/instagram           | 0.28.0  | @growthcloud/informer         | 0.28.0  |
+| @growthcloud/google-drive        | 0.28.0  | @growthcloud/golden-retriever | 0.28.0  |
+| @growthcloud/form                | 0.28.0  | @growthcloud/file-input       | 0.28.0  |
+| @growthcloud/dropbox             | 0.28.0  | @growthcloud/drag-drop        | 0.28.0  |
+| @growthcloud/dashboard           | 0.28.0  | @growthcloud/companion        | 0.15.0  |
+| @growthcloud/aws-s3              | 0.28.0  | @growthcloud/aws-s3-multipart | 0.28.0  |
 
-- @uppy/core: bring back i18n locale packs (#1114 / @goto-bus-stop, @arturi)
-- @uppy/companion: option validation (can use https://npm.im/ajv + JSON schema)
-- @uppy/companion: Remove duplicate typescript dependency (#1119 / @goto-bus-stop)
-- @uppy/companion: ⚠️ **breaking** Migrate provider adapter to Companion: saves 5KB on the frontend, all heavy lifting moved to the server side (#1093 / @ifedapoolarewaju)
-- @uppy/core: single-use Uppy instance: adds an `allowMultipleUploads` option to @uppy/core. If set to false, uppy.upload() can only be called once. Afterward, no new files can be added and no new uploads can be started. This is intended to serve the `<form>`-like use case. (#1064 / @goto-bus-stop)
-- @uppy/dashboard: Auto close after finish using `closeAfterFinish: true` (#1106 / @goto-bus-stop)
-- @uppy/dashboard: call `hideAllPanels` after a file is added in Dashboard, instead of `toggleAddFilesPanel(false)` that didn’t hide some panels
-- @uppy/status-bar: ⚠️ **breaking** Add spinner, pause/resume as small round buttons, different color for encoding; Added separate options for hiding pause/resume and cancel button; Added more statuses to the Dashboard, like “Upload complete”, “Upload paused” and “Uploading 5 files” (#1097 / @arturi)
-- @uppy/url: add end2end test for Url plugin (#1120 / @ifedapoolarewaju)
-- @uppy/transloadit: add end2end test for @uppy/transloadit (#1086 / @arturi)
-- @uppy/thumbnail-generator: Add thumbnail generation integration test (#970 / @goto-bus-stop)
-- @uppy/thumbnail-generator: Allow to constrain thumbnail height, fixes #979 (@richartkeil / #1096)
-- @uppy/thumbnail-generator: Fix JPG previews on Edge (#1092 / @goto-bus-stop)
-- @uppy/aws-s3: use RequestClient, it contains the Uppy Companion specific stuff, so we don't have to think about that when working on the S3 plugin. (#1091 / @goto-bus-stop)
-- @uppy/transloadit: Add `COMPANION_PATTERN` constant (#1104 / @goto-bus-stop)
-- @uppy/transloadit: Error tweaks (#1103 / @goto-bus-stop)
-- @uppy/webcam: Fix getting data from Webcam recording if mime type includes codec metadata (#1094 / @goto-bus-stop)
-- @uppy/core: remove upload-cancel event, file-removed should be enough (#1069 / @arutri)
+- @growthcloud/core: bring back i18n locale packs (#1114 / @goto-bus-stop, @arturi)
+- @growthcloud/companion: option validation (can use https://npm.im/ajv + JSON schema)
+- @growthcloud/companion: Remove duplicate typescript dependency (#1119 / @goto-bus-stop)
+- @growthcloud/companion: ⚠️ **breaking** Migrate provider adapter to Companion: saves 5KB on the frontend, all heavy lifting moved to the server side (#1093 / @ifedapoolarewaju)
+- @growthcloud/core: single-use Uppy instance: adds an `allowMultipleUploads` option to @growthcloud/core. If set to false, uppy.upload() can only be called once. Afterward, no new files can be added and no new uploads can be started. This is intended to serve the `<form>`-like use case. (#1064 / @goto-bus-stop)
+- @growthcloud/dashboard: Auto close after finish using `closeAfterFinish: true` (#1106 / @goto-bus-stop)
+- @growthcloud/dashboard: call `hideAllPanels` after a file is added in Dashboard, instead of `toggleAddFilesPanel(false)` that didn’t hide some panels
+- @growthcloud/status-bar: ⚠️ **breaking** Add spinner, pause/resume as small round buttons, different color for encoding; Added separate options for hiding pause/resume and cancel button; Added more statuses to the Dashboard, like “Upload complete”, “Upload paused” and “Uploading 5 files” (#1097 / @arturi)
+- @growthcloud/url: add end2end test for Url plugin (#1120 / @ifedapoolarewaju)
+- @growthcloud/transloadit: add end2end test for @growthcloud/transloadit (#1086 / @arturi)
+- @growthcloud/thumbnail-generator: Add thumbnail generation integration test (#970 / @goto-bus-stop)
+- @growthcloud/thumbnail-generator: Allow to constrain thumbnail height, fixes #979 (@richartkeil / #1096)
+- @growthcloud/thumbnail-generator: Fix JPG previews on Edge (#1092 / @goto-bus-stop)
+- @growthcloud/aws-s3: use RequestClient, it contains the Uppy Companion specific stuff, so we don't have to think about that when working on the S3 plugin. (#1091 / @goto-bus-stop)
+- @growthcloud/transloadit: Add `COMPANION_PATTERN` constant (#1104 / @goto-bus-stop)
+- @growthcloud/transloadit: Error tweaks (#1103 / @goto-bus-stop)
+- @growthcloud/webcam: Fix getting data from Webcam recording if mime type includes codec metadata (#1094 / @goto-bus-stop)
+- @growthcloud/core: remove upload-cancel event, file-removed should be enough (#1069 / @arutri)
 - meta: document events, deprecate unused (#1069 / @arturi)
 - meta: New demo video/gif and website frontpage code sample (#1099 / @arturi)
 - meta: Update react.md (#1110 / @asmt3)
@@ -3747,14 +3723,14 @@ Released: 2019-03-08
 
 Released: 2018-09-27
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| uppy | 0.27.5 | @uppy/instagram | 0.27.5 |
-| @uppy/core | 0.27.3 | @uppy/react | 0.27.5 |
-| @uppy/dashboard | 0.27.5 | @uppy/transloadit | 0.27.5 |
-| @uppy/dropbox | 0.27.4 | @uppy/tus | 0.27.5 |
-| @uppy/form | 0.27.4 | @uppy/url | 0.27.5 |
-| @uppy/informer | 0.27.4 | @uppy/webcam | 0.27.4 |
+| Package                | Version | Package                  | Version |
+| ---------------------- | ------- | ------------------------ | ------- |
+| uppy                   | 0.27.5  | @growthcloud/instagram   | 0.27.5  |
+| @growthcloud/core      | 0.27.3  | @growthcloud/react       | 0.27.5  |
+| @growthcloud/dashboard | 0.27.5  | @growthcloud/transloadit | 0.27.5  |
+| @growthcloud/dropbox   | 0.27.4  | @growthcloud/tus         | 0.27.5  |
+| @growthcloud/form      | 0.27.4  | @growthcloud/url         | 0.27.5  |
+| @growthcloud/informer  | 0.27.4  | @growthcloud/webcam      | 0.27.4  |
 
 - core: Add `onMount()` and `this.parent` to Plugin (#1062 / @arturi)
 - core: Call `removeFile` on each file when doing `cancelAll` (#1058 / @arturi)
@@ -3770,15 +3746,15 @@ Released: 2018-09-18
 
 New versions in this release:
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| uppy | 0.27.4 | @uppy/instagram | 0.27.4 |
-| @uppy/companion | 0.14.4 | @uppy/react | 0.27.4 |
-| @uppy/core | 0.27.2 | @uppy/transloadit | 0.27.4 |
-| @uppy/dashboard | 0.27.4 | @uppy/tus | 0.27.4 |
-| @uppy/dropbox | 0.27.3 | @uppy/url | 0.27.4 |
-| @uppy/form | 0.27.3 | @uppy/webcam | 0.27.3 |
-| @uppy/informer | 0.27.3 | - | - |
+| Package                | Version | Package                  | Version |
+| ---------------------- | ------- | ------------------------ | ------- |
+| uppy                   | 0.27.4  | @growthcloud/instagram   | 0.27.4  |
+| @growthcloud/companion | 0.14.4  | @growthcloud/react       | 0.27.4  |
+| @growthcloud/core      | 0.27.2  | @growthcloud/transloadit | 0.27.4  |
+| @growthcloud/dashboard | 0.27.4  | @growthcloud/tus         | 0.27.4  |
+| @growthcloud/dropbox   | 0.27.3  | @growthcloud/url         | 0.27.4  |
+| @growthcloud/form      | 0.27.3  | @growthcloud/webcam      | 0.27.3  |
+| @growthcloud/informer  | 0.27.3  | -                        | -       |
 
 Changes:
 
@@ -3786,15 +3762,15 @@ Changes:
 - build: Add more checks to release script (#1050 / @goto-bus-stop)
 - build: start companion once in tests (#1052 / @ifedapoolarewaju)
 - buid: set companion config values when running test (@ifedapoolarewaju)
-- @uppy/core: Note that the `<script>` tag should come at the bottom of the page (#1043 / @arturi)
-- @uppy/dashboard: Add paddings and remove outline-offset for tab buttons so that the outline is visible (26037ac145111d3c636a63840bb4daa61304bae5 / @arturi)
-- @uppy/dashboard: Replace updateDashboardElWidth with ResizeObserver (using resize-observer-polyfill) (#1053 / @arturi)
-- @uppy/dashboard: Add showSelectedFiles option (#1055 / @arturi)
-- @uppy/dashboard: Fix incorrect title (tooltip) message on file preview by refactoring (#1056 / @arturi)
-- @uppy/companion: Google Drive: Support Team Drives (#978 / @pauln)
-- @uppy/companion: Provider integration test fixes #(1013 / @goto-bus-stop)
-- @uppy/companion: Fix bug: oauth always redirects to root path (#1030 / @tranvansang)
-- @uppy/companion: Fix certificate generation for companion (#1041 / @kiloreux)
+- @growthcloud/core: Note that the `<script>` tag should come at the bottom of the page (#1043 / @arturi)
+- @growthcloud/dashboard: Add paddings and remove outline-offset for tab buttons so that the outline is visible (26037ac145111d3c636a63840bb4daa61304bae5 / @arturi)
+- @growthcloud/dashboard: Replace updateDashboardElWidth with ResizeObserver (using resize-observer-polyfill) (#1053 / @arturi)
+- @growthcloud/dashboard: Add showSelectedFiles option (#1055 / @arturi)
+- @growthcloud/dashboard: Fix incorrect title (tooltip) message on file preview by refactoring (#1056 / @arturi)
+- @growthcloud/companion: Google Drive: Support Team Drives (#978 / @pauln)
+- @growthcloud/companion: Provider integration test fixes #(1013 / @goto-bus-stop)
+- @growthcloud/companion: Fix bug: oauth always redirects to root path (#1030 / @tranvansang)
+- @growthcloud/companion: Fix certificate generation for companion (#1041 / @kiloreux)
 
 ### 0.27.3
 
@@ -3802,37 +3778,37 @@ Released: 2018-09-03.
 
 New versions in this release:
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| uppy | 0.27.3 | @uppy/instagram | 0.27.3 |
-| @uppy/aws-s3-multipart | 0.27.2 | @uppy/progress-bar | 0.27.2 |
-| @uppy/aws-s3 | 0.27.2 | @uppy/provider-views | 0.27.2 |
-| @uppy/companion-client | 0.27.2 | @uppy/react | 0.27.3 |
-| @uppy/companion | 0.14.3 | @uppy/redux-dev-tools | 0.27.2 |
-| @uppy/core | 0.27.1 | @uppy/status-bar | 0.27.2 |
-| @uppy/dashboard | 0.27.3 | @uppy/thumbnail-generator | 0.27.2 |
-| @uppy/drag-drop | 0.27.2 | @uppy/transloadit | 0.27.3 |
-| @uppy/dropbox | 0.27.2 | @uppy/tus | 0.27.3 |
-| @uppy/file-input | 0.27.2 | @uppy/url | 0.27.3 |
-| @uppy/form | 0.27.2 | @uppy/utils | 0.27.1 |
-| @uppy/golden-retriever | 0.27.2 | @uppy/webcam | 0.27.2 |
-| @uppy/google-drive | 0.27.3 | @uppy/xhr-upload | 0.27.2 |
-| @uppy/informer | 0.27.2 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| uppy                          | 0.27.3  | @growthcloud/instagram           | 0.27.3  |
+| @growthcloud/aws-s3-multipart | 0.27.2  | @growthcloud/progress-bar        | 0.27.2  |
+| @growthcloud/aws-s3           | 0.27.2  | @growthcloud/provider-views      | 0.27.2  |
+| @growthcloud/companion-client | 0.27.2  | @growthcloud/react               | 0.27.3  |
+| @growthcloud/companion        | 0.14.3  | @growthcloud/redux-dev-tools     | 0.27.2  |
+| @growthcloud/core             | 0.27.1  | @growthcloud/status-bar          | 0.27.2  |
+| @growthcloud/dashboard        | 0.27.3  | @growthcloud/thumbnail-generator | 0.27.2  |
+| @growthcloud/drag-drop        | 0.27.2  | @growthcloud/transloadit         | 0.27.3  |
+| @growthcloud/dropbox          | 0.27.2  | @growthcloud/tus                 | 0.27.3  |
+| @growthcloud/file-input       | 0.27.2  | @growthcloud/url                 | 0.27.3  |
+| @growthcloud/form             | 0.27.2  | @growthcloud/utils               | 0.27.1  |
+| @growthcloud/golden-retriever | 0.27.2  | @growthcloud/webcam              | 0.27.2  |
+| @growthcloud/google-drive     | 0.27.3  | @growthcloud/xhr-upload          | 0.27.2  |
+| @growthcloud/informer         | 0.27.2  | -                                | -       |
 
 Changes:
 
 - build: Update readme contributors list before publish (#1023 / @goto-bus-stop)
 - build: Enable cssnano safe mode. Fixes `z-index` primarily. (@goto-bus-stop)
-- @uppy/status-bar: Show number of started uploads, fixes #983 (@goto-bus-stop)
-- @uppy/thumbnail-generator: Remove image clear code, fixes #1025. (#1028 / @goto-bus-stop)
-- @uppy/aws-s3-multipart: Proper cleanup on cancellation, fixes #992 (#1021 / @goto-bus-stop)
-- @uppy/utils: Add fallback to `getFileType` (#1022 / @goto-bus-stop)
-- @uppy/transloadit: Lazy load socket.io-client, avoiding `buffer` warnings in IE10 when using the `uppy` CDN package. (#1019 / @goto-bus-stop)
-- @uppy/webcam: Fix for Cordova mangling new File instances (#1034 / @firesharkstudios)
-- @uppy/xhr-upload: Add file name to Blob instance uploads (#1034 / @firesharkstudios)
-- @uppy/transloadit: Only use socket.io's WebSocket transport. (#1029 / @goto-bus-stop)
-- @uppy/companion: Rename `UPPYSERVER_` environment variables to `COMPANION_` + more. The old names still work for now but will be dropped in a future release (#1037 / @kvz)
-- ⚠️ **breaking** @uppy/transloadit: Change hosted Companion URLs to `https://api2.transloadit.com/companion`, using the hosted uppy-server URLs will now throw an error (#1038 / @goto-bus-stop)
+- @growthcloud/status-bar: Show number of started uploads, fixes #983 (@goto-bus-stop)
+- @growthcloud/thumbnail-generator: Remove image clear code, fixes #1025. (#1028 / @goto-bus-stop)
+- @growthcloud/aws-s3-multipart: Proper cleanup on cancellation, fixes #992 (#1021 / @goto-bus-stop)
+- @growthcloud/utils: Add fallback to `getFileType` (#1022 / @goto-bus-stop)
+- @growthcloud/transloadit: Lazy load socket.io-client, avoiding `buffer` warnings in IE10 when using the `uppy` CDN package. (#1019 / @goto-bus-stop)
+- @growthcloud/webcam: Fix for Cordova mangling new File instances (#1034 / @firesharkstudios)
+- @growthcloud/xhr-upload: Add file name to Blob instance uploads (#1034 / @firesharkstudios)
+- @growthcloud/transloadit: Only use socket.io's WebSocket transport. (#1029 / @goto-bus-stop)
+- @growthcloud/companion: Rename `UPPYSERVER_` environment variables to `COMPANION_` + more. The old names still work for now but will be dropped in a future release (#1037 / @kvz)
+- ⚠️ **breaking** @growthcloud/transloadit: Change hosted Companion URLs to `https://api2.transloadit.com/companion`, using the hosted uppy-server URLs will now throw an error (#1038 / @goto-bus-stop)
 
 ### 0.27.2
 
@@ -3840,18 +3816,18 @@ Released: 2018-08-23.
 
 New versions in this release:
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| uppy | 0.27.2 | @uppy/react | 0.27.2 |
-| @uppy/companion | 0.14.2 | @uppy/transloadit | 0.27.2 |
-| @uppy/dashboard | 0.27.2 | @uppy/tus | 0.27.2 |
-| @uppy/google-drive | 0.27.2 | @uppy/url | 0.27.2 |
-| @uppy/instagram | 0.27.2 | - | - |
+| Package                   | Version | Package                  | Version |
+| ------------------------- | ------- | ------------------------ | ------- |
+| uppy                      | 0.27.2  | @growthcloud/react       | 0.27.2  |
+| @growthcloud/companion    | 0.14.2  | @growthcloud/transloadit | 0.27.2  |
+| @growthcloud/dashboard    | 0.27.2  | @growthcloud/tus         | 0.27.2  |
+| @growthcloud/google-drive | 0.27.2  | @growthcloud/url         | 0.27.2  |
+| @growthcloud/instagram    | 0.27.2  | -                        | -       |
 
 Changes:
 
-- @uppy/companion: Auto deploy Companion. (#1008 / @kiloreux)
-- @uppy/transloadit: Refactors and add fallback if socket connection fails. (#1011 / @goto-bus-stop)
+- @growthcloud/companion: Auto deploy Companion. (#1008 / @kiloreux)
+- @growthcloud/transloadit: Refactors and add fallback if socket connection fails. (#1011 / @goto-bus-stop)
 - ci: No need to web:install if we're not deploying. (#1012 / @goto-bus-stop)
 
 ### 0.27.1
@@ -3860,56 +3836,56 @@ Released: 2018-08-16.
 
 New versions in this release:
 
-| Package | Version | Package | Version |
-|-|-|-|-|
-| uppy | 0.27.1 | @uppy/instagram | 0.27.1 |
-| @uppy/aws-s3-multipart | 0.27.1 | @uppy/progress-bar | 0.27.1 |
-| @uppy/aws-s3 | 0.27.1 | @uppy/provider-views | 0.27.1 |
-| @uppy/companion-client | 0.27.1 | @uppy/react | 0.27.1 |
-| @uppy/companion | 0.14.1 | @uppy/redux-dev-tools | 0.27.1 |
-| @uppy/dashboard | 0.27.1 | @uppy/status-bar | 0.27.1 |
-| @uppy/drag-drop | 0.27.1 | @uppy/thumbnail-generator | 0.27.1 |
-| @uppy/dropbox | 0.27.1 | @uppy/transloadit | 0.27.1 |
-| @uppy/file-input | 0.27.1 | @uppy/tus | 0.27.1 |
-| @uppy/form | 0.27.1 | @uppy/url | 0.27.1 |
-| @uppy/golden-retriever | 0.27.1 | @uppy/webcam | 0.27.1 |
-| @uppy/google-drive | 0.27.1 | @uppy/xhr-upload | 0.27.1 |
-| @uppy/informer | 0.27.1 | - | - |
+| Package                       | Version | Package                          | Version |
+| ----------------------------- | ------- | -------------------------------- | ------- |
+| uppy                          | 0.27.1  | @growthcloud/instagram           | 0.27.1  |
+| @growthcloud/aws-s3-multipart | 0.27.1  | @growthcloud/progress-bar        | 0.27.1  |
+| @growthcloud/aws-s3           | 0.27.1  | @growthcloud/provider-views      | 0.27.1  |
+| @growthcloud/companion-client | 0.27.1  | @growthcloud/react               | 0.27.1  |
+| @growthcloud/companion        | 0.14.1  | @growthcloud/redux-dev-tools     | 0.27.1  |
+| @growthcloud/dashboard        | 0.27.1  | @growthcloud/status-bar          | 0.27.1  |
+| @growthcloud/drag-drop        | 0.27.1  | @growthcloud/thumbnail-generator | 0.27.1  |
+| @growthcloud/dropbox          | 0.27.1  | @growthcloud/transloadit         | 0.27.1  |
+| @growthcloud/file-input       | 0.27.1  | @growthcloud/tus                 | 0.27.1  |
+| @growthcloud/form             | 0.27.1  | @growthcloud/url                 | 0.27.1  |
+| @growthcloud/golden-retriever | 0.27.1  | @growthcloud/webcam              | 0.27.1  |
+| @growthcloud/google-drive     | 0.27.1  | @growthcloud/xhr-upload          | 0.27.1  |
+| @growthcloud/informer         | 0.27.1  | -                                | -       |
 
 Changes:
 
-- @uppy/companion: use explicit typescript devDependency.
-- @uppy/companion: rename Server → Companion in documentation (#1007 / @goto-bus-stop)
+- @growthcloud/companion: use explicit typescript devDependency.
+- @growthcloud/companion: rename Server → Companion in documentation (#1007 / @goto-bus-stop)
 - website: Load all prism languages (#1004 / @goto-bus-stop)
-- @uppy/core: Fix peerDependencies of plugin packages. (#1005 / @goto-bus-stop)
-- @uppy/companion-client: Send cookies with fetch requests (#1000 / @geoffappleford)
+- @growthcloud/core: Fix peerDependencies of plugin packages. (#1005 / @goto-bus-stop)
+- @growthcloud/companion-client: Send cookies with fetch requests (#1000 / @geoffappleford)
 - Add e2e test for providers (#990 / @ifedapoolarewaju)
 - website: attempt to fix font sizes on mobile vs desktop (@arturi)
-- @uppy/dashboard:  show note and “powered by” when no acquire/sources plugins are used too (@arturi)
+- @growthcloud/dashboard: show note and “powered by” when no acquire/sources plugins are used too (@arturi)
 - Update dependencies. (#995 / @goto-bus-stop)
 
 ### 0.27.0
 
 Released: 2018-08-11.
 
-- @uppy/aws-s3-multipart: Check for file existance (#981 / @bartvde)
-- @uppy/aws-s3: Abort all chunk requests when aborting the multipart upload (#967 / @pekala)
-- @uppy/aws-s3: Catch and handle errors in prepareUploadPart (#966 / @pekala)
-- @uppy/companion: ⚠️ **breaking** rename uppy-server to @uppy/companion (#953 / @ifedapoolarewaju)
-- @uppy/companion: google Drive — move to v3 API (#977 / @pauln)
-- @uppy/core: allow editing plugin titles (names) so that e.g. “Camera” can be translated into different languages, fixes #920 (#942 / @arturi)
-- @uppy/core: fix `setPluginState` (#968 / @goto-bus-stop)
-- @uppy/core: make Uppy run in React Native (by adding `window !== undefined` check) (@arturi / #960)
-- @uppy/core: remove all: initial — was causing issues when multiple uppy stylesheets are used (#942 / @arturi)
-- @uppy/core: ⚠️ **breaking**  default `autoProceed` to `false` (#961 / @arturi)
-- @uppy/dashboard: downgrade `drag-drop` module to support folders again (#942 / @arturi)
-- @uppy/dashboard: fix animation — wait for closing animation to finish before opening modal (#942 / @arturi)
-- @uppy/dashboard: ⚠️ **breaking** Introduce `.uppy-size--md` and `.uppy-size--lg` breakpoint classes; throttle the function that checks for width (#942 / @arturi)
-- @uppy/dashboard: ⚠️ **breaking** UI overhaul: AddFiles panel, significantly improved mobile styles,  (#942 / @arturi, @nqst)
-- @uppy/informer: ⚠️ **breaking** make it monochrome and round. always gray, no status colors (#942 / @arturi)
-- @uppy/provider-views: fix wrong 'no files available' msg flash (#938 / @ifedapoolarewaju)
-- @uppy/url: fix Url plugin reacting to wrong drop/paste events, add ignoreEvent (#942 / @arturi)
-- @uppy/webcam: add webcam permission screen i18 strings, fixes #931 (#942 / @arturi)
+- @growthcloud/aws-s3-multipart: Check for file existance (#981 / @bartvde)
+- @growthcloud/aws-s3: Abort all chunk requests when aborting the multipart upload (#967 / @pekala)
+- @growthcloud/aws-s3: Catch and handle errors in prepareUploadPart (#966 / @pekala)
+- @growthcloud/companion: ⚠️ **breaking** rename uppy-server to @growthcloud/companion (#953 / @ifedapoolarewaju)
+- @growthcloud/companion: google Drive — move to v3 API (#977 / @pauln)
+- @growthcloud/core: allow editing plugin titles (names) so that e.g. “Camera” can be translated into different languages, fixes #920 (#942 / @arturi)
+- @growthcloud/core: fix `setPluginState` (#968 / @goto-bus-stop)
+- @growthcloud/core: make Uppy run in React Native (by adding `window !== undefined` check) (@arturi / #960)
+- @growthcloud/core: remove all: initial — was causing issues when multiple uppy stylesheets are used (#942 / @arturi)
+- @growthcloud/core: ⚠️ **breaking** default `autoProceed` to `false` (#961 / @arturi)
+- @growthcloud/dashboard: downgrade `drag-drop` module to support folders again (#942 / @arturi)
+- @growthcloud/dashboard: fix animation — wait for closing animation to finish before opening modal (#942 / @arturi)
+- @growthcloud/dashboard: ⚠️ **breaking** Introduce `.uppy-size--md` and `.uppy-size--lg` breakpoint classes; throttle the function that checks for width (#942 / @arturi)
+- @growthcloud/dashboard: ⚠️ **breaking** UI overhaul: AddFiles panel, significantly improved mobile styles, (#942 / @arturi, @nqst)
+- @growthcloud/informer: ⚠️ **breaking** make it monochrome and round. always gray, no status colors (#942 / @arturi)
+- @growthcloud/provider-views: fix wrong 'no files available' msg flash (#938 / @ifedapoolarewaju)
+- @growthcloud/url: fix Url plugin reacting to wrong drop/paste events, add ignoreEvent (#942 / @arturi)
+- @growthcloud/webcam: add webcam permission screen i18 strings, fixes #931 (#942 / @arturi)
 - build: Add object rest spread transform (#965 / @goto-bus-stop)
 - build: Split integration tests and add one using create-react-app (#952 / @goto-bus-stop)
 - build: Upload to CDN when commit starts with “Release” (#989 / @arturi)
@@ -3923,7 +3899,7 @@ Released: 2018-06-28.
 - ⚠️ **breaking** split into many packages (#906 / @goto-bus-stop, @arturi)
 - xhr-upload: Add `withCredentials` option (#874 / @tuoxiansp)
 - utils: Move single-use utils into their appropriate packages. (#926 / @goto-bus-stop)
-- core: Export Plugin class from @uppy/core (#924 / @goto-bus-stop)
+- core: Export Plugin class from @growthcloud/core (#924 / @goto-bus-stop)
 - Typescript typings improvements (#923 / @goto-bus-stop)
 - core: change focus to solid line for all elements (ade214e5aab822e1fc3ab8e0fac80c4fc04d7bc3 / @arturi)
 - dashboard: fix Dashboards tabs overflow by adding scroll; improve scroll (b974244c7f4e01adcf2478b7f651dada63d342f1 / @arturi)
@@ -3995,7 +3971,7 @@ Released: 2018-06-01.
 
 - core: ⚠️ **breaking** Removed `.run()` (to solve issues like #756), just `.use()` all the way (#793 / goto-bus-stop)
 - core: ⚠️ **breaking** Changed some of the strings that we were concatenating in Preact, now their interpolation is handled by the Translator instead. This is important for languages that have different word order than English. (#845 / @goto-bus-stop)
-Changed strings:
+  Changed strings:
   - core: `failedToUpload` needs to contain `%{file}`, substituted by the name of the file that failed
   - dashboard: `dropPaste` and `dropPasteImport` need to contain `%{browse}`, substituted by the "browse" text button
   - dashboard: `editing` needs to contain `%{file}`, substituted by the name of the file being edited
@@ -4107,7 +4083,7 @@ Released: 2018-04-12.
 - s3: Fix xhr response handlers (#625, @goto-bus-stop)
 - statusbar: Cancel button for any kind of uploads (@arturi, @goto-bus-stop)
 - url: Add checks for protocols, assume `http` when no protocol is used (#682 / @arturi)
-- url: Refactor things into Provider, see comments in  https://github.com/transloadit/uppy/pull/588; exposing the Provider module and the ProviderView to the public API (#727 / @ifedapoolarewaju, @arturi)
+- url: Refactor things into Provider, see comments in https://github.com/transloadit/uppy/pull/588; exposing the Provider module and the ProviderView to the public API (#727 / @ifedapoolarewaju, @arturi)
 - webcam: Styles updates: adapt for mobile, better camera icon, move buttons to the bottom bar (#682 / @arturi)
 - server: Fixed security vulnerability in transient dependency [#70](https://github.com/transloadit/uppy-server/issues/70) (@ifedapoolarewaju)
 - server: Auto-generate tmp download file name to avoid Path traversal (@ifedapoolarewaju)
@@ -4524,7 +4500,7 @@ Favorite Uppy Server version: 0.4.0.
 - dashboard: basic React component (@arturi)
 - core: experiment with `nanoraf` and `requestAnimationFrame` (@arturi)
 - core: add throttling of progress updates (@arturi)
-- dashobard: fix Missing `file.progress.bytesTotal` property  (@arturi #152)
+- dashobard: fix Missing `file.progress.bytesTotal` property (@arturi #152)
 - dashboard: switch to prettier-bytes for more user-friendly progress updates (@arturi)
 - dashboard: fix `updateDashboardElWidth()` not firing in time, causing container width to be 0 (@arturi)
 - multipart: treat all 2xx responses as successful, return xhr object in `core:upload-success` (@arturi #156 #154)
@@ -4844,7 +4820,7 @@ Released: February 11, 2016.
 
 - build: Use parallelshell and tweak browserify to work with templates (@arturi)
 - core: Add basic i18n support via `core.translate()` and locale loading (#47, @arturi)
-- core: implement a non-blocking `install` method (for Progressbar, for example)  (@arturi, @kvz)
+- core: implement a non-blocking `install` method (for Progressbar, for example) (@arturi, @kvz)
 - core: Implement ejs or es6 templating (@arturi, @hedgerh)
 - core: Improve on `_i18n` support, add tests (#47, @arturi)
 - core: Integrate eslint in our build procedure and make Travis fail on errors found in our examples, Core and Plugins, such as `> 100` char lines (@kvz)

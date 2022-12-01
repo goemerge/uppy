@@ -1,27 +1,27 @@
 ---
 title: "&lt;DashboardModal />"
 type: docs
-module: "@uppy/react"
+module: "@growthcloud/react"
 permalink: docs/react/dashboard-modal/
 order: 6
 category: "React"
 ---
 
-The `<DashboardModal />` component wraps the [`@uppy/dashboard`][] plugin, allowing control over the modal `open` state using a prop.
+The `<DashboardModal />` component wraps the [`@growthcloud/dashboard`][] plugin, allowing control over the modal `open` state using a prop.
 
 ## Installation
 
 Install from NPM:
 
 ```shell
-npm install @uppy/react @uppy/dashboard @uppy/core
+npm install @growthcloud/react @growthcloud/dashboard @growthcloud/core
 ```
 
 ```js
-import { DashboardModal } from '@uppy/react'
+import { DashboardModal } from "@growthcloud/react";
 
 // Alternatively, you can also use a default import:
-// import DashboardModal from '@uppy/react/lib/DashboardModal'
+// import DashboardModal from '@growthcloud/react/lib/DashboardModal'
 ```
 
 ## CSS
@@ -29,15 +29,15 @@ import { DashboardModal } from '@uppy/react'
 The `DashboardModal` component requires the following CSS for styling:
 
 ```js
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
+import "@growthcloud/core/dist/style.css";
+import "@growthcloud/dashboard/dist/style.css";
 ```
 
-Import general Core styles from `@uppy/core/dist/style.css` first, then add the Dashboard styles from `@uppy/dashboard/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
+Import general Core styles from `@growthcloud/core/dist/style.css` first, then add the Dashboard styles from `@growthcloud/dashboard/dist/style.css`. A minified version is also available as `style.min.css` at the same path. The way to do import depends on your build system.
 
-⚠️ The `@uppy/dashboard` plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as ([`@uppy/status-bar`](/docs/status-bar) and [`@uppy/informer`](/docs/informer)). If you also use the `@uppy/status-bar` or `@uppy/informer` plugin directly, you should not include their CSS files, but instead only use the one from the `@uppy/dashboard` plugin.
+⚠️ The `@growthcloud/dashboard` plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as ([`@growthcloud/status-bar`](/docs/status-bar) and [`@growthcloud/informer`](/docs/informer)). If you also use the `@growthcloud/status-bar` or `@growthcloud/informer` plugin directly, you should not include their CSS files, but instead only use the one from the `@growthcloud/dashboard` plugin.
 
-Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as `@uppy/url` and `@uppy/webcam`, are not included. If you are using those, please see their docs and make sure to include styles for them as well.
+Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as `@growthcloud/url` and `@growthcloud/webcam`, are not included. If you are using those, please see their docs and make sure to include styles for them as well.
 
 <!-- Make sure the old name of this section still works -->
 
@@ -45,22 +45,22 @@ Styles for Provider plugins, like Google Drive and Instagram, are also bundled w
 
 ## Props
 
-The `<DashboardModal />` component supports most [`@uppy/dashboard`][] options as props. It adds two more:
+The `<DashboardModal />` component supports most [`@growthcloud/dashboard`][] options as props. It adds two more:
 
-* `open` - Boolean true or false, setting this to `true` opens the modal and setting it to `false` closes it.
-* `onRequestClose` - Callback called when the user attempts to close the modal, either by clicking the close button or by clicking outside the modal (if the `closeModalOnClickOutside` prop is set).
+- `open` - Boolean true or false, setting this to `true` opens the modal and setting it to `false` closes it.
+- `onRequestClose` - Callback called when the user attempts to close the modal, either by clicking the close button or by clicking outside the modal (if the `closeModalOnClickOutside` prop is set).
 
 An Uppy instance must be provided in the `uppy={}` prop: see [Initializing Uppy](/docs/react/initializing) for details.
 
-The `target={}` prop can be used to mount the Dashboard modal elsewhere in the DOM. If not given, the modal will be mounted at where the component is used. Unlike the raw [`@uppy/dashboard`][] plugin, the `<DashboardModal />` component can _only_ take DOM element objects, not CSS selectors.
+The `target={}` prop can be used to mount the Dashboard modal elsewhere in the DOM. If not given, the modal will be mounted at where the component is used. Unlike the raw [`@growthcloud/dashboard`][] plugin, the `<DashboardModal />` component can _only_ take DOM element objects, not CSS selectors.
 
-To use other plugins like [`@uppy/webcam`][] with the `<DashboardModal />` component, add them to the Uppy instance and then specify their `id` in the [`plugins`](/docs/dashboard/#plugins) prop:
+To use other plugins like [`@growthcloud/webcam`][] with the `<DashboardModal />` component, add them to the Uppy instance and then specify their `id` in the [`plugins`](/docs/dashboard/#plugins) prop:
 
 ```js
 // Do this wherever you initialize Uppy, e.g., in a React component's constructor method.
 // Do NOT do it in `render()` or any other method that is called more than once!
-uppy.use(Webcam) // `id` defaults to "Webcam"
-uppy.use(Webcam, { id: 'MyWebcam' }) // `id` is… "MyWebcam"
+uppy.use(Webcam); // `id` defaults to "Webcam"
+uppy.use(Webcam, { id: "MyWebcam" }); // `id` is… "MyWebcam"
 ```
 
 Then do `plugins={['Webcam']}`.
@@ -68,58 +68,59 @@ Then do `plugins={['Webcam']}`.
 Here is a full example that uses a button to open the modal:
 
 ```js
-import React from 'react'
-import { DashboardModal } from '@uppy/react'
+import React from "react";
+import { DashboardModal } from "@growthcloud/react";
 
 class MusicUploadButton extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       modalOpen: false,
-    }
+    };
 
     this.uppy = new Uppy()
-      .use(XHRUpload, { endpoint: '/api/songs/upload' })
-      .use(Webcam, { modes: ['audio-only'] })
+      .use(XHRUpload, { endpoint: "/api/songs/upload" })
+      .use(Webcam, { modes: ["audio-only"] });
 
-    this.handleOpen = this.handleOpen.bind(this)
-    this.handleClose = this.handleClose.bind(this)
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
-  componentWillUnmount () {
-    this.uppy.close({ reason: 'unmount' })
+  componentWillUnmount() {
+    this.uppy.close({ reason: "unmount" });
   }
 
-  handleOpen () {
+  handleOpen() {
     this.setState({
       modalOpen: true,
-    })
+    });
   }
 
-  handleClose () {
+  handleClose() {
     this.setState({
       modalOpen: false,
-    })
+    });
   }
 
-  render () {
+  render() {
     return (
       <div>
-        <button type="button" onClick={this.handleOpen}>Upload some music</button>
+        <button type="button" onClick={this.handleOpen}>
+          Upload some music
+        </button>
         <DashboardModal
           uppy={this.uppy}
           closeModalOnClickOutside
           open={this.state.modalOpen}
           onRequestClose={this.handleClose}
-          plugins={['Webcam']}
+          plugins={["Webcam"]}
         />
       </div>
-    )
+    );
   }
 }
 ```
 
-[`@uppy/dashboard`]: /docs/dashboard/
-
-[`@uppy/webcam`]: /docs/webcam/
+[`@growthcloud/dashboard`]: /docs/dashboard/
+[`@growthcloud/webcam`]: /docs/webcam/
