@@ -2739,7 +2739,7 @@ This release offers a bunch of Companion improvements and bug fixes.
 
 Released 2020-02-28
 
-This release rolls out a fix for companion an issue introduced after [this PR](https://github.com/transloadit/uppy/pull/1668). See [#2096](https://github.com/transloadit/uppy/pull/2096) for more details.
+This release rolls out a fix for companion an issue introduced after [this PR](https://github.com/goemerge/uppy/pull/1668). See [#2096](https://github.com/goemerge/uppy/pull/2096) for more details.
 
 | Package                | Version |
 | ---------------------- | ------- |
@@ -2749,7 +2749,7 @@ This release rolls out a fix for companion an issue introduced after [this PR](h
 
 Released: 2020-02-27
 
-Previous `1.9.3` release has been deprecated due to broken URL Provider (see [#2094](https://github.com/transloadit/uppy/pull/2094)).
+Previous `1.9.3` release has been deprecated due to broken URL Provider (see [#2094](https://github.com/goemerge/uppy/pull/2094)).
 
 | Package                | Version | Package              | Version |
 | ---------------------- | ------- | -------------------- | ------- |
@@ -2783,7 +2783,7 @@ Released: 2020-02-26
 
 Released: 2020-02-14
 
-This release adds `@growthcloud/onedrive` to `uppy`’s `package.json`, fixing the bug reported at https://github.com/transloadit/uppy/commit/f291688fb813c55ff905abb334eff61c1c5a9dd0#commitcomment-37278041, and introduces more robust type checking in #1918.
+This release adds `@growthcloud/onedrive` to `uppy`’s `package.json`, fixing the bug reported at https://github.com/goemerge/uppy/commit/f291688fb813c55ff905abb334eff61c1c5a9dd0#commitcomment-37278041, and introduces more robust type checking in #1918.
 
 | Package                       | Version | Package                          | Version |
 | ----------------------------- | ------- | -------------------------------- | ------- |
@@ -2808,7 +2808,7 @@ This release adds `@growthcloud/onedrive` to `uppy`’s `package.json`, fixing t
 - build: Actually check types. Use tsd so our typings test files can actually assert that types are correct (#1918 / @goto-bus-stop )
 - @growthcloud/companion: Only set cookies for providers that need it (#2055 / @ifedapoolarewaju)
 - docs: Add Content-Type header to presigned url example (#2061 / @scherroman)
-- uppy: Add onedrive to uppy package.json ([349247607513bc6b33bf2a90ab0b82f8f2e81d78](https://github.com/transloadit/uppy/commit/349247607513bc6b33bf2a90ab0b82f8f2e81d78) / @arturi)
+- uppy: Add onedrive to uppy package.json ([349247607513bc6b33bf2a90ab0b82f8f2e81d78](https://github.com/goemerge/uppy/commit/349247607513bc6b33bf2a90ab0b82f8f2e81d78) / @arturi)
 
 ### 1.9.1
 
@@ -2879,7 +2879,7 @@ This release adds support for the new Instagram API, image and archive icons to 
 - @growthcloud/informer, @growthcloud/status-bar: display a browser alert when an error question mark button is clicked (#2031 / @arturi)
 - build: upload downloadable zip archive of releases to CDN (#2052 / @kvz)
 - providers: remove redundant use of options (#2046 / @ifedapoolarewaju)
-- website: switch from Discourse to Disqus for comments ([c4af95d98cdd5c3727ee5c14dfd07af227c59b9e](https://github.com/transloadit/uppy/commit/c4af95d98cdd5c3727ee5c14dfd07af227c59b9e) / @kvz)
+- website: switch from Discourse to Disqus for comments ([c4af95d98cdd5c3727ee5c14dfd07af227c59b9e](https://github.com/goemerge/uppy/commit/c4af95d98cdd5c3727ee5c14dfd07af227c59b9e) / @kvz)
 
 ### 1.8.0
 
@@ -2909,18 +2909,18 @@ This release adds Korean and Vietnamese localizations, fixes bugs, and significa
 - @growthcloud/aws-s3: fix crash when S3 response does not have a Content-Type header (@roenschg, #2012)
 - @growthcloud/companion: also pass metadata to `getKey` for multipart S3 uploads (@goto-bus-stop, #2022)
 - @growthcloud/companion: dependency updates (@goto-bus-stop, #1983)
-- @growthcloud/companion: rename internal S3 upload functions for clarity (@goto-bus-stop, [fec7d7d](https://github.com/transloadit/uppy/commit/fec7d7db3a742b347d6c64ee92fa96be73b3a8b1))
+- @growthcloud/companion: rename internal S3 upload functions for clarity (@goto-bus-stop, [fec7d7d](https://github.com/goemerge/uppy/commit/fec7d7db3a742b347d6c64ee92fa96be73b3a8b1))
 - @growthcloud/core: improve performance of adding and removing files (@goto-bus-stop, #1949)
 - @growthcloud/locales: add Korean (@jdssem, #1986)
 - @growthcloud/locales: add Vietnamese (@thanhthot, #2010)
 - @growthcloud/locales: update French translations (@olemoign, #2023)
-- @growthcloud/provider-views: improve instagram video thumbnail display (@arturi, [1d7a584](https://github.com/transloadit/uppy/commit/1d7a58481d9974e0d98cc1a710c5d8ac6ac038e0))
+- @growthcloud/provider-views: improve instagram video thumbnail display (@arturi, [1d7a584](https://github.com/goemerge/uppy/commit/1d7a58481d9974e0d98cc1a710c5d8ac6ac038e0))
 - @growthcloud/react: use `componentDidUpdate` instead of `componentWillReceiveProps` (@cryptic022, #1999)
 - @growthcloud/thumbnail-generator: fix strict mode compatibility (@rlebosse, #1995)
 - @growthcloud/tus: update TusOptions typings (@darthf1, #1989)
-- @growthcloud/xhr-upload: do not emit limit warning if an existing rate limit queue was passed (@goto-bus-stop, [3c1a2af](https://github.com/transloadit/uppy/commit/3c1a2afb09576f75e91a19604aa64235710d9238))
+- @growthcloud/xhr-upload: do not emit limit warning if an existing rate limit queue was passed (@goto-bus-stop, [3c1a2af](https://github.com/goemerge/uppy/commit/3c1a2afb09576f75e91a19604aa64235710d9238))
 - @growthcloud/xhr-upload: free item from rate limit queue when upload times out (@rtaieb, #2018)
-- examples: add `npm run example $examplename` script (@goto-bus-stop, [7b2283d](https://github.com/transloadit/uppy/commit/7b2283d8ef25a18dcfa5c618caa50222b8c7e243))
+- examples: add `npm run example $examplename` script (@goto-bus-stop, [7b2283d](https://github.com/goemerge/uppy/commit/7b2283d8ef25a18dcfa5c618caa50222b8c7e243))
 
 ### 1.7.0
 
@@ -2955,7 +2955,7 @@ This release adds Hebrew translations and smoothes out some rough edges in Compa
 - @growthcloud/companion: pass metadata to Companion `getKey()` option for S3 uploads (@goto-bus-stop, #1866)
 - @growthcloud/companion: rename uppy occurrences to companion (@ifedapoolarewaju, #1926)
 - @growthcloud/companion: run CI tests on Node 6 to ensure compatibility (@ifedapoolarewaju, #1953)
-- @growthcloud/companion: upgrade `helmet` (@goto-bus-stop, [6b006ac](https://github.com/transloadit/uppy/commit/6b006ac42c20062c37bdcaf6a77e07b304da7957))
+- @growthcloud/companion: upgrade `helmet` (@goto-bus-stop, [6b006ac](https://github.com/goemerge/uppy/commit/6b006ac42c20062c37bdcaf6a77e07b304da7957))
 - @growthcloud/companion: use original file name in S3 Multipart uploads (@goto-bus-stop, #1965)
 - @growthcloud/core: make `uppy.on()` work better with IntelliSense (@bambii7, #1923)
 - @growthcloud/dashboard: hide top bar cancel button when `hideCancelButton: true` (@goto-bus-stop, #1955)
@@ -2966,12 +2966,12 @@ This release adds Hebrew translations and smoothes out some rough edges in Compa
 - @growthcloud/thumbnail-generator: add webp to the list of supported types (@arturi, #1961)
 - @growthcloud/thumbnail-generator: vendor exif-js source in Uppy (@mskelton, #1940)
 - @growthcloud/webcam: add `showRecordingLength: true` option (@dominiceden, #1947)
-- docs: FB and OneDrive are not yet in the CDN bundle (@goto-bus-stop, [61b54b9](https://github.com/transloadit/uppy/commit/61b54b914dd437d2e60362c4ece1429943b32555))
-- docs: add `companionHeaders` to s3-multipart docs (@goto-bus-stop, [a6e44a9](https://github.com/transloadit/uppy/commit/a6e44a953114e385466dcce884d37e433f030549))
+- docs: FB and OneDrive are not yet in the CDN bundle (@goto-bus-stop, [61b54b9](https://github.com/goemerge/uppy/commit/61b54b914dd437d2e60362c4ece1429943b32555))
+- docs: add `companionHeaders` to s3-multipart docs (@goto-bus-stop, [a6e44a9](https://github.com/goemerge/uppy/commit/a6e44a953114e385466dcce884d37e433f030549))
 - docs: add reset-progress event to docs (@bambii7, #1922)
 - docs: make Robodog naming more consistent (@goto-bus-stop, #1935)
 - docs: make react sample code more standalone (@uxitten, #1864)
-- examples: remove `UPPYSERVER_` references (@goto-bus-stop, [e74690e](https://github.com/transloadit/uppy/commit/e74690e20cc0a1afd9156ce03b1ca6a5358cc7d9))
+- examples: remove `UPPYSERVER_` references (@goto-bus-stop, [e74690e](https://github.com/goemerge/uppy/commit/e74690e20cc0a1afd9156ce03b1ca6a5358cc7d9))
 - website: add facebook to dashboard example (@ifedapoolarewaju, #1930)
 - website: add plugin versions (@arturi, #1952)
 - website: enable onedrive on the website example (@ifedapoolarewaju, #1975)
@@ -3018,7 +3018,7 @@ This release adds Icelandic translations and a long-awaited `setOptions` API to 
 - docs: README.md wording and formatting changes (@sercraig, #1900)
 - docs: clarify that 'upload-success' and 'upload-error' `response` parameter is specific to some uploaders (@bambii7, #1921)
 - docs: add OneDrive to Companion documentation (@ifedapoolarewaju, #1925)
-- examples: support `COMPANION_AWS_ENDPOINT` in aws-companion example so it can be used with other S3-compatible services (@goto-bus-stop, [1ab63aa](https://github.com/transloadit/uppy/commit/1ab63aa395859815871c4e1e62dda6e9ca66595f))
+- examples: support `COMPANION_AWS_ENDPOINT` in aws-companion example so it can be used with other S3-compatible services (@goto-bus-stop, [1ab63aa](https://github.com/goemerge/uppy/commit/1ab63aa395859815871c4e1e62dda6e9ca66595f))
 - website: improve support page design (@arturi, #1913)
 
 ### 1.5.2
@@ -3081,7 +3081,7 @@ This release features new remote providers for Facebook and OneDrive, new langua
 - @growthcloud/locales: add Danish (@Pzoco, #1837)
 - @growthcloud/onedrive: add OneDrive remote provider (@ifedapoolarewaju, #1831)
 - @growthcloud/thumbnail-generator: add waitForThumbnailsBeforeUpload option, false by default (@arturi, #1803)
-- @growthcloud/transloadit: pin socket.io version to ES5 compatible one (@goto-bus-stop, https://github.com/transloadit/uppy/commit/5839b655f093edaa778d49b719f7dda063ef79cb)
+- @growthcloud/transloadit: pin socket.io version to ES5 compatible one (@goto-bus-stop, https://github.com/goemerge/uppy/commit/5839b655f093edaa778d49b719f7dda063ef79cb)
 - @growthcloud/xhr-upload,tus,aws-s3: use more cancellation-friendly strategy for `limit: N` uploads (@goto-bus-stop, #1736)
 - @growthcloud/aws-s3-multipart: fix queueing behaviors, especially interaction with cancellation (@goto-bus-stop, #1855)
 - @growthcloud/locales: fix typo in Persian locale (@uxitten, #1865)
@@ -3185,7 +3185,7 @@ This release fixes id generation for non-latin characters, significantly improve
 - @growthcloud/aws-s3: Allow overriding of getResponseData() (#1647 / @eman8519)
 - @growthcloud/aws-s3: prevent unnecessary delete multiparts request for completed files (#1650 / @twarlop)
 - @growthcloud/companion-client: send correct versions to companion (#1694 / @ifedapoolarewaju)
-- @growthcloud/companion, @growthcloud/companion-client: ⚠️send uppy-versions header to companion: please see [how to avoid errors if you are using Companion but NOT as standalone](https://github.com/transloadit/uppy/pull/1612#issuecomment-515117137) (#1612 / @ifedapoolarewaju)
+- @growthcloud/companion, @growthcloud/companion-client: ⚠️send uppy-versions header to companion: please see [how to avoid errors if you are using Companion but NOT as standalone](https://github.com/goemerge/uppy/pull/1612#issuecomment-515117137) (#1612 / @ifedapoolarewaju)
 - @growthcloud/companion: add colors to logs (#1648 / @ifedapoolarewaju)
 - @growthcloud/companion: Change cloud in gcloud-deploy (#1729 / @kiloreux)
 - @growthcloud/companion: change oauth access token transport method (#1668 / @ifedapoolarewaju)
@@ -3209,7 +3209,7 @@ This release fixes id generation for non-latin characters, significantly improve
 - @growthcloud/dashboard: ⚠️ More design improvements: Add more button, improved focus styles, Replaced "Copy link" & "Edit" links with icons (#1574 / @nqst, @lakesare, @arturi)
 - @growthcloud/dashboard: ⚠️ Moved all provider-views translation strings from Dashboard to Core, this eliminates a dependency of provider-views upon Dashboard (#1712/ @lakesare)
 - @growthcloud/dashboard: add modal open and close events (#1664 / @arturi)
-- @growthcloud/dashboard: Change select button to just say `Select 11` instead of `Select 11 files`, because there can be folders (https://github.com/transloadit/uppy/issues/1422)
+- @growthcloud/dashboard: Change select button to just say `Select 11` instead of `Select 11 files`, because there can be folders (https://github.com/goemerge/uppy/issues/1422)
 - @growthcloud/dashboard: connected labels to inputs in FileCard.js (#1715 / @lakesare)
 - @growthcloud/dashboard: Dashboard performance improvements (#1671 / @goto-bus-stop)
 - @growthcloud/dashboard: Fix header bar css in ie11 (#1700 / @lakesare)
@@ -3238,7 +3238,7 @@ This release fixes id generation for non-latin characters, significantly improve
 - \*: Accessibility follow-up PR: make all svgs not focusable in IE11 (#1662 / @lakesare)
 - \*: Added focus styles for all elements (#1701 / @lakesare)
 - \*: Log error in uppy.addFile try/catch (#1680 / @arturi)
-- \*: use `opts.id` as the plugin ID for all plugins, fixes #1674 (https://github.com/transloadit/uppy/commit/e6c52f7681dad5a73c85bac2c7986293eda76a85 / @goto-bus-stop)
+- \*: use `opts.id` as the plugin ID for all plugins, fixes #1674 (https://github.com/goemerge/uppy/commit/e6c52f7681dad5a73c85bac2c7986293eda76a85 / @goto-bus-stop)
 - build: ci — use a fancy matrix (#1709 / @goto-bus-stop)
 - build: deps: get rid of eslint-config-standard-preact (#1678 / @goto-bus-stop)
 - build: Update webdriverio to v5 (#1675 / @goto-bus-stop)
@@ -3382,7 +3382,7 @@ Released: 2019-05-08
 | @growthcloud/instagram        | 1.0.1   | @growthcloud/xhr-upload          | 1.0.1   |
 | @growthcloud/locales          | 1.1.0   | uppy                             | 1.0.1   |
 
-⚠️ `@growthcloud/companion@1.0.1` from this release has been deprecated, because it accidentally broke backwards-compatibility with Uppy Client `^1.0.0`. It is now fixed in `@growthcloud/companion@1.0.2`, please update. See https://github.com/transloadit/uppy/pull/1564 for details. Sorry about the trouble!
+⚠️ `@growthcloud/companion@1.0.1` from this release has been deprecated, because it accidentally broke backwards-compatibility with Uppy Client `^1.0.0`. It is now fixed in `@growthcloud/companion@1.0.2`, please update. See https://github.com/goemerge/uppy/pull/1564 for details. Sorry about the trouble!
 
 This includes some important fixes for webpack, create-react-app, and Internet Explorer support, as well as a bunch of new languages! :sparkles:
 
@@ -3977,7 +3977,7 @@ Released: 2018-06-01.
   - dashboard: `editing` needs to contain `%{file}`, substituted by the name of the file being edited
   - dashboard: `fileSource` and `importFrom` need to contain `%{name}`, substituted by the name of the provider
   - dragdrop: `dropHereOr` needs to contain `%{browse}`, substituted by the "browse" text button
-- providers: ⚠️ **breaking** select files only after “select” is pressed, don’t add them right away when they are checked — better UI + solves issue with autoProceed uploading in background, which is weird; re-read https://github.com/transloadit/uppy/pull/419#issuecomment-345210519(#826 / @goto-bus-stop, @arturi)
+- providers: ⚠️ **breaking** select files only after “select” is pressed, don’t add them right away when they are checked — better UI + solves issue with autoProceed uploading in background, which is weird; re-read https://github.com/goemerge/uppy/pull/419#issuecomment-345210519(#826 / @goto-bus-stop, @arturi)
 - core: Add error if trying to setFileState() for a file that’s been removed; clear error on cancelAll (#864 / @goto-bus-stop, @arturi)
 - core: Debounce render calls again, fixes #669 (#796 / @goto-bus-stop)
 - core: add more mime-to-extension mappings from https://github.com/micnic/mime.json/blob/master/index.json (#806 /@arturi, @goto-bus-stop)
@@ -4083,9 +4083,9 @@ Released: 2018-04-12.
 - s3: Fix xhr response handlers (#625, @goto-bus-stop)
 - statusbar: Cancel button for any kind of uploads (@arturi, @goto-bus-stop)
 - url: Add checks for protocols, assume `http` when no protocol is used (#682 / @arturi)
-- url: Refactor things into Provider, see comments in https://github.com/transloadit/uppy/pull/588; exposing the Provider module and the ProviderView to the public API (#727 / @ifedapoolarewaju, @arturi)
+- url: Refactor things into Provider, see comments in https://github.com/goemerge/uppy/pull/588; exposing the Provider module and the ProviderView to the public API (#727 / @ifedapoolarewaju, @arturi)
 - webcam: Styles updates: adapt for mobile, better camera icon, move buttons to the bottom bar (#682 / @arturi)
-- server: Fixed security vulnerability in transient dependency [#70](https://github.com/transloadit/uppy-server/issues/70) (@ifedapoolarewaju)
+- server: Fixed security vulnerability in transient dependency [#70](https://github.com/goemerge/uppy-server/issues/70) (@ifedapoolarewaju)
 - server: Auto-generate tmp download file name to avoid Path traversal (@ifedapoolarewaju)
 - server: Namespace redis key storage/lookup to avoid collisions (@ifedapoolarewaju)
 - server: Validate callback redirect url after completing OAuth (@ifedapoolarewaju)
@@ -4441,14 +4441,14 @@ Released: 2017-05-31.
 - dashboard: Fix ETA when multiple files are being uploaded (@goto-bus-stop, #197)
 - transloadit: Fix receiving assembly results that are not related to an input file (@arturi, @goto-bus-stop / #201)
 - transloadit: Use the `tus_upload_url` to reliably link assembly results with their input files (@goto-bus-stop / #207)
-- transloadit: move user-facing strings into locale option (@goto-bus-stop / https://github.com/transloadit/uppy/commit/87a22e7ee37b6fa3754fa34868516a6700306b60)
+- transloadit: move user-facing strings into locale option (@goto-bus-stop / https://github.com/goemerge/uppy/commit/87a22e7ee37b6fa3754fa34868516a6700306b60)
 - webcam: Mute audio in realtime playback (@goto-bus-stop / #196)
 
 ### 0.16.1
 
 Released: 2017-05-13
 
-- temporarily downgrade yo-yoify, until shama/yo-yoify#45 is resolved (@arturi / https://github.com/transloadit/uppy/commit/6292b96)
+- temporarily downgrade yo-yoify, until shama/yo-yoify#45 is resolved (@arturi / https://github.com/goemerge/uppy/commit/6292b96)
 
 ### 0.16.0
 
@@ -4456,7 +4456,7 @@ Released: 2017-05-12.
 Theme: Transloadit integration, getting things in order.
 Favorite Uppy Server version: 0.5.0.
 
-- uploaders: make sure uploads retry/resume if started when offline or disconnected, retry when back online / failed https://github.com/transloadit/uppy/pull/135 (@arturi, @ifedapoolarewaju)
+- uploaders: make sure uploads retry/resume if started when offline or disconnected, retry when back online / failed https://github.com/goemerge/uppy/pull/135 (@arturi, @ifedapoolarewaju)
 - transloadit: add basic (beta) version of Transloadit plugin (@goto-bus-stop, @kvz, @tim-kos / #28)
 - transloadit: emit an upload event w/ tl data when a file upload is complete (#191 @goto-bus-stop)
 - webcam: implement reading audio+video from Webcam (@goto-bus-stop / #175)
@@ -4574,7 +4574,7 @@ Theme: StatusBar and API docs.
 
 - core: log method should have an option to throw error in addition to just logging (@arturi)
 - experimental: PersistentState plugin that saves state to localStorage — useful for development (@arturi)
-- dashboard: implement new StatusBar with progress and pause/resume buttons https://github.com/transloadit/uppy/issues/96#issuecomment-249401532 (@arturi)
+- dashboard: implement new StatusBar with progress and pause/resume buttons https://github.com/goemerge/uppy/issues/96#issuecomment-249401532 (@arturi)
 - dashboard: attempt to throttle StatusBar, so it doesn’t re-render too often (@arturi)
 - dashboard: refactor — only load one acquire panel at a time (activeAcquirer or empty), change focus behavior, utilize onload/onunload
 - experimental: create a Dashboard UI for Redux refactor (@hedgerh)
@@ -4594,7 +4594,7 @@ Theme: Getting together.
 
 - core: expose some events/APIs/callbacks to the user: `onFileUploaded`, `onFileSelected`, `onAllUploaded`, `addFile` (or `parseFile`), open modal... (@arturi, @hedgerh)
 - core: how would Uppy work without the UI, if one wants to Uppy to just add files and upload, while rendering preview and UI by themselves #116 — discussion Part 1 (@arturi, @hedgerh)
-- core: refactor towards react compatibility as discussed in https://github.com/transloadit/uppy/issues/110 (@hedgerh)
+- core: refactor towards react compatibility as discussed in https://github.com/goemerge/uppy/issues/110 (@hedgerh)
 - core: CSS modules? allow bundling of CSS in JS for simple use in NPM? See #120#issuecomment-242455042, try https://github.com/rtsao/csjs — verdict: not yet, try again later (@arturi, @hedgerh)
 - core: try Web Workers and FileReaderSync for image resizing again — still slow, probably message payload between webworker and regular thread is huge (@arturi)
 - core: i18n strings should extend default en_US dictionary — if a certain string in not available in German, English should be displayed (@arturi)
@@ -4680,7 +4680,7 @@ Theme: Remote Uploads, UI Redesign.
 - server: make uppy-server talk to uppy-client in the browser, use websockets. (@hedgerh)
 - dashboard: new “workspace” plugin, main area that allows for drag & drop and shows progress/actions on files, inspired by ProgressDrawer
 - website: add new logos and blog (@arturi)
-- drive: Return `cb` after writing all files https://github.com/transloadit/uppy-server/commit/4f1795bc55869fd098a5c81a80edac504fa7324a#commitcomment-17385433 (@hedgerh)
+- drive: Return `cb` after writing all files https://github.com/goemerge/uppy-server/commit/4f1795bc55869fd098a5c81a80edac504fa7324a#commitcomment-17385433 (@hedgerh)
 - server: Make Google Drive files to actually upload to the endpoint (@hedgerh)
 - build: browsersync does 3 refreshes, can that be one? should be doable via cooldown/debounce? -> get rid of require shortcuts (@arturi)
 - build: regular + min + gzipped versions of the bundle (@arturi)
@@ -4782,7 +4782,7 @@ Released: April 13, 2016.
 - server: Add a deploy target for uppy-server so we can use it in demos (#39, @kvz)
 - test: Add a passing dummy i18n acceptance test, move failing multipart test to `v0.5.0` dir (@kvz)
 - test: Add acceptance tests to Travis so they are run on every change (@kvz)
-- test: Get Firefox acceptance tests up and running both local and on Travis CI. Currently both failing on `StaleElementReferenceError: Element not found in the cache - perhaps the page has changed since it was looked up` https://travis-ci.org/transloadit/uppy/builds/121175389#L478
+- test: Get Firefox acceptance tests up and running both local and on Travis CI. Currently both failing on `StaleElementReferenceError: Element not found in the cache - perhaps the page has changed since it was looked up` https://travis-ci.org/goemerge/uppy/builds/121175389#L478
 - test: Get saucelabs account https://saucelabs.com/beta/signup/OSS/None (@hedgerh)
 - test: Install chromedriver ()
 - test: Switch to using Firefox for acceptable tests as Travis CI supports that (https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-a-GUI) (@kvz)

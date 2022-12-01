@@ -2,9 +2,9 @@
 
 <img src="http://uppy.io/images/logos/uppy-dog-full.svg" width="120" alt="Uppy logo — a superman puppy in a pink suit" align="right">
 
-[![Build Status](https://travis-ci.org/transloadit/uppy.svg?branch=main)](https://travis-ci.org/transloadit/uppy)
+[![Build Status](https://travis-ci.org/goemerge/uppy.svg?branch=main)](https://travis-ci.org/goemerge/uppy)
 
-Companion is a server integration for [Uppy](https://github.com/transloadit/uppy) file uploader.
+Companion is a server integration for [Uppy](https://github.com/goemerge/uppy) file uploader.
 
 It handles the server-to-server communication between your server and file storage providers such as Google Drive, Dropbox,
 Instagram, etc. **Companion is not a target to upload files to**. For this, use a <https://tus.io> server (if you want resumable) or your existing Apache/Nginx server (if you don’t). [See here for full documentation](https://uppy.io/docs/companion/)

@@ -18,11 +18,11 @@
   ],
   "homepage": "https://uppy.io",
   "bugs": {
-    "url": "https://github.com/transloadit/uppy/issues"
+    "url": "https://github.com/goemerge/uppy/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/transloadit/uppy.git"
+    "url": "git+https://github.com/goemerge/uppy.git"
   },
   "dependencies": {
     "@growthcloud/utils": "workspace:^"

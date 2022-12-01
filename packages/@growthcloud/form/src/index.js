@@ -126,7 +126,7 @@ export default class Form extends BasePlugin {
   getMetaFromForm() {
     const formMeta = getFormData(this.form);
     // We want to exclude meta the the Form plugin itself has added
-    // See https://github.com/transloadit/uppy/issues/1637
+    // See https://github.com/goemerge/uppy/issues/1637
     delete formMeta[this.opts.resultName];
     this.uppy.setMeta(formMeta);
   }

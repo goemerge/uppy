@@ -133,7 +133,7 @@ class UIPlugin extends BasePlugin {
       message +=
         "If you meant to target an HTML element, please make sure that the element exists. " +
         "Check that the <script> tag initializing Uppy is right before the closing </body> tag at the end of the page. " +
-        "(see https://github.com/transloadit/uppy/issues/1042)\n\n" +
+        "(see https://github.com/goemerge/uppy/issues/1042)\n\n" +
         "If you meant to target a plugin, please confirm that your `import` statements or `require` calls are correct.";
     }
     throw new Error(message);

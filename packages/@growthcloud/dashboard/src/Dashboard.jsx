@@ -531,7 +531,7 @@ export default class Dashboard extends UIPlugin {
     // uppy history entry.
     // This occurs when another entry is added into the history state while the
     // modal is open, and then the modal gets manually closed.
-    // Solves PR #575 (https://github.com/transloadit/uppy/pull/575)
+    // Solves PR #575 (https://github.com/goemerge/uppy/pull/575)
     if (!this.isModalOpen() && event.state?.[this.modalName]) {
       // eslint-disable-next-line no-restricted-globals
       history.back();
@@ -622,7 +622,7 @@ export default class Dashboard extends UIPlugin {
 
     // Add a small (+) icon on drop
     // (and prevent browsers from interpreting this as files being _moved_ into the
-    // browser, https://github.com/transloadit/uppy/issues/1978).
+    // browser, https://github.com/goemerge/uppy/issues/1978).
     event.dataTransfer.dropEffect = "copy"; // eslint-disable-line no-param-reassign
 
     clearTimeout(this.removeDragOverClassTimeout);

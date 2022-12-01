@@ -323,7 +323,7 @@ export default {
 
 `getAssemblyOptions`, `params`, `signature`, and `fields` have been deprecated in favor of [`assemblyOptions`](#assemblyoptions), which we now recommend for all use cases. You can still use these options, but they will be removed in the next major version.
 
-You can view the old docs for them [here](https://github.com/transloadit/uppy/blob/ff32dde1fd71af6dd5cd1927a1408dba36ab5329/website/src/docs/transloadit.md?plain=1).
+You can view the old docs for them [here](https://github.com/goemerge/uppy/blob/ff32dde1fd71af6dd5cd1927a1408dba36ab5329/website/src/docs/transloadit.md?plain=1).
 
 ## Errors
 

@@ -130,7 +130,7 @@ fileInput.addEventListener("change", (event) => {
 
 // it’s probably a good idea to clear the `<input>`
 // after the upload or when the file was removed
-// (see https://github.com/transloadit/uppy/issues/2640#issuecomment-731034781)
+// (see https://github.com/goemerge/uppy/issues/2640#issuecomment-731034781)
 uppy.on("file-removed", () => {
   fileInput.value = null;
 });

@@ -51,7 +51,7 @@ jobs:
           build_dir: _deploy # relative to `github.workspace`
           committer: "Uppy Bot <uppybot@growthcloud.io>"
           author: "Uppy Bot <uppybot@growthcloud.io>"
-          commit_message: Update transloadit/uppy website
+          commit_message: Update goemerge/uppy website
           fqdn: uppy.io
           jekyll: false
         env:

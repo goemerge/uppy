@@ -4,10 +4,10 @@
 
 <a href="https://www.npmjs.com/package/uppy"><img src="https://img.shields.io/npm/v/uppy.svg?style=flat-square"></a>
 
-|         |                                                                                                            |                                                                                                                                 |                                                                                                                             |
-| ------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Tests   | <img src="https://github.com/transloadit/uppy/workflows/Tests/badge.svg" alt="CI status for Uppy tests">   | <img src="https://github.com/transloadit/uppy/workflows/Companion/badge.svg" alt="CI status for Companion tests">               | <img src="https://github.com/transloadit/uppy/workflows/End-to-end%20tests/badge.svg" alt="CI status for browser tests">    |
-| Deploys | <img src="https://github.com/transloadit/uppy/workflows/CDN/badge.svg" alt="CI status for CDN deployment"> | <img src="https://github.com/transloadit/uppy/workflows/Companion%20Deploy/badge.svg" alt="CI status for Companion deployment"> | <img src="https://github.com/transloadit/uppy/workflows/Deploy%20uppy.io/badge.svg" alt="CI status for website deployment"> |
+|         |                                                                                                         |                                                                                                                              |                                                                                                                          |
+| ------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Tests   | <img src="https://github.com/goemerge/uppy/workflows/Tests/badge.svg" alt="CI status for Uppy tests">   | <img src="https://github.com/goemerge/uppy/workflows/Companion/badge.svg" alt="CI status for Companion tests">               | <img src="https://github.com/goemerge/uppy/workflows/End-to-end%20tests/badge.svg" alt="CI status for browser tests">    |
+| Deploys | <img src="https://github.com/goemerge/uppy/workflows/CDN/badge.svg" alt="CI status for CDN deployment"> | <img src="https://github.com/goemerge/uppy/workflows/Companion%20Deploy/badge.svg" alt="CI status for Companion deployment"> | <img src="https://github.com/goemerge/uppy/workflows/Deploy%20uppy.io/badge.svg" alt="CI status for website deployment"> |
 
 Uppy is a sleek, modular JavaScript file uploader that integrates seamlessly with any application. It’s fast, has a comprehensible API and lets you worry about more important problems than building a file uploader.
 
@@ -15,11 +15,11 @@ Uppy is a sleek, modular JavaScript file uploader that integrates seamlessly wit
 - **Preview** and edit metadata with a nice interface
 - **Upload** to the final destination, optionally process/encode
 
-<img src="https://github.com/transloadit/uppy/raw/main/assets/uppy-2-0-demo-aug-2021.gif">
+<img src="https://github.com/goemerge/uppy/raw/main/assets/uppy-2-0-demo-aug-2021.gif">
 
 **[Read the docs](https://uppy.io/docs)** | **[Try Uppy](https://uppy.io/examples/dashboard/)**
 
-<a href="https://transloadit.com" target="_blank"><img width="185" src="https://github.com/transloadit/uppy/raw/main/assets/developed-by-transloadit.png"></a>
+<a href="https://transloadit.com" target="_blank"><img width="185" src="https://github.com/goemerge/uppy/raw/main/assets/developed-by-transloadit.png"></a>
 
 Uppy is being developed by the folks at [Transloadit](https://transloadit.com), a versatile API to handle any file in your app.
 
@@ -238,7 +238,7 @@ And you’ll need [`@growthcloud/companion`](https://uppy.io/docs/companion) if 
 
 Uppy is used by: [Photobox](http://photobox.com), [Issuu](https://issuu.com/), [Law Insider](https://lawinsider.com), [Cool Tabs](https://cool-tabs.com), [Soundoff](https://soundoff.io), [Scrumi](https://www.scrumi.io/), [Crive](https://crive.co/) and others.
 
-Use Uppy in your project? [Let us know](https://github.com/transloadit/uppy/issues/769)!
+Use Uppy in your project? [Let us know](https://github.com/goemerge/uppy/issues/769)!
 
 ## Contributors
 

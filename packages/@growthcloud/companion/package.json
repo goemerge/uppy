@@ -6,10 +6,10 @@
   "types": "lib/companion.d.ts",
   "author": "Transloadit.com",
   "license": "MIT",
-  "homepage": "https://github.com/transloadit/uppy#readme",
+  "homepage": "https://github.com/goemerge/uppy#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/transloadit/uppy.git"
+    "url": "git+https://github.com/goemerge/uppy.git"
   },
   "keywords": [
     "file uploader",

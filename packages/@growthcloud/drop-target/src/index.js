@@ -104,7 +104,7 @@ export default class DropTarget extends BasePlugin {
 
     // Add a small (+) icon on drop
     // (and prevent browsers from interpreting this as files being _moved_ into the browser,
-    // https://github.com/transloadit/uppy/issues/1978)
+    // https://github.com/goemerge/uppy/issues/1978)
     event.dataTransfer.dropEffect = "copy"; // eslint-disable-line no-param-reassign
 
     clearTimeout(this.removeDragOverClassTimeout);

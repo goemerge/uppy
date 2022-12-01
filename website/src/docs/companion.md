@@ -13,7 +13,7 @@ Drag and drop, webcam, basic file manipulation (adding metadata, for example) an
 
 <!--retext-simplify ignore however-->
 
-However, if you add [Companion](https://github.com/transloadit/uppy/tree/main/packages/@growthcloud/companion) to the mix, your users will be able to select files from remote sources, such as Instagram, Google Drive and Dropbox, bypassing the client (so a 5 GB video isn’t eating into your users’ data plans), and then uploaded to the final destination. Files are removed from Companion after an upload is complete, or after a reasonable timeout. Access tokens also don’t stick around for long, for security reasons.
+However, if you add [Companion](https://github.com/goemerge/uppy/tree/main/packages/@growthcloud/companion) to the mix, your users will be able to select files from remote sources, such as Instagram, Google Drive and Dropbox, bypassing the client (so a 5 GB video isn’t eating into your users’ data plans), and then uploaded to the final destination. Files are removed from Companion after an upload is complete, or after a reasonable timeout. Access tokens also don’t stick around for long, for security reasons.
 
 Companion handles the server-to-server communication between your server and file storage providers such as Google Drive, Dropbox, Instagram, etc. Note that you can **not** upload files **to** Companion, it only handles the third party integrations.
 
@@ -297,7 +297,7 @@ export COMPANION_PERIODIC_PING_INTERVAL=60000
 export COMPANION_PERIODIC_PING_STATIC_JSON_PAYLOAD="{\"static\":\"data\"}"
 ```
 
-See [`.env.example`](https://github.com/transloadit/uppy/blob/main/.env.example) for an example environment configuration file.
+See [`.env.example`](https://github.com/goemerge/uppy/blob/main/.env.example) for an example environment configuration file.
 
 ### Options
 
@@ -443,7 +443,7 @@ You can supply any [S3 option supported by the AWS SDK](https://docs.aws.amazon.
 - `accessKeyId`. Instead, use the `s3.key` property. This is to make configuration names consistent between different Companion features.
 - `secretAccessKey`. Instead, use the `s3.secret` property. This is to make configuration names consistent between different Companion features.
 
-Be aware that some options may cause wrong behaviour if they conflict with Companion’s assumptions. If you find that a particular option does not work as expected, please [open an issue on the Uppy repository](https://github.com/transloadit/uppy/issues/new) so we can document it here.
+Be aware that some options may cause wrong behaviour if they conflict with Companion’s assumptions. If you find that a particular option does not work as expected, please [open an issue on the Uppy repository](https://github.com/goemerge/uppy/issues/new) so we can document it here.
 
 #### `s3.getKey(req, filename, metadata)`
 
@@ -484,7 +484,7 @@ app.use(
 
 ### Running in Kubernetes
 
-We have [a detailed guide on running Companion in Kubernetes](https://github.com/transloadit/uppy/blob/main/packages/%40uppy/companion/KUBERNETES.md) for you, that’s how we run our example server at <https://companion.uppy.io>.
+We have [a detailed guide on running Companion in Kubernetes](https://github.com/goemerge/uppy/blob/main/packages/%40uppy/companion/KUBERNETES.md) for you, that’s how we run our example server at <https://companion.uppy.io>.
 
 ### Adding custom providers
 
@@ -533,7 +533,7 @@ The class must also have:
 
 - A unique `authProvider` string property - a lowercased value which typically indicates the name of the provider (e.g “dropbox”).
 
-See also [example code with a custom provider](https://github.com/transloadit/uppy/blob/main/examples/custom-provider/server).
+See also [example code with a custom provider](https://github.com/goemerge/uppy/blob/main/examples/custom-provider/server).
 
 #### list data
 

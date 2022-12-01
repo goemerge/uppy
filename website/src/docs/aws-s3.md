@@ -240,7 +240,7 @@ export COMPANION_AWS_BUCKET="my-space-name"
 
 The `{region}` string will be replaced by the contents of the `COMPANION_AWS_REGION` environment variable.
 
-For a working example that you can run and play around with, see the [digitalocean-spaces](https://github.com/transloadit/uppy/tree/main/examples/digitalocean-spaces) folder in the Uppy repository.
+For a working example that you can run and play around with, see the [digitalocean-spaces](https://github.com/goemerge/uppy/tree/main/examples/digitalocean-spaces) folder in the Uppy repository.
 
 ### Google Cloud Storage
 
@@ -349,7 +349,7 @@ uppy.use(AwsS3, {
 });
 ```
 
-See the [aws-php example in the uppy repository](https://github.com/transloadit/uppy/tree/main/examples/aws-php) for a small example that implements both the server-side and the client-side.
+See the [aws-php example in the uppy repository](https://github.com/goemerge/uppy/tree/main/examples/aws-php) for a small example that implements both the server-side and the client-side.
 
 ### Retrieving presign parameters of the uploaded file
 

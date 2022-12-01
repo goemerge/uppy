@@ -3,9 +3,9 @@
 <img src="https://uppy.io/images/logos/uppy-dog-head-arrow.svg" width="120" alt="Uppy logo: a superman puppy in a pink suit" align="right">
 
 [![npm version](https://img.shields.io/npm/v/@growthcloud/informer.svg?style=flat-square)](https://www.npmjs.com/package/@growthcloud/informer)
-![CI status for Uppy tests](https://github.com/transloadit/uppy/workflows/Tests/badge.svg)
-![CI status for Companion tests](https://github.com/transloadit/uppy/workflows/Companion/badge.svg)
-![CI status for browser tests](https://github.com/transloadit/uppy/workflows/End-to-end%20tests/badge.svg)
+![CI status for Uppy tests](https://github.com/goemerge/uppy/workflows/Tests/badge.svg)
+![CI status for Companion tests](https://github.com/goemerge/uppy/workflows/Companion/badge.svg)
+![CI status for browser tests](https://github.com/goemerge/uppy/workflows/End-to-end%20tests/badge.svg)
 
 The Informer is a pop-up bar for showing notifications. When other plugins have some exciting news (or error) to share, they can show a notification here.
 

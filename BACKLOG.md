@@ -30,7 +30,7 @@ PRs are welcome! Please do open an issue to discuss first if it's a big feature,
 
 - [ ] Make sure Uppy works well in VR
 - [ ] normalize file names when uploading from iOS? Can we do it with meta data? date? `image-${index}`? #678
-- [ ] Can Uppy upload a lot of files at once? Seems to fail now: https://github.com/transloadit/uppy/issues/3313 (@aduh95, @Murderlon)
+- [ ] Can Uppy upload a lot of files at once? Seems to fail now: https://github.com/goemerge/uppy/issues/3313 (@aduh95, @Murderlon)
 - [ ] Consider how we can make Uppy smaller. Replace some packages with smaller alternatives. Talk about Socket.io again (@aduh95)
 - [ ] Better events — more data, consistency, naming (@Murderlon)
 
@@ -41,15 +41,15 @@ PRs are welcome! Please do open an issue to discuss first if it's a big feature,
 - [ ] Display data like image resolution on file cards. should be done by thumbnail generator maybe #783
 - [ ] Possibility to edit/delete more than one file at once. example: add copyrigh info to 1000 files #118, #97
 - [ ] Possibility to work on already uploaded / in progress files. We'll just provide the `fileId` to the `file-edit-complete` event so that folks can more easily roll out custom code for this themselves #112, #113, #2063
-- [ ] Focus jumps weirdly if you remove a file https://github.com/transloadit/uppy/pull/2161#issuecomment-613565486
+- [ ] Focus jumps weirdly if you remove a file https://github.com/goemerge/uppy/pull/2161#issuecomment-613565486
 - [ ] A mini UI that features drop & progress (may involve a `mini: true` options for dashboard, may involve drop+progress or new plugin) (@arturi)
-- [ ] Add a Load More button so you don't have to TAB endlessly to get to the upload button (https://github.com/transloadit/uppy/issues/1419)
+- [ ] Add a Load More button so you don't have to TAB endlessly to get to the upload button (https://github.com/goemerge/uppy/issues/1419)
 
 ### New plugins
 
 - [ ] WordPress Back-end plugin. Should be another Transloadit Integration based on Robodog Dashboard(?) we should add a provider, and possibly offer already-uploaded content
 - [ ] WordPress Front-end Gravity Forms Uppy plugin so one form field could be an Uppy-powered file input
-- [ ] A WakeLock based plugin that keeps your phone from going to sleep while an upload is ongoing https://github.com/transloadit/uppy/issues/1725
+- [ ] A WakeLock based plugin that keeps your phone from going to sleep while an upload is ongoing https://github.com/goemerge/uppy/issues/1725
 - [ ] Improve image editor: filters for images, no crashes (@aduh95)
 
 ### New providers
@@ -64,12 +64,12 @@ PRs are welcome! Please do open an issue to discuss first if it's a big feature,
 
 - [ ] goldenretriever: make it work with aws multipart https://community.transloadit.com/t/resumable-aws-s3-multipart-integration/14888 (@goto-bus-stop)
 - [ ] provider: add sorting (by date) #254
-- [ ] qa: add one integration test (or add to existing test) that uses more exotic (tus) options such as `useFastRemoteRetry` or `removeFingerprintOnSuccess` https://github.com/transloadit/uppy/issues/1327 (@arturi, @ifedapoolarewaju)
-- [x] react: Add a React Hook to manage an Uppy instance https://github.com/transloadit/uppy/pull/1247#issuecomment-458063951 (@goto-bus-stop)
+- [ ] qa: add one integration test (or add to existing test) that uses more exotic (tus) options such as `useFastRemoteRetry` or `removeFingerprintOnSuccess` https://github.com/goemerge/uppy/issues/1327 (@arturi, @ifedapoolarewaju)
+- [x] react: Add a React Hook to manage an Uppy instance https://github.com/goemerge/uppy/pull/1247#issuecomment-458063951 (@goto-bus-stop)
 - [ ] rn: Uppy React Native works with Expo, now let's make it work without
 - [ ] rn: Uppy React Native works with Url Plugin, now let's make it work with Instagram
-- [ ] security: consider iframe / more security for Transloadit/Uppy integration widget and Uppy itself. Page can’t get files from Google Drive if its an iframe
-- [ ] statusbar: Add a confirmation of the cancel action (https://github.com/transloadit/uppy/issues/1418) as well as ask the user if they really want to navigate away while an upload is in progress via `onbeforeunload` (@arturi)
+- [ ] security: consider iframe / more security for goemerge/uppy integration widget and Uppy itself. Page can’t get files from Google Drive if its an iframe
+- [ ] statusbar: Add a confirmation of the cancel action (https://github.com/goemerge/uppy/issues/1418) as well as ask the user if they really want to navigate away while an upload is in progress via `onbeforeunload` (@arturi)
 - [ ] uploaders: consider not showing progress updates from the server after an upload’s been paused. Perhaps the button can be disabled and say `Pausing..` until Companion has actually stopped transmitting updates (@arturi, @ifedapoolarewaju)
 - [ ] xhr: allow sending custom headers per file (as proposed in #785)
 - [ ] website: It would be nice in the long run to have a dynamic package builder here right on the website where you can select the plugins you need/want and it builds and downloads a minified version of them? Sort of like jQuery UI: https://jqueryui.com/download/

@@ -3,9 +3,9 @@
 <img src="https://uppy.io/images/logos/uppy-dog-head-arrow.svg" width="120" alt="Uppy logo: a superman puppy in a pink suit" align="right">
 
 [![npm version](https://img.shields.io/npm/v/@growthcloud/tus.svg?style=flat-square)](https://www.npmjs.com/package/@growthcloud/tus)
-![CI status for Uppy tests](https://github.com/transloadit/uppy/workflows/Tests/badge.svg)
-![CI status for Companion tests](https://github.com/transloadit/uppy/workflows/Companion/badge.svg)
-![CI status for browser tests](https://github.com/transloadit/uppy/workflows/End-to-end%20tests/badge.svg)
+![CI status for Uppy tests](https://github.com/goemerge/uppy/workflows/Tests/badge.svg)
+![CI status for Companion tests](https://github.com/goemerge/uppy/workflows/Companion/badge.svg)
+![CI status for browser tests](https://github.com/goemerge/uppy/workflows/End-to-end%20tests/badge.svg)
 
 The Tus plugin brings [tus.io][] resumable file uploading to Uppy by wrapping the [tus-js-client][].
 

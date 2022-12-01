@@ -8,7 +8,7 @@ published: true
 
 **TL;DR:** We're on a mission to improve file uploading on the web. We released [tus](https://tus.io): the open protocol for resumable file uploads, as well as Uppy: the next open source file uploader for web browsers. Uppy uses tus, which makes it resilient to poor network conditions and crashing servers. Today we’re launching an Uppy feature that also makes it resilient to browser crashes, which we believe is an industry first. We’re sharing a quick [demo](/blog/2017/07/golden-retriever/#demo) video, a bit of [background](/blog/2017/07/golden-retriever/#uppy), [how](/blog/2017/07/golden-retriever/#how) exactly we achieved this, and how you can [try](/blog/2017/07/golden-retriever/#try) it yourself.
 
-\***
+\*\*\*
 
 Don’t you just hate it when you’re about to share the perfect photos from your trip to Iceland, and halfway through, your cat jumps on the keyboard and trashes your browser? Or the battery in your laptop dies? Or you accidentally close the tab or navigate away? We hate that too!
 
@@ -28,7 +28,7 @@ First off, let’s show you a demo 📹 of Uppy surviving a browser crash and pi
 
 ## Uppy?
 
-For those of you who are new here, Uppy is the next-gen open source file uploader for the web. It is made by Transloadit and thus it works great with their uploading & encoding platform — but it also works great without! Simply add Uppy JavaScript to your website, deploy your own tusd/Node.js/Apache/Nginx server, and be on your way. Add [uppy-server](https://github.com/transloadit/uppy-server), and your users will be able to pick files from remote sources like Dropbox and Instagram. Uppy’s focus is on the modern web, and we go through extreme lengths to achieve the smoothest of user experiences, and the most durable of reliabilities. 🙃
+For those of you who are new here, Uppy is the next-gen open source file uploader for the web. It is made by Transloadit and thus it works great with their uploading & encoding platform — but it also works great without! Simply add Uppy JavaScript to your website, deploy your own tusd/Node.js/Apache/Nginx server, and be on your way. Add [uppy-server](https://github.com/goemerge/uppy-server), and your users will be able to pick files from remote sources like Dropbox and Instagram. Uppy’s focus is on the modern web, and we go through extreme lengths to achieve the smoothest of user experiences, and the most durable of reliabilities. 🙃
 
 ## Hacking trip
 
@@ -36,7 +36,7 @@ Our core team is spread across three continents and five cities, and most of us 
 
 <figure class="wide"><img src="/images/blog/golden-retriever/uppy-team-kong.jpg"></figure>
 
-While enjoying some world-famous-in-Germany “Flammkuchen”, we were thinking about even more ways to make file uploading better (yes, we really can’t stop thinking about that). We then sat together in one room for a few days of hacking and came up with something neat. 
+While enjoying some world-famous-in-Germany “Flammkuchen”, we were thinking about even more ways to make file uploading better (yes, we really can’t stop thinking about that). We then sat together in one room for a few days of hacking and came up with something neat.
 
 ## The Golden Retriever
 
@@ -46,7 +46,7 @@ Uppy has a new friend to play with. Meet the Golden Retriever, our file recovery
 
 As you can see, we’re not yet fully done with training her, but we’re getting there! 😄
 
-But wait, we can hear you think, didn't [tus.io](https://tus.io) already make resumable uploads possible? Yes indeed, and it does an awesome job at recovering from poor network conditions. However, if your browser suddenly decided to crash, Uppy would have no idea about what it was doing before, and you would have to re-select and edit your files all over. 
+But wait, we can hear you think, didn't [tus.io](https://tus.io) already make resumable uploads possible? Yes indeed, and it does an awesome job at recovering from poor network conditions. However, if your browser suddenly decided to crash, Uppy would have no idea about what it was doing before, and you would have to re-select and edit your files all over.
 
 <center><img src="/images/blog/golden-retriever/no-idea-dog-3.gif" alt="Dog has no idea what he is doing" title="Keep trying, buddy!"></center>
 
@@ -64,17 +64,17 @@ If you really want to know...
 
 Because we cannot access the files that we were uploading from disk, we cache them inside the browser.
 
-It all started with [a prototype](https://github.com/transloadit/uppy/issues/237) by [Richard Willars](https://github.com/richardwillars), which used a Service Worker to store files and states. Service Workers are great for when you close a tab, but when the browser dies, so does the Service Worker (in most cases). Also: iOS does not support it yet. So, we looked at Local Storage, which is almost universally available and _can_ survive a browser crash, but can't be used to store blobs. We also considered IndexedDB, which _can_ store blobs, but is less available and has severe limits on how much you can or should store in it.
+It all started with [a prototype](https://github.com/goemerge/uppy/issues/237) by [Richard Willars](https://github.com/richardwillars), which used a Service Worker to store files and states. Service Workers are great for when you close a tab, but when the browser dies, so does the Service Worker (in most cases). Also: iOS does not support it yet. So, we looked at Local Storage, which is almost universally available and _can_ survive a browser crash, but can't be used to store blobs. We also considered IndexedDB, which _can_ store blobs, but is less available and has severe limits on how much you can or should store in it.
 
 Since all of these technologies came with specific drawbacks, which one should we pick?
 
-Why, all of them, of course! By combining the three, they cover each other’s disadvantages with their own advantages. Here's what goes where: 
+Why, all of them, of course! By combining the three, they cover each other’s disadvantages with their own advantages. Here's what goes where:
 
 - Local Storage stores all files state, without blobs (the actual data of the file), and restores this meta information on boot.
 - Service Worker stores references to all file blobs in memory. This should persist when navigating away from a page or closing the browser tab, but will likely get destroyed after a browser crash / quit.
 - IndexedDB stores all files that can reasonably be stored there, up to 10 MB per file and 300 MB in total (we are still debating reasonable limits). This persists until either the browser or Uppy decides to do a cleanup.
 
-Now when Uppy starts, we restore all meta information from Local Storage to get an idea of what was going on. For the blobs, we try to recover data from both the Service Worker and IndexedDB. This goes a long way into supporting many disastrous scenarios out there. 
+Now when Uppy starts, we restore all meta information from Local Storage to get an idea of what was going on. For the blobs, we try to recover data from both the Service Worker and IndexedDB. This goes a long way into supporting many disastrous scenarios out there.
 
 In some cases (very large files or a complete browser crash), we won’t be able to recover the file, but we do have valuable information about it, such as the name and a preview.
 
@@ -91,12 +91,12 @@ For the remaining cases, if an upload was already in progress before the crash/r
 Golden Retriever already works — tail awagging — and feels like magic :sparkles:, but it is also unstable, and hasn’t been tested on all the different devices yet. We encourage you to try it out though:
 
 ```sh
-git clone https://github.com/transloadit/uppy.git
+git clone https://github.com/goemerge/uppy.git
 git checkout feature/restore-files
 npm install
 npm run dev
 ```
 
-A new browser tab with Uppy + Golden Retriever should open in a moment after the last command from above. The app entry point is in `examples/bundled-example/main.js`, it rebuilds on change. Enjoy! And please give your feedback in the [#268](https://github.com/transloadit/uppy/pull/268) PR 🎉
+A new browser tab with Uppy + Golden Retriever should open in a moment after the last command from above. The app entry point is in `examples/bundled-example/main.js`, it rebuilds on change. Enjoy! And please give your feedback in the [#268](https://github.com/goemerge/uppy/pull/268) PR 🎉
 
 The Uppy Team

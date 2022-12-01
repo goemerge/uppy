@@ -79,9 +79,9 @@ uppy.use(DragDrop, {
 
 If you speak a language we don’t yet support, you can contribute! Here’s how you do it:
 
-1. Go to the [uppy/locales](https://github.com/transloadit/uppy/tree/main/packages/%40uppy/locales/src) directory in the Uppy GitHub repo.
+1. Go to the [uppy/locales](https://github.com/goemerge/uppy/tree/main/packages/%40uppy/locales/src) directory in the Uppy GitHub repo.
 2. Go to `en_US.js` and copy its contents, as English is the most up-to-date locale.
 3. Press “Create new file”, name it according to the [`language_COUNTRY` format](http://www.i18nguy.com/unicode/language-identifiers.html), make sure to use underscore `_` as a divider. Examples: `en_US`, `en_GB`, `ru_RU`, `ar_AE`. Variants should be trailing, for example `sr_RS_Latin` for Serbian Latin vs Cyrillic.
-4. If your language has different pluralization rules than English, update the `pluralize` implementation. If you are unsure how to do this, please ask us for help in a [GitHub issue](https://github.com/transloadit/uppy/issues/new).
+4. If your language has different pluralization rules than English, update the `pluralize` implementation. If you are unsure how to do this, please ask us for help in a [GitHub issue](https://github.com/goemerge/uppy/issues/new).
 5. Paste what you’ve copied from `en_US.js` and use it as a starting point to translate strings into your language.
 6. When you are ready, save the file — this should create a PR that we’ll then review 🎉 Thanks!

@@ -141,9 +141,9 @@ Optionally, provide rules and conditions to limit the type and/or number of file
 
 `allowedFileTypes` gets passed to the system file dialog via [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Limiting_accepted_file_types)’s accept attribute, so only files matching these types will be selectable.
 
-> If you’d like to force a certain meta field data to be entered before the upload, you can [do so using `onBeforeUpload`](https://github.com/transloadit/uppy/issues/1703#issuecomment-507202561).
+> If you’d like to force a certain meta field data to be entered before the upload, you can [do so using `onBeforeUpload`](https://github.com/goemerge/uppy/issues/1703#issuecomment-507202561).
 
-> If you need to restrict `allowedFileTypes` to a file extension with double dots, like `.nii.gz`, you can do so by [setting `allowedFileTypes` to the last part of the extension, `allowedFileTypes: ['.gz']`, and then using `onBeforeFileAdded` to filter for `.nii.gz`](https://github.com/transloadit/uppy/issues/1822#issuecomment-526801208).
+> If you need to restrict `allowedFileTypes` to a file extension with double dots, like `.nii.gz`, you can do so by [setting `allowedFileTypes` to the last part of the extension, `allowedFileTypes: ['.gz']`, and then using `onBeforeFileAdded` to filter for `.nii.gz`](https://github.com/goemerge/uppy/issues/1822#issuecomment-526801208).
 
 ### `meta: {}`
 
@@ -474,9 +474,9 @@ If `uppy.opts.autoProceed === true`, Uppy will begin uploading automatically whe
 
 `addFile` will return the generated id for the file that was added.
 
-> Sometimes you might need to add a remote file to Uppy. This can be achieved by [fetching the file, then creating a Blob object, or using the Url plugin with Companion](https://github.com/transloadit/uppy/issues/1006#issuecomment-413495493).
+> Sometimes you might need to add a remote file to Uppy. This can be achieved by [fetching the file, then creating a Blob object, or using the Url plugin with Companion](https://github.com/goemerge/uppy/issues/1006#issuecomment-413495493).
 >
-> Sometimes you might need to mark some files as “already uploaded”, so that the user sees them, but they won’t actually be uploaded by Uppy. This can be achieved by [looping through files and setting `uploadComplete: true, uploadStarted: true` on them](https://github.com/transloadit/uppy/issues/1112#issuecomment-432339569)
+> Sometimes you might need to mark some files as “already uploaded”, so that the user sees them, but they won’t actually be uploaded by Uppy. This can be achieved by [looping through files and setting `uploadComplete: true, uploadStarted: true` on them](https://github.com/goemerge/uppy/issues/1112#issuecomment-432339569)
 
 ### `uppy.addFiles(fileObjectArray)`
 
@@ -787,7 +787,7 @@ Fired each time a file is removed.
 **Parameters**
 
 - `file` - The [File Object][file objects] representing the file that was removed.
-- `reason` - A string explaining why the file was removed. See [#2301](https://github.com/transloadit/uppy/issues/2301#issue-628931176) for details. Current reasons are: `removed-by-user` and `cancel-all`.
+- `reason` - A string explaining why the file was removed. See [#2301](https://github.com/goemerge/uppy/issues/2301#issue-628931176) for details. Current reasons are: `removed-by-user` and `cancel-all`.
 
 **Example**
 

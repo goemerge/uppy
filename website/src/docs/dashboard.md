@@ -223,7 +223,7 @@ uppy.on("file-removed", (file, reason) => {
 });
 ```
 
-For an implementation example, please see [#2301](https://github.com/transloadit/uppy/issues/2301#issue-628931176)).
+For an implementation example, please see [#2301](https://github.com/goemerge/uppy/issues/2301#issue-628931176)).
 
 ### `note: null`
 

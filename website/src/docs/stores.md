@@ -140,4 +140,4 @@ function createDefaultStore() {
 
 A pattern like this, where users can pass options via a function call if necessary, is recommended.
 
-See the [@growthcloud/store-default](https://github.com/transloadit/uppy/tree/main/packages/%40uppy/store-default) package for more inspiration.
+See the [@growthcloud/store-default](https://github.com/goemerge/uppy/tree/main/packages/%40uppy/store-default) package for more inspiration.

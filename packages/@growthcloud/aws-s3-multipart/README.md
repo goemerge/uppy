@@ -3,9 +3,9 @@
 <img src="https://uppy.io/images/logos/uppy-dog-head-arrow.svg" width="120" alt="Uppy logo: a superman puppy in a pink suit" align="right">
 
 [![npm version](https://img.shields.io/npm/v/@growthcloud/aws-s3-multipart.svg?style=flat-square)](https://www.npmjs.com/package/@growthcloud/aws-s3-multipart)
-![CI status for Uppy tests](https://github.com/transloadit/uppy/workflows/Tests/badge.svg)
-![CI status for Companion tests](https://github.com/transloadit/uppy/workflows/Companion/badge.svg)
-![CI status for browser tests](https://github.com/transloadit/uppy/workflows/End-to-end%20tests/badge.svg)
+![CI status for Uppy tests](https://github.com/goemerge/uppy/workflows/Tests/badge.svg)
+![CI status for Companion tests](https://github.com/goemerge/uppy/workflows/Companion/badge.svg)
+![CI status for browser tests](https://github.com/goemerge/uppy/workflows/End-to-end%20tests/badge.svg)
 
 The AwsS3Multipart plugin can be used to upload files directly to an S3 bucket using S3’s Multipart upload strategy. With this strategy, files are chopped up in parts of 5MB+ each, so they can be uploaded concurrently. It’s also reliable: if a single part fails to upload, only that 5MB has to be retried.
 

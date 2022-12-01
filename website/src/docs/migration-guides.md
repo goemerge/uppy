@@ -23,7 +23,7 @@ This has now led us to deprecating Robodog and embrace Uppy for its strong suits
 
 To mimic the Robodog implementation with all its features, you can use the code snippet below. But chances are Robodog did more than you need so feel free to remove things or go through the [list of plugins](/docs/plugins/) and install and use the ones you need.
 
-You can also checkout how we migrated the Robodog example ourselves in this [commit](https://github.com/transloadit/uppy/commit/089aaed615c77bafaf905e291b6b4e82aaeb2f6f).
+You can also checkout how we migrated the Robodog example ourselves in this [commit](https://github.com/goemerge/uppy/commit/089aaed615c77bafaf905e291b6b4e82aaeb2f6f).
 
 ```js
 import Uppy from "@growthcloud/core";
@@ -99,7 +99,7 @@ See the [Robodog migration guide](#Migrate-from-Robodog-to-Uppy-plugins).
 
 #### Remove `AggregateError` polyfill.
 
-It’s supported by most modern browsers and [can be polyfilled by the user](https://github.com/transloadit/uppy/pull/3532#discussion_r818602636) if needed.
+It’s supported by most modern browsers and [can be polyfilled by the user](https://github.com/goemerge/uppy/pull/3532#discussion_r818602636) if needed.
 
 To migrate: install a `AggregateError` polyfill or use `core-js`.
 
@@ -144,7 +144,7 @@ uppy.use(Dropbox, {
 
 #### Make `headers` inside the return value of [`prepareUploadParts`](/docs/aws-s3-multipart/#prepareUploadParts-file-partData) part-indexed too.
 
-This is to allow custom headers to be set per part. See this [issue](https://github.com/transloadit/uppy/issues/3881) for details.
+This is to allow custom headers to be set per part. See this [issue](https://github.com/goemerge/uppy/issues/3881) for details.
 
 To migrate: make headers part indexed like `presignedUrls`: `{ "headers": { "1": { "Content-MD5": "foo" } }}`.
 
@@ -200,8 +200,8 @@ To migrate: use exposed options only.
 
 ### Known issues
 
-- [`ERESOLVE could not resolve` on npm install](https://github.com/transloadit/uppy/issues/4057).
-- [@growthcloud/svelte reports a broken dependency with the Vite bundler](https://github.com/transloadit/uppy/issues/4069).
+- [`ERESOLVE could not resolve` on npm install](https://github.com/goemerge/uppy/issues/4057).
+- [@growthcloud/svelte reports a broken dependency with the Vite bundler](https://github.com/goemerge/uppy/issues/4069).
 
 ## Migrate from Companion 3.x to 4.x
 

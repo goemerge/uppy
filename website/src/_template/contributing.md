@@ -7,7 +7,7 @@ Fork the repository into your own account first. See the [GitHub Help](https://h
 After you have successfully forked the repository, clone it locally.
 
 ```sh
-git clone https://github.com/transloadit/uppy.git
+git clone https://github.com/goemerge/uppy.git
 cd uppy
 ```
 
@@ -79,7 +79,7 @@ This would get the Companion instance running on `http://localhost:3020`. It use
 
 ### Live example
 
-An example server is running at <https://companion.uppy.io>, which is deployed with [Kubernetes](https://github.com/transloadit/uppy/blob/main/packages/%40uppy/companion/KUBERNETES.md)
+An example server is running at <https://companion.uppy.io>, which is deployed with [Kubernetes](https://github.com/goemerge/uppy/blob/main/packages/%40uppy/companion/KUBERNETES.md)
 
 ### How the Authentication and Token mechanism works
 
@@ -228,6 +228,8 @@ Syntax: `[<namespace>-]<ComponentName>[-descendentName][--modifierName]`
 ```css
 .twt-Button /* Namespaced component */
 /* Namespaced component */
+/* Namespaced component */
+/* Namespaced component */
 .MyComponent /* Components pascal cased */
 .Button--default /* Modified button style */
 .Button--large
@@ -314,7 +316,7 @@ Before opening a pull request for the new integration, open an issue to discuss 
 - `ProgressBar`
 - `StatusBar`
 
-All these components should function as references to the normal component. Depending on how the framework you’re using handles references to the DOM, your approach to creating these may be different. For example, in React, you can assign a property of the component to the reference of a component ([see here](https://github.com/transloadit/uppy/blob/425f9ecfbc8bc48ce6b734e4fc14fa60d25daa97/packages/%40uppy/react/src/Dashboard.js#L47-L54)). This may differ in your framework, but from what we’ve found, the concepts are generally pretty similar.
+All these components should function as references to the normal component. Depending on how the framework you’re using handles references to the DOM, your approach to creating these may be different. For example, in React, you can assign a property of the component to the reference of a component ([see here](https://github.com/goemerge/uppy/blob/425f9ecfbc8bc48ce6b734e4fc14fa60d25daa97/packages/%40uppy/react/src/Dashboard.js#L47-L54)). This may differ in your framework, but from what we’ve found, the concepts are generally pretty similar.
 
 If you’re familiar with React, Vue or soon Svelte, it might be useful to read through the code of those integrations, as they lay out a pretty good structure. After the basic components have been built, here are a few more important tasks to get done:
 
@@ -380,17 +382,17 @@ category: "Other Integrations"
 
 This data is used to generate Uppy’s website. Refer to [the section about running the website locally](#website-previews) if you’d like to see how the docs look on the website.
 
-Any change of the documentation that involves a security best practice must substantiated with an external reference. See [#3565](https://github.com/transloadit/uppy/issues/3565).
+Any change of the documentation that involves a security best practice must substantiated with an external reference. See [#3565](https://github.com/goemerge/uppy/issues/3565).
 
 ### Adding an example
 
-You can likely use whatever code generation tool for your framework (ex. `create-react-app`) to create this example. Make sure you add the same version of `@growthcloud/core` to this as your peer dependency required, or you may run into strange issues. Try to include all the components are some of their functionality. [The React example](https://github.com/transloadit/uppy/blob/main/examples/react-example/App.js) is a great... well example of how to do this well.
+You can likely use whatever code generation tool for your framework (ex. `create-react-app`) to create this example. Make sure you add the same version of `@growthcloud/core` to this as your peer dependency required, or you may run into strange issues. Try to include all the components are some of their functionality. [The React example](https://github.com/goemerge/uppy/blob/main/examples/react-example/App.js) is a great... well example of how to do this well.
 
 ### Integrating the build system
 
 The biggest part of this is understanding Uppy’s build system. The high level description is that `babel` goes through almost all the packages and transpiles all the Javascript files in the `src` directory to more compatible JavaScript in the `lib` folder. If you’re using vanilla JavaScript for your integration (like React and Vue do), then you can use this build system and use the files generated as your entry points.
 
-If you’re using some kind of more abstract file format (like Svelte), then you probably want do to a few things: add the directory name to [this `IGNORE` regex](https://github.com/transloadit/uppy/blob/425f9ecfbc8bc48ce6b734e4fc14fa60d25daa97/bin/build-lib.js#L15); add all your build dependencies to the root `package.json` (try to keep this small); add a new `build:framework` script to the root `package.json`. This script usually looks something like this:
+If you’re using some kind of more abstract file format (like Svelte), then you probably want do to a few things: add the directory name to [this `IGNORE` regex](https://github.com/goemerge/uppy/blob/425f9ecfbc8bc48ce6b734e4fc14fa60d25daa97/bin/build-lib.js#L15); add all your build dependencies to the root `package.json` (try to keep this small); add a new `build:framework` script to the root `package.json`. This script usually looks something like this:
 
 ```json
 {

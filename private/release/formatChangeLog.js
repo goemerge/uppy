@@ -63,7 +63,7 @@ export default async function formatChangeLog(
 
     if (!packageName) {
       console.log(
-        `No package info found in commit title: ${sha} (https://github.com/transloadit/uppy/commit/${sha})`
+        `No package info found in commit title: ${sha} (https://github.com/goemerge/uppy/commit/${sha})`
       );
       console.log(log);
       const { inferredPackages, candidates } = await inferPackageForCommit(

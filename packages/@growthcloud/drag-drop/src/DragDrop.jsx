@@ -103,7 +103,7 @@ export default class DragDrop extends UIPlugin {
 
     // Add a small (+) icon on drop
     // (and prevent browsers from interpreting this as files being _moved_ into the browser
-    // https://github.com/transloadit/uppy/issues/1978)
+    // https://github.com/goemerge/uppy/issues/1978)
     //
     // eslint-disable-next-line no-param-reassign
     event.dataTransfer.dropEffect = "copy";

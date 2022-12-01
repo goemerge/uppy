@@ -252,7 +252,7 @@ function injectLocaleList() {
     const regionName = regionalDisplayNames.of(regionCode);
     const npmPath = `<code class="raw"><a href="https://www.npmjs.com/package/@growthcloud/locales">@growthcloud/locales</a>/lib/${localeName}</code>`;
     const cdnPath = `[\`${localeName}.min.js\`](https://releases.transloadit.com/uppy/locales/v${localePackageVersion}/${localeName}.min.js)`;
-    const githubSource = `[\`${localeName}.js\`](https://github.com/transloadit/uppy/blob/main/packages/%40uppy/locales/src/${localeName}.js)`;
+    const githubSource = `[\`${localeName}.js\`](https://github.com/goemerge/uppy/blob/main/packages/%40uppy/locales/src/${localeName}.js)`;
     const mdTableRow = `| ${languageName}<br/> <small>${regionName}</small>${
       variant ? `<br /><small>(${variant})</small>` : ""
     } | ${npmPath} | ${cdnPath} | ✏️ ${githubSource} |`;

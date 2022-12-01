@@ -575,4 +575,4 @@ You can now load the URL of your client on your browser to see it running. When 
 
 In order to use this with our Companion implementation, we need to also start our Companion server by running `node server/index.js`.
 
-Congrats! 🎉We have completed our custom plugin at this point. For an example source code on this tutorial, please see the [custom provider example](https://github.com/transloadit/uppy/tree/master/examples/custom-provider).
+Congrats! 🎉We have completed our custom plugin at this point. For an example source code on this tutorial, please see the [custom provider example](https://github.com/goemerge/uppy/tree/master/examples/custom-provider).

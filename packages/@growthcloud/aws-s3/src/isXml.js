@@ -4,8 +4,8 @@
  * @param {string} mimeType - The mime type string that may have optional parameters.
  * @returns {string} The "base" mime type, i.e. only 'category/type'.
  */
-function removeMimeParameters (mimeType) {
-  return mimeType.replace(/;.*$/, '')
+function removeMimeParameters(mimeType) {
+  return mimeType.replace(/;.*$/, "");
 }
 
 /**
@@ -15,21 +15,23 @@ function removeMimeParameters (mimeType) {
  * @param {object|XMLHttpRequest} xhr - The XHR object or response object from Companion.
  * @returns {bool} Whether the content is (probably) XML.
  */
-function isXml (content, xhr) {
-  const rawContentType = (xhr.headers ? xhr.headers['content-type'] : xhr.getResponseHeader('Content-Type'))
+function isXml(content, xhr) {
+  const rawContentType = xhr.headers
+    ? xhr.headers["content-type"]
+    : xhr.getResponseHeader("Content-Type");
 
-  if (typeof rawContentType === 'string') {
-    const contentType = removeMimeParameters(rawContentType).toLowerCase()
-    if (contentType === 'application/xml' || contentType === 'text/xml') {
-      return true
+  if (typeof rawContentType === "string") {
+    const contentType = removeMimeParameters(rawContentType).toLowerCase();
+    if (contentType === "application/xml" || contentType === "text/xml") {
+      return true;
     }
     // GCS uses text/html for some reason
-    // https://github.com/transloadit/uppy/issues/896
-    if (contentType === 'text/html' && /^<\?xml /.test(content)) {
-      return true
+    // https://github.com/goemerge/uppy/issues/896
+    if (contentType === "text/html" && /^<\?xml /.test(content)) {
+      return true;
     }
   }
-  return false
+  return false;
 }
 
-export default isXml
+export default isXml;

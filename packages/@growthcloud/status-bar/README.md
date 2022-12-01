@@ -3,9 +3,9 @@
 <img src="https://uppy.io/images/logos/uppy-dog-head-arrow.svg" width="120" alt="Uppy logo: a superman puppy in a pink suit" align="right">
 
 [![npm version](https://img.shields.io/npm/v/@growthcloud/status-bar.svg?style=flat-square)](https://www.npmjs.com/package/@growthcloud/status-bar)
-![CI status for Uppy tests](https://github.com/transloadit/uppy/workflows/Tests/badge.svg)
-![CI status for Companion tests](https://github.com/transloadit/uppy/workflows/Companion/badge.svg)
-![CI status for browser tests](https://github.com/transloadit/uppy/workflows/End-to-end%20tests/badge.svg)
+![CI status for Uppy tests](https://github.com/goemerge/uppy/workflows/Tests/badge.svg)
+![CI status for Companion tests](https://github.com/goemerge/uppy/workflows/Companion/badge.svg)
+![CI status for browser tests](https://github.com/goemerge/uppy/workflows/End-to-end%20tests/badge.svg)
 
 The status-bar shows upload progress and speed, ETAs, pre- and post-processing information, and allows users to control (pause/resume/cancel) the upload.
 Best used together with a basic file source plugin, such as [@growthcloud/file-input](https://uppy.io/docs/file-input) or [@growthcloud/drag-drop](https://uppy.io/docs/drag-drop), or a custom implementation. It’s also included in the [@growthcloud/dashboard](https://uppy.io/docs/dashboard) plugin.
