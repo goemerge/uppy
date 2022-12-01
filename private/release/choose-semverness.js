@@ -16,6 +16,8 @@ function maxSemverness(a, b) {
   return "patch";
 }
 
+const firstRelease = true;
+
 export default async function pickSemverness(
   spawnOptions,
   LAST_RELEASE_COMMIT,
@@ -44,7 +46,7 @@ export default async function pickSemverness(
       ],
       spawnOptions
     );
-    if (stdout.length === 0) {
+    if (stdout.length === 0 && !firstRelease) {
       console.log(`No commits since last release for ${name}, skipping.`);
       continue;
     }
